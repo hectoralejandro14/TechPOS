@@ -60,7 +60,7 @@
             this.tabPuntoVenta.Controls.Add(this.tabVenta);
             this.tabPuntoVenta.Controls.Add(this.tabRecepcion);
             this.tabPuntoVenta.Controls.Add(this.tabReparacion);
-            this.tabPuntoVenta.Controls.Add(this.tabPage1);
+//            this.tabPuntoVenta.Controls.Add(this.tabPage1);
             this.tabPuntoVenta.Location = new System.Drawing.Point(2, 1);
             this.tabPuntoVenta.Location = new System.Drawing.Point(2, 0);
             this.tabPuntoVenta.Name = "tabPuntoVenta";
@@ -110,14 +110,14 @@
             // 
             // tabReparacion
             // 
-            this.tabReparacion.Controls.Add(this.radioButton3);
-            this.tabReparacion.Controls.Add(this.radioButton2);
+//            this.tabReparacion.Controls.Add(this.radioButton3);
+//            this.tabReparacion.Controls.Add(this.radioButton2);
             this.tabReparacion.Controls.Add(this.radioButton1);
             this.tabReparacion.Controls.Add(this.label6);
             this.tabReparacion.Controls.Add(this.label5);
             this.tabReparacion.Controls.Add(this.label3);
             this.tabReparacion.Controls.Add(this.pictureBox1);
-            this.tabReparacion.Controls.Add(this.dataGridView1);
+//            this.tabReparacion.Controls.Add(this.dataGridView1);
             this.tabReparacion.Controls.Add(this.label4);
             this.tabReparacion.Controls.Add(this.textBox1);
             this.tabReparacion.Location = new System.Drawing.Point(4, 22);
@@ -159,27 +159,27 @@
             // 
             // radioButton2
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(247, 157);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(14, 13);
-            this.radioButton2.TabIndex = 9;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.UseVisualStyleBackColor = true;
+//            this.radioButton2.AutoSize = true;
+//            this.radioButton2.Location = new System.Drawing.Point(247, 157);
+ //           this.radioButton2.Name = "radioButton2";
+ //          this.radioButton2.Size = new System.Drawing.Size(14, 13);
+   //         this.radioButton2.TabIndex = 9;
+  //          this.radioButton2.TabStop = true;
+  //          this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // radioButton3
             // 
-            this.radioButton3.AutoSize = true;
+ /*           this.radioButton3.AutoSize = true;
             this.radioButton3.Location = new System.Drawing.Point(413, 158);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(14, 13);
             this.radioButton3.TabIndex = 10;
             this.radioButton3.TabStop = true;
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.UseVisualStyleBackColor = true;*/
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.dataGridView1);
+/*            this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -187,10 +187,10 @@
             this.tabPage1.TabIndex = 3;
             this.tabPage1.Text = "Ordenes";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
+            // */
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
+/*            this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -222,7 +222,7 @@
             // 
             this.idResponsable.HeaderText = "ID Responsable";
             this.idResponsable.Name = "idResponsable";
-            // 
+            // */
             // ViewTabs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
