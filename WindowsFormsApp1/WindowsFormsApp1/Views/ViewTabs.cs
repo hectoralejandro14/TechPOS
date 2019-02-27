@@ -1,5 +1,4 @@
-﻿using System;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace WindowsFormsApp1.Views
 {
@@ -8,6 +7,19 @@ namespace WindowsFormsApp1.Views
         public ViewTabs()
         {
             InitializeComponent();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
             this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
         }
 

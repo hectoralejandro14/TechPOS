@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1.Views
 {
-    public partial class ModificarOrden : Form
+    public partial class Notificaciones : Form
     {
-        public ModificarOrden()
+        public Notificaciones()
         {
             InitializeComponent();
         }
