@@ -51,6 +51,12 @@
     <Compile Include="Views\Almacen.Designer.cs">
       <DependentUpon>Almacen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\ModifyOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ModifyOrder.Designer.cs">
+      <DependentUpon>ModifyOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\PuntoVenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     </Compile>
     <EmbeddedResource Include="Views\Almacen.resx">
       <DependentUpon>Almacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ModifyOrder.resx">
+      <DependentUpon>ModifyOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\PuntoVenta.resx">
       <DependentUpon>PuntoVenta.cs</DependentUpon>
