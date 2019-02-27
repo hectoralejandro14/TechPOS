@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Views\ModificarOrden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ModificarOrden.Designer.cs">
+      <DependentUpon>ModificarOrden.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\PuntoVenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\ModificarOrden.resx">
+      <DependentUpon>ModificarOrden.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\PuntoVenta.resx">
       <DependentUpon>PuntoVenta.cs</DependentUpon>
     </EmbeddedResource>

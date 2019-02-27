@@ -31,15 +31,23 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewTabs));
             this.tabPuntoVenta = new System.Windows.Forms.TabControl();
             this.tabVenta = new System.Windows.Forms.TabPage();
-            this.tabRecepcion = new System.Windows.Forms.TabPage();
-            this.tabReparacion = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
+            this.tabRecepcion = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
+            this.tabReparacion = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idResponsable = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPuntoVenta.SuspendLayout();
             this.tabVenta.SuspendLayout();
             this.tabRecepcion.SuspendLayout();
             this.tabReparacion.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPuntoVenta
@@ -47,6 +55,7 @@
             this.tabPuntoVenta.Controls.Add(this.tabVenta);
             this.tabPuntoVenta.Controls.Add(this.tabRecepcion);
             this.tabPuntoVenta.Controls.Add(this.tabReparacion);
+            this.tabPuntoVenta.Controls.Add(this.tabPage1);
             this.tabPuntoVenta.Location = new System.Drawing.Point(2, 1);
             this.tabPuntoVenta.Name = "tabPuntoVenta";
             this.tabPuntoVenta.SelectedIndex = 0;
@@ -64,6 +73,15 @@
             this.tabVenta.Text = "Venta";
             this.tabVenta.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(371, 180);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Tab de Venta";
+            // 
             // tabRecepcion
             // 
             this.tabRecepcion.Controls.Add(this.label2);
@@ -74,6 +92,15 @@
             this.tabRecepcion.TabIndex = 1;
             this.tabRecepcion.Text = "Recepción";
             this.tabRecepcion.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(342, 187);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Tab Recepcion";
             // 
             // tabReparacion
             // 
@@ -86,24 +113,6 @@
             this.tabReparacion.Text = "Reparación";
             this.tabReparacion.UseVisualStyleBackColor = true;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(371, 180);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tab de Venta";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(342, 187);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Tab Recepcion";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -112,6 +121,52 @@
             this.label3.Size = new System.Drawing.Size(75, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "Tab Repacion";
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.dataGridView1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(789, 424);
+            this.tabPage1.TabIndex = 3;
+            this.tabPage1.Text = "Ordenes";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.Descripcion,
+            this.Estado,
+            this.idResponsable});
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(783, 418);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Descripción";
+            this.Descripcion.Name = "Descripcion";
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            // 
+            // idResponsable
+            // 
+            this.idResponsable.HeaderText = "ID Responsable";
+            this.idResponsable.Name = "idResponsable";
             // 
             // ViewTabs
             // 
@@ -129,6 +184,8 @@
             this.tabRecepcion.PerformLayout();
             this.tabReparacion.ResumeLayout(false);
             this.tabReparacion.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -142,5 +199,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage tabReparacion;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idResponsable;
     }
 }
