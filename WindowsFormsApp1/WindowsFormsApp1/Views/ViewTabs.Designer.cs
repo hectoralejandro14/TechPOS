@@ -39,7 +39,6 @@
             this.tabReparacion = new System.Windows.Forms.TabPage();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -191,19 +190,19 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.Descripcion,
-            this.Estado,
-            this.idResponsable});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(783, 418);
-            this.dataGridView1.TabIndex = 0;
-            // 
+            //this.dataGridView1.AllowUserToOrderColumns = true;
+            //this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            //this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            //this.ID,
+            //this.Descripcion,
+            //this.Estado,
+            //this.idResponsable});
+            //this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            //this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            //this.dataGridView1.Name = "dataGridView1";
+            //this.dataGridView1.Size = new System.Drawing.Size(783, 418);
+            //this.dataGridView1.TabIndex = 0;
+            //// 
             // ID
             // 
             this.ID.HeaderText = "ID";
@@ -270,7 +269,7 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        //private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
