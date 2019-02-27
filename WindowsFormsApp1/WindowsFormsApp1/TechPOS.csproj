@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Views\EncargarPieza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EncargarPieza.Designer.cs">
+      <DependentUpon>EncargarPieza.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\PuntoVenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\EncargarPieza.resx">
+      <DependentUpon>EncargarPieza.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\PuntoVenta.resx">
       <DependentUpon>PuntoVenta.cs</DependentUpon>
     </EmbeddedResource>

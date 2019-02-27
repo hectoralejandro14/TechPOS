@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewTabs));
             this.tabPuntoVenta = new System.Windows.Forms.TabControl();
             this.tabVenta = new System.Windows.Forms.TabPage();
-            this.tabRecepcion = new System.Windows.Forms.TabPage();
-            this.tabReparacion = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
+            this.tabRecepcion = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
+            this.tabReparacion = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPuntoVenta.SuspendLayout();
             this.tabVenta.SuspendLayout();
@@ -47,10 +47,10 @@
             this.tabPuntoVenta.Controls.Add(this.tabVenta);
             this.tabPuntoVenta.Controls.Add(this.tabRecepcion);
             this.tabPuntoVenta.Controls.Add(this.tabReparacion);
-            this.tabPuntoVenta.Location = new System.Drawing.Point(2, 1);
+            this.tabPuntoVenta.Location = new System.Drawing.Point(2, 0);
             this.tabPuntoVenta.Name = "tabPuntoVenta";
             this.tabPuntoVenta.SelectedIndex = 0;
-            this.tabPuntoVenta.Size = new System.Drawing.Size(797, 450);
+            this.tabPuntoVenta.Size = new System.Drawing.Size(798, 451);
             this.tabPuntoVenta.TabIndex = 0;
             // 
             // tabVenta
@@ -59,32 +59,10 @@
             this.tabVenta.Location = new System.Drawing.Point(4, 22);
             this.tabVenta.Name = "tabVenta";
             this.tabVenta.Padding = new System.Windows.Forms.Padding(3);
-            this.tabVenta.Size = new System.Drawing.Size(789, 424);
+            this.tabVenta.Size = new System.Drawing.Size(790, 425);
             this.tabVenta.TabIndex = 0;
             this.tabVenta.Text = "Venta";
             this.tabVenta.UseVisualStyleBackColor = true;
-            // 
-            // tabRecepcion
-            // 
-            this.tabRecepcion.Controls.Add(this.label2);
-            this.tabRecepcion.Location = new System.Drawing.Point(4, 22);
-            this.tabRecepcion.Name = "tabRecepcion";
-            this.tabRecepcion.Padding = new System.Windows.Forms.Padding(3);
-            this.tabRecepcion.Size = new System.Drawing.Size(789, 424);
-            this.tabRecepcion.TabIndex = 1;
-            this.tabRecepcion.Text = "Recepción";
-            this.tabRecepcion.UseVisualStyleBackColor = true;
-            // 
-            // tabReparacion
-            // 
-            this.tabReparacion.Controls.Add(this.label3);
-            this.tabReparacion.Location = new System.Drawing.Point(4, 22);
-            this.tabReparacion.Name = "tabReparacion";
-            this.tabReparacion.Padding = new System.Windows.Forms.Padding(3);
-            this.tabReparacion.Size = new System.Drawing.Size(789, 424);
-            this.tabReparacion.TabIndex = 2;
-            this.tabReparacion.Text = "Reparación";
-            this.tabReparacion.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -95,6 +73,17 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tab de Venta";
             // 
+            // tabRecepcion
+            // 
+            this.tabRecepcion.Controls.Add(this.label2);
+            this.tabRecepcion.Location = new System.Drawing.Point(4, 22);
+            this.tabRecepcion.Name = "tabRecepcion";
+            this.tabRecepcion.Padding = new System.Windows.Forms.Padding(3);
+            this.tabRecepcion.Size = new System.Drawing.Size(790, 425);
+            this.tabRecepcion.TabIndex = 1;
+            this.tabRecepcion.Text = "Recepción";
+            this.tabRecepcion.UseVisualStyleBackColor = true;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -103,6 +92,17 @@
             this.label2.Size = new System.Drawing.Size(81, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tab Recepcion";
+            // 
+            // tabReparacion
+            // 
+            this.tabReparacion.Controls.Add(this.label3);
+            this.tabReparacion.Location = new System.Drawing.Point(4, 22);
+            this.tabReparacion.Name = "tabReparacion";
+            this.tabReparacion.Padding = new System.Windows.Forms.Padding(3);
+            this.tabReparacion.Size = new System.Drawing.Size(790, 425);
+            this.tabReparacion.TabIndex = 2;
+            this.tabReparacion.Text = "Reparación";
+            this.tabReparacion.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
