@@ -9,6 +9,7 @@ namespace WindowsFormsApp1
         public ViewLogin()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
