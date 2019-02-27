@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Views\EncargarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EncargarProducto.Designer.cs">
+      <DependentUpon>EncargarProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\ModificarOrden.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,11 +63,23 @@
     <Compile Include="Views\EncargarPieza.Designer.cs">
       <DependentUpon>EncargarPieza.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Notificaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Notificaciones.Designer.cs">
+      <DependentUpon>Notificaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\PuntoVenta.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\PuntoVenta.Designer.cs">
       <DependentUpon>PuntoVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reportes.Designer.cs">
+      <DependentUpon>Reportes.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\ViewLogin.cs">
       <SubType>Form</SubType>
@@ -98,11 +116,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\EncargarProducto.resx">
+      <DependentUpon>EncargarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Notificaciones.resx">
+      <DependentUpon>Notificaciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\PuntoVenta.resx">
       <DependentUpon>PuntoVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Reparacion.resx">
       <DependentUpon>Reparacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reportes.resx">
+      <DependentUpon>Reportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ViewLogin.resx">
       <DependentUpon>ViewLogin.cs</DependentUpon>
