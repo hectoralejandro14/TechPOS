@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Views\Almacen.cs">
     <Compile Include="Views\EncargarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,14 +55,8 @@
     <Compile Include="Views\ModificarOrden.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\ModificarOrden.Designer.cs">
-      <DependentUpon>ModificarOrden.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\EncargarPieza.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\EncargarPieza.Designer.cs">
-      <DependentUpon>EncargarPieza.cs</DependentUpon>
+    <Compile Include="Views\Almacen.Designer.cs">
+      <DependentUpon>Almacen.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Notificaciones.cs">
       <SubType>Form</SubType>
@@ -101,12 +96,6 @@
     <Compile Include="Views\ViewTabs.Designer.cs">
       <DependentUpon>ViewTabs.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\VistaReparacion_Johara.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\VistaReparacion_Johara.Designer.cs">
-      <DependentUpon>VistaReparacion_Johara.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -116,12 +105,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Views\EncargarProducto.resx">
-      <DependentUpon>EncargarProducto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Notificaciones.resx">
-      <DependentUpon>Notificaciones.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\PuntoVenta.resx">
       <DependentUpon>PuntoVenta.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,6 +135,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\Icons\iconUP.ico" />
+    <Content Include="Images\lupa.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
