@@ -46,14 +46,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Views\Almacen.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Views\EncargarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\EncargarProducto.Designer.cs">
       <DependentUpon>EncargarProducto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ModificarOrden.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Almacen.Designer.cs">
       <DependentUpon>Almacen.cs</DependentUpon>
@@ -110,9 +109,13 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Views\Almacen.resx">
       <DependentUpon>Almacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EncargarProducto.resx">
+      <DependentUpon>EncargarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\PuntoVenta.resx">
       <DependentUpon>PuntoVenta.cs</DependentUpon>
@@ -144,9 +147,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\Icons\iconUP.ico" />
+    <Content Include="Images\sub-fondo.png" />
+    <None Include="Images\logoUp.png" />
     <Content Include="Images\lupa.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Betta\" />
     <Folder Include="Controllers\" />
     <Folder Include="DBConnection\" />
     <Folder Include="Models\" />
