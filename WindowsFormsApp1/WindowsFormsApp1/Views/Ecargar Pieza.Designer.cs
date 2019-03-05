@@ -28,87 +28,87 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.equipoLblEncargar = new System.Windows.Forms.Label();
+            this.marcaLblEncargar = new System.Windows.Forms.Label();
+            this.piezaLblEncargar = new System.Windows.Forms.Label();
+            this.modeloLblEncargar = new System.Windows.Forms.Label();
+            this.equipoTbxEncagar = new System.Windows.Forms.TextBox();
+            this.marcaTbxEncargar = new System.Windows.Forms.TextBox();
+            this.modeloTbxEncargar = new System.Windows.Forms.TextBox();
+            this.piezasTbxEncargar = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // equipoLblEncargar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(158, 94);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Equipo";
+            this.equipoLblEncargar.AutoSize = true;
+            this.equipoLblEncargar.Location = new System.Drawing.Point(158, 94);
+            this.equipoLblEncargar.Name = "equipoLblEncargar";
+            this.equipoLblEncargar.Size = new System.Drawing.Size(40, 13);
+            this.equipoLblEncargar.TabIndex = 0;
+            this.equipoLblEncargar.Text = "Equipo";
             // 
-            // label2
+            // marcaLblEncargar
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(161, 171);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Marca";
+            this.marcaLblEncargar.AutoSize = true;
+            this.marcaLblEncargar.Location = new System.Drawing.Point(161, 171);
+            this.marcaLblEncargar.Name = "marcaLblEncargar";
+            this.marcaLblEncargar.Size = new System.Drawing.Size(37, 13);
+            this.marcaLblEncargar.TabIndex = 1;
+            this.marcaLblEncargar.Text = "Marca";
             // 
-            // label3
+            // piezaLblEncargar
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(161, 265);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Pieza(s)";
+            this.piezaLblEncargar.AutoSize = true;
+            this.piezaLblEncargar.Location = new System.Drawing.Point(161, 265);
+            this.piezaLblEncargar.Name = "piezaLblEncargar";
+            this.piezaLblEncargar.Size = new System.Drawing.Size(44, 13);
+            this.piezaLblEncargar.TabIndex = 2;
+            this.piezaLblEncargar.Text = "Pieza(s)";
             // 
-            // label4
+            // modeloLblEncargar
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(482, 135);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Modelo";
+            this.modeloLblEncargar.AutoSize = true;
+            this.modeloLblEncargar.Location = new System.Drawing.Point(482, 135);
+            this.modeloLblEncargar.Name = "modeloLblEncargar";
+            this.modeloLblEncargar.Size = new System.Drawing.Size(42, 13);
+            this.modeloLblEncargar.TabIndex = 3;
+            this.modeloLblEncargar.Text = "Modelo";
             // 
-            // textBox1
+            // equipoTbxEncagar
             // 
-            this.textBox1.Location = new System.Drawing.Point(204, 91);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(182, 29);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.equipoTbxEncagar.Location = new System.Drawing.Point(204, 91);
+            this.equipoTbxEncagar.Multiline = true;
+            this.equipoTbxEncagar.Name = "equipoTbxEncagar";
+            this.equipoTbxEncagar.Size = new System.Drawing.Size(182, 29);
+            this.equipoTbxEncagar.TabIndex = 4;
+            this.equipoTbxEncagar.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // marcaTbxEncargar
             // 
-            this.textBox2.Location = new System.Drawing.Point(204, 168);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(182, 33);
-            this.textBox2.TabIndex = 5;
+            this.marcaTbxEncargar.Location = new System.Drawing.Point(204, 168);
+            this.marcaTbxEncargar.Multiline = true;
+            this.marcaTbxEncargar.Name = "marcaTbxEncargar";
+            this.marcaTbxEncargar.Size = new System.Drawing.Size(182, 33);
+            this.marcaTbxEncargar.TabIndex = 5;
             // 
-            // textBox3
+            // modeloTbxEncargar
             // 
-            this.textBox3.Location = new System.Drawing.Point(534, 127);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(183, 28);
-            this.textBox3.TabIndex = 6;
+            this.modeloTbxEncargar.Location = new System.Drawing.Point(534, 127);
+            this.modeloTbxEncargar.Multiline = true;
+            this.modeloTbxEncargar.Name = "modeloTbxEncargar";
+            this.modeloTbxEncargar.Size = new System.Drawing.Size(183, 28);
+            this.modeloTbxEncargar.TabIndex = 6;
             // 
-            // textBox4
+            // piezasTbxEncargar
             // 
-            this.textBox4.Location = new System.Drawing.Point(161, 299);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(545, 173);
-            this.textBox4.TabIndex = 7;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.piezasTbxEncargar.Location = new System.Drawing.Point(161, 299);
+            this.piezasTbxEncargar.Multiline = true;
+            this.piezasTbxEncargar.Name = "piezasTbxEncargar";
+            this.piezasTbxEncargar.Size = new System.Drawing.Size(545, 173);
+            this.piezasTbxEncargar.TabIndex = 7;
+            this.piezasTbxEncargar.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // pictureBox1
             // 
@@ -126,14 +126,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 495);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.piezasTbxEncargar);
+            this.Controls.Add(this.modeloTbxEncargar);
+            this.Controls.Add(this.marcaTbxEncargar);
+            this.Controls.Add(this.equipoTbxEncagar);
+            this.Controls.Add(this.modeloLblEncargar);
+            this.Controls.Add(this.piezaLblEncargar);
+            this.Controls.Add(this.marcaLblEncargar);
+            this.Controls.Add(this.equipoLblEncargar);
             this.Name = "Ecargar_Pieza";
             this.Text = "Ecargar_Pieza";
             this.Load += new System.EventHandler(this.Ecargar_Pieza_Load);
@@ -145,14 +145,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label equipoLblEncargar;
+        private System.Windows.Forms.Label marcaLblEncargar;
+        private System.Windows.Forms.Label piezaLblEncargar;
+        private System.Windows.Forms.Label modeloLblEncargar;
+        private System.Windows.Forms.TextBox equipoTbxEncagar;
+        private System.Windows.Forms.TextBox marcaTbxEncargar;
+        private System.Windows.Forms.TextBox modeloTbxEncargar;
+        private System.Windows.Forms.TextBox piezasTbxEncargar;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

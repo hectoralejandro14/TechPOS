@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
+            this.idLblMOrdenes = new System.Windows.Forms.Label();
+            this.descripcionLlbMOrdenes = new System.Windows.Forms.Label();
+            this.estadosLblMOrdenes = new System.Windows.Forms.Label();
+            this.idTbxMOrdenes = new System.Windows.Forms.TextBox();
+            this.descTbxOrdenes = new System.Windows.Forms.TextBox();
+            this.estadosTbxOrdenes = new System.Windows.Forms.TextBox();
+            this.cancelarBtnMOrdens = new System.Windows.Forms.Button();
+            this.aceptarBtnMOrdenes = new System.Windows.Forms.Button();
+            this.modificarLblOrdenes = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -48,95 +48,96 @@
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 0;
             // 
-            // label2
+            // idLblMOrdenes
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(57, 40);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(18, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "ID";
+            this.idLblMOrdenes.AutoSize = true;
+            this.idLblMOrdenes.Location = new System.Drawing.Point(46, 53);
+            this.idLblMOrdenes.Name = "idLblMOrdenes";
+            this.idLblMOrdenes.Size = new System.Drawing.Size(18, 13);
+            this.idLblMOrdenes.TabIndex = 1;
+            this.idLblMOrdenes.Text = "ID";
             // 
-            // label3
+            // descripcionLlbMOrdenes
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 77);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Descripción";
+            this.descripcionLlbMOrdenes.AutoSize = true;
+            this.descripcionLlbMOrdenes.Location = new System.Drawing.Point(15, 88);
+            this.descripcionLlbMOrdenes.Name = "descripcionLlbMOrdenes";
+            this.descripcionLlbMOrdenes.Size = new System.Drawing.Size(63, 13);
+            this.descripcionLlbMOrdenes.TabIndex = 2;
+            this.descripcionLlbMOrdenes.Text = "Descripción";
             // 
-            // label4
+            // estadosLblMOrdenes
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(31, 102);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Estados";
+            this.estadosLblMOrdenes.AutoSize = true;
+            this.estadosLblMOrdenes.Location = new System.Drawing.Point(30, 130);
+            this.estadosLblMOrdenes.Name = "estadosLblMOrdenes";
+            this.estadosLblMOrdenes.Size = new System.Drawing.Size(45, 13);
+            this.estadosLblMOrdenes.TabIndex = 3;
+            this.estadosLblMOrdenes.Text = "Estados";
             // 
-            // textBox1
+            // idTbxMOrdenes
             // 
-            this.textBox1.Location = new System.Drawing.Point(82, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 4;
+            this.idTbxMOrdenes.Location = new System.Drawing.Point(82, 46);
+            this.idTbxMOrdenes.Name = "idTbxMOrdenes";
+            this.idTbxMOrdenes.Size = new System.Drawing.Size(100, 20);
+            this.idTbxMOrdenes.TabIndex = 4;
             // 
-            // textBox2
+            // descTbxOrdenes
             // 
-            this.textBox2.Location = new System.Drawing.Point(83, 69);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 5;
+            this.descTbxOrdenes.Location = new System.Drawing.Point(82, 88);
+            this.descTbxOrdenes.Name = "descTbxOrdenes";
+            this.descTbxOrdenes.Size = new System.Drawing.Size(100, 20);
+            this.descTbxOrdenes.TabIndex = 5;
             // 
-            // textBox3
+            // estadosTbxOrdenes
             // 
-            this.textBox3.Location = new System.Drawing.Point(83, 102);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 6;
+            this.estadosTbxOrdenes.Location = new System.Drawing.Point(82, 127);
+            this.estadosTbxOrdenes.Name = "estadosTbxOrdenes";
+            this.estadosTbxOrdenes.Size = new System.Drawing.Size(100, 20);
+            this.estadosTbxOrdenes.TabIndex = 6;
             // 
-            // button1
+            // cancelarBtnMOrdens
             // 
-            this.button1.Location = new System.Drawing.Point(12, 142);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.cancelarBtnMOrdens.Location = new System.Drawing.Point(18, 165);
+            this.cancelarBtnMOrdens.Name = "cancelarBtnMOrdens";
+            this.cancelarBtnMOrdens.Size = new System.Drawing.Size(75, 23);
+            this.cancelarBtnMOrdens.TabIndex = 7;
+            this.cancelarBtnMOrdens.Text = "Cancelar";
+            this.cancelarBtnMOrdens.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // aceptarBtnMOrdenes
             // 
-            this.button2.Location = new System.Drawing.Point(116, 142);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Aceptar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.aceptarBtnMOrdenes.Location = new System.Drawing.Point(137, 165);
+            this.aceptarBtnMOrdenes.Name = "aceptarBtnMOrdenes";
+            this.aceptarBtnMOrdenes.Size = new System.Drawing.Size(75, 23);
+            this.aceptarBtnMOrdenes.TabIndex = 8;
+            this.aceptarBtnMOrdenes.Text = "Aceptar";
+            this.aceptarBtnMOrdenes.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // modificarLblOrdenes
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(79, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Modificar";
+            this.modificarLblOrdenes.AutoSize = true;
+            this.modificarLblOrdenes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modificarLblOrdenes.Location = new System.Drawing.Point(93, 17);
+            this.modificarLblOrdenes.Name = "modificarLblOrdenes";
+            this.modificarLblOrdenes.Size = new System.Drawing.Size(63, 16);
+            this.modificarLblOrdenes.TabIndex = 9;
+            this.modificarLblOrdenes.Text = "Modificar";
             // 
             // ModifyOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(242, 209);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.modificarLblOrdenes);
+            this.Controls.Add(this.aceptarBtnMOrdenes);
+            this.Controls.Add(this.cancelarBtnMOrdens);
+            this.Controls.Add(this.estadosTbxOrdenes);
+            this.Controls.Add(this.descTbxOrdenes);
+            this.Controls.Add(this.idTbxMOrdenes);
+            this.Controls.Add(this.estadosLblMOrdenes);
+            this.Controls.Add(this.descripcionLlbMOrdenes);
+            this.Controls.Add(this.idLblMOrdenes);
             this.Controls.Add(this.label1);
             this.Name = "ModifyOrder";
             this.Text = "Órdenes";
@@ -148,14 +149,14 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label idLblMOrdenes;
+        private System.Windows.Forms.Label descripcionLlbMOrdenes;
+        private System.Windows.Forms.Label estadosLblMOrdenes;
+        private System.Windows.Forms.TextBox idTbxMOrdenes;
+        private System.Windows.Forms.TextBox descTbxOrdenes;
+        private System.Windows.Forms.TextBox estadosTbxOrdenes;
+        private System.Windows.Forms.Button cancelarBtnMOrdens;
+        private System.Windows.Forms.Button aceptarBtnMOrdenes;
+        private System.Windows.Forms.Label modificarLblOrdenes;
     }
 }
