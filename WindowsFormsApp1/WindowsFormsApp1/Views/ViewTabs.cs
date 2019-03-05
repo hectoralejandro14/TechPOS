@@ -112,6 +112,16 @@ namespace WindowsFormsApp1.Views
                 return false;
             }
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabReparacion_Click(object sender, EventArgs e)
+        {
+
+        }
         //------------------------------------------------------------------------------------
     }       
 }
