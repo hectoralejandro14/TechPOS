@@ -48,6 +48,18 @@
     <Compile Include="Views\Almacen.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Views\Buscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Buscar.Designer.cs">
+      <DependentUpon>Buscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Cobrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Cobrar.Designer.cs">
+      <DependentUpon>Cobrar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Ecargar Pieza.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +75,12 @@
     <Compile Include="Views\Almacen.Designer.cs">
       <DependentUpon>Almacen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Motivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Motivo.Designer.cs">
+      <DependentUpon>Motivo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Notificaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +92,12 @@
     </Compile>
     <Compile Include="Views\ModifyOrder.Designer.cs">
       <DependentUpon>ModifyOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NuevoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NuevoUsuario.Designer.cs">
+      <DependentUpon>NuevoUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\PuntoVenta.cs">
       <SubType>Form</SubType>
@@ -126,11 +150,17 @@
     <EmbeddedResource Include="Views\Almacen.resx">
       <DependentUpon>Almacen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Ecargar Pieza.resx">
-      <DependentUpon>Ecargar Pieza.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\EncargarProducto.resx">
       <DependentUpon>EncargarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ModifyOrder.resx">
+      <DependentUpon>ModifyOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Motivo.resx">
+      <DependentUpon>Motivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NuevoUsuario.resx">
+      <DependentUpon>NuevoUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\PuntoVenta.resx">
       <DependentUpon>PuntoVenta.cs</DependentUpon>

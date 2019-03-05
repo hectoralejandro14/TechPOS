@@ -225,30 +225,35 @@
             // 
             // ActualizarBtn
             // 
-            this.ActualizarBtn.Location = new System.Drawing.Point(20, 476);
+            this.ActualizarBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(198)))), ((int)(((byte)(206)))));
+            this.ActualizarBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ActualizarBtn.ForeColor = System.Drawing.Color.Black;
+            this.ActualizarBtn.Location = new System.Drawing.Point(20, 486);
             this.ActualizarBtn.Name = "ActualizarBtn";
-            this.ActualizarBtn.Size = new System.Drawing.Size(91, 44);
+            this.ActualizarBtn.Size = new System.Drawing.Size(91, 34);
             this.ActualizarBtn.TabIndex = 20;
-            this.ActualizarBtn.Text = "Actualizar estado";
-            this.ActualizarBtn.UseVisualStyleBackColor = true;
+            this.ActualizarBtn.Text = "Actualizar";
+            this.ActualizarBtn.UseVisualStyleBackColor = false;
             // 
             // AbonarBtn
             // 
-            this.AbonarBtn.Location = new System.Drawing.Point(136, 476);
+            this.AbonarBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(198)))), ((int)(((byte)(206)))));
+            this.AbonarBtn.Location = new System.Drawing.Point(136, 486);
             this.AbonarBtn.Name = "AbonarBtn";
-            this.AbonarBtn.Size = new System.Drawing.Size(91, 44);
+            this.AbonarBtn.Size = new System.Drawing.Size(82, 34);
             this.AbonarBtn.TabIndex = 21;
             this.AbonarBtn.Text = "Abonar";
-            this.AbonarBtn.UseVisualStyleBackColor = true;
+            this.AbonarBtn.UseVisualStyleBackColor = false;
             // 
             // AceptarBtn
             // 
-            this.AceptarBtn.Location = new System.Drawing.Point(248, 476);
+            this.AceptarBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(198)))), ((int)(((byte)(206)))));
+            this.AceptarBtn.Location = new System.Drawing.Point(248, 486);
             this.AceptarBtn.Name = "AceptarBtn";
-            this.AceptarBtn.Size = new System.Drawing.Size(91, 44);
+            this.AceptarBtn.Size = new System.Drawing.Size(90, 34);
             this.AceptarBtn.TabIndex = 22;
             this.AceptarBtn.Text = "Aceptar";
-            this.AceptarBtn.UseVisualStyleBackColor = true;
+            this.AceptarBtn.UseVisualStyleBackColor = false;
             // 
             // Reparacion
             // 
