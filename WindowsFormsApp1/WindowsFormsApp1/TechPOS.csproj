@@ -45,9 +45,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Views\Almacen.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Views\Buscar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,9 +68,6 @@
     </Compile>
     <Compile Include="Views\EncargarProducto.Designer.cs">
       <DependentUpon>EncargarProducto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Almacen.Designer.cs">
-      <DependentUpon>Almacen.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Motivo.cs">
       <SubType>Form</SubType>
@@ -147,9 +141,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Views\Almacen.resx">
-      <DependentUpon>Almacen.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\Buscar.resx">
       <DependentUpon>Buscar.cs</DependentUpon>
     </EmbeddedResource>
