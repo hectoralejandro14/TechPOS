@@ -31,22 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewTabs));
             this.tabPuntoVenta = new System.Windows.Forms.TabControl();
             this.tabVenta = new System.Windows.Forms.TabPage();
-            /*this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();*/
-           this.UnaLabel = new System.Windows.Forms.Label();
-            //this.label5 = new System.Windows.Forms.Label();
-            //this.label4 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-           // this.label3 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-           // this.textBox1 = new System.Windows.Forms.TextBox();
-            //this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabRecibirEquipo = new System.Windows.Forms.TabPage();
             this.pictureBuscar = new System.Windows.Forms.PictureBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
@@ -85,26 +74,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabReparacion = new System.Windows.Forms.TabPage();
-           /* this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();*/
-         //   this.radioButton3 = new System.Windows.Forms.RadioButton();
-          //  this.radioButton2 = new System.Windows.Forms.RadioButton();
-           // this.radioButton1 = new System.Windows.Forms.RadioButton();
-           // this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            //this.label5 = new System.Windows.Forms.Label();
-           // this.label4 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            //this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            //this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            //this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            //this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            //this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-          //  this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UnaLabel = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -116,16 +87,12 @@
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idReparacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.linkCerrarSesion = new System.Windows.Forms.LinkLabel();
-            //this.label16 = new System.Windows.Forms.Label();
             this.tabPuntoVenta.SuspendLayout();
             this.tabVenta.SuspendLayout();
-           // ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-           // ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabRecibirEquipo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.tabReparacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -144,17 +111,11 @@
             // 
             // tabVenta
             // 
-           // this.tabVenta.Controls.Add(this.dataGridView1);
-            //this.tabVenta.Controls.Add(this.UnaLabel);
-          //  this.tabVenta.Controls.Add(this.label5);
-            //this.tabVenta.Controls.Add(this.label4);
             this.tabVenta.Controls.Add(this.button2);
             this.tabVenta.Controls.Add(this.button1);
             this.tabVenta.Controls.Add(this.label3);
             this.tabVenta.Controls.Add(this.label1);
             this.tabVenta.Controls.Add(this.pictureBox3);
-          //  this.tabVenta.Controls.Add(this.textBox1);
-        //    this.tabVenta.Controls.Add(this.pictureBox1);
             this.tabVenta.Location = new System.Drawing.Point(4, 31);
             this.tabVenta.Name = "tabVenta";
             this.tabVenta.Padding = new System.Windows.Forms.Padding(3);
@@ -162,85 +123,6 @@
             this.tabVenta.TabIndex = 0;
             this.tabVenta.Text = "Venta";
             this.tabVenta.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            /*this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column6,
-            this.Column7,
-            this.Column8,
-            this.Column9,
-            this.Column10});
-            this.dataGridView1.Location = new System.Drawing.Point(71, 195);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(1061, 386);
-            this.dataGridView1.TabIndex = 10;
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column6.HeaderText = "Código";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 102;
-            // 
-            // Column7
-            // 
-            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column7.HeaderText = "Cantidad";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 118;
-            // 
-            // Column8
-            // 
-            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column8.HeaderText = "Desc.";
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 87;
-            // 
-            // Column9
-            // 
-            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column9.HeaderText = "Precio U.";
-            this.Column9.Name = "Column9";
-            this.Column9.Width = 118;
-            // 
-            // Column10
-            // 
-            this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column10.HeaderText = "Precio T.";
-            this.Column10.Name = "Column10";
-            this.Column10.Width = 116;*/
-            // 
-            // UnaLabel
-            // 
-            /*this.UnaLabel.AutoSize = true;
-            this.UnaLabel.Location = new System.Drawing.Point(1149, 463);
-            this.UnaLabel.Name = "UnaLabel";
-            this.UnaLabel.Size = new System.Drawing.Size(56, 22);
-            this.UnaLabel.TabIndex = 9;
-            this.UnaLabel.Text = "Total";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1149, 341);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 22);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Subt.";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1149, 401);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 22);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "I.V.A";*/
             // 
             // button2
             // 
@@ -263,12 +145,12 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(529, 47);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(102, 155);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 37);
+            this.label3.Size = new System.Drawing.Size(53, 16);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Ventas";
+            this.label3.Text = "Todos";
             // 
             // label1
             // 
@@ -282,31 +164,12 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.lupa;
-            this.pictureBox3.Location = new System.Drawing.Point(951, 124);
+            this.pictureBox3.Location = new System.Drawing.Point(956, 122);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(29, 29);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
-            // 
-            // textBox1
-            // 
-           /* this.textBox1.Location = new System.Drawing.Point(224, 124);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(699, 29);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Tag = "";
-            this.textBox1.Text = "Codigo/Producto";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(101, 129);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;*/
             // 
             // tabRecibirEquipo
             // 
@@ -715,66 +578,20 @@
             this.tabReparacion.TabIndex = 2;
             this.tabReparacion.Text = "Reparación";
             this.tabReparacion.UseVisualStyleBackColor = true;
-            //this.tabReparacion.Click += new System.EventHandler(this.tabReparacion_Click);
-            // 
-            // radioButton1
-            // 
-           // this.radioButton1.Location = new System.Drawing.Point(0, 0);
-          //  this.radioButton1.Name = "radioButton1";
-           // this.radioButton1.Size = new System.Drawing.Size(104, 24);
-           // this.radioButton1.TabIndex = 0;
-            // 
-            // UnaLabel
-            // 
-           // this.UnaLabel.Location = new System.Drawing.Point(0, 0);
-            //this.UnaLabel.Name = "UnaLabel";
-           // this.UnaLabel.Size = new System.Drawing.Size(100, 23);
-           // this.UnaLabel.TabIndex = 1;
-            // 
-            // label5
-            // 
-            //this.label5.Location = new System.Drawing.Point(0, 0);
-           // this.label5.Name = "label5";
-           // this.label5.Size = new System.Drawing.Size(100, 23);
-           // this.label5.TabIndex = 2;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(102, 155);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 16);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Todos";
-            // 
-            // label4
-            // 
-           /* this.label4.Location = new System.Drawing.Point(0, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 23);
-            this.label4.TabIndex = 7;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(0, 0);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 29);
-            this.textBox1.TabIndex = 8;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
             // 
             // tabPage2
             // 
-            this.Column14.HeaderText = "IdReparación";
-            this.Column14.Name = "Column14";
-            this.Column14.Width = 200;*/
+            this.tabPage2.Location = new System.Drawing.Point(4, 31);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Size = new System.Drawing.Size(1328, 681);
+            this.tabPage2.TabIndex = 3;
+            // 
+            // UnaLabel
+            // 
+            this.UnaLabel.Location = new System.Drawing.Point(0, 0);
+            this.UnaLabel.Name = "UnaLabel";
+            this.UnaLabel.Size = new System.Drawing.Size(100, 23);
+            this.UnaLabel.TabIndex = 0;
             // 
             // Column1
             // 
@@ -834,15 +651,6 @@
             this.linkCerrarSesion.Text = "Cerrar Sesión.";
             this.linkCerrarSesion.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkCerrarSesion_LinkClicked);
             // 
-            // label16
-            // 
-           /* this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(6, 3);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(169, 22);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "Texto sin sentido";*/
-            // 
             // ViewTabs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -859,9 +667,7 @@
             this.tabPuntoVenta.ResumeLayout(false);
             this.tabVenta.ResumeLayout(false);
             this.tabVenta.PerformLayout();
-            //((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-           // ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabRecibirEquipo.ResumeLayout(false);
             this.tabRecibirEquipo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).EndInit();
