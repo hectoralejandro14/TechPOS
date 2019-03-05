@@ -103,12 +103,12 @@
             this.button2.Text = "Cobrar";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // UnaLabel
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(156, 9);
-            this.label6.Name = "label6";
+            this.label6.Name = "UnaLabel";
             this.label6.Size = new System.Drawing.Size(97, 31);
             this.label6.TabIndex = 7;
             this.label6.Text = "Cobrar";

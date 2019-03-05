@@ -100,11 +100,11 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Falla";
             // 
-            // label6
+            // UnaLabel
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(16, 181);
-            this.label6.Name = "label6";
+            this.label6.Name = "UnaLabel";
             this.label6.Size = new System.Drawing.Size(95, 13);
             this.label6.TabIndex = 5;
             this.label6.Text = "Diagnóstico rápido";

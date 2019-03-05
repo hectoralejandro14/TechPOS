@@ -31,22 +31,22 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewTabs));
             this.tabPuntoVenta = new System.Windows.Forms.TabControl();
             this.tabVenta = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            /*this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();*/
+           this.UnaLabel = new System.Windows.Forms.Label();
+            //this.label5 = new System.Windows.Forms.Label();
+            //this.label4 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+           // this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+           // this.textBox1 = new System.Windows.Forms.TextBox();
+            //this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabRecibirEquipo = new System.Windows.Forms.TabPage();
             this.pictureBuscar = new System.Windows.Forms.PictureBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
@@ -85,26 +85,26 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabReparacion = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+           /* this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();*/
+         //   this.radioButton3 = new System.Windows.Forms.RadioButton();
+          //  this.radioButton2 = new System.Windows.Forms.RadioButton();
+           // this.radioButton1 = new System.Windows.Forms.RadioButton();
+           // this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            //this.label5 = new System.Windows.Forms.Label();
+           // this.label4 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            //this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            //this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            //this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            //this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            //this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+          //  this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -116,12 +116,12 @@
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idReparacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.linkCerrarSesion = new System.Windows.Forms.LinkLabel();
-            this.label16 = new System.Windows.Forms.Label();
+            //this.label16 = new System.Windows.Forms.Label();
             this.tabPuntoVenta.SuspendLayout();
             this.tabVenta.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+           // ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+           // ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabRecibirEquipo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -144,17 +144,17 @@
             // 
             // tabVenta
             // 
-            this.tabVenta.Controls.Add(this.dataGridView1);
-            this.tabVenta.Controls.Add(this.label6);
-            this.tabVenta.Controls.Add(this.label5);
-            this.tabVenta.Controls.Add(this.label4);
+           // this.tabVenta.Controls.Add(this.dataGridView1);
+            //this.tabVenta.Controls.Add(this.UnaLabel);
+          //  this.tabVenta.Controls.Add(this.label5);
+            //this.tabVenta.Controls.Add(this.label4);
             this.tabVenta.Controls.Add(this.button2);
             this.tabVenta.Controls.Add(this.button1);
             this.tabVenta.Controls.Add(this.label3);
             this.tabVenta.Controls.Add(this.label1);
             this.tabVenta.Controls.Add(this.pictureBox3);
-            this.tabVenta.Controls.Add(this.textBox1);
-            this.tabVenta.Controls.Add(this.pictureBox1);
+          //  this.tabVenta.Controls.Add(this.textBox1);
+        //    this.tabVenta.Controls.Add(this.pictureBox1);
             this.tabVenta.Location = new System.Drawing.Point(4, 31);
             this.tabVenta.Name = "tabVenta";
             this.tabVenta.Padding = new System.Windows.Forms.Padding(3);
@@ -165,7 +165,7 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            /*this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -213,16 +213,16 @@
             this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Column10.HeaderText = "Precio T.";
             this.Column10.Name = "Column10";
-            this.Column10.Width = 116;
+            this.Column10.Width = 116;*/
             // 
-            // label6
+            // UnaLabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1149, 463);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 22);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Total";
+            /*this.UnaLabel.AutoSize = true;
+            this.UnaLabel.Location = new System.Drawing.Point(1149, 463);
+            this.UnaLabel.Name = "UnaLabel";
+            this.UnaLabel.Size = new System.Drawing.Size(56, 22);
+            this.UnaLabel.TabIndex = 9;
+            this.UnaLabel.Text = "Total";
             // 
             // label5
             // 
@@ -240,7 +240,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 22);
             this.label4.TabIndex = 7;
-            this.label4.Text = "I.V.A";
+            this.label4.Text = "I.V.A";*/
             // 
             // button2
             // 
@@ -291,7 +291,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(224, 124);
+           /* this.textBox1.Location = new System.Drawing.Point(224, 124);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(699, 29);
             this.textBox1.TabIndex = 2;
@@ -306,7 +306,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(101, 129);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox1.TabStop = false;*/
             // 
             // tabRecibirEquipo
             // 
@@ -715,28 +715,28 @@
             this.tabReparacion.TabIndex = 2;
             this.tabReparacion.Text = "Reparación";
             this.tabReparacion.UseVisualStyleBackColor = true;
-            this.tabReparacion.Click += new System.EventHandler(this.tabReparacion_Click);
+            //this.tabReparacion.Click += new System.EventHandler(this.tabReparacion_Click);
             // 
             // radioButton1
             // 
-            this.radioButton1.Location = new System.Drawing.Point(0, 0);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(104, 24);
-            this.radioButton1.TabIndex = 0;
+           // this.radioButton1.Location = new System.Drawing.Point(0, 0);
+          //  this.radioButton1.Name = "radioButton1";
+           // this.radioButton1.Size = new System.Drawing.Size(104, 24);
+           // this.radioButton1.TabIndex = 0;
             // 
-            // label6
+            // UnaLabel
             // 
-            this.label6.Location = new System.Drawing.Point(0, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(100, 23);
-            this.label6.TabIndex = 1;
+           // this.UnaLabel.Location = new System.Drawing.Point(0, 0);
+            //this.UnaLabel.Name = "UnaLabel";
+           // this.UnaLabel.Size = new System.Drawing.Size(100, 23);
+           // this.UnaLabel.TabIndex = 1;
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(0, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 23);
-            this.label5.TabIndex = 2;
+            //this.label5.Location = new System.Drawing.Point(0, 0);
+           // this.label5.Name = "label5";
+           // this.label5.Size = new System.Drawing.Size(100, 23);
+           // this.label5.TabIndex = 2;
             // 
             // label3
             // 
@@ -750,7 +750,7 @@
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(0, 0);
+           /* this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 23);
             this.label4.TabIndex = 7;
@@ -774,7 +774,7 @@
             // 
             this.Column14.HeaderText = "IdReparación";
             this.Column14.Name = "Column14";
-            this.Column14.Width = 200;
+            this.Column14.Width = 200;*/
             // 
             // Column1
             // 
@@ -836,12 +836,12 @@
             // 
             // label16
             // 
-            this.label16.AutoSize = true;
+           /* this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(6, 3);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(169, 22);
             this.label16.TabIndex = 0;
-            this.label16.Text = "Texto sin sentido";
+            this.label16.Text = "Texto sin sentido";*/
             // 
             // ViewTabs
             // 
@@ -859,9 +859,9 @@
             this.tabPuntoVenta.ResumeLayout(false);
             this.tabVenta.ResumeLayout(false);
             this.tabVenta.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+           // ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabRecibirEquipo.ResumeLayout(false);
             this.tabRecibirEquipo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).EndInit();
@@ -881,7 +881,7 @@
         //private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label UnaLabel;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
@@ -938,21 +938,21 @@
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.PictureBox pictureBuscar;
-        private System.Windows.Forms.PictureBox pictureBox1;
+       // private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+      //  private System.Windows.Forms.TextBox textBox1;
+        //private System.Windows.Forms.Label UnaLabel;
+      //  private System.Windows.Forms.Label label5;
+       // private System.Windows.Forms.Label label4;
+      /*  private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;*/
     }
 }
