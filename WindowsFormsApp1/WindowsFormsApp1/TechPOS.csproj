@@ -150,6 +150,15 @@
     <EmbeddedResource Include="Views\Almacen.resx">
       <DependentUpon>Almacen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Buscar.resx">
+      <DependentUpon>Buscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Cobrar.resx">
+      <DependentUpon>Cobrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Ecargar Pieza.resx">
+      <DependentUpon>Ecargar Pieza.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\EncargarProducto.resx">
       <DependentUpon>EncargarProducto.cs</DependentUpon>
     </EmbeddedResource>
