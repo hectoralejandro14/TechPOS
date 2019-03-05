@@ -159,6 +159,9 @@
     <EmbeddedResource Include="Views\Motivo.resx">
       <DependentUpon>Motivo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Notificaciones.resx">
+      <DependentUpon>Notificaciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\NuevoUsuario.resx">
       <DependentUpon>NuevoUsuario.cs</DependentUpon>
     </EmbeddedResource>
