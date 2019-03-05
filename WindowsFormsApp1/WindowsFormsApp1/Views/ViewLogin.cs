@@ -12,9 +12,6 @@ namespace WindowsFormsApp1
         public ViewLogin()
         {
             InitializeComponent();
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             //Cambiar el tipo de letra que se muestra en el TextBox
             Font font = new Font("Arial", 13.0f);
             txtUsuario.Font = font;

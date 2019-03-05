@@ -31,16 +31,16 @@
             this.lblReportes = new System.Windows.Forms.Label();
             this.comboPor = new System.Windows.Forms.ComboBox();
             this.textFecha = new System.Windows.Forms.TextBox();
+            this.dataReportes = new System.Windows.Forms.DataGridView();
             this.lblPor = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.lblTotal = new System.Windows.Forms.Label();
-            this.dtgReportes = new System.Windows.Forms.DataGridView();
-            this.cantidadDTGRepor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descDTGRepor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioDTGRepor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalDtgRepor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgReportes)).BeginInit();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataReportes)).BeginInit();
             this.SuspendLayout();
             // 
             // lblReportes
@@ -82,6 +82,45 @@
             this.dataReportes.Size = new System.Drawing.Size(628, 210);
             this.dataReportes.TabIndex = 3;
             // 
+            // lblPor
+            // 
+            this.lblPor.AutoSize = true;
+            this.lblPor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPor.Location = new System.Drawing.Point(159, 91);
+            this.lblPor.Name = "lblPor";
+            this.lblPor.Size = new System.Drawing.Size(29, 16);
+            this.lblPor.TabIndex = 4;
+            this.lblPor.Text = "Por";
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.Location = new System.Drawing.Point(403, 88);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(46, 16);
+            this.lblFecha.TabIndex = 5;
+            this.lblFecha.Text = "Fecha";
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Location = new System.Drawing.Point(140, 432);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(77, 27);
+            this.btnImprimir.TabIndex = 6;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(102, 364);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(39, 16);
+            this.lblTotal.TabIndex = 7;
+            this.lblTotal.Text = "Total";
+            // 
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -109,61 +148,22 @@
             this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column4.Width = 56;
             // 
-            // lblPor
-            // 
-            this.lblPor.AutoSize = true;
-            this.lblPor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPor.Location = new System.Drawing.Point(159, 91);
-            this.lblPor.Name = "lblPor";
-            this.lblPor.Size = new System.Drawing.Size(29, 16);
-            this.lblPor.TabIndex = 4;
-            this.lblPor.Text = "Por";
-            // 
-            // lblFecha
-            // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(403, 88);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(46, 16);
-            this.lblFecha.TabIndex = 5;
-            this.lblFecha.Text = "Fecha";
-            // 
-            // btnImprimir
-            // 
-            this.btnImprimir.Location = new System.Drawing.Point(171, 418);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(77, 27);
-            this.btnImprimir.TabIndex = 6;
-            this.btnImprimir.Text = "Imprimir";
-            this.btnImprimir.UseVisualStyleBackColor = true;
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(102, 377);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(39, 16);
-            this.lblTotal.TabIndex = 7;
-            this.lblTotal.Text = "Total";
-            // 
             // Reportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(750, 481);
-            this.Controls.Add(this.dtgReportes);
+            this.ClientSize = new System.Drawing.Size(800, 494);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblPor);
+            this.Controls.Add(this.dataReportes);
             this.Controls.Add(this.textFecha);
             this.Controls.Add(this.comboPor);
             this.Controls.Add(this.lblReportes);
             this.Name = "Reportes";
             this.Text = "Reportes";
-            ((System.ComponentModel.ISupportInitialize)(this.dtgReportes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataReportes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,13 +175,13 @@
         private System.Windows.Forms.ComboBox comboPor;
         private System.Windows.Forms.TextBox textFecha;
         private System.Windows.Forms.DataGridView dataReportes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.Label lblPor;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }

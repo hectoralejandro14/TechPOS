@@ -100,20 +100,12 @@ namespace WindowsFormsApp1.Views
                 MessageBox.Show("FORMATO DE CORREO NO VALIDO", "RECHAZADO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public bool validarEmail(string email)
+        public static bool validarEmail(string email)
         {
             try
             {
-                if (!txtTelefono.Text.Equals(""))
-                {
-                    new MailAddress(email);
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-                    
+                new MailAddress(email);
+                return true;
             }
             catch (FormatException)
             {
