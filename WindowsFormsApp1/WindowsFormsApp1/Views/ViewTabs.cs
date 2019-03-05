@@ -29,6 +29,16 @@ namespace WindowsFormsApp1.Views
         {
             MessageBox.Show("Picture Buscar");
         }
+
+        private void tabReparacion_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }       
 }
 
