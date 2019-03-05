@@ -93,12 +93,6 @@
     <Compile Include="Views\NuevoUsuario.Designer.cs">
       <DependentUpon>NuevoUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\PuntoVenta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\PuntoVenta.Designer.cs">
-      <DependentUpon>PuntoVenta.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\Reportes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,9 +158,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\NuevoUsuario.resx">
       <DependentUpon>NuevoUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\PuntoVenta.resx">
-      <DependentUpon>PuntoVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Reparacion.resx">
       <DependentUpon>Reparacion.cs</DependentUpon>

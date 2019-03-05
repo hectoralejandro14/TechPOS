@@ -68,6 +68,47 @@
             this.textFecha.Size = new System.Drawing.Size(126, 20);
             this.textFecha.TabIndex = 2;
             // 
+            // dataReportes
+            // 
+            this.dataReportes.AllowUserToOrderColumns = true;
+            this.dataReportes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataReportes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
+            this.dataReportes.Location = new System.Drawing.Point(96, 123);
+            this.dataReportes.Name = "dataReportes";
+            this.dataReportes.Size = new System.Drawing.Size(628, 210);
+            this.dataReportes.TabIndex = 3;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column1.FillWeight = 200F;
+            this.Column1.Frozen = true;
+            this.Column1.HeaderText = "Cantidad";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 74;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Descripción";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Precio";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column4.HeaderText = "Total";
+            this.Column4.Name = "Column4";
+            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column4.Width = 56;
+            // 
             // lblPor
             // 
             this.lblPor.AutoSize = true;
@@ -107,43 +148,6 @@
             this.lblTotal.TabIndex = 7;
             this.lblTotal.Text = "Total";
             // 
-            // dtgReportes
-            // 
-            this.dtgReportes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgReportes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cantidadDTGRepor,
-            this.descDTGRepor,
-            this.precioDTGRepor,
-            this.totalDtgRepor});
-            this.dtgReportes.Location = new System.Drawing.Point(105, 125);
-            this.dtgReportes.Name = "dtgReportes";
-            this.dtgReportes.Size = new System.Drawing.Size(562, 223);
-            this.dtgReportes.TabIndex = 8;
-            // 
-            // cantidadDTGRepor
-            // 
-            this.cantidadDTGRepor.HeaderText = "Cantidad";
-            this.cantidadDTGRepor.Name = "cantidadDTGRepor";
-            this.cantidadDTGRepor.Width = 130;
-            // 
-            // descDTGRepor
-            // 
-            this.descDTGRepor.HeaderText = "Descripción";
-            this.descDTGRepor.Name = "descDTGRepor";
-            this.descDTGRepor.Width = 130;
-            // 
-            // precioDTGRepor
-            // 
-            this.precioDTGRepor.HeaderText = "Precio";
-            this.precioDTGRepor.Name = "precioDTGRepor";
-            this.precioDTGRepor.Width = 130;
-            // 
-            // totalDtgRepor
-            // 
-            this.totalDtgRepor.HeaderText = "Total";
-            this.totalDtgRepor.Name = "totalDtgRepor";
-            this.totalDtgRepor.Width = 130;
-            // 
             // Reportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -170,14 +174,14 @@
         private System.Windows.Forms.Label lblReportes;
         private System.Windows.Forms.ComboBox comboPor;
         private System.Windows.Forms.TextBox textFecha;
+        private System.Windows.Forms.DataGridView dataReportes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.Label lblPor;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.DataGridView dtgReportes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDTGRepor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descDTGRepor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precioDTGRepor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn totalDtgRepor;
     }
 }
