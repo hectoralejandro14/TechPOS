@@ -7,21 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApp1.Views;
 
-namespace WindowsFormsApp1
+namespace WindowsFormsApp1.Views
 {
-    public partial class Reparacion : Form
+    public partial class Cobrar : Form
     {
-        public Reparacion()
+        public Cobrar()
         {
             InitializeComponent();
-
-
-        }
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
