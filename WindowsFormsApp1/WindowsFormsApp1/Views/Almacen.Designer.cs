@@ -42,7 +42,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(201, 57);
+            this.label1.Location = new System.Drawing.Point(201, 47);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(202, 23);
             this.label1.TabIndex = 0;
@@ -57,7 +57,7 @@
             this.Column3,
             this.Column5,
             this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 143);
+            this.dataGridView1.Location = new System.Drawing.Point(21, 113);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(583, 235);
             this.dataGridView1.TabIndex = 1;
