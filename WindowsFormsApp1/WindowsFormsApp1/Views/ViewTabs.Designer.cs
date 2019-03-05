@@ -94,6 +94,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.JpictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.JPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.JdataGridRep)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPuntoVenta
@@ -571,6 +574,14 @@
             // 
             // tabReparacion
             // 
+            this.tabReparacion.Controls.Add(this.JdataGridRep);
+            this.tabReparacion.Controls.Add(this.JTerminados);
+            this.tabReparacion.Controls.Add(this.JPendientes);
+            this.tabReparacion.Controls.Add(this.JradioTodos);
+            this.tabReparacion.Controls.Add(this.JPicture);
+            this.tabReparacion.Controls.Add(this.Jtxtbuscar);
+            this.tabReparacion.Controls.Add(this.JlblBuscar);
+            this.tabReparacion.Controls.Add(this.JpictureBox);
             this.tabReparacion.Location = new System.Drawing.Point(4, 31);
             this.tabReparacion.Name = "tabReparacion";
             this.tabReparacion.Padding = new System.Windows.Forms.Padding(3);
@@ -578,6 +589,7 @@
             this.tabReparacion.TabIndex = 2;
             this.tabReparacion.Text = "Reparación";
             this.tabReparacion.UseVisualStyleBackColor = true;
+            //this.tabReparacion.Click += new System.EventHandler(this.tabReparacion_Click);
             // 
             // tabPage2
             // 
@@ -651,6 +663,15 @@
             this.linkCerrarSesion.Text = "Cerrar Sesión.";
             this.linkCerrarSesion.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkCerrarSesion_LinkClicked);
             // 
+            // label16
+            // 
+           /* this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(6, 3);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(169, 22);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Texto sin sentido";*/
+            // 
             // ViewTabs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -672,7 +693,12 @@
             this.tabRecibirEquipo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.tabReparacion.ResumeLayout(false);
+            this.tabReparacion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.JpictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.JPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.JdataGridRep)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -750,15 +776,28 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox3;
-      //  private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.PictureBox JpictureBox;
+        private System.Windows.Forms.PictureBox JPicture;
+        private System.Windows.Forms.TextBox Jtxtbuscar;
+        private System.Windows.Forms.Label JlblBuscar;
+        private System.Windows.Forms.RadioButton JTerminados;
+        private System.Windows.Forms.RadioButton JPendientes;
+        private System.Windows.Forms.RadioButton JradioTodos;
+        private System.Windows.Forms.DataGridView JdataGridRep;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn JMArca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn JModelo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn JCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn JEstado;
+        //  private System.Windows.Forms.TextBox textBox1;
         //private System.Windows.Forms.Label UnaLabel;
-      //  private System.Windows.Forms.Label label5;
-       // private System.Windows.Forms.Label label4;
-      /*  private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;*/
+        //  private System.Windows.Forms.Label label5;
+        // private System.Windows.Forms.Label label4;
+        /*  private System.Windows.Forms.DataGridView dataGridView1;
+          private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+          private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+          private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+          private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+          private System.Windows.Forms.DataGridViewTextBoxColumn Column10;*/
     }
 }
