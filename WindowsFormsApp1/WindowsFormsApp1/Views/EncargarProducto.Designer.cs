@@ -53,156 +53,158 @@
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigo.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
             this.lblCodigo.Location = new System.Drawing.Point(174, 98);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(52, 16);
+            this.lblCodigo.Size = new System.Drawing.Size(71, 34);
             this.lblCodigo.TabIndex = 0;
             this.lblCodigo.Text = "Código";
             // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
             this.lblDescripcion.Location = new System.Drawing.Point(167, 148);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(80, 16);
+            this.lblDescripcion.Size = new System.Drawing.Size(110, 34);
             this.lblDescripcion.TabIndex = 1;
             this.lblDescripcion.Text = "Descripción";
             // 
             // lblMarca
             // 
             this.lblMarca.AutoSize = true;
-            this.lblMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMarca.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
             this.lblMarca.Location = new System.Drawing.Point(176, 199);
             this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(46, 16);
+            this.lblMarca.Size = new System.Drawing.Size(64, 34);
             this.lblMarca.TabIndex = 2;
             this.lblMarca.Text = "Marca";
             // 
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecio.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
             this.lblPrecio.Location = new System.Drawing.Point(174, 251);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(47, 16);
+            this.lblPrecio.Size = new System.Drawing.Size(66, 34);
             this.lblPrecio.TabIndex = 3;
             this.lblPrecio.Text = "Precio";
             // 
             // lblEnvio
             // 
             this.lblEnvio.AutoSize = true;
-            this.lblEnvio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEnvio.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
             this.lblEnvio.Location = new System.Drawing.Point(174, 307);
             this.lblEnvio.Name = "lblEnvio";
-            this.lblEnvio.Size = new System.Drawing.Size(42, 16);
+            this.lblEnvio.Size = new System.Drawing.Size(60, 34);
             this.lblEnvio.TabIndex = 4;
             this.lblEnvio.Text = "Envío";
             // 
             // lblIva
             // 
             this.lblIva.AutoSize = true;
-            this.lblIva.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIva.Location = new System.Drawing.Point(425, 200);
+            this.lblIva.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.lblIva.Location = new System.Drawing.Point(425, 199);
             this.lblIva.Name = "lblIva";
-            this.lblIva.Size = new System.Drawing.Size(29, 16);
+            this.lblIva.Size = new System.Drawing.Size(42, 34);
             this.lblIva.TabIndex = 6;
             this.lblIva.Text = "IVA";
             // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
             this.lblTotal.Location = new System.Drawing.Point(425, 256);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(39, 16);
+            this.lblTotal.Size = new System.Drawing.Size(54, 34);
             this.lblTotal.TabIndex = 7;
             this.lblTotal.Text = "Total";
             // 
             // lblAbono
             // 
             this.lblAbono.AutoSize = true;
-            this.lblAbono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAbono.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
             this.lblAbono.Location = new System.Drawing.Point(174, 359);
             this.lblAbono.Name = "lblAbono";
-            this.lblAbono.Size = new System.Drawing.Size(48, 16);
+            this.lblAbono.Size = new System.Drawing.Size(66, 34);
             this.lblAbono.TabIndex = 8;
             this.lblAbono.Text = "Abono";
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(349, 415);
+            this.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCancelar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.btnCancelar.Location = new System.Drawing.Point(381, 415);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(100, 36);
             this.btnCancelar.TabIndex = 9;
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.Location = new System.Drawing.Point(268, 415);
+            this.btnAceptar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAceptar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.btnAceptar.Location = new System.Drawing.Point(281, 415);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.Size = new System.Drawing.Size(85, 36);
             this.btnAceptar.TabIndex = 10;
             this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.UseVisualStyleBackColor = false;
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(253, 97);
+            this.txtCodigo.Location = new System.Drawing.Point(281, 106);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(100, 20);
             this.txtCodigo.TabIndex = 11;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(253, 147);
+            this.txtDescripcion.Location = new System.Drawing.Point(283, 156);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(100, 20);
             this.txtDescripcion.TabIndex = 12;
             // 
             // txtMarca
             // 
-            this.txtMarca.Location = new System.Drawing.Point(253, 198);
+            this.txtMarca.Location = new System.Drawing.Point(283, 207);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(100, 20);
             this.txtMarca.TabIndex = 13;
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(253, 256);
+            this.txtPrecio.Location = new System.Drawing.Point(283, 264);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(100, 20);
             this.txtPrecio.TabIndex = 14;
             // 
             // txtEnvio
             // 
-            this.txtEnvio.Location = new System.Drawing.Point(253, 307);
+            this.txtEnvio.Location = new System.Drawing.Point(283, 307);
             this.txtEnvio.Name = "txtEnvio";
             this.txtEnvio.Size = new System.Drawing.Size(100, 20);
             this.txtEnvio.TabIndex = 15;
             // 
             // txtAbono
             // 
-            this.txtAbono.Location = new System.Drawing.Point(253, 359);
+            this.txtAbono.Location = new System.Drawing.Point(283, 367);
             this.txtAbono.Name = "txtAbono";
             this.txtAbono.Size = new System.Drawing.Size(100, 20);
             this.txtAbono.TabIndex = 16;
             // 
             // txtIva
             // 
-            this.txtIva.Location = new System.Drawing.Point(494, 200);
+            this.txtIva.Location = new System.Drawing.Point(503, 207);
             this.txtIva.Name = "txtIva";
             this.txtIva.Size = new System.Drawing.Size(68, 20);
             this.txtIva.TabIndex = 17;
             // 
             // txtTotal
             // 
-            this.txtTotal.Location = new System.Drawing.Point(494, 251);
+            this.txtTotal.Location = new System.Drawing.Point(503, 264);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(68, 20);
             this.txtTotal.TabIndex = 18;
@@ -210,28 +212,30 @@
             // lblEncargar
             // 
             this.lblEncargar.AutoSize = true;
-            this.lblEncargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEncargar.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEncargar.Location = new System.Drawing.Point(276, 29);
             this.lblEncargar.Name = "lblEncargar";
-            this.lblEncargar.Size = new System.Drawing.Size(240, 31);
+            this.lblEncargar.Size = new System.Drawing.Size(195, 29);
             this.lblEncargar.TabIndex = 20;
             this.lblEncargar.Text = "Encargar Producto";
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(441, 415);
+            this.btnLimpiar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnLimpiar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.btnLimpiar.Location = new System.Drawing.Point(487, 415);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiar.Size = new System.Drawing.Size(84, 36);
             this.btnLimpiar.TabIndex = 21;
             this.btnLimpiar.Text = "Limpiar Campos";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.UseVisualStyleBackColor = false;
             // 
             // EncargarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 474);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.lblEncargar);
             this.Controls.Add(this.txtTotal);

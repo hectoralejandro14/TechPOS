@@ -51,76 +51,83 @@
             // idLblMOrdenes
             // 
             this.idLblMOrdenes.AutoSize = true;
-            this.idLblMOrdenes.Location = new System.Drawing.Point(46, 53);
+            this.idLblMOrdenes.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.idLblMOrdenes.Location = new System.Drawing.Point(98, 62);
             this.idLblMOrdenes.Name = "idLblMOrdenes";
-            this.idLblMOrdenes.Size = new System.Drawing.Size(18, 13);
+            this.idLblMOrdenes.Size = new System.Drawing.Size(32, 34);
             this.idLblMOrdenes.TabIndex = 1;
             this.idLblMOrdenes.Text = "ID";
             // 
             // descripcionLlbMOrdenes
             // 
             this.descripcionLlbMOrdenes.AutoSize = true;
-            this.descripcionLlbMOrdenes.Location = new System.Drawing.Point(15, 88);
+            this.descripcionLlbMOrdenes.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.descripcionLlbMOrdenes.Location = new System.Drawing.Point(33, 107);
             this.descripcionLlbMOrdenes.Name = "descripcionLlbMOrdenes";
-            this.descripcionLlbMOrdenes.Size = new System.Drawing.Size(63, 13);
+            this.descripcionLlbMOrdenes.Size = new System.Drawing.Size(110, 34);
             this.descripcionLlbMOrdenes.TabIndex = 2;
             this.descripcionLlbMOrdenes.Text = "Descripción";
             // 
             // estadosLblMOrdenes
             // 
             this.estadosLblMOrdenes.AutoSize = true;
-            this.estadosLblMOrdenes.Location = new System.Drawing.Point(30, 130);
+            this.estadosLblMOrdenes.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.estadosLblMOrdenes.Location = new System.Drawing.Point(64, 154);
             this.estadosLblMOrdenes.Name = "estadosLblMOrdenes";
-            this.estadosLblMOrdenes.Size = new System.Drawing.Size(45, 13);
+            this.estadosLblMOrdenes.Size = new System.Drawing.Size(79, 34);
             this.estadosLblMOrdenes.TabIndex = 3;
             this.estadosLblMOrdenes.Text = "Estados";
             // 
             // idTbxMOrdenes
             // 
-            this.idTbxMOrdenes.Location = new System.Drawing.Point(82, 46);
+            this.idTbxMOrdenes.Location = new System.Drawing.Point(149, 70);
             this.idTbxMOrdenes.Name = "idTbxMOrdenes";
             this.idTbxMOrdenes.Size = new System.Drawing.Size(100, 20);
             this.idTbxMOrdenes.TabIndex = 4;
             // 
             // descTbxOrdenes
             // 
-            this.descTbxOrdenes.Location = new System.Drawing.Point(82, 88);
+            this.descTbxOrdenes.Location = new System.Drawing.Point(149, 115);
             this.descTbxOrdenes.Name = "descTbxOrdenes";
             this.descTbxOrdenes.Size = new System.Drawing.Size(100, 20);
             this.descTbxOrdenes.TabIndex = 5;
             // 
             // estadosTbxOrdenes
             // 
-            this.estadosTbxOrdenes.Location = new System.Drawing.Point(82, 127);
+            this.estadosTbxOrdenes.Location = new System.Drawing.Point(149, 162);
             this.estadosTbxOrdenes.Name = "estadosTbxOrdenes";
             this.estadosTbxOrdenes.Size = new System.Drawing.Size(100, 20);
             this.estadosTbxOrdenes.TabIndex = 6;
             // 
             // cancelarBtnMOrdens
             // 
-            this.cancelarBtnMOrdens.Location = new System.Drawing.Point(18, 165);
+            this.cancelarBtnMOrdens.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cancelarBtnMOrdens.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.cancelarBtnMOrdens.Location = new System.Drawing.Point(55, 225);
             this.cancelarBtnMOrdens.Name = "cancelarBtnMOrdens";
-            this.cancelarBtnMOrdens.Size = new System.Drawing.Size(75, 23);
+            this.cancelarBtnMOrdens.Size = new System.Drawing.Size(98, 39);
             this.cancelarBtnMOrdens.TabIndex = 7;
             this.cancelarBtnMOrdens.Text = "Cancelar";
-            this.cancelarBtnMOrdens.UseVisualStyleBackColor = true;
+            this.cancelarBtnMOrdens.UseVisualStyleBackColor = false;
             // 
             // aceptarBtnMOrdenes
             // 
-            this.aceptarBtnMOrdenes.Location = new System.Drawing.Point(137, 165);
+            this.aceptarBtnMOrdenes.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.aceptarBtnMOrdenes.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.aceptarBtnMOrdenes.Location = new System.Drawing.Point(185, 225);
             this.aceptarBtnMOrdenes.Name = "aceptarBtnMOrdenes";
-            this.aceptarBtnMOrdenes.Size = new System.Drawing.Size(75, 23);
+            this.aceptarBtnMOrdenes.Size = new System.Drawing.Size(87, 39);
             this.aceptarBtnMOrdenes.TabIndex = 8;
             this.aceptarBtnMOrdenes.Text = "Aceptar";
-            this.aceptarBtnMOrdenes.UseVisualStyleBackColor = true;
+            this.aceptarBtnMOrdenes.UseVisualStyleBackColor = false;
             // 
             // modificarLblOrdenes
             // 
             this.modificarLblOrdenes.AutoSize = true;
-            this.modificarLblOrdenes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modificarLblOrdenes.Location = new System.Drawing.Point(93, 17);
+            this.modificarLblOrdenes.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modificarLblOrdenes.Location = new System.Drawing.Point(99, 9);
             this.modificarLblOrdenes.Name = "modificarLblOrdenes";
-            this.modificarLblOrdenes.Size = new System.Drawing.Size(63, 16);
+            this.modificarLblOrdenes.Size = new System.Drawing.Size(106, 29);
             this.modificarLblOrdenes.TabIndex = 9;
             this.modificarLblOrdenes.Text = "Modificar";
             // 
@@ -128,7 +135,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(242, 209);
+            this.ClientSize = new System.Drawing.Size(320, 291);
             this.Controls.Add(this.modificarLblOrdenes);
             this.Controls.Add(this.aceptarBtnMOrdenes);
             this.Controls.Add(this.cancelarBtnMOrdens);

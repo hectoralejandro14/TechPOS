@@ -33,11 +33,11 @@
             this.labelFecha = new System.Windows.Forms.Label();
             this.todo = new System.Windows.Forms.RadioButton();
             this.dataTrabajadores = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboTrabajador = new System.Windows.Forms.ComboBox();
             this.dateTiempo = new System.Windows.Forms.DateTimePicker();
             this.btncerrar = new System.Windows.Forms.Button();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTrabajadores)).BeginInit();
             this.SuspendLayout();
@@ -56,27 +56,30 @@
             // labelTrabajador
             // 
             this.labelTrabajador.AutoSize = true;
+            this.labelTrabajador.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
             this.labelTrabajador.Location = new System.Drawing.Point(204, 43);
             this.labelTrabajador.Name = "labelTrabajador";
-            this.labelTrabajador.Size = new System.Drawing.Size(61, 13);
+            this.labelTrabajador.Size = new System.Drawing.Size(106, 34);
             this.labelTrabajador.TabIndex = 1;
             this.labelTrabajador.Text = "Trabajador:";
             // 
             // labelFecha
             // 
             this.labelFecha.AutoSize = true;
-            this.labelFecha.Location = new System.Drawing.Point(204, 116);
+            this.labelFecha.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.labelFecha.Location = new System.Drawing.Point(216, 121);
             this.labelFecha.Name = "labelFecha";
-            this.labelFecha.Size = new System.Drawing.Size(40, 13);
+            this.labelFecha.Size = new System.Drawing.Size(70, 34);
             this.labelFecha.TabIndex = 2;
             this.labelFecha.Text = "Fecha:";
             // 
             // todo
             // 
             this.todo.AutoSize = true;
-            this.todo.Location = new System.Drawing.Point(207, 178);
+            this.todo.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.todo.Location = new System.Drawing.Point(247, 167);
             this.todo.Name = "todo";
-            this.todo.Size = new System.Drawing.Size(50, 17);
+            this.todo.Size = new System.Drawing.Size(73, 38);
             this.todo.TabIndex = 4;
             this.todo.TabStop = true;
             this.todo.Text = "Todo";
@@ -88,52 +91,55 @@
             this.dataTrabajadores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-            this.dataTrabajadores.Location = new System.Drawing.Point(207, 246);
+            this.dataTrabajadores.Location = new System.Drawing.Point(153, 211);
             this.dataTrabajadores.Name = "dataTrabajadores";
-            this.dataTrabajadores.Size = new System.Drawing.Size(342, 161);
+            this.dataTrabajadores.Size = new System.Drawing.Size(466, 196);
             this.dataTrabajadores.TabIndex = 5;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Fecha";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 150;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Trabajo";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 150;
             // 
             // comboTrabajador
             // 
             this.comboTrabajador.FormattingEnabled = true;
-            this.comboTrabajador.Location = new System.Drawing.Point(268, 40);
+            this.comboTrabajador.Location = new System.Drawing.Point(307, 51);
             this.comboTrabajador.Name = "comboTrabajador";
             this.comboTrabajador.Size = new System.Drawing.Size(200, 21);
             this.comboTrabajador.TabIndex = 6;
             // 
             // dateTiempo
             // 
-            this.dateTiempo.Location = new System.Drawing.Point(268, 110);
+            this.dateTiempo.Font = new System.Drawing.Font("Cordia New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTiempo.Location = new System.Drawing.Point(307, 121);
             this.dateTiempo.Name = "dateTiempo";
-            this.dateTiempo.Size = new System.Drawing.Size(200, 20);
+            this.dateTiempo.Size = new System.Drawing.Size(200, 30);
             this.dateTiempo.TabIndex = 7;
             // 
             // btncerrar
             // 
-            this.btncerrar.Location = new System.Drawing.Point(496, 436);
+            this.btncerrar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btncerrar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.btncerrar.Location = new System.Drawing.Point(489, 424);
             this.btncerrar.Name = "btncerrar";
-            this.btncerrar.Size = new System.Drawing.Size(85, 26);
+            this.btncerrar.Size = new System.Drawing.Size(90, 39);
             this.btncerrar.TabIndex = 8;
             this.btncerrar.Text = "Cerrar";
-            this.btncerrar.UseVisualStyleBackColor = true;
+            this.btncerrar.UseVisualStyleBackColor = false;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Fecha";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 210;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Trabajo";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 210;
             // 
             // Trabajadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 485);
+            this.ClientSize = new System.Drawing.Size(713, 475);
             this.Controls.Add(this.btncerrar);
             this.Controls.Add(this.dateTiempo);
             this.Controls.Add(this.comboTrabajador);
@@ -160,8 +166,8 @@
         private System.Windows.Forms.DataGridView dataTrabajadores;
         private System.Windows.Forms.ComboBox comboTrabajador;
         private System.Windows.Forms.DateTimePicker dateTiempo;
+        private System.Windows.Forms.Button btncerrar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.Button btncerrar;
     }
 }
