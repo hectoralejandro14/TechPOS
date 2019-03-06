@@ -74,6 +74,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabReparacion = new System.Windows.Forms.TabPage();
+            this.JdataGridRep = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.JMArca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.JModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.JCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.JEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.JTerminados = new System.Windows.Forms.RadioButton();
+            this.JPendientes = new System.Windows.Forms.RadioButton();
+            this.JradioTodos = new System.Windows.Forms.RadioButton();
+            this.Jtxtbuscar = new System.Windows.Forms.TextBox();
+            this.JlblBuscar = new System.Windows.Forms.Label();
+            this.JPicture = new System.Windows.Forms.PictureBox();
+            this.JpictureBox = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.UnaLabel = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -87,19 +100,6 @@
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idReparacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.linkCerrarSesion = new System.Windows.Forms.LinkLabel();
-            this.JpictureBox = new System.Windows.Forms.PictureBox();
-            this.JlblBuscar = new System.Windows.Forms.Label();
-            this.Jtxtbuscar = new System.Windows.Forms.TextBox();
-            this.JPicture = new System.Windows.Forms.PictureBox();
-            this.JradioTodos = new System.Windows.Forms.RadioButton();
-            this.JPendientes = new System.Windows.Forms.RadioButton();
-            this.JTerminados = new System.Windows.Forms.RadioButton();
-            this.JdataGridRep = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.JMArca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.JModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.JCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.JEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPuntoVenta.SuspendLayout();
             this.tabVenta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -107,10 +107,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabReparacion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.JpictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.JPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.JdataGridRep)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.JPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.JpictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPuntoVenta
@@ -119,7 +119,7 @@
             this.tabPuntoVenta.Controls.Add(this.tabRecibirEquipo);
             this.tabPuntoVenta.Controls.Add(this.tabReparacion);
             this.tabPuntoVenta.Controls.Add(this.tabPage2);
-            this.tabPuntoVenta.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPuntoVenta.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPuntoVenta.Location = new System.Drawing.Point(2, 0);
             this.tabPuntoVenta.Name = "tabPuntoVenta";
             this.tabPuntoVenta.SelectedIndex = 0;
@@ -133,10 +133,10 @@
             this.tabVenta.Controls.Add(this.label3);
             this.tabVenta.Controls.Add(this.label1);
             this.tabVenta.Controls.Add(this.pictureBox3);
-            this.tabVenta.Location = new System.Drawing.Point(4, 31);
+            this.tabVenta.Location = new System.Drawing.Point(4, 30);
             this.tabVenta.Name = "tabVenta";
             this.tabVenta.Padding = new System.Windows.Forms.Padding(3);
-            this.tabVenta.Size = new System.Drawing.Size(1328, 681);
+            this.tabVenta.Size = new System.Drawing.Size(1328, 682);
             this.tabVenta.TabIndex = 0;
             this.tabVenta.Text = "Venta";
             this.tabVenta.UseVisualStyleBackColor = true;
@@ -174,13 +174,12 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(1149, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 22);
+            this.label1.Size = new System.Drawing.Size(76, 34);
             this.label1.TabIndex = 4;
             this.label1.Text = "Usuario";
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.lupa;
             this.pictureBox3.Location = new System.Drawing.Point(951, 124);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(29, 29);
@@ -226,17 +225,16 @@
             this.tabRecibirEquipo.Controls.Add(this.txtBuscarCliente);
             this.tabRecibirEquipo.Controls.Add(this.label2);
             this.tabRecibirEquipo.Controls.Add(this.pictureBox2);
-            this.tabRecibirEquipo.Location = new System.Drawing.Point(4, 31);
+            this.tabRecibirEquipo.Location = new System.Drawing.Point(4, 43);
             this.tabRecibirEquipo.Name = "tabRecibirEquipo";
             this.tabRecibirEquipo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabRecibirEquipo.Size = new System.Drawing.Size(1328, 681);
+            this.tabRecibirEquipo.Size = new System.Drawing.Size(1328, 669);
             this.tabRecibirEquipo.TabIndex = 1;
             this.tabRecibirEquipo.Text = "Recibir Equipo";
             this.tabRecibirEquipo.UseVisualStyleBackColor = true;
             // 
             // pictureBuscar
             // 
-            this.pictureBuscar.Image = global::WindowsFormsApp1.Properties.Resources.lupa;
             this.pictureBuscar.Location = new System.Drawing.Point(877, 22);
             this.pictureBuscar.Name = "pictureBuscar";
             this.pictureBuscar.Size = new System.Drawing.Size(22, 22);
@@ -281,20 +279,21 @@
             // label14
             // 
             this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(172, 124);
+            this.label14.Location = new System.Drawing.Point(185, 119);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(97, 22);
+            this.label14.Size = new System.Drawing.Size(88, 34);
             this.label14.TabIndex = 36;
             this.label14.Text = "Apellido :";
             // 
             // btnPedirPieza
             // 
             this.btnPedirPieza.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnPedirPieza.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPedirPieza.Location = new System.Drawing.Point(877, 631);
+            this.btnPedirPieza.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPedirPieza.Location = new System.Drawing.Point(877, 621);
             this.btnPedirPieza.Name = "btnPedirPieza";
-            this.btnPedirPieza.Size = new System.Drawing.Size(132, 33);
+            this.btnPedirPieza.Size = new System.Drawing.Size(132, 43);
             this.btnPedirPieza.TabIndex = 35;
             this.btnPedirPieza.Text = "Pedir Pieza";
             this.btnPedirPieza.UseVisualStyleBackColor = false;
@@ -303,10 +302,10 @@
             // btnAgregrEquipos
             // 
             this.btnAgregrEquipos.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnAgregrEquipos.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregrEquipos.Location = new System.Drawing.Point(1015, 631);
+            this.btnAgregrEquipos.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregrEquipos.Location = new System.Drawing.Point(1015, 621);
             this.btnAgregrEquipos.Name = "btnAgregrEquipos";
-            this.btnAgregrEquipos.Size = new System.Drawing.Size(132, 33);
+            this.btnAgregrEquipos.Size = new System.Drawing.Size(132, 43);
             this.btnAgregrEquipos.TabIndex = 34;
             this.btnAgregrEquipos.Text = "Agregar Equipo";
             this.btnAgregrEquipos.UseVisualStyleBackColor = false;
@@ -314,10 +313,10 @@
             // btnLimpiarCampos
             // 
             this.btnLimpiarCampos.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnLimpiarCampos.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiarCampos.Location = new System.Drawing.Point(1153, 631);
+            this.btnLimpiarCampos.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarCampos.Location = new System.Drawing.Point(1153, 621);
             this.btnLimpiarCampos.Name = "btnLimpiarCampos";
-            this.btnLimpiarCampos.Size = new System.Drawing.Size(132, 33);
+            this.btnLimpiarCampos.Size = new System.Drawing.Size(132, 43);
             this.btnLimpiarCampos.TabIndex = 33;
             this.btnLimpiarCampos.Text = "Limpiar Campos";
             this.btnLimpiarCampos.UseVisualStyleBackColor = false;
@@ -325,9 +324,9 @@
             // comboResponsable
             // 
             this.comboResponsable.FormattingEnabled = true;
-            this.comboResponsable.Location = new System.Drawing.Point(269, 628);
+            this.comboResponsable.Location = new System.Drawing.Point(269, 621);
             this.comboResponsable.Name = "comboResponsable";
-            this.comboResponsable.Size = new System.Drawing.Size(207, 30);
+            this.comboResponsable.Size = new System.Drawing.Size(207, 42);
             this.comboResponsable.TabIndex = 32;
             // 
             // txtAnticipo
@@ -354,7 +353,7 @@
             this.label15.ForeColor = System.Drawing.Color.Black;
             this.label15.Location = new System.Drawing.Point(81, 631);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(148, 22);
+            this.label15.Size = new System.Drawing.Size(133, 34);
             this.label15.TabIndex = 29;
             this.label15.Text = "Responsable : ";
             // 
@@ -372,7 +371,7 @@
             this.rbDiagnosticoEspecifico.ForeColor = System.Drawing.Color.Black;
             this.rbDiagnosticoEspecifico.Location = new System.Drawing.Point(382, 404);
             this.rbDiagnosticoEspecifico.Name = "rbDiagnosticoEspecifico";
-            this.rbDiagnosticoEspecifico.Size = new System.Drawing.Size(130, 26);
+            this.rbDiagnosticoEspecifico.Size = new System.Drawing.Size(123, 38);
             this.rbDiagnosticoEspecifico.TabIndex = 27;
             this.rbDiagnosticoEspecifico.TabStop = true;
             this.rbDiagnosticoEspecifico.Text = "Específico.";
@@ -384,7 +383,7 @@
             this.rbDiagnosticoRapido.ForeColor = System.Drawing.Color.Black;
             this.rbDiagnosticoRapido.Location = new System.Drawing.Point(278, 404);
             this.rbDiagnosticoRapido.Name = "rbDiagnosticoRapido";
-            this.rbDiagnosticoRapido.Size = new System.Drawing.Size(98, 26);
+            this.rbDiagnosticoRapido.Size = new System.Drawing.Size(93, 38);
             this.rbDiagnosticoRapido.TabIndex = 26;
             this.rbDiagnosticoRapido.TabStop = true;
             this.rbDiagnosticoRapido.Text = "Rápido.";
@@ -417,22 +416,22 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.Black;
             this.label22.Location = new System.Drawing.Point(1039, 186);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(183, 29);
+            this.label22.Size = new System.Drawing.Size(132, 34);
             this.label22.TabIndex = 22;
             this.label22.Text = "ID de Equipo : ";
             // 
             // lblId
             // 
             this.lblId.AutoSize = true;
-            this.lblId.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblId.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblId.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblId.Location = new System.Drawing.Point(1217, 186);
+            this.lblId.Location = new System.Drawing.Point(1177, 181);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(65, 29);
+            this.lblId.Size = new System.Drawing.Size(55, 34);
             this.lblId.TabIndex = 21;
             this.lblId.Text = "0000";
             // 
@@ -442,7 +441,7 @@
             this.label20.ForeColor = System.Drawing.Color.Black;
             this.label20.Location = new System.Drawing.Point(59, 253);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(80, 22);
+            this.label20.Size = new System.Drawing.Size(74, 34);
             this.label20.TabIndex = 20;
             this.label20.Text = "Marca :";
             // 
@@ -452,7 +451,7 @@
             this.label19.ForeColor = System.Drawing.Color.Black;
             this.label19.Location = new System.Drawing.Point(59, 298);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(91, 22);
+            this.label19.Size = new System.Drawing.Size(82, 34);
             this.label19.TabIndex = 19;
             this.label19.Text = "Modelo :";
             // 
@@ -462,7 +461,7 @@
             this.label18.ForeColor = System.Drawing.Color.Black;
             this.label18.Location = new System.Drawing.Point(59, 348);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(211, 22);
+            this.label18.Size = new System.Drawing.Size(188, 34);
             this.label18.TabIndex = 18;
             this.label18.Text = "Descripción de Falla :";
             // 
@@ -472,7 +471,7 @@
             this.label17.ForeColor = System.Drawing.Color.Black;
             this.label17.Location = new System.Drawing.Point(59, 408);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(213, 22);
+            this.label17.Size = new System.Drawing.Size(188, 34);
             this.label17.TabIndex = 17;
             this.label17.Text = "Tipo de Diagnóstico : ";
             // 
@@ -482,7 +481,7 @@
             this.label13.ForeColor = System.Drawing.Color.Black;
             this.label13.Location = new System.Drawing.Point(81, 542);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(73, 22);
+            this.label13.Size = new System.Drawing.Size(69, 34);
             this.label13.TabIndex = 13;
             this.label13.Text = "Total : ";
             // 
@@ -492,28 +491,28 @@
             this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.Location = new System.Drawing.Point(81, 585);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(103, 22);
+            this.label12.Size = new System.Drawing.Size(94, 34);
             this.label12.TabIndex = 12;
             this.label12.Text = "Anticipo : ";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.Location = new System.Drawing.Point(1, 186);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(204, 29);
+            this.label11.Size = new System.Drawing.Size(165, 29);
             this.label11.TabIndex = 11;
             this.label11.Text = "Datos de Equipo";
             // 
             // btnAgregarCliente
             // 
             this.btnAgregarCliente.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnAgregarCliente.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarCliente.Location = new System.Drawing.Point(1110, 124);
+            this.btnAgregarCliente.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarCliente.Location = new System.Drawing.Point(1122, 119);
             this.btnAgregarCliente.Name = "btnAgregarCliente";
-            this.btnAgregarCliente.Size = new System.Drawing.Size(132, 33);
+            this.btnAgregarCliente.Size = new System.Drawing.Size(120, 38);
             this.btnAgregarCliente.TabIndex = 10;
             this.btnAgregarCliente.Text = "Agregar Cliente";
             this.btnAgregarCliente.UseVisualStyleBackColor = false;
@@ -523,9 +522,9 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(598, 121);
+            this.label10.Location = new System.Drawing.Point(617, 119);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(92, 22);
+            this.label10.Size = new System.Drawing.Size(84, 34);
             this.label10.TabIndex = 6;
             this.label10.Text = "Correo : ";
             // 
@@ -533,28 +532,30 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(598, 69);
+            this.label9.Location = new System.Drawing.Point(607, 61);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(103, 22);
+            this.label9.Size = new System.Drawing.Size(94, 34);
             this.label9.TabIndex = 5;
             this.label9.Text = "Teléfono :";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(172, 69);
+            this.label8.Location = new System.Drawing.Point(185, 61);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(95, 22);
+            this.label8.Size = new System.Drawing.Size(87, 34);
             this.label8.TabIndex = 4;
             this.label8.Text = "Nombre :";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(-46, 153);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(1440, 22);
+            this.label7.Size = new System.Drawing.Size(1185, 34);
             this.label7.TabIndex = 3;
             this.label7.Text = "_________________________________________________________________________________" +
     "_________________________________________________";
@@ -572,13 +573,12 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(357, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 22);
+            this.label2.Size = new System.Drawing.Size(131, 34);
             this.label2.TabIndex = 1;
             this.label2.Text = "Buscar Cliente";
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
             this.pictureBox2.Location = new System.Drawing.Point(6, 6);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(101, 129);
@@ -592,24 +592,136 @@
             this.tabReparacion.Controls.Add(this.JTerminados);
             this.tabReparacion.Controls.Add(this.JPendientes);
             this.tabReparacion.Controls.Add(this.JradioTodos);
-            this.tabReparacion.Controls.Add(this.JPicture);
             this.tabReparacion.Controls.Add(this.Jtxtbuscar);
             this.tabReparacion.Controls.Add(this.JlblBuscar);
+            this.tabReparacion.Controls.Add(this.JPicture);
             this.tabReparacion.Controls.Add(this.JpictureBox);
-            this.tabReparacion.Location = new System.Drawing.Point(4, 31);
+            this.tabReparacion.Location = new System.Drawing.Point(4, 43);
             this.tabReparacion.Name = "tabReparacion";
             this.tabReparacion.Padding = new System.Windows.Forms.Padding(3);
-            this.tabReparacion.Size = new System.Drawing.Size(1328, 681);
+            this.tabReparacion.Size = new System.Drawing.Size(1328, 669);
             this.tabReparacion.TabIndex = 2;
             this.tabReparacion.Text = "Reparación";
             this.tabReparacion.UseVisualStyleBackColor = true;
             this.tabReparacion.Click += new System.EventHandler(this.tabReparacion_Click);
             // 
+            // JdataGridRep
+            // 
+            this.JdataGridRep.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.JdataGridRep.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.JMArca,
+            this.JModelo,
+            this.JCliente,
+            this.JEstado});
+            this.JdataGridRep.Location = new System.Drawing.Point(172, 260);
+            this.JdataGridRep.Name = "JdataGridRep";
+            this.JdataGridRep.Size = new System.Drawing.Size(915, 317);
+            this.JdataGridRep.TabIndex = 7;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Width = 200;
+            // 
+            // JMArca
+            // 
+            this.JMArca.HeaderText = "Marca";
+            this.JMArca.Name = "JMArca";
+            this.JMArca.Width = 150;
+            // 
+            // JModelo
+            // 
+            this.JModelo.HeaderText = "Modelo";
+            this.JModelo.Name = "JModelo";
+            this.JModelo.Width = 150;
+            // 
+            // JCliente
+            // 
+            this.JCliente.HeaderText = "Cliente";
+            this.JCliente.Name = "JCliente";
+            this.JCliente.Width = 225;
+            // 
+            // JEstado
+            // 
+            this.JEstado.HeaderText = "Estado";
+            this.JEstado.Name = "JEstado";
+            this.JEstado.Width = 150;
+            // 
+            // JTerminados
+            // 
+            this.JTerminados.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.JTerminados.Location = new System.Drawing.Point(981, 177);
+            this.JTerminados.Name = "JTerminados";
+            this.JTerminados.Size = new System.Drawing.Size(124, 37);
+            this.JTerminados.TabIndex = 6;
+            this.JTerminados.TabStop = true;
+            this.JTerminados.Text = "Terminado";
+            this.JTerminados.UseVisualStyleBackColor = true;
+            // 
+            // JPendientes
+            // 
+            this.JPendientes.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.JPendientes.Location = new System.Drawing.Point(564, 177);
+            this.JPendientes.Name = "JPendientes";
+            this.JPendientes.Size = new System.Drawing.Size(117, 37);
+            this.JPendientes.TabIndex = 5;
+            this.JPendientes.TabStop = true;
+            this.JPendientes.Text = "Pendientes";
+            this.JPendientes.UseVisualStyleBackColor = true;
+            // 
+            // JradioTodos
+            // 
+            this.JradioTodos.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.JradioTodos.Location = new System.Drawing.Point(143, 177);
+            this.JradioTodos.Name = "JradioTodos";
+            this.JradioTodos.Size = new System.Drawing.Size(119, 43);
+            this.JradioTodos.TabIndex = 4;
+            this.JradioTodos.TabStop = true;
+            this.JradioTodos.Text = "Todos";
+            this.JradioTodos.UseVisualStyleBackColor = true;
+            // 
+            // Jtxtbuscar
+            // 
+            this.Jtxtbuscar.Location = new System.Drawing.Point(459, 75);
+            this.Jtxtbuscar.Name = "Jtxtbuscar";
+            this.Jtxtbuscar.Size = new System.Drawing.Size(313, 41);
+            this.Jtxtbuscar.TabIndex = 2;
+            // 
+            // JlblBuscar
+            // 
+            this.JlblBuscar.AutoSize = true;
+            this.JlblBuscar.Location = new System.Drawing.Point(365, 78);
+            this.JlblBuscar.Name = "JlblBuscar";
+            this.JlblBuscar.Size = new System.Drawing.Size(71, 34);
+            this.JlblBuscar.TabIndex = 1;
+            this.JlblBuscar.Text = "Buscar";
+            // 
+            // JPicture
+            // 
+            this.JPicture.Location = new System.Drawing.Point(795, 74);
+            this.JPicture.Name = "JPicture";
+            this.JPicture.Size = new System.Drawing.Size(38, 30);
+            this.JPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.JPicture.TabIndex = 3;
+            this.JPicture.TabStop = false;
+            // 
+            // JpictureBox
+            // 
+            this.JpictureBox.Location = new System.Drawing.Point(0, 0);
+            this.JpictureBox.Name = "JpictureBox";
+            this.JpictureBox.Size = new System.Drawing.Size(89, 118);
+            this.JpictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.JpictureBox.TabIndex = 0;
+            this.JpictureBox.TabStop = false;
+            this.JpictureBox.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
             // tabPage2
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 31);
+            this.tabPage2.Location = new System.Drawing.Point(4, 30);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1328, 681);
+            this.tabPage2.Size = new System.Drawing.Size(1328, 682);
             this.tabPage2.TabIndex = 3;
             // 
             // UnaLabel
@@ -677,120 +789,6 @@
             this.linkCerrarSesion.Text = "Cerrar Sesión.";
             this.linkCerrarSesion.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkCerrarSesion_LinkClicked);
             // 
-            // JpictureBox
-            // 
-            this.JpictureBox.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
-            this.JpictureBox.Location = new System.Drawing.Point(0, 0);
-            this.JpictureBox.Name = "JpictureBox";
-            this.JpictureBox.Size = new System.Drawing.Size(89, 118);
-            this.JpictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.JpictureBox.TabIndex = 0;
-            this.JpictureBox.TabStop = false;
-            this.JpictureBox.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
-            // JlblBuscar
-            // 
-            this.JlblBuscar.AutoSize = true;
-            this.JlblBuscar.Location = new System.Drawing.Point(364, 74);
-            this.JlblBuscar.Name = "JlblBuscar";
-            this.JlblBuscar.Size = new System.Drawing.Size(77, 22);
-            this.JlblBuscar.TabIndex = 1;
-            this.JlblBuscar.Text = "Buscar";
-            // 
-            // Jtxtbuscar
-            // 
-            this.Jtxtbuscar.Location = new System.Drawing.Point(459, 75);
-            this.Jtxtbuscar.Name = "Jtxtbuscar";
-            this.Jtxtbuscar.Size = new System.Drawing.Size(313, 29);
-            this.Jtxtbuscar.TabIndex = 2;
-            // 
-            // JPicture
-            // 
-            this.JPicture.Image = global::WindowsFormsApp1.Properties.Resources.lupa;
-            this.JPicture.Location = new System.Drawing.Point(795, 74);
-            this.JPicture.Name = "JPicture";
-            this.JPicture.Size = new System.Drawing.Size(38, 30);
-            this.JPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.JPicture.TabIndex = 3;
-            this.JPicture.TabStop = false;
-            // 
-            // JradioTodos
-            // 
-            this.JradioTodos.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.JradioTodos.Location = new System.Drawing.Point(143, 192);
-            this.JradioTodos.Name = "JradioTodos";
-            this.JradioTodos.Size = new System.Drawing.Size(96, 28);
-            this.JradioTodos.TabIndex = 4;
-            this.JradioTodos.TabStop = true;
-            this.JradioTodos.Text = "Todos";
-            this.JradioTodos.UseVisualStyleBackColor = true;
-            // 
-            // JPendientes
-            // 
-            this.JPendientes.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.JPendientes.Location = new System.Drawing.Point(576, 191);
-            this.JPendientes.Name = "JPendientes";
-            this.JPendientes.Size = new System.Drawing.Size(105, 23);
-            this.JPendientes.TabIndex = 5;
-            this.JPendientes.TabStop = true;
-            this.JPendientes.Text = "Pendientes";
-            this.JPendientes.UseVisualStyleBackColor = true;
-            // 
-            // JTerminados
-            // 
-            this.JTerminados.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.JTerminados.Location = new System.Drawing.Point(982, 192);
-            this.JTerminados.Name = "JTerminados";
-            this.JTerminados.Size = new System.Drawing.Size(123, 22);
-            this.JTerminados.TabIndex = 6;
-            this.JTerminados.TabStop = true;
-            this.JTerminados.Text = "Terminado";
-            this.JTerminados.UseVisualStyleBackColor = true;
-            // 
-            // JdataGridRep
-            // 
-            this.JdataGridRep.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.JdataGridRep.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.JMArca,
-            this.JModelo,
-            this.JCliente,
-            this.JEstado});
-            this.JdataGridRep.Location = new System.Drawing.Point(172, 260);
-            this.JdataGridRep.Name = "JdataGridRep";
-            this.JdataGridRep.Size = new System.Drawing.Size(915, 317);
-            this.JdataGridRep.TabIndex = 7;
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.Width = 200;
-            // 
-            // JMArca
-            // 
-            this.JMArca.HeaderText = "Marca";
-            this.JMArca.Name = "JMArca";
-            this.JMArca.Width = 150;
-            // 
-            // JModelo
-            // 
-            this.JModelo.HeaderText = "Modelo";
-            this.JModelo.Name = "JModelo";
-            this.JModelo.Width = 150;
-            // 
-            // JCliente
-            // 
-            this.JCliente.HeaderText = "Cliente";
-            this.JCliente.Name = "JCliente";
-            this.JCliente.Width = 225;
-            // 
-            // JEstado
-            // 
-            this.JEstado.HeaderText = "Estado";
-            this.JEstado.Name = "JEstado";
-            this.JEstado.Width = 150;
-            // 
             // ViewTabs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -814,10 +812,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabReparacion.ResumeLayout(false);
             this.tabReparacion.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.JpictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.JPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.JdataGridRep)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.JPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.JpictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

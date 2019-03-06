@@ -192,15 +192,21 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Resources\cordia_0.ttf" />
+    <EmbeddedResource Include="Resources\PEPSI_pl.ttf" />
+    <None Include="Resources\Hursheys.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\Icons\iconUP.ico" />
-    <Content Include="Images\sub-fondo.png" />
     <None Include="Images\logoUp.png" />
     <Content Include="Images\lupa.png" />
+    <Content Include="Images\sub-fondo.png" />
+    <Content Include="Resources\sub_fondo.png" />
+    <None Include="Resources\logoUp.png" />
+    <Content Include="Resources\lupa.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Betta\" />

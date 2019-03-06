@@ -122,6 +122,11 @@ namespace WindowsFormsApp1.Views
         {
 
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
         //------------------------------------------------------------------------------------
     }       
 }
