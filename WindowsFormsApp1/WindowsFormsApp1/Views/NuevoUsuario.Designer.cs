@@ -44,66 +44,70 @@
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(104, 21);
+            this.lblUsuario.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(154, 28);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(194, 31);
+            this.lblUsuario.Size = new System.Drawing.Size(177, 34);
             this.lblUsuario.TabIndex = 0;
             this.lblUsuario.Text = "Nuevo Usuario";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
             this.lblNombre.Location = new System.Drawing.Point(83, 112);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(54, 13);
+            this.lblNombre.Size = new System.Drawing.Size(91, 34);
             this.lblNombre.TabIndex = 1;
             this.lblNombre.Text = "Nombre/s";
             // 
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
+            this.lblApellido.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
             this.lblApellido.Location = new System.Drawing.Point(83, 155);
             this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(54, 13);
+            this.lblApellido.Size = new System.Drawing.Size(92, 34);
             this.lblApellido.TabIndex = 2;
             this.lblApellido.Text = "Apellido/s";
             // 
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
+            this.lblTelefono.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
             this.lblTelefono.Location = new System.Drawing.Point(83, 202);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(49, 13);
+            this.lblTelefono.Size = new System.Drawing.Size(84, 34);
             this.lblTelefono.TabIndex = 3;
             this.lblTelefono.Text = "Teléfono";
             // 
             // lblRol
             // 
             this.lblRol.AutoSize = true;
+            this.lblRol.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
             this.lblRol.Location = new System.Drawing.Point(83, 250);
             this.lblRol.Name = "lblRol";
-            this.lblRol.Size = new System.Drawing.Size(23, 13);
+            this.lblRol.Size = new System.Drawing.Size(40, 34);
             this.lblRol.TabIndex = 4;
             this.lblRol.Text = "Rol";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(160, 105);
+            this.txtNombre.Location = new System.Drawing.Point(180, 120);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(147, 20);
             this.txtNombre.TabIndex = 5;
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(160, 155);
+            this.txtApellido.Location = new System.Drawing.Point(181, 163);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(147, 20);
             this.txtApellido.TabIndex = 6;
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(160, 202);
+            this.txtTelefono.Location = new System.Drawing.Point(181, 202);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(147, 20);
             this.txtTelefono.TabIndex = 7;
@@ -111,28 +115,32 @@
             // txtRol
             // 
             this.txtRol.FormattingEnabled = true;
-            this.txtRol.Location = new System.Drawing.Point(160, 242);
+            this.txtRol.Location = new System.Drawing.Point(181, 258);
             this.txtRol.Name = "txtRol";
             this.txtRol.Size = new System.Drawing.Size(147, 21);
             this.txtRol.TabIndex = 8;
             // 
             // btnAceptarr
             // 
+            this.btnAceptarr.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAceptarr.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
             this.btnAceptarr.Location = new System.Drawing.Point(300, 327);
             this.btnAceptarr.Name = "btnAceptarr";
-            this.btnAceptarr.Size = new System.Drawing.Size(75, 31);
+            this.btnAceptarr.Size = new System.Drawing.Size(93, 39);
             this.btnAceptarr.TabIndex = 9;
             this.btnAceptarr.Text = "Aceptar";
-            this.btnAceptarr.UseVisualStyleBackColor = true;
+            this.btnAceptarr.UseVisualStyleBackColor = false;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(142, 327);
+            this.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCancelar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.btnCancelar.Location = new System.Drawing.Point(160, 327);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(78, 31);
+            this.btnCancelar.Size = new System.Drawing.Size(103, 39);
             this.btnCancelar.TabIndex = 10;
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.UseVisualStyleBackColor = false;
             // 
             // NuevoUsuario
             // 

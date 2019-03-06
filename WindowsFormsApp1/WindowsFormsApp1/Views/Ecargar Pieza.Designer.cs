@@ -129,17 +129,19 @@
             // 
             // btnCancelarPieza
             // 
+            this.btnCancelarPieza.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnCancelarPieza.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelarPieza.Location = new System.Drawing.Point(716, 457);
             this.btnCancelarPieza.Name = "btnCancelarPieza";
             this.btnCancelarPieza.Size = new System.Drawing.Size(83, 37);
             this.btnCancelarPieza.TabIndex = 9;
             this.btnCancelarPieza.Text = "Cancelar";
-            this.btnCancelarPieza.UseVisualStyleBackColor = true;
+            this.btnCancelarPieza.UseVisualStyleBackColor = false;
             this.btnCancelarPieza.Click += new System.EventHandler(this.button1_Click);
             // 
             // BtnAceptarPieza
             // 
+            this.BtnAceptarPieza.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BtnAceptarPieza.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAceptarPieza.Location = new System.Drawing.Point(626, 457);
             this.BtnAceptarPieza.Name = "BtnAceptarPieza";
@@ -148,6 +150,7 @@
             this.BtnAceptarPieza.Text = "Aceptar";
             this.BtnAceptarPieza.UseVisualStyleBackColor = true;
             this.BtnAceptarPieza.Click += new System.EventHandler(this.BtnAceptarPieza_Click);
+            this.BtnAceptarPieza.UseVisualStyleBackColor = false;
             // 
             // Ecargar_Pieza
             // 

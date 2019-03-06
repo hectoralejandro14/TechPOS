@@ -56,9 +56,10 @@
             // lblNotificaciones
             // 
             this.lblNotificaciones.AutoSize = true;
-            this.lblNotificaciones.Location = new System.Drawing.Point(313, 35);
+            this.lblNotificaciones.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNotificaciones.Location = new System.Drawing.Point(279, 27);
             this.lblNotificaciones.Name = "lblNotificaciones";
-            this.lblNotificaciones.Size = new System.Drawing.Size(74, 13);
+            this.lblNotificaciones.Size = new System.Drawing.Size(154, 29);
             this.lblNotificaciones.TabIndex = 1;
             this.lblNotificaciones.Text = "Notificaciones";
             // 
