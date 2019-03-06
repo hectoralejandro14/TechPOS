@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ecargar_Pieza));
             this.equipoLblEncargar = new System.Windows.Forms.Label();
             this.marcaLblEncargar = new System.Windows.Forms.Label();
             this.piezaLblEncargar = new System.Windows.Forms.Label();
@@ -147,6 +148,8 @@
             this.BtnAceptarPieza.Size = new System.Drawing.Size(80, 37);
             this.BtnAceptarPieza.TabIndex = 10;
             this.BtnAceptarPieza.Text = "Aceptar";
+            this.BtnAceptarPieza.UseVisualStyleBackColor = true;
+            this.BtnAceptarPieza.Click += new System.EventHandler(this.BtnAceptarPieza_Click);
             this.BtnAceptarPieza.UseVisualStyleBackColor = false;
             // 
             // Ecargar_Pieza
@@ -165,8 +168,9 @@
             this.Controls.Add(this.piezaLblEncargar);
             this.Controls.Add(this.marcaLblEncargar);
             this.Controls.Add(this.equipoLblEncargar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Ecargar_Pieza";
-            this.Text = "Ecargar_Pieza";
+            this.Text = "Encargar pieza";
             this.Load += new System.EventHandler(this.Ecargar_Pieza_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
