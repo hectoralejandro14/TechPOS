@@ -147,7 +147,7 @@ namespace WindowsFormsApp1.Views
             }
         }
 
-        private void SbtnAgregarRol_Click(object sender, EventArgs e)
+        /*private void SbtnAgregarRol_Click(object sender, EventArgs e)
         {
             Random random = new Random();
             decimal _random = random.Next(1, 1000000000);
@@ -158,14 +158,8 @@ namespace WindowsFormsApp1.Views
             //Agregar datos
             conexion.AgregarRoles(consulta,_random,_Rol);
             //cerrar conexion
-            conexion.CerrarConexion();
-            //@"INSERT INTO Users (UserName, Password, Name, 
-            //LastName, JobTitle, ID_UserType) 
-                                    //VALUES(@Username, @pass, @name, @Lastname,
-                                        //@Jobtitle, @IDusertype)"
-
-
-        }
+            conexion.CerrarConexion(); 
+        }*/
     }       
 }
 
