@@ -24,8 +24,8 @@ namespace WindowsFormsApp1.Views
         //SERGIO
         private void btnPedirPieza_Click(object sender, System.EventArgs e)
         {
-            EncargarProducto encargar = new EncargarProducto();
-            this.Close();
+            Ecargar_Pieza encargar = new Ecargar_Pieza();
+            
             encargar.Show();
         }
         private void pictureBuscar_Click(object sender, System.EventArgs e)
@@ -34,6 +34,7 @@ namespace WindowsFormsApp1.Views
             if (!encontro)
             {
                 lblAvisoNoCliente.Visible = true;
+                btnAgregarCliente.Visible = true;
             }
             MessageBox.Show("Picture Buscar");
         }

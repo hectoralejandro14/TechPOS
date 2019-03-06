@@ -521,12 +521,13 @@
             // 
             this.btnAgregarCliente.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnAgregarCliente.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarCliente.Location = new System.Drawing.Point(1122, 119);
+            this.btnAgregarCliente.Location = new System.Drawing.Point(1112, 119);
             this.btnAgregarCliente.Name = "btnAgregarCliente";
             this.btnAgregarCliente.Size = new System.Drawing.Size(120, 38);
             this.btnAgregarCliente.TabIndex = 10;
             this.btnAgregarCliente.Text = "Agregar Cliente";
             this.btnAgregarCliente.UseVisualStyleBackColor = false;
+            this.btnAgregarCliente.Visible = false;
             this.btnAgregarCliente.Click += new System.EventHandler(this.btnAgregarCliente_Click);
             // 
             // label10
