@@ -80,5 +80,11 @@ namespace WindowsFormsApp1.DBConnectio
         {
 
         }
+        //Agregar general
+        public void AddElements(string SQL)
+        {
+            SqlCommand cmd = new SqlCommand(SQL, conexion);
+            cmd.ExecuteNonQuery();
+        }
     }
 }
