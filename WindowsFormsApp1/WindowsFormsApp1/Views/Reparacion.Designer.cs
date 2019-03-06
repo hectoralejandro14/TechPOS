@@ -139,7 +139,7 @@
             // 
             this.totalLblRepa.AutoSize = true;
             this.totalLblRepa.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.totalLblRepa.Location = new System.Drawing.Point(35, 462);
+            this.totalLblRepa.Location = new System.Drawing.Point(23, 461);
             this.totalLblRepa.Name = "totalLblRepa";
             this.totalLblRepa.Size = new System.Drawing.Size(54, 34);
             this.totalLblRepa.TabIndex = 8;
@@ -149,7 +149,7 @@
             // 
             this.abonoLblRepa.AutoSize = true;
             this.abonoLblRepa.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.abonoLblRepa.Location = new System.Drawing.Point(206, 462);
+            this.abonoLblRepa.Location = new System.Drawing.Point(226, 462);
             this.abonoLblRepa.Name = "abonoLblRepa";
             this.abonoLblRepa.Size = new System.Drawing.Size(66, 34);
             this.abonoLblRepa.TabIndex = 9;
@@ -163,7 +163,7 @@
             this.dRapidoTxtBox.Name = "dRapidoTxtBox";
             this.dRapidoTxtBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dRapidoTxtBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dRapidoTxtBox.Size = new System.Drawing.Size(320, 82);
+            this.dRapidoTxtBox.Size = new System.Drawing.Size(376, 82);
             this.dRapidoTxtBox.TabIndex = 10;
             // 
             // dEspecificoTxtBox
@@ -172,7 +172,7 @@
             this.dEspecificoTxtBox.Multiline = true;
             this.dEspecificoTxtBox.Name = "dEspecificoTxtBox";
             this.dEspecificoTxtBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dEspecificoTxtBox.Size = new System.Drawing.Size(320, 77);
+            this.dEspecificoTxtBox.Size = new System.Drawing.Size(376, 77);
             this.dEspecificoTxtBox.TabIndex = 11;
             // 
             // idTxtBoxRepa
@@ -195,7 +195,7 @@
             this.fallaTxtBoxRepa.Multiline = true;
             this.fallaTxtBoxRepa.Name = "fallaTxtBoxRepa";
             this.fallaTxtBoxRepa.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.fallaTxtBoxRepa.Size = new System.Drawing.Size(320, 76);
+            this.fallaTxtBoxRepa.Size = new System.Drawing.Size(375, 76);
             this.fallaTxtBoxRepa.TabIndex = 14;
             // 
             // EstadoTxtBox
@@ -216,19 +216,19 @@
             // 
             this.ResponsableTxtBox.Location = new System.Drawing.Point(140, 435);
             this.ResponsableTxtBox.Name = "ResponsableTxtBox";
-            this.ResponsableTxtBox.Size = new System.Drawing.Size(247, 20);
+            this.ResponsableTxtBox.Size = new System.Drawing.Size(258, 20);
             this.ResponsableTxtBox.TabIndex = 17;
             // 
             // TotalTxtBox
             // 
-            this.TotalTxtBox.Location = new System.Drawing.Point(95, 470);
+            this.TotalTxtBox.Location = new System.Drawing.Point(81, 469);
             this.TotalTxtBox.Name = "TotalTxtBox";
             this.TotalTxtBox.Size = new System.Drawing.Size(100, 20);
             this.TotalTxtBox.TabIndex = 18;
             // 
             // AbonoTxtBox
             // 
-            this.AbonoTxtBox.Location = new System.Drawing.Point(278, 470);
+            this.AbonoTxtBox.Location = new System.Drawing.Point(298, 470);
             this.AbonoTxtBox.Name = "AbonoTxtBox";
             this.AbonoTxtBox.Size = new System.Drawing.Size(100, 20);
             this.AbonoTxtBox.TabIndex = 19;
@@ -271,7 +271,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(479, 568);
+            this.ClientSize = new System.Drawing.Size(411, 568);
             this.Controls.Add(this.AceptarBtn);
             this.Controls.Add(this.AbonarBtn);
             this.Controls.Add(this.ActualizarBtn);
