@@ -18,19 +18,20 @@ namespace WindowsFormsApp1
 
             Font font2 = new Font("Arial", 18.0f);
             txtContrasena.Font = font2;
-            txtContrasena.PasswordChar = '*';  
+            txtContrasena.PasswordChar = '*';
             txtContrasena.MaxLength = 25;
 
         }
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+            DBConnection.Connection conexion = new DBConnection.Connection();
+            conexion.AbrirConexion();
             String pass = txtContrasena.Text;
-            using (MD5 md5Hash = MD5.Create())
-            {
-                string hash = GetMd5Hash(md5Hash, pass);
-                Console.WriteLine(hash);
-            }
-            
+            MD5 md5Hash = MD5.Create();
+            string hash = GetMd5Hash(md5Hash, pass);
+            //Console.WriteLine(hash);
+            MessageBox.Show("Contraseña -> " + txtContrasena.Text + " - Encriptacion -> " + hash);
+            conexion.CerrarConexion();
             ViewTabs tabs = new ViewTabs();
             this.Hide();
             tabs.Show();
@@ -75,10 +76,7 @@ namespace WindowsFormsApp1
                 return false;
             }
         }
-
-    
-
-    private void btnCerrar_Click(object sender, EventArgs e)
+        private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -86,7 +84,7 @@ namespace WindowsFormsApp1
         {
             if (txtContrasena.Text.Length >= 25 && !(txtUsuario.Text.Equals("")))
             {
-                MessageBox.Show("Usted " +txtUsuario.Text+", esta excediendo la dimension de caracteres", 
+                MessageBox.Show("Usted " + txtUsuario.Text + ", esta excediendo la dimension de caracteres",
                     "Erro de dimensiones", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else if (txtContrasena.Text.Length >= 25)

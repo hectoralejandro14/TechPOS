@@ -45,6 +45,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBConnection\Connection.cs" />
+    <Compile Include="Views\Almacen.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Views\Buscar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +204,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="FormasMessageBox.txt" />
     <Content Include="Images\Icons\iconUP.ico" />
     <None Include="Images\logoUp.png" />
     <Content Include="Images\lupa.png" />
@@ -211,7 +216,6 @@
   <ItemGroup>
     <Folder Include="Betta\" />
     <Folder Include="Controllers\" />
-    <Folder Include="DBConnection\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
