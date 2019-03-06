@@ -1,0 +1,12 @@
+﻿BOTONES EN MESSAGEBOX
+	MessageBox.Show(“Mensaje informativo con botones Sí, No y Cancelar”,”Titulo Ventana”,MessageBoxButtons.YesNoCancel);
+
+ADVERTENCIA
+	MessageBox.Show(“Mensaje informativo”, “Titulo Ventana”,MessageBoxButtons.OK,MessageBoxIcon.Exclamation)
+
+
+INFORMATIVO
+	MessageBox.Show(“Mensaje informativo”, “Titulo Ventana”,MessageBoxButtons.OK,MessageBoxIcon.Question);
+
+ERROR
+	MessageBox.Show(“Mensaje informativo”, “Titulo Ventana”,MessageBoxButtons.OK,MessageBoxIcon.Error);
