@@ -9,6 +9,7 @@ namespace WindowsFormsApp1
 {
     public partial class ViewLogin : Form
     {
+        private ViewTabs _vistaTabs = new ViewTabs();
         public ViewLogin()
         {
             InitializeComponent();
@@ -34,15 +35,26 @@ namespace WindowsFormsApp1
             }
             else
             {
-                DBConnection.Connection conexion = new DBConnection.Connection();
+                if (txtUsuario.Text.Equals("s") && txtContrasena.Text.Equals("s"))
+                {
+
+                    _vistaTabs.MostrarConfiguracionUsuarios(1);
+                    _vistaTabs.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    _vistaTabs.Show();
+                    this.Hide();
+                }
+                /*
+                 *NO BORRAR COMENTARIO 
+                 *DBConnection.Connection conexion = new DBConnection.Connection();
                 conexion.AbrirConexion();
                 String pass = txtContrasena.Text;
                 MD5 md5Hash = MD5.Create();
                 string hash = GetMd5Hash(md5Hash, pass);
-                conexion.CerrarConexion();
-                ViewTabs tabs = new ViewTabs();
-                this.Hide();
-                tabs.Show();
+                conexion.CerrarConexion();*/
             }
             
         }

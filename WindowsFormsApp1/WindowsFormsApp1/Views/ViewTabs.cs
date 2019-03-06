@@ -6,11 +6,13 @@ namespace WindowsFormsApp1.Views
 {
     public partial class ViewTabs : Form
     {
+        private DBConnectio.Connection conexion = new DBConnectio.Connection();
         public ViewTabs()
         {
             InitializeComponent();
             txtDescripcionDeFalla.ScrollBars = ScrollBars.Vertical;
             txtDescripcionDiagnosticoEspecifico.ScrollBars = ScrollBars.Vertical;
+            tabPuntoVenta.TabPages.Remove(tabConfiguracionesDeUsuario);
         }
 
         private void linkCerrarSesion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -21,7 +23,7 @@ namespace WindowsFormsApp1.Views
         }
 
         //------------------------------------------------------------------------------------
-        //SERGIO
+        //Tab Recibir Equipo
         private void btnPedirPieza_Click(object sender, System.EventArgs e)
         {
             Ecargar_Pieza encargar = new Ecargar_Pieza();
@@ -118,22 +120,48 @@ namespace WindowsFormsApp1.Views
                 return false;
             }
         }
-
         private void pictureBox4_Click(object sender, EventArgs e)
         {
 
         }
-
         private void tabReparacion_Click(object sender, EventArgs e)
         {
 
         }
-
         private void label8_Click(object sender, EventArgs e)
         {
 
         }
+
         //------------------------------------------------------------------------------------
+        //Generales
+        public void MostrarConfiguracionUsuarios (int IdRol)
+        {
+            if (IdRol == 1)
+            {
+                tabPuntoVenta.TabPages.Add(tabConfiguracionesDeUsuario);
+            }
+        }
+
+        private void SbtnAgregarRol_Click(object sender, EventArgs e)
+        {
+            Random random = new Random();
+            decimal _random = random.Next(1, 1000000000);
+            string _Rol = StxtAgregarRol.Text;
+            string consulta = "INSERT INTO Rol (Id,NombreRol) VALUES (@Id,@NombreRol)";
+            //Abrir conexion
+            conexion.AbrirConexion();
+            //Agregar datos
+            conexion.AgregarRoles(consulta,_random,_Rol);
+            //cerrar conexion
+            conexion.CerrarConexion();
+            //@"INSERT INTO Users (UserName, Password, Name, 
+            //LastName, JobTitle, ID_UserType) 
+                                    //VALUES(@Username, @pass, @name, @Lastname,
+                                        //@Jobtitle, @IDusertype)"
+
+
+        }
     }       
 }
 
