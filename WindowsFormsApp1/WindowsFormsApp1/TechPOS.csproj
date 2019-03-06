@@ -46,9 +46,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBConnection\Connection.cs" />
-    <Compile Include="Views\Almacen.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Views\Buscar.cs">
       <SubType>Form</SubType>
     </Compile>

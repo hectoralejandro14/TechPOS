@@ -30,6 +30,11 @@ namespace WindowsFormsApp1.Views
         }
         private void pictureBuscar_Click(object sender, System.EventArgs e)
         {
+            bool encontro = false;
+            if (!encontro)
+            {
+                lblAvisoNoCliente.Visible = true;
+            }
             MessageBox.Show("Picture Buscar");
         }
         private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)

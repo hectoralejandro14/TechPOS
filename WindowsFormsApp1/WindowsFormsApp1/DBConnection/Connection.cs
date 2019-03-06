@@ -5,7 +5,7 @@ namespace WindowsFormsApp1.DBConnection
 {
     class Connection
     {
-        string cadena = "Data Source=DESKTOP-NTL3O90\\SQLEXPRESS;Initial Catalog=TechPOSdb; Integrated Security=True";
+        string cadena = "Data Source=.\\SQLEXPRESS;Initial Catalog=TechPOSdb; Integrated Security=True";
         SqlConnection conexion = new SqlConnection();
         public Connection()
         {

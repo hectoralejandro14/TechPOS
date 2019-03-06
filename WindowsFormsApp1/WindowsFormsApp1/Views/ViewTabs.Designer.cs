@@ -37,7 +37,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tabRecibirEquipo = new System.Windows.Forms.TabPage();
-            this.pictureBuscar = new System.Windows.Forms.PictureBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
@@ -72,7 +71,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtBuscarCliente = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabReparacion = new System.Windows.Forms.TabPage();
             this.JdataGridRep = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -100,17 +98,18 @@
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idReparacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.linkCerrarSesion = new System.Windows.Forms.LinkLabel();
+            this.lblAvisoNoCliente = new System.Windows.Forms.Label();
+            this.pictureBuscar = new System.Windows.Forms.PictureBox();
             this.tabPuntoVenta.SuspendLayout();
             this.tabVenta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tabRecibirEquipo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabReparacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.JdataGridRep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.JPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.JpictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPuntoVenta
@@ -133,10 +132,10 @@
             this.tabVenta.Controls.Add(this.label3);
             this.tabVenta.Controls.Add(this.label1);
             this.tabVenta.Controls.Add(this.pictureBox3);
-            this.tabVenta.Location = new System.Drawing.Point(4, 30);
+            this.tabVenta.Location = new System.Drawing.Point(4, 43);
             this.tabVenta.Name = "tabVenta";
             this.tabVenta.Padding = new System.Windows.Forms.Padding(3);
-            this.tabVenta.Size = new System.Drawing.Size(1328, 682);
+            this.tabVenta.Size = new System.Drawing.Size(1328, 669);
             this.tabVenta.TabIndex = 0;
             this.tabVenta.Text = "Venta";
             this.tabVenta.UseVisualStyleBackColor = true;
@@ -189,6 +188,7 @@
             // 
             // tabRecibirEquipo
             // 
+            this.tabRecibirEquipo.Controls.Add(this.lblAvisoNoCliente);
             this.tabRecibirEquipo.Controls.Add(this.pictureBuscar);
             this.tabRecibirEquipo.Controls.Add(this.txtApellido);
             this.tabRecibirEquipo.Controls.Add(this.txtNombre);
@@ -224,7 +224,6 @@
             this.tabRecibirEquipo.Controls.Add(this.label7);
             this.tabRecibirEquipo.Controls.Add(this.txtBuscarCliente);
             this.tabRecibirEquipo.Controls.Add(this.label2);
-            this.tabRecibirEquipo.Controls.Add(this.pictureBox2);
             this.tabRecibirEquipo.Location = new System.Drawing.Point(4, 43);
             this.tabRecibirEquipo.Name = "tabRecibirEquipo";
             this.tabRecibirEquipo.Padding = new System.Windows.Forms.Padding(3);
@@ -232,16 +231,6 @@
             this.tabRecibirEquipo.TabIndex = 1;
             this.tabRecibirEquipo.Text = "Recibir Equipo";
             this.tabRecibirEquipo.UseVisualStyleBackColor = true;
-            // 
-            // pictureBuscar
-            // 
-            this.pictureBuscar.Location = new System.Drawing.Point(877, 22);
-            this.pictureBuscar.Name = "pictureBuscar";
-            this.pictureBuscar.Size = new System.Drawing.Size(22, 22);
-            this.pictureBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBuscar.TabIndex = 42;
-            this.pictureBuscar.TabStop = false;
-            this.pictureBuscar.Click += new System.EventHandler(this.pictureBuscar_Click);
             // 
             // txtApellido
             // 
@@ -577,15 +566,6 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Buscar Cliente";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(6, 6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(101, 129);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
             // tabReparacion
             // 
             this.tabReparacion.Controls.Add(this.JdataGridRep);
@@ -719,9 +699,9 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 30);
+            this.tabPage2.Location = new System.Drawing.Point(4, 43);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1328, 682);
+            this.tabPage2.Size = new System.Drawing.Size(1328, 669);
             this.tabPage2.TabIndex = 3;
             // 
             // UnaLabel
@@ -789,6 +769,28 @@
             this.linkCerrarSesion.Text = "Cerrar Sesión.";
             this.linkCerrarSesion.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkCerrarSesion_LinkClicked);
             // 
+            // lblAvisoNoCliente
+            // 
+            this.lblAvisoNoCliente.AutoSize = true;
+            this.lblAvisoNoCliente.ForeColor = System.Drawing.Color.Red;
+            this.lblAvisoNoCliente.Location = new System.Drawing.Point(917, 14);
+            this.lblAvisoNoCliente.Name = "lblAvisoNoCliente";
+            this.lblAvisoNoCliente.Size = new System.Drawing.Size(190, 34);
+            this.lblAvisoNoCliente.TabIndex = 43;
+            this.lblAvisoNoCliente.Text = "No se econtró cliente.";
+            this.lblAvisoNoCliente.Visible = false;
+            // 
+            // pictureBuscar
+            // 
+            this.pictureBuscar.Image = global::WindowsFormsApp1.Properties.Resources.lupa;
+            this.pictureBuscar.Location = new System.Drawing.Point(877, 22);
+            this.pictureBuscar.Name = "pictureBuscar";
+            this.pictureBuscar.Size = new System.Drawing.Size(22, 22);
+            this.pictureBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBuscar.TabIndex = 42;
+            this.pictureBuscar.TabStop = false;
+            this.pictureBuscar.Click += new System.EventHandler(this.pictureBuscar_Click);
+            // 
             // ViewTabs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -808,14 +810,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tabRecibirEquipo.ResumeLayout(false);
             this.tabRecibirEquipo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabReparacion.ResumeLayout(false);
             this.tabReparacion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.JdataGridRep)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.JPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.JpictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -854,7 +855,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtBuscarCliente;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnAgregarCliente;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
@@ -886,7 +886,6 @@
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.PictureBox pictureBuscar;
        // private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
@@ -906,6 +905,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn JModelo;
         private System.Windows.Forms.DataGridViewTextBoxColumn JCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn JEstado;
+        private System.Windows.Forms.Label lblAvisoNoCliente;
+        private System.Windows.Forms.PictureBox pictureBuscar;
         //  private System.Windows.Forms.TextBox textBox1;
         //private System.Windows.Forms.Label UnaLabel;
         //  private System.Windows.Forms.Label label5;
