@@ -13,6 +13,8 @@ namespace WindowsFormsApp1.Views
             txtDescripcionDeFalla.ScrollBars = ScrollBars.Vertical;
             txtDescripcionDiagnosticoEspecifico.ScrollBars = ScrollBars.Vertical;
             tabPuntoVenta.TabPages.Remove(tabConfiguracionesDeUsuario);
+            Jtxtbuscar.MaxLength = 4;
+            
         }
 
         private void linkCerrarSesion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -99,14 +101,17 @@ namespace WindowsFormsApp1.Views
         }   
         private void btnAgregarCliente_Click(object sender, EventArgs e)
         {
+
             if (validarEmail(txtCorreo.Text))
             {
                 MessageBox.Show("FORMATO DE CORREO CORRECTO", "ACEPTADO", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                //Agregar Cliente en bd
             }
             else
             {
                 MessageBox.Show("FORMATO DE CORREO NO VALIDO", "RECHAZADO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
         }
         public static bool validarEmail(string email)
         {
@@ -132,7 +137,6 @@ namespace WindowsFormsApp1.Views
         {
 
         }
-
         //------------------------------------------------------------------------------------
         //Generales
         public void MostrarConfiguracionUsuarios (int IdRol)
