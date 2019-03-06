@@ -37,42 +37,48 @@
             this.modeloTbxEncargar = new System.Windows.Forms.TextBox();
             this.piezasTbxEncargar = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnCancelarPieza = new System.Windows.Forms.Button();
+            this.BtnAceptarPieza = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // equipoLblEncargar
             // 
             this.equipoLblEncargar.AutoSize = true;
-            this.equipoLblEncargar.Location = new System.Drawing.Point(158, 94);
+            this.equipoLblEncargar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.equipoLblEncargar.Location = new System.Drawing.Point(134, 91);
             this.equipoLblEncargar.Name = "equipoLblEncargar";
-            this.equipoLblEncargar.Size = new System.Drawing.Size(40, 13);
+            this.equipoLblEncargar.Size = new System.Drawing.Size(70, 34);
             this.equipoLblEncargar.TabIndex = 0;
             this.equipoLblEncargar.Text = "Equipo";
             // 
             // marcaLblEncargar
             // 
             this.marcaLblEncargar.AutoSize = true;
-            this.marcaLblEncargar.Location = new System.Drawing.Point(161, 171);
+            this.marcaLblEncargar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.marcaLblEncargar.Location = new System.Drawing.Point(140, 168);
             this.marcaLblEncargar.Name = "marcaLblEncargar";
-            this.marcaLblEncargar.Size = new System.Drawing.Size(37, 13);
+            this.marcaLblEncargar.Size = new System.Drawing.Size(64, 34);
             this.marcaLblEncargar.TabIndex = 1;
             this.marcaLblEncargar.Text = "Marca";
             // 
             // piezaLblEncargar
             // 
             this.piezaLblEncargar.AutoSize = true;
-            this.piezaLblEncargar.Location = new System.Drawing.Point(161, 265);
+            this.piezaLblEncargar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.piezaLblEncargar.Location = new System.Drawing.Point(158, 230);
             this.piezaLblEncargar.Name = "piezaLblEncargar";
-            this.piezaLblEncargar.Size = new System.Drawing.Size(44, 13);
+            this.piezaLblEncargar.Size = new System.Drawing.Size(80, 34);
             this.piezaLblEncargar.TabIndex = 2;
             this.piezaLblEncargar.Text = "Pieza(s)";
             // 
             // modeloLblEncargar
             // 
             this.modeloLblEncargar.AutoSize = true;
-            this.modeloLblEncargar.Location = new System.Drawing.Point(482, 135);
+            this.modeloLblEncargar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modeloLblEncargar.Location = new System.Drawing.Point(456, 127);
             this.modeloLblEncargar.Name = "modeloLblEncargar";
-            this.modeloLblEncargar.Size = new System.Drawing.Size(42, 13);
+            this.modeloLblEncargar.Size = new System.Drawing.Size(72, 34);
             this.modeloLblEncargar.TabIndex = 3;
             this.modeloLblEncargar.Text = "Modelo";
             // 
@@ -103,7 +109,7 @@
             // 
             // piezasTbxEncargar
             // 
-            this.piezasTbxEncargar.Location = new System.Drawing.Point(161, 299);
+            this.piezasTbxEncargar.Location = new System.Drawing.Point(161, 267);
             this.piezasTbxEncargar.Multiline = true;
             this.piezasTbxEncargar.Name = "piezasTbxEncargar";
             this.piezasTbxEncargar.Size = new System.Drawing.Size(545, 173);
@@ -120,11 +126,34 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
+            // btnCancelarPieza
+            // 
+            this.btnCancelarPieza.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarPieza.Location = new System.Drawing.Point(716, 457);
+            this.btnCancelarPieza.Name = "btnCancelarPieza";
+            this.btnCancelarPieza.Size = new System.Drawing.Size(83, 37);
+            this.btnCancelarPieza.TabIndex = 9;
+            this.btnCancelarPieza.Text = "Cancelar";
+            this.btnCancelarPieza.UseVisualStyleBackColor = true;
+            this.btnCancelarPieza.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // BtnAceptarPieza
+            // 
+            this.BtnAceptarPieza.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAceptarPieza.Location = new System.Drawing.Point(626, 457);
+            this.BtnAceptarPieza.Name = "BtnAceptarPieza";
+            this.BtnAceptarPieza.Size = new System.Drawing.Size(80, 37);
+            this.BtnAceptarPieza.TabIndex = 10;
+            this.BtnAceptarPieza.Text = "Aceptar";
+            this.BtnAceptarPieza.UseVisualStyleBackColor = true;
+            // 
             // Ecargar_Pieza
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 495);
+            this.Controls.Add(this.BtnAceptarPieza);
+            this.Controls.Add(this.btnCancelarPieza);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.piezasTbxEncargar);
             this.Controls.Add(this.modeloTbxEncargar);
@@ -154,5 +183,7 @@
         private System.Windows.Forms.TextBox modeloTbxEncargar;
         private System.Windows.Forms.TextBox piezasTbxEncargar;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnCancelarPieza;
+        private System.Windows.Forms.Button BtnAceptarPieza;
     }
 }
