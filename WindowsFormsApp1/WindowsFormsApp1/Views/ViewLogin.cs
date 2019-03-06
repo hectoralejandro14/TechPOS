@@ -21,20 +21,30 @@ namespace WindowsFormsApp1
             txtContrasena.PasswordChar = '*';
             txtContrasena.MaxLength = 25;
 
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+
         }
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            DBConnection.Connection conexion = new DBConnection.Connection();
-            conexion.AbrirConexion();
-            String pass = txtContrasena.Text;
-            MD5 md5Hash = MD5.Create();
-            string hash = GetMd5Hash(md5Hash, pass);
-            //Console.WriteLine(hash);
-            MessageBox.Show("Contraseña -> " + txtContrasena.Text + " - Encriptacion -> " + hash);
-            conexion.CerrarConexion();
-            ViewTabs tabs = new ViewTabs();
-            this.Hide();
-            tabs.Show();
+            if (txtContrasena.Text.Equals("") || txtUsuario.Text.Equals(""))
+            {
+                MessageBox.Show("No se pudo iniciar sesión por existencia de campos vacios", "Campos Vacios", MessageBoxButtons.OK, MessageBoxIcon.Question);
+            }
+            else
+            {
+                DBConnection.Connection conexion = new DBConnection.Connection();
+                conexion.AbrirConexion();
+                String pass = txtContrasena.Text;
+                MD5 md5Hash = MD5.Create();
+                string hash = GetMd5Hash(md5Hash, pass);
+                conexion.CerrarConexion();
+                ViewTabs tabs = new ViewTabs();
+                this.Hide();
+                tabs.Show();
+            }
+            
         }
 
         static string GetMd5Hash(MD5 md5Hash, string input)
