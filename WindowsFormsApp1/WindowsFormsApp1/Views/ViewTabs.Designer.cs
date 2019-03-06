@@ -35,7 +35,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tabRecibirEquipo = new System.Windows.Forms.TabPage();
             this.lblAvisoNoCliente = new System.Windows.Forms.Label();
             this.pictureBuscar = new System.Windows.Forms.PictureBox();
@@ -88,32 +87,6 @@
             this.JPicture = new System.Windows.Forms.PictureBox();
             this.JpictureBox = new System.Windows.Forms.PictureBox();
             this.tabConfiguracionesDeUsuario = new System.Windows.Forms.TabPage();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.SlblAgregarRoles = new System.Windows.Forms.Label();
-            this.StxtAgregarRol = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.IdRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SbtnAgregarRol = new System.Windows.Forms.Button();
-            this.SlblRolesDosponibles = new System.Windows.Forms.Label();
-            this.SgbConfiguracionesEmpleado = new System.Windows.Forms.GroupBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.SlblRol = new System.Windows.Forms.Label();
-            this.SBuscar = new System.Windows.Forms.PictureBox();
-            this.StxtCorreo = new System.Windows.Forms.TextBox();
-            this.StxtNombre = new System.Windows.Forms.TextBox();
-            this.StxtApellido = new System.Windows.Forms.TextBox();
-            this.StxtTelefono = new System.Windows.Forms.TextBox();
-            this.StxtNombreUsuario = new System.Windows.Forms.TextBox();
-            this.SlblCorreo = new System.Windows.Forms.Label();
-            this.SlblNombreUsuario = new System.Windows.Forms.Label();
-            this.SlblNombre = new System.Windows.Forms.Label();
-            this.SlblApellido = new System.Windows.Forms.Label();
-            this.SlblTelefono = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.UnaLabel = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -126,24 +99,15 @@
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idReparacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.linkCerrarSesion = new System.Windows.Forms.LinkLabel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabPuntoVenta.SuspendLayout();
             this.tabVenta.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tabRecibirEquipo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).BeginInit();
             this.tabReparacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.JdataGridRep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.JPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.JpictureBox)).BeginInit();
-            this.tabConfiguracionesDeUsuario.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.SgbConfiguracionesEmpleado.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SBuscar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPuntoVenta
@@ -165,7 +129,6 @@
             this.tabVenta.Controls.Add(this.button1);
             this.tabVenta.Controls.Add(this.label3);
             this.tabVenta.Controls.Add(this.label1);
-            this.tabVenta.Controls.Add(this.pictureBox3);
             this.tabVenta.Location = new System.Drawing.Point(4, 43);
             this.tabVenta.Name = "tabVenta";
             this.tabVenta.Padding = new System.Windows.Forms.Padding(3);
@@ -176,7 +139,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1130, 615);
+            this.button2.Location = new System.Drawing.Point(1221, 626);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(101, 37);
             this.button2.TabIndex = 6;
@@ -185,7 +148,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(921, 615);
+            this.button1.Location = new System.Drawing.Point(1105, 626);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(110, 37);
             this.button1.TabIndex = 2;
@@ -196,7 +159,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(102, 155);
+            this.label3.Location = new System.Drawing.Point(6, 15);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 16);
             this.label3.TabIndex = 5;
@@ -211,18 +174,8 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Usuario";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Location = new System.Drawing.Point(951, 124);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(29, 29);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
-            // 
             // tabRecibirEquipo
             // 
-            this.tabRecibirEquipo.Controls.Add(this.pictureBox2);
             this.tabRecibirEquipo.Controls.Add(this.lblAvisoNoCliente);
             this.tabRecibirEquipo.Controls.Add(this.pictureBuscar);
             this.tabRecibirEquipo.Controls.Add(this.txtApellido);
@@ -359,7 +312,6 @@
             this.btnAgregrEquipos.TabIndex = 34;
             this.btnAgregrEquipos.Text = "Agregar Equipo";
             this.btnAgregrEquipos.UseVisualStyleBackColor = false;
-            this.btnAgregrEquipos.Click += new System.EventHandler(this.btnAgregrEquipos_Click);
             // 
             // btnLimpiarCampos
             // 
@@ -748,7 +700,6 @@
             this.Jtxtbuscar.Name = "Jtxtbuscar";
             this.Jtxtbuscar.Size = new System.Drawing.Size(313, 34);
             this.Jtxtbuscar.TabIndex = 2;
-            this.Jtxtbuscar.TextChanged += new System.EventHandler(this.Jtxtbuscar_TextChanged);
             // 
             // JlblBuscar
             // 
@@ -768,7 +719,6 @@
             this.JPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.JPicture.TabIndex = 3;
             this.JPicture.TabStop = false;
-            this.JPicture.Click += new System.EventHandler(this.JPicture_Click);
             // 
             // JpictureBox
             // 
@@ -784,272 +734,11 @@
             // tabConfiguracionesDeUsuario
             // 
             this.tabConfiguracionesDeUsuario.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tabConfiguracionesDeUsuario.Controls.Add(this.groupBox2);
-            this.tabConfiguracionesDeUsuario.Controls.Add(this.SgbConfiguracionesEmpleado);
-            this.tabConfiguracionesDeUsuario.Controls.Add(this.pictureBox2);
             this.tabConfiguracionesDeUsuario.Location = new System.Drawing.Point(4, 43);
             this.tabConfiguracionesDeUsuario.Name = "tabConfiguracionesDeUsuario";
             this.tabConfiguracionesDeUsuario.Size = new System.Drawing.Size(1328, 669);
             this.tabConfiguracionesDeUsuario.TabIndex = 3;
             this.tabConfiguracionesDeUsuario.Text = "Configuraciones de Usuario";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox2.Controls.Add(this.SlblAgregarRoles);
-            this.groupBox2.Controls.Add(this.StxtAgregarRol);
-            this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Controls.Add(this.SbtnAgregarRol);
-            this.groupBox2.Controls.Add(this.SlblRolesDosponibles);
-            this.groupBox2.ForeColor = System.Drawing.Color.OrangeRed;
-            this.groupBox2.Location = new System.Drawing.Point(138, 3);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1187, 211);
-            this.groupBox2.TabIndex = 8;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Configuracion de Roles";
-            // 
-            // SlblAgregarRoles
-            // 
-            this.SlblAgregarRoles.AutoSize = true;
-            this.SlblAgregarRoles.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.SlblAgregarRoles.Location = new System.Drawing.Point(6, 37);
-            this.SlblAgregarRoles.Name = "SlblAgregarRoles";
-            this.SlblAgregarRoles.Size = new System.Drawing.Size(118, 34);
-            this.SlblAgregarRoles.TabIndex = 1;
-            this.SlblAgregarRoles.Text = "Agregar Role";
-            // 
-            // StxtAgregarRol
-            // 
-            this.StxtAgregarRol.Location = new System.Drawing.Point(6, 74);
-            this.StxtAgregarRol.Name = "StxtAgregarRol";
-            this.StxtAgregarRol.Size = new System.Drawing.Size(320, 41);
-            this.StxtAgregarRol.TabIndex = 3;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IdRol,
-            this.NombreRol});
-            this.dataGridView1.Location = new System.Drawing.Point(645, 31);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(536, 174);
-            this.dataGridView1.TabIndex = 5;
-            // 
-            // IdRol
-            // 
-            this.IdRol.HeaderText = "Id Rol";
-            this.IdRol.Name = "IdRol";
-            this.IdRol.Width = 175;
-            // 
-            // NombreRol
-            // 
-            this.NombreRol.HeaderText = "Decripcion";
-            this.NombreRol.Name = "NombreRol";
-            this.NombreRol.Width = 317;
-            // 
-            // SbtnAgregarRol
-            // 
-            this.SbtnAgregarRol.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.SbtnAgregarRol.Location = new System.Drawing.Point(332, 75);
-            this.SbtnAgregarRol.Name = "SbtnAgregarRol";
-            this.SbtnAgregarRol.Size = new System.Drawing.Size(93, 40);
-            this.SbtnAgregarRol.TabIndex = 4;
-            this.SbtnAgregarRol.Text = "Agregar";
-            this.SbtnAgregarRol.UseVisualStyleBackColor = true;
-            this.SbtnAgregarRol.Click += new System.EventHandler(this.SbtnAgregarRol_Click);
-            // 
-            // SlblRolesDosponibles
-            // 
-            this.SlblRolesDosponibles.AutoSize = true;
-            this.SlblRolesDosponibles.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.SlblRolesDosponibles.Location = new System.Drawing.Point(580, 31);
-            this.SlblRolesDosponibles.Name = "SlblRolesDosponibles";
-            this.SlblRolesDosponibles.Size = new System.Drawing.Size(59, 34);
-            this.SlblRolesDosponibles.TabIndex = 0;
-            this.SlblRolesDosponibles.Text = "Roles";
-            // 
-            // SgbConfiguracionesEmpleado
-            // 
-            this.SgbConfiguracionesEmpleado.Controls.Add(this.button5);
-            this.SgbConfiguracionesEmpleado.Controls.Add(this.button4);
-            this.SgbConfiguracionesEmpleado.Controls.Add(this.button3);
-            this.SgbConfiguracionesEmpleado.Controls.Add(this.textBox7);
-            this.SgbConfiguracionesEmpleado.Controls.Add(this.SlblRol);
-            this.SgbConfiguracionesEmpleado.Controls.Add(this.SBuscar);
-            this.SgbConfiguracionesEmpleado.Controls.Add(this.StxtCorreo);
-            this.SgbConfiguracionesEmpleado.Controls.Add(this.StxtNombre);
-            this.SgbConfiguracionesEmpleado.Controls.Add(this.StxtApellido);
-            this.SgbConfiguracionesEmpleado.Controls.Add(this.StxtTelefono);
-            this.SgbConfiguracionesEmpleado.Controls.Add(this.StxtNombreUsuario);
-            this.SgbConfiguracionesEmpleado.Controls.Add(this.SlblCorreo);
-            this.SgbConfiguracionesEmpleado.Controls.Add(this.SlblNombreUsuario);
-            this.SgbConfiguracionesEmpleado.Controls.Add(this.SlblNombre);
-            this.SgbConfiguracionesEmpleado.Controls.Add(this.SlblApellido);
-            this.SgbConfiguracionesEmpleado.Controls.Add(this.SlblTelefono);
-            this.SgbConfiguracionesEmpleado.ForeColor = System.Drawing.Color.OrangeRed;
-            this.SgbConfiguracionesEmpleado.Location = new System.Drawing.Point(6, 220);
-            this.SgbConfiguracionesEmpleado.Name = "SgbConfiguracionesEmpleado";
-            this.SgbConfiguracionesEmpleado.Size = new System.Drawing.Size(540, 429);
-            this.SgbConfiguracionesEmpleado.TabIndex = 7;
-            this.SgbConfiguracionesEmpleado.TabStop = false;
-            this.SgbConfiguracionesEmpleado.Text = "Configuraciones de Empleados";
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(261, 385);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 18;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(132, 368);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 17;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(25, 369);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(138, 296);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(315, 34);
-            this.textBox7.TabIndex = 15;
-            // 
-            // SlblRol
-            // 
-            this.SlblRol.AutoSize = true;
-            this.SlblRol.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.SlblRol.Location = new System.Drawing.Point(6, 299);
-            this.SlblRol.Name = "SlblRol";
-            this.SlblRol.Size = new System.Drawing.Size(40, 34);
-            this.SlblRol.TabIndex = 14;
-            this.SlblRol.Text = "Rol";
-            // 
-            // SBuscar
-            // 
-            this.SBuscar.Image = global::WindowsFormsApp1.Properties.Resources.lupa;
-            this.SBuscar.Location = new System.Drawing.Point(484, 40);
-            this.SBuscar.Name = "SBuscar";
-            this.SBuscar.Size = new System.Drawing.Size(24, 23);
-            this.SBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.SBuscar.TabIndex = 13;
-            this.SBuscar.TabStop = false;
-            // 
-            // StxtCorreo
-            // 
-            this.StxtCorreo.Location = new System.Drawing.Point(138, 250);
-            this.StxtCorreo.Multiline = true;
-            this.StxtCorreo.Name = "StxtCorreo";
-            this.StxtCorreo.Size = new System.Drawing.Size(315, 34);
-            this.StxtCorreo.TabIndex = 11;
-            // 
-            // StxtNombre
-            // 
-            this.StxtNombre.Location = new System.Drawing.Point(138, 94);
-            this.StxtNombre.Multiline = true;
-            this.StxtNombre.Name = "StxtNombre";
-            this.StxtNombre.Size = new System.Drawing.Size(315, 34);
-            this.StxtNombre.TabIndex = 10;
-            // 
-            // StxtApellido
-            // 
-            this.StxtApellido.Location = new System.Drawing.Point(138, 146);
-            this.StxtApellido.Multiline = true;
-            this.StxtApellido.Name = "StxtApellido";
-            this.StxtApellido.Size = new System.Drawing.Size(315, 34);
-            this.StxtApellido.TabIndex = 9;
-            // 
-            // StxtTelefono
-            // 
-            this.StxtTelefono.Location = new System.Drawing.Point(138, 195);
-            this.StxtTelefono.Multiline = true;
-            this.StxtTelefono.Name = "StxtTelefono";
-            this.StxtTelefono.Size = new System.Drawing.Size(315, 34);
-            this.StxtTelefono.TabIndex = 8;
-            // 
-            // StxtNombreUsuario
-            // 
-            this.StxtNombreUsuario.Location = new System.Drawing.Point(183, 40);
-            this.StxtNombreUsuario.Multiline = true;
-            this.StxtNombreUsuario.Name = "StxtNombreUsuario";
-            this.StxtNombreUsuario.Size = new System.Drawing.Size(295, 31);
-            this.StxtNombreUsuario.TabIndex = 7;
-            // 
-            // SlblCorreo
-            // 
-            this.SlblCorreo.AutoSize = true;
-            this.SlblCorreo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.SlblCorreo.Location = new System.Drawing.Point(7, 250);
-            this.SlblCorreo.Name = "SlblCorreo";
-            this.SlblCorreo.Size = new System.Drawing.Size(69, 34);
-            this.SlblCorreo.TabIndex = 5;
-            this.SlblCorreo.Text = "Correo";
-            // 
-            // SlblNombreUsuario
-            // 
-            this.SlblNombreUsuario.AutoSize = true;
-            this.SlblNombreUsuario.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.SlblNombreUsuario.Location = new System.Drawing.Point(19, 37);
-            this.SlblNombreUsuario.Name = "SlblNombreUsuario";
-            this.SlblNombreUsuario.Size = new System.Drawing.Size(168, 34);
-            this.SlblNombreUsuario.TabIndex = 4;
-            this.SlblNombreUsuario.Text = "Nombre de Usuario";
-            // 
-            // SlblNombre
-            // 
-            this.SlblNombre.AutoSize = true;
-            this.SlblNombre.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.SlblNombre.Location = new System.Drawing.Point(7, 94);
-            this.SlblNombre.Name = "SlblNombre";
-            this.SlblNombre.Size = new System.Drawing.Size(77, 34);
-            this.SlblNombre.TabIndex = 3;
-            this.SlblNombre.Text = "Nombre";
-            // 
-            // SlblApellido
-            // 
-            this.SlblApellido.AutoSize = true;
-            this.SlblApellido.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.SlblApellido.Location = new System.Drawing.Point(7, 146);
-            this.SlblApellido.Name = "SlblApellido";
-            this.SlblApellido.Size = new System.Drawing.Size(78, 34);
-            this.SlblApellido.TabIndex = 2;
-            this.SlblApellido.Text = "Apellido";
-            // 
-            // SlblTelefono
-            // 
-            this.SlblTelefono.AutoSize = true;
-            this.SlblTelefono.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.SlblTelefono.Location = new System.Drawing.Point(6, 195);
-            this.SlblTelefono.Name = "SlblTelefono";
-            this.SlblTelefono.Size = new System.Drawing.Size(84, 34);
-            this.SlblTelefono.TabIndex = 1;
-            this.SlblTelefono.Text = "Teléfono";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
-            this.pictureBox2.Location = new System.Drawing.Point(6, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(126, 211);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
             // 
             // UnaLabel
             // 
@@ -1117,16 +806,6 @@
             this.linkCerrarSesion.Text = "Cerrar Sesión";
             this.linkCerrarSesion.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkCerrarSesion_LinkClicked);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.logoUp1;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(118, 177);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 44;
-            this.pictureBox2.TabStop = false;
-            // 
             // ViewTabs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1143,7 +822,6 @@
             this.tabPuntoVenta.ResumeLayout(false);
             this.tabVenta.ResumeLayout(false);
             this.tabVenta.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tabRecibirEquipo.ResumeLayout(false);
             this.tabRecibirEquipo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).EndInit();
@@ -1152,16 +830,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.JdataGridRep)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.JPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.JpictureBox)).EndInit();
-            this.tabConfiguracionesDeUsuario.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.SgbConfiguracionesEmpleado.ResumeLayout(false);
-            this.SgbConfiguracionesEmpleado.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SBuscar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1236,7 +905,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox JpictureBox;
         private System.Windows.Forms.PictureBox JPicture;
         private System.Windows.Forms.TextBox Jtxtbuscar;
