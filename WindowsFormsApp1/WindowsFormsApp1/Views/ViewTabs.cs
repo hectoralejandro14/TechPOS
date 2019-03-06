@@ -11,6 +11,8 @@ namespace WindowsFormsApp1.Views
             InitializeComponent();
             txtDescripcionDeFalla.ScrollBars = ScrollBars.Vertical;
             txtDescripcionDiagnosticoEspecifico.ScrollBars = ScrollBars.Vertical;
+            Jtxtbuscar.MaxLength = 4;
+            
         }
 
         private void linkCerrarSesion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -97,14 +99,17 @@ namespace WindowsFormsApp1.Views
         }   
         private void btnAgregarCliente_Click(object sender, EventArgs e)
         {
+
             if (validarEmail(txtCorreo.Text))
             {
                 MessageBox.Show("FORMATO DE CORREO CORRECTO", "ACEPTADO", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                //Agregar Cliente en bd
             }
             else
             {
                 MessageBox.Show("FORMATO DE CORREO NO VALIDO", "RECHAZADO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
         }
         public static bool validarEmail(string email)
         {
@@ -130,6 +135,33 @@ namespace WindowsFormsApp1.Views
         }
 
         private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgregrEquipos_Click(object sender, EventArgs e)
+        {
+            //Agregar en bd nuevo equipo de reparacion
+        }
+
+        private void JPicture_Click(object sender, EventArgs e)
+        {
+            bool encontrarEquipo = false;
+            if (!encontrarEquipo)
+            {
+                MessageBox.Show("No se encontro equipo en reparacion con el numero: " + Jtxtbuscar.Text);
+            }
+        }
+
+        private void Jtxtbuscar_TextChanged(object sender, EventArgs e)
+        {
+            if (!(Jtxtbuscar.TextLength <= 4))
+            {
+
+            }
+        }
+
+        private void JdataGridRep_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
