@@ -626,6 +626,8 @@
             // 
             // JdataGridRep
             // 
+            this.JdataGridRep.AllowUserToAddRows = false;
+            this.JdataGridRep.AllowUserToDeleteRows = false;
             this.JdataGridRep.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.JdataGridRep.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -635,38 +637,43 @@
             this.JEstado});
             this.JdataGridRep.Location = new System.Drawing.Point(172, 260);
             this.JdataGridRep.Name = "JdataGridRep";
+            this.JdataGridRep.ReadOnly = true;
             this.JdataGridRep.Size = new System.Drawing.Size(915, 317);
             this.JdataGridRep.TabIndex = 7;
-            this.JdataGridRep.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.JdataGridRep_CellContentClick);
             // 
             // ID
             // 
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             this.ID.Width = 200;
             // 
             // JMArca
             // 
             this.JMArca.HeaderText = "Marca";
             this.JMArca.Name = "JMArca";
+            this.JMArca.ReadOnly = true;
             this.JMArca.Width = 150;
             // 
             // JModelo
             // 
             this.JModelo.HeaderText = "Modelo";
             this.JModelo.Name = "JModelo";
+            this.JModelo.ReadOnly = true;
             this.JModelo.Width = 150;
             // 
             // JCliente
             // 
             this.JCliente.HeaderText = "Cliente";
             this.JCliente.Name = "JCliente";
+            this.JCliente.ReadOnly = true;
             this.JCliente.Width = 225;
             // 
             // JEstado
             // 
             this.JEstado.HeaderText = "Estado";
             this.JEstado.Name = "JEstado";
+            this.JEstado.ReadOnly = true;
             this.JEstado.Width = 150;
             // 
             // JTerminados

@@ -16,10 +16,18 @@ namespace WindowsFormsApp1
         public Reparacion()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
 
 
         }
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Reparacion_Load(object sender, EventArgs e)
         {
 
         }

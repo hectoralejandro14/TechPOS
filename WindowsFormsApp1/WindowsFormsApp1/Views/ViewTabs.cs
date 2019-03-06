@@ -161,10 +161,7 @@ namespace WindowsFormsApp1.Views
             }
         }
 
-        private void JdataGridRep_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
         //------------------------------------------------------------------------------------
     }       
 }

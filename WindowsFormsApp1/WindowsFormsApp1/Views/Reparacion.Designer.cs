@@ -286,6 +286,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Reparacion";
             this.Text = "Equipo en reparación";
+            this.Load += new System.EventHandler(this.Reparacion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
