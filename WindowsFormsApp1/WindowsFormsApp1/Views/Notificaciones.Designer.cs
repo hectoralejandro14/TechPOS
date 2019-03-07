@@ -28,29 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panelNotificacion = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.lblNotificaciones = new System.Windows.Forms.Label();
+            this.panelNotificacion.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelNotificacion
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(148, 80);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(416, 94);
-            this.panel1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(313, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Notificaciones";
+            this.panelNotificacion.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.panelNotificacion.Controls.Add(this.label2);
+            this.panelNotificacion.Location = new System.Drawing.Point(148, 80);
+            this.panelNotificacion.Name = "panelNotificacion";
+            this.panelNotificacion.Size = new System.Drawing.Size(416, 94);
+            this.panelNotificacion.TabIndex = 0;
             // 
             // label2
             // 
@@ -62,17 +53,27 @@
             this.label2.TabIndex = 0;
             this.label2.Text = ".....";
             // 
+            // lblNotificaciones
+            // 
+            this.lblNotificaciones.AutoSize = true;
+            this.lblNotificaciones.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNotificaciones.Location = new System.Drawing.Point(279, 27);
+            this.lblNotificaciones.Name = "lblNotificaciones";
+            this.lblNotificaciones.Size = new System.Drawing.Size(154, 29);
+            this.lblNotificaciones.TabIndex = 1;
+            this.lblNotificaciones.Text = "Notificaciones";
+            // 
             // Notificaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(809, 490);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.lblNotificaciones);
+            this.Controls.Add(this.panelNotificacion);
             this.Name = "Notificaciones";
             this.Text = "Notificaciones";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelNotificacion.ResumeLayout(false);
+            this.panelNotificacion.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -80,8 +81,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelNotificacion;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblNotificaciones;
     }
 }

@@ -28,230 +28,234 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.lblDescripcion = new System.Windows.Forms.Label();
+            this.lblMarca = new System.Windows.Forms.Label();
+            this.lblPrecio = new System.Windows.Forms.Label();
+            this.lblEnvio = new System.Windows.Forms.Label();
+            this.lblIva = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblAbono = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtMarca = new System.Windows.Forms.TextBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.txtEnvio = new System.Windows.Forms.TextBox();
+            this.txtAbono = new System.Windows.Forms.TextBox();
+            this.txtIva = new System.Windows.Forms.TextBox();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.lblEncargar = new System.Windows.Forms.Label();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lblCodigo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(174, 98);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Código";
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.lblCodigo.Location = new System.Drawing.Point(174, 98);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(71, 34);
+            this.lblCodigo.TabIndex = 0;
+            this.lblCodigo.Text = "Código";
             // 
-            // label2
+            // lblDescripcion
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(167, 148);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Descripción";
+            this.lblDescripcion.AutoSize = true;
+            this.lblDescripcion.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.lblDescripcion.Location = new System.Drawing.Point(167, 148);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Size = new System.Drawing.Size(110, 34);
+            this.lblDescripcion.TabIndex = 1;
+            this.lblDescripcion.Text = "Descripción";
             // 
-            // label3
+            // lblMarca
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(176, 199);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Marca";
+            this.lblMarca.AutoSize = true;
+            this.lblMarca.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.lblMarca.Location = new System.Drawing.Point(176, 199);
+            this.lblMarca.Name = "lblMarca";
+            this.lblMarca.Size = new System.Drawing.Size(64, 34);
+            this.lblMarca.TabIndex = 2;
+            this.lblMarca.Text = "Marca";
             // 
-            // label4
+            // lblPrecio
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(174, 251);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 16);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Precio";
+            this.lblPrecio.AutoSize = true;
+            this.lblPrecio.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.lblPrecio.Location = new System.Drawing.Point(174, 251);
+            this.lblPrecio.Name = "lblPrecio";
+            this.lblPrecio.Size = new System.Drawing.Size(66, 34);
+            this.lblPrecio.TabIndex = 3;
+            this.lblPrecio.Text = "Precio";
             // 
-            // label5
+            // lblEnvio
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(174, 307);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 16);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Envío";
+            this.lblEnvio.AutoSize = true;
+            this.lblEnvio.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.lblEnvio.Location = new System.Drawing.Point(174, 307);
+            this.lblEnvio.Name = "lblEnvio";
+            this.lblEnvio.Size = new System.Drawing.Size(60, 34);
+            this.lblEnvio.TabIndex = 4;
+            this.lblEnvio.Text = "Envío";
             // 
-            // label7
+            // lblIva
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(425, 200);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(29, 16);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "IVA";
+            this.lblIva.AutoSize = true;
+            this.lblIva.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.lblIva.Location = new System.Drawing.Point(425, 199);
+            this.lblIva.Name = "lblIva";
+            this.lblIva.Size = new System.Drawing.Size(42, 34);
+            this.lblIva.TabIndex = 6;
+            this.lblIva.Text = "IVA";
             // 
-            // label8
+            // lblTotal
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(425, 256);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(39, 16);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Total";
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.lblTotal.Location = new System.Drawing.Point(425, 256);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(54, 34);
+            this.lblTotal.TabIndex = 7;
+            this.lblTotal.Text = "Total";
             // 
-            // label9
+            // lblAbono
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(174, 359);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(48, 16);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Abono";
+            this.lblAbono.AutoSize = true;
+            this.lblAbono.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.lblAbono.Location = new System.Drawing.Point(174, 359);
+            this.lblAbono.Name = "lblAbono";
+            this.lblAbono.Size = new System.Drawing.Size(66, 34);
+            this.lblAbono.TabIndex = 8;
+            this.lblAbono.Text = "Abono";
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(349, 415);
+            this.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCancelar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.btnCancelar.Location = new System.Drawing.Point(381, 415);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(100, 36);
             this.btnCancelar.TabIndex = 9;
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // button2
+            // btnAceptar
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(268, 415);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Aceptar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAceptar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAceptar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.btnAceptar.Location = new System.Drawing.Point(281, 415);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(85, 36);
+            this.btnAceptar.TabIndex = 10;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // txtCodigo
             // 
-            this.textBox1.Location = new System.Drawing.Point(253, 97);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 11;
+            this.txtCodigo.Location = new System.Drawing.Point(281, 106);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(100, 20);
+            this.txtCodigo.TabIndex = 11;
             // 
-            // textBox2
+            // txtDescripcion
             // 
-            this.textBox2.Location = new System.Drawing.Point(253, 147);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 12;
+            this.txtDescripcion.Location = new System.Drawing.Point(283, 156);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(100, 20);
+            this.txtDescripcion.TabIndex = 12;
             // 
-            // textBox3
+            // txtMarca
             // 
-            this.textBox3.Location = new System.Drawing.Point(253, 198);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 13;
+            this.txtMarca.Location = new System.Drawing.Point(283, 207);
+            this.txtMarca.Name = "txtMarca";
+            this.txtMarca.Size = new System.Drawing.Size(100, 20);
+            this.txtMarca.TabIndex = 13;
             // 
-            // textBox4
+            // txtPrecio
             // 
-            this.textBox4.Location = new System.Drawing.Point(253, 256);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 14;
+            this.txtPrecio.Location = new System.Drawing.Point(283, 264);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(100, 20);
+            this.txtPrecio.TabIndex = 14;
             // 
-            // textBox5
+            // txtEnvio
             // 
-            this.textBox5.Location = new System.Drawing.Point(253, 307);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 15;
+            this.txtEnvio.Location = new System.Drawing.Point(283, 307);
+            this.txtEnvio.Name = "txtEnvio";
+            this.txtEnvio.Size = new System.Drawing.Size(100, 20);
+            this.txtEnvio.TabIndex = 15;
             // 
-            // textBox6
+            // txtAbono
             // 
-            this.textBox6.Location = new System.Drawing.Point(253, 359);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 16;
+            this.txtAbono.Location = new System.Drawing.Point(283, 367);
+            this.txtAbono.Name = "txtAbono";
+            this.txtAbono.Size = new System.Drawing.Size(100, 20);
+            this.txtAbono.TabIndex = 16;
             // 
-            // textBox7
+            // txtIva
             // 
-            this.textBox7.Location = new System.Drawing.Point(494, 200);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(68, 20);
-            this.textBox7.TabIndex = 17;
+            this.txtIva.Location = new System.Drawing.Point(503, 207);
+            this.txtIva.Name = "txtIva";
+            this.txtIva.Size = new System.Drawing.Size(68, 20);
+            this.txtIva.TabIndex = 17;
             // 
-            // textBox8
+            // txtTotal
             // 
-            this.textBox8.Location = new System.Drawing.Point(494, 251);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(68, 20);
-            this.textBox8.TabIndex = 18;
+            this.txtTotal.Location = new System.Drawing.Point(503, 264);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(68, 20);
+            this.txtTotal.TabIndex = 18;
             // 
-            // label10
+            // lblEncargar
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(276, 29);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(240, 31);
-            this.label10.TabIndex = 20;
-            this.label10.Text = "Encargar Producto";
+            this.lblEncargar.AutoSize = true;
+            this.lblEncargar.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEncargar.Location = new System.Drawing.Point(276, 29);
+            this.lblEncargar.Name = "lblEncargar";
+            this.lblEncargar.Size = new System.Drawing.Size(195, 29);
+            this.lblEncargar.TabIndex = 20;
+            this.lblEncargar.Text = "Encargar Producto";
             // 
-            // button3
+            // btnLimpiar
             // 
-            this.button3.Location = new System.Drawing.Point(441, 415);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 21;
-            this.button3.Text = "Limpiar Campos";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnLimpiar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnLimpiar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.btnLimpiar.Location = new System.Drawing.Point(487, 415);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(84, 36);
+            this.btnLimpiar.TabIndex = 21;
+            this.btnLimpiar.Text = "Limpiar Campos";
+            this.btnLimpiar.UseVisualStyleBackColor = false;
             // 
             // EncargarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(800, 474);
+            this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.lblEncargar);
+            this.Controls.Add(this.txtTotal);
+            this.Controls.Add(this.txtIva);
+            this.Controls.Add(this.txtAbono);
+            this.Controls.Add(this.txtEnvio);
+            this.Controls.Add(this.txtPrecio);
+            this.Controls.Add(this.txtMarca);
+            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.txtCodigo);
+            this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblAbono);
+            this.Controls.Add(this.lblTotal);
+            this.Controls.Add(this.lblIva);
+            this.Controls.Add(this.lblEnvio);
+            this.Controls.Add(this.lblPrecio);
+            this.Controls.Add(this.lblMarca);
+            this.Controls.Add(this.lblDescripcion);
+            this.Controls.Add(this.lblCodigo);
             this.Name = "EncargarProducto";
             this.Text = "Encargar Producto";
             this.ResumeLayout(false);
@@ -261,25 +265,25 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.Label lblDescripcion;
+        private System.Windows.Forms.Label lblMarca;
+        private System.Windows.Forms.Label lblPrecio;
+        private System.Windows.Forms.Label lblEnvio;
+        private System.Windows.Forms.Label lblIva;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Label lblAbono;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.TextBox txtMarca;
+        private System.Windows.Forms.TextBox txtPrecio;
+        private System.Windows.Forms.TextBox txtEnvio;
+        private System.Windows.Forms.TextBox txtAbono;
+        private System.Windows.Forms.TextBox txtIva;
+        private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.Label lblEncargar;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }

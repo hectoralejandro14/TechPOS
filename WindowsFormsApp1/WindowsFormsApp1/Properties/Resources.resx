@@ -133,4 +133,13 @@
   <data name="Lupa Codigo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Lupa Codigo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cordia_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cordia_0.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Hursheys" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hursheys.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="PEPSI_pl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PEPSI_pl.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

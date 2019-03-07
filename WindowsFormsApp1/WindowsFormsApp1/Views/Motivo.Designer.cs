@@ -28,69 +28,73 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.motivoLbl = new System.Windows.Forms.Label();
+            this.cancelarVLbl = new System.Windows.Forms.Label();
+            this.motivoTbxCancelarV = new System.Windows.Forms.RichTextBox();
+            this.regresarBtnCVenta = new System.Windows.Forms.Button();
+            this.aceptarBtnCancelV = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // motivoLbl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(145, 105);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Motivo";
+            this.motivoLbl.AutoSize = true;
+            this.motivoLbl.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.motivoLbl.Location = new System.Drawing.Point(145, 105);
+            this.motivoLbl.Name = "motivoLbl";
+            this.motivoLbl.Size = new System.Drawing.Size(65, 34);
+            this.motivoLbl.TabIndex = 0;
+            this.motivoLbl.Text = "Motivo";
             // 
-            // label2
+            // cancelarVLbl
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(223, 32);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(201, 31);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Cancelar Venta";
+            this.cancelarVLbl.AutoSize = true;
+            this.cancelarVLbl.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelarVLbl.Location = new System.Drawing.Point(223, 32);
+            this.cancelarVLbl.Name = "cancelarVLbl";
+            this.cancelarVLbl.Size = new System.Drawing.Size(162, 29);
+            this.cancelarVLbl.TabIndex = 1;
+            this.cancelarVLbl.Text = "Cancelar Venta";
             // 
-            // richTextBox1
+            // motivoTbxCancelarV
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(131, 133);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(415, 180);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "";
+            this.motivoTbxCancelarV.Location = new System.Drawing.Point(131, 133);
+            this.motivoTbxCancelarV.Name = "motivoTbxCancelarV";
+            this.motivoTbxCancelarV.Size = new System.Drawing.Size(415, 180);
+            this.motivoTbxCancelarV.TabIndex = 2;
+            this.motivoTbxCancelarV.Text = "";
             // 
-            // button1
+            // regresarBtnCVenta
             // 
-            this.button1.Location = new System.Drawing.Point(358, 371);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 32);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Regresar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.regresarBtnCVenta.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.regresarBtnCVenta.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.regresarBtnCVenta.Location = new System.Drawing.Point(385, 371);
+            this.regresarBtnCVenta.Name = "regresarBtnCVenta";
+            this.regresarBtnCVenta.Size = new System.Drawing.Size(104, 43);
+            this.regresarBtnCVenta.TabIndex = 3;
+            this.regresarBtnCVenta.Text = "Regresar";
+            this.regresarBtnCVenta.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // aceptarBtnCancelV
             // 
-            this.button2.Location = new System.Drawing.Point(470, 371);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(76, 32);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Aceptar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.aceptarBtnCancelV.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.aceptarBtnCancelV.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.aceptarBtnCancelV.Location = new System.Drawing.Point(523, 371);
+            this.aceptarBtnCancelV.Name = "aceptarBtnCancelV";
+            this.aceptarBtnCancelV.Size = new System.Drawing.Size(100, 43);
+            this.aceptarBtnCancelV.TabIndex = 4;
+            this.aceptarBtnCancelV.Text = "Aceptar";
+            this.aceptarBtnCancelV.UseVisualStyleBackColor = false;
             // 
             // Motivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(671, 426);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.aceptarBtnCancelV);
+            this.Controls.Add(this.regresarBtnCVenta);
+            this.Controls.Add(this.motivoTbxCancelarV);
+            this.Controls.Add(this.cancelarVLbl);
+            this.Controls.Add(this.motivoLbl);
             this.Name = "Motivo";
             this.Text = "Motivo";
             this.ResumeLayout(false);
@@ -100,10 +104,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label motivoLbl;
+        private System.Windows.Forms.Label cancelarVLbl;
+        private System.Windows.Forms.RichTextBox motivoTbxCancelarV;
+        private System.Windows.Forms.Button regresarBtnCVenta;
+        private System.Windows.Forms.Button aceptarBtnCancelV;
     }
 }

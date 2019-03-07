@@ -6,11 +6,15 @@ namespace WindowsFormsApp1.Views
 {
     public partial class ViewTabs : Form
     {
+        private DBConnectio.Connection conexion = new DBConnectio.Connection();
         public ViewTabs()
         {
             InitializeComponent();
             txtDescripcionDeFalla.ScrollBars = ScrollBars.Vertical;
             txtDescripcionDiagnosticoEspecifico.ScrollBars = ScrollBars.Vertical;
+            tabPuntoVenta.TabPages.Remove(tabConfiguracionesDeUsuario);
+            Jtxtbuscar.MaxLength = 4;
+            
         }
 
         private void linkCerrarSesion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -21,15 +25,21 @@ namespace WindowsFormsApp1.Views
         }
 
         //------------------------------------------------------------------------------------
-        //SERGIO
+        //Tab Recibir Equipo
         private void btnPedirPieza_Click(object sender, System.EventArgs e)
         {
-            EncargarProducto encargar = new EncargarProducto();
-            this.Close();
+            Ecargar_Pieza encargar = new Ecargar_Pieza();
+            
             encargar.Show();
         }
         private void pictureBuscar_Click(object sender, System.EventArgs e)
         {
+            bool encontro = false;
+            if (!encontro)
+            {
+                lblAvisoNoCliente.Visible = true;
+                btnAgregarCliente.Visible = true;
+            }
             MessageBox.Show("Picture Buscar");
         }
         private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
@@ -91,14 +101,17 @@ namespace WindowsFormsApp1.Views
         }   
         private void btnAgregarCliente_Click(object sender, EventArgs e)
         {
+
             if (validarEmail(txtCorreo.Text))
             {
                 MessageBox.Show("FORMATO DE CORREO CORRECTO", "ACEPTADO", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                //Agregar Cliente en bd
             }
             else
             {
                 MessageBox.Show("FORMATO DE CORREO NO VALIDO", "RECHAZADO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
         }
         public static bool validarEmail(string email)
         {
@@ -112,7 +125,41 @@ namespace WindowsFormsApp1.Views
                 return false;
             }
         }
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void tabReparacion_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
         //------------------------------------------------------------------------------------
+        //Generales
+        public void MostrarConfiguracionUsuarios (int IdRol)
+        {
+            if (IdRol == 1)
+            {
+                tabPuntoVenta.TabPages.Add(tabConfiguracionesDeUsuario);
+            }
+        }
+
+        /*private void SbtnAgregarRol_Click(object sender, EventArgs e)
+        {
+            Random random = new Random();
+            decimal _random = random.Next(1, 1000000000);
+            string _Rol = StxtAgregarRol.Text;
+            string consulta = "INSERT INTO Rol (Id,NombreRol) VALUES (@Id,@NombreRol)";
+            //Abrir conexion
+            conexion.AbrirConexion();
+            //Agregar datos
+            conexion.AgregarRoles(consulta,_random,_Rol);
+            //cerrar conexion
+            conexion.CerrarConexion(); 
+        }*/
     }       
 }
 
