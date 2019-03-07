@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.SqlClient;
 using System.Net.Mail;
 using System.Windows.Forms;
 
@@ -35,12 +36,25 @@ namespace WindowsFormsApp1.Views
         private void pictureBuscar_Click(object sender, System.EventArgs e)
         {
             bool encontro = false;
+            DBConnectio.Connection db = new DBConnectio.Connection();
+            db.AbrirConexion();
+            SqlDataReader dr=db.consulta("select * from Cliente where Id=" + txtBuscarCliente.Text);
+            MessageBox.Show("select * from Cliente where Id=" + txtBuscarCliente.Text);
+            if (dr.Read())
+            {
+                txtNombre.Text= Convert.ToString(dr["Nombre"]);
+                txtApellido.Text= Convert.ToString(dr["Apellido"]);
+                txtTelefono.Text= Convert.ToString(dr["Telefono"]);
+                txtCorreo.Text= Convert.ToString(dr["Contacto"]);
+                encontro = true;
+            }
+            db.CerrarConexion();
             if (!encontro)
             {
                 lblAvisoNoCliente.Visible = true;
                 btnAgregarCliente.Visible = true;
             }
-            MessageBox.Show("Picture Buscar");
+            
         }
         private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -145,6 +159,24 @@ namespace WindowsFormsApp1.Views
             {
                 tabPuntoVenta.TabPages.Add(tabConfiguracionesDeUsuario);
             }
+        }
+
+        private void btnAgregrEquipos_Click(object sender, EventArgs e)
+        {
+            DateTime Hoy = DateTime.Today;
+            string fecha_actual = Hoy.ToString("yyyy-MM-dd");
+            DBConnectio.Connection db = new DBConnectio.Connection();
+            db.AbrirConexion();
+            String sql= "Insert into Reparacion values(" + 1 + ",'" + txtMarca.Text
+                + "','" + txtModelo.Text
+                + "','" + txtDescripcionDeFalla.Text
+                + "','" + txtDescripcionDiagnosticoEspecifico.Text
+                + "',26,250,6,'" + fecha_actual + "','" + txtBuscarCliente.Text
+                + "',1," + txtTotal.Text
+                + ",1)";
+            MessageBox.Show(sql);
+            db.AddElements(sql);
+            db.CerrarConexion();
         }
 
         /*private void SbtnAgregarRol_Click(object sender, EventArgs e)
