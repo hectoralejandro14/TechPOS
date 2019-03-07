@@ -47,7 +47,7 @@
             // 
             this.equipoLblEncargar.AutoSize = true;
             this.equipoLblEncargar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.equipoLblEncargar.Location = new System.Drawing.Point(134, 91);
+            this.equipoLblEncargar.Location = new System.Drawing.Point(134, 28);
             this.equipoLblEncargar.Name = "equipoLblEncargar";
             this.equipoLblEncargar.Size = new System.Drawing.Size(70, 34);
             this.equipoLblEncargar.TabIndex = 0;
@@ -57,7 +57,7 @@
             // 
             this.marcaLblEncargar.AutoSize = true;
             this.marcaLblEncargar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.marcaLblEncargar.Location = new System.Drawing.Point(140, 168);
+            this.marcaLblEncargar.Location = new System.Drawing.Point(148, 168);
             this.marcaLblEncargar.Name = "marcaLblEncargar";
             this.marcaLblEncargar.Size = new System.Drawing.Size(64, 34);
             this.marcaLblEncargar.TabIndex = 1;
@@ -67,7 +67,7 @@
             // 
             this.piezaLblEncargar.AutoSize = true;
             this.piezaLblEncargar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.piezaLblEncargar.Location = new System.Drawing.Point(158, 230);
+            this.piezaLblEncargar.Location = new System.Drawing.Point(12, 226);
             this.piezaLblEncargar.Name = "piezaLblEncargar";
             this.piezaLblEncargar.Size = new System.Drawing.Size(80, 34);
             this.piezaLblEncargar.TabIndex = 2;
@@ -77,7 +77,7 @@
             // 
             this.modeloLblEncargar.AutoSize = true;
             this.modeloLblEncargar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modeloLblEncargar.Location = new System.Drawing.Point(456, 127);
+            this.modeloLblEncargar.Location = new System.Drawing.Point(140, 101);
             this.modeloLblEncargar.Name = "modeloLblEncargar";
             this.modeloLblEncargar.Size = new System.Drawing.Size(72, 34);
             this.modeloLblEncargar.TabIndex = 3;
@@ -85,7 +85,7 @@
             // 
             // equipoTbxEncagar
             // 
-            this.equipoTbxEncagar.Location = new System.Drawing.Point(204, 91);
+            this.equipoTbxEncagar.Location = new System.Drawing.Point(218, 36);
             this.equipoTbxEncagar.Multiline = true;
             this.equipoTbxEncagar.Name = "equipoTbxEncagar";
             this.equipoTbxEncagar.Size = new System.Drawing.Size(182, 29);
@@ -94,7 +94,7 @@
             // 
             // marcaTbxEncargar
             // 
-            this.marcaTbxEncargar.Location = new System.Drawing.Point(204, 168);
+            this.marcaTbxEncargar.Location = new System.Drawing.Point(218, 168);
             this.marcaTbxEncargar.Multiline = true;
             this.marcaTbxEncargar.Name = "marcaTbxEncargar";
             this.marcaTbxEncargar.Size = new System.Drawing.Size(182, 33);
@@ -102,7 +102,7 @@
             // 
             // modeloTbxEncargar
             // 
-            this.modeloTbxEncargar.Location = new System.Drawing.Point(534, 127);
+            this.modeloTbxEncargar.Location = new System.Drawing.Point(218, 101);
             this.modeloTbxEncargar.Multiline = true;
             this.modeloTbxEncargar.Name = "modeloTbxEncargar";
             this.modeloTbxEncargar.Size = new System.Drawing.Size(183, 28);
@@ -110,7 +110,7 @@
             // 
             // piezasTbxEncargar
             // 
-            this.piezasTbxEncargar.Location = new System.Drawing.Point(161, 267);
+            this.piezasTbxEncargar.Location = new System.Drawing.Point(12, 263);
             this.piezasTbxEncargar.Multiline = true;
             this.piezasTbxEncargar.Name = "piezasTbxEncargar";
             this.piezasTbxEncargar.Size = new System.Drawing.Size(545, 173);
@@ -131,7 +131,7 @@
             // 
             this.btnCancelarPieza.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnCancelarPieza.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelarPieza.Location = new System.Drawing.Point(716, 457);
+            this.btnCancelarPieza.Location = new System.Drawing.Point(388, 442);
             this.btnCancelarPieza.Name = "btnCancelarPieza";
             this.btnCancelarPieza.Size = new System.Drawing.Size(83, 37);
             this.btnCancelarPieza.TabIndex = 9;
@@ -143,7 +143,7 @@
             // 
             this.BtnAceptarPieza.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BtnAceptarPieza.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAceptarPieza.Location = new System.Drawing.Point(626, 457);
+            this.BtnAceptarPieza.Location = new System.Drawing.Point(477, 442);
             this.BtnAceptarPieza.Name = "BtnAceptarPieza";
             this.BtnAceptarPieza.Size = new System.Drawing.Size(80, 37);
             this.BtnAceptarPieza.TabIndex = 10;
@@ -155,7 +155,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 495);
+            this.ClientSize = new System.Drawing.Size(572, 495);
             this.Controls.Add(this.BtnAceptarPieza);
             this.Controls.Add(this.btnCancelarPieza);
             this.Controls.Add(this.pictureBox1);

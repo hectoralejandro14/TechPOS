@@ -19,7 +19,7 @@ namespace WindowsFormsApp1.DBConnectio
             try
             {
                 conexion.Open();
-                MessageBox.Show("Conexion establecida con la Base de Datos", "Conexion Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                //MessageBox.Show("Conexion establecida con la Base de Datos", "Conexion Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Question);
             }
             catch (System.Exception e1)
             {
@@ -32,7 +32,7 @@ namespace WindowsFormsApp1.DBConnectio
             try
             {
                 conexion.Close();
-                MessageBox.Show("Conexion cerrada con la Base de Datos", "Conexion Cerrada", MessageBoxButtons.OK, MessageBoxIcon.Question);
+               // MessageBox.Show("Conexion cerrada con la Base de Datos", "Conexion Cerrada", MessageBoxButtons.OK, MessageBoxIcon.Question);
             }
             catch (System.Exception e2)
             {
@@ -64,27 +64,26 @@ namespace WindowsFormsApp1.DBConnectio
                 MessageBox.Show("Ocurrio un error con la conexión a la Base de Datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Modificar Roles
-        public void ModificarRol(string cadena)
-        {
-
-        }
-
-        //Eliminar Roles
-        public void EliminarRol(string cadena)
-        {
-
-        }
         //-----------------------------------------------------------------------------
-        public void getId(string cadena)
-        {
-
-        }
         //Agregar general
         public void AddElements(string SQL)
         {
+            try
+            {
+                SqlCommand cmd = new SqlCommand(SQL, conexion);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Rol Agregado con Exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Question);
+            }
+            catch
+            {
+                MessageBox.Show("Ocurrio un error con la conexión a la Base de Datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public SqlDataReader consulta (string SQL)
+        {
             SqlCommand cmd = new SqlCommand(SQL, conexion);
-            cmd.ExecuteNonQuery();
+            SqlDataReader dr= cmd.ExecuteReader();
+            return dr;
         }
     }
 }
