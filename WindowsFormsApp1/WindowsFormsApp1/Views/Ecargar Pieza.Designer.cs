@@ -148,9 +148,8 @@
             this.BtnAceptarPieza.Size = new System.Drawing.Size(80, 37);
             this.BtnAceptarPieza.TabIndex = 10;
             this.BtnAceptarPieza.Text = "Aceptar";
-            this.BtnAceptarPieza.UseVisualStyleBackColor = true;
-            this.BtnAceptarPieza.Click += new System.EventHandler(this.BtnAceptarPieza_Click);
             this.BtnAceptarPieza.UseVisualStyleBackColor = false;
+            this.BtnAceptarPieza.Click += new System.EventHandler(this.BtnAceptarPieza_Click);
             // 
             // Ecargar_Pieza
             // 

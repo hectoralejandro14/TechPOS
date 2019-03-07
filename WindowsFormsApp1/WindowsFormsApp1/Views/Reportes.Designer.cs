@@ -36,11 +36,11 @@
             this.btnImprimir = new System.Windows.Forms.Button();
             this.lblTotal = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.cantidadClmReportes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descClmReportes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioUClmReportes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalClmReportes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,14 +57,14 @@
             // comboPor
             // 
             this.comboPor.FormattingEnabled = true;
-            this.comboPor.Location = new System.Drawing.Point(194, 87);
+            this.comboPor.Location = new System.Drawing.Point(92, 95);
             this.comboPor.Name = "comboPor";
             this.comboPor.Size = new System.Drawing.Size(121, 21);
             this.comboPor.TabIndex = 1;
             // 
             // textFecha
             // 
-            this.textFecha.Location = new System.Drawing.Point(455, 87);
+            this.textFecha.Location = new System.Drawing.Point(314, 95);
             this.textFecha.Name = "textFecha";
             this.textFecha.Size = new System.Drawing.Size(126, 20);
             this.textFecha.TabIndex = 2;
@@ -73,7 +73,7 @@
             // 
             this.lblPor.AutoSize = true;
             this.lblPor.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPor.Location = new System.Drawing.Point(146, 79);
+            this.lblPor.Location = new System.Drawing.Point(39, 87);
             this.lblPor.Name = "lblPor";
             this.lblPor.Size = new System.Drawing.Size(42, 34);
             this.lblPor.TabIndex = 4;
@@ -83,7 +83,7 @@
             // 
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.lblFecha.Location = new System.Drawing.Point(384, 79);
+            this.lblFecha.Location = new System.Drawing.Point(241, 87);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(65, 34);
             this.lblFecha.TabIndex = 5;
@@ -104,7 +104,7 @@
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.lblTotal.Location = new System.Drawing.Point(134, 342);
+            this.lblTotal.Location = new System.Drawing.Point(60, 342);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(59, 34);
             this.lblTotal.TabIndex = 7;
@@ -118,20 +118,10 @@
             this.descClmReportes,
             this.precioUClmReportes,
             this.totalClmReportes});
-            this.dataGridView1.Location = new System.Drawing.Point(140, 126);
+            this.dataGridView1.Location = new System.Drawing.Point(23, 139);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(601, 184);
+            this.dataGridView1.Size = new System.Drawing.Size(604, 184);
             this.dataGridView1.TabIndex = 8;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(188, 342);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(25, 34);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "$";
             // 
             // cantidadClmReportes
             // 
@@ -157,11 +147,21 @@
             this.totalClmReportes.Name = "totalClmReportes";
             this.totalClmReportes.Width = 140;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(125, 342);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(25, 34);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "$";
+            // 
             // Reportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 494);
+            this.ClientSize = new System.Drawing.Size(658, 490);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblTotal);
