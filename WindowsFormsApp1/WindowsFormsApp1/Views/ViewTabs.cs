@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 using System.Net.Mail;
 using System.Windows.Forms;
@@ -15,7 +16,25 @@ namespace WindowsFormsApp1.Views
             txtDescripcionDiagnosticoEspecifico.ScrollBars = ScrollBars.Vertical;
             tabPuntoVenta.TabPages.Remove(tabConfiguracionesDeUsuario);
             Jtxtbuscar.MaxLength = 4;
-            
+            DataTable dt = new DataTable();
+            //---------Combo box servicio
+            conexion.AbrirConexion();
+            SqlDataAdapter da = conexion.consultaMasDatos("select Id, Nombre from Servicio");
+            da.Fill(dt);
+            conexion.CerrarConexion();
+            ccbTipoServicio.DisplayMember = "Nombre";
+            ccbTipoServicio.ValueMember = "Id";
+            ccbTipoServicio.DataSource = dt;
+            //---------Combo box responsable
+            DataTable dt1 = new DataTable();
+            conexion.AbrirConexion();
+            SqlDataAdapter da1 = conexion.consultaMasDatos("select Id, Nombre from Usuario");
+            da1.Fill(dt1);
+            conexion.CerrarConexion();
+            comboResponsable.DisplayMember = "Nombre";
+            comboResponsable.ValueMember = "Id";
+            comboResponsable.DataSource = dt1;
+
         }
         private void linkCerrarSesion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -171,20 +190,36 @@ namespace WindowsFormsApp1.Views
 
         private void btnAgregrEquipos_Click(object sender, EventArgs e)
         {
+            string tipoDiag = "";
             DateTime Hoy = DateTime.Today;
             string fecha_actual = Hoy.ToString("yyyy-MM-dd");
             DBConnectio.Connection db = new DBConnectio.Connection();
             db.AbrirConexion();
-            String sql= "Insert into Reparacion values(" + 1 + ",'" + txtMarca.Text
-                + "','" + txtModelo.Text
-                + "','" + txtDescripcionDeFalla.Text
-                + "','" + txtDescripcionDiagnosticoEspecifico.Text
-                + "',26,250,6,'" + fecha_actual + "','" + txtBuscarCliente.Text
-                + "',1," + txtTotal.Text
-                + ",1)";
-            MessageBox.Show(sql);
-            db.AddElements(sql);
-            db.CerrarConexion();
+            if (rbDiagnosticoEspecifico.Checked)
+            {
+                tipoDiag = "Diagnóstico específico";
+            }else if (rbDiagnosticoRapido.Checked)
+            {
+                tipoDiag = "Diagnóstico rápido";
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un tipo de diagnóstico", "Diagnóstico", MessageBoxButtons.OK, MessageBoxIcon.Question);
+            }
+            if (rbDiagnosticoEspecifico.Checked || rbDiagnosticoRapido.Checked)
+            {
+                String sql = "Insert into Reparacion values(" + 17 + ",'" + txtMarca.Text
+                    + "','" + txtModelo.Text
+                    + "','" + txtDescripcionDeFalla.Text
+                    + "','" + tipoDiag + ": " + txtDescripcionDiagnosticoEspecifico.Text
+                    + "'," + ccbTipoServicio.SelectedValue.ToString()
+                    + "," + txtAnticipo.Text + ",6,'" + fecha_actual + "','" + txtBuscarCliente.Text
+                    + "'," + comboResponsable.SelectedValue.ToString() + "," + txtTotal.Text
+                    + ",0)";
+                MessageBox.Show(sql);
+                db.AddElements(sql);
+                db.CerrarConexion();
+            }
         }
 
         /*private void SbtnAgregarRol_Click(object sender, EventArgs e)

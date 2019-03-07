@@ -85,5 +85,12 @@ namespace WindowsFormsApp1.DBConnectio
             SqlDataReader dr= cmd.ExecuteReader();
             return dr;
         }
+
+        public SqlDataAdapter consultaMasDatos(String SQL)
+        {
+            SqlCommand cmd = new SqlCommand(SQL, conexion);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            return da;
+        }
     }
 }
