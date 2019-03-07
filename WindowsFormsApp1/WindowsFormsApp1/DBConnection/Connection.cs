@@ -19,7 +19,7 @@ namespace WindowsFormsApp1.DBConnectio
             try
             {
                 conexion.Open();
-                MessageBox.Show("Conexion establecida con la Base de Datos", "Conexion Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                //MessageBox.Show("Conexion establecida con la Base de Datos", "Conexion Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Question);
             }
             catch (System.Exception e1)
             {
@@ -32,7 +32,7 @@ namespace WindowsFormsApp1.DBConnectio
             try
             {
                 conexion.Close();
-                MessageBox.Show("Conexion cerrada con la Base de Datos", "Conexion Cerrada", MessageBoxButtons.OK, MessageBoxIcon.Question);
+               // MessageBox.Show("Conexion cerrada con la Base de Datos", "Conexion Cerrada", MessageBoxButtons.OK, MessageBoxIcon.Question);
             }
             catch (System.Exception e2)
             {
@@ -79,6 +79,11 @@ namespace WindowsFormsApp1.DBConnectio
                 MessageBox.Show("Ocurrio un error con la conexión a la Base de Datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //-----------------------------------------------------------------------------       
+        public SqlDataReader consulta (string SQL)
+        {
+            SqlCommand cmd = new SqlCommand(SQL, conexion);
+            SqlDataReader dr= cmd.ExecuteReader();
+            return dr;
+        }
     }
 }

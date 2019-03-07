@@ -324,6 +324,7 @@
             this.btnAgregrEquipos.TabIndex = 34;
             this.btnAgregrEquipos.Text = "Agregar Equipo";
             this.btnAgregrEquipos.UseVisualStyleBackColor = false;
+            this.btnAgregrEquipos.Click += new System.EventHandler(this.btnAgregrEquipos_Click);
             // 
             // btnLimpiarCampos
             // 
@@ -895,7 +896,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1350, 756);
+            this.ClientSize = new System.Drawing.Size(1350, 749);
             this.Controls.Add(this.linkCerrarSesion);
             this.Controls.Add(this.tabPuntoVenta);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
