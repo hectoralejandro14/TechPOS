@@ -109,10 +109,6 @@
             this.SbtnGuardarRol = new System.Windows.Forms.Button();
             this.ordenesTab = new System.Windows.Forms.TabPage();
             this.tableOrdenes = new System.Windows.Forms.DataGridView();
-            this.idClmOrdenes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descClmOrdenes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estadoClmOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.UnaLabel = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -125,28 +121,12 @@
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idReparacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.linkCerrarSesion = new System.Windows.Forms.LinkLabel();
-            this.cLblTipoServicio = new System.Windows.Forms.Label();
-            this.ccbTipoServicio = new System.Windows.Forms.ComboBox();
-            this.buscarTbxVentas = new System.Windows.Forms.TextBox();
-            this.lupaImg = new System.Windows.Forms.PictureBox();
-            this.codClmVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantClVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descrClmVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioUClmVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioTClmVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subTotalLblVenta = new System.Windows.Forms.Label();
-            this.ivaLblVenta = new System.Windows.Forms.Label();
-            this.totalLblVentas = new System.Windows.Forms.Label();
-            this.ordenesTab = new System.Windows.Forms.TabPage();
-            this.subTotalTbxVentas = new System.Windows.Forms.TextBox();
-            this.ivaTbxVentas = new System.Windows.Forms.TextBox();
-            this.totalTbxVenta = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.tableOrdenes = new System.Windows.Forms.DataGridView();
+            this.logoOrden = new System.Windows.Forms.PictureBox();
             this.idClmOrdenes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descClmOrdenes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoClmOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.fIngrClmOrdenes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fLlegaClmOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPuntoVenta.SuspendLayout();
             this.tabVenta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lupaImg)).BeginInit();
@@ -164,8 +144,7 @@
             this.ordenesTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableOrdenes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoOrden)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPuntoVenta
@@ -359,8 +338,6 @@
             // 
             // tabRecibirEquipo
             // 
-            this.tabRecibirEquipo.Controls.Add(this.ccbTipoServicio);
-            this.tabRecibirEquipo.Controls.Add(this.cLblTipoServicio);
             this.tabRecibirEquipo.Controls.Add(this.pictureBox3);
             this.tabRecibirEquipo.Controls.Add(this.lblAvisoNoCliente);
             this.tabRecibirEquipo.Controls.Add(this.pictureBuscar);
@@ -409,9 +386,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
-            this.pictureBox3.Location = new System.Drawing.Point(6, -2);
+            this.pictureBox3.Location = new System.Drawing.Point(16, 6);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(118, 177);
+            this.pictureBox3.Size = new System.Drawing.Size(118, 167);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 44;
             this.pictureBox3.TabStop = false;
@@ -573,7 +550,7 @@
             // 
             this.rbDiagnosticoEspecifico.AutoSize = true;
             this.rbDiagnosticoEspecifico.ForeColor = System.Drawing.Color.Black;
-            this.rbDiagnosticoEspecifico.Location = new System.Drawing.Point(363, 404);
+            this.rbDiagnosticoEspecifico.Location = new System.Drawing.Point(382, 404);
             this.rbDiagnosticoEspecifico.Name = "rbDiagnosticoEspecifico";
             this.rbDiagnosticoEspecifico.Size = new System.Drawing.Size(123, 38);
             this.rbDiagnosticoEspecifico.TabIndex = 27;
@@ -585,7 +562,7 @@
             // 
             this.rbDiagnosticoRapido.AutoSize = true;
             this.rbDiagnosticoRapido.ForeColor = System.Drawing.Color.Black;
-            this.rbDiagnosticoRapido.Location = new System.Drawing.Point(259, 404);
+            this.rbDiagnosticoRapido.Location = new System.Drawing.Point(278, 404);
             this.rbDiagnosticoRapido.Name = "rbDiagnosticoRapido";
             this.rbDiagnosticoRapido.Size = new System.Drawing.Size(93, 38);
             this.rbDiagnosticoRapido.TabIndex = 26;
@@ -596,28 +573,28 @@
             // txtDescripcionDeFalla
             // 
             this.txtDescripcionDeFalla.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcionDeFalla.Location = new System.Drawing.Point(253, 367);
+            this.txtDescripcionDeFalla.Location = new System.Drawing.Point(276, 345);
             this.txtDescripcionDeFalla.Multiline = true;
             this.txtDescripcionDeFalla.Name = "txtDescripcionDeFalla";
-            this.txtDescripcionDeFalla.Size = new System.Drawing.Size(749, 37);
+            this.txtDescripcionDeFalla.Size = new System.Drawing.Size(726, 37);
             this.txtDescripcionDeFalla.TabIndex = 25;
             // 
             // txtModelo
             // 
             this.txtModelo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModelo.Location = new System.Drawing.Point(670, 249);
+            this.txtModelo.Location = new System.Drawing.Point(276, 295);
             this.txtModelo.Multiline = true;
             this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(332, 29);
+            this.txtModelo.Size = new System.Drawing.Size(726, 29);
             this.txtModelo.TabIndex = 24;
             // 
             // txtMarca
             // 
             this.txtMarca.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMarca.Location = new System.Drawing.Point(210, 244);
+            this.txtMarca.Location = new System.Drawing.Point(276, 246);
             this.txtMarca.Multiline = true;
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(332, 29);
+            this.txtMarca.Size = new System.Drawing.Size(726, 29);
             this.txtMarca.TabIndex = 23;
             // 
             // SlblRecibirEquipo
@@ -646,7 +623,7 @@
             // 
             this.SlblMarca.AutoSize = true;
             this.SlblMarca.ForeColor = System.Drawing.Color.Black;
-            this.SlblMarca.Location = new System.Drawing.Point(130, 242);
+            this.SlblMarca.Location = new System.Drawing.Point(59, 253);
             this.SlblMarca.Name = "SlblMarca";
             this.SlblMarca.Size = new System.Drawing.Size(74, 34);
             this.SlblMarca.TabIndex = 20;
@@ -656,7 +633,7 @@
             // 
             this.SlblModelo.AutoSize = true;
             this.SlblModelo.ForeColor = System.Drawing.Color.Black;
-            this.SlblModelo.Location = new System.Drawing.Point(558, 244);
+            this.SlblModelo.Location = new System.Drawing.Point(59, 298);
             this.SlblModelo.Name = "SlblModelo";
             this.SlblModelo.Size = new System.Drawing.Size(82, 34);
             this.SlblModelo.TabIndex = 19;
@@ -666,7 +643,7 @@
             // 
             this.SlblDescripcionFalla.AutoSize = true;
             this.SlblDescripcionFalla.ForeColor = System.Drawing.Color.Black;
-            this.SlblDescripcionFalla.Location = new System.Drawing.Point(59, 365);
+            this.SlblDescripcionFalla.Location = new System.Drawing.Point(59, 348);
             this.SlblDescripcionFalla.Name = "SlblDescripcionFalla";
             this.SlblDescripcionFalla.Size = new System.Drawing.Size(188, 34);
             this.SlblDescripcionFalla.TabIndex = 18;
@@ -932,7 +909,6 @@
             this.tabConfiguracionesDeUsuario.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tabConfiguracionesDeUsuario.Controls.Add(this.SbtnAgregarUsuario);
             this.tabConfiguracionesDeUsuario.Controls.Add(this.SgbRoles);
-            this.tabConfiguracionesDeUsuario.Controls.Add(this.pictureBox2);
             this.tabConfiguracionesDeUsuario.Location = new System.Drawing.Point(4, 43);
             this.tabConfiguracionesDeUsuario.Name = "tabConfiguracionesDeUsuario";
             this.tabConfiguracionesDeUsuario.Size = new System.Drawing.Size(1328, 669);
@@ -992,6 +968,7 @@
             // 
             // ordenesTab
             // 
+            this.ordenesTab.Controls.Add(this.logoOrden);
             this.ordenesTab.Controls.Add(this.tableOrdenes);
             this.ordenesTab.Location = new System.Drawing.Point(4, 43);
             this.ordenesTab.Name = "ordenesTab";
@@ -1007,36 +984,13 @@
             this.tableOrdenes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idClmOrdenes,
             this.descClmOrdenes,
-            this.estadoClmOrden});
+            this.estadoClmOrden,
+            this.fIngrClmOrdenes,
+            this.fLlegaClmOrden});
             this.tableOrdenes.Location = new System.Drawing.Point(266, 147);
             this.tableOrdenes.Name = "tableOrdenes";
-            this.tableOrdenes.Size = new System.Drawing.Size(862, 356);
+            this.tableOrdenes.Size = new System.Drawing.Size(890, 356);
             this.tableOrdenes.TabIndex = 1;
-            // 
-            // idClmOrdenes
-            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
-            this.pictureBox2.Location = new System.Drawing.Point(6, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(118, 177);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            this.idClmOrdenes.HeaderText = "Id";
-            this.idClmOrdenes.Name = "idClmOrdenes";
-            this.idClmOrdenes.Width = 130;
-            // 
-            // descClmOrdenes
-            // 
-            this.descClmOrdenes.HeaderText = "Descripción";
-            this.descClmOrdenes.Name = "descClmOrdenes";
-            this.descClmOrdenes.Width = 230;
-            // 
-            // estadoClmOrden
-            // 
-            this.estadoClmOrden.HeaderText = "Estado";
-            this.estadoClmOrden.Name = "estadoClmOrden";
-            this.estadoClmOrden.Width = 230;
             // 
             // UnaLabel
             // 
@@ -1104,22 +1058,45 @@
             this.linkCerrarSesion.Text = "Cerrar Sesión";
             this.linkCerrarSesion.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkCerrarSesion_LinkClicked);
             // 
-            // cLblTipoServicio
+            // logoOrden
             // 
-            this.cLblTipoServicio.AutoSize = true;
-            this.cLblTipoServicio.Location = new System.Drawing.Point(59, 299);
-            this.cLblTipoServicio.Name = "cLblTipoServicio";
-            this.cLblTipoServicio.Size = new System.Drawing.Size(145, 34);
-            this.cLblTipoServicio.TabIndex = 45;
-            this.cLblTipoServicio.Text = "Tipo de servicio:";
+            this.logoOrden.Image = global::WindowsFormsApp1.Properties.Resources.logoUp1;
+            this.logoOrden.Location = new System.Drawing.Point(16, 6);
+            this.logoOrden.Name = "logoOrden";
+            this.logoOrden.Size = new System.Drawing.Size(118, 177);
+            this.logoOrden.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logoOrden.TabIndex = 2;
+            this.logoOrden.TabStop = false;
             // 
-            // ccbTipoServicio
+            // idClmOrdenes
             // 
-            this.ccbTipoServicio.FormattingEnabled = true;
-            this.ccbTipoServicio.Location = new System.Drawing.Point(210, 296);
-            this.ccbTipoServicio.Name = "ccbTipoServicio";
-            this.ccbTipoServicio.Size = new System.Drawing.Size(332, 42);
-            this.ccbTipoServicio.TabIndex = 46;
+            this.idClmOrdenes.HeaderText = "Id";
+            this.idClmOrdenes.Name = "idClmOrdenes";
+            this.idClmOrdenes.Width = 130;
+            // 
+            // descClmOrdenes
+            // 
+            this.descClmOrdenes.HeaderText = "Descripción";
+            this.descClmOrdenes.Name = "descClmOrdenes";
+            this.descClmOrdenes.Width = 230;
+            // 
+            // estadoClmOrden
+            // 
+            this.estadoClmOrden.HeaderText = "Estado";
+            this.estadoClmOrden.Name = "estadoClmOrden";
+            this.estadoClmOrden.Width = 230;
+            // 
+            // fIngrClmOrdenes
+            // 
+            this.fIngrClmOrdenes.HeaderText = "Fecha Enc.";
+            this.fIngrClmOrdenes.Name = "fIngrClmOrdenes";
+            this.fIngrClmOrdenes.Width = 130;
+            // 
+            // fLlegaClmOrden
+            // 
+            this.fLlegaClmOrden.HeaderText = "Fecha Ll.";
+            this.fLlegaClmOrden.Name = "fLlegaClmOrden";
+            this.fLlegaClmOrden.Width = 130;
             // 
             // ViewTabs
             // 
@@ -1152,13 +1129,10 @@
             this.tabConfiguracionesDeUsuario.ResumeLayout(false);
             this.SgbRoles.ResumeLayout(false);
             this.SgbRoles.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lupaImg)).EndInit();
             this.ordenesTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableOrdenes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoOrden)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1265,18 +1239,19 @@
         private System.Windows.Forms.TextBox subTotalTbxVentas;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.DataGridView tableOrdenes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idClmOrdenes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descClmOrdenes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estadoClmOrden;
-        private System.Windows.Forms.PictureBox pictureBox2;
+       // private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.GroupBox SgbRoles;
         private System.Windows.Forms.TextBox StxtRol;
         private System.Windows.Forms.Label SlblNombreRol;
         private System.Windows.Forms.Button SbtnGuardarRol;
         private System.Windows.Forms.Button SbtnAgregarUsuario;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.ComboBox ccbTipoServicio;
-        private System.Windows.Forms.Label cLblTipoServicio;
+        private System.Windows.Forms.PictureBox logoOrden;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idClmOrdenes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descClmOrdenes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estadoClmOrden;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fIngrClmOrdenes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fLlegaClmOrden;
         //  private System.Windows.Forms.TextBox textBox1;
         //private System.Windows.Forms.Label UnaLabel;
         //  private System.Windows.Forms.Label label5;
