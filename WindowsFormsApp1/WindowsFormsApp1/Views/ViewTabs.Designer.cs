@@ -112,6 +112,7 @@
             this.idClmOrdenes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descClmOrdenes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoClmOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.UnaLabel = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -126,6 +127,26 @@
             this.linkCerrarSesion = new System.Windows.Forms.LinkLabel();
             this.cLblTipoServicio = new System.Windows.Forms.Label();
             this.ccbTipoServicio = new System.Windows.Forms.ComboBox();
+            this.buscarTbxVentas = new System.Windows.Forms.TextBox();
+            this.lupaImg = new System.Windows.Forms.PictureBox();
+            this.codClmVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantClVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descrClmVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioUClmVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioTClmVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subTotalLblVenta = new System.Windows.Forms.Label();
+            this.ivaLblVenta = new System.Windows.Forms.Label();
+            this.totalLblVentas = new System.Windows.Forms.Label();
+            this.ordenesTab = new System.Windows.Forms.TabPage();
+            this.subTotalTbxVentas = new System.Windows.Forms.TextBox();
+            this.ivaTbxVentas = new System.Windows.Forms.TextBox();
+            this.totalTbxVenta = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.tableOrdenes = new System.Windows.Forms.DataGridView();
+            this.idClmOrdenes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descClmOrdenes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estadoClmOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tabPuntoVenta.SuspendLayout();
             this.tabVenta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lupaImg)).BeginInit();
@@ -142,6 +163,8 @@
             this.SgbRoles.SuspendLayout();
             this.ordenesTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableOrdenes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -909,6 +932,7 @@
             this.tabConfiguracionesDeUsuario.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tabConfiguracionesDeUsuario.Controls.Add(this.SbtnAgregarUsuario);
             this.tabConfiguracionesDeUsuario.Controls.Add(this.SgbRoles);
+            this.tabConfiguracionesDeUsuario.Controls.Add(this.pictureBox2);
             this.tabConfiguracionesDeUsuario.Location = new System.Drawing.Point(4, 43);
             this.tabConfiguracionesDeUsuario.Name = "tabConfiguracionesDeUsuario";
             this.tabConfiguracionesDeUsuario.Size = new System.Drawing.Size(1328, 669);
@@ -990,6 +1014,13 @@
             this.tableOrdenes.TabIndex = 1;
             // 
             // idClmOrdenes
+            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.pictureBox2.Location = new System.Drawing.Point(6, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(118, 177);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             this.idClmOrdenes.HeaderText = "Id";
             this.idClmOrdenes.Name = "idClmOrdenes";
@@ -1121,7 +1152,11 @@
             this.tabConfiguracionesDeUsuario.ResumeLayout(false);
             this.SgbRoles.ResumeLayout(false);
             this.SgbRoles.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lupaImg)).EndInit();
             this.ordenesTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableOrdenes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
@@ -1233,7 +1268,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idClmOrdenes;
         private System.Windows.Forms.DataGridViewTextBoxColumn descClmOrdenes;
         private System.Windows.Forms.DataGridViewTextBoxColumn estadoClmOrden;
-        //private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.GroupBox SgbRoles;
         private System.Windows.Forms.TextBox StxtRol;
         private System.Windows.Forms.Label SlblNombreRol;
