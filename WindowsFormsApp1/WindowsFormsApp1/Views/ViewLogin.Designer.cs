@@ -34,9 +34,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtContrasena = new System.Windows.Forms.TextBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.SlinklabelRecuperarContrasena = new System.Windows.Forms.LinkLabel();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.SlinklabelNuevoTrabajador = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,16 +90,16 @@
             this.txtContrasena.TabIndex = 8;
             this.txtContrasena.TextChanged += new System.EventHandler(this.txtContrasena_TextChanged);
             // 
-            // linkLabel1
+            // SlinklabelRecuperarContrasena
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(12, 496);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(158, 26);
-            this.linkLabel1.TabIndex = 9;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Recuperar Contraseña";
+            this.SlinklabelRecuperarContrasena.AutoSize = true;
+            this.SlinklabelRecuperarContrasena.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SlinklabelRecuperarContrasena.Location = new System.Drawing.Point(12, 496);
+            this.SlinklabelRecuperarContrasena.Name = "SlinklabelRecuperarContrasena";
+            this.SlinklabelRecuperarContrasena.Size = new System.Drawing.Size(158, 26);
+            this.SlinklabelRecuperarContrasena.TabIndex = 9;
+            this.SlinklabelRecuperarContrasena.TabStop = true;
+            this.SlinklabelRecuperarContrasena.Text = "Recuperar Contraseña";
             // 
             // btnCerrar
             // 
@@ -121,15 +122,28 @@
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
+            // SlinklabelNuevoTrabajador
+            // 
+            this.SlinklabelNuevoTrabajador.AutoSize = true;
+            this.SlinklabelNuevoTrabajador.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SlinklabelNuevoTrabajador.Location = new System.Drawing.Point(176, 496);
+            this.SlinklabelNuevoTrabajador.Name = "SlinklabelNuevoTrabajador";
+            this.SlinklabelNuevoTrabajador.Size = new System.Drawing.Size(128, 26);
+            this.SlinklabelNuevoTrabajador.TabIndex = 12;
+            this.SlinklabelNuevoTrabajador.TabStop = true;
+            this.SlinklabelNuevoTrabajador.Text = "Nuevo Trabajador";
+            this.SlinklabelNuevoTrabajador.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SlinklabelNuevoTrabajador_LinkClicked);
+            // 
             // ViewLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(830, 526);
+            this.Controls.Add(this.SlinklabelNuevoTrabajador);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCerrar);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.SlinklabelRecuperarContrasena);
             this.Controls.Add(this.txtContrasena);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -151,9 +165,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtContrasena;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel SlinklabelRecuperarContrasena;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.LinkLabel SlinklabelNuevoTrabajador;
     }
 }
 

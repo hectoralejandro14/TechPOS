@@ -16,14 +16,12 @@ namespace WindowsFormsApp1.Views
             Jtxtbuscar.MaxLength = 4;
             
         }
-
         private void linkCerrarSesion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Close();
             ViewLogin view = new ViewLogin();
             view.Show();
         }
-
         //------------------------------------------------------------------------------------
         //Tab Recibir Equipo
         private void btnPedirPieza_Click(object sender, System.EventArgs e)
@@ -133,10 +131,6 @@ namespace WindowsFormsApp1.Views
         {
 
         }
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
         //------------------------------------------------------------------------------------
         //Generales
         public void MostrarConfiguracionUsuarios (int IdRol)
@@ -146,11 +140,23 @@ namespace WindowsFormsApp1.Views
                 tabPuntoVenta.TabPages.Add(tabConfiguracionesDeUsuario);
             }
         }
+        private void SbtnGuardarRol_Click(object sender, EventArgs e)
+        {
+            string _rol = StxtRol.Text;
+            Random random = new Random();
+            decimal id_random = random.Next(1, 1000000000);
+            string consulta = "INSERT INTO Rol (Id,NombreRol) VALUES ("+id_random+",'"+_rol+"')";
+            MessageBox.Show(consulta);
+            conexion.AddElements(consulta);
+        }
+        private void SbtnAgregarUsuario_Click(object sender, EventArgs e)
+        {
+            NuevoUsuario nuevoUsuario = new NuevoUsuario();
+            nuevoUsuario.Show();
+        }
 
         /*private void SbtnAgregarRol_Click(object sender, EventArgs e)
         {
-            Random random = new Random();
-            decimal _random = random.Next(1, 1000000000);
             string _Rol = StxtAgregarRol.Text;
             string consulta = "INSERT INTO Rol (Id,NombreRol) VALUES (@Id,@NombreRol)";
             //Abrir conexion
