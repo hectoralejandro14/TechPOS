@@ -12,12 +12,18 @@ namespace WindowsFormsApp1.Views
 {
     public partial class Ecargar_Pieza : Form
     {
-        public Ecargar_Pieza()
+        
+        public Ecargar_Pieza(string id, string modelo, string marca)
         {
             InitializeComponent();
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            equipoTbxEncagar.Text = id;
+            modeloTbxEncargar.Text = modelo;
+            marcaTbxEncargar.Text = marca;
+            
+          
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -42,9 +48,15 @@ namespace WindowsFormsApp1.Views
 
         private void BtnAceptarPieza_Click(object sender, EventArgs e)
         {
+            DBConnectio.Connection conexion = new DBConnectio.Connection();
+            conexion.AbrirConexion();
+            bool si=conexion.AddElements("insert into Pieza values(15,'"+piezasTbxEncargar.Text+"')");
+            conexion.CerrarConexion();
             this.Close();
-            MessageBox.Show("Se encargó pieza correctamente.", "Pieza encargada", MessageBoxButtons.OK);
-            
+            if (si)
+            {
+                MessageBox.Show("Se encargó pieza correctamente.", "Pieza encargada", MessageBoxButtons.OK);
+            }
         }
     }
 }

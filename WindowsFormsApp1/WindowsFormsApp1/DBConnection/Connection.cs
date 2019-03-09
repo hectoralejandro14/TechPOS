@@ -66,17 +66,19 @@ namespace WindowsFormsApp1.DBConnectio
         }
         //-----------------------------------------------------------------------------
         //Agregar general
-        public void AddElements(string SQL)
+        public bool AddElements(string SQL)
         {
             try
             {
                 SqlCommand cmd = new SqlCommand(SQL, conexion);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Rol Agregado con Exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                return true;
             }
             catch
             {
                 MessageBox.Show("Ocurrio un error con la conexión a la Base de Datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
         }
         public SqlDataReader consulta (string SQL)

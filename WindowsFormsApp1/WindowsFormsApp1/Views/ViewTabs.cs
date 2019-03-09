@@ -46,9 +46,17 @@ namespace WindowsFormsApp1.Views
         //Tab Recibir Equipo
         private void btnPedirPieza_Click(object sender, System.EventArgs e)
         {
-            Ecargar_Pieza encargar = new Ecargar_Pieza();
+            if (lblIdEquipo.Text != "0000" || txtModelo.Text != "" || txtMarca.Text != "")
+            {
+                Ecargar_Pieza encargar = new Ecargar_Pieza(lblIdEquipo.Text, txtModelo.Text, txtMarca.Text);
+
+                encargar.Show();
+            }
+            else
+            {
+                MessageBox.Show("Se requiere de una marca y modelo");
+            }
             
-            encargar.Show();
         }
         private void pictureBuscar_Click(object sender, System.EventArgs e)
         {

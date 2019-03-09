@@ -108,7 +108,13 @@
             this.SlblNombreRol = new System.Windows.Forms.Label();
             this.SbtnGuardarRol = new System.Windows.Forms.Button();
             this.ordenesTab = new System.Windows.Forms.TabPage();
+            this.logoOrden = new System.Windows.Forms.PictureBox();
             this.tableOrdenes = new System.Windows.Forms.DataGridView();
+            this.idClmOrdenes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descClmOrdenes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estadoClmOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fIngrClmOrdenes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fLlegaClmOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UnaLabel = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -121,12 +127,8 @@
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idReparacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.linkCerrarSesion = new System.Windows.Forms.LinkLabel();
-            this.logoOrden = new System.Windows.Forms.PictureBox();
-            this.idClmOrdenes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descClmOrdenes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estadoClmOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fIngrClmOrdenes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fLlegaClmOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tiposervicioC = new System.Windows.Forms.Label();
+            this.ccbTipoServicio = new System.Windows.Forms.ComboBox();
             this.tabPuntoVenta.SuspendLayout();
             this.tabVenta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lupaImg)).BeginInit();
@@ -142,9 +144,9 @@
             this.tabConfiguracionesDeUsuario.SuspendLayout();
             this.SgbRoles.SuspendLayout();
             this.ordenesTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoOrden)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableOrdenes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logoOrden)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPuntoVenta
@@ -338,6 +340,8 @@
             // 
             // tabRecibirEquipo
             // 
+            this.tabRecibirEquipo.Controls.Add(this.ccbTipoServicio);
+            this.tabRecibirEquipo.Controls.Add(this.tiposervicioC);
             this.tabRecibirEquipo.Controls.Add(this.pictureBox3);
             this.tabRecibirEquipo.Controls.Add(this.lblAvisoNoCliente);
             this.tabRecibirEquipo.Controls.Add(this.pictureBuscar);
@@ -573,7 +577,7 @@
             // txtDescripcionDeFalla
             // 
             this.txtDescripcionDeFalla.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcionDeFalla.Location = new System.Drawing.Point(276, 345);
+            this.txtDescripcionDeFalla.Location = new System.Drawing.Point(204, 361);
             this.txtDescripcionDeFalla.Multiline = true;
             this.txtDescripcionDeFalla.Name = "txtDescripcionDeFalla";
             this.txtDescripcionDeFalla.Size = new System.Drawing.Size(726, 37);
@@ -582,19 +586,19 @@
             // txtModelo
             // 
             this.txtModelo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModelo.Location = new System.Drawing.Point(276, 295);
+            this.txtModelo.Location = new System.Drawing.Point(684, 248);
             this.txtModelo.Multiline = true;
             this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(726, 29);
+            this.txtModelo.Size = new System.Drawing.Size(409, 29);
             this.txtModelo.TabIndex = 24;
             // 
             // txtMarca
             // 
             this.txtMarca.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMarca.Location = new System.Drawing.Point(276, 246);
+            this.txtMarca.Location = new System.Drawing.Point(204, 248);
             this.txtMarca.Multiline = true;
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(726, 29);
+            this.txtMarca.Size = new System.Drawing.Size(386, 29);
             this.txtMarca.TabIndex = 23;
             // 
             // SlblRecibirEquipo
@@ -623,7 +627,7 @@
             // 
             this.SlblMarca.AutoSize = true;
             this.SlblMarca.ForeColor = System.Drawing.Color.Black;
-            this.SlblMarca.Location = new System.Drawing.Point(59, 253);
+            this.SlblMarca.Location = new System.Drawing.Point(124, 243);
             this.SlblMarca.Name = "SlblMarca";
             this.SlblMarca.Size = new System.Drawing.Size(74, 34);
             this.SlblMarca.TabIndex = 20;
@@ -633,7 +637,7 @@
             // 
             this.SlblModelo.AutoSize = true;
             this.SlblModelo.ForeColor = System.Drawing.Color.Black;
-            this.SlblModelo.Location = new System.Drawing.Point(59, 298);
+            this.SlblModelo.Location = new System.Drawing.Point(596, 246);
             this.SlblModelo.Name = "SlblModelo";
             this.SlblModelo.Size = new System.Drawing.Size(82, 34);
             this.SlblModelo.TabIndex = 19;
@@ -643,7 +647,7 @@
             // 
             this.SlblDescripcionFalla.AutoSize = true;
             this.SlblDescripcionFalla.ForeColor = System.Drawing.Color.Black;
-            this.SlblDescripcionFalla.Location = new System.Drawing.Point(59, 348);
+            this.SlblDescripcionFalla.Location = new System.Drawing.Point(10, 359);
             this.SlblDescripcionFalla.Name = "SlblDescripcionFalla";
             this.SlblDescripcionFalla.Size = new System.Drawing.Size(188, 34);
             this.SlblDescripcionFalla.TabIndex = 18;
@@ -978,6 +982,16 @@
             this.ordenesTab.Text = "Ordenes";
             this.ordenesTab.UseVisualStyleBackColor = true;
             // 
+            // logoOrden
+            // 
+            this.logoOrden.Image = global::WindowsFormsApp1.Properties.Resources.logoUp1;
+            this.logoOrden.Location = new System.Drawing.Point(16, 6);
+            this.logoOrden.Name = "logoOrden";
+            this.logoOrden.Size = new System.Drawing.Size(118, 177);
+            this.logoOrden.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logoOrden.TabIndex = 2;
+            this.logoOrden.TabStop = false;
+            // 
             // tableOrdenes
             // 
             this.tableOrdenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -991,6 +1005,36 @@
             this.tableOrdenes.Name = "tableOrdenes";
             this.tableOrdenes.Size = new System.Drawing.Size(890, 356);
             this.tableOrdenes.TabIndex = 1;
+            // 
+            // idClmOrdenes
+            // 
+            this.idClmOrdenes.HeaderText = "Id";
+            this.idClmOrdenes.Name = "idClmOrdenes";
+            this.idClmOrdenes.Width = 130;
+            // 
+            // descClmOrdenes
+            // 
+            this.descClmOrdenes.HeaderText = "Descripción";
+            this.descClmOrdenes.Name = "descClmOrdenes";
+            this.descClmOrdenes.Width = 230;
+            // 
+            // estadoClmOrden
+            // 
+            this.estadoClmOrden.HeaderText = "Estado";
+            this.estadoClmOrden.Name = "estadoClmOrden";
+            this.estadoClmOrden.Width = 230;
+            // 
+            // fIngrClmOrdenes
+            // 
+            this.fIngrClmOrdenes.HeaderText = "Fecha Enc.";
+            this.fIngrClmOrdenes.Name = "fIngrClmOrdenes";
+            this.fIngrClmOrdenes.Width = 130;
+            // 
+            // fLlegaClmOrden
+            // 
+            this.fLlegaClmOrden.HeaderText = "Fecha Ll.";
+            this.fLlegaClmOrden.Name = "fLlegaClmOrden";
+            this.fLlegaClmOrden.Width = 130;
             // 
             // UnaLabel
             // 
@@ -1058,45 +1102,22 @@
             this.linkCerrarSesion.Text = "Cerrar Sesión";
             this.linkCerrarSesion.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkCerrarSesion_LinkClicked);
             // 
-            // logoOrden
+            // tiposervicioC
             // 
-            this.logoOrden.Image = global::WindowsFormsApp1.Properties.Resources.logoUp1;
-            this.logoOrden.Location = new System.Drawing.Point(16, 6);
-            this.logoOrden.Name = "logoOrden";
-            this.logoOrden.Size = new System.Drawing.Size(118, 177);
-            this.logoOrden.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.logoOrden.TabIndex = 2;
-            this.logoOrden.TabStop = false;
+            this.tiposervicioC.AutoSize = true;
+            this.tiposervicioC.Location = new System.Drawing.Point(53, 302);
+            this.tiposervicioC.Name = "tiposervicioC";
+            this.tiposervicioC.Size = new System.Drawing.Size(145, 34);
+            this.tiposervicioC.TabIndex = 45;
+            this.tiposervicioC.Text = "Tipo de servicio:";
             // 
-            // idClmOrdenes
+            // ccbTipoServicio
             // 
-            this.idClmOrdenes.HeaderText = "Id";
-            this.idClmOrdenes.Name = "idClmOrdenes";
-            this.idClmOrdenes.Width = 130;
-            // 
-            // descClmOrdenes
-            // 
-            this.descClmOrdenes.HeaderText = "Descripción";
-            this.descClmOrdenes.Name = "descClmOrdenes";
-            this.descClmOrdenes.Width = 230;
-            // 
-            // estadoClmOrden
-            // 
-            this.estadoClmOrden.HeaderText = "Estado";
-            this.estadoClmOrden.Name = "estadoClmOrden";
-            this.estadoClmOrden.Width = 230;
-            // 
-            // fIngrClmOrdenes
-            // 
-            this.fIngrClmOrdenes.HeaderText = "Fecha Enc.";
-            this.fIngrClmOrdenes.Name = "fIngrClmOrdenes";
-            this.fIngrClmOrdenes.Width = 130;
-            // 
-            // fLlegaClmOrden
-            // 
-            this.fLlegaClmOrden.HeaderText = "Fecha Ll.";
-            this.fLlegaClmOrden.Name = "fLlegaClmOrden";
-            this.fLlegaClmOrden.Width = 130;
+            this.ccbTipoServicio.FormattingEnabled = true;
+            this.ccbTipoServicio.Location = new System.Drawing.Point(204, 299);
+            this.ccbTipoServicio.Name = "ccbTipoServicio";
+            this.ccbTipoServicio.Size = new System.Drawing.Size(386, 42);
+            this.ccbTipoServicio.TabIndex = 46;
             // 
             // ViewTabs
             // 
@@ -1130,9 +1151,9 @@
             this.SgbRoles.ResumeLayout(false);
             this.SgbRoles.PerformLayout();
             this.ordenesTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.logoOrden)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableOrdenes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logoOrden)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1252,6 +1273,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn estadoClmOrden;
         private System.Windows.Forms.DataGridViewTextBoxColumn fIngrClmOrdenes;
         private System.Windows.Forms.DataGridViewTextBoxColumn fLlegaClmOrden;
+        private System.Windows.Forms.ComboBox ccbTipoServicio;
+        private System.Windows.Forms.Label tiposervicioC;
         //  private System.Windows.Forms.TextBox textBox1;
         //private System.Windows.Forms.Label UnaLabel;
         //  private System.Windows.Forms.Label label5;
