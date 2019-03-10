@@ -96,7 +96,7 @@
             this.cancelarBtnCobrar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
             this.cancelarBtnCobrar.Location = new System.Drawing.Point(128, 262);
             this.cancelarBtnCobrar.Name = "cancelarBtnCobrar";
-            this.cancelarBtnCobrar.Size = new System.Drawing.Size(79, 35);
+            this.cancelarBtnCobrar.Size = new System.Drawing.Size(95, 35);
             this.cancelarBtnCobrar.TabIndex = 5;
             this.cancelarBtnCobrar.Text = "Cancelar";
             this.cancelarBtnCobrar.UseVisualStyleBackColor = false;

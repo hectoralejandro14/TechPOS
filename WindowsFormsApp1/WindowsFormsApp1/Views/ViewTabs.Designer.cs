@@ -32,47 +32,62 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewTabs));
             this.tabPuntoVenta = new System.Windows.Forms.TabControl();
             this.tabVenta = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.totalTbxVenta = new System.Windows.Forms.TextBox();
+            this.ivaTbxVentas = new System.Windows.Forms.TextBox();
+            this.subTotalTbxVentas = new System.Windows.Forms.TextBox();
+            this.totalLblVentas = new System.Windows.Forms.Label();
+            this.ivaLblVenta = new System.Windows.Forms.Label();
+            this.subTotalLblVenta = new System.Windows.Forms.Label();
+            this.lupaImg = new System.Windows.Forms.PictureBox();
+            this.buscarTbxVentas = new System.Windows.Forms.TextBox();
+            this.logoImg = new System.Windows.Forms.PictureBox();
+            this.tableVender = new System.Windows.Forms.DataGridView();
+            this.codClmVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantClVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descrClmVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioUClmVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioTClmVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aceptarBtnVentas = new System.Windows.Forms.Button();
+            this.cancelarBtnVentas = new System.Windows.Forms.Button();
+            this.usuarioLblVenta = new System.Windows.Forms.Label();
             this.tabRecibirEquipo = new System.Windows.Forms.TabPage();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblAvisoNoCliente = new System.Windows.Forms.Label();
             this.pictureBuscar = new System.Windows.Forms.PictureBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.SlblApellido = new System.Windows.Forms.Label();
             this.btnPedirPieza = new System.Windows.Forms.Button();
             this.btnAgregrEquipos = new System.Windows.Forms.Button();
             this.btnLimpiarCampos = new System.Windows.Forms.Button();
             this.comboResponsable = new System.Windows.Forms.ComboBox();
             this.txtAnticipo = new System.Windows.Forms.TextBox();
             this.txtTotal = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
+            this.SlblResponsable = new System.Windows.Forms.Label();
             this.txtDescripcionDiagnosticoEspecifico = new System.Windows.Forms.TextBox();
             this.rbDiagnosticoEspecifico = new System.Windows.Forms.RadioButton();
             this.rbDiagnosticoRapido = new System.Windows.Forms.RadioButton();
             this.txtDescripcionDeFalla = new System.Windows.Forms.TextBox();
             this.txtModelo = new System.Windows.Forms.TextBox();
             this.txtMarca = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.lblId = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.SlblRecibirEquipo = new System.Windows.Forms.Label();
+            this.lblIdEquipo = new System.Windows.Forms.Label();
+            this.SlblMarca = new System.Windows.Forms.Label();
+            this.SlblModelo = new System.Windows.Forms.Label();
+            this.SlblDescripcionFalla = new System.Windows.Forms.Label();
+            this.SlblTipoDeDiagnostico = new System.Windows.Forms.Label();
+            this.SlblTotal = new System.Windows.Forms.Label();
+            this.SlblAnticipo = new System.Windows.Forms.Label();
+            this.SlblDatosEquipo = new System.Windows.Forms.Label();
             this.btnAgregarCliente = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.SlblCorreo = new System.Windows.Forms.Label();
+            this.SlblTelefono = new System.Windows.Forms.Label();
+            this.SlblNombre = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtBuscarCliente = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.SlblBuscarCliente = new System.Windows.Forms.Label();
             this.tabReparacion = new System.Windows.Forms.TabPage();
             this.CEspera = new System.Windows.Forms.RadioButton();
             this.JTerminados = new System.Windows.Forms.RadioButton();
@@ -83,6 +98,19 @@
             this.JPicture = new System.Windows.Forms.PictureBox();
             this.JpictureBox = new System.Windows.Forms.PictureBox();
             this.tabConfiguracionesDeUsuario = new System.Windows.Forms.TabPage();
+            this.SbtnAgregarUsuario = new System.Windows.Forms.Button();
+            this.SgbRoles = new System.Windows.Forms.GroupBox();
+            this.StxtRol = new System.Windows.Forms.TextBox();
+            this.SlblNombreRol = new System.Windows.Forms.Label();
+            this.SbtnGuardarRol = new System.Windows.Forms.Button();
+            this.ordenesTab = new System.Windows.Forms.TabPage();
+            this.logoOrden = new System.Windows.Forms.PictureBox();
+            this.tableOrdenes = new System.Windows.Forms.DataGridView();
+            this.idClmOrdenes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descClmOrdenes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estadoClmOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fIngrClmOrdenes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fLlegaClmOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UnaLabel = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -95,6 +123,8 @@
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idReparacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.linkCerrarSesion = new System.Windows.Forms.LinkLabel();
+            this.tiposervicioC = new System.Windows.Forms.Label();
+            this.ccbTipoServicio = new System.Windows.Forms.ComboBox();
             this.CDGReparacion = new System.Windows.Forms.DataGridView();
             this.techPOSdbDataSet = new WindowsFormsApp1.TechPOSdbDataSet();
             this.techPOSdbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -115,11 +145,20 @@
             this.CHeadPieza = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPuntoVenta.SuspendLayout();
             this.tabVenta.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lupaImg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoImg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableVender)).BeginInit();
             this.tabRecibirEquipo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).BeginInit();
             this.tabReparacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.JPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.JpictureBox)).BeginInit();
+            this.tabConfiguracionesDeUsuario.SuspendLayout();
+            this.SgbRoles.SuspendLayout();
+            this.ordenesTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoOrden)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableOrdenes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CDGReparacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSet)).BeginInit();
@@ -133,6 +172,7 @@
             this.tabPuntoVenta.Controls.Add(this.tabRecibirEquipo);
             this.tabPuntoVenta.Controls.Add(this.tabReparacion);
             this.tabPuntoVenta.Controls.Add(this.tabConfiguracionesDeUsuario);
+            this.tabPuntoVenta.Controls.Add(this.ordenesTab);
             this.tabPuntoVenta.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPuntoVenta.Location = new System.Drawing.Point(2, 0);
             this.tabPuntoVenta.Name = "tabPuntoVenta";
@@ -142,10 +182,19 @@
             // 
             // tabVenta
             // 
-            this.tabVenta.Controls.Add(this.button2);
-            this.tabVenta.Controls.Add(this.button1);
-            this.tabVenta.Controls.Add(this.label3);
-            this.tabVenta.Controls.Add(this.label1);
+            this.tabVenta.Controls.Add(this.totalTbxVenta);
+            this.tabVenta.Controls.Add(this.ivaTbxVentas);
+            this.tabVenta.Controls.Add(this.subTotalTbxVentas);
+            this.tabVenta.Controls.Add(this.totalLblVentas);
+            this.tabVenta.Controls.Add(this.ivaLblVenta);
+            this.tabVenta.Controls.Add(this.subTotalLblVenta);
+            this.tabVenta.Controls.Add(this.lupaImg);
+            this.tabVenta.Controls.Add(this.buscarTbxVentas);
+            this.tabVenta.Controls.Add(this.logoImg);
+            this.tabVenta.Controls.Add(this.tableVender);
+            this.tabVenta.Controls.Add(this.aceptarBtnVentas);
+            this.tabVenta.Controls.Add(this.cancelarBtnVentas);
+            this.tabVenta.Controls.Add(this.usuarioLblVenta);
             this.tabVenta.Location = new System.Drawing.Point(4, 43);
             this.tabVenta.Name = "tabVenta";
             this.tabVenta.Padding = new System.Windows.Forms.Padding(3);
@@ -154,81 +203,199 @@
             this.tabVenta.Text = "Venta";
             this.tabVenta.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // totalTbxVenta
             // 
-            this.button2.Location = new System.Drawing.Point(1221, 626);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(101, 37);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Cobrar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.totalTbxVenta.Location = new System.Drawing.Point(1173, 528);
+            this.totalTbxVenta.Multiline = true;
+            this.totalTbxVenta.Name = "totalTbxVenta";
+            this.totalTbxVenta.Size = new System.Drawing.Size(78, 20);
+            this.totalTbxVenta.TabIndex = 17;
             // 
-            // button1
+            // ivaTbxVentas
             // 
-            this.button1.Location = new System.Drawing.Point(1105, 626);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 37);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ivaTbxVentas.Location = new System.Drawing.Point(1173, 456);
+            this.ivaTbxVentas.Multiline = true;
+            this.ivaTbxVentas.Name = "ivaTbxVentas";
+            this.ivaTbxVentas.Size = new System.Drawing.Size(78, 20);
+            this.ivaTbxVentas.TabIndex = 16;
             // 
-            // label3
+            // subTotalTbxVentas
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 15);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 16);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Todos";
+            this.subTotalTbxVentas.Location = new System.Drawing.Point(1173, 383);
+            this.subTotalTbxVentas.Multiline = true;
+            this.subTotalTbxVentas.Name = "subTotalTbxVentas";
+            this.subTotalTbxVentas.Size = new System.Drawing.Size(78, 21);
+            this.subTotalTbxVentas.TabIndex = 15;
             // 
-            // label1
+            // totalLblVentas
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1149, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 34);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Usuario";
+            this.totalLblVentas.AutoSize = true;
+            this.totalLblVentas.Location = new System.Drawing.Point(1135, 491);
+            this.totalLblVentas.Name = "totalLblVentas";
+            this.totalLblVentas.Size = new System.Drawing.Size(59, 34);
+            this.totalLblVentas.TabIndex = 14;
+            this.totalLblVentas.Text = "Total:";
+            // 
+            // ivaLblVenta
+            // 
+            this.ivaLblVenta.AutoSize = true;
+            this.ivaLblVenta.Location = new System.Drawing.Point(1135, 419);
+            this.ivaLblVenta.Name = "ivaLblVenta";
+            this.ivaLblVenta.Size = new System.Drawing.Size(57, 34);
+            this.ivaLblVenta.TabIndex = 13;
+            this.ivaLblVenta.Text = "I.V.A:";
+            // 
+            // subTotalLblVenta
+            // 
+            this.subTotalLblVenta.AutoSize = true;
+            this.subTotalLblVenta.Location = new System.Drawing.Point(1135, 346);
+            this.subTotalLblVenta.Name = "subTotalLblVenta";
+            this.subTotalLblVenta.Size = new System.Drawing.Size(90, 34);
+            this.subTotalLblVenta.TabIndex = 12;
+            this.subTotalLblVenta.Text = "SubTotal:";
+            // 
+            // lupaImg
+            // 
+            this.lupaImg.Image = global::WindowsFormsApp1.Properties.Resources.lupa;
+            this.lupaImg.Location = new System.Drawing.Point(901, 125);
+            this.lupaImg.Name = "lupaImg";
+            this.lupaImg.Size = new System.Drawing.Size(31, 32);
+            this.lupaImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.lupaImg.TabIndex = 11;
+            this.lupaImg.TabStop = false;
+            // 
+            // buscarTbxVentas
+            // 
+            this.buscarTbxVentas.Location = new System.Drawing.Point(286, 125);
+            this.buscarTbxVentas.Multiline = true;
+            this.buscarTbxVentas.Name = "buscarTbxVentas";
+            this.buscarTbxVentas.Size = new System.Drawing.Size(600, 32);
+            this.buscarTbxVentas.TabIndex = 10;
+            // 
+            // logoImg
+            // 
+            this.logoImg.Image = global::WindowsFormsApp1.Properties.Resources.logoUp1;
+            this.logoImg.Location = new System.Drawing.Point(16, 6);
+            this.logoImg.Name = "logoImg";
+            this.logoImg.Size = new System.Drawing.Size(118, 177);
+            this.logoImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logoImg.TabIndex = 9;
+            this.logoImg.TabStop = false;
+            // 
+            // tableVender
+            // 
+            this.tableVender.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tableVender.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codClmVenta,
+            this.cantClVenta,
+            this.descrClmVenta,
+            this.precioUClmVenta,
+            this.precioTClmVenta});
+            this.tableVender.Location = new System.Drawing.Point(184, 195);
+            this.tableVender.Name = "tableVender";
+            this.tableVender.Size = new System.Drawing.Size(938, 382);
+            this.tableVender.TabIndex = 8;
+            // 
+            // codClmVenta
+            // 
+            this.codClmVenta.HeaderText = "Código";
+            this.codClmVenta.Name = "codClmVenta";
+            this.codClmVenta.Width = 150;
+            // 
+            // cantClVenta
+            // 
+            this.cantClVenta.HeaderText = "Cantidad";
+            this.cantClVenta.Name = "cantClVenta";
+            this.cantClVenta.Width = 150;
+            // 
+            // descrClmVenta
+            // 
+            this.descrClmVenta.HeaderText = "Descripción";
+            this.descrClmVenta.Name = "descrClmVenta";
+            this.descrClmVenta.Width = 250;
+            // 
+            // precioUClmVenta
+            // 
+            this.precioUClmVenta.HeaderText = "Precio U.";
+            this.precioUClmVenta.Name = "precioUClmVenta";
+            this.precioUClmVenta.Width = 150;
+            // 
+            // precioTClmVenta
+            // 
+            this.precioTClmVenta.HeaderText = "Precio T.";
+            this.precioTClmVenta.Name = "precioTClmVenta";
+            this.precioTClmVenta.Width = 200;
+            // 
+            // aceptarBtnVentas
+            // 
+            this.aceptarBtnVentas.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.aceptarBtnVentas.Location = new System.Drawing.Point(1198, 616);
+            this.aceptarBtnVentas.Name = "aceptarBtnVentas";
+            this.aceptarBtnVentas.Size = new System.Drawing.Size(101, 37);
+            this.aceptarBtnVentas.TabIndex = 6;
+            this.aceptarBtnVentas.Text = "Cobrar";
+            this.aceptarBtnVentas.UseVisualStyleBackColor = false;
+            // 
+            // cancelarBtnVentas
+            // 
+            this.cancelarBtnVentas.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cancelarBtnVentas.Location = new System.Drawing.Point(1036, 616);
+            this.cancelarBtnVentas.Name = "cancelarBtnVentas";
+            this.cancelarBtnVentas.Size = new System.Drawing.Size(110, 37);
+            this.cancelarBtnVentas.TabIndex = 2;
+            this.cancelarBtnVentas.Text = "Cancelar";
+            this.cancelarBtnVentas.UseVisualStyleBackColor = false;
+            // 
+            // usuarioLblVenta
+            // 
+            this.usuarioLblVenta.AutoSize = true;
+            this.usuarioLblVenta.Location = new System.Drawing.Point(1149, 6);
+            this.usuarioLblVenta.Name = "usuarioLblVenta";
+            this.usuarioLblVenta.Size = new System.Drawing.Size(76, 34);
+            this.usuarioLblVenta.TabIndex = 4;
+            this.usuarioLblVenta.Text = "Usuario";
             // 
             // tabRecibirEquipo
             // 
+            this.tabRecibirEquipo.Controls.Add(this.ccbTipoServicio);
+            this.tabRecibirEquipo.Controls.Add(this.tiposervicioC);
+            this.tabRecibirEquipo.Controls.Add(this.pictureBox3);
             this.tabRecibirEquipo.Controls.Add(this.lblAvisoNoCliente);
             this.tabRecibirEquipo.Controls.Add(this.pictureBuscar);
             this.tabRecibirEquipo.Controls.Add(this.txtApellido);
             this.tabRecibirEquipo.Controls.Add(this.txtNombre);
             this.tabRecibirEquipo.Controls.Add(this.txtCorreo);
             this.tabRecibirEquipo.Controls.Add(this.txtTelefono);
-            this.tabRecibirEquipo.Controls.Add(this.label14);
+            this.tabRecibirEquipo.Controls.Add(this.SlblApellido);
             this.tabRecibirEquipo.Controls.Add(this.btnPedirPieza);
             this.tabRecibirEquipo.Controls.Add(this.btnAgregrEquipos);
             this.tabRecibirEquipo.Controls.Add(this.btnLimpiarCampos);
             this.tabRecibirEquipo.Controls.Add(this.comboResponsable);
             this.tabRecibirEquipo.Controls.Add(this.txtAnticipo);
             this.tabRecibirEquipo.Controls.Add(this.txtTotal);
-            this.tabRecibirEquipo.Controls.Add(this.label15);
+            this.tabRecibirEquipo.Controls.Add(this.SlblResponsable);
             this.tabRecibirEquipo.Controls.Add(this.txtDescripcionDiagnosticoEspecifico);
             this.tabRecibirEquipo.Controls.Add(this.rbDiagnosticoEspecifico);
             this.tabRecibirEquipo.Controls.Add(this.rbDiagnosticoRapido);
             this.tabRecibirEquipo.Controls.Add(this.txtDescripcionDeFalla);
             this.tabRecibirEquipo.Controls.Add(this.txtModelo);
             this.tabRecibirEquipo.Controls.Add(this.txtMarca);
-            this.tabRecibirEquipo.Controls.Add(this.label22);
-            this.tabRecibirEquipo.Controls.Add(this.lblId);
-            this.tabRecibirEquipo.Controls.Add(this.label20);
-            this.tabRecibirEquipo.Controls.Add(this.label19);
-            this.tabRecibirEquipo.Controls.Add(this.label18);
-            this.tabRecibirEquipo.Controls.Add(this.label17);
-            this.tabRecibirEquipo.Controls.Add(this.label13);
-            this.tabRecibirEquipo.Controls.Add(this.label12);
-            this.tabRecibirEquipo.Controls.Add(this.label11);
+            this.tabRecibirEquipo.Controls.Add(this.SlblRecibirEquipo);
+            this.tabRecibirEquipo.Controls.Add(this.lblIdEquipo);
+            this.tabRecibirEquipo.Controls.Add(this.SlblMarca);
+            this.tabRecibirEquipo.Controls.Add(this.SlblModelo);
+            this.tabRecibirEquipo.Controls.Add(this.SlblDescripcionFalla);
+            this.tabRecibirEquipo.Controls.Add(this.SlblTipoDeDiagnostico);
+            this.tabRecibirEquipo.Controls.Add(this.SlblTotal);
+            this.tabRecibirEquipo.Controls.Add(this.SlblAnticipo);
+            this.tabRecibirEquipo.Controls.Add(this.SlblDatosEquipo);
             this.tabRecibirEquipo.Controls.Add(this.btnAgregarCliente);
-            this.tabRecibirEquipo.Controls.Add(this.label10);
-            this.tabRecibirEquipo.Controls.Add(this.label9);
-            this.tabRecibirEquipo.Controls.Add(this.label8);
+            this.tabRecibirEquipo.Controls.Add(this.SlblCorreo);
+            this.tabRecibirEquipo.Controls.Add(this.SlblTelefono);
+            this.tabRecibirEquipo.Controls.Add(this.SlblNombre);
             this.tabRecibirEquipo.Controls.Add(this.label7);
             this.tabRecibirEquipo.Controls.Add(this.txtBuscarCliente);
-            this.tabRecibirEquipo.Controls.Add(this.label2);
+            this.tabRecibirEquipo.Controls.Add(this.SlblBuscarCliente);
             this.tabRecibirEquipo.Location = new System.Drawing.Point(4, 43);
             this.tabRecibirEquipo.Name = "tabRecibirEquipo";
             this.tabRecibirEquipo.Padding = new System.Windows.Forms.Padding(3);
@@ -236,6 +403,16 @@
             this.tabRecibirEquipo.TabIndex = 1;
             this.tabRecibirEquipo.Text = "Recibir Equipo";
             this.tabRecibirEquipo.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.pictureBox3.Location = new System.Drawing.Point(16, 6);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(118, 167);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 44;
+            this.pictureBox3.TabStop = false;
             // 
             // lblAvisoNoCliente
             // 
@@ -296,16 +473,16 @@
             this.txtTelefono.TabIndex = 38;
             this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
-            // label14
+            // SlblApellido
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(185, 119);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(88, 34);
-            this.label14.TabIndex = 36;
-            this.label14.Text = "Apellido :";
+            this.SlblApellido.AutoSize = true;
+            this.SlblApellido.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SlblApellido.ForeColor = System.Drawing.Color.Black;
+            this.SlblApellido.Location = new System.Drawing.Point(185, 119);
+            this.SlblApellido.Name = "SlblApellido";
+            this.SlblApellido.Size = new System.Drawing.Size(88, 34);
+            this.SlblApellido.TabIndex = 36;
+            this.SlblApellido.Text = "Apellido :";
             // 
             // btnPedirPieza
             // 
@@ -329,6 +506,7 @@
             this.btnAgregrEquipos.TabIndex = 34;
             this.btnAgregrEquipos.Text = "Agregar Equipo";
             this.btnAgregrEquipos.UseVisualStyleBackColor = false;
+            this.btnAgregrEquipos.Click += new System.EventHandler(this.btnAgregrEquipos_Click);
             // 
             // btnLimpiarCampos
             // 
@@ -370,15 +548,15 @@
             this.txtTotal.TabIndex = 30;
             this.txtTotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTotal_KeyPress);
             // 
-            // label15
+            // SlblResponsable
             // 
-            this.label15.AutoSize = true;
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(81, 631);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(133, 34);
-            this.label15.TabIndex = 29;
-            this.label15.Text = "Responsable : ";
+            this.SlblResponsable.AutoSize = true;
+            this.SlblResponsable.ForeColor = System.Drawing.Color.Black;
+            this.SlblResponsable.Location = new System.Drawing.Point(81, 631);
+            this.SlblResponsable.Name = "SlblResponsable";
+            this.SlblResponsable.Size = new System.Drawing.Size(133, 34);
+            this.SlblResponsable.TabIndex = 29;
+            this.SlblResponsable.Text = "Responsable : ";
             // 
             // txtDescripcionDiagnosticoEspecifico
             // 
@@ -416,7 +594,7 @@
             // txtDescripcionDeFalla
             // 
             this.txtDescripcionDeFalla.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcionDeFalla.Location = new System.Drawing.Point(276, 345);
+            this.txtDescripcionDeFalla.Location = new System.Drawing.Point(204, 361);
             this.txtDescripcionDeFalla.Multiline = true;
             this.txtDescripcionDeFalla.Name = "txtDescripcionDeFalla";
             this.txtDescripcionDeFalla.Size = new System.Drawing.Size(726, 37);
@@ -425,113 +603,113 @@
             // txtModelo
             // 
             this.txtModelo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModelo.Location = new System.Drawing.Point(276, 295);
+            this.txtModelo.Location = new System.Drawing.Point(684, 248);
             this.txtModelo.Multiline = true;
             this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(726, 29);
+            this.txtModelo.Size = new System.Drawing.Size(409, 29);
             this.txtModelo.TabIndex = 24;
             // 
             // txtMarca
             // 
             this.txtMarca.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMarca.Location = new System.Drawing.Point(276, 246);
+            this.txtMarca.Location = new System.Drawing.Point(204, 248);
             this.txtMarca.Multiline = true;
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(726, 29);
+            this.txtMarca.Size = new System.Drawing.Size(386, 29);
             this.txtMarca.TabIndex = 23;
             // 
-            // label22
+            // SlblRecibirEquipo
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.Black;
-            this.label22.Location = new System.Drawing.Point(1039, 186);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(132, 34);
-            this.label22.TabIndex = 22;
-            this.label22.Text = "ID de Equipo : ";
+            this.SlblRecibirEquipo.AutoSize = true;
+            this.SlblRecibirEquipo.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SlblRecibirEquipo.ForeColor = System.Drawing.Color.Black;
+            this.SlblRecibirEquipo.Location = new System.Drawing.Point(1039, 186);
+            this.SlblRecibirEquipo.Name = "SlblRecibirEquipo";
+            this.SlblRecibirEquipo.Size = new System.Drawing.Size(132, 34);
+            this.SlblRecibirEquipo.TabIndex = 22;
+            this.SlblRecibirEquipo.Text = "ID de Equipo : ";
             // 
-            // lblId
+            // lblIdEquipo
             // 
-            this.lblId.AutoSize = true;
-            this.lblId.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblId.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblId.Location = new System.Drawing.Point(1167, 186);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(55, 34);
-            this.lblId.TabIndex = 21;
-            this.lblId.Text = "0000";
+            this.lblIdEquipo.AutoSize = true;
+            this.lblIdEquipo.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdEquipo.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lblIdEquipo.Location = new System.Drawing.Point(1167, 186);
+            this.lblIdEquipo.Name = "lblIdEquipo";
+            this.lblIdEquipo.Size = new System.Drawing.Size(55, 34);
+            this.lblIdEquipo.TabIndex = 21;
+            this.lblIdEquipo.Text = "0000";
             // 
-            // label20
+            // SlblMarca
             // 
-            this.label20.AutoSize = true;
-            this.label20.ForeColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(59, 253);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(74, 34);
-            this.label20.TabIndex = 20;
-            this.label20.Text = "Marca :";
+            this.SlblMarca.AutoSize = true;
+            this.SlblMarca.ForeColor = System.Drawing.Color.Black;
+            this.SlblMarca.Location = new System.Drawing.Point(124, 243);
+            this.SlblMarca.Name = "SlblMarca";
+            this.SlblMarca.Size = new System.Drawing.Size(74, 34);
+            this.SlblMarca.TabIndex = 20;
+            this.SlblMarca.Text = "Marca :";
             // 
-            // label19
+            // SlblModelo
             // 
-            this.label19.AutoSize = true;
-            this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(59, 298);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(82, 34);
-            this.label19.TabIndex = 19;
-            this.label19.Text = "Modelo :";
+            this.SlblModelo.AutoSize = true;
+            this.SlblModelo.ForeColor = System.Drawing.Color.Black;
+            this.SlblModelo.Location = new System.Drawing.Point(596, 246);
+            this.SlblModelo.Name = "SlblModelo";
+            this.SlblModelo.Size = new System.Drawing.Size(82, 34);
+            this.SlblModelo.TabIndex = 19;
+            this.SlblModelo.Text = "Modelo :";
             // 
-            // label18
+            // SlblDescripcionFalla
             // 
-            this.label18.AutoSize = true;
-            this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(59, 348);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(188, 34);
-            this.label18.TabIndex = 18;
-            this.label18.Text = "Descripción de Falla :";
+            this.SlblDescripcionFalla.AutoSize = true;
+            this.SlblDescripcionFalla.ForeColor = System.Drawing.Color.Black;
+            this.SlblDescripcionFalla.Location = new System.Drawing.Point(10, 359);
+            this.SlblDescripcionFalla.Name = "SlblDescripcionFalla";
+            this.SlblDescripcionFalla.Size = new System.Drawing.Size(188, 34);
+            this.SlblDescripcionFalla.TabIndex = 18;
+            this.SlblDescripcionFalla.Text = "Descripción de Falla :";
             // 
-            // label17
+            // SlblTipoDeDiagnostico
             // 
-            this.label17.AutoSize = true;
-            this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(59, 408);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(188, 34);
-            this.label17.TabIndex = 17;
-            this.label17.Text = "Tipo de Diagnóstico : ";
+            this.SlblTipoDeDiagnostico.AutoSize = true;
+            this.SlblTipoDeDiagnostico.ForeColor = System.Drawing.Color.Black;
+            this.SlblTipoDeDiagnostico.Location = new System.Drawing.Point(59, 408);
+            this.SlblTipoDeDiagnostico.Name = "SlblTipoDeDiagnostico";
+            this.SlblTipoDeDiagnostico.Size = new System.Drawing.Size(188, 34);
+            this.SlblTipoDeDiagnostico.TabIndex = 17;
+            this.SlblTipoDeDiagnostico.Text = "Tipo de Diagnóstico : ";
             // 
-            // label13
+            // SlblTotal
             // 
-            this.label13.AutoSize = true;
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(81, 542);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(69, 34);
-            this.label13.TabIndex = 13;
-            this.label13.Text = "Total : ";
+            this.SlblTotal.AutoSize = true;
+            this.SlblTotal.ForeColor = System.Drawing.Color.Black;
+            this.SlblTotal.Location = new System.Drawing.Point(81, 542);
+            this.SlblTotal.Name = "SlblTotal";
+            this.SlblTotal.Size = new System.Drawing.Size(69, 34);
+            this.SlblTotal.TabIndex = 13;
+            this.SlblTotal.Text = "Total : ";
             // 
-            // label12
+            // SlblAnticipo
             // 
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(81, 585);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(94, 34);
-            this.label12.TabIndex = 12;
-            this.label12.Text = "Anticipo : ";
+            this.SlblAnticipo.AutoSize = true;
+            this.SlblAnticipo.ForeColor = System.Drawing.Color.Black;
+            this.SlblAnticipo.Location = new System.Drawing.Point(81, 585);
+            this.SlblAnticipo.Name = "SlblAnticipo";
+            this.SlblAnticipo.Size = new System.Drawing.Size(94, 34);
+            this.SlblAnticipo.TabIndex = 12;
+            this.SlblAnticipo.Text = "Anticipo : ";
             // 
-            // label11
+            // SlblDatosEquipo
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(1, 186);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(165, 29);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "Datos de Equipo";
+            this.SlblDatosEquipo.AutoSize = true;
+            this.SlblDatosEquipo.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SlblDatosEquipo.ForeColor = System.Drawing.Color.Black;
+            this.SlblDatosEquipo.Location = new System.Drawing.Point(1, 186);
+            this.SlblDatosEquipo.Name = "SlblDatosEquipo";
+            this.SlblDatosEquipo.Size = new System.Drawing.Size(165, 29);
+            this.SlblDatosEquipo.TabIndex = 11;
+            this.SlblDatosEquipo.Text = "Datos de Equipo";
             // 
             // btnAgregarCliente
             // 
@@ -546,37 +724,36 @@
             this.btnAgregarCliente.Visible = false;
             this.btnAgregarCliente.Click += new System.EventHandler(this.btnAgregarCliente_Click);
             // 
-            // label10
+            // SlblCorreo
             // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(617, 119);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(84, 34);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "Correo : ";
+            this.SlblCorreo.AutoSize = true;
+            this.SlblCorreo.ForeColor = System.Drawing.Color.Black;
+            this.SlblCorreo.Location = new System.Drawing.Point(617, 119);
+            this.SlblCorreo.Name = "SlblCorreo";
+            this.SlblCorreo.Size = new System.Drawing.Size(84, 34);
+            this.SlblCorreo.TabIndex = 6;
+            this.SlblCorreo.Text = "Correo : ";
             // 
-            // label9
+            // SlblTelefono
             // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(607, 61);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 34);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "Teléfono :";
+            this.SlblTelefono.AutoSize = true;
+            this.SlblTelefono.ForeColor = System.Drawing.Color.Black;
+            this.SlblTelefono.Location = new System.Drawing.Point(607, 61);
+            this.SlblTelefono.Name = "SlblTelefono";
+            this.SlblTelefono.Size = new System.Drawing.Size(94, 34);
+            this.SlblTelefono.TabIndex = 5;
+            this.SlblTelefono.Text = "Teléfono :";
             // 
-            // label8
+            // SlblNombre
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(185, 61);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(87, 34);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Nombre :";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+            this.SlblNombre.AutoSize = true;
+            this.SlblNombre.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SlblNombre.ForeColor = System.Drawing.Color.Black;
+            this.SlblNombre.Location = new System.Drawing.Point(185, 61);
+            this.SlblNombre.Name = "SlblNombre";
+            this.SlblNombre.Size = new System.Drawing.Size(87, 34);
+            this.SlblNombre.TabIndex = 4;
+            this.SlblNombre.Text = "Nombre :";
             // 
             // label7
             // 
@@ -597,14 +774,14 @@
             this.txtBuscarCliente.Size = new System.Drawing.Size(359, 29);
             this.txtBuscarCliente.TabIndex = 2;
             // 
-            // label2
+            // SlblBuscarCliente
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(357, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 34);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Buscar Cliente";
+            this.SlblBuscarCliente.AutoSize = true;
+            this.SlblBuscarCliente.Location = new System.Drawing.Point(357, 22);
+            this.SlblBuscarCliente.Name = "SlblBuscarCliente";
+            this.SlblBuscarCliente.Size = new System.Drawing.Size(131, 34);
+            this.SlblBuscarCliente.TabIndex = 1;
+            this.SlblBuscarCliente.Text = "Buscar Cliente";
             // 
             // tabReparacion
             // 
@@ -706,7 +883,7 @@
             // JpictureBox
             // 
             this.JpictureBox.Image = global::WindowsFormsApp1.Properties.Resources.logoUp1;
-            this.JpictureBox.Location = new System.Drawing.Point(0, 0);
+            this.JpictureBox.Location = new System.Drawing.Point(6, 3);
             this.JpictureBox.Name = "JpictureBox";
             this.JpictureBox.Size = new System.Drawing.Size(118, 177);
             this.JpictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -717,11 +894,130 @@
             // tabConfiguracionesDeUsuario
             // 
             this.tabConfiguracionesDeUsuario.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tabConfiguracionesDeUsuario.Controls.Add(this.SbtnAgregarUsuario);
+            this.tabConfiguracionesDeUsuario.Controls.Add(this.SgbRoles);
             this.tabConfiguracionesDeUsuario.Location = new System.Drawing.Point(4, 43);
             this.tabConfiguracionesDeUsuario.Name = "tabConfiguracionesDeUsuario";
             this.tabConfiguracionesDeUsuario.Size = new System.Drawing.Size(1328, 669);
             this.tabConfiguracionesDeUsuario.TabIndex = 3;
             this.tabConfiguracionesDeUsuario.Text = "Configuraciones de Usuario";
+            // 
+            // SbtnAgregarUsuario
+            // 
+            this.SbtnAgregarUsuario.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.SbtnAgregarUsuario.Location = new System.Drawing.Point(1048, 3);
+            this.SbtnAgregarUsuario.Name = "SbtnAgregarUsuario";
+            this.SbtnAgregarUsuario.Size = new System.Drawing.Size(277, 40);
+            this.SbtnAgregarUsuario.TabIndex = 2;
+            this.SbtnAgregarUsuario.Text = "Agregar nuevo Trabajador";
+            this.SbtnAgregarUsuario.UseVisualStyleBackColor = false;
+            this.SbtnAgregarUsuario.Click += new System.EventHandler(this.SbtnAgregarUsuario_Click);
+            // 
+            // SgbRoles
+            // 
+            this.SgbRoles.Controls.Add(this.StxtRol);
+            this.SgbRoles.Controls.Add(this.SlblNombreRol);
+            this.SgbRoles.Controls.Add(this.SbtnGuardarRol);
+            this.SgbRoles.Location = new System.Drawing.Point(130, 15);
+            this.SgbRoles.Name = "SgbRoles";
+            this.SgbRoles.Size = new System.Drawing.Size(580, 165);
+            this.SgbRoles.TabIndex = 1;
+            this.SgbRoles.TabStop = false;
+            this.SgbRoles.Text = "Roles";
+            // 
+            // StxtRol
+            // 
+            this.StxtRol.Location = new System.Drawing.Point(52, 34);
+            this.StxtRol.Multiline = true;
+            this.StxtRol.Name = "StxtRol";
+            this.StxtRol.Size = new System.Drawing.Size(283, 41);
+            this.StxtRol.TabIndex = 2;
+            // 
+            // SlblNombreRol
+            // 
+            this.SlblNombreRol.AutoSize = true;
+            this.SlblNombreRol.Location = new System.Drawing.Point(6, 37);
+            this.SlblNombreRol.Name = "SlblNombreRol";
+            this.SlblNombreRol.Size = new System.Drawing.Size(40, 34);
+            this.SlblNombreRol.TabIndex = 1;
+            this.SlblNombreRol.Text = "Rol";
+            // 
+            // SbtnGuardarRol
+            // 
+            this.SbtnGuardarRol.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.SbtnGuardarRol.Location = new System.Drawing.Point(341, 34);
+            this.SbtnGuardarRol.Name = "SbtnGuardarRol";
+            this.SbtnGuardarRol.Size = new System.Drawing.Size(97, 41);
+            this.SbtnGuardarRol.TabIndex = 0;
+            this.SbtnGuardarRol.Text = "Agregar";
+            this.SbtnGuardarRol.UseVisualStyleBackColor = false;
+            this.SbtnGuardarRol.Click += new System.EventHandler(this.SbtnGuardarRol_Click);
+            // 
+            // ordenesTab
+            // 
+            this.ordenesTab.Controls.Add(this.logoOrden);
+            this.ordenesTab.Controls.Add(this.tableOrdenes);
+            this.ordenesTab.Location = new System.Drawing.Point(4, 43);
+            this.ordenesTab.Name = "ordenesTab";
+            this.ordenesTab.Padding = new System.Windows.Forms.Padding(3);
+            this.ordenesTab.Size = new System.Drawing.Size(1328, 669);
+            this.ordenesTab.TabIndex = 4;
+            this.ordenesTab.Text = "Ordenes";
+            this.ordenesTab.UseVisualStyleBackColor = true;
+            // 
+            // logoOrden
+            // 
+            this.logoOrden.Image = global::WindowsFormsApp1.Properties.Resources.logoUp1;
+            this.logoOrden.Location = new System.Drawing.Point(16, 6);
+            this.logoOrden.Name = "logoOrden";
+            this.logoOrden.Size = new System.Drawing.Size(118, 177);
+            this.logoOrden.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logoOrden.TabIndex = 2;
+            this.logoOrden.TabStop = false;
+            // 
+            // tableOrdenes
+            // 
+            this.tableOrdenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tableOrdenes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idClmOrdenes,
+            this.descClmOrdenes,
+            this.estadoClmOrden,
+            this.fIngrClmOrdenes,
+            this.fLlegaClmOrden});
+            this.tableOrdenes.Location = new System.Drawing.Point(266, 147);
+            this.tableOrdenes.Name = "tableOrdenes";
+            this.tableOrdenes.Size = new System.Drawing.Size(890, 356);
+            this.tableOrdenes.TabIndex = 1;
+            // 
+            // idClmOrdenes
+            // 
+            this.idClmOrdenes.HeaderText = "Id";
+            this.idClmOrdenes.Name = "idClmOrdenes";
+            this.idClmOrdenes.Width = 130;
+            // 
+            // descClmOrdenes
+            // 
+            this.descClmOrdenes.HeaderText = "Descripción";
+            this.descClmOrdenes.Name = "descClmOrdenes";
+            this.descClmOrdenes.Width = 230;
+            // 
+            // estadoClmOrden
+            // 
+            this.estadoClmOrden.HeaderText = "Estado";
+            this.estadoClmOrden.Name = "estadoClmOrden";
+            this.estadoClmOrden.Width = 230;
+            // 
+            // fIngrClmOrdenes
+            // 
+            this.fIngrClmOrdenes.HeaderText = "Fecha Enc.";
+            this.fIngrClmOrdenes.Name = "fIngrClmOrdenes";
+            this.fIngrClmOrdenes.Width = 130;
+            // 
+            // fLlegaClmOrden
+            // 
+            this.fLlegaClmOrden.HeaderText = "Fecha Ll.";
+            this.fLlegaClmOrden.Name = "fLlegaClmOrden";
+            this.fLlegaClmOrden.Width = 130;
             // 
             // UnaLabel
             // 
@@ -928,6 +1224,23 @@
             this.CHeadPieza.Name = "CHeadPieza";
             this.CHeadPieza.ReadOnly = true;
             // 
+            // tiposervicioC
+            // 
+            this.tiposervicioC.AutoSize = true;
+            this.tiposervicioC.Location = new System.Drawing.Point(53, 302);
+            this.tiposervicioC.Name = "tiposervicioC";
+            this.tiposervicioC.Size = new System.Drawing.Size(145, 34);
+            this.tiposervicioC.TabIndex = 45;
+            this.tiposervicioC.Text = "Tipo de servicio:";
+            // 
+            // ccbTipoServicio
+            // 
+            this.ccbTipoServicio.FormattingEnabled = true;
+            this.ccbTipoServicio.Location = new System.Drawing.Point(204, 299);
+            this.ccbTipoServicio.Name = "ccbTipoServicio";
+            this.ccbTipoServicio.Size = new System.Drawing.Size(386, 42);
+            this.ccbTipoServicio.TabIndex = 46;
+            // 
             // ViewTabs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -945,13 +1258,23 @@
             this.tabPuntoVenta.ResumeLayout(false);
             this.tabVenta.ResumeLayout(false);
             this.tabVenta.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lupaImg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoImg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableVender)).EndInit();
             this.tabRecibirEquipo.ResumeLayout(false);
             this.tabRecibirEquipo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).EndInit();
             this.tabReparacion.ResumeLayout(false);
             this.tabReparacion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.JPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.JpictureBox)).EndInit();
+            this.tabConfiguracionesDeUsuario.ResumeLayout(false);
+            this.SgbRoles.ResumeLayout(false);
+            this.SgbRoles.PerformLayout();
+            this.ordenesTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.logoOrden)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableOrdenes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CDGReparacion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSet)).EndInit();
@@ -994,43 +1317,42 @@
         private System.Windows.Forms.LinkLabel linkCerrarSesion;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtBuscarCliente;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label SlblBuscarCliente;
         private System.Windows.Forms.Button btnAgregarCliente;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label SlblCorreo;
+        private System.Windows.Forms.Label SlblTelefono;
+        private System.Windows.Forms.Label SlblNombre;
         private System.Windows.Forms.Button btnPedirPieza;
         private System.Windows.Forms.Button btnAgregrEquipos;
         private System.Windows.Forms.Button btnLimpiarCampos;
         private System.Windows.Forms.ComboBox comboResponsable;
         private System.Windows.Forms.TextBox txtAnticipo;
         private System.Windows.Forms.TextBox txtTotal;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label SlblResponsable;
         private System.Windows.Forms.TextBox txtDescripcionDiagnosticoEspecifico;
         private System.Windows.Forms.RadioButton rbDiagnosticoEspecifico;
         private System.Windows.Forms.RadioButton rbDiagnosticoRapido;
         private System.Windows.Forms.TextBox txtDescripcionDeFalla;
         private System.Windows.Forms.TextBox txtModelo;
         private System.Windows.Forms.TextBox txtMarca;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label lblId;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label SlblRecibirEquipo;
+        private System.Windows.Forms.Label lblIdEquipo;
+        private System.Windows.Forms.Label SlblMarca;
+        private System.Windows.Forms.Label SlblModelo;
+        private System.Windows.Forms.Label SlblDescripcionFalla;
+        private System.Windows.Forms.Label SlblTipoDeDiagnostico;
+        private System.Windows.Forms.Label SlblTotal;
+        private System.Windows.Forms.Label SlblAnticipo;
+        private System.Windows.Forms.Label SlblDatosEquipo;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.TextBox txtTelefono;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label SlblApellido;
        // private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button aceptarBtnVentas;
+        private System.Windows.Forms.Button cancelarBtnVentas;
+        private System.Windows.Forms.Label usuarioLblVenta;
         private System.Windows.Forms.PictureBox JpictureBox;
         private System.Windows.Forms.PictureBox JPicture;
         private System.Windows.Forms.TextBox Jtxtbuscar;
@@ -1040,6 +1362,39 @@
         private System.Windows.Forms.RadioButton JradioTodos;
         private System.Windows.Forms.Label lblAvisoNoCliente;
         private System.Windows.Forms.PictureBox pictureBuscar;
+        private System.Windows.Forms.PictureBox logoImg;
+        private System.Windows.Forms.DataGridView tableVender;
+        private System.Windows.Forms.Label totalLblVentas;
+        private System.Windows.Forms.Label ivaLblVenta;
+        private System.Windows.Forms.Label subTotalLblVenta;
+        private System.Windows.Forms.PictureBox lupaImg;
+        private System.Windows.Forms.TextBox buscarTbxVentas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codClmVenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantClVenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descrClmVenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioUClmVenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioTClmVenta;
+        private System.Windows.Forms.TabPage ordenesTab;
+        private System.Windows.Forms.TextBox totalTbxVenta;
+        private System.Windows.Forms.TextBox ivaTbxVentas;
+        private System.Windows.Forms.TextBox subTotalTbxVentas;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.DataGridView tableOrdenes;
+       // private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.GroupBox SgbRoles;
+        private System.Windows.Forms.TextBox StxtRol;
+        private System.Windows.Forms.Label SlblNombreRol;
+        private System.Windows.Forms.Button SbtnGuardarRol;
+        private System.Windows.Forms.Button SbtnAgregarUsuario;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox logoOrden;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idClmOrdenes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descClmOrdenes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estadoClmOrden;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fIngrClmOrdenes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fLlegaClmOrden;
+        private System.Windows.Forms.ComboBox ccbTipoServicio;
+        private System.Windows.Forms.Label tiposervicioC;
         private System.Windows.Forms.RadioButton CEspera;
         private System.Windows.Forms.DataGridView CDGReparacion;
         private System.Windows.Forms.BindingSource techPOSdbDataSetBindingSource;

@@ -79,8 +79,6 @@ namespace WindowsFormsApp1
             // Return the hexadecimal string.
             return sBuilder.ToString();
         }
-
-        // Verify a hash against a string.
         static bool VerifyMd5Hash(MD5 md5Hash, string input, string hash)
         {
             // Hash the input.
@@ -114,6 +112,12 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Usted esta excediendo la dimension de caracteres",
                     "Erro de dimensiones", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+        private void SlinklabelNuevoTrabajador_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            NuevoUsuario nuevoUsuario = new NuevoUsuario();
+            this.Hide();
+            nuevoUsuario.Show();
         }
     }
 }
