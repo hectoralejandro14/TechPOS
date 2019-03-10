@@ -150,10 +150,8 @@ namespace WindowsFormsApp1.Views
 
         private void ViewTabs_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'techPOSdbDataSet5.Reparacion' table. You can move, or remove it, as needed.
-            this.reparacionTableAdapter.Fill(this.techPOSdbDataSet5.Reparacion);
-            // TODO: This line of code loads data into the 'techPOSdbDataSet5.Reparacion' table. You can move, or remove it, as needed.
-            this.reparacionTableAdapter.Fill(this.techPOSdbDataSet5.Reparacion);
+            // TODO: This line of code loads data into the 'techPOSdbDataSet.Reparacion' table. You can move, or remove it, as needed.
+            this.reparacionTableAdapter.Fill(this.techPOSdbDataSet.Reparacion);
         }
 
         //Carlos
@@ -168,12 +166,13 @@ namespace WindowsFormsApp1.Views
                 JradioTodos.Checked = false;
                 JTerminados.Checked = false;
                 JProceso.Checked = false;
+                CEspera.Checked = false;
                 Connection connection = new Connection();
                 connection.AbrirConexion();
                 int codigo = Convert.ToInt32(Jtxtbuscar.Text);
-                DGReparacion.DataSource = connection.buscarReparacion("SELECT * FROM Reparacion WHERE Id ='"+ codigo +"'");
+                CDGReparacion.DataSource = connection.buscarReparacion("SELECT * FROM Reparacion WHERE Id ='"+ codigo +"'");
                 connection.CerrarConexion();
-
+                Jtxtbuscar.Text = "";
             }
             //Carlos
 
@@ -213,7 +212,7 @@ namespace WindowsFormsApp1.Views
             Jtxtbuscar.Text = "";
             Connection connection = new Connection();
             connection.AbrirConexion();
-            DGReparacion.DataSource = connection.buscarReparacion("SELECT * FROM Reparacion");
+            CDGReparacion.DataSource = connection.buscarReparacion("SELECT * FROM Reparacion");
             connection.CerrarConexion();
         }
 
@@ -222,7 +221,7 @@ namespace WindowsFormsApp1.Views
             Jtxtbuscar.Text = "";
             Connection connection = new Connection();
             connection.AbrirConexion();
-            DGReparacion.DataSource = connection.buscarReparacion("SELECT * FROM Reparacion WHERE IdEstado = '" + 7 + "'");
+            CDGReparacion.DataSource = connection.buscarReparacion("SELECT * FROM Reparacion WHERE IdEstado = '" + 7 + "'");
             connection.CerrarConexion();
         }
 
@@ -231,7 +230,7 @@ namespace WindowsFormsApp1.Views
             Jtxtbuscar.Text = "";
             Connection connection = new Connection();
             connection.AbrirConexion();
-            DGReparacion.DataSource = connection.buscarReparacion("SELECT * FROM Reparacion WHERE IdEstado = '" + 6 + "'");
+            CDGReparacion.DataSource = connection.buscarReparacion("SELECT * FROM Reparacion WHERE IdEstado = '" + 6 + "'");
             connection.CerrarConexion();
         }
 
@@ -240,7 +239,7 @@ namespace WindowsFormsApp1.Views
             Jtxtbuscar.Text = "";
             Connection connection = new Connection();
             connection.AbrirConexion();
-            DGReparacion.DataSource = connection.buscarReparacion("SELECT * FROM Reparacion WHERE IdEstado = '" + 3 + "'");
+            CDGReparacion.DataSource = connection.buscarReparacion("SELECT * FROM Reparacion WHERE IdEstado = '" + 3 + "'");
             connection.CerrarConexion();
         }
     }

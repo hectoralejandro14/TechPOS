@@ -75,22 +75,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabReparacion = new System.Windows.Forms.TabPage();
             this.CEspera = new System.Windows.Forms.RadioButton();
-            this.DGReparacion = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.modeloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fallaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diagnosticoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idServicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.anticipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idEstadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costoTotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idPiezaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reparacionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.techPOSdbDataSet5 = new WindowsFormsApp1.TechPOSdbDataSet5();
             this.JTerminados = new System.Windows.Forms.RadioButton();
             this.JProceso = new System.Windows.Forms.RadioButton();
             this.JradioTodos = new System.Windows.Forms.RadioButton();
@@ -111,18 +95,36 @@
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idReparacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.linkCerrarSesion = new System.Windows.Forms.LinkLabel();
-            this.reparacionTableAdapter = new WindowsFormsApp1.TechPOSdbDataSet5TableAdapters.ReparacionTableAdapter();
+            this.CDGReparacion = new System.Windows.Forms.DataGridView();
+            this.techPOSdbDataSet = new WindowsFormsApp1.TechPOSdbDataSet();
+            this.techPOSdbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reparacionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reparacionTableAdapter = new WindowsFormsApp1.TechPOSdbDataSetTableAdapters.ReparacionTableAdapter();
+            this.CHeadId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CHeadMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CHeadModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CHeadFalla = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CHeadDiag = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CHeadServicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CHeadAnt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CHeadEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CHeadFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CHeadCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CHeadUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CHeadCostoT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CHeadPieza = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPuntoVenta.SuspendLayout();
             this.tabVenta.SuspendLayout();
             this.tabRecibirEquipo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).BeginInit();
             this.tabReparacion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGReparacion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reparacionBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.JPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.JpictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CDGReparacion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reparacionBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPuntoVenta
@@ -606,8 +608,8 @@
             // 
             // tabReparacion
             // 
+            this.tabReparacion.Controls.Add(this.CDGReparacion);
             this.tabReparacion.Controls.Add(this.CEspera);
-            this.tabReparacion.Controls.Add(this.DGReparacion);
             this.tabReparacion.Controls.Add(this.JTerminados);
             this.tabReparacion.Controls.Add(this.JProceso);
             this.tabReparacion.Controls.Add(this.JradioTodos);
@@ -635,137 +637,6 @@
             this.CEspera.Text = "En Espera";
             this.CEspera.UseVisualStyleBackColor = true;
             this.CEspera.CheckedChanged += new System.EventHandler(this.CEspera_CheckedChanged);
-            // 
-            // DGReparacion
-            // 
-            this.DGReparacion.AllowUserToAddRows = false;
-            this.DGReparacion.AllowUserToDeleteRows = false;
-            this.DGReparacion.AutoGenerateColumns = false;
-            this.DGReparacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGReparacion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.marcaDataGridViewTextBoxColumn,
-            this.modeloDataGridViewTextBoxColumn,
-            this.fallaDataGridViewTextBoxColumn,
-            this.diagnosticoDataGridViewTextBoxColumn,
-            this.idServicioDataGridViewTextBoxColumn,
-            this.anticipoDataGridViewTextBoxColumn,
-            this.idEstadoDataGridViewTextBoxColumn,
-            this.fechaDataGridViewTextBoxColumn,
-            this.idClienteDataGridViewTextBoxColumn,
-            this.idUsuarioDataGridViewTextBoxColumn,
-            this.costoTotalDataGridViewTextBoxColumn,
-            this.idPiezaDataGridViewTextBoxColumn});
-            this.DGReparacion.DataSource = this.reparacionBindingSource;
-            this.DGReparacion.Location = new System.Drawing.Point(3, 240);
-            this.DGReparacion.Name = "DGReparacion";
-            this.DGReparacion.ReadOnly = true;
-            this.DGReparacion.RowHeadersVisible = false;
-            this.DGReparacion.Size = new System.Drawing.Size(1322, 423);
-            this.DGReparacion.TabIndex = 7;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // marcaDataGridViewTextBoxColumn
-            // 
-            this.marcaDataGridViewTextBoxColumn.DataPropertyName = "Marca";
-            this.marcaDataGridViewTextBoxColumn.HeaderText = "Marca";
-            this.marcaDataGridViewTextBoxColumn.Name = "marcaDataGridViewTextBoxColumn";
-            this.marcaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // modeloDataGridViewTextBoxColumn
-            // 
-            this.modeloDataGridViewTextBoxColumn.DataPropertyName = "Modelo";
-            this.modeloDataGridViewTextBoxColumn.HeaderText = "Modelo";
-            this.modeloDataGridViewTextBoxColumn.Name = "modeloDataGridViewTextBoxColumn";
-            this.modeloDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fallaDataGridViewTextBoxColumn
-            // 
-            this.fallaDataGridViewTextBoxColumn.DataPropertyName = "Falla";
-            this.fallaDataGridViewTextBoxColumn.HeaderText = "Falla";
-            this.fallaDataGridViewTextBoxColumn.Name = "fallaDataGridViewTextBoxColumn";
-            this.fallaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // diagnosticoDataGridViewTextBoxColumn
-            // 
-            this.diagnosticoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.diagnosticoDataGridViewTextBoxColumn.DataPropertyName = "Diagnostico";
-            this.diagnosticoDataGridViewTextBoxColumn.HeaderText = "Diagnostico";
-            this.diagnosticoDataGridViewTextBoxColumn.Name = "diagnosticoDataGridViewTextBoxColumn";
-            this.diagnosticoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idServicioDataGridViewTextBoxColumn
-            // 
-            this.idServicioDataGridViewTextBoxColumn.DataPropertyName = "IdServicio";
-            this.idServicioDataGridViewTextBoxColumn.HeaderText = "IdServicio";
-            this.idServicioDataGridViewTextBoxColumn.Name = "idServicioDataGridViewTextBoxColumn";
-            this.idServicioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // anticipoDataGridViewTextBoxColumn
-            // 
-            this.anticipoDataGridViewTextBoxColumn.DataPropertyName = "Anticipo";
-            this.anticipoDataGridViewTextBoxColumn.HeaderText = "Anticipo";
-            this.anticipoDataGridViewTextBoxColumn.Name = "anticipoDataGridViewTextBoxColumn";
-            this.anticipoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idEstadoDataGridViewTextBoxColumn
-            // 
-            this.idEstadoDataGridViewTextBoxColumn.DataPropertyName = "IdEstado";
-            this.idEstadoDataGridViewTextBoxColumn.HeaderText = "IdEstado";
-            this.idEstadoDataGridViewTextBoxColumn.Name = "idEstadoDataGridViewTextBoxColumn";
-            this.idEstadoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fechaDataGridViewTextBoxColumn
-            // 
-            this.fechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha";
-            this.fechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
-            this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
-            this.fechaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idClienteDataGridViewTextBoxColumn
-            // 
-            this.idClienteDataGridViewTextBoxColumn.DataPropertyName = "IdCliente";
-            this.idClienteDataGridViewTextBoxColumn.HeaderText = "IdCliente";
-            this.idClienteDataGridViewTextBoxColumn.Name = "idClienteDataGridViewTextBoxColumn";
-            this.idClienteDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idUsuarioDataGridViewTextBoxColumn
-            // 
-            this.idUsuarioDataGridViewTextBoxColumn.DataPropertyName = "IdUsuario";
-            this.idUsuarioDataGridViewTextBoxColumn.HeaderText = "IdUsuario";
-            this.idUsuarioDataGridViewTextBoxColumn.Name = "idUsuarioDataGridViewTextBoxColumn";
-            this.idUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // costoTotalDataGridViewTextBoxColumn
-            // 
-            this.costoTotalDataGridViewTextBoxColumn.DataPropertyName = "CostoTotal";
-            this.costoTotalDataGridViewTextBoxColumn.HeaderText = "CostoTotal";
-            this.costoTotalDataGridViewTextBoxColumn.Name = "costoTotalDataGridViewTextBoxColumn";
-            this.costoTotalDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idPiezaDataGridViewTextBoxColumn
-            // 
-            this.idPiezaDataGridViewTextBoxColumn.DataPropertyName = "IdPieza";
-            this.idPiezaDataGridViewTextBoxColumn.HeaderText = "IdPieza";
-            this.idPiezaDataGridViewTextBoxColumn.Name = "idPiezaDataGridViewTextBoxColumn";
-            this.idPiezaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // reparacionBindingSource
-            // 
-            this.reparacionBindingSource.DataMember = "Reparacion";
-            this.reparacionBindingSource.DataSource = this.techPOSdbDataSet5;
-            // 
-            // techPOSdbDataSet5
-            // 
-            this.techPOSdbDataSet5.DataSetName = "TechPOSdbDataSet5";
-            this.techPOSdbDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // JTerminados
             // 
@@ -918,9 +789,144 @@
             this.linkCerrarSesion.Text = "Cerrar Sesión";
             this.linkCerrarSesion.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkCerrarSesion_LinkClicked);
             // 
+            // CDGReparacion
+            // 
+            this.CDGReparacion.AllowUserToAddRows = false;
+            this.CDGReparacion.AllowUserToDeleteRows = false;
+            this.CDGReparacion.AutoGenerateColumns = false;
+            this.CDGReparacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CDGReparacion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CHeadId,
+            this.CHeadMarca,
+            this.CHeadModelo,
+            this.CHeadFalla,
+            this.CHeadDiag,
+            this.CHeadServicio,
+            this.CHeadAnt,
+            this.CHeadEstado,
+            this.CHeadFecha,
+            this.CHeadCliente,
+            this.CHeadUsuario,
+            this.CHeadCostoT,
+            this.CHeadPieza});
+            this.CDGReparacion.DataSource = this.reparacionBindingSource;
+            this.CDGReparacion.Location = new System.Drawing.Point(3, 241);
+            this.CDGReparacion.Name = "CDGReparacion";
+            this.CDGReparacion.ReadOnly = true;
+            this.CDGReparacion.RowHeadersVisible = false;
+            this.CDGReparacion.Size = new System.Drawing.Size(1319, 422);
+            this.CDGReparacion.TabIndex = 9;
+            // 
+            // techPOSdbDataSet
+            // 
+            this.techPOSdbDataSet.DataSetName = "TechPOSdbDataSet";
+            this.techPOSdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // techPOSdbDataSetBindingSource
+            // 
+            this.techPOSdbDataSetBindingSource.DataSource = this.techPOSdbDataSet;
+            this.techPOSdbDataSetBindingSource.Position = 0;
+            // 
+            // reparacionBindingSource
+            // 
+            this.reparacionBindingSource.DataMember = "Reparacion";
+            this.reparacionBindingSource.DataSource = this.techPOSdbDataSetBindingSource;
+            // 
             // reparacionTableAdapter
             // 
             this.reparacionTableAdapter.ClearBeforeFill = true;
+            // 
+            // CHeadId
+            // 
+            this.CHeadId.DataPropertyName = "Id";
+            this.CHeadId.HeaderText = "Id";
+            this.CHeadId.Name = "CHeadId";
+            this.CHeadId.ReadOnly = true;
+            // 
+            // CHeadMarca
+            // 
+            this.CHeadMarca.DataPropertyName = "Marca";
+            this.CHeadMarca.HeaderText = "Marca";
+            this.CHeadMarca.Name = "CHeadMarca";
+            this.CHeadMarca.ReadOnly = true;
+            // 
+            // CHeadModelo
+            // 
+            this.CHeadModelo.DataPropertyName = "Modelo";
+            this.CHeadModelo.HeaderText = "Modelo";
+            this.CHeadModelo.Name = "CHeadModelo";
+            this.CHeadModelo.ReadOnly = true;
+            // 
+            // CHeadFalla
+            // 
+            this.CHeadFalla.DataPropertyName = "Falla";
+            this.CHeadFalla.HeaderText = "Falla";
+            this.CHeadFalla.Name = "CHeadFalla";
+            this.CHeadFalla.ReadOnly = true;
+            // 
+            // CHeadDiag
+            // 
+            this.CHeadDiag.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CHeadDiag.DataPropertyName = "Diagnostico";
+            this.CHeadDiag.HeaderText = "Diagnostico";
+            this.CHeadDiag.Name = "CHeadDiag";
+            this.CHeadDiag.ReadOnly = true;
+            // 
+            // CHeadServicio
+            // 
+            this.CHeadServicio.DataPropertyName = "IdServicio";
+            this.CHeadServicio.HeaderText = "Servicio";
+            this.CHeadServicio.Name = "CHeadServicio";
+            this.CHeadServicio.ReadOnly = true;
+            // 
+            // CHeadAnt
+            // 
+            this.CHeadAnt.DataPropertyName = "Anticipo";
+            this.CHeadAnt.HeaderText = "Anticipo";
+            this.CHeadAnt.Name = "CHeadAnt";
+            this.CHeadAnt.ReadOnly = true;
+            // 
+            // CHeadEstado
+            // 
+            this.CHeadEstado.DataPropertyName = "IdEstado";
+            this.CHeadEstado.HeaderText = "Estado";
+            this.CHeadEstado.Name = "CHeadEstado";
+            this.CHeadEstado.ReadOnly = true;
+            // 
+            // CHeadFecha
+            // 
+            this.CHeadFecha.DataPropertyName = "Fecha";
+            this.CHeadFecha.HeaderText = "Fecha";
+            this.CHeadFecha.Name = "CHeadFecha";
+            this.CHeadFecha.ReadOnly = true;
+            // 
+            // CHeadCliente
+            // 
+            this.CHeadCliente.DataPropertyName = "IdCliente";
+            this.CHeadCliente.HeaderText = "Cliente";
+            this.CHeadCliente.Name = "CHeadCliente";
+            this.CHeadCliente.ReadOnly = true;
+            // 
+            // CHeadUsuario
+            // 
+            this.CHeadUsuario.DataPropertyName = "IdUsuario";
+            this.CHeadUsuario.HeaderText = "Usuario";
+            this.CHeadUsuario.Name = "CHeadUsuario";
+            this.CHeadUsuario.ReadOnly = true;
+            // 
+            // CHeadCostoT
+            // 
+            this.CHeadCostoT.DataPropertyName = "CostoTotal";
+            this.CHeadCostoT.HeaderText = "CostoTotal";
+            this.CHeadCostoT.Name = "CHeadCostoT";
+            this.CHeadCostoT.ReadOnly = true;
+            // 
+            // CHeadPieza
+            // 
+            this.CHeadPieza.DataPropertyName = "IdPieza";
+            this.CHeadPieza.HeaderText = "Pieza";
+            this.CHeadPieza.Name = "CHeadPieza";
+            this.CHeadPieza.ReadOnly = true;
             // 
             // ViewTabs
             // 
@@ -944,12 +950,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).EndInit();
             this.tabReparacion.ResumeLayout(false);
             this.tabReparacion.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGReparacion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reparacionBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.JPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.JpictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CDGReparacion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reparacionBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1033,24 +1040,25 @@
         private System.Windows.Forms.RadioButton JradioTodos;
         private System.Windows.Forms.Label lblAvisoNoCliente;
         private System.Windows.Forms.PictureBox pictureBuscar;
-        private System.Windows.Forms.DataGridView DGReparacion;
-        private TechPOSdbDataSet5 techPOSdbDataSet5;
-        private System.Windows.Forms.BindingSource reparacionBindingSource;
-        private TechPOSdbDataSet5TableAdapters.ReparacionTableAdapter reparacionTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn marcaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn modeloDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fallaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diagnosticoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idServicioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn anticipoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idEstadoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idClienteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idUsuarioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn costoTotalDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idPiezaDataGridViewTextBoxColumn;
         private System.Windows.Forms.RadioButton CEspera;
+        private System.Windows.Forms.DataGridView CDGReparacion;
+        private System.Windows.Forms.BindingSource techPOSdbDataSetBindingSource;
+        private TechPOSdbDataSet techPOSdbDataSet;
+        private System.Windows.Forms.BindingSource reparacionBindingSource;
+        private TechPOSdbDataSetTableAdapters.ReparacionTableAdapter reparacionTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CHeadId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CHeadMarca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CHeadModelo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CHeadFalla;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CHeadDiag;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CHeadServicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CHeadAnt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CHeadEstado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CHeadFecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CHeadCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CHeadUsuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CHeadCostoT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CHeadPieza;
         //  private System.Windows.Forms.TextBox textBox1;
         //private System.Windows.Forms.Label UnaLabel;
         //  private System.Windows.Forms.Label label5;
