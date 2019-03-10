@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -9,6 +10,9 @@ namespace WindowsFormsApp1.DBConnectio
         private string cadena = "Data Source=.\\SQLEXPRESS;Initial Catalog=TechPOSdb; Integrated Security=True";
         private SqlConnection conexion = new SqlConnection();
         SqlCommand SqlCommand;
+        DataTable table = new DataTable();
+        DataSet dataSet = new DataSet();
+        SqlDataAdapter adapter = new SqlDataAdapter();
         //-----------------------------------------------------------------------------
         public Connection()
         {
@@ -20,6 +24,7 @@ namespace WindowsFormsApp1.DBConnectio
             {
                 conexion.Open();
                 //MessageBox.Show("Conexion establecida con la Base de Datos", "Conexion Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                Console.WriteLine("Conexion establecida con la Base de Datos");
             }
             catch (System.Exception e1)
             {
@@ -33,6 +38,7 @@ namespace WindowsFormsApp1.DBConnectio
             {
                 conexion.Close();
                // MessageBox.Show("Conexion cerrada con la Base de Datos", "Conexion Cerrada", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                Console.WriteLine("Conexion cerrada con la Base de Datos");
             }
             catch (System.Exception e2)
             {
@@ -93,6 +99,14 @@ namespace WindowsFormsApp1.DBConnectio
             SqlCommand cmd = new SqlCommand(SQL, conexion);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             return da;
+        }
+        //Buscar Reparacion por codigo
+        public DataTable buscarReparacion(string cadena)
+        {
+            adapter.SelectCommand = new SqlCommand(cadena, conexion);
+            adapter.Fill(dataSet);
+            table = dataSet.Tables[0];
+            return table;
         }
     }
 }
