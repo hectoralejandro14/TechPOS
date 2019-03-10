@@ -46,6 +46,36 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBConnection\Connection.cs" />
+    <Compile Include="TechPOSdbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TechPOSdbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TechPOSdbDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TechPOSdbDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TechPOSdbDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TechPOSdbDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TechPOSdbDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TechPOSdbDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TechPOSdbDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TechPOSdbDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TechPOSdbDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TechPOSdbDataSet5.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Views\Buscar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +226,72 @@
     <EmbeddedResource Include="Resources\cordia_0.ttf" />
     <EmbeddedResource Include="Resources\PEPSI_pl.ttf" />
     <None Include="Resources\Hursheys.ttf" />
+    <None Include="TechPOSdbDataSet.xsc">
+      <DependentUpon>TechPOSdbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TechPOSdbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TechPOSdbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TechPOSdbDataSet.xss">
+      <DependentUpon>TechPOSdbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TechPOSdbDataSet1.xsc">
+      <DependentUpon>TechPOSdbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TechPOSdbDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TechPOSdbDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TechPOSdbDataSet1.xss">
+      <DependentUpon>TechPOSdbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TechPOSdbDataSet2.xsc">
+      <DependentUpon>TechPOSdbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="TechPOSdbDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TechPOSdbDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TechPOSdbDataSet2.xss">
+      <DependentUpon>TechPOSdbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="TechPOSdbDataSet3.xsc">
+      <DependentUpon>TechPOSdbDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="TechPOSdbDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TechPOSdbDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TechPOSdbDataSet3.xss">
+      <DependentUpon>TechPOSdbDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="TechPOSdbDataSet4.xsc">
+      <DependentUpon>TechPOSdbDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="TechPOSdbDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TechPOSdbDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TechPOSdbDataSet4.xss">
+      <DependentUpon>TechPOSdbDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="TechPOSdbDataSet5.xsc">
+      <DependentUpon>TechPOSdbDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="TechPOSdbDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TechPOSdbDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TechPOSdbDataSet5.xss">
+      <DependentUpon>TechPOSdbDataSet5.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

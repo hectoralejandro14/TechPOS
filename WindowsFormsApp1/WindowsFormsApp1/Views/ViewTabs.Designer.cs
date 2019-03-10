@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewTabs));
             this.tabPuntoVenta = new System.Windows.Forms.TabControl();
             this.tabVenta = new System.Windows.Forms.TabPage();
@@ -73,14 +74,25 @@
             this.txtBuscarCliente = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabReparacion = new System.Windows.Forms.TabPage();
-            this.JdataGridRep = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.JMArca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.JModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.JCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.JEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CEspera = new System.Windows.Forms.RadioButton();
+            this.DGReparacion = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modeloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fallaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diagnosticoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idServicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.anticipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idEstadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costoTotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idPiezaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reparacionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.techPOSdbDataSet5 = new WindowsFormsApp1.TechPOSdbDataSet5();
             this.JTerminados = new System.Windows.Forms.RadioButton();
-            this.JPendientes = new System.Windows.Forms.RadioButton();
+            this.JProceso = new System.Windows.Forms.RadioButton();
             this.JradioTodos = new System.Windows.Forms.RadioButton();
             this.Jtxtbuscar = new System.Windows.Forms.TextBox();
             this.JlblBuscar = new System.Windows.Forms.Label();
@@ -99,12 +111,15 @@
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idReparacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.linkCerrarSesion = new System.Windows.Forms.LinkLabel();
+            this.reparacionTableAdapter = new WindowsFormsApp1.TechPOSdbDataSet5TableAdapters.ReparacionTableAdapter();
             this.tabPuntoVenta.SuspendLayout();
             this.tabVenta.SuspendLayout();
             this.tabRecibirEquipo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).BeginInit();
             this.tabReparacion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.JdataGridRep)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGReparacion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reparacionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.JPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.JpictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -591,9 +606,10 @@
             // 
             // tabReparacion
             // 
-            this.tabReparacion.Controls.Add(this.JdataGridRep);
+            this.tabReparacion.Controls.Add(this.CEspera);
+            this.tabReparacion.Controls.Add(this.DGReparacion);
             this.tabReparacion.Controls.Add(this.JTerminados);
-            this.tabReparacion.Controls.Add(this.JPendientes);
+            this.tabReparacion.Controls.Add(this.JProceso);
             this.tabReparacion.Controls.Add(this.JradioTodos);
             this.tabReparacion.Controls.Add(this.Jtxtbuscar);
             this.tabReparacion.Controls.Add(this.JlblBuscar);
@@ -608,79 +624,172 @@
             this.tabReparacion.UseVisualStyleBackColor = true;
             this.tabReparacion.Click += new System.EventHandler(this.tabReparacion_Click);
             // 
-            // JdataGridRep
+            // CEspera
             // 
-            this.JdataGridRep.AllowUserToAddRows = false;
-            this.JdataGridRep.AllowUserToDeleteRows = false;
-            this.JdataGridRep.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.JdataGridRep.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.JMArca,
-            this.JModelo,
-            this.JCliente,
-            this.JEstado});
-            this.JdataGridRep.Location = new System.Drawing.Point(172, 260);
-            this.JdataGridRep.Name = "JdataGridRep";
-            this.JdataGridRep.ReadOnly = true;
-            this.JdataGridRep.Size = new System.Drawing.Size(915, 317);
-            this.JdataGridRep.TabIndex = 7;
+            this.CEspera.AutoSize = true;
+            this.CEspera.Location = new System.Drawing.Point(597, 182);
+            this.CEspera.Name = "CEspera";
+            this.CEspera.Size = new System.Drawing.Size(115, 38);
+            this.CEspera.TabIndex = 8;
+            this.CEspera.TabStop = true;
+            this.CEspera.Text = "En Espera";
+            this.CEspera.UseVisualStyleBackColor = true;
+            this.CEspera.CheckedChanged += new System.EventHandler(this.CEspera_CheckedChanged);
             // 
-            // ID
+            // DGReparacion
             // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Width = 200;
+            this.DGReparacion.AllowUserToAddRows = false;
+            this.DGReparacion.AllowUserToDeleteRows = false;
+            this.DGReparacion.AutoGenerateColumns = false;
+            this.DGReparacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGReparacion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.marcaDataGridViewTextBoxColumn,
+            this.modeloDataGridViewTextBoxColumn,
+            this.fallaDataGridViewTextBoxColumn,
+            this.diagnosticoDataGridViewTextBoxColumn,
+            this.idServicioDataGridViewTextBoxColumn,
+            this.anticipoDataGridViewTextBoxColumn,
+            this.idEstadoDataGridViewTextBoxColumn,
+            this.fechaDataGridViewTextBoxColumn,
+            this.idClienteDataGridViewTextBoxColumn,
+            this.idUsuarioDataGridViewTextBoxColumn,
+            this.costoTotalDataGridViewTextBoxColumn,
+            this.idPiezaDataGridViewTextBoxColumn});
+            this.DGReparacion.DataSource = this.reparacionBindingSource;
+            this.DGReparacion.Location = new System.Drawing.Point(3, 240);
+            this.DGReparacion.Name = "DGReparacion";
+            this.DGReparacion.ReadOnly = true;
+            this.DGReparacion.RowHeadersVisible = false;
+            this.DGReparacion.Size = new System.Drawing.Size(1322, 423);
+            this.DGReparacion.TabIndex = 7;
             // 
-            // JMArca
+            // idDataGridViewTextBoxColumn
             // 
-            this.JMArca.HeaderText = "Marca";
-            this.JMArca.Name = "JMArca";
-            this.JMArca.ReadOnly = true;
-            this.JMArca.Width = 150;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Width = 50;
             // 
-            // JModelo
+            // marcaDataGridViewTextBoxColumn
             // 
-            this.JModelo.HeaderText = "Modelo";
-            this.JModelo.Name = "JModelo";
-            this.JModelo.ReadOnly = true;
-            this.JModelo.Width = 150;
+            this.marcaDataGridViewTextBoxColumn.DataPropertyName = "Marca";
+            this.marcaDataGridViewTextBoxColumn.HeaderText = "Marca";
+            this.marcaDataGridViewTextBoxColumn.Name = "marcaDataGridViewTextBoxColumn";
+            this.marcaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // JCliente
+            // modeloDataGridViewTextBoxColumn
             // 
-            this.JCliente.HeaderText = "Cliente";
-            this.JCliente.Name = "JCliente";
-            this.JCliente.ReadOnly = true;
-            this.JCliente.Width = 225;
+            this.modeloDataGridViewTextBoxColumn.DataPropertyName = "Modelo";
+            this.modeloDataGridViewTextBoxColumn.HeaderText = "Modelo";
+            this.modeloDataGridViewTextBoxColumn.Name = "modeloDataGridViewTextBoxColumn";
+            this.modeloDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // JEstado
+            // fallaDataGridViewTextBoxColumn
             // 
-            this.JEstado.HeaderText = "Estado";
-            this.JEstado.Name = "JEstado";
-            this.JEstado.ReadOnly = true;
-            this.JEstado.Width = 150;
+            this.fallaDataGridViewTextBoxColumn.DataPropertyName = "Falla";
+            this.fallaDataGridViewTextBoxColumn.HeaderText = "Falla";
+            this.fallaDataGridViewTextBoxColumn.Name = "fallaDataGridViewTextBoxColumn";
+            this.fallaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // diagnosticoDataGridViewTextBoxColumn
+            // 
+            this.diagnosticoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.diagnosticoDataGridViewTextBoxColumn.DataPropertyName = "Diagnostico";
+            this.diagnosticoDataGridViewTextBoxColumn.HeaderText = "Diagnostico";
+            this.diagnosticoDataGridViewTextBoxColumn.Name = "diagnosticoDataGridViewTextBoxColumn";
+            this.diagnosticoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idServicioDataGridViewTextBoxColumn
+            // 
+            this.idServicioDataGridViewTextBoxColumn.DataPropertyName = "IdServicio";
+            this.idServicioDataGridViewTextBoxColumn.HeaderText = "IdServicio";
+            this.idServicioDataGridViewTextBoxColumn.Name = "idServicioDataGridViewTextBoxColumn";
+            this.idServicioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // anticipoDataGridViewTextBoxColumn
+            // 
+            this.anticipoDataGridViewTextBoxColumn.DataPropertyName = "Anticipo";
+            this.anticipoDataGridViewTextBoxColumn.HeaderText = "Anticipo";
+            this.anticipoDataGridViewTextBoxColumn.Name = "anticipoDataGridViewTextBoxColumn";
+            this.anticipoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idEstadoDataGridViewTextBoxColumn
+            // 
+            this.idEstadoDataGridViewTextBoxColumn.DataPropertyName = "IdEstado";
+            this.idEstadoDataGridViewTextBoxColumn.HeaderText = "IdEstado";
+            this.idEstadoDataGridViewTextBoxColumn.Name = "idEstadoDataGridViewTextBoxColumn";
+            this.idEstadoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fechaDataGridViewTextBoxColumn
+            // 
+            this.fechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha";
+            this.fechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
+            this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
+            this.fechaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idClienteDataGridViewTextBoxColumn
+            // 
+            this.idClienteDataGridViewTextBoxColumn.DataPropertyName = "IdCliente";
+            this.idClienteDataGridViewTextBoxColumn.HeaderText = "IdCliente";
+            this.idClienteDataGridViewTextBoxColumn.Name = "idClienteDataGridViewTextBoxColumn";
+            this.idClienteDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idUsuarioDataGridViewTextBoxColumn
+            // 
+            this.idUsuarioDataGridViewTextBoxColumn.DataPropertyName = "IdUsuario";
+            this.idUsuarioDataGridViewTextBoxColumn.HeaderText = "IdUsuario";
+            this.idUsuarioDataGridViewTextBoxColumn.Name = "idUsuarioDataGridViewTextBoxColumn";
+            this.idUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // costoTotalDataGridViewTextBoxColumn
+            // 
+            this.costoTotalDataGridViewTextBoxColumn.DataPropertyName = "CostoTotal";
+            this.costoTotalDataGridViewTextBoxColumn.HeaderText = "CostoTotal";
+            this.costoTotalDataGridViewTextBoxColumn.Name = "costoTotalDataGridViewTextBoxColumn";
+            this.costoTotalDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idPiezaDataGridViewTextBoxColumn
+            // 
+            this.idPiezaDataGridViewTextBoxColumn.DataPropertyName = "IdPieza";
+            this.idPiezaDataGridViewTextBoxColumn.HeaderText = "IdPieza";
+            this.idPiezaDataGridViewTextBoxColumn.Name = "idPiezaDataGridViewTextBoxColumn";
+            this.idPiezaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // reparacionBindingSource
+            // 
+            this.reparacionBindingSource.DataMember = "Reparacion";
+            this.reparacionBindingSource.DataSource = this.techPOSdbDataSet5;
+            // 
+            // techPOSdbDataSet5
+            // 
+            this.techPOSdbDataSet5.DataSetName = "TechPOSdbDataSet5";
+            this.techPOSdbDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // JTerminados
             // 
             this.JTerminados.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.JTerminados.Location = new System.Drawing.Point(590, 180);
+            this.JTerminados.Location = new System.Drawing.Point(718, 183);
             this.JTerminados.Name = "JTerminados";
             this.JTerminados.Size = new System.Drawing.Size(124, 37);
             this.JTerminados.TabIndex = 6;
             this.JTerminados.TabStop = true;
             this.JTerminados.Text = "Terminado";
             this.JTerminados.UseVisualStyleBackColor = true;
+            this.JTerminados.CheckedChanged += new System.EventHandler(this.JTerminados_CheckedChanged);
             // 
-            // JPendientes
+            // JProceso
             // 
-            this.JPendientes.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.JPendientes.Location = new System.Drawing.Point(464, 180);
-            this.JPendientes.Name = "JPendientes";
-            this.JPendientes.Size = new System.Drawing.Size(120, 43);
-            this.JPendientes.TabIndex = 5;
-            this.JPendientes.TabStop = true;
-            this.JPendientes.Text = "Pendientes";
-            this.JPendientes.UseVisualStyleBackColor = true;
+            this.JProceso.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.JProceso.Location = new System.Drawing.Point(464, 180);
+            this.JProceso.Name = "JProceso";
+            this.JProceso.Size = new System.Drawing.Size(127, 43);
+            this.JProceso.TabIndex = 5;
+            this.JProceso.TabStop = true;
+            this.JProceso.Text = "En Proceso";
+            this.JProceso.UseVisualStyleBackColor = true;
+            this.JProceso.CheckedChanged += new System.EventHandler(this.JProceso_CheckedChanged);
             // 
             // JradioTodos
             // 
@@ -692,6 +801,7 @@
             this.JradioTodos.TabStop = true;
             this.JradioTodos.Text = "Todos";
             this.JradioTodos.UseVisualStyleBackColor = true;
+            this.JradioTodos.CheckedChanged += new System.EventHandler(this.JradioTodos_CheckedChanged);
             // 
             // Jtxtbuscar
             // 
@@ -700,6 +810,7 @@
             this.Jtxtbuscar.Name = "Jtxtbuscar";
             this.Jtxtbuscar.Size = new System.Drawing.Size(313, 34);
             this.Jtxtbuscar.TabIndex = 2;
+            this.Jtxtbuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Jtxtbuscar_KeyPress);
             // 
             // JlblBuscar
             // 
@@ -713,12 +824,13 @@
             // JPicture
             // 
             this.JPicture.Image = global::WindowsFormsApp1.Properties.Resources.lupa;
-            this.JPicture.Location = new System.Drawing.Point(753, 82);
+            this.JPicture.Location = new System.Drawing.Point(753, 78);
             this.JPicture.Name = "JPicture";
-            this.JPicture.Size = new System.Drawing.Size(30, 30);
+            this.JPicture.Size = new System.Drawing.Size(38, 34);
             this.JPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.JPicture.TabIndex = 3;
             this.JPicture.TabStop = false;
+            this.JPicture.Click += new System.EventHandler(this.JPicture_Click);
             // 
             // JpictureBox
             // 
@@ -806,11 +918,15 @@
             this.linkCerrarSesion.Text = "Cerrar Sesión";
             this.linkCerrarSesion.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkCerrarSesion_LinkClicked);
             // 
+            // reparacionTableAdapter
+            // 
+            this.reparacionTableAdapter.ClearBeforeFill = true;
+            // 
             // ViewTabs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1350, 756);
+            this.ClientSize = new System.Drawing.Size(1350, 749);
             this.Controls.Add(this.linkCerrarSesion);
             this.Controls.Add(this.tabPuntoVenta);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -819,6 +935,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UP - Software";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.ViewTabs_Load);
             this.tabPuntoVenta.ResumeLayout(false);
             this.tabVenta.ResumeLayout(false);
             this.tabVenta.PerformLayout();
@@ -827,7 +944,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).EndInit();
             this.tabReparacion.ResumeLayout(false);
             this.tabReparacion.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.JdataGridRep)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGReparacion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reparacionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.JPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.JpictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -910,16 +1029,28 @@
         private System.Windows.Forms.TextBox Jtxtbuscar;
         private System.Windows.Forms.Label JlblBuscar;
         private System.Windows.Forms.RadioButton JTerminados;
-        private System.Windows.Forms.RadioButton JPendientes;
+        private System.Windows.Forms.RadioButton JProceso;
         private System.Windows.Forms.RadioButton JradioTodos;
-        private System.Windows.Forms.DataGridView JdataGridRep;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn JMArca;
-        private System.Windows.Forms.DataGridViewTextBoxColumn JModelo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn JCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn JEstado;
         private System.Windows.Forms.Label lblAvisoNoCliente;
         private System.Windows.Forms.PictureBox pictureBuscar;
+        private System.Windows.Forms.DataGridView DGReparacion;
+        private TechPOSdbDataSet5 techPOSdbDataSet5;
+        private System.Windows.Forms.BindingSource reparacionBindingSource;
+        private TechPOSdbDataSet5TableAdapters.ReparacionTableAdapter reparacionTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marcaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modeloDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fallaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diagnosticoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idServicioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn anticipoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idEstadoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idClienteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idUsuarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn costoTotalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idPiezaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.RadioButton CEspera;
         //  private System.Windows.Forms.TextBox textBox1;
         //private System.Windows.Forms.Label UnaLabel;
         //  private System.Windows.Forms.Label label5;
