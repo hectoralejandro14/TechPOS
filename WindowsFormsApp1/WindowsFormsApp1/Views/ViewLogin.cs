@@ -105,12 +105,12 @@ namespace WindowsFormsApp1
             if (txtContrasena.Text.Length >= 25 && !(txtUsuario.Text.Equals("")))
             {
                 MessageBox.Show("Usted " + txtUsuario.Text + ", esta excediendo la dimension de caracteres",
-                    "Erro de dimensiones", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    "Error de dimensiones", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else if (txtContrasena.Text.Length >= 25)
             {
                 MessageBox.Show("Usted esta excediendo la dimension de caracteres",
-                    "Erro de dimensiones", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    "Error de dimensiones", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
         private void SlinklabelNuevoTrabajador_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

@@ -58,7 +58,7 @@
             // 
             this.idLblRepa.AutoSize = true;
             this.idLblRepa.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.idLblRepa.Location = new System.Drawing.Point(21, 20);
+            this.idLblRepa.Location = new System.Drawing.Point(37, 20);
             this.idLblRepa.Name = "idLblRepa";
             this.idLblRepa.Size = new System.Drawing.Size(32, 34);
             this.idLblRepa.TabIndex = 0;
@@ -177,7 +177,7 @@
             // 
             // idTxtBoxRepa
             // 
-            this.idTxtBoxRepa.Location = new System.Drawing.Point(52, 24);
+            this.idTxtBoxRepa.Location = new System.Drawing.Point(72, 27);
             this.idTxtBoxRepa.Name = "idTxtBoxRepa";
             this.idTxtBoxRepa.Size = new System.Drawing.Size(120, 20);
             this.idTxtBoxRepa.TabIndex = 12;
@@ -255,6 +255,7 @@
             this.AbonarBtn.TabIndex = 21;
             this.AbonarBtn.Text = "Abonar";
             this.AbonarBtn.UseVisualStyleBackColor = false;
+            this.AbonarBtn.Click += new System.EventHandler(this.AbonarBtn_Click);
             // 
             // AceptarBtn
             // 
@@ -266,6 +267,7 @@
             this.AceptarBtn.TabIndex = 22;
             this.AceptarBtn.Text = "Aceptar";
             this.AceptarBtn.UseVisualStyleBackColor = false;
+            this.AceptarBtn.Click += new System.EventHandler(this.AceptarBtn_Click);
             // 
             // Reparacion
             // 

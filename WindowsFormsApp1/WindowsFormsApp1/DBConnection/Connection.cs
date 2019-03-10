@@ -104,8 +104,10 @@ namespace WindowsFormsApp1.DBConnectio
         public DataTable buscarReparacion(string cadena)
         {
             adapter.SelectCommand = new SqlCommand(cadena, conexion);
+            dataSet.Reset();
             adapter.Fill(dataSet);
             table = dataSet.Tables[0];
+
             return table;
         }
     }

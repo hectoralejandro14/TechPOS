@@ -16,5 +16,10 @@ namespace WindowsFormsApp1.Views
             this.Close();
             menu.Show();
         }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
