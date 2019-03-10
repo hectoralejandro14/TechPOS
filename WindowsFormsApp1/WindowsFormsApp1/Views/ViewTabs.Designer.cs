@@ -50,6 +50,8 @@
             this.cancelarBtnVentas = new System.Windows.Forms.Button();
             this.usuarioLblVenta = new System.Windows.Forms.Label();
             this.tabRecibirEquipo = new System.Windows.Forms.TabPage();
+            this.ccbTipoServicio = new System.Windows.Forms.ComboBox();
+            this.tiposervicioC = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblAvisoNoCliente = new System.Windows.Forms.Label();
             this.pictureBuscar = new System.Windows.Forms.PictureBox();
@@ -127,8 +129,6 @@
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idReparacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.linkCerrarSesion = new System.Windows.Forms.LinkLabel();
-            this.tiposervicioC = new System.Windows.Forms.Label();
-            this.ccbTipoServicio = new System.Windows.Forms.ComboBox();
             this.tabPuntoVenta.SuspendLayout();
             this.tabVenta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lupaImg)).BeginInit();
@@ -276,6 +276,7 @@
             this.precioTClmVenta});
             this.tableVender.Location = new System.Drawing.Point(184, 195);
             this.tableVender.Name = "tableVender";
+            this.tableVender.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tableVender.Size = new System.Drawing.Size(938, 382);
             this.tableVender.TabIndex = 8;
             // 
@@ -386,6 +387,23 @@
             this.tabRecibirEquipo.TabIndex = 1;
             this.tabRecibirEquipo.Text = "Recibir Equipo";
             this.tabRecibirEquipo.UseVisualStyleBackColor = true;
+            // 
+            // ccbTipoServicio
+            // 
+            this.ccbTipoServicio.FormattingEnabled = true;
+            this.ccbTipoServicio.Location = new System.Drawing.Point(204, 299);
+            this.ccbTipoServicio.Name = "ccbTipoServicio";
+            this.ccbTipoServicio.Size = new System.Drawing.Size(386, 42);
+            this.ccbTipoServicio.TabIndex = 46;
+            // 
+            // tiposervicioC
+            // 
+            this.tiposervicioC.AutoSize = true;
+            this.tiposervicioC.Location = new System.Drawing.Point(53, 302);
+            this.tiposervicioC.Name = "tiposervicioC";
+            this.tiposervicioC.Size = new System.Drawing.Size(145, 34);
+            this.tiposervicioC.TabIndex = 45;
+            this.tiposervicioC.Text = "Tipo de servicio:";
             // 
             // pictureBox3
             // 
@@ -799,6 +817,7 @@
             this.JdataGridRep.Location = new System.Drawing.Point(172, 260);
             this.JdataGridRep.Name = "JdataGridRep";
             this.JdataGridRep.ReadOnly = true;
+            this.JdataGridRep.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.JdataGridRep.Size = new System.Drawing.Size(915, 317);
             this.JdataGridRep.TabIndex = 7;
             // 
@@ -1101,23 +1120,6 @@
             this.linkCerrarSesion.TabStop = true;
             this.linkCerrarSesion.Text = "Cerrar Sesión";
             this.linkCerrarSesion.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkCerrarSesion_LinkClicked);
-            // 
-            // tiposervicioC
-            // 
-            this.tiposervicioC.AutoSize = true;
-            this.tiposervicioC.Location = new System.Drawing.Point(53, 302);
-            this.tiposervicioC.Name = "tiposervicioC";
-            this.tiposervicioC.Size = new System.Drawing.Size(145, 34);
-            this.tiposervicioC.TabIndex = 45;
-            this.tiposervicioC.Text = "Tipo de servicio:";
-            // 
-            // ccbTipoServicio
-            // 
-            this.ccbTipoServicio.FormattingEnabled = true;
-            this.ccbTipoServicio.Location = new System.Drawing.Point(204, 299);
-            this.ccbTipoServicio.Name = "ccbTipoServicio";
-            this.ccbTipoServicio.Size = new System.Drawing.Size(386, 42);
-            this.ccbTipoServicio.TabIndex = 46;
             // 
             // ViewTabs
             // 
