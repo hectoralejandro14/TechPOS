@@ -92,9 +92,6 @@
             this.SlblBuscarCliente = new System.Windows.Forms.Label();
             this.tabReparacion = new System.Windows.Forms.TabPage();
             this.CDGReparacion = new System.Windows.Forms.DataGridView();
-            this.reparacionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.techPOSdbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.techPOSdbDataSet = new WindowsFormsApp1.TechPOSdbDataSet();
             this.CEspera = new System.Windows.Forms.RadioButton();
             this.JTerminados = new System.Windows.Forms.RadioButton();
             this.JProceso = new System.Windows.Forms.RadioButton();
@@ -117,6 +114,9 @@
             this.estadoClmOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fIngrClmOrdenes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fLlegaClmOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reparacionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.techPOSdbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.techPOSdbDataSet = new WindowsFormsApp1.TechPOSdbDataSet();
             this.UnaLabel = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -140,9 +140,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).BeginInit();
             this.tabReparacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CDGReparacion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reparacionBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.JPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.JpictureBox)).BeginInit();
             this.tabConfiguracionesDeUsuario.SuspendLayout();
@@ -150,6 +147,9 @@
             this.ordenesTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoOrden)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableOrdenes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reparacionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -449,6 +449,7 @@
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(313, 29);
             this.txtApellido.TabIndex = 41;
+            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // txtNombre
             // 
@@ -458,6 +459,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(313, 29);
             this.txtNombre.TabIndex = 40;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtCorreo
             // 
@@ -822,21 +824,6 @@
             this.CDGReparacion.TabIndex = 9;
             this.CDGReparacion.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CDGReparacion_CellClick);
             // 
-            // reparacionBindingSource
-            // 
-            this.reparacionBindingSource.DataMember = "Reparacion";
-            this.reparacionBindingSource.DataSource = this.techPOSdbDataSetBindingSource;
-            // 
-            // techPOSdbDataSetBindingSource
-            // 
-            this.techPOSdbDataSetBindingSource.DataSource = this.techPOSdbDataSet;
-            this.techPOSdbDataSetBindingSource.Position = 0;
-            // 
-            // techPOSdbDataSet
-            // 
-            this.techPOSdbDataSet.DataSetName = "TechPOSdbDataSet";
-            this.techPOSdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // CEspera
             // 
             this.CEspera.AutoSize = true;
@@ -1051,6 +1038,21 @@
             this.fLlegaClmOrden.Name = "fLlegaClmOrden";
             this.fLlegaClmOrden.Width = 130;
             // 
+            // reparacionBindingSource
+            // 
+            this.reparacionBindingSource.DataMember = "Reparacion";
+            this.reparacionBindingSource.DataSource = this.techPOSdbDataSetBindingSource;
+            // 
+            // techPOSdbDataSetBindingSource
+            // 
+            this.techPOSdbDataSetBindingSource.DataSource = this.techPOSdbDataSet;
+            this.techPOSdbDataSetBindingSource.Position = 0;
+            // 
+            // techPOSdbDataSet
+            // 
+            this.techPOSdbDataSet.DataSetName = "TechPOSdbDataSet";
+            this.techPOSdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // UnaLabel
             // 
             this.UnaLabel.Location = new System.Drawing.Point(0, 0);
@@ -1148,9 +1150,6 @@
             this.tabReparacion.ResumeLayout(false);
             this.tabReparacion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CDGReparacion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reparacionBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.JPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.JpictureBox)).EndInit();
             this.tabConfiguracionesDeUsuario.ResumeLayout(false);
@@ -1159,6 +1158,9 @@
             this.ordenesTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logoOrden)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableOrdenes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reparacionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
