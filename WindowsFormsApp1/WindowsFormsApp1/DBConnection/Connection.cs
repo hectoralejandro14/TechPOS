@@ -78,7 +78,7 @@ namespace WindowsFormsApp1.DBConnectio
             {
                 SqlCommand cmd = new SqlCommand(SQL, conexion);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Rol Agregado con Exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                MessageBox.Show("Los datos fueron registrados exitosamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return true;
             }
             catch
@@ -93,14 +93,12 @@ namespace WindowsFormsApp1.DBConnectio
             SqlDataReader dr= cmd.ExecuteReader();
             return dr;
         }
-
         public SqlDataAdapter consultaMasDatos(String SQL)
         {
             SqlCommand cmd = new SqlCommand(SQL, conexion);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             return da;
         }
-        //Buscar Reparacion por codigo
         public DataTable buscarReparacion(string cadena)
         {
             adapter.SelectCommand = new SqlCommand(cadena, conexion);
@@ -110,5 +108,72 @@ namespace WindowsFormsApp1.DBConnectio
 
             return table;
         }
+        //------------------------------------------------------------------------------
+        public bool VerificarExistenciaDeId(decimal id)
+        {
+            string _IdString = id.ToString();
+            bool aux = false;
+            try
+            {
+                SqlCommand cmd = new SqlCommand("SELECT Id FROM Reparacion", conexion);
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                if (dt.Rows.Count == 1)
+                {
+                    if (dt.Rows[0][0].ToString() == _IdString)
+                    {
+                        aux = true;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Error! No se ejecutó la conexion de forma correcta ", "Sesión fallida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+            catch /*(IndexOutOfRangeException e3)*/
+            {
+                MessageBox.Show("ERROR SQL", "Error de Conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return aux;
+        }
+        public string IniciarSesion(string nombreUsuario, string contra)
+        {
+            bool existe = false;
+            string rol = "";
+            try
+            {
+                SqlCommand cmd = new SqlCommand("SELECT Rol FROM Usuario WHERE NombreUsuario = @usu AND Contra = @pass ", conexion);
+                cmd.Parameters.AddWithValue("usu", nombreUsuario);
+                cmd.Parameters.AddWithValue("pass", contra);
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                if (dt.Rows.Count == 1)
+                {
+                    if (dt.Rows[0][0].ToString() == "Administrador")
+                    {
+                        rol = "Administrador";
+                        existe = true;
+                    }
+                    else if (dt.Rows[0][0].ToString() == "Trabajador")
+                    {
+                        rol = "Trabajador";
+                        existe = true;
+                    }
+                }
+                if (!existe)
+                {
+                    MessageBox.Show("Error! Usuario y/o Contraseña Incorrectas", "Sesión fallida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
+            }
+            catch /*(IndexOutOfRangeException e3)*/
+            {
+                MessageBox.Show("ERROS SQL", "Error de Conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return rol;
+        }
     }
 }
+

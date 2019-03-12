@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\Encriptacion.cs" />
     <Compile Include="Controllers\ValidacionCampos.cs" />
     <Compile Include="DBConnection\Connection.cs" />
     <Compile Include="TechPOSdbDataSet.Designer.cs">

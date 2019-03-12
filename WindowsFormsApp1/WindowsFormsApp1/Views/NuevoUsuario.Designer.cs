@@ -33,17 +33,21 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblApellido = new System.Windows.Forms.Label();
             this.lblTelefono = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtApellido = new System.Windows.Forms.TextBox();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.CtxtNombreU = new System.Windows.Forms.TextBox();
+            this.CtxtApellidoU = new System.Windows.Forms.TextBox();
+            this.CtxtTelefonoU = new System.Windows.Forms.TextBox();
             this.btnAceptarr = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.SlblNombreDeUsuario = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.CtxtNombreUsuario = new System.Windows.Forms.TextBox();
+            this.CpictureNuevoUsuario = new System.Windows.Forms.PictureBox();
             this.SlblCorreo = new System.Windows.Forms.Label();
-            this.StxtCorreo = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.CtxtCorreoU = new System.Windows.Forms.TextBox();
+            this.ClblContrasenaU = new System.Windows.Forms.Label();
+            this.CtxtContrasenaU = new System.Windows.Forms.TextBox();
+            this.ClblConfirmarContrasenaU = new System.Windows.Forms.Label();
+            this.CtxtConfirmarContrasenaU = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.CpictureNuevoUsuario)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUsuario
@@ -86,32 +90,33 @@
             this.lblTelefono.TabIndex = 3;
             this.lblTelefono.Text = "Teléfono";
             // 
-            // txtNombre
+            // CtxtNombreU
             // 
-            this.txtNombre.Location = new System.Drawing.Point(137, 130);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(351, 20);
-            this.txtNombre.TabIndex = 5;
+            this.CtxtNombreU.Location = new System.Drawing.Point(137, 130);
+            this.CtxtNombreU.Name = "CtxtNombreU";
+            this.CtxtNombreU.Size = new System.Drawing.Size(351, 20);
+            this.CtxtNombreU.TabIndex = 5;
             // 
-            // txtApellido
+            // CtxtApellidoU
             // 
-            this.txtApellido.Location = new System.Drawing.Point(137, 190);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(351, 20);
-            this.txtApellido.TabIndex = 6;
+            this.CtxtApellidoU.Location = new System.Drawing.Point(137, 190);
+            this.CtxtApellidoU.Name = "CtxtApellidoU";
+            this.CtxtApellidoU.Size = new System.Drawing.Size(351, 20);
+            this.CtxtApellidoU.TabIndex = 6;
             // 
-            // txtTelefono
+            // CtxtTelefonoU
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(137, 250);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(351, 20);
-            this.txtTelefono.TabIndex = 7;
+            this.CtxtTelefonoU.Location = new System.Drawing.Point(137, 241);
+            this.CtxtTelefonoU.Name = "CtxtTelefonoU";
+            this.CtxtTelefonoU.Size = new System.Drawing.Size(351, 20);
+            this.CtxtTelefonoU.TabIndex = 7;
+            this.CtxtTelefonoU.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CtxtTelefonoU_KeyPress);
             // 
             // btnAceptarr
             // 
             this.btnAceptarr.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnAceptarr.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.btnAceptarr.Location = new System.Drawing.Point(305, 372);
+            this.btnAceptarr.Location = new System.Drawing.Point(237, 478);
             this.btnAceptarr.Name = "btnAceptarr";
             this.btnAceptarr.Size = new System.Drawing.Size(93, 39);
             this.btnAceptarr.TabIndex = 9;
@@ -123,7 +128,7 @@
             // 
             this.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnCancelar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.btnCancelar.Location = new System.Drawing.Point(196, 372);
+            this.btnCancelar.Location = new System.Drawing.Point(120, 478);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(103, 39);
             this.btnCancelar.TabIndex = 10;
@@ -141,56 +146,94 @@
             this.SlblNombreDeUsuario.TabIndex = 11;
             this.SlblNombreDeUsuario.Text = "Nombre de Usuario";
             // 
-            // textBox1
+            // CtxtNombreUsuario
             // 
-            this.textBox1.Location = new System.Drawing.Point(137, 80);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(351, 20);
-            this.textBox1.TabIndex = 12;
+            this.CtxtNombreUsuario.Location = new System.Drawing.Point(137, 80);
+            this.CtxtNombreUsuario.Name = "CtxtNombreUsuario";
+            this.CtxtNombreUsuario.Size = new System.Drawing.Size(351, 20);
+            this.CtxtNombreUsuario.TabIndex = 12;
             // 
-            // pictureBox1
+            // CpictureNuevoUsuario
             // 
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
-            this.pictureBox1.Location = new System.Drawing.Point(7, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(118, 177);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
+            this.CpictureNuevoUsuario.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.CpictureNuevoUsuario.Location = new System.Drawing.Point(7, 6);
+            this.CpictureNuevoUsuario.Name = "CpictureNuevoUsuario";
+            this.CpictureNuevoUsuario.Size = new System.Drawing.Size(118, 177);
+            this.CpictureNuevoUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.CpictureNuevoUsuario.TabIndex = 13;
+            this.CpictureNuevoUsuario.TabStop = false;
             // 
             // SlblCorreo
             // 
             this.SlblCorreo.AutoSize = true;
             this.SlblCorreo.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.SlblCorreo.Location = new System.Drawing.Point(131, 284);
+            this.SlblCorreo.Location = new System.Drawing.Point(131, 264);
             this.SlblCorreo.Name = "SlblCorreo";
             this.SlblCorreo.Size = new System.Drawing.Size(69, 34);
             this.SlblCorreo.TabIndex = 14;
             this.SlblCorreo.Text = "Correo";
             // 
-            // StxtCorreo
+            // CtxtCorreoU
             // 
-            this.StxtCorreo.Location = new System.Drawing.Point(137, 321);
-            this.StxtCorreo.Name = "StxtCorreo";
-            this.StxtCorreo.Size = new System.Drawing.Size(351, 20);
-            this.StxtCorreo.TabIndex = 15;
+            this.CtxtCorreoU.Location = new System.Drawing.Point(137, 301);
+            this.CtxtCorreoU.Name = "CtxtCorreoU";
+            this.CtxtCorreoU.Size = new System.Drawing.Size(351, 20);
+            this.CtxtCorreoU.TabIndex = 15;
+            // 
+            // ClblContrasenaU
+            // 
+            this.ClblContrasenaU.AutoSize = true;
+            this.ClblContrasenaU.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.ClblContrasenaU.Location = new System.Drawing.Point(131, 324);
+            this.ClblContrasenaU.Name = "ClblContrasenaU";
+            this.ClblContrasenaU.Size = new System.Drawing.Size(107, 34);
+            this.ClblContrasenaU.TabIndex = 16;
+            this.ClblContrasenaU.Text = "Contraseña";
+            // 
+            // CtxtContrasenaU
+            // 
+            this.CtxtContrasenaU.Location = new System.Drawing.Point(137, 361);
+            this.CtxtContrasenaU.Name = "CtxtContrasenaU";
+            this.CtxtContrasenaU.Size = new System.Drawing.Size(351, 20);
+            this.CtxtContrasenaU.TabIndex = 17;
+            // 
+            // ClblConfirmarContrasenaU
+            // 
+            this.ClblConfirmarContrasenaU.AutoSize = true;
+            this.ClblConfirmarContrasenaU.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.ClblConfirmarContrasenaU.Location = new System.Drawing.Point(131, 384);
+            this.ClblConfirmarContrasenaU.Name = "ClblConfirmarContrasenaU";
+            this.ClblConfirmarContrasenaU.Size = new System.Drawing.Size(189, 34);
+            this.ClblConfirmarContrasenaU.TabIndex = 18;
+            this.ClblConfirmarContrasenaU.Text = "Confirmar Contraseña";
+            // 
+            // CtxtConfirmarContrasenaU
+            // 
+            this.CtxtConfirmarContrasenaU.Location = new System.Drawing.Point(137, 421);
+            this.CtxtConfirmarContrasenaU.Name = "CtxtConfirmarContrasenaU";
+            this.CtxtConfirmarContrasenaU.Size = new System.Drawing.Size(351, 20);
+            this.CtxtConfirmarContrasenaU.TabIndex = 19;
             // 
             // NuevoUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(500, 431);
-            this.Controls.Add(this.StxtCorreo);
+            this.ClientSize = new System.Drawing.Size(500, 529);
+            this.Controls.Add(this.CtxtConfirmarContrasenaU);
+            this.Controls.Add(this.ClblConfirmarContrasenaU);
+            this.Controls.Add(this.CtxtContrasenaU);
+            this.Controls.Add(this.ClblContrasenaU);
+            this.Controls.Add(this.CtxtCorreoU);
             this.Controls.Add(this.SlblCorreo);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.CpictureNuevoUsuario);
+            this.Controls.Add(this.CtxtNombreUsuario);
             this.Controls.Add(this.SlblNombreDeUsuario);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptarr);
-            this.Controls.Add(this.txtTelefono);
-            this.Controls.Add(this.txtApellido);
-            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.CtxtTelefonoU);
+            this.Controls.Add(this.CtxtApellidoU);
+            this.Controls.Add(this.CtxtNombreU);
             this.Controls.Add(this.lblTelefono);
             this.Controls.Add(this.lblApellido);
             this.Controls.Add(this.lblNombre);
@@ -198,7 +241,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NuevoUsuario";
             this.Text = "Nuevo Usuario";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CpictureNuevoUsuario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,15 +253,19 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Label lblTelefono;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtApellido;
-        private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.TextBox CtxtNombreU;
+        private System.Windows.Forms.TextBox CtxtApellidoU;
+        private System.Windows.Forms.TextBox CtxtTelefonoU;
         private System.Windows.Forms.Button btnAceptarr;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label SlblNombreDeUsuario;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox CtxtNombreUsuario;
+        private System.Windows.Forms.PictureBox CpictureNuevoUsuario;
         private System.Windows.Forms.Label SlblCorreo;
-        private System.Windows.Forms.TextBox StxtCorreo;
+        private System.Windows.Forms.TextBox CtxtCorreoU;
+        private System.Windows.Forms.Label ClblContrasenaU;
+        private System.Windows.Forms.TextBox CtxtContrasenaU;
+        private System.Windows.Forms.Label ClblConfirmarContrasenaU;
+        private System.Windows.Forms.TextBox CtxtConfirmarContrasenaU;
     }
 }

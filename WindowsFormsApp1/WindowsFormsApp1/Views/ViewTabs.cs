@@ -35,6 +35,16 @@ namespace WindowsFormsApp1.Views
             comboResponsable.DisplayMember = "Nombre";
             comboResponsable.ValueMember = "Id";
             comboResponsable.DataSource = dt1;
+            //------------------------------------------
+            SbtnCancelar.Visible = false;
+            txtNombre.Enabled = false;
+            txtApellido.Enabled = false;
+            txtTelefono.Enabled = false;
+            txtCorreo.Enabled = false;
+            //------------------------------------------
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
 
 
         }
@@ -78,8 +88,18 @@ namespace WindowsFormsApp1.Views
             db.CerrarConexion();
             if (!encontro)
             {
+                SbtnCancelar.Visible = true;
                 lblAvisoNoCliente.Visible = true;
                 btnAgregarCliente.Visible = true;
+                //---------------------------------------
+                SbtnCancelar.Visible = true;
+                txtNombre.Enabled = true;
+                txtApellido.Enabled = true;
+                txtTelefono.Enabled = true;
+                txtCorreo.Enabled = true;
+                //---------------------------------------
+                GenerarId();
+                txtBuscarCliente.Enabled = false;
             }
 
         }
@@ -142,16 +162,50 @@ namespace WindowsFormsApp1.Views
         }
         private void btnAgregarCliente_Click(object sender, EventArgs e)
         {
-
-            if (validarEmail(txtCorreo.Text))
+            
+            Connection conexion = new Connection();
+            conexion.AbrirConexion();
+            if ((!txtNombre.Text.Equals("")) && (!txtApellido.Text.Equals("")) && (!txtTelefono.Text.Equals("")) && (!txtCorreo.Text.Equals("")))
             {
-                MessageBox.Show("FORMATO DE CORREO CORRECTO", "ACEPTADO", MessageBoxButtons.OK, MessageBoxIcon.Question);
-                //Agregar Cliente en bd
+                if (validarEmail(txtCorreo.Text))
+                {
+                    lblIdEquipo.Text = txtBuscarCliente.Text;
+                    decimal idR = Convert.ToDecimal(txtBuscarCliente.Text);
+                    //Agregar cliente
+                    String sql = "INSERT INTO Cliente (Id,Nombre,Apellido,Telefono,Contacto) VALUES (" + idR + ",'" + txtNombre.Text + "','" + txtApellido.Text + "'," + txtTelefono.Text + ",'" + txtCorreo.Text + "')";
+                    conexion.AddElements(sql);
+                    conexion.CerrarConexion();
+                    txtNombre.Text = "";
+                    txtBuscarCliente.Text = "";
+                    txtApellido.Text = "";
+                    txtCorreo.Text = "";
+                    txtTelefono.Text = "";
+                    //--------------------------------------------------
+                    btnAgregarCliente.Visible = false;
+                    SbtnCancelar.Visible = false;
+                    txtBuscarCliente.Enabled = true;
+                    SbtnCancelar.Enabled = false;
+                    btnAgregarCliente.Visible = false;
+                    SbtnCancelar.Visible = false;
+                    //--------------------------------------------------
+                    txtNombre.Enabled = false;
+                    txtApellido.Enabled = false;
+                    txtTelefono.Enabled = false;
+                    txtCorreo.Enabled = false;
+                    lblAvisoNoCliente.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("FORMATO DE CORREO NO VALIDO", "RECHAZADO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-                MessageBox.Show("FORMATO DE CORREO NO VALIDO", "RECHAZADO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("SE HA DETECTADO LA EXISTENCIA DE CAMPOS VACIOS", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Question);
             }
+            btnAgregarCliente.Visible = false;
+            SbtnCancelar.Visible = false;
+            conexion.CerrarConexion();
 
         }
         public static bool validarEmail(string email)
@@ -176,9 +230,9 @@ namespace WindowsFormsApp1.Views
         }
         //------------------------------------------------------------------------------------
         //Generales
-        public void MostrarConfiguracionUsuarios(int IdRol)
+        public void MostrarConfiguracionUsuarios(string Rol)
         {
-            if (IdRol == 1)
+            if (Rol == "Administrador")
             {
                 tabPuntoVenta.TabPages.Add(tabConfiguracionesDeUsuario);
             }
@@ -197,7 +251,6 @@ namespace WindowsFormsApp1.Views
             NuevoUsuario nuevoUsuario = new NuevoUsuario();
             nuevoUsuario.Show();
         }
-
         private void btnAgregrEquipos_Click(object sender, EventArgs e)
         {
             string tipoDiag = "";
@@ -232,7 +285,6 @@ namespace WindowsFormsApp1.Views
                 db.CerrarConexion();
             }
         }
-
         private void ViewTabs_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'techPOSdbDataSet.Reparacion' table. You can move, or remove it, as needed.
@@ -242,8 +294,7 @@ namespace WindowsFormsApp1.Views
             CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo,Reparacion.Falla as Falla,Reparacion.Diagnostico as Diagnostico,Servicio.Nombre as Servicio,Reparacion.Anticipo as Anticipo,Estado.Nombre as Estado,Reparacion.Fecha as Fecha,Cliente.Nombre as Cliente, Usuario.Nombre as Usuario, Reparacion.CostoTotal as Total, Pieza.Descripcion as Pieza FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Usuario on Reparacion.IdUsuario=Usuario.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id");
             connection.CerrarConexion();
         }
-
-        //Carlos
+        //-------------------------------------------------------------------------------------------
         private void JPicture_Click(object sender, EventArgs e)
         {
             if (Jtxtbuscar.Text == "")
@@ -279,7 +330,6 @@ namespace WindowsFormsApp1.Views
                 conexion.CerrarConexion(); 
             }*/
         }
-
         private void Jtxtbuscar_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Char.IsNumber(e.KeyChar))
@@ -295,7 +345,6 @@ namespace WindowsFormsApp1.Views
                 e.Handled = true;
             }
         }
-
         private void JradioTodos_CheckedChanged(object sender, EventArgs e)
         {
             Jtxtbuscar.Text = "";
@@ -304,7 +353,6 @@ namespace WindowsFormsApp1.Views
             CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo,Reparacion.Falla as Falla,Reparacion.Diagnostico as Diagnostico,Servicio.Nombre as Servicio,Reparacion.Anticipo as Anticipo,Estado.Nombre as Estado,Reparacion.Fecha as Fecha,Cliente.Nombre as Cliente, Usuario.Nombre as Usuario, Reparacion.CostoTotal as Total, Pieza.Descripcion as Pieza FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Usuario on Reparacion.IdUsuario=Usuario.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id");
             connection.CerrarConexion();
         }
-
         private void JProceso_CheckedChanged(object sender, EventArgs e)
         {
             Jtxtbuscar.Text = "";
@@ -313,7 +361,6 @@ namespace WindowsFormsApp1.Views
             CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo,Reparacion.Falla as Falla,Reparacion.Diagnostico as Diagnostico,Servicio.Nombre as Servicio,Reparacion.Anticipo as Anticipo,Estado.Nombre as Estado,Reparacion.Fecha as Fecha,Cliente.Nombre as Cliente, Usuario.Nombre as Usuario, Reparacion.CostoTotal as Total, Pieza.Descripcion as Pieza FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Usuario on Reparacion.IdUsuario=Usuario.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id WHERE IdEstado = '" + 7 + "'");
             connection.CerrarConexion();
         }
-
         private void CEspera_CheckedChanged(object sender, EventArgs e)
         {
             Jtxtbuscar.Text = "";
@@ -322,7 +369,6 @@ namespace WindowsFormsApp1.Views
             CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo,Reparacion.Falla as Falla,Reparacion.Diagnostico as Diagnostico,Servicio.Nombre as Servicio,Reparacion.Anticipo as Anticipo,Estado.Nombre as Estado,Reparacion.Fecha as Fecha,Cliente.Nombre as Cliente, Usuario.Nombre as Usuario, Reparacion.CostoTotal as Total, Pieza.Descripcion as Pieza FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Usuario on Reparacion.IdUsuario=Usuario.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id WHERE IdEstado = '" + 6 + "'");
             connection.CerrarConexion();
         }
-
         private void JTerminados_CheckedChanged(object sender, EventArgs e)
         {
             Jtxtbuscar.Text = "";
@@ -331,7 +377,6 @@ namespace WindowsFormsApp1.Views
             CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo,Reparacion.Falla as Falla,Reparacion.Diagnostico as Diagnostico,Servicio.Nombre as Servicio,Reparacion.Anticipo as Anticipo,Estado.Nombre as Estado,Reparacion.Fecha as Fecha,Cliente.Nombre as Cliente, Usuario.Nombre as Usuario, Reparacion.CostoTotal as Total, Pieza.Descripcion as Pieza FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Usuario on Reparacion.IdUsuario=Usuario.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id WHERE IdEstado = '" + 3 + "'");
             connection.CerrarConexion();
         }
-
         private void CDGReparacion_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow fila = CDGReparacion.Rows[e.RowIndex];
@@ -339,10 +384,30 @@ namespace WindowsFormsApp1.Views
             Reparacion r = new Reparacion(id);
             r.Show();
         }
+        //-------------------------------------------------------------------------------------------
+        public void GenerarId()
+        {
+            Connection conexion = new Connection();
+            Random random = new Random();
+            conexion.AbrirConexion();
+            decimal idR = random.Next(0, 1000000000);
+            do
+            {
+                idR = random.Next(0, 1000000000);
+                if (!conexion.VerificarExistenciaDeId(idR))
+                {
+                    break;
+                }
+            } while (true);
+            conexion.CerrarConexion();
+            txtBuscarCliente.Text = "" + idR;
+        }
+        private void SbtnCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
-
-
         /*private void SbtnAgregarRol_Click(object sender, EventArgs e)
         {
             string _Rol = StxtAgregarRol.Text;

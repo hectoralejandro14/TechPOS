@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using WindowsFormsApp1.Views;
 using System.Security.Cryptography;
 using System.Text;
+using WindowsFormsApp1.DBConnectio;
 
 namespace WindowsFormsApp1
 {
@@ -32,21 +33,29 @@ namespace WindowsFormsApp1
             if (txtContrasena.Text.Equals("") || txtUsuario.Text.Equals(""))
             {
                 MessageBox.Show("No se pudo iniciar sesión por existencia de campos vacios", "Campos Vacios", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                txtContrasena.Text = "";
+                txtUsuario.Text = "";
             }
             else
             {
-                if (txtUsuario.Text.Equals("s") && txtContrasena.Text.Equals("s"))
+                Connection db = new Connection();
+                string nu = txtUsuario.Text;
+                string co = txtContrasena.Text;
+                /*MD5 md5Hash = MD5.Create();
+                string hash = encriptar.GetMd5Hash(md5Hash, co);*/
+                db.AbrirConexion();
+                if (db.IniciarSesion(nu, co) == "Administrador")
                 {
-
-                    _vistaTabs.MostrarConfiguracionUsuarios(1);
+                    _vistaTabs.MostrarConfiguracionUsuarios("Administrador");
                     _vistaTabs.Show();
                     this.Hide();
                 }
-                else
+                else if (db.IniciarSesion(nu, co) == "Trabajador")
                 {
                     _vistaTabs.Show();
                     this.Hide();
                 }
+                db.CerrarConexion();               
                 /*
                  *NO BORRAR COMENTARIO 
                  *DBConnection.Connection conexion = new DBConnection.Connection();
@@ -58,7 +67,6 @@ namespace WindowsFormsApp1
             }
             
         }
-
         static string GetMd5Hash(MD5 md5Hash, string input)
         {
 
