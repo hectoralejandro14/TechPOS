@@ -55,11 +55,15 @@
             // 
             // txtUsuario
             // 
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.HideSelection = false;
+            this.txtUsuario.Location = new System.Drawing.Point(348, 288);
             this.txtUsuario.Location = new System.Drawing.Point(375, 287);
             this.txtUsuario.Multiline = true;
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(234, 27);
+            this.txtUsuario.Size = new System.Drawing.Size(234, 26);
             this.txtUsuario.TabIndex = 4;
+            this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
             // 
             // label1
             // 
@@ -83,12 +87,17 @@
             // 
             // txtContrasena
             // 
+            this.txtContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContrasena.HideSelection = false;
+            this.txtContrasena.Location = new System.Drawing.Point(348, 337);
             this.txtContrasena.Location = new System.Drawing.Point(375, 336);
             this.txtContrasena.Multiline = true;
             this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(234, 27);
-            this.txtContrasena.TabIndex = 8;
+            this.txtContrasena.Size = new System.Drawing.Size(234, 26);
+            this.txtContrasena.TabIndex = 4;
+            this.txtContrasena.UseSystemPasswordChar = true;
             this.txtContrasena.TextChanged += new System.EventHandler(this.txtContrasena_TextChanged);
+            this.txtContrasena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContrasena_KeyPress);
             // 
             // SlinklabelRecuperarContrasena
             // 
@@ -152,6 +161,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ViewLogin";
             this.Text = "UP - Software : Soluciones de TI";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ViewLogin_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

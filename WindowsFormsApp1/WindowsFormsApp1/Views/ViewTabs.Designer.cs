@@ -51,6 +51,7 @@
             this.cancelarBtnVentas = new System.Windows.Forms.Button();
             this.usuarioLblVenta = new System.Windows.Forms.Label();
             this.tabRecibirEquipo = new System.Windows.Forms.TabPage();
+            this.SbtnCancelar = new System.Windows.Forms.Button();
             this.ccbTipoServicio1 = new System.Windows.Forms.ComboBox();
             this.tiposervicioC1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -130,7 +131,7 @@
             this.idReparacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.linkCerrarSesion = new System.Windows.Forms.LinkLabel();
             this.reparacionTableAdapter = new WindowsFormsApp1.TechPOSdbDataSetTableAdapters.ReparacionTableAdapter();
-            this.SbtnCancelar = new System.Windows.Forms.Button();
+            this.btnAddClientH = new System.Windows.Forms.Button();
             this.tabPuntoVenta.SuspendLayout();
             this.tabVenta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lupaImg)).BeginInit();
@@ -346,6 +347,7 @@
             // 
             // tabRecibirEquipo
             // 
+            this.tabRecibirEquipo.Controls.Add(this.btnAddClientH);
             this.tabRecibirEquipo.Controls.Add(this.SbtnCancelar);
             this.tabRecibirEquipo.Controls.Add(this.ccbTipoServicio1);
             this.tabRecibirEquipo.Controls.Add(this.tiposervicioC1);
@@ -393,6 +395,19 @@
             this.tabRecibirEquipo.TabIndex = 1;
             this.tabRecibirEquipo.Text = "Recibir Equipo";
             this.tabRecibirEquipo.UseVisualStyleBackColor = true;
+            // 
+            // SbtnCancelar
+            // 
+            this.SbtnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.SbtnCancelar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SbtnCancelar.Location = new System.Drawing.Point(1173, 115);
+            this.SbtnCancelar.Name = "SbtnCancelar";
+            this.SbtnCancelar.Size = new System.Drawing.Size(120, 38);
+            this.SbtnCancelar.TabIndex = 47;
+            this.SbtnCancelar.Text = "Cancelar";
+            this.SbtnCancelar.UseVisualStyleBackColor = false;
+            this.SbtnCancelar.Visible = false;
+            this.SbtnCancelar.Click += new System.EventHandler(this.SbtnCancelar_Click);
             // 
             // ccbTipoServicio1
             // 
@@ -778,10 +793,10 @@
             // 
             this.txtBuscarCliente.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscarCliente.Location = new System.Drawing.Point(509, 19);
-            this.txtBuscarCliente.Multiline = true;
             this.txtBuscarCliente.Name = "txtBuscarCliente";
-            this.txtBuscarCliente.Size = new System.Drawing.Size(359, 29);
+            this.txtBuscarCliente.Size = new System.Drawing.Size(359, 34);
             this.txtBuscarCliente.TabIndex = 2;
+            this.txtBuscarCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscarCliente_KeyPress);
             // 
             // SlblBuscarCliente
             // 
@@ -1125,18 +1140,17 @@
             // 
             this.reparacionTableAdapter.ClearBeforeFill = true;
             // 
-            // SbtnCancelar
+            // btnAddClientH
             // 
-            this.SbtnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.SbtnCancelar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SbtnCancelar.Location = new System.Drawing.Point(1173, 115);
-            this.SbtnCancelar.Name = "SbtnCancelar";
-            this.SbtnCancelar.Size = new System.Drawing.Size(120, 38);
-            this.SbtnCancelar.TabIndex = 47;
-            this.SbtnCancelar.Text = "Cancelar";
-            this.SbtnCancelar.UseVisualStyleBackColor = false;
-            this.SbtnCancelar.Visible = false;
-            this.SbtnCancelar.Click += new System.EventHandler(this.SbtnCancelar_Click);
+            this.btnAddClientH.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAddClientH.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddClientH.Location = new System.Drawing.Point(1045, 57);
+            this.btnAddClientH.Name = "btnAddClientH";
+            this.btnAddClientH.Size = new System.Drawing.Size(248, 38);
+            this.btnAddClientH.TabIndex = 48;
+            this.btnAddClientH.Text = "Agregar nuevo cliente";
+            this.btnAddClientH.UseVisualStyleBackColor = false;
+            this.btnAddClientH.Click += new System.EventHandler(this.btnAddClientH_Click);
             // 
             // ViewTabs
             // 
@@ -1151,6 +1165,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UP - Software";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ViewTabs_FormClosed);
             this.Load += new System.EventHandler(this.ViewTabs_Load);
             this.tabPuntoVenta.ResumeLayout(false);
             this.tabVenta.ResumeLayout(false);
@@ -1299,6 +1314,7 @@
         private System.Windows.Forms.BindingSource reparacionBindingSource;
         private TechPOSdbDataSetTableAdapters.ReparacionTableAdapter reparacionTableAdapter;
         private System.Windows.Forms.Button SbtnCancelar;
+        private System.Windows.Forms.Button btnAddClientH;
         //  private System.Windows.Forms.TextBox textBox1;
         //private System.Windows.Forms.Label UnaLabel;
         //  private System.Windows.Forms.Label label5;
