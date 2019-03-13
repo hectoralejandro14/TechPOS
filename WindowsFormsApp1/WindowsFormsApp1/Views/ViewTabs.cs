@@ -162,7 +162,7 @@ namespace WindowsFormsApp1.Views
         }
         private void btnAgregarCliente_Click(object sender, EventArgs e)
         {
-            
+
             Connection conexion = new Connection();
             conexion.AbrirConexion();
             if ((!txtNombre.Text.Equals("")) && (!txtApellido.Text.Equals("")) && (!txtTelefono.Text.Equals("")) && (!txtCorreo.Text.Equals("")))
@@ -395,7 +395,8 @@ namespace WindowsFormsApp1.Views
             {
                 e.Handled = false;
             }
-            else if(Char.IsSeparator(e.KeyChar)){
+            else if (Char.IsSeparator(e.KeyChar))
+            {
                 e.Handled = false;
             }
             else
@@ -423,8 +424,8 @@ namespace WindowsFormsApp1.Views
                 e.Handled = true;
             }
         }
-    }
-}
+
+
 
         //-------------------------------------------------------------------------------------------
         public void GenerarId()
@@ -448,8 +449,8 @@ namespace WindowsFormsApp1.Views
         {
 
         }
-    }
-}
+
+
         /*private void SbtnAgregarRol_Click(object sender, EventArgs e)
         {
             string _Rol = StxtAgregarRol.Text;
@@ -462,3 +463,5 @@ namespace WindowsFormsApp1.Views
             conexion.CerrarConexion(); 
         }*/
 
+    }
+}
