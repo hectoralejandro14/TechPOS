@@ -384,7 +384,6 @@ namespace WindowsFormsApp1.Views
             Reparacion r = new Reparacion(id);
             r.Show();
         }
-
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Char.IsLetter(e.KeyChar))
@@ -403,7 +402,6 @@ namespace WindowsFormsApp1.Views
                 e.Handled = true;
             }
         }
-
         private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Char.IsLetter(e.KeyChar))
@@ -423,9 +421,6 @@ namespace WindowsFormsApp1.Views
                 e.Handled = true;
             }
         }
-    }
-}
-
         //-------------------------------------------------------------------------------------------
         public void GenerarId()
         {

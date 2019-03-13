@@ -47,6 +47,7 @@
             this.CtxtContrasenaU = new System.Windows.Forms.TextBox();
             this.ClblConfirmarContrasenaU = new System.Windows.Forms.Label();
             this.CtxtConfirmarContrasenaU = new System.Windows.Forms.TextBox();
+            this.ClblNotaNU = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.CpictureNuevoUsuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,6 +97,7 @@
             this.CtxtNombreU.Name = "CtxtNombreU";
             this.CtxtNombreU.Size = new System.Drawing.Size(351, 20);
             this.CtxtNombreU.TabIndex = 5;
+            this.CtxtNombreU.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CtxtNombreU_KeyPress);
             // 
             // CtxtApellidoU
             // 
@@ -103,6 +105,7 @@
             this.CtxtApellidoU.Name = "CtxtApellidoU";
             this.CtxtApellidoU.Size = new System.Drawing.Size(351, 20);
             this.CtxtApellidoU.TabIndex = 6;
+            this.CtxtApellidoU.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CtxtApellidoU_KeyPress);
             // 
             // CtxtTelefonoU
             // 
@@ -152,6 +155,7 @@
             this.CtxtNombreUsuario.Name = "CtxtNombreUsuario";
             this.CtxtNombreUsuario.Size = new System.Drawing.Size(351, 20);
             this.CtxtNombreUsuario.TabIndex = 12;
+            this.CtxtNombreUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CtxtNombreUsuario_KeyPress);
             // 
             // CpictureNuevoUsuario
             // 
@@ -214,12 +218,23 @@
             this.CtxtConfirmarContrasenaU.Size = new System.Drawing.Size(351, 20);
             this.CtxtConfirmarContrasenaU.TabIndex = 19;
             // 
+            // ClblNotaNU
+            // 
+            this.ClblNotaNU.AutoSize = true;
+            this.ClblNotaNU.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClblNotaNU.Location = new System.Drawing.Point(334, 520);
+            this.ClblNotaNU.Name = "ClblNotaNU";
+            this.ClblNotaNU.Size = new System.Drawing.Size(165, 9);
+            this.ClblNotaNU.TabIndex = 20;
+            this.ClblNotaNU.Text = "NOTA : Mayusculas y Minusculas no importan.";
+            // 
             // NuevoUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(500, 529);
+            this.Controls.Add(this.ClblNotaNU);
             this.Controls.Add(this.CtxtConfirmarContrasenaU);
             this.Controls.Add(this.ClblConfirmarContrasenaU);
             this.Controls.Add(this.CtxtContrasenaU);
@@ -267,5 +282,6 @@
         private System.Windows.Forms.TextBox CtxtContrasenaU;
         private System.Windows.Forms.Label ClblConfirmarContrasenaU;
         private System.Windows.Forms.TextBox CtxtConfirmarContrasenaU;
+        private System.Windows.Forms.Label ClblNotaNU;
     }
 }

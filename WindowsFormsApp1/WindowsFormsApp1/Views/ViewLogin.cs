@@ -39,7 +39,8 @@ namespace WindowsFormsApp1
             else
             {
                 Connection db = new Connection();
-                string nu = txtUsuario.Text;
+                string auxNu = txtUsuario.Text;
+                string nu = auxNu.ToUpper();
                 string co = txtContrasena.Text;
                 /*MD5 md5Hash = MD5.Create();
                 string hash = encriptar.GetMd5Hash(md5Hash, co);*/
