@@ -105,7 +105,7 @@ namespace WindowsFormsApp1.Views
                     txtCorreo.Enabled = true;
                     //---------------------------------------
                     GenerarId();
-                    txtBuscarCliente.Enabled = false;
+                    
                 }
             }
         }
@@ -181,11 +181,7 @@ namespace WindowsFormsApp1.Views
                     String sql = "INSERT INTO Cliente (Id,Nombre,Apellido,Telefono,Contacto) VALUES (" + idR + ",'" + txtNombre.Text + "','" + txtApellido.Text + "'," + txtTelefono.Text + ",'" + txtCorreo.Text + "')";
                     conexion.AddElements(sql);
                     conexion.CerrarConexion();
-                    txtNombre.Text = "";
-                    txtBuscarCliente.Text = "";
-                    txtApellido.Text = "";
-                    txtCorreo.Text = "";
-                    txtTelefono.Text = "";
+
                     //--------------------------------------------------
                     btnAgregarCliente.Visible = false;
                     SbtnCancelar.Visible = false;
@@ -449,6 +445,11 @@ namespace WindowsFormsApp1.Views
             txtBuscarCliente.Text = "" + idR;
         }
         private void SbtnCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBuscarCliente_KeyPress(object sender, KeyPressEventArgs e)
         {
 
         }
