@@ -96,6 +96,7 @@
             this.CtxtNombreU.Name = "CtxtNombreU";
             this.CtxtNombreU.Size = new System.Drawing.Size(351, 20);
             this.CtxtNombreU.TabIndex = 5;
+            this.CtxtNombreU.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CtxtNombreU_KeyPress);
             // 
             // CtxtApellidoU
             // 
@@ -103,6 +104,7 @@
             this.CtxtApellidoU.Name = "CtxtApellidoU";
             this.CtxtApellidoU.Size = new System.Drawing.Size(351, 20);
             this.CtxtApellidoU.TabIndex = 6;
+            this.CtxtApellidoU.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CtxtApellidoU_KeyPress);
             // 
             // CtxtTelefonoU
             // 
