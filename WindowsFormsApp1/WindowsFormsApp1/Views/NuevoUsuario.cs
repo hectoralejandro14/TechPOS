@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Drawing;
 using System.Net.Mail;
 using System.Windows.Forms;
 using WindowsFormsApp1.DBConnectio;
@@ -14,11 +13,8 @@ namespace WindowsFormsApp1.Views
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
-            //Font font2 = new Font("Arial", 18.0f);
-            //CtxtContrasenaU.Font = font2;
             CtxtContrasenaU.PasswordChar = '*';
             //------------------------------------------------------
-            //CtxtConfirmarContrasenaU.Font = font2;
             CtxtConfirmarContrasenaU.PasswordChar = '*';
         }
         private void btnAceptarr_Click(object sender, EventArgs e)
@@ -37,8 +33,11 @@ namespace WindowsFormsApp1.Views
                         Connection conexion = new Connection();
                         conexion.AbrirConexion();
                         decimal id = GenerarId();
-                        String _query = "INSERT INTO Usuario (Id,NombreUsuario,Nombre,Apellido,Telefono,Correo,Contra,Rol) VALUES (" + id + ",'" + CtxtNombreUsuario.Text + "','" + CtxtNombreU.Text + "','" + CtxtApellidoU.Text + "','" + CtxtTelefonoU.Text + "','" + CtxtCorreoU.Text + "','" + CtxtContrasenaU.Text + "','Trabajador')";
+                        string auxNu = CtxtNombreUsuario.Text;
+                        string nu = auxNu.ToUpper();
+                        String _query = "INSERT INTO Usuario (Id,NombreUsuario,Nombre,Apellido,Telefono,Correo,Contra,Rol) VALUES (" + id + ",'" + nu + "','" + CtxtNombreU.Text + "','" + CtxtApellidoU.Text + "','" + CtxtTelefonoU.Text + "','" + CtxtCorreoU.Text + "','" + CtxtContrasenaU.Text + "','Trabajador')";
                         conexion.AddElements(_query);
+                        //------------------------------------------------
                         CtxtNombreUsuario.Text = "";
                         CtxtNombreU.Text = "";
                         CtxtApellidoU.Text = "";
@@ -60,13 +59,6 @@ namespace WindowsFormsApp1.Views
                     MessageBox.Show("NO SE PUEDE AGREGAR UN NUEVO USUARIO PORQUE EL FORMATO DE CORREO ES INVALIDO", "FORMATO NO VALIDO", MessageBoxButtons.OK, MessageBoxIcon.Question);
                 }
             }
-
-
-
-
-            ViewLogin login = new ViewLogin();
-            login.Show();
-            this.Hide();
         }
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -120,6 +112,39 @@ namespace WindowsFormsApp1.Views
             else
             {
                 e.Handled = true;
+            }
+        }
+        private void CtxtNombreUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char[] NoPermitir = { 'é', 'ý', 'ú', 'í', 'ñ', 'ó', 'á', 'ë', 'ÿ', 'ü', 'ï', 'ö', 'ä', 'ê', 'û', 'î', 'ô', 'â' };
+            char[] Permitir = { '-', '_' };
+
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && !(char.IsNumber(e.KeyChar)))
+            {
+                MessageBox.Show("Solo se permiten letras y números en este campo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                CtxtNombreU.Text = "";
+                return;
+            }  
+        }
+        private void CtxtNombreU_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                CtxtNombreU.Text = "";
+                return;
+            }
+        }
+        private void CtxtApellidoU_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                CtxtApellidoU.Text = "";
+                return;
             }
         }
 

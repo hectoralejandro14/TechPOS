@@ -793,9 +793,8 @@
             // 
             this.txtBuscarCliente.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscarCliente.Location = new System.Drawing.Point(509, 19);
-            this.txtBuscarCliente.Multiline = true;
             this.txtBuscarCliente.Name = "txtBuscarCliente";
-            this.txtBuscarCliente.Size = new System.Drawing.Size(359, 29);
+            this.txtBuscarCliente.Size = new System.Drawing.Size(359, 34);
             this.txtBuscarCliente.TabIndex = 2;
             this.txtBuscarCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscarCliente_KeyPress);
             // 
@@ -1166,6 +1165,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UP - Software";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ViewTabs_FormClosed);
             this.Load += new System.EventHandler(this.ViewTabs_Load);
             this.tabPuntoVenta.ResumeLayout(false);
             this.tabVenta.ResumeLayout(false);
