@@ -72,36 +72,42 @@ namespace WindowsFormsApp1.Views
         }
         private void pictureBuscar_Click(object sender, System.EventArgs e)
         {
-            bool encontro = false;
-            DBConnectio.Connection db = new DBConnectio.Connection();
-            db.AbrirConexion();
-            SqlDataReader dr = db.consulta("select * from Cliente where Id=" + txtBuscarCliente.Text);
-            //MessageBox.Show("select * from Cliente where Id=" + txtBuscarCliente.Text);
-            if (dr.Read())
+            if (txtBuscarCliente.Text=="")
             {
-                txtNombre.Text = Convert.ToString(dr["Nombre"]);
-                txtApellido.Text = Convert.ToString(dr["Apellido"]);
-                txtTelefono.Text = Convert.ToString(dr["Telefono"]);
-                txtCorreo.Text = Convert.ToString(dr["Contacto"]);
-                encontro = true;
+                MessageBox.Show("El campo esta vacio","Alerta");
             }
-            db.CerrarConexion();
-            if (!encontro)
+            else
             {
-                SbtnCancelar.Visible = true;
-                lblAvisoNoCliente.Visible = true;
-                btnAgregarCliente.Visible = true;
-                //---------------------------------------
-                SbtnCancelar.Visible = true;
-                txtNombre.Enabled = true;
-                txtApellido.Enabled = true;
-                txtTelefono.Enabled = true;
-                txtCorreo.Enabled = true;
-                //---------------------------------------
-                GenerarId();
-                txtBuscarCliente.Enabled = false;
+                bool encontro = false;
+                DBConnectio.Connection db = new DBConnectio.Connection();
+                db.AbrirConexion();
+                SqlDataReader dr = db.consulta("select * from Cliente where Id=" + txtBuscarCliente.Text);
+                //MessageBox.Show("select * from Cliente where Id=" + txtBuscarCliente.Text);
+                if (dr.Read())
+                {
+                    txtNombre.Text = Convert.ToString(dr["Nombre"]);
+                    txtApellido.Text = Convert.ToString(dr["Apellido"]);
+                    txtTelefono.Text = Convert.ToString(dr["Telefono"]);
+                    txtCorreo.Text = Convert.ToString(dr["Contacto"]);
+                    encontro = true;
+                }
+                db.CerrarConexion();
+                if (!encontro)
+                {
+                    SbtnCancelar.Visible = true;
+                    lblAvisoNoCliente.Visible = true;
+                    btnAgregarCliente.Visible = true;
+                    //---------------------------------------
+                    SbtnCancelar.Visible = true;
+                    txtNombre.Enabled = true;
+                    txtApellido.Enabled = true;
+                    txtTelefono.Enabled = true;
+                    txtCorreo.Enabled = true;
+                    //---------------------------------------
+                    GenerarId();
+                    
+                }
             }
-
         }
         private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -175,11 +181,7 @@ namespace WindowsFormsApp1.Views
                     String sql = "INSERT INTO Cliente (Id,Nombre,Apellido,Telefono,Contacto) VALUES (" + idR + ",'" + txtNombre.Text + "','" + txtApellido.Text + "'," + txtTelefono.Text + ",'" + txtCorreo.Text + "')";
                     conexion.AddElements(sql);
                     conexion.CerrarConexion();
-                    txtNombre.Text = "";
-                    txtBuscarCliente.Text = "";
-                    txtApellido.Text = "";
-                    txtCorreo.Text = "";
-                    txtTelefono.Text = "";
+
                     //--------------------------------------------------
                     btnAgregarCliente.Visible = false;
                     SbtnCancelar.Visible = false;
@@ -421,6 +423,7 @@ namespace WindowsFormsApp1.Views
                 e.Handled = true;
             }
         }
+
         //-------------------------------------------------------------------------------------------
         public void GenerarId()
         {
@@ -440,6 +443,11 @@ namespace WindowsFormsApp1.Views
             txtBuscarCliente.Text = "" + idR;
         }
         private void SbtnCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBuscarCliente_KeyPress(object sender, KeyPressEventArgs e)
         {
 
         }
