@@ -451,6 +451,11 @@ namespace WindowsFormsApp1.Views
         {
 
         }
+
+        private void ViewTabs_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
         /*private void SbtnAgregarRol_Click(object sender, EventArgs e)

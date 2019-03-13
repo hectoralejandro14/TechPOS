@@ -139,7 +139,6 @@ namespace WindowsFormsApp1.DBConnectio
         }
         public string IniciarSesion(string nombreUsuario, string contra)
         {
-            bool existe = false;
             string rol = "";
             try
             {
@@ -154,19 +153,12 @@ namespace WindowsFormsApp1.DBConnectio
                     if (dt.Rows[0][0].ToString() == "Administrador")
                     {
                         rol = "Administrador";
-                        existe = true;
                     }
                     else if (dt.Rows[0][0].ToString() == "Trabajador")
                     {
                         rol = "Trabajador";
-                        existe = true;
                     }
                 }
-                if (!existe)
-                {
-                    MessageBox.Show("Error! Usuario y/o Contraseña Incorrectas", "Sesión fallida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-
             }
             catch /*(IndexOutOfRangeException e3)*/
             {

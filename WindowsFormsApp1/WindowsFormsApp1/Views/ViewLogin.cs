@@ -15,13 +15,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             //Cambiar el tipo de letra que se muestra en el TextBox
-            Font font = new Font("Arial", 13.0f);
-            txtUsuario.Font = font;
-
-            Font font2 = new Font("Arial", 18.0f);
-            txtContrasena.Font = font2;
-            txtContrasena.PasswordChar = '*';
-            txtContrasena.MaxLength = 25;
+            
 
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -55,6 +49,9 @@ namespace WindowsFormsApp1
                 {
                     _vistaTabs.Show();
                     this.Hide();
+                }
+                else{
+                    MessageBox.Show("Error! Usuario y/o Contraseña Incorrectas", "Sesión fallida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 db.CerrarConexion();               
                 /*
@@ -127,6 +124,98 @@ namespace WindowsFormsApp1
             NuevoUsuario nuevoUsuario = new NuevoUsuario();
             this.Hide();
             nuevoUsuario.Show();
+        }
+
+        private void ViewLogin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (txtUsuario.Text.Equals("")&&txtContrasena.Text.Equals(""))
+            {
+                MessageBox.Show("No se permiten campos vacios","Alerta",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                if (e.KeyChar == (char)Keys.Enter)
+                {
+                    Connection db = new Connection();
+                    string nu = txtUsuario.Text;
+                    string co = txtContrasena.Text;
+                    /*MD5 md5Hash = MD5.Create();
+                    string hash = encriptar.GetMd5Hash(md5Hash, co);*/
+                    db.AbrirConexion();
+                    if (db.IniciarSesion(nu, co) == "Administrador")
+                    {
+                        _vistaTabs.MostrarConfiguracionUsuarios("Administrador");
+                        _vistaTabs.Show();
+                        this.Hide();
+                    }
+                    else if (db.IniciarSesion(nu, co) == "Trabajador")
+                    {
+                        _vistaTabs.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error! Usuario y/o Contraseña Incorrectas", "Sesión fallida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    db.CerrarConexion();
+                }
+            }
+        }
+
+        private void txtContrasena_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (txtUsuario.Text.Equals("") && txtContrasena.Text.Equals(""))
+            {
+                MessageBox.Show("No se permiten campos vacios", "Alerta",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+            else
+            {
+                if (e.KeyChar == (char)Keys.Enter)
+                {
+                    Connection db = new Connection();
+                    string nu = txtUsuario.Text;
+                    string co = txtContrasena.Text;
+                    /*MD5 md5Hash = MD5.Create();
+                    string hash = encriptar.GetMd5Hash(md5Hash, co);*/
+                    db.AbrirConexion();
+                    if (db.IniciarSesion(nu, co) == "Administrador")
+                    {
+                        _vistaTabs.MostrarConfiguracionUsuarios("Administrador");
+                        _vistaTabs.Show();
+                        this.Hide();
+                    }
+                    else if (db.IniciarSesion(nu, co) == "Trabajador")
+                    {
+                        _vistaTabs.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error! Usuario y/o Contraseña Incorrectas", "Sesión fallida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    db.CerrarConexion();
+                }
+            }
+        }
+
+        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
     }
 }
