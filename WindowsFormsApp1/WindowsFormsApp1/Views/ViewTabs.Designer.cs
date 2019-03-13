@@ -131,6 +131,7 @@
             this.idReparacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.linkCerrarSesion = new System.Windows.Forms.LinkLabel();
             this.reparacionTableAdapter = new WindowsFormsApp1.TechPOSdbDataSetTableAdapters.ReparacionTableAdapter();
+            this.btnAddClientH = new System.Windows.Forms.Button();
             this.tabPuntoVenta.SuspendLayout();
             this.tabVenta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lupaImg)).BeginInit();
@@ -346,6 +347,7 @@
             // 
             // tabRecibirEquipo
             // 
+            this.tabRecibirEquipo.Controls.Add(this.btnAddClientH);
             this.tabRecibirEquipo.Controls.Add(this.SbtnCancelar);
             this.tabRecibirEquipo.Controls.Add(this.ccbTipoServicio1);
             this.tabRecibirEquipo.Controls.Add(this.tiposervicioC1);
@@ -1139,6 +1141,18 @@
             // 
             this.reparacionTableAdapter.ClearBeforeFill = true;
             // 
+            // btnAddClientH
+            // 
+            this.btnAddClientH.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAddClientH.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddClientH.Location = new System.Drawing.Point(1045, 57);
+            this.btnAddClientH.Name = "btnAddClientH";
+            this.btnAddClientH.Size = new System.Drawing.Size(248, 38);
+            this.btnAddClientH.TabIndex = 48;
+            this.btnAddClientH.Text = "Agregar nuevo cliente";
+            this.btnAddClientH.UseVisualStyleBackColor = false;
+            this.btnAddClientH.Click += new System.EventHandler(this.btnAddClientH_Click);
+            // 
             // ViewTabs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1300,6 +1314,7 @@
         private System.Windows.Forms.BindingSource reparacionBindingSource;
         private TechPOSdbDataSetTableAdapters.ReparacionTableAdapter reparacionTableAdapter;
         private System.Windows.Forms.Button SbtnCancelar;
+        private System.Windows.Forms.Button btnAddClientH;
         //  private System.Windows.Forms.TextBox textBox1;
         //private System.Windows.Forms.Label UnaLabel;
         //  private System.Windows.Forms.Label label5;

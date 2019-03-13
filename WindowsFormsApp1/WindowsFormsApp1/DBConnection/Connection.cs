@@ -115,6 +115,31 @@ namespace WindowsFormsApp1.DBConnectio
             bool aux = false;
             try
             {
+                SqlCommand cmd = new SqlCommand("SELECT Id FROM Usuario", conexion);
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                if (dt.Rows.Count == 1)
+                {
+                    if (dt.Rows[0][0].ToString() == _IdString)
+                    {
+                        aux = true;
+                    }
+                }
+               
+            }
+            catch /*(IndexOutOfRangeException e3)*/
+            {
+                MessageBox.Show("ERROR SQL", "Error de Conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return aux;
+        }
+        public bool VerificarExistenciaDeIdRep(String id)
+        {
+            string _IdString = id.ToString();
+            bool aux = false;
+            try
+            {
                 SqlCommand cmd = new SqlCommand("SELECT Id FROM Reparacion", conexion);
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
@@ -126,10 +151,7 @@ namespace WindowsFormsApp1.DBConnectio
                         aux = true;
                     }
                 }
-                else
-                {
-                    MessageBox.Show("Error! No se ejecutó la conexion de forma correcta ", "Sesión fallida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
+                
             }
             catch /*(IndexOutOfRangeException e3)*/
             {
