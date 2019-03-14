@@ -23,6 +23,7 @@ namespace WindowsFormsApp1.Views
             SqlDataAdapter da = conexion.consultaMasDatos("select Id, Nombre from Servicio");
             da.Fill(dt);
             conexion.CerrarConexion();
+            //GenerarIdEquipo();
             ccbTipoServicio1.DisplayMember = "Nombre";
             ccbTipoServicio1.ValueMember = "Id";
             ccbTipoServicio1.DataSource = dt;
@@ -45,7 +46,7 @@ namespace WindowsFormsApp1.Views
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
-
+            GenerarIdEquipo();
 
         }
         private void linkCerrarSesion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -91,6 +92,7 @@ namespace WindowsFormsApp1.Views
                     txtCorreo.Text = Convert.ToString(dr["Contacto"]);
                     encontro = true;
                 }
+                dr.Close();
                 db.CerrarConexion();
                 if (!encontro)
                 {
@@ -105,6 +107,16 @@ namespace WindowsFormsApp1.Views
                     txtCorreo.Enabled = true;
                     //---------------------------------------
                     GenerarId();
+
+                }
+                else
+                {
+                    lblAvisoNoCliente.Visible = false;
+                    btnAddClientH.Visible = true;
+                    btnAgregarCliente.Visible = false;
+                    SbtnCancelar.Visible = false;
+                    txtNombre.Enabled = false;
+                    txtApellido.Enabled = false;
                     
                 }
             }
@@ -168,14 +180,14 @@ namespace WindowsFormsApp1.Views
         }
         private void btnAgregarCliente_Click(object sender, EventArgs e)
         {
-            
+
             Connection conexion = new Connection();
             conexion.AbrirConexion();
             if ((!txtNombre.Text.Equals("")) && (!txtApellido.Text.Equals("")) && (!txtTelefono.Text.Equals("")) && (!txtCorreo.Text.Equals("")))
             {
                 if (validarEmail(txtCorreo.Text))
                 {
-                    lblIdEquipo.Text = txtBuscarCliente.Text;
+                    
                     decimal idR = Convert.ToDecimal(txtBuscarCliente.Text);
                     //Agregar cliente
                     String sql = "INSERT INTO Cliente (Id,Nombre,Apellido,Telefono,Contacto) VALUES (" + idR + ",'" + txtNombre.Text + "','" + txtApellido.Text + "'," + txtTelefono.Text + ",'" + txtCorreo.Text + "')";
@@ -255,36 +267,43 @@ namespace WindowsFormsApp1.Views
         }
         private void btnAgregrEquipos_Click(object sender, EventArgs e)
         {
-            string tipoDiag = "";
-            DateTime Hoy = DateTime.Today;
-            string fecha_actual = Hoy.ToString("yyyy-MM-dd");
-            DBConnectio.Connection db = new DBConnectio.Connection();
-            db.AbrirConexion();
-            if (rbDiagnosticoEspecifico.Checked)
+            if (txtBuscarCliente.Text != "")
             {
-                tipoDiag = "Diagnóstico específico";
-            }
-            else if (rbDiagnosticoRapido.Checked)
-            {
-                tipoDiag = "Diagnóstico rápido";
+                string tipoDiag = "";
+                DateTime Hoy = DateTime.Today;
+                string fecha_actual = Hoy.ToString("yyyy-MM-dd");
+                DBConnectio.Connection db = new DBConnectio.Connection();
+                db.AbrirConexion();
+                if (rbDiagnosticoEspecifico.Checked)
+                {
+                    tipoDiag = "Diagnóstico específico";
+                }
+                else if (rbDiagnosticoRapido.Checked)
+                {
+                    tipoDiag = "Diagnóstico rápido";
+                }
+                else
+                {
+                    MessageBox.Show("Seleccione un tipo de diagnóstico", "Diagnóstico", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                }
+                if (rbDiagnosticoEspecifico.Checked || rbDiagnosticoRapido.Checked)
+                {
+                    String sql = "Insert into Reparacion values(" + lblIdEquipo.Text + ",'" + txtMarca.Text
+                        + "','" + txtModelo.Text
+                        + "','" + txtDescripcionDeFalla.Text
+                        + "','" + tipoDiag + ": " + txtDescripcionDiagnosticoEspecifico.Text
+                        + "'," + ccbTipoServicio1.SelectedValue.ToString()
+                        + "," + txtAnticipo.Text + ",6,'" + fecha_actual + "','" + txtBuscarCliente.Text
+                        + "'," + comboResponsable.SelectedValue.ToString() + "," + txtTotal.Text
+                        + ",0)";
+                    //MessageBox.Show(sql);
+                    db.AddElements(sql);
+                    db.CerrarConexion();
+                }
             }
             else
             {
-                MessageBox.Show("Seleccione un tipo de diagnóstico", "Diagnóstico", MessageBoxButtons.OK, MessageBoxIcon.Question);
-            }
-            if (rbDiagnosticoEspecifico.Checked || rbDiagnosticoRapido.Checked)
-            {
-                String sql = "Insert into Reparacion values(" + 17 + ",'" + txtMarca.Text
-                    + "','" + txtModelo.Text
-                    + "','" + txtDescripcionDeFalla.Text
-                    + "','" + tipoDiag + ": " + txtDescripcionDiagnosticoEspecifico.Text
-                    + "'," + ccbTipoServicio1.SelectedValue.ToString()
-                    + "," + txtAnticipo.Text + ",6,'" + fecha_actual + "','" + txtBuscarCliente.Text
-                    + "'," + comboResponsable.SelectedValue.ToString() + "," + txtTotal.Text
-                    + ",0)";
-                MessageBox.Show(sql);
-                db.AddElements(sql);
-                db.CerrarConexion();
+                MessageBox.Show("Id del cliente vacio");
             }
         }
         private void ViewTabs_Load(object sender, EventArgs e)
@@ -396,7 +415,8 @@ namespace WindowsFormsApp1.Views
             {
                 e.Handled = false;
             }
-            else if(Char.IsSeparator(e.KeyChar)){
+            else if (Char.IsSeparator(e.KeyChar))
+            {
                 e.Handled = false;
             }
             else
@@ -424,6 +444,8 @@ namespace WindowsFormsApp1.Views
             }
         }
 
+
+
         //-------------------------------------------------------------------------------------------
         public void GenerarId()
         {
@@ -442,6 +464,23 @@ namespace WindowsFormsApp1.Views
             conexion.CerrarConexion();
             txtBuscarCliente.Text = "" + idR;
         }
+        public void GenerarIdEquipo()
+        {
+            Connection conexion = new Connection();
+            Random random = new Random();
+            conexion.AbrirConexion();
+            decimal idR = random.Next(0, 1000000000);
+            do
+            {
+                idR = random.Next(0, 1000000000);
+                if (!conexion.VerificarExistenciaDeIdRep(Convert.ToString(idR)))
+                {
+                    break;
+                }
+            } while (true);
+            conexion.CerrarConexion();
+            lblIdEquipo.Text = "" + idR;
+        }
         private void SbtnCancelar_Click(object sender, EventArgs e)
         {
 
@@ -455,6 +494,24 @@ namespace WindowsFormsApp1.Views
         private void ViewTabs_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnAddClientH_Click(object sender, EventArgs e)
+        {
+            GenerarId();
+            btnAgregarCliente.Visible = true;
+           
+            SbtnCancelar.Visible = true;
+            txtNombre.Enabled = true;
+            txtNombre.Text = "";
+            txtApellido.Enabled = true;
+            txtApellido.Text = "";
+            txtTelefono.Enabled = true;
+            txtTelefono.Text= "";
+            txtCorreo.Enabled = true;
+            txtCorreo.Text = "";
+            btnAddClientH.Visible = false;
+            
         }
     }
 }
@@ -470,3 +527,5 @@ namespace WindowsFormsApp1.Views
             conexion.CerrarConexion(); 
         }*/
 
+    }
+}
