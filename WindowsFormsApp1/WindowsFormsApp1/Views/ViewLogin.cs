@@ -125,7 +125,6 @@ namespace WindowsFormsApp1
             this.Hide();
             nuevoUsuario.Show();
         }
-
         private void ViewLogin_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (txtUsuario.Text.Equals("")&&txtContrasena.Text.Equals(""))
@@ -161,7 +160,6 @@ namespace WindowsFormsApp1
                 }
             }
         }
-
         private void txtContrasena_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (txtUsuario.Text.Equals("") && txtContrasena.Text.Equals(""))
@@ -197,7 +195,6 @@ namespace WindowsFormsApp1
                 }
             }
         }
-
         private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Char.IsLetter(e.KeyChar))

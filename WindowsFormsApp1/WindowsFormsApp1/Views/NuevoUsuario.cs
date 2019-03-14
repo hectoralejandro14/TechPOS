@@ -148,7 +148,7 @@ namespace WindowsFormsApp1.Views
             }
         }
 
-        private void CtxtNombreU_KeyPress(object sender, KeyPressEventArgs e)
+        /*private void CtxtNombreU_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Char.IsLetter(e.KeyChar))
             {
@@ -166,9 +166,8 @@ namespace WindowsFormsApp1.Views
             {
                 e.Handled = true;
             }
-        }
-
-        private void CtxtApellidoU_KeyPress(object sender, KeyPressEventArgs e)
+        }*/
+        /*private void CtxtApellidoU_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Char.IsLetter(e.KeyChar))
             {
@@ -186,6 +185,6 @@ namespace WindowsFormsApp1.Views
             {
                 e.Handled = true;
             }
-        }
+        }*/
     }
 }
