@@ -16,7 +16,7 @@ namespace WindowsFormsApp1.Views
             txtDescripcionDeFalla.ScrollBars = ScrollBars.Vertical;
             txtDescripcionDiagnosticoEspecifico.ScrollBars = ScrollBars.Vertical;
             tabPuntoVenta.TabPages.Remove(tabConfiguracionesDeUsuario);
-            Jtxtbuscar.MaxLength = 4;
+            
             DataTable dt = new DataTable();
             //---------Combo box servicio
             conexion.AbrirConexion();
@@ -297,6 +297,12 @@ namespace WindowsFormsApp1.Views
                         + "'," + comboResponsable.SelectedValue.ToString() + "," + txtTotal.Text
                         + ",0)";
                     //MessageBox.Show(sql);
+                    txtMarca.Text = "";
+                    txtDescripcionDeFalla.Text = "";
+                    txtDescripcionDiagnosticoEspecifico.Text = "";
+                    txtModelo.Text = "";
+                    txtTotal.Text = "";
+                    txtAnticipo.Text = "";
                     db.AddElements(sql);
                     db.CerrarConexion();
                 }
@@ -312,44 +318,33 @@ namespace WindowsFormsApp1.Views
             //this.reparacionTableAdapter.Fill(this.techPOSdbDataSet.Reparacion);
             Connection connection = new Connection();
             connection.AbrirConexion();
-            CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo,Reparacion.Falla as Falla,Reparacion.Diagnostico as Diagnostico,Servicio.Nombre as Servicio,Reparacion.Anticipo as Anticipo,Estado.Nombre as Estado,Reparacion.Fecha as Fecha,Cliente.Nombre as Cliente, Usuario.Nombre as Usuario, Reparacion.CostoTotal as Total, Pieza.Descripcion as Pieza FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Usuario on Reparacion.IdUsuario=Usuario.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id");
+            CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id");
             connection.CerrarConexion();
         }
         //-------------------------------------------------------------------------------------------
         private void JPicture_Click(object sender, EventArgs e)
         {
-            if (Jtxtbuscar.Text == "")
+            if (JtxtBuscar2.Text == "")
             {
                 MessageBox.Show("El campo esta vacio");
             }
             else
             {
+               // MessageBox.Show(JtxtBuscar2.Text);
+                
+                string c = JtxtBuscar2.Text;
+                Connection connection = new Connection();
+                connection.AbrirConexion();
+                CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id WHERE Reparacion.Id =" + c + "");
+                connection.CerrarConexion();
                 JradioTodos.Checked = false;
                 JTerminados.Checked = false;
                 JProceso.Checked = false;
                 CEspera.Checked = false;
-                Connection connection = new Connection();
-                connection.AbrirConexion();
-                int codigo = Convert.ToInt32(Jtxtbuscar.Text);
-                CDGReparacion.DataSource = connection.buscarReparacion("SELECT * FROM Reparacion WHERE Id ='" + codigo + "'");
-                connection.CerrarConexion();
-                Jtxtbuscar.Text = "";
-            }
-            //Carlos
+                JtxtBuscar2.Text = "";
 
-            /*private void SbtnAgregarRol_Click(object sender, EventArgs e)
-            {
-                Random random = new Random();
-                decimal _random = random.Next(1, 1000000000);
-                string _Rol = StxtAgregarRol.Text;
-                string consulta = "INSERT INTO Rol (Id,NombreRol) VALUES (@Id,@NombreRol)";
-                //Abrir conexion
-                conexion.AbrirConexion();
-                //Agregar datos
-                conexion.AgregarRoles(consulta,_random,_Rol);
-                //cerrar conexion
-                conexion.CerrarConexion(); 
-            }*/
+            }
+
         }
         private void Jtxtbuscar_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -368,34 +363,34 @@ namespace WindowsFormsApp1.Views
         }
         private void JradioTodos_CheckedChanged(object sender, EventArgs e)
         {
-            Jtxtbuscar.Text = "";
+            
             Connection connection = new Connection();
             connection.AbrirConexion();
-            CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo,Reparacion.Falla as Falla,Reparacion.Diagnostico as Diagnostico,Servicio.Nombre as Servicio,Reparacion.Anticipo as Anticipo,Estado.Nombre as Estado,Reparacion.Fecha as Fecha,Cliente.Nombre as Cliente, Usuario.Nombre as Usuario, Reparacion.CostoTotal as Total, Pieza.Descripcion as Pieza FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Usuario on Reparacion.IdUsuario=Usuario.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id");
+            CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id");
             connection.CerrarConexion();
         }
         private void JProceso_CheckedChanged(object sender, EventArgs e)
         {
-            Jtxtbuscar.Text = "";
+            
             Connection connection = new Connection();
             connection.AbrirConexion();
-            CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo,Reparacion.Falla as Falla,Reparacion.Diagnostico as Diagnostico,Servicio.Nombre as Servicio,Reparacion.Anticipo as Anticipo,Estado.Nombre as Estado,Reparacion.Fecha as Fecha,Cliente.Nombre as Cliente, Usuario.Nombre as Usuario, Reparacion.CostoTotal as Total, Pieza.Descripcion as Pieza FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Usuario on Reparacion.IdUsuario=Usuario.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id WHERE IdEstado = '" + 7 + "'");
+            CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id WHERE IdEstado = '" + 7 + "'");
             connection.CerrarConexion();
         }
         private void CEspera_CheckedChanged(object sender, EventArgs e)
         {
-            Jtxtbuscar.Text = "";
+            
             Connection connection = new Connection();
             connection.AbrirConexion();
-            CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo,Reparacion.Falla as Falla,Reparacion.Diagnostico as Diagnostico,Servicio.Nombre as Servicio,Reparacion.Anticipo as Anticipo,Estado.Nombre as Estado,Reparacion.Fecha as Fecha,Cliente.Nombre as Cliente, Usuario.Nombre as Usuario, Reparacion.CostoTotal as Total, Pieza.Descripcion as Pieza FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Usuario on Reparacion.IdUsuario=Usuario.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id WHERE IdEstado = '" + 6 + "'");
+            CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id WHERE IdEstado = '" + 6 + "'");
             connection.CerrarConexion();
         }
         private void JTerminados_CheckedChanged(object sender, EventArgs e)
         {
-            Jtxtbuscar.Text = "";
+           
             Connection connection = new Connection();
             connection.AbrirConexion();
-            CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo,Reparacion.Falla as Falla,Reparacion.Diagnostico as Diagnostico,Servicio.Nombre as Servicio,Reparacion.Anticipo as Anticipo,Estado.Nombre as Estado,Reparacion.Fecha as Fecha,Cliente.Nombre as Cliente, Usuario.Nombre as Usuario, Reparacion.CostoTotal as Total, Pieza.Descripcion as Pieza FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Usuario on Reparacion.IdUsuario=Usuario.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id WHERE IdEstado = '" + 3 + "'");
+            CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id WHERE IdEstado = '" + 3 + "'");
             connection.CerrarConexion();
         }
         private void CDGReparacion_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -513,6 +508,16 @@ namespace WindowsFormsApp1.Views
             btnAddClientH.Visible = false;
             
         }
+
+        private void btnLimpiarCampos_Click(object sender, EventArgs e)
+        {
+            txtMarca.Text = "";
+            txtDescripcionDeFalla.Text = "";
+            txtDescripcionDiagnosticoEspecifico.Text = "";
+            txtModelo.Text = "";
+            txtTotal.Text = "";
+            txtAnticipo.Text = "";
+        }
     }
 }
         /*private void SbtnAgregarRol_Click(object sender, EventArgs e)
@@ -527,5 +532,4 @@ namespace WindowsFormsApp1.Views
             conexion.CerrarConexion(); 
         }*/
 
-    }
-}
+   
