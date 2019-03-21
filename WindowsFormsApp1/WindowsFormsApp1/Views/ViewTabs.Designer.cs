@@ -95,7 +95,6 @@
             this.JTerminados = new System.Windows.Forms.RadioButton();
             this.JProceso = new System.Windows.Forms.RadioButton();
             this.JradioTodos = new System.Windows.Forms.RadioButton();
-            this.Jtxtbuscar = new System.Windows.Forms.TextBox();
             this.JlblBuscar = new System.Windows.Forms.Label();
             this.JPicture = new System.Windows.Forms.PictureBox();
             this.JpictureBox = new System.Windows.Forms.PictureBox();
@@ -129,6 +128,7 @@
             this.idReparacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.linkCerrarSesion = new System.Windows.Forms.LinkLabel();
             this.reparacionTableAdapter = new WindowsFormsApp1.TechPOSdbDataSetTableAdapters.ReparacionTableAdapter();
+            this.JtxtBuscar2 = new System.Windows.Forms.TextBox();
             this.precioTClmVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioUClmVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descrClmVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -816,12 +816,12 @@
             // 
             // tabReparacion
             // 
+            this.tabReparacion.Controls.Add(this.JtxtBuscar2);
             this.tabReparacion.Controls.Add(this.CDGReparacion);
             this.tabReparacion.Controls.Add(this.CEspera);
             this.tabReparacion.Controls.Add(this.JTerminados);
             this.tabReparacion.Controls.Add(this.JProceso);
             this.tabReparacion.Controls.Add(this.JradioTodos);
-            this.tabReparacion.Controls.Add(this.Jtxtbuscar);
             this.tabReparacion.Controls.Add(this.JlblBuscar);
             this.tabReparacion.Controls.Add(this.JPicture);
             this.tabReparacion.Controls.Add(this.JpictureBox);
@@ -838,6 +838,7 @@
             // 
             this.CDGReparacion.AllowUserToAddRows = false;
             this.CDGReparacion.AllowUserToDeleteRows = false;
+            this.CDGReparacion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.CDGReparacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.CDGReparacion.Location = new System.Drawing.Point(3, 241);
             this.CDGReparacion.Name = "CDGReparacion";
@@ -893,15 +894,6 @@
             this.JradioTodos.Text = "Todos";
             this.JradioTodos.UseVisualStyleBackColor = true;
             this.JradioTodos.CheckedChanged += new System.EventHandler(this.JradioTodos_CheckedChanged);
-            // 
-            // Jtxtbuscar
-            // 
-            this.Jtxtbuscar.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Jtxtbuscar.Location = new System.Drawing.Point(434, 78);
-            this.Jtxtbuscar.Name = "Jtxtbuscar";
-            this.Jtxtbuscar.Size = new System.Drawing.Size(313, 34);
-            this.Jtxtbuscar.TabIndex = 2;
-            this.Jtxtbuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Jtxtbuscar_KeyPress);
             // 
             // JlblBuscar
             // 
@@ -1154,6 +1146,7 @@
             this.precioTClmVenta.Width = 125;
             // 
             // precioUClmVenta
+            // JtxtBuscar2
             // 
             this.precioUClmVenta.HeaderText = "Precio U.";
             this.precioUClmVenta.Name = "precioUClmVenta";
@@ -1174,6 +1167,11 @@
             // 
             this.codClmVenta.HeaderText = "Código";
             this.codClmVenta.Name = "codClmVenta";
+            this.JtxtBuscar2.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.JtxtBuscar2.Location = new System.Drawing.Point(442, 80);
+            this.JtxtBuscar2.Name = "JtxtBuscar2";
+            this.JtxtBuscar2.Size = new System.Drawing.Size(289, 34);
+            this.JtxtBuscar2.TabIndex = 10;
             // 
             // ViewTabs
             // 
@@ -1290,7 +1288,6 @@
         private System.Windows.Forms.Label usuarioLblVenta;
         private System.Windows.Forms.PictureBox JpictureBox;
         private System.Windows.Forms.PictureBox JPicture;
-        private System.Windows.Forms.TextBox Jtxtbuscar;
         private System.Windows.Forms.Label JlblBuscar;
         private System.Windows.Forms.RadioButton JTerminados;
         private System.Windows.Forms.RadioButton JProceso;
@@ -1340,6 +1337,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn descrClmVenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioUClmVenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioTClmVenta;
+        private System.Windows.Forms.TextBox JtxtBuscar2;
         //  private System.Windows.Forms.TextBox textBox1;
         //private System.Windows.Forms.Label UnaLabel;
         //  private System.Windows.Forms.Label label5;
