@@ -10,6 +10,7 @@ namespace WindowsFormsApp1.Views
     public partial class ViewTabs : Form
     {
         private DBConnectio.Connection conexion = new DBConnectio.Connection();
+        private static int index = 0;
         public ViewTabs()
         {
             InitializeComponent();
@@ -47,15 +48,17 @@ namespace WindowsFormsApp1.Views
             this.MinimizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
             GenerarIdEquipo();
+            //-------------------------------------------
+           
 
         }
         private void linkCerrarSesion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Close();
+            this.Hide();
             ViewLogin view = new ViewLogin();
             view.Show();
         }
-        //------------------------------------------------------------------------------------
+        //---------------------------------------------------------------------------------------------------
         //Tab Recibir Equipo
         private void btnPedirPieza_Click(object sender, System.EventArgs e)
         {
@@ -242,7 +245,7 @@ namespace WindowsFormsApp1.Views
         {
 
         }
-        //------------------------------------------------------------------------------------
+        //---------------------------------------------------------------------------------------------------
         //Generales
         public void MostrarConfiguracionUsuarios(string Rol)
         {
@@ -288,14 +291,24 @@ namespace WindowsFormsApp1.Views
                 }
                 if (rbDiagnosticoEspecifico.Checked || rbDiagnosticoRapido.Checked)
                 {
-                    String sql = "Insert into Reparacion values(" + lblIdEquipo.Text + ",'" + txtMarca.Text
+                    string concatenarDiagTex = tipoDiag + " : "+txtDescripcionDiagnosticoEspecifico.Text;
+                    String sql = "Insert into Reparacion (Id,Marca,Modelo,Falla,Diagnostico,IdServicio,Anticipo,IdEstado,Fecha,IdCliente,IdUsuario,CostoTotal,IdPieza) values(" 
+                        + lblIdEquipo.Text + ",'" + txtMarca.Text
+                        + "','" + txtModelo.Text
+                        + "','" + txtDescripcionDeFalla.Text
+                        + "','" + concatenarDiagTex
+                        + "','" + ccbTipoServicio1.SelectedValue
+                        + "'," + txtAnticipo.Text + ",6,'" + fecha_actual + "','" + txtBuscarCliente.Text
+                        + "','" + comboResponsable.SelectedValue.ToString() + "'," + txtTotal.Text
+                        + ",1)";
+                    /*String sql = "Insert into Reparacion values(" + lblIdEquipo.Text + ",'" + txtMarca.Text
                         + "','" + txtModelo.Text
                         + "','" + txtDescripcionDeFalla.Text
                         + "','" + tipoDiag + ": " + txtDescripcionDiagnosticoEspecifico.Text
                         + "'," + ccbTipoServicio1.SelectedValue.ToString()
                         + "," + txtAnticipo.Text + ",6,'" + fecha_actual + "','" + txtBuscarCliente.Text
                         + "'," + comboResponsable.SelectedValue.ToString() + "," + txtTotal.Text
-                        + ",0)";
+                        + ",0)";*/
                     //MessageBox.Show(sql);
                     db.AddElements(sql);
                     db.CerrarConexion();
@@ -315,7 +328,7 @@ namespace WindowsFormsApp1.Views
             CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo,Reparacion.Falla as Falla,Reparacion.Diagnostico as Diagnostico,Servicio.Nombre as Servicio,Reparacion.Anticipo as Anticipo,Estado.Nombre as Estado,Reparacion.Fecha as Fecha,Cliente.Nombre as Cliente, Usuario.Nombre as Usuario, Reparacion.CostoTotal as Total, Pieza.Descripcion as Pieza FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Usuario on Reparacion.IdUsuario=Usuario.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id");
             connection.CerrarConexion();
         }
-        //-------------------------------------------------------------------------------------------
+        //----------------------------------------------------------------------------------------------------
         private void JPicture_Click(object sender, EventArgs e)
         {
             if (Jtxtbuscar.Text == "")
@@ -443,10 +456,11 @@ namespace WindowsFormsApp1.Views
                 e.Handled = true;
             }
         }
-
-
-
-        //-------------------------------------------------------------------------------------------
+       //-------------------------------------------------------------------------------------------------------
+        public void Bienvenido(string usuario)
+        {
+            this.CNombreUsuarioLblVenta.Text = usuario;
+        }
         public void GenerarId()
         {
             Connection conexion = new Connection();
@@ -483,19 +497,32 @@ namespace WindowsFormsApp1.Views
         }
         private void SbtnCancelar_Click(object sender, EventArgs e)
         {
+            txtBuscarCliente.Text = "";
+            txtNombre.Text = "";
+            txtApellido.Text = "";
+            txtCorreo.Text = "";
+            txtTelefono.Text = "";
+            //--------------------------------
+            SbtnCancelar.Visible = false;
+            btnAddClientH.Visible = true;
+            btnAgregarCliente.Visible = false;
+            //--------------------------------
+            txtNombre.Enabled = false;
+            txtApellido.Enabled = false;
+            txtNombre.Enabled = false;
+            txtTelefono.Enabled = false;
+            txtCorreo.Enabled = false;
+            
 
         }
-
         private void txtBuscarCliente_KeyPress(object sender, KeyPressEventArgs e)
         {
 
         }
-
         private void ViewTabs_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
-
         private void btnAddClientH_Click(object sender, EventArgs e)
         {
             GenerarId();
@@ -513,19 +540,41 @@ namespace WindowsFormsApp1.Views
             btnAddClientH.Visible = false;
             
         }
-    }
-}
-        /*private void SbtnAgregarRol_Click(object sender, EventArgs e)
+        private void btnLimpiarCampos_Click(object sender, EventArgs e)
         {
-            string _Rol = StxtAgregarRol.Text;
-            string consulta = "INSERT INTO Rol (Id,NombreRol) VALUES (@Id,@NombreRol)";
-            //Abrir conexion
-            conexion.AbrirConexion();
-            //Agregar datos
-            conexion.AgregarRoles(consulta,_random,_Rol);
-            //cerrar conexion
-            conexion.CerrarConexion(); 
-        }*/
-
-    }
+            txtBuscarCliente.Text = "";
+            txtNombre.Text = "";
+            txtApellido.Text = "";
+            txtCorreo.Text = "";
+            txtTelefono.Text = "";
+            //----------------------------------------------
+            txtMarca.Text = "";
+            txtModelo.Text = "";
+            txtDescripcionDeFalla.Text = "";
+            txtDescripcionDiagnosticoEspecifico.Text = "";
+            //---------------------------------------------
+            txtTotal.Text = "";
+            txtAnticipo.Text = "";
+        }
+        private void lupaImg_Click(object sender, EventArgs e)
+        {
+            Connection db = new Connection();
+            db.AbrirConexion();
+            if (db.Existe(buscarTbxVentas.Text))
+            {              
+                Venta(index);
+                index = index + 1;             
+            }
+            else
+            {
+                MessageBox.Show("PRODUCTO NO ENCONTRADO \n VERIFIQUE QUE EL CODIGO ESTE INGRESADO CORRECTAMENTE", "PRODUCTO NO ENCONTRADO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                buscarTbxVentas.Text = "";
+            }
+            db.CerrarConexion();
+        }
+        private void Venta(int fila)
+        {
+           
+        }
+    }    
 }

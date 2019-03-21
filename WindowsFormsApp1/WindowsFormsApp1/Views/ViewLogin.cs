@@ -41,12 +41,14 @@ namespace WindowsFormsApp1
                 db.AbrirConexion();
                 if (db.IniciarSesion(nu, co) == "Administrador")
                 {
+                    _vistaTabs.Bienvenido(nu);
                     _vistaTabs.MostrarConfiguracionUsuarios("Administrador");
                     _vistaTabs.Show();
                     this.Hide();
                 }
                 else if (db.IniciarSesion(nu, co) == "Trabajador")
                 {
+                    _vistaTabs.Bienvenido(nu);
                     _vistaTabs.Show();
                     this.Hide();
                 }
@@ -197,7 +199,7 @@ namespace WindowsFormsApp1
         }
         private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsLetter(e.KeyChar))
+            /*if (Char.IsLetter(e.KeyChar))
             {
                 e.Handled = false;
             }
@@ -212,7 +214,7 @@ namespace WindowsFormsApp1
             else
             {
                 e.Handled = true;
-            }
+            }*/
         }
     }
 }
