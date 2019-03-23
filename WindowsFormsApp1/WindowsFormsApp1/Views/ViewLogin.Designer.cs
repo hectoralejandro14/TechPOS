@@ -45,7 +45,7 @@
             // 
             this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(198)))), ((int)(((byte)(206)))));
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.Location = new System.Drawing.Point(348, 408);
+            this.btnAceptar.Location = new System.Drawing.Point(286, 389);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(130, 40);
             this.btnAceptar.TabIndex = 0;
@@ -57,7 +57,6 @@
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.HideSelection = false;
-            this.txtUsuario.Location = new System.Drawing.Point(348, 288);
             this.txtUsuario.Location = new System.Drawing.Point(375, 287);
             this.txtUsuario.Multiline = true;
             this.txtUsuario.Name = "txtUsuario";
@@ -69,7 +68,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(266, 285);
+            this.label1.Location = new System.Drawing.Point(223, 283);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(103, 29);
             this.label1.TabIndex = 5;
@@ -79,7 +78,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(235, 334);
+            this.label2.Location = new System.Drawing.Point(223, 333);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(146, 29);
             this.label2.TabIndex = 7;
@@ -89,7 +88,6 @@
             // 
             this.txtContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContrasena.HideSelection = false;
-            this.txtContrasena.Location = new System.Drawing.Point(348, 337);
             this.txtContrasena.Location = new System.Drawing.Point(375, 336);
             this.txtContrasena.Multiline = true;
             this.txtContrasena.Name = "txtContrasena";
@@ -114,7 +112,7 @@
             // 
             this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(198)))), ((int)(((byte)(206)))));
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.Location = new System.Drawing.Point(348, 454);
+            this.btnCerrar.Location = new System.Drawing.Point(428, 389);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(130, 38);
             this.btnCerrar.TabIndex = 10;

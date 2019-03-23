@@ -85,9 +85,18 @@ namespace WindowsFormsApp1.DBConnectio
                 MessageBox.Show("Ocurrio un error con la conexión a la Base de Datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public void ActualizarDatos(string sql)
+        public void ActualizarDatos(string query,string rol)
         {
-
+            try
+            {
+                SqlCommand comando = new SqlCommand(query, conexion);
+                comando.ExecuteNonQuery();
+                MessageBox.Show("EL ROL DE ["+rol+"] FUE AGREDADO CON EXITO AL USUARIO", "ROL ACTUALIZADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch
+            {
+                MessageBox.Show("NO SE PUDO AGREGAR EL ROL AL USUARIO POR PROBLEMAS DE CONECTIVIDAD. \nSI USTED NO ES TECNICO EN INFORMATICA PORFAVOR CONTACTESE CON UNO", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         public void EliminarDatos()
         {
@@ -119,16 +128,6 @@ namespace WindowsFormsApp1.DBConnectio
         {
             return conexion;
         }
-        /*public DataTable getProducto(string CLAVE_PRODUCTO)
-        {
-            /*SqlCommand comando = new SqlCommand("SELECT ClaveProducto,Descripcion,Costo FROM Producto WHERE ClaveProducto = '"+CLAVE_PRODUCTO+"'", conexion);
-            SqlDataAdapter adaptador = new SqlDataAdapter();
-            adaptador.SelectCommand = comando;
-            DataTable tab = new DataTable();
-            adaptador.Fill(tab);
-            //table = dataSet.Tables[0];
-            return tab;*/
-        //}
         //***************************************************************************
         //SE PUEDE OPTIMIZAR
         public bool VerificarExistenciaDeId(decimal id)
@@ -229,7 +228,6 @@ namespace WindowsFormsApp1.DBConnectio
                         aux = true;
                     }
                 }
-
             }
             catch /*(IndexOutOfRangeException e3)*/
             {
@@ -261,6 +259,6 @@ namespace WindowsFormsApp1.DBConnectio
             }
             return aux;
         }
-        //***************************************************************************
     }
+
 }
