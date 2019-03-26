@@ -51,7 +51,7 @@ namespace WindowsFormsApp1.Views
         }
         private void linkCerrarSesion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Close();
+            this.Hide();
             ViewLogin view = new ViewLogin();
             view.Show();
         }
@@ -185,12 +185,12 @@ namespace WindowsFormsApp1.Views
             conexion.AbrirConexion();
             if ((!txtNombre.Text.Equals("")) && (!txtApellido.Text.Equals("")) && (!txtTelefono.Text.Equals("")) && (!txtCorreo.Text.Equals("")))
             {
-                if (validarEmail(txtCorreo.Text))
+                if (validarEmail(txtCorreo.Text)==true)
                 {
                     
                     decimal idR = Convert.ToDecimal(txtBuscarCliente.Text);
                     //Agregar cliente
-                    String sql = "INSERT INTO Cliente (Id,Nombre,Apellido,Telefono,Contacto) VALUES (" + idR + ",'" + txtNombre.Text + "','" + txtApellido.Text + "'," + txtTelefono.Text + ",'" + txtCorreo.Text + "')";
+                    String sql = "INSERT INTO Cliente (Id,Nombre,Apellido,Telefono,Contacto) VALUES (" + idR + ",'" + txtNombre.Text + "','" + txtApellido.Text + "','" + txtTelefono.Text + "','" + txtCorreo.Text + "')";
                     conexion.AddElements(sql);
                     conexion.CerrarConexion();
 
@@ -526,6 +526,3 @@ namespace WindowsFormsApp1.Views
             //cerrar conexion
             conexion.CerrarConexion(); 
         }*/
-
-    }
-}
