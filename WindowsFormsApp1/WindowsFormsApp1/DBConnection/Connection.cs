@@ -14,6 +14,7 @@ namespace WindowsFormsApp1.DBConnectio
         DataSet dataSet = new DataSet();
         SqlDataAdapter adapter = new SqlDataAdapter();
         //-----------------------------------------------------------------------------
+        //Metodos de conexion
         public Connection()
         {
             conexion.ConnectionString = cadena;
@@ -28,16 +29,16 @@ namespace WindowsFormsApp1.DBConnectio
             }
             catch (System.Exception e1)
             {
-                MessageBox.Show("Ocurrió un problema en la conexión con la Base de Datos { "+e1.Message+" }",
+                MessageBox.Show("Ocurrió un problema en la conexión con la Base de Datos { " + e1.Message + " }",
                    "Conexion Fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }  
+        }
         public void CerrarConexion()
         {
             try
             {
                 conexion.Close();
-               // MessageBox.Show("Conexion cerrada con la Base de Datos", "Conexion Cerrada", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                // MessageBox.Show("Conexion cerrada con la Base de Datos", "Conexion Cerrada", MessageBoxButtons.OK, MessageBoxIcon.Question);
                 Console.WriteLine("Conexion cerrada con la Base de Datos");
             }
             catch (System.Exception e2)
@@ -47,8 +48,22 @@ namespace WindowsFormsApp1.DBConnectio
             }
         }
         //-----------------------------------------------------------------------------
-        //Agregar Roles
-        public void AgregarRoles(string cadena,decimal Id,string NombreROL)
+        public bool AddElements(string SQL)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand(SQL, conexion);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Los datos fueron registrados exitosamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return true;
+            }
+            catch (System.Data.SqlClient.SqlException e2)
+            {
+                MessageBox.Show("Ocurrio un error con la conexión a la Base de Datos { " + e2.Message + " } ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+        public void AgregarRoles(string cadena, decimal Id, string NombreROL)
         {
             try
             {
@@ -70,27 +85,28 @@ namespace WindowsFormsApp1.DBConnectio
                 MessageBox.Show("Ocurrio un error con la conexión a la Base de Datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //-----------------------------------------------------------------------------
-        //Agregar general
-        public bool AddElements(string SQL)
+        public void ActualizarDatos(string query,string rol)
         {
             try
             {
-                SqlCommand cmd = new SqlCommand(SQL, conexion);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Los datos fueron registrados exitosamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return true;
+                SqlCommand comando = new SqlCommand(query, conexion);
+                comando.ExecuteNonQuery();
+                MessageBox.Show("EL ROL DE ["+rol+"] FUE AGREDADO CON EXITO AL USUARIO", "ROL ACTUALIZADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch
             {
-                MessageBox.Show("Ocurrio un error con la conexión a la Base de Datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
+                MessageBox.Show("NO SE PUDO AGREGAR EL ROL AL USUARIO POR PROBLEMAS DE CONECTIVIDAD. \nSI USTED NO ES TECNICO EN INFORMATICA PORFAVOR CONTACTESE CON UNO", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public SqlDataReader consulta (string SQL)
+        public void EliminarDatos()
+        {
+
+        }
+        //-----------------------------------------------------------------------------   
+        public SqlDataReader consulta(string SQL)
         {
             SqlCommand cmd = new SqlCommand(SQL, conexion);
-            SqlDataReader dr= cmd.ExecuteReader();
+            SqlDataReader dr = cmd.ExecuteReader();
             return dr;
         }
         public SqlDataAdapter consultaMasDatos(String SQL)
@@ -101,14 +117,19 @@ namespace WindowsFormsApp1.DBConnectio
         }
         public DataTable buscarReparacion(string cadena)
         {
-            adapter.SelectCommand = new SqlCommand(cadena, conexion);
             dataSet.Reset();
+            adapter.SelectCommand = new SqlCommand(cadena, conexion);
             adapter.Fill(dataSet);
             table = dataSet.Tables[0];
 
             return table;
         }
-        //------------------------------------------------------------------------------
+        public SqlConnection getConexion()
+        {
+            return conexion;
+        }
+        //***************************************************************************
+        //SE PUEDE OPTIMIZAR
         public bool VerificarExistenciaDeId(decimal id)
         {
             string _IdString = id.ToString();
@@ -126,7 +147,7 @@ namespace WindowsFormsApp1.DBConnectio
                         aux = true;
                     }
                 }
-               
+
             }
             catch /*(IndexOutOfRangeException e3)*/
             {
@@ -151,7 +172,7 @@ namespace WindowsFormsApp1.DBConnectio
                         aux = true;
                     }
                 }
-                
+
             }
             catch /*(IndexOutOfRangeException e3)*/
             {
@@ -159,6 +180,7 @@ namespace WindowsFormsApp1.DBConnectio
             }
             return aux;
         }
+        //***************************************************************************
         public string IniciarSesion(string nombreUsuario, string contra)
         {
             string rol = "";
@@ -188,6 +210,55 @@ namespace WindowsFormsApp1.DBConnectio
             }
             return rol;
         }
-    }
-}
+        //***************************************************************************
+        //SE PUEDE OPTIMIZAR
+        public bool ExisteUsuario(string usuario)
+        {
+            bool aux = false;
+            try
+            {
+                SqlCommand cmd = new SqlCommand("SELECT NombreUsuario FROM Usuario WHERE NombreUsuario = '" + usuario + "'", conexion);
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                if (dt.Rows.Count == 1)
+                {
+                    if (dt.Rows[0][0].ToString().Equals(usuario))
+                    {
+                        aux = true;
+                    }
+                }
+            }
+            catch /*(IndexOutOfRangeException e3)*/
+            {
+                MessageBox.Show("ERROR SQL", "Error de Conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return aux;
+        }
+        public bool Existe(string codigo)
+        {
+            bool aux = false;
+            try
+            {
+                SqlCommand cmd = new SqlCommand("SELECT ClaveProducto FROM Producto WHERE ClaveProducto = '" + codigo + "'", conexion);
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                if (dt.Rows.Count == 1)
+                {
+                    if (dt.Rows[0][0].ToString().Equals(codigo))
+                    {
+                        aux = true;
+                    }
+                }
 
+            }
+            catch /*(IndexOutOfRangeException e3)*/
+            {
+                MessageBox.Show("ERROR DE CONEXION CON SQL", "ERRO DE CONEXION", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return aux;
+        }
+    }
+
+}

@@ -1,0 +1,1 @@
+﻿update Usuario set Rol ='Administrador' where Id ='329506206';
