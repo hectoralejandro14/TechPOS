@@ -551,7 +551,7 @@ namespace WindowsFormsApp1.Views
         private void SbtnAgregarUsuario_Click(object sender, EventArgs e)
         {
             NuevoUsuario nuevoUsuario = new NuevoUsuario();
-            nuevoUsuario.PeticionDe();
+            //nuevoUsuario.PeticionDe();
             nuevoUsuario.Show();
         }
         //---------------------------------------------------------------------------------------------------

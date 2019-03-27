@@ -107,6 +107,7 @@
             this.SlinklabelRecuperarContrasena.TabIndex = 9;
             this.SlinklabelRecuperarContrasena.TabStop = true;
             this.SlinklabelRecuperarContrasena.Text = "Recuperar Contraseña";
+            this.SlinklabelRecuperarContrasena.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SlinklabelRecuperarContrasena_LinkClicked);
             // 
             // btnCerrar
             // 
