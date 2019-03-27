@@ -35,17 +35,18 @@ namespace WindowsFormsApp1
                 string auxNu = txtUsuario.Text;
                 string nu = auxNu.ToUpper();
                 string co = txtContrasena.Text;
-                /*MD5 md5Hash = MD5.Create();
-                string hash = encriptar.GetMd5Hash(md5Hash, co);*/
+                //Controllers.Encrypt ect = new Controllers.Encrypt();
+                string coe = Controllers.Encrypt.GetMD5(txtContrasena.Text);
+                //MessageBox.Show(coe);
                 db.AbrirConexion();
-                if (db.IniciarSesion(nu, co) == "Administrador")
+                if (db.IniciarSesion(nu, coe) == "Administrador")
                 {
                     _vistaTabs.Bienvenido(nu);
                     _vistaTabs.MostrarConfiguracionUsuarios("Administrador");
                     _vistaTabs.Show();
                     this.Hide();
                 }
-                else if (db.IniciarSesion(nu, co) == "Trabajador")
+                else if (db.IniciarSesion(nu, coe) == "Trabajador")
                 {
                     _vistaTabs.Bienvenido(nu);
                     _vistaTabs.Show();
@@ -215,5 +216,14 @@ namespace WindowsFormsApp1
                 e.Handled = true;
             }*/
         }
+
+        private void SlinklabelRecuperarContrasena_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            cambiarContraseña cc = new cambiarContraseña();
+            
+            cc.Show();
+            this.Hide();
+        }
     }
+    
 }

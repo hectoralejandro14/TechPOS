@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\Encriptacion.cs" />
+    <Compile Include="Controllers\Encrypt.cs" />
     <Compile Include="Controllers\ValidacionCampos.cs" />
     <Compile Include="DBConnection\Connection.cs" />
     <Compile Include="TechPOSdbDataSet.Designer.cs">
@@ -58,6 +59,12 @@
     </Compile>
     <Compile Include="Views\Buscar.Designer.cs">
       <DependentUpon>Buscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\cambiarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\cambiarContraseña.Designer.cs">
+      <DependentUpon>cambiarContraseña.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Cobrar.cs">
       <SubType>Form</SubType>
@@ -151,6 +158,9 @@
     </Compile>
     <EmbeddedResource Include="Views\Buscar.resx">
       <DependentUpon>Buscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\cambiarContraseña.resx">
+      <DependentUpon>cambiarContraseña.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Cobrar.resx">
       <DependentUpon>Cobrar.cs</DependentUpon>

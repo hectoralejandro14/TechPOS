@@ -48,7 +48,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(286, 389);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(130, 40);
-            this.btnAceptar.TabIndex = 0;
+            this.btnAceptar.TabIndex = 6;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -92,7 +92,7 @@
             this.txtContrasena.Multiline = true;
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(234, 26);
-            this.txtContrasena.TabIndex = 4;
+            this.txtContrasena.TabIndex = 5;
             this.txtContrasena.UseSystemPasswordChar = true;
             this.txtContrasena.TextChanged += new System.EventHandler(this.txtContrasena_TextChanged);
             this.txtContrasena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContrasena_KeyPress);
@@ -107,6 +107,7 @@
             this.SlinklabelRecuperarContrasena.TabIndex = 9;
             this.SlinklabelRecuperarContrasena.TabStop = true;
             this.SlinklabelRecuperarContrasena.Text = "Recuperar Contraseña";
+            this.SlinklabelRecuperarContrasena.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SlinklabelRecuperarContrasena_LinkClicked);
             // 
             // btnCerrar
             // 
@@ -115,7 +116,7 @@
             this.btnCerrar.Location = new System.Drawing.Point(428, 389);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(130, 38);
-            this.btnCerrar.TabIndex = 10;
+            this.btnCerrar.TabIndex = 7;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
