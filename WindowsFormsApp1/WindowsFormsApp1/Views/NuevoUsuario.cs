@@ -17,11 +17,11 @@ namespace WindowsFormsApp1.Views
             CtxtContrasenaU.PasswordChar = '*';
             //------------------------------------------------------
             CtxtConfirmarContrasenaU.PasswordChar = '*';
-            
+
         }
         private void btnAceptarr_Click(object sender, EventArgs e)
         {
-            if (CtxtNombreUsuario.Text.Equals("") || CtxtNombreU.Text.Equals("") || CtxtApellidoU.Text.Equals("") || CtxtCorreoU.Text.Equals("") 
+            if (CtxtNombreUsuario.Text.Equals("") || CtxtNombreU.Text.Equals("") || CtxtApellidoU.Text.Equals("") || CtxtCorreoU.Text.Equals("")
                 || CtxtTelefonoU.Text.Equals("") || CtxtContrasenaU.Text.Equals("") || CtxtConfirmarContrasenaU.Text.Equals(""))
             {
                 MessageBox.Show("NO SE PUEDE AGREGAR UN NUEVO USUARIO POR LA EXISTENCIA DE CAMPOS VACIOS", "ERROR DE CAMPOS", MessageBoxButtons.OK, MessageBoxIcon.Question);
@@ -82,7 +82,7 @@ namespace WindowsFormsApp1.Views
             {
                 login.Show();
                 this.Hide();
-            }     
+            }
         }
         public static bool validarEmail(string email)
         {
@@ -115,7 +115,7 @@ namespace WindowsFormsApp1.Views
         }
         private void CtxtTelefonoU_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(Char.IsDigit(e.KeyChar))
+            if (Char.IsDigit(e.KeyChar))
             {
                 e.Handled = false;
             }
@@ -132,66 +132,5 @@ namespace WindowsFormsApp1.Views
                 e.Handled = true;
             }
         }
-        /*private void CtxtNombreUsuario_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (Char.IsLetter(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-                CtxtApellidoU.Text = "";
-                return;
-            }
-        }
-
-        //private void CtxtNombreU_KeyPress(object sender, KeyPressEventArgs e)
-        //{
-        //    if (Char.IsLetter(e.KeyChar))
-        //    {
-        //        e.Handled = false;
-        //    }
-        //    else if (Char.IsControl(e.KeyChar))
-        //    {
-        //        e.Handled = false;
-        //    }
-        //    else if (Char.IsSeparator(e.KeyChar))
-        //    {
-        //        e.Handled = false;
-        //    }
-        //    else
-        //    {
-        //        e.Handled = true;
-        //    }
-        //}
-
-        //private void CtxtApellidoU_KeyPress(object sender, KeyPressEventArgs e)
-        //{
-        //    if (Char.IsLetter(e.KeyChar))
-        //    {
-        //        e.Handled = false;
-        //    }
-        //    else if (Char.IsControl(e.KeyChar))
-        //    {
-        //        e.Handled = false;
-        //    }
-        //    else if (Char.IsSeparator(e.KeyChar))
-        //    {
-        //        e.Handled = false;
-        //    }
-        //    else
-        //    {
-        //        e.Handled = true;
-        //    }
-        //}
     }
 }

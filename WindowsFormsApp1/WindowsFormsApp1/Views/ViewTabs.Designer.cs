@@ -443,7 +443,6 @@
             this.btnAddClientH.TabIndex = 48;
             this.btnAddClientH.Text = "Agregar nuevo cliente";
             this.btnAddClientH.UseVisualStyleBackColor = false;
-            this.btnAddClientH.Click += new System.EventHandler(this.btnAddClientH_Click);
             // 
             // SbtnCancelar
             // 

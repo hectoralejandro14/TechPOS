@@ -551,7 +551,6 @@ namespace WindowsFormsApp1.Views
         private void SbtnAgregarUsuario_Click(object sender, EventArgs e)
         {
             NuevoUsuario nuevoUsuario = new NuevoUsuario();
-            nuevoUsuario.PeticionDe();
             nuevoUsuario.Show();
         }
         //---------------------------------------------------------------------------------------------------
@@ -623,7 +622,7 @@ namespace WindowsFormsApp1.Views
             db.ActualizarDatos(query,rol);
             db.CerrarConexion();
         }
-        private void ccbTipoServicio1_MeasureItem(object sender,System.Windows.Forms.MeasureItemEventArgs e)
+        private void ccbTipoServicio1_MeasureItem(object sender, System.Windows.Forms.MeasureItemEventArgs e)
         {
 
             switch (e.Index)
@@ -639,45 +638,6 @@ namespace WindowsFormsApp1.Views
                     break;
             }
             e.ItemWidth = 260;
-
         }
-    }
+        }
 }
-
-   
-
-        private void ViewTabs_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btnAddClientH_Click(object sender, EventArgs e)
-        {
-            GenerarId();
-            btnAgregarCliente.Visible = true;
-           
-            SbtnCancelar.Visible = true;
-            txtNombre.Enabled = true;
-            txtNombre.Text = "";
-            txtApellido.Enabled = true;
-            txtApellido.Text = "";
-            txtTelefono.Enabled = true;
-            txtTelefono.Text= "";
-            txtCorreo.Enabled = true;
-            txtCorreo.Text = "";
-            btnAddClientH.Visible = false;
-            
-        }
-    }
-}
-        /*private void SbtnAgregarRol_Click(object sender, EventArgs e)
-        {
-            string _Rol = StxtAgregarRol.Text;
-            string consulta = "INSERT INTO Rol (Id,NombreRol) VALUES (@Id,@NombreRol)";
-            //Abrir conexion
-            conexion.AbrirConexion();
-            //Agregar datos
-            conexion.AgregarRoles(consulta,_random,_Rol);
-            //cerrar conexion
-            conexion.CerrarConexion(); 
-        }*/
