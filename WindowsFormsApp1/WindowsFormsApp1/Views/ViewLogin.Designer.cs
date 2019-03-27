@@ -48,7 +48,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(348, 408);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(130, 40);
-            this.btnAceptar.TabIndex = 0;
+            this.btnAceptar.TabIndex = 6;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -57,7 +57,6 @@
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.HideSelection = false;
-            this.txtUsuario.Location = new System.Drawing.Point(348, 288);
             this.txtUsuario.Location = new System.Drawing.Point(375, 287);
             this.txtUsuario.Multiline = true;
             this.txtUsuario.Name = "txtUsuario";
@@ -89,12 +88,11 @@
             // 
             this.txtContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContrasena.HideSelection = false;
-            this.txtContrasena.Location = new System.Drawing.Point(348, 337);
             this.txtContrasena.Location = new System.Drawing.Point(375, 336);
             this.txtContrasena.Multiline = true;
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(234, 26);
-            this.txtContrasena.TabIndex = 4;
+            this.txtContrasena.TabIndex = 5;
             this.txtContrasena.UseSystemPasswordChar = true;
             this.txtContrasena.TextChanged += new System.EventHandler(this.txtContrasena_TextChanged);
             this.txtContrasena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContrasena_KeyPress);
@@ -117,7 +115,7 @@
             this.btnCerrar.Location = new System.Drawing.Point(348, 454);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(130, 38);
-            this.btnCerrar.TabIndex = 10;
+            this.btnCerrar.TabIndex = 7;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
