@@ -17,6 +17,7 @@ namespace WindowsFormsApp1.Views
             CtxtContrasenaU.PasswordChar = '*';
             //------------------------------------------------------
             CtxtConfirmarContrasenaU.PasswordChar = '*';
+            
 
         }
         private void btnAceptarr_Click(object sender, EventArgs e)
@@ -39,7 +40,8 @@ namespace WindowsFormsApp1.Views
                         if (!(conexion.ExisteUsuario(CtxtNombreUsuario.Text.ToUpper())))
                         {
                             decimal id = GenerarId();
-                            String _query = "INSERT INTO Usuario (Id,NombreUsuario,Nombre,Apellido,Telefono,Correo,Contra,Rol) VALUES (" + id + ",'" + CtxtNombreUsuario.Text + "','" + CtxtNombreU.Text + "','" + CtxtApellidoU.Text + "','" + CtxtTelefonoU.Text + "','" + CtxtCorreoU.Text + "','" + CtxtContrasenaU.Text + "','Trabajador')";
+                            string coe = Controllers.Encrypt.GetMD5(CtxtContrasenaU.Text);
+                            String _query = "INSERT INTO Usuario (Id,NombreUsuario,Nombre,Apellido,Telefono,Correo,Contra,Rol) VALUES (" + id + ",'" + CtxtNombreUsuario.Text + "','" + CtxtNombreU.Text + "','" + CtxtApellidoU.Text + "','" + CtxtTelefonoU.Text + "','" + CtxtCorreoU.Text + "','" + coe + "','Trabajador')";
                             conexion.AddElements(_query);
                             //------------------------------------------------
                             CtxtNombreUsuario.Text = "";
@@ -82,7 +84,7 @@ namespace WindowsFormsApp1.Views
             {
                 login.Show();
                 this.Hide();
-            }
+            }     
         }
         public static bool validarEmail(string email)
         {
@@ -131,6 +133,10 @@ namespace WindowsFormsApp1.Views
             {
                 e.Handled = true;
             }
+        }
+        public void PeticionDe()
+        {
+            reciboPeticionDe = 1;
         }
     }
 }

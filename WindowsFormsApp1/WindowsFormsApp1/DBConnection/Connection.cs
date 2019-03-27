@@ -102,6 +102,12 @@ namespace WindowsFormsApp1.DBConnectio
         {
 
         }
+        public void modificar(string SQL)
+        {
+            SqlCommand = new SqlCommand (SQL, conexion);
+            SqlCommand.ExecuteNonQuery();
+
+        }
         //-----------------------------------------------------------------------------   
         public SqlDataReader consulta(string SQL)
         {
