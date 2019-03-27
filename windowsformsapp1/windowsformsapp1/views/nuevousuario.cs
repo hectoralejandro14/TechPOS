@@ -37,7 +37,8 @@ namespace WindowsFormsApp1.Views
                         if (!(conexion.ExisteUsuario(CtxtNombreUsuario.Text.ToUpper())))
                         {
                             decimal id = GenerarId();
-                            String _query = "INSERT INTO Usuario (Id,NombreUsuario,Nombre,Apellido,Telefono,Correo,Contra,Rol) VALUES (" + id + ",'" + CtxtNombreUsuario.Text + "','" + CtxtNombreU.Text + "','" + CtxtApellidoU.Text + "','" + CtxtTelefonoU.Text + "','" + CtxtCorreoU.Text + "','" + CtxtContrasenaU.Text + "','Trabajador')";
+                            string coe = Controllers.Encrypt.GetMD5(CtxtContrasenaU.Text);
+                            String _query = "INSERT INTO Usuario (Id,NombreUsuario,Nombre,Apellido,Telefono,Correo,Contra,Rol) VALUES (" + id + ",'" + CtxtNombreUsuario.Text + "','" + CtxtNombreU.Text + "','" + CtxtApellidoU.Text + "','" + CtxtTelefonoU.Text + "','" + CtxtCorreoU.Text + "','" + coe + "','Trabajador')";
                             conexion.AddElements(_query);
                             //------------------------------------------------
                             CtxtNombreUsuario.Text = "";
