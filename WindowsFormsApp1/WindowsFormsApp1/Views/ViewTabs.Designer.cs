@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewTabs));
             this.tabPuntoVenta = new System.Windows.Forms.TabControl();
             this.tabVenta = new System.Windows.Forms.TabPage();
+            this.ClblCodigoDeBarras = new System.Windows.Forms.Label();
+            this.CNombreUsuarioLblVenta = new System.Windows.Forms.Label();
             this.totalTbxVenta = new System.Windows.Forms.TextBox();
             this.ivaTbxVentas = new System.Windows.Forms.TextBox();
             this.subTotalTbxVentas = new System.Windows.Forms.TextBox();
@@ -47,8 +49,8 @@
             this.descrClmVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioUClmVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioTClmVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aceptarBtnVentas = new System.Windows.Forms.Button();
-            this.cancelarBtnVentas = new System.Windows.Forms.Button();
+            this.CbtnCobrarVenta = new System.Windows.Forms.Button();
+            this.CbtnCancelarVenta = new System.Windows.Forms.Button();
             this.usuarioLblVenta = new System.Windows.Forms.Label();
             this.tabRecibirEquipo = new System.Windows.Forms.TabPage();
             this.btnAddClientH = new System.Windows.Forms.Button();
@@ -93,6 +95,7 @@
             this.txtBuscarCliente = new System.Windows.Forms.TextBox();
             this.SlblBuscarCliente = new System.Windows.Forms.Label();
             this.tabReparacion = new System.Windows.Forms.TabPage();
+            this.JtxtBuscar2 = new System.Windows.Forms.TextBox();
             this.CDGReparacion = new System.Windows.Forms.DataGridView();
             this.CEspera = new System.Windows.Forms.RadioButton();
             this.JTerminados = new System.Windows.Forms.RadioButton();
@@ -131,7 +134,15 @@
             this.idReparacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.linkCerrarSesion = new System.Windows.Forms.LinkLabel();
             this.reparacionTableAdapter = new WindowsFormsApp1.TechPOSdbDataSetTableAdapters.ReparacionTableAdapter();
-            this.JtxtBuscar2 = new System.Windows.Forms.TextBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.SgbAsignarRolATrabajador = new System.Windows.Forms.GroupBox();
+            this.SlblSeleccioneNombreDeUsuario = new System.Windows.Forms.Label();
+            this.SgbConfiguraciones = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.ScbxUsuariosRol = new System.Windows.Forms.ComboBox();
+            this.ScbxSeleccionarRol = new System.Windows.Forms.ComboBox();
+            this.SlblSeleccioneRol = new System.Windows.Forms.Label();
+            this.SbtnAsiganrRolAUsuario = new System.Windows.Forms.Button();
             this.tabPuntoVenta.SuspendLayout();
             this.tabVenta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lupaImg)).BeginInit();
@@ -153,6 +164,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.SgbAsignarRolATrabajador.SuspendLayout();
+            this.SgbConfiguraciones.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPuntoVenta
@@ -171,6 +185,8 @@
             // 
             // tabVenta
             // 
+            this.tabVenta.Controls.Add(this.ClblCodigoDeBarras);
+            this.tabVenta.Controls.Add(this.CNombreUsuarioLblVenta);
             this.tabVenta.Controls.Add(this.totalTbxVenta);
             this.tabVenta.Controls.Add(this.ivaTbxVentas);
             this.tabVenta.Controls.Add(this.subTotalTbxVentas);
@@ -181,8 +197,8 @@
             this.tabVenta.Controls.Add(this.buscarTbxVentas);
             this.tabVenta.Controls.Add(this.logoImg);
             this.tabVenta.Controls.Add(this.tableVender);
-            this.tabVenta.Controls.Add(this.aceptarBtnVentas);
-            this.tabVenta.Controls.Add(this.cancelarBtnVentas);
+            this.tabVenta.Controls.Add(this.CbtnCobrarVenta);
+            this.tabVenta.Controls.Add(this.CbtnCancelarVenta);
             this.tabVenta.Controls.Add(this.usuarioLblVenta);
             this.tabVenta.Location = new System.Drawing.Point(4, 43);
             this.tabVenta.Name = "tabVenta";
@@ -192,34 +208,52 @@
             this.tabVenta.Text = "Venta";
             this.tabVenta.UseVisualStyleBackColor = true;
             // 
+            // ClblCodigoDeBarras
+            // 
+            this.ClblCodigoDeBarras.AutoSize = true;
+            this.ClblCodigoDeBarras.Location = new System.Drawing.Point(295, 59);
+            this.ClblCodigoDeBarras.Name = "ClblCodigoDeBarras";
+            this.ClblCodigoDeBarras.Size = new System.Drawing.Size(173, 34);
+            this.ClblCodigoDeBarras.TabIndex = 19;
+            this.ClblCodigoDeBarras.Text = "Codigo de Producto";
+            // 
+            // CNombreUsuarioLblVenta
+            // 
+            this.CNombreUsuarioLblVenta.AutoSize = true;
+            this.CNombreUsuarioLblVenta.Location = new System.Drawing.Point(1211, 6);
+            this.CNombreUsuarioLblVenta.Name = "CNombreUsuarioLblVenta";
+            this.CNombreUsuarioLblVenta.Size = new System.Drawing.Size(74, 34);
+            this.CNombreUsuarioLblVenta.TabIndex = 18;
+            this.CNombreUsuarioLblVenta.Text = "usuario";
+            // 
             // totalTbxVenta
             // 
-            this.totalTbxVenta.Location = new System.Drawing.Point(1173, 528);
+            this.totalTbxVenta.Location = new System.Drawing.Point(281, 616);
             this.totalTbxVenta.Multiline = true;
             this.totalTbxVenta.Name = "totalTbxVenta";
-            this.totalTbxVenta.Size = new System.Drawing.Size(78, 20);
+            this.totalTbxVenta.Size = new System.Drawing.Size(210, 34);
             this.totalTbxVenta.TabIndex = 17;
             // 
             // ivaTbxVentas
             // 
-            this.ivaTbxVentas.Location = new System.Drawing.Point(1173, 456);
+            this.ivaTbxVentas.Location = new System.Drawing.Point(281, 567);
             this.ivaTbxVentas.Multiline = true;
             this.ivaTbxVentas.Name = "ivaTbxVentas";
-            this.ivaTbxVentas.Size = new System.Drawing.Size(78, 20);
+            this.ivaTbxVentas.Size = new System.Drawing.Size(210, 34);
             this.ivaTbxVentas.TabIndex = 16;
             // 
             // subTotalTbxVentas
             // 
-            this.subTotalTbxVentas.Location = new System.Drawing.Point(1173, 383);
+            this.subTotalTbxVentas.Location = new System.Drawing.Point(281, 514);
             this.subTotalTbxVentas.Multiline = true;
             this.subTotalTbxVentas.Name = "subTotalTbxVentas";
-            this.subTotalTbxVentas.Size = new System.Drawing.Size(78, 21);
+            this.subTotalTbxVentas.Size = new System.Drawing.Size(210, 34);
             this.subTotalTbxVentas.TabIndex = 15;
             // 
             // totalLblVentas
             // 
             this.totalLblVentas.AutoSize = true;
-            this.totalLblVentas.Location = new System.Drawing.Point(1135, 491);
+            this.totalLblVentas.Location = new System.Drawing.Point(185, 619);
             this.totalLblVentas.Name = "totalLblVentas";
             this.totalLblVentas.Size = new System.Drawing.Size(59, 34);
             this.totalLblVentas.TabIndex = 14;
@@ -228,7 +262,7 @@
             // ivaLblVenta
             // 
             this.ivaLblVenta.AutoSize = true;
-            this.ivaLblVenta.Location = new System.Drawing.Point(1135, 419);
+            this.ivaLblVenta.Location = new System.Drawing.Point(185, 570);
             this.ivaLblVenta.Name = "ivaLblVenta";
             this.ivaLblVenta.Size = new System.Drawing.Size(57, 34);
             this.ivaLblVenta.TabIndex = 13;
@@ -237,7 +271,7 @@
             // subTotalLblVenta
             // 
             this.subTotalLblVenta.AutoSize = true;
-            this.subTotalLblVenta.Location = new System.Drawing.Point(1135, 346);
+            this.subTotalLblVenta.Location = new System.Drawing.Point(185, 514);
             this.subTotalLblVenta.Name = "subTotalLblVenta";
             this.subTotalLblVenta.Size = new System.Drawing.Size(90, 34);
             this.subTotalLblVenta.TabIndex = 12;
@@ -246,20 +280,22 @@
             // lupaImg
             // 
             this.lupaImg.Image = global::WindowsFormsApp1.Properties.Resources.lupa;
-            this.lupaImg.Location = new System.Drawing.Point(901, 125);
+            this.lupaImg.Location = new System.Drawing.Point(904, 59);
             this.lupaImg.Name = "lupaImg";
             this.lupaImg.Size = new System.Drawing.Size(31, 32);
             this.lupaImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.lupaImg.TabIndex = 11;
             this.lupaImg.TabStop = false;
+            this.lupaImg.Click += new System.EventHandler(this.lupaImg_Click);
             // 
             // buscarTbxVentas
             // 
-            this.buscarTbxVentas.Location = new System.Drawing.Point(286, 125);
+            this.buscarTbxVentas.Location = new System.Drawing.Point(474, 59);
             this.buscarTbxVentas.Multiline = true;
             this.buscarTbxVentas.Name = "buscarTbxVentas";
-            this.buscarTbxVentas.Size = new System.Drawing.Size(600, 32);
+            this.buscarTbxVentas.Size = new System.Drawing.Size(405, 32);
             this.buscarTbxVentas.TabIndex = 10;
+            this.buscarTbxVentas.TextChanged += new System.EventHandler(this.buscarTbxVentas_TextChanged);
             // 
             // logoImg
             // 
@@ -280,8 +316,9 @@
             this.descrClmVenta,
             this.precioUClmVenta,
             this.precioTClmVenta});
-            this.tableVender.Location = new System.Drawing.Point(184, 195);
+            this.tableVender.Location = new System.Drawing.Point(191, 110);
             this.tableVender.Name = "tableVender";
+            this.tableVender.RowHeadersVisible = false;
             this.tableVender.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tableVender.Size = new System.Drawing.Size(938, 382);
             this.tableVender.TabIndex = 8;
@@ -290,60 +327,60 @@
             // 
             this.codClmVenta.HeaderText = "Código";
             this.codClmVenta.Name = "codClmVenta";
-            this.codClmVenta.Width = 150;
             // 
             // cantClVenta
             // 
             this.cantClVenta.HeaderText = "Cantidad";
             this.cantClVenta.Name = "cantClVenta";
-            this.cantClVenta.Width = 150;
             // 
             // descrClmVenta
             // 
+            this.descrClmVenta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.descrClmVenta.HeaderText = "Descripción";
             this.descrClmVenta.Name = "descrClmVenta";
-            this.descrClmVenta.Width = 250;
             // 
             // precioUClmVenta
             // 
             this.precioUClmVenta.HeaderText = "Precio U.";
             this.precioUClmVenta.Name = "precioUClmVenta";
-            this.precioUClmVenta.Width = 150;
+            this.precioUClmVenta.Width = 125;
             // 
             // precioTClmVenta
             // 
             this.precioTClmVenta.HeaderText = "Precio T.";
             this.precioTClmVenta.Name = "precioTClmVenta";
-            this.precioTClmVenta.Width = 200;
+            this.precioTClmVenta.Width = 125;
             // 
-            // aceptarBtnVentas
+            // CbtnCobrarVenta
             // 
-            this.aceptarBtnVentas.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.aceptarBtnVentas.Location = new System.Drawing.Point(1198, 616);
-            this.aceptarBtnVentas.Name = "aceptarBtnVentas";
-            this.aceptarBtnVentas.Size = new System.Drawing.Size(101, 37);
-            this.aceptarBtnVentas.TabIndex = 6;
-            this.aceptarBtnVentas.Text = "Cobrar";
-            this.aceptarBtnVentas.UseVisualStyleBackColor = false;
+            this.CbtnCobrarVenta.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.CbtnCobrarVenta.Location = new System.Drawing.Point(970, 570);
+            this.CbtnCobrarVenta.Name = "CbtnCobrarVenta";
+            this.CbtnCobrarVenta.Size = new System.Drawing.Size(159, 37);
+            this.CbtnCobrarVenta.TabIndex = 6;
+            this.CbtnCobrarVenta.Text = "Cobrar";
+            this.CbtnCobrarVenta.UseVisualStyleBackColor = false;
+            this.CbtnCobrarVenta.Click += new System.EventHandler(this.CbtnCobrarVenta_Click);
             // 
-            // cancelarBtnVentas
+            // CbtnCancelarVenta
             // 
-            this.cancelarBtnVentas.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.cancelarBtnVentas.Location = new System.Drawing.Point(1036, 616);
-            this.cancelarBtnVentas.Name = "cancelarBtnVentas";
-            this.cancelarBtnVentas.Size = new System.Drawing.Size(110, 37);
-            this.cancelarBtnVentas.TabIndex = 2;
-            this.cancelarBtnVentas.Text = "Cancelar";
-            this.cancelarBtnVentas.UseVisualStyleBackColor = false;
+            this.CbtnCancelarVenta.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.CbtnCancelarVenta.Location = new System.Drawing.Point(970, 613);
+            this.CbtnCancelarVenta.Name = "CbtnCancelarVenta";
+            this.CbtnCancelarVenta.Size = new System.Drawing.Size(159, 37);
+            this.CbtnCancelarVenta.TabIndex = 2;
+            this.CbtnCancelarVenta.Text = "Cancelar";
+            this.CbtnCancelarVenta.UseVisualStyleBackColor = false;
+            this.CbtnCancelarVenta.Click += new System.EventHandler(this.CbtnCancelarVenta_Click);
             // 
             // usuarioLblVenta
             // 
             this.usuarioLblVenta.AutoSize = true;
-            this.usuarioLblVenta.Location = new System.Drawing.Point(1149, 6);
+            this.usuarioLblVenta.Location = new System.Drawing.Point(1090, 6);
             this.usuarioLblVenta.Name = "usuarioLblVenta";
-            this.usuarioLblVenta.Size = new System.Drawing.Size(76, 34);
+            this.usuarioLblVenta.Size = new System.Drawing.Size(124, 34);
             this.usuarioLblVenta.TabIndex = 4;
-            this.usuarioLblVenta.Text = "Usuario";
+            this.usuarioLblVenta.Text = "Bienvenido(a)";
             // 
             // tabRecibirEquipo
             // 
@@ -554,7 +591,7 @@
             this.btnLimpiarCampos.TabIndex = 33;
             this.btnLimpiarCampos.Text = "Limpiar Campos";
             this.btnLimpiarCampos.UseVisualStyleBackColor = false;
-            this.btnLimpiarCampos.Click += new System.EventHandler(this.btnLimpiarCampos_Click);
+            this.btnLimpiarCampos.Click += new System.EventHandler(this.btnLimpiarCampos_Click_1);
             // 
             // comboResponsable
             // 
@@ -809,7 +846,6 @@
             this.txtBuscarCliente.Name = "txtBuscarCliente";
             this.txtBuscarCliente.Size = new System.Drawing.Size(359, 34);
             this.txtBuscarCliente.TabIndex = 2;
-            this.txtBuscarCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscarCliente_KeyPress);
             // 
             // SlblBuscarCliente
             // 
@@ -839,6 +875,14 @@
             this.tabReparacion.Text = "Reparación";
             this.tabReparacion.UseVisualStyleBackColor = true;
             this.tabReparacion.Click += new System.EventHandler(this.tabReparacion_Click);
+            // 
+            // JtxtBuscar2
+            // 
+            this.JtxtBuscar2.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.JtxtBuscar2.Location = new System.Drawing.Point(442, 80);
+            this.JtxtBuscar2.Name = "JtxtBuscar2";
+            this.JtxtBuscar2.Size = new System.Drawing.Size(289, 34);
+            this.JtxtBuscar2.TabIndex = 10;
             // 
             // CDGReparacion
             // 
@@ -935,7 +979,9 @@
             // tabConfiguracionesDeUsuario
             // 
             this.tabConfiguracionesDeUsuario.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tabConfiguracionesDeUsuario.Controls.Add(this.SbtnAgregarUsuario);
+            this.tabConfiguracionesDeUsuario.Controls.Add(this.SgbConfiguraciones);
+            this.tabConfiguracionesDeUsuario.Controls.Add(this.SgbAsignarRolATrabajador);
+            this.tabConfiguracionesDeUsuario.Controls.Add(this.pictureBox4);
             this.tabConfiguracionesDeUsuario.Controls.Add(this.SgbRoles);
             this.tabConfiguracionesDeUsuario.Location = new System.Drawing.Point(4, 43);
             this.tabConfiguracionesDeUsuario.Name = "tabConfiguracionesDeUsuario";
@@ -946,11 +992,11 @@
             // SbtnAgregarUsuario
             // 
             this.SbtnAgregarUsuario.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.SbtnAgregarUsuario.Location = new System.Drawing.Point(1048, 3);
+            this.SbtnAgregarUsuario.Location = new System.Drawing.Point(15, 34);
             this.SbtnAgregarUsuario.Name = "SbtnAgregarUsuario";
-            this.SbtnAgregarUsuario.Size = new System.Drawing.Size(277, 40);
+            this.SbtnAgregarUsuario.Size = new System.Drawing.Size(277, 37);
             this.SbtnAgregarUsuario.TabIndex = 2;
-            this.SbtnAgregarUsuario.Text = "Agregar nuevo Trabajador";
+            this.SbtnAgregarUsuario.Text = "Agregar Nuevo Trabajador";
             this.SbtnAgregarUsuario.UseVisualStyleBackColor = false;
             this.SbtnAgregarUsuario.Click += new System.EventHandler(this.SbtnAgregarUsuario_Click);
             // 
@@ -959,9 +1005,9 @@
             this.SgbRoles.Controls.Add(this.StxtRol);
             this.SgbRoles.Controls.Add(this.SlblNombreRol);
             this.SgbRoles.Controls.Add(this.SbtnGuardarRol);
-            this.SgbRoles.Location = new System.Drawing.Point(130, 15);
+            this.SgbRoles.Location = new System.Drawing.Point(130, 3);
             this.SgbRoles.Name = "SgbRoles";
-            this.SgbRoles.Size = new System.Drawing.Size(580, 165);
+            this.SgbRoles.Size = new System.Drawing.Size(580, 177);
             this.SgbRoles.TabIndex = 1;
             this.SgbRoles.TabStop = false;
             this.SgbRoles.Text = "Roles";
@@ -988,7 +1034,7 @@
             this.SbtnGuardarRol.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.SbtnGuardarRol.Location = new System.Drawing.Point(341, 34);
             this.SbtnGuardarRol.Name = "SbtnGuardarRol";
-            this.SbtnGuardarRol.Size = new System.Drawing.Size(97, 41);
+            this.SbtnGuardarRol.Size = new System.Drawing.Size(116, 41);
             this.SbtnGuardarRol.TabIndex = 0;
             this.SbtnGuardarRol.Text = "Agregar";
             this.SbtnGuardarRol.UseVisualStyleBackColor = false;
@@ -1145,13 +1191,95 @@
             // 
             this.reparacionTableAdapter.ClearBeforeFill = true;
             // 
-            // JtxtBuscar2
+            // pictureBox4
             // 
-            this.JtxtBuscar2.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.JtxtBuscar2.Location = new System.Drawing.Point(442, 80);
-            this.JtxtBuscar2.Name = "JtxtBuscar2";
-            this.JtxtBuscar2.Size = new System.Drawing.Size(289, 34);
-            this.JtxtBuscar2.TabIndex = 10;
+            this.pictureBox4.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.pictureBox4.Location = new System.Drawing.Point(6, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(118, 177);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 3;
+            this.pictureBox4.TabStop = false;
+            // 
+            // SgbAsignarRolATrabajador
+            // 
+            this.SgbAsignarRolATrabajador.Controls.Add(this.SbtnAsiganrRolAUsuario);
+            this.SgbAsignarRolATrabajador.Controls.Add(this.SlblSeleccioneRol);
+            this.SgbAsignarRolATrabajador.Controls.Add(this.ScbxSeleccionarRol);
+            this.SgbAsignarRolATrabajador.Controls.Add(this.ScbxUsuariosRol);
+            this.SgbAsignarRolATrabajador.Controls.Add(this.SlblSeleccioneNombreDeUsuario);
+            this.SgbAsignarRolATrabajador.Location = new System.Drawing.Point(6, 186);
+            this.SgbAsignarRolATrabajador.Name = "SgbAsignarRolATrabajador";
+            this.SgbAsignarRolATrabajador.Size = new System.Drawing.Size(503, 220);
+            this.SgbAsignarRolATrabajador.TabIndex = 4;
+            this.SgbAsignarRolATrabajador.TabStop = false;
+            this.SgbAsignarRolATrabajador.Text = "Asignar Rol a Trabajador";
+            // 
+            // SlblSeleccioneNombreDeUsuario
+            // 
+            this.SlblSeleccioneNombreDeUsuario.AutoSize = true;
+            this.SlblSeleccioneNombreDeUsuario.Location = new System.Drawing.Point(6, 37);
+            this.SlblSeleccioneNombreDeUsuario.Name = "SlblSeleccioneNombreDeUsuario";
+            this.SlblSeleccioneNombreDeUsuario.Size = new System.Drawing.Size(170, 34);
+            this.SlblSeleccioneNombreDeUsuario.TabIndex = 0;
+            this.SlblSeleccioneNombreDeUsuario.Text = "Seleccione Usuario";
+            // 
+            // SgbConfiguraciones
+            // 
+            this.SgbConfiguraciones.Controls.Add(this.button1);
+            this.SgbConfiguraciones.Controls.Add(this.SbtnAgregarUsuario);
+            this.SgbConfiguraciones.Location = new System.Drawing.Point(1015, 3);
+            this.SgbConfiguraciones.Name = "SgbConfiguraciones";
+            this.SgbConfiguraciones.Size = new System.Drawing.Size(300, 131);
+            this.SgbConfiguraciones.TabIndex = 6;
+            this.SgbConfiguraciones.TabStop = false;
+            this.SgbConfiguraciones.Text = "Configuraciones";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.Location = new System.Drawing.Point(15, 77);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(277, 37);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Reporte de Ventas";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // ScbxUsuariosRol
+            // 
+            this.ScbxUsuariosRol.FormattingEnabled = true;
+            this.ScbxUsuariosRol.Location = new System.Drawing.Point(176, 34);
+            this.ScbxUsuariosRol.Name = "ScbxUsuariosRol";
+            this.ScbxUsuariosRol.Size = new System.Drawing.Size(283, 42);
+            this.ScbxUsuariosRol.TabIndex = 1;
+            // 
+            // ScbxSeleccionarRol
+            // 
+            this.ScbxSeleccionarRol.FormattingEnabled = true;
+            this.ScbxSeleccionarRol.Location = new System.Drawing.Point(176, 99);
+            this.ScbxSeleccionarRol.Name = "ScbxSeleccionarRol";
+            this.ScbxSeleccionarRol.Size = new System.Drawing.Size(283, 42);
+            this.ScbxSeleccionarRol.TabIndex = 2;
+            // 
+            // SlblSeleccioneRol
+            // 
+            this.SlblSeleccioneRol.AutoSize = true;
+            this.SlblSeleccioneRol.Location = new System.Drawing.Point(6, 102);
+            this.SlblSeleccioneRol.Name = "SlblSeleccioneRol";
+            this.SlblSeleccioneRol.Size = new System.Drawing.Size(134, 34);
+            this.SlblSeleccioneRol.TabIndex = 3;
+            this.SlblSeleccioneRol.Text = "Seleccione Rol";
+            // 
+            // SbtnAsiganrRolAUsuario
+            // 
+            this.SbtnAsiganrRolAUsuario.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.SbtnAsiganrRolAUsuario.Location = new System.Drawing.Point(313, 160);
+            this.SbtnAsiganrRolAUsuario.Name = "SbtnAsiganrRolAUsuario";
+            this.SbtnAsiganrRolAUsuario.Size = new System.Drawing.Size(146, 41);
+            this.SbtnAsiganrRolAUsuario.TabIndex = 3;
+            this.SbtnAsiganrRolAUsuario.Text = "Asignar Rol";
+            this.SbtnAsiganrRolAUsuario.UseVisualStyleBackColor = false;
+            this.SbtnAsiganrRolAUsuario.Click += new System.EventHandler(this.SbtnAsiganrRolAUsuario_Click);
             // 
             // ViewTabs
             // 
@@ -1193,6 +1321,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.SgbAsignarRolATrabajador.ResumeLayout(false);
+            this.SgbAsignarRolATrabajador.PerformLayout();
+            this.SgbConfiguraciones.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1263,8 +1395,8 @@
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Label SlblApellido;
        // private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button aceptarBtnVentas;
-        private System.Windows.Forms.Button cancelarBtnVentas;
+        private System.Windows.Forms.Button CbtnCobrarVenta;
+        private System.Windows.Forms.Button CbtnCancelarVenta;
         private System.Windows.Forms.Label usuarioLblVenta;
         private System.Windows.Forms.PictureBox JpictureBox;
         private System.Windows.Forms.PictureBox JPicture;
@@ -1281,11 +1413,6 @@
         private System.Windows.Forms.Label subTotalLblVenta;
         private System.Windows.Forms.PictureBox lupaImg;
         private System.Windows.Forms.TextBox buscarTbxVentas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codClmVenta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cantClVenta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descrClmVenta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precioUClmVenta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precioTClmVenta;
         private System.Windows.Forms.TabPage ordenesTab;
         private System.Windows.Forms.TextBox totalTbxVenta;
         private System.Windows.Forms.TextBox ivaTbxVentas;
@@ -1315,7 +1442,23 @@
         private TechPOSdbDataSetTableAdapters.ReparacionTableAdapter reparacionTableAdapter;
         private System.Windows.Forms.Button SbtnCancelar;
         private System.Windows.Forms.Button btnAddClientH;
+        private System.Windows.Forms.Label CNombreUsuarioLblVenta;
+        private System.Windows.Forms.Label ClblCodigoDeBarras;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codClmVenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantClVenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descrClmVenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioUClmVenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioTClmVenta;
         private System.Windows.Forms.TextBox JtxtBuscar2;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.GroupBox SgbConfiguraciones;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox SgbAsignarRolATrabajador;
+        private System.Windows.Forms.Label SlblSeleccioneRol;
+        private System.Windows.Forms.ComboBox ScbxSeleccionarRol;
+        private System.Windows.Forms.ComboBox ScbxUsuariosRol;
+        private System.Windows.Forms.Label SlblSeleccioneNombreDeUsuario;
+        private System.Windows.Forms.Button SbtnAsiganrRolAUsuario;
         //  private System.Windows.Forms.TextBox textBox1;
         //private System.Windows.Forms.Label UnaLabel;
         //  private System.Windows.Forms.Label label5;

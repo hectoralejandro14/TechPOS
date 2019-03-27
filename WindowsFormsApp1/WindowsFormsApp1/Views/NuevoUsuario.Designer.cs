@@ -155,7 +155,7 @@
             this.CtxtNombreUsuario.Name = "CtxtNombreUsuario";
             this.CtxtNombreUsuario.Size = new System.Drawing.Size(351, 20);
             this.CtxtNombreUsuario.TabIndex = 12;
-            this.CtxtNombreUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CtxtNombreUsuario_KeyPress);
+            //this.CtxtNombreUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CtxtNombreUsuario_KeyPress);
             // 
             // CpictureNuevoUsuario
             // 
@@ -222,11 +222,11 @@
             // 
             this.ClblNotaNU.AutoSize = true;
             this.ClblNotaNU.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClblNotaNU.Location = new System.Drawing.Point(334, 520);
+            this.ClblNotaNU.Location = new System.Drawing.Point(315, 520);
             this.ClblNotaNU.Name = "ClblNotaNU";
-            this.ClblNotaNU.Size = new System.Drawing.Size(165, 9);
+            this.ClblNotaNU.Size = new System.Drawing.Size(183, 9);
             this.ClblNotaNU.TabIndex = 20;
-            this.ClblNotaNU.Text = "NOTA : Mayusculas y Minusculas no importan.";
+            this.ClblNotaNU.Text = "NOTA : Nombre de Usuario siempre en Mayusculas";
             // 
             // NuevoUsuario
             // 

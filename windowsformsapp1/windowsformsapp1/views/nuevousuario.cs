@@ -26,26 +26,34 @@ namespace WindowsFormsApp1.Views
             }
             else
             {
+                CtxtNombreUsuario.Text = CtxtNombreUsuario.Text.ToUpper();
+                string usuario = CtxtNombreUsuario.Text.ToUpper();
                 if (validarEmail(CtxtCorreoU.Text))
                 {
                     if (CtxtContrasenaU.Text == CtxtConfirmarContrasenaU.Text)
                     {
                         Connection conexion = new Connection();
                         conexion.AbrirConexion();
-                        decimal id = GenerarId();
-                        string auxNu = CtxtNombreUsuario.Text;
-                        string nu = auxNu.ToUpper();
-                        String _query = "INSERT INTO Usuario (Id,NombreUsuario,Nombre,Apellido,Telefono,Correo,Contra,Rol) VALUES (" + id + ",'" + nu + "','" + CtxtNombreU.Text + "','" + CtxtApellidoU.Text + "','" + CtxtTelefonoU.Text + "','" + CtxtCorreoU.Text + "','" + CtxtContrasenaU.Text + "','Trabajador')";
-                        conexion.AddElements(_query);
-                        //------------------------------------------------
-                        CtxtNombreUsuario.Text = "";
-                        CtxtNombreU.Text = "";
-                        CtxtApellidoU.Text = "";
-                        CtxtTelefonoU.Text = "";
-                        CtxtCorreoU.Text = "";
-                        CtxtContrasenaU.Text = "";
-                        CtxtConfirmarContrasenaU.Text = "";
-                        conexion.CerrarConexion();
+                        if (!(conexion.ExisteUsuario(CtxtNombreUsuario.Text.ToUpper())))
+                        {
+                            decimal id = GenerarId();
+                            String _query = "INSERT INTO Usuario (Id,NombreUsuario,Nombre,Apellido,Telefono,Correo,Contra,Rol) VALUES (" + id + ",'" + CtxtNombreUsuario.Text + "','" + CtxtNombreU.Text + "','" + CtxtApellidoU.Text + "','" + CtxtTelefonoU.Text + "','" + CtxtCorreoU.Text + "','" + CtxtContrasenaU.Text + "','Trabajador')";
+                            conexion.AddElements(_query);
+                            //------------------------------------------------
+                            CtxtNombreUsuario.Text = "";
+                            CtxtNombreU.Text = "";
+                            CtxtApellidoU.Text = "";
+                            CtxtTelefonoU.Text = "";
+                            CtxtCorreoU.Text = "";
+                            CtxtContrasenaU.Text = "";
+                            CtxtConfirmarContrasenaU.Text = "";
+                            conexion.CerrarConexion();
+                        }
+                        else
+                        {
+                            MessageBox.Show("NO SE PUEDE AGREGAR UN NUEVO USUARIO PORQUE EL NOMBRE DE USUARIO YA EXISTE", "NOMBRE DE USUARIO INVALIDO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            CtxtNombreUsuario.Text = "";
+                        }
                     }
                     else
                     {
@@ -114,78 +122,63 @@ namespace WindowsFormsApp1.Views
                 e.Handled = true;
             }
         }
-        private void CtxtNombreUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        /*private void CtxtNombreUsuario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            char[] NoPermitir = { 'é', 'ý', 'ú', 'í', 'ñ', 'ó', 'á', 'ë', 'ÿ', 'ü', 'ï', 'ö', 'ä', 'ê', 'û', 'î', 'ô', 'â' };
-            char[] Permitir = { '-', '_' };
-
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && !(char.IsNumber(e.KeyChar)))
+            if (Char.IsLetter(e.KeyChar))
             {
-                MessageBox.Show("Solo se permiten letras y números en este campo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
                 e.Handled = true;
-                CtxtNombreU.Text = "";
-                return;
-            }  
-        }
+            }
+        }*/
         private void CtxtNombreU_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+
+            if (Char.IsLetter(e.KeyChar))
             {
-                MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
                 e.Handled = true;
-                CtxtNombreU.Text = "";
-                return;
             }
         }
         private void CtxtApellidoU_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            if (Char.IsLetter(e.KeyChar))
             {
-                MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
                 e.Handled = true;
-                CtxtApellidoU.Text = "";
-                return;
             }
         }
-
-        //private void CtxtNombreU_KeyPress(object sender, KeyPressEventArgs e)
-        //{
-        //    if (Char.IsLetter(e.KeyChar))
-        //    {
-        //        e.Handled = false;
-        //    }
-        //    else if (Char.IsControl(e.KeyChar))
-        //    {
-        //        e.Handled = false;
-        //    }
-        //    else if (Char.IsSeparator(e.KeyChar))
-        //    {
-        //        e.Handled = false;
-        //    }
-        //    else
-        //    {
-        //        e.Handled = true;
-        //    }
-        //}
-
-        //private void CtxtApellidoU_KeyPress(object sender, KeyPressEventArgs e)
-        //{
-        //    if (Char.IsLetter(e.KeyChar))
-        //    {
-        //        e.Handled = false;
-        //    }
-        //    else if (Char.IsControl(e.KeyChar))
-        //    {
-        //        e.Handled = false;
-        //    }
-        //    else if (Char.IsSeparator(e.KeyChar))
-        //    {
-        //        e.Handled = false;
-        //    }
-        //    else
-        //    {
-        //        e.Handled = true;
-        //    }
-        //}
     }
 }
