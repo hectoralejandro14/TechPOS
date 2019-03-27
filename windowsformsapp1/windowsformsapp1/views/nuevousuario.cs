@@ -7,6 +7,7 @@ namespace WindowsFormsApp1.Views
 {
     public partial class NuevoUsuario : Form
     {
+        private static int reciboPeticionDe = 0;
         public NuevoUsuario()
         {
             InitializeComponent();
@@ -16,6 +17,7 @@ namespace WindowsFormsApp1.Views
             CtxtContrasenaU.PasswordChar = '*';
             //------------------------------------------------------
             CtxtConfirmarContrasenaU.PasswordChar = '*';
+            
         }
         private void btnAceptarr_Click(object sender, EventArgs e)
         {
@@ -72,8 +74,16 @@ namespace WindowsFormsApp1.Views
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             ViewLogin login = new ViewLogin();
-            login.Show();
-            this.Hide();
+            if (reciboPeticionDe == 1)
+            {
+                this.Hide();
+                reciboPeticionDe = 0;
+            }
+            else
+            {
+                login.Show();
+                this.Hide();
+            }     
         }
         public static bool validarEmail(string email)
         {
@@ -180,6 +190,10 @@ namespace WindowsFormsApp1.Views
             {
                 e.Handled = true;
             }
+        }
+        public void PeticionDe()
+        {
+            reciboPeticionDe = 1;
         }
     }
 }
