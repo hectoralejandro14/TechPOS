@@ -50,6 +50,7 @@ namespace WindowsFormsApp1.Views
         {
             DBConnectio.Connection conexion = new DBConnectio.Connection();
             conexion.AbrirConexion();
+
             bool si=conexion.AddElements("insert into Pieza values(15,'"+piezasTbxEncargar.Text+"')");
             conexion.CerrarConexion();
             this.Close();
@@ -58,5 +59,6 @@ namespace WindowsFormsApp1.Views
                 MessageBox.Show("Se encargó pieza correctamente.", "Pieza encargada", MessageBoxButtons.OK);
             }
         }
+
     }
 }

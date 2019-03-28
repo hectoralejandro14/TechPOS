@@ -520,7 +520,7 @@
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.33448F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.66552F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 92F));
-            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 218F));
+            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 219F));
             this.LayEquipo.Controls.Add(this.SlblMarca, 0, 0);
             this.LayEquipo.Controls.Add(this.txtMarca, 1, 0);
             this.LayEquipo.Controls.Add(this.SlblModelo, 2, 0);
@@ -551,7 +551,7 @@
             // txtMarca
             // 
             this.txtMarca.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMarca.Location = new System.Drawing.Point(220, 3);
+            this.txtMarca.Location = new System.Drawing.Point(219, 3);
             this.txtMarca.Multiline = true;
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(386, 29);
@@ -561,7 +561,7 @@
             // 
             this.SlblModelo.AutoSize = true;
             this.SlblModelo.ForeColor = System.Drawing.Color.Black;
-            this.SlblModelo.Location = new System.Drawing.Point(617, 0);
+            this.SlblModelo.Location = new System.Drawing.Point(616, 0);
             this.SlblModelo.Name = "SlblModelo";
             this.SlblModelo.Size = new System.Drawing.Size(82, 34);
             this.SlblModelo.TabIndex = 19;
@@ -573,7 +573,7 @@
             this.ccbTipoServicio1.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ccbTipoServicio1.FormattingEnabled = true;
             this.ccbTipoServicio1.IntegralHeight = false;
-            this.ccbTipoServicio1.Location = new System.Drawing.Point(220, 46);
+            this.ccbTipoServicio1.Location = new System.Drawing.Point(219, 46);
             this.ccbTipoServicio1.Name = "ccbTipoServicio1";
             this.ccbTipoServicio1.Size = new System.Drawing.Size(386, 42);
             this.ccbTipoServicio1.TabIndex = 46;
@@ -581,7 +581,7 @@
             // txtModelo
             // 
             this.txtModelo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModelo.Location = new System.Drawing.Point(709, 3);
+            this.txtModelo.Location = new System.Drawing.Point(708, 3);
             this.txtModelo.Multiline = true;
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(212, 29);
@@ -609,7 +609,7 @@
             // txtDescripcionDeFalla
             // 
             this.txtDescripcionDeFalla.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcionDeFalla.Location = new System.Drawing.Point(220, 100);
+            this.txtDescripcionDeFalla.Location = new System.Drawing.Point(219, 100);
             this.txtDescripcionDeFalla.Multiline = true;
             this.txtDescripcionDeFalla.Name = "txtDescripcionDeFalla";
             this.txtDescripcionDeFalla.Size = new System.Drawing.Size(389, 37);
@@ -735,72 +735,9 @@
             this.pictureBuscar.TabIndex = 42;
             this.pictureBuscar.TabStop = false;
             this.pictureBuscar.Click += new System.EventHandler(this.pictureBuscar_Click);
-            // SlblTipoDeDiagnostico
-            // 
-            this.SlblTipoDeDiagnostico.AutoSize = true;
-            this.SlblTipoDeDiagnostico.ForeColor = System.Drawing.Color.Black;
-            this.SlblTipoDeDiagnostico.Location = new System.Drawing.Point(26, 197);
-            this.SlblTipoDeDiagnostico.Name = "SlblTipoDeDiagnostico";
-            this.SlblTipoDeDiagnostico.Size = new System.Drawing.Size(188, 34);
-            this.SlblTipoDeDiagnostico.TabIndex = 17;
-            this.SlblTipoDeDiagnostico.Text = "Tipo de Diagnóstico : ";
-            // 
-            // ClienteGBx
-            // 
-            this.ClienteGBx.Controls.Add(this.layCliente);
-            this.ClienteGBx.Controls.Add(this.layoutCliente);
-            this.ClienteGBx.Controls.Add(this.SbtnCancelar);
-            this.ClienteGBx.Controls.Add(this.btnAddClientH);
-            this.ClienteGBx.Controls.Add(this.lblTextoIdCliente);
-            this.ClienteGBx.Controls.Add(this.lblIdCliente);
-            this.ClienteGBx.Controls.Add(this.btnAgregarCliente);
-            this.ClienteGBx.Location = new System.Drawing.Point(116, 6);
-            this.ClienteGBx.Name = "ClienteGBx";
-            this.ClienteGBx.Size = new System.Drawing.Size(1202, 193);
-            this.ClienteGBx.TabIndex = 52;
-            this.ClienteGBx.TabStop = false;
-            this.ClienteGBx.Text = "Cliente";
-            // 
-            // layCliente
-            // 
-            this.layCliente.Controls.Add(this.SlblBuscarCliente);
-            this.layCliente.Controls.Add(this.txtBuscarCliente);
-            this.layCliente.Controls.Add(this.pictureBuscar);
-            this.layCliente.Controls.Add(this.lblAvisoNoCliente);
-            this.layCliente.Location = new System.Drawing.Point(84, 44);
-            this.layCliente.Name = "layCliente";
-            this.layCliente.Size = new System.Drawing.Size(760, 41);
-            this.layCliente.TabIndex = 1;
-            // 
-            // SlblBuscarCliente
-            // 
-            this.SlblBuscarCliente.AutoSize = true;
-            this.SlblBuscarCliente.Location = new System.Drawing.Point(3, 0);
-            this.SlblBuscarCliente.Name = "SlblBuscarCliente";
-            this.SlblBuscarCliente.Size = new System.Drawing.Size(131, 34);
-            this.SlblBuscarCliente.TabIndex = 1;
-            this.SlblBuscarCliente.Text = "Buscar Cliente";
-            // 
-            // txtBuscarCliente
-            // 
-            this.txtBuscarCliente.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarCliente.Location = new System.Drawing.Point(140, 3);
-            this.txtBuscarCliente.Name = "txtBuscarCliente";
-            this.txtBuscarCliente.Size = new System.Drawing.Size(359, 34);
-            this.txtBuscarCliente.TabIndex = 2;
-            this.txtBuscarCliente.TextChanged += new System.EventHandler(this.txtBuscarCliente_TextChanged);
             // 
             // lblAvisoNoCliente
-            // pictureBuscar
             // 
-            this.pictureBuscar.Image = global::WindowsFormsApp1.Properties.Resources.Lupa_Codigo;
-            this.pictureBuscar.Location = new System.Drawing.Point(505, 3);
-            this.pictureBuscar.Name = "pictureBuscar";
-            this.pictureBuscar.Size = new System.Drawing.Size(30, 30);
-            this.pictureBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBuscar.TabIndex = 42;
-            this.pictureBuscar.TabStop = false;
-            this.pictureBuscar.Click += new System.EventHandler(this.pictureBuscar_Click);
             this.lblAvisoNoCliente.AutoSize = true;
             this.lblAvisoNoCliente.ForeColor = System.Drawing.Color.Red;
             this.lblAvisoNoCliente.Location = new System.Drawing.Point(541, 0);
@@ -812,22 +749,11 @@
             // 
             // layoutCliente
             // 
-            this.lblAvisoNoCliente.AutoSize = true;
-            this.lblAvisoNoCliente.ForeColor = System.Drawing.Color.Red;
-            this.lblAvisoNoCliente.Location = new System.Drawing.Point(541, 0);
-            this.lblAvisoNoCliente.Name = "lblAvisoNoCliente";
-            this.lblAvisoNoCliente.Size = new System.Drawing.Size(200, 34);
-            this.lblAvisoNoCliente.TabIndex = 43;
-            this.lblAvisoNoCliente.Text = "No se encontró cliente.";
-            this.lblAvisoNoCliente.Visible = false;
-            // 
-            // SlblNombre
-            // 
             this.layoutCliente.ColumnCount = 4;
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.95349F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.04651F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
-            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 272F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 273F));
             this.layoutCliente.Controls.Add(this.SlblNombre, 0, 0);
             this.layoutCliente.Controls.Add(this.txtNombre, 1, 0);
             this.layoutCliente.Controls.Add(this.SlblApellido, 0, 1);
@@ -843,6 +769,9 @@
             this.layoutCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.layoutCliente.Size = new System.Drawing.Size(801, 97);
             this.layoutCliente.TabIndex = 0;
+            // 
+            // SlblNombre
+            // 
             this.SlblNombre.AutoSize = true;
             this.SlblNombre.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SlblNombre.ForeColor = System.Drawing.Color.Black;
@@ -854,26 +783,6 @@
             // 
             // txtNombre
             // 
-            this.SlblNombre.AutoSize = true;
-            this.SlblNombre.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SlblNombre.ForeColor = System.Drawing.Color.Black;
-            this.SlblNombre.Location = new System.Drawing.Point(3, 0);
-            this.SlblNombre.Name = "SlblNombre";
-            this.SlblNombre.Size = new System.Drawing.Size(87, 34);
-            this.SlblNombre.TabIndex = 4;
-            this.SlblNombre.Text = "Nombre :";
-            // 
-            // SlblApellido
-            // txtNombre
-            // 
-            this.SlblApellido.AutoSize = true;
-            this.SlblApellido.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SlblApellido.ForeColor = System.Drawing.Color.Black;
-            this.SlblApellido.Location = new System.Drawing.Point(3, 48);
-            this.SlblApellido.Name = "SlblApellido";
-            this.SlblApellido.Size = new System.Drawing.Size(88, 34);
-            this.SlblApellido.TabIndex = 36;
-            this.SlblApellido.Text = "Apellido :";
             this.txtNombre.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(106, 3);
             this.txtNombre.Multiline = true;
@@ -883,15 +792,7 @@
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // SlblApellido
-            // txtApellido
             // 
-            this.txtApellido.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido.Location = new System.Drawing.Point(106, 51);
-            this.txtApellido.Multiline = true;
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(313, 29);
-            this.txtApellido.TabIndex = 41;
-            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             this.SlblApellido.AutoSize = true;
             this.SlblApellido.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SlblApellido.ForeColor = System.Drawing.Color.Black;
@@ -901,7 +802,7 @@
             this.SlblApellido.TabIndex = 36;
             this.SlblApellido.Text = "Apellido :";
             // 
-            // SlblTelefono
+            // txtApellido
             // 
             this.txtApellido.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellido.Location = new System.Drawing.Point(106, 51);
@@ -910,72 +811,41 @@
             this.txtApellido.Size = new System.Drawing.Size(313, 29);
             this.txtApellido.TabIndex = 41;
             this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
-            this.SlblTelefono.AutoSize = true;
-            this.SlblTelefono.ForeColor = System.Drawing.Color.Black;
-            this.SlblTelefono.Location = new System.Drawing.Point(433, 0);
-            this.SlblTelefono.Name = "SlblTelefono";
-            this.SlblTelefono.Size = new System.Drawing.Size(89, 48);
-            this.SlblTelefono.TabIndex = 5;
-            this.SlblTelefono.Text = "Teléfono :";
             // 
-            // SlblCorreo
             // SlblTelefono
             // 
             this.SlblTelefono.AutoSize = true;
             this.SlblTelefono.ForeColor = System.Drawing.Color.Black;
-            this.SlblTelefono.Location = new System.Drawing.Point(433, 0);
+            this.SlblTelefono.Location = new System.Drawing.Point(432, 0);
             this.SlblTelefono.Name = "SlblTelefono";
             this.SlblTelefono.Size = new System.Drawing.Size(89, 48);
             this.SlblTelefono.TabIndex = 5;
             this.SlblTelefono.Text = "Teléfono :";
-            this.SlblCorreo.AutoSize = true;
-            this.SlblCorreo.ForeColor = System.Drawing.Color.Black;
-            this.SlblCorreo.Location = new System.Drawing.Point(433, 48);
-            this.SlblCorreo.Name = "SlblCorreo";
-            this.SlblCorreo.Size = new System.Drawing.Size(84, 34);
-            this.SlblCorreo.TabIndex = 6;
-            this.SlblCorreo.Text = "Correo : ";
             // 
             // SlblCorreo
-            // txtTelefono
             // 
-            this.txtTelefono.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(531, 3);
-            this.txtTelefono.Multiline = true;
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(266, 29);
-            this.txtTelefono.TabIndex = 38;
-            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             this.SlblCorreo.AutoSize = true;
             this.SlblCorreo.ForeColor = System.Drawing.Color.Black;
-            this.SlblCorreo.Location = new System.Drawing.Point(433, 48);
+            this.SlblCorreo.Location = new System.Drawing.Point(432, 48);
             this.SlblCorreo.Name = "SlblCorreo";
             this.SlblCorreo.Size = new System.Drawing.Size(84, 34);
             this.SlblCorreo.TabIndex = 6;
             this.SlblCorreo.Text = "Correo : ";
             // 
-            // txtCorreo
             // txtTelefono
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(531, 3);
+            this.txtTelefono.Location = new System.Drawing.Point(530, 3);
             this.txtTelefono.Multiline = true;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(266, 29);
             this.txtTelefono.TabIndex = 38;
             this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
-            this.txtCorreo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.Location = new System.Drawing.Point(531, 51);
-            this.txtCorreo.Multiline = true;
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(266, 29);
-            this.txtCorreo.TabIndex = 39;
             // 
-            // SbtnCancelar
             // txtCorreo
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.Location = new System.Drawing.Point(531, 51);
+            this.txtCorreo.Location = new System.Drawing.Point(530, 51);
             this.txtCorreo.Multiline = true;
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(266, 29);
@@ -985,7 +855,7 @@
             // 
             this.SbtnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.SbtnCancelar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SbtnCancelar.Location = new System.Drawing.Point(1076, 139);
+            this.SbtnCancelar.Location = new System.Drawing.Point(1050, 149);
             this.SbtnCancelar.Name = "SbtnCancelar";
             this.SbtnCancelar.Size = new System.Drawing.Size(120, 38);
             this.SbtnCancelar.TabIndex = 47;
@@ -998,7 +868,7 @@
             // 
             this.btnAddClientH.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnAddClientH.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddClientH.Location = new System.Drawing.Point(922, 77);
+            this.btnAddClientH.Location = new System.Drawing.Point(922, 106);
             this.btnAddClientH.Name = "btnAddClientH";
             this.btnAddClientH.Size = new System.Drawing.Size(248, 38);
             this.btnAddClientH.TabIndex = 48;
@@ -1009,7 +879,7 @@
             // lblTextoIdCliente
             // 
             this.lblTextoIdCliente.AutoSize = true;
-            this.lblTextoIdCliente.Location = new System.Drawing.Point(869, 37);
+            this.lblTextoIdCliente.Location = new System.Drawing.Point(961, 25);
             this.lblTextoIdCliente.Name = "lblTextoIdCliente";
             this.lblTextoIdCliente.Size = new System.Drawing.Size(124, 34);
             this.lblTextoIdCliente.TabIndex = 49;
@@ -1020,51 +890,7 @@
             // 
             this.lblIdCliente.AutoSize = true;
             this.lblIdCliente.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblIdCliente.Location = new System.Drawing.Point(999, 37);
-            this.lblIdCliente.Name = "lblIdCliente";
-            this.lblIdCliente.Size = new System.Drawing.Size(55, 34);
-            this.lblIdCliente.TabIndex = 50;
-            this.lblIdCliente.Text = "0000";
-            this.lblIdCliente.Visible = false;
-            // 
-            this.SbtnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.SbtnCancelar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SbtnCancelar.Location = new System.Drawing.Point(1076, 139);
-            this.SbtnCancelar.Name = "SbtnCancelar";
-            this.SbtnCancelar.Size = new System.Drawing.Size(120, 38);
-            this.SbtnCancelar.TabIndex = 47;
-            this.SbtnCancelar.Text = "Cancelar";
-            this.SbtnCancelar.UseVisualStyleBackColor = false;
-            this.SbtnCancelar.Visible = false;
-            this.SbtnCancelar.Click += new System.EventHandler(this.SbtnCancelar_Click);
-            // 
-            // btnAddClientH
-            // 
-            this.btnAddClientH.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnAddClientH.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddClientH.Location = new System.Drawing.Point(922, 77);
-            this.btnAddClientH.Name = "btnAddClientH";
-            this.btnAddClientH.Size = new System.Drawing.Size(248, 38);
-            this.btnAddClientH.TabIndex = 48;
-            this.btnAddClientH.Text = "Agregar nuevo cliente";
-            this.btnAddClientH.UseVisualStyleBackColor = false;
-            this.btnAddClientH.Click += new System.EventHandler(this.btnAddClientH_Click_1);
-            // 
-            // lblTextoIdCliente
-            // 
-            this.lblTextoIdCliente.AutoSize = true;
-            this.lblTextoIdCliente.Location = new System.Drawing.Point(869, 37);
-            this.lblTextoIdCliente.Name = "lblTextoIdCliente";
-            this.lblTextoIdCliente.Size = new System.Drawing.Size(124, 34);
-            this.lblTextoIdCliente.TabIndex = 49;
-            this.lblTextoIdCliente.Text = "ID del cliente:";
-            this.lblTextoIdCliente.Visible = false;
-            // 
-            // lblIdCliente
-            // 
-            this.lblIdCliente.AutoSize = true;
-            this.lblIdCliente.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblIdCliente.Location = new System.Drawing.Point(999, 37);
+            this.lblIdCliente.Location = new System.Drawing.Point(1091, 25);
             this.lblIdCliente.Name = "lblIdCliente";
             this.lblIdCliente.Size = new System.Drawing.Size(55, 34);
             this.lblIdCliente.TabIndex = 50;
@@ -1075,7 +901,7 @@
             // 
             this.btnAgregarCliente.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnAgregarCliente.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarCliente.Location = new System.Drawing.Point(922, 139);
+            this.btnAgregarCliente.Location = new System.Drawing.Point(922, 148);
             this.btnAgregarCliente.Name = "btnAgregarCliente";
             this.btnAgregarCliente.Size = new System.Drawing.Size(120, 38);
             this.btnAgregarCliente.TabIndex = 10;
