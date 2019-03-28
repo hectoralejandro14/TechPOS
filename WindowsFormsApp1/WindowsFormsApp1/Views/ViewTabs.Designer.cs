@@ -211,10 +211,12 @@
             this.tabPuntoVenta.SelectedIndex = 0;
             this.tabPuntoVenta.Size = new System.Drawing.Size(1336, 716);
             this.tabPuntoVenta.TabIndex = 0;
+            this.tabPuntoVenta.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabPuntoVenta_DrawItem);
             this.tabPuntoVenta.SelectedIndexChanged += new System.EventHandler(this.tabPuntoVenta_SelectedIndexChanged);
             // 
             // tabVenta
             // 
+            this.tabVenta.BackColor = System.Drawing.Color.Transparent;
             this.tabVenta.Controls.Add(this.ventaLogoCh);
             this.tabVenta.Controls.Add(this.ClblCodigoDeBarras);
             this.tabVenta.Controls.Add(this.CNombreUsuarioLblVenta);
@@ -235,7 +237,6 @@
             this.tabVenta.Size = new System.Drawing.Size(1328, 669);
             this.tabVenta.TabIndex = 0;
             this.tabVenta.Text = "Venta";
-            this.tabVenta.UseVisualStyleBackColor = true;
             // 
             // ventaLogoCh
             // 
@@ -1512,7 +1513,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.ventaLogoCh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableVender)).EndInit();
             this.tabRecibirEquipo.ResumeLayout(false);
-            this.tabRecibirEquipo.PerformLayout();
+            this.layoutTotales.ResumeLayout(false);
+            this.layoutTotales.PerformLayout();
+            this.EquipoGbx.ResumeLayout(false);
+            this.EquipoGbx.PerformLayout();
+            this.LayEquipo.ResumeLayout(false);
+            this.LayEquipo.PerformLayout();
+            this.ClienteGBx.ResumeLayout(false);
+            this.ClienteGBx.PerformLayout();
+            this.layCliente.ResumeLayout(false);
+            this.layCliente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).EndInit();
+            this.layoutCliente.ResumeLayout(false);
+            this.layoutCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.recibirLogoCh)).EndInit();
             this.tabReparacion.ResumeLayout(false);
             this.tabReparacion.PerformLayout();
