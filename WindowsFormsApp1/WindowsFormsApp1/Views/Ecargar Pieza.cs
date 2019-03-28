@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1.Views
@@ -25,39 +18,29 @@ namespace WindowsFormsApp1.Views
             
           
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Ecargar_Pieza_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void BtnAceptarPieza_Click(object sender, EventArgs e)
         {
             DBConnectio.Connection conexion = new DBConnectio.Connection();
             conexion.AbrirConexion();
-
-            bool si=conexion.AddElements("insert into Pieza values(15,'"+piezasTbxEncargar.Text+"')");
+            DateTime fecha_pedida = DateTime.Now;
+            DateTime fecha_llegada_aproximada = SdtCalendarFechaLlegada.Value;
+            int IdPieza = conexion.generarId("SELECT MAX(Id) FROM Pieza");
+            bool si = conexion.AddElements("INSERT INTO Pieza VALUES(" + IdPieza + ",'" + piezasTbxEncargar.Text + "','Ordenada','" + fecha_pedida + "','" + fecha_llegada_aproximada + "')");
             conexion.CerrarConexion();
-            this.Close();
             if (si)
             {
-                MessageBox.Show("Se encargó pieza correctamente.", "Pieza encargada", MessageBoxButtons.OK);
+                MessageBox.Show("SE AH ENCARGADO LA PIEZA CORRECTAMENTE.", "PIEZA ENCARGADA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Hide();
             }
+            else
+            {
+                MessageBox.Show("PIEZA NO ENCARGADA POR PROBLEMAS DE CONECTIVIDAD.", "PIEZA NO ENCARGADA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnCancelarPieza_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
 
     }
