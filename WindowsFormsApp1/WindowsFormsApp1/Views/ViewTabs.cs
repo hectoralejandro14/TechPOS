@@ -821,7 +821,7 @@ namespace WindowsFormsApp1.Views
             RectangleF headerRect = new RectangleF(e.Bounds.X, e.Bounds.Y + 2, e.Bounds.Width, e.Bounds.Height - 2);
 
             // This is the default colour to use for the non-selected tabs
-            SolidBrush sb = new SolidBrush(Color.DarkGray);
+            SolidBrush sb = new SolidBrush(Color.LightGray);
 
             // This changes the colour if we're trying to draw the selected tabpage
             if (tabPuntoVenta.SelectedIndex == e.Index)
