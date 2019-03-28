@@ -120,17 +120,19 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 1);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 134);
+            this.pictureBox1.Size = new System.Drawing.Size(62, 93);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
             // btnCancelarPieza
             // 
-            this.btnCancelarPieza.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCancelarPieza.BackColor = System.Drawing.Color.DimGray;
+            this.btnCancelarPieza.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelarPieza.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarPieza.ForeColor = System.Drawing.Color.Turquoise;
             this.btnCancelarPieza.Location = new System.Drawing.Point(388, 442);
             this.btnCancelarPieza.Name = "btnCancelarPieza";
             this.btnCancelarPieza.Size = new System.Drawing.Size(83, 37);
@@ -141,8 +143,10 @@
             // 
             // BtnAceptarPieza
             // 
-            this.BtnAceptarPieza.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BtnAceptarPieza.BackColor = System.Drawing.Color.DimGray;
+            this.BtnAceptarPieza.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnAceptarPieza.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAceptarPieza.ForeColor = System.Drawing.Color.Turquoise;
             this.BtnAceptarPieza.Location = new System.Drawing.Point(477, 442);
             this.BtnAceptarPieza.Name = "BtnAceptarPieza";
             this.BtnAceptarPieza.Size = new System.Drawing.Size(80, 37);
@@ -155,6 +159,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(572, 495);
             this.Controls.Add(this.BtnAceptarPieza);
             this.Controls.Add(this.btnCancelarPieza);
