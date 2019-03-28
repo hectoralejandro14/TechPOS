@@ -172,7 +172,7 @@
             this.btnCancelarMod.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelarMod.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
             this.btnCancelarMod.ForeColor = System.Drawing.Color.Turquoise;
-            this.btnCancelarMod.Location = new System.Drawing.Point(356, 334);
+            this.btnCancelarMod.Location = new System.Drawing.Point(368, 334);
             this.btnCancelarMod.Name = "btnCancelarMod";
             this.btnCancelarMod.Size = new System.Drawing.Size(118, 39);
             this.btnCancelarMod.TabIndex = 23;
