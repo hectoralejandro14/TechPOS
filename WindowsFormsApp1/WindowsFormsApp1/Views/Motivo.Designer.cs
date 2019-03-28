@@ -28,28 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.motivoLbl = new System.Windows.Forms.Label();
             this.cancelarVLbl = new System.Windows.Forms.Label();
             this.motivoTbxCancelarV = new System.Windows.Forms.RichTextBox();
             this.regresarBtnCVenta = new System.Windows.Forms.Button();
             this.aceptarBtnCancelV = new System.Windows.Forms.Button();
+            this.CancelarVentaGBx = new System.Windows.Forms.GroupBox();
+            this.CancelarVentaGBx.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // motivoLbl
-            // 
-            this.motivoLbl.AutoSize = true;
-            this.motivoLbl.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.motivoLbl.Location = new System.Drawing.Point(145, 105);
-            this.motivoLbl.Name = "motivoLbl";
-            this.motivoLbl.Size = new System.Drawing.Size(65, 34);
-            this.motivoLbl.TabIndex = 0;
-            this.motivoLbl.Text = "Motivo";
             // 
             // cancelarVLbl
             // 
             this.cancelarVLbl.AutoSize = true;
             this.cancelarVLbl.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelarVLbl.Location = new System.Drawing.Point(223, 32);
+            this.cancelarVLbl.Location = new System.Drawing.Point(175, 20);
             this.cancelarVLbl.Name = "cancelarVLbl";
             this.cancelarVLbl.Size = new System.Drawing.Size(162, 29);
             this.cancelarVLbl.TabIndex = 1;
@@ -57,17 +48,18 @@
             // 
             // motivoTbxCancelarV
             // 
-            this.motivoTbxCancelarV.Location = new System.Drawing.Point(131, 133);
+            this.motivoTbxCancelarV.Location = new System.Drawing.Point(27, 30);
             this.motivoTbxCancelarV.Name = "motivoTbxCancelarV";
-            this.motivoTbxCancelarV.Size = new System.Drawing.Size(415, 180);
+            this.motivoTbxCancelarV.Size = new System.Drawing.Size(342, 163);
             this.motivoTbxCancelarV.TabIndex = 2;
             this.motivoTbxCancelarV.Text = "";
+            this.motivoTbxCancelarV.TextChanged += new System.EventHandler(this.motivoTbxCancelarV_TextChanged);
             // 
             // regresarBtnCVenta
             // 
             this.regresarBtnCVenta.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.regresarBtnCVenta.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.regresarBtnCVenta.Location = new System.Drawing.Point(385, 371);
+            this.regresarBtnCVenta.Location = new System.Drawing.Point(320, 329);
             this.regresarBtnCVenta.Name = "regresarBtnCVenta";
             this.regresarBtnCVenta.Size = new System.Drawing.Size(104, 43);
             this.regresarBtnCVenta.TabIndex = 3;
@@ -78,36 +70,46 @@
             // 
             this.aceptarBtnCancelV.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.aceptarBtnCancelV.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.aceptarBtnCancelV.Location = new System.Drawing.Point(523, 371);
+            this.aceptarBtnCancelV.Location = new System.Drawing.Point(453, 329);
             this.aceptarBtnCancelV.Name = "aceptarBtnCancelV";
             this.aceptarBtnCancelV.Size = new System.Drawing.Size(100, 43);
             this.aceptarBtnCancelV.TabIndex = 4;
             this.aceptarBtnCancelV.Text = "Aceptar";
             this.aceptarBtnCancelV.UseVisualStyleBackColor = false;
             // 
+            // CancelarVentaGBx
+            // 
+            this.CancelarVentaGBx.Controls.Add(this.motivoTbxCancelarV);
+            this.CancelarVentaGBx.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelarVentaGBx.Location = new System.Drawing.Point(69, 73);
+            this.CancelarVentaGBx.Name = "CancelarVentaGBx";
+            this.CancelarVentaGBx.Size = new System.Drawing.Size(402, 221);
+            this.CancelarVentaGBx.TabIndex = 5;
+            this.CancelarVentaGBx.TabStop = false;
+            this.CancelarVentaGBx.Text = "Motivo";
+            // 
             // Motivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(671, 426);
+            this.ClientSize = new System.Drawing.Size(586, 391);
+            this.Controls.Add(this.CancelarVentaGBx);
             this.Controls.Add(this.aceptarBtnCancelV);
             this.Controls.Add(this.regresarBtnCVenta);
-            this.Controls.Add(this.motivoTbxCancelarV);
             this.Controls.Add(this.cancelarVLbl);
-            this.Controls.Add(this.motivoLbl);
             this.Name = "Motivo";
             this.Text = "Motivo";
+            this.CancelarVentaGBx.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label motivoLbl;
         private System.Windows.Forms.Label cancelarVLbl;
         private System.Windows.Forms.RichTextBox motivoTbxCancelarV;
         private System.Windows.Forms.Button regresarBtnCVenta;
         private System.Windows.Forms.Button aceptarBtnCancelV;
+        private System.Windows.Forms.GroupBox CancelarVentaGBx;
     }
 }

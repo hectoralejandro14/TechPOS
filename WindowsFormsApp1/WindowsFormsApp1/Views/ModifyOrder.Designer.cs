@@ -38,6 +38,8 @@
             this.cancelarBtnMOrdens = new System.Windows.Forms.Button();
             this.aceptarBtnMOrdenes = new System.Windows.Forms.Button();
             this.modificarLblOrdenes = new System.Windows.Forms.Label();
+            this.layoutModificar = new System.Windows.Forms.TableLayoutPanel();
+            this.layoutModificar.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -52,7 +54,7 @@
             // 
             this.idLblMOrdenes.AutoSize = true;
             this.idLblMOrdenes.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.idLblMOrdenes.Location = new System.Drawing.Point(98, 62);
+            this.idLblMOrdenes.Location = new System.Drawing.Point(3, 0);
             this.idLblMOrdenes.Name = "idLblMOrdenes";
             this.idLblMOrdenes.Size = new System.Drawing.Size(32, 34);
             this.idLblMOrdenes.TabIndex = 1;
@@ -62,7 +64,7 @@
             // 
             this.descripcionLlbMOrdenes.AutoSize = true;
             this.descripcionLlbMOrdenes.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.descripcionLlbMOrdenes.Location = new System.Drawing.Point(33, 107);
+            this.descripcionLlbMOrdenes.Location = new System.Drawing.Point(3, 44);
             this.descripcionLlbMOrdenes.Name = "descripcionLlbMOrdenes";
             this.descripcionLlbMOrdenes.Size = new System.Drawing.Size(110, 34);
             this.descripcionLlbMOrdenes.TabIndex = 2;
@@ -72,7 +74,7 @@
             // 
             this.estadosLblMOrdenes.AutoSize = true;
             this.estadosLblMOrdenes.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.estadosLblMOrdenes.Location = new System.Drawing.Point(64, 154);
+            this.estadosLblMOrdenes.Location = new System.Drawing.Point(3, 88);
             this.estadosLblMOrdenes.Name = "estadosLblMOrdenes";
             this.estadosLblMOrdenes.Size = new System.Drawing.Size(79, 34);
             this.estadosLblMOrdenes.TabIndex = 3;
@@ -80,30 +82,30 @@
             // 
             // idTbxMOrdenes
             // 
-            this.idTbxMOrdenes.Location = new System.Drawing.Point(149, 70);
+            this.idTbxMOrdenes.Location = new System.Drawing.Point(121, 3);
             this.idTbxMOrdenes.Name = "idTbxMOrdenes";
-            this.idTbxMOrdenes.Size = new System.Drawing.Size(100, 20);
+            this.idTbxMOrdenes.Size = new System.Drawing.Size(99, 20);
             this.idTbxMOrdenes.TabIndex = 4;
             // 
             // descTbxOrdenes
             // 
-            this.descTbxOrdenes.Location = new System.Drawing.Point(149, 115);
+            this.descTbxOrdenes.Location = new System.Drawing.Point(121, 47);
             this.descTbxOrdenes.Name = "descTbxOrdenes";
-            this.descTbxOrdenes.Size = new System.Drawing.Size(100, 20);
+            this.descTbxOrdenes.Size = new System.Drawing.Size(99, 20);
             this.descTbxOrdenes.TabIndex = 5;
             // 
             // estadosTbxOrdenes
             // 
-            this.estadosTbxOrdenes.Location = new System.Drawing.Point(149, 162);
+            this.estadosTbxOrdenes.Location = new System.Drawing.Point(121, 91);
             this.estadosTbxOrdenes.Name = "estadosTbxOrdenes";
-            this.estadosTbxOrdenes.Size = new System.Drawing.Size(100, 20);
+            this.estadosTbxOrdenes.Size = new System.Drawing.Size(99, 20);
             this.estadosTbxOrdenes.TabIndex = 6;
             // 
             // cancelarBtnMOrdens
             // 
             this.cancelarBtnMOrdens.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.cancelarBtnMOrdens.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.cancelarBtnMOrdens.Location = new System.Drawing.Point(55, 225);
+            this.cancelarBtnMOrdens.Location = new System.Drawing.Point(55, 249);
             this.cancelarBtnMOrdens.Name = "cancelarBtnMOrdens";
             this.cancelarBtnMOrdens.Size = new System.Drawing.Size(98, 39);
             this.cancelarBtnMOrdens.TabIndex = 7;
@@ -114,7 +116,7 @@
             // 
             this.aceptarBtnMOrdenes.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.aceptarBtnMOrdenes.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.aceptarBtnMOrdenes.Location = new System.Drawing.Point(185, 225);
+            this.aceptarBtnMOrdenes.Location = new System.Drawing.Point(205, 249);
             this.aceptarBtnMOrdenes.Name = "aceptarBtnMOrdenes";
             this.aceptarBtnMOrdenes.Size = new System.Drawing.Size(87, 39);
             this.aceptarBtnMOrdenes.TabIndex = 8;
@@ -125,29 +127,46 @@
             // 
             this.modificarLblOrdenes.AutoSize = true;
             this.modificarLblOrdenes.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modificarLblOrdenes.Location = new System.Drawing.Point(99, 9);
+            this.modificarLblOrdenes.Location = new System.Drawing.Point(119, 9);
             this.modificarLblOrdenes.Name = "modificarLblOrdenes";
             this.modificarLblOrdenes.Size = new System.Drawing.Size(106, 29);
             this.modificarLblOrdenes.TabIndex = 9;
             this.modificarLblOrdenes.Text = "Modificar";
             // 
+            // layoutModificar
+            // 
+            this.layoutModificar.ColumnCount = 2;
+            this.layoutModificar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.9148F));
+            this.layoutModificar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.0852F));
+            this.layoutModificar.Controls.Add(this.idLblMOrdenes, 0, 0);
+            this.layoutModificar.Controls.Add(this.idTbxMOrdenes, 1, 0);
+            this.layoutModificar.Controls.Add(this.descripcionLlbMOrdenes, 0, 1);
+            this.layoutModificar.Controls.Add(this.descTbxOrdenes, 1, 1);
+            this.layoutModificar.Controls.Add(this.estadosLblMOrdenes, 0, 2);
+            this.layoutModificar.Controls.Add(this.estadosTbxOrdenes, 1, 2);
+            this.layoutModificar.Location = new System.Drawing.Point(55, 61);
+            this.layoutModificar.Name = "layoutModificar";
+            this.layoutModificar.RowCount = 3;
+            this.layoutModificar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.layoutModificar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.layoutModificar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 71F));
+            this.layoutModificar.Size = new System.Drawing.Size(223, 159);
+            this.layoutModificar.TabIndex = 10;
+            // 
             // ModifyOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(320, 291);
+            this.ClientSize = new System.Drawing.Size(370, 322);
+            this.Controls.Add(this.layoutModificar);
             this.Controls.Add(this.modificarLblOrdenes);
             this.Controls.Add(this.aceptarBtnMOrdenes);
             this.Controls.Add(this.cancelarBtnMOrdens);
-            this.Controls.Add(this.estadosTbxOrdenes);
-            this.Controls.Add(this.descTbxOrdenes);
-            this.Controls.Add(this.idTbxMOrdenes);
-            this.Controls.Add(this.estadosLblMOrdenes);
-            this.Controls.Add(this.descripcionLlbMOrdenes);
-            this.Controls.Add(this.idLblMOrdenes);
             this.Controls.Add(this.label1);
             this.Name = "ModifyOrder";
             this.Text = "Órdenes";
+            this.layoutModificar.ResumeLayout(false);
+            this.layoutModificar.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,5 +184,6 @@
         private System.Windows.Forms.Button cancelarBtnMOrdens;
         private System.Windows.Forms.Button aceptarBtnMOrdenes;
         private System.Windows.Forms.Label modificarLblOrdenes;
+        private System.Windows.Forms.TableLayoutPanel layoutModificar;
     }
 }
