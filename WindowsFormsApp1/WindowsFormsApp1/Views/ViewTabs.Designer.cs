@@ -775,6 +775,10 @@
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.04651F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 272F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.95349F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.04651F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 273F));
             this.layoutCliente.Controls.Add(this.SlblNombre, 0, 0);
             this.layoutCliente.Controls.Add(this.txtNombre, 1, 0);
             this.layoutCliente.Controls.Add(this.SlblApellido, 0, 1);
@@ -882,7 +886,7 @@
             this.SbtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SbtnCancelar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SbtnCancelar.ForeColor = System.Drawing.Color.Turquoise;
-            this.SbtnCancelar.Location = new System.Drawing.Point(1076, 139);
+            this.SbtnCancelar.Location = new System.Drawing.Point(1048, 148);
             this.SbtnCancelar.Name = "SbtnCancelar";
             this.SbtnCancelar.Size = new System.Drawing.Size(120, 38);
             this.SbtnCancelar.TabIndex = 47;
@@ -908,7 +912,7 @@
             // lblTextoIdCliente
             // 
             this.lblTextoIdCliente.AutoSize = true;
-            this.lblTextoIdCliente.Location = new System.Drawing.Point(869, 37);
+            this.lblTextoIdCliente.Location = new System.Drawing.Point(961, 25);
             this.lblTextoIdCliente.Name = "lblTextoIdCliente";
             this.lblTextoIdCliente.Size = new System.Drawing.Size(124, 34);
             this.lblTextoIdCliente.TabIndex = 49;
@@ -919,7 +923,7 @@
             // 
             this.lblIdCliente.AutoSize = true;
             this.lblIdCliente.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblIdCliente.Location = new System.Drawing.Point(999, 37);
+            this.lblIdCliente.Location = new System.Drawing.Point(1091, 25);
             this.lblIdCliente.Name = "lblIdCliente";
             this.lblIdCliente.Size = new System.Drawing.Size(55, 34);
             this.lblIdCliente.TabIndex = 50;
@@ -932,7 +936,7 @@
             this.btnAgregarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregarCliente.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarCliente.ForeColor = System.Drawing.Color.Turquoise;
-            this.btnAgregarCliente.Location = new System.Drawing.Point(922, 139);
+            this.btnAgregarCliente.Location = new System.Drawing.Point(922, 148);
             this.btnAgregarCliente.Name = "btnAgregarCliente";
             this.btnAgregarCliente.Size = new System.Drawing.Size(120, 38);
             this.btnAgregarCliente.TabIndex = 10;
