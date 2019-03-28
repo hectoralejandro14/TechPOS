@@ -97,7 +97,6 @@
             this.CtxtNombreU.Name = "CtxtNombreU";
             this.CtxtNombreU.Size = new System.Drawing.Size(351, 20);
             this.CtxtNombreU.TabIndex = 5;
-            this.CtxtNombreU.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CtxtNombreU_KeyPress);
             // 
             // CtxtApellidoU
             // 
@@ -105,7 +104,6 @@
             this.CtxtApellidoU.Name = "CtxtApellidoU";
             this.CtxtApellidoU.Size = new System.Drawing.Size(351, 20);
             this.CtxtApellidoU.TabIndex = 6;
-            this.CtxtApellidoU.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CtxtApellidoU_KeyPress);
             // 
             // CtxtTelefonoU
             // 
@@ -155,7 +153,6 @@
             this.CtxtNombreUsuario.Name = "CtxtNombreUsuario";
             this.CtxtNombreUsuario.Size = new System.Drawing.Size(351, 20);
             this.CtxtNombreUsuario.TabIndex = 12;
-            //this.CtxtNombreUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CtxtNombreUsuario_KeyPress);
             // 
             // CpictureNuevoUsuario
             // 
@@ -217,6 +214,7 @@
             this.CtxtConfirmarContrasenaU.Name = "CtxtConfirmarContrasenaU";
             this.CtxtConfirmarContrasenaU.Size = new System.Drawing.Size(351, 20);
             this.CtxtConfirmarContrasenaU.TabIndex = 19;
+            this.CtxtConfirmarContrasenaU.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CtxtConfirmarContrasenaU_KeyPress);
             // 
             // ClblNotaNU
             // 
@@ -256,6 +254,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NuevoUsuario";
             this.Text = "Nuevo Usuario";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NuevoUsuario_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.CpictureNuevoUsuario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

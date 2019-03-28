@@ -129,28 +129,34 @@ namespace WindowsFormsApp1
         }
         private void ViewLogin_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (txtUsuario.Text.Equals("")&&txtContrasena.Text.Equals(""))
+            if (e.KeyChar==(Char)Keys.Enter)
             {
-                MessageBox.Show("No se permiten campos vacios","Alerta",MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                if (e.KeyChar == (char)Keys.Enter)
+                if (txtContrasena.Text.Equals("") || txtUsuario.Text.Equals(""))
+                {
+                    MessageBox.Show("No se pudo iniciar sesión por existencia de campos vacios", "Campos Vacios", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                    txtContrasena.Text = "";
+                    txtUsuario.Text = "";
+                }
+                else
                 {
                     Connection db = new Connection();
-                    string nu = txtUsuario.Text;
+                    string auxNu = txtUsuario.Text;
+                    string nu = auxNu.ToUpper();
                     string co = txtContrasena.Text;
-                    /*MD5 md5Hash = MD5.Create();
-                    string hash = encriptar.GetMd5Hash(md5Hash, co);*/
+                    //Controllers.Encrypt ect = new Controllers.Encrypt();
+                    string coe = Controllers.Encrypt.GetMD5(txtContrasena.Text);
+                    //MessageBox.Show(coe);
                     db.AbrirConexion();
-                    if (db.IniciarSesion(nu, co) == "Administrador")
+                    if (db.IniciarSesion(nu, coe) == "Administrador")
                     {
+                        _vistaTabs.Bienvenido(nu);
                         _vistaTabs.MostrarConfiguracionUsuarios("Administrador");
                         _vistaTabs.Show();
                         this.Hide();
                     }
-                    else if (db.IniciarSesion(nu, co) == "Trabajador")
+                    else if (db.IniciarSesion(nu, coe) == "Trabajador")
                     {
+                        _vistaTabs.Bienvenido(nu);
                         _vistaTabs.Show();
                         this.Hide();
                     }
@@ -159,33 +165,49 @@ namespace WindowsFormsApp1
                         MessageBox.Show("Error! Usuario y/o Contraseña Incorrectas", "Sesión fallida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                     db.CerrarConexion();
+                    /*
+                     *NO BORRAR COMENTARIO 
+                     *DBConnection.Connection conexion = new DBConnection.Connection();
+                    conexion.AbrirConexion();
+                    String pass = txtContrasena.Text;
+                    MD5 md5Hash = MD5.Create();
+                    string hash = GetMd5Hash(md5Hash, pass);
+                    conexion.CerrarConexion();*/
                 }
             }
+            
         }
+
         private void txtContrasena_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (txtUsuario.Text.Equals("") && txtContrasena.Text.Equals(""))
+            if (e.KeyChar == (Char)Keys.Enter)
             {
-                MessageBox.Show("No se permiten campos vacios", "Alerta",MessageBoxButtons.OK,MessageBoxIcon.Information);
-            }
-            else
-            {
-                if (e.KeyChar == (char)Keys.Enter)
+                if (txtContrasena.Text.Equals("") || txtUsuario.Text.Equals(""))
+                {
+                    MessageBox.Show("No se pudo iniciar sesión por existencia de campos vacios", "Campos Vacios", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                    txtContrasena.Text = "";
+                    txtUsuario.Text = "";
+                }
+                else
                 {
                     Connection db = new Connection();
-                    string nu = txtUsuario.Text;
+                    string auxNu = txtUsuario.Text;
+                    string nu = auxNu.ToUpper();
                     string co = txtContrasena.Text;
-                    /*MD5 md5Hash = MD5.Create();
-                    string hash = encriptar.GetMd5Hash(md5Hash, co);*/
+                    //Controllers.Encrypt ect = new Controllers.Encrypt();
+                    string coe = Controllers.Encrypt.GetMD5(txtContrasena.Text);
+                    //MessageBox.Show(coe);
                     db.AbrirConexion();
-                    if (db.IniciarSesion(nu, co) == "Administrador")
+                    if (db.IniciarSesion(nu, coe) == "Administrador")
                     {
+                        _vistaTabs.Bienvenido(nu);
                         _vistaTabs.MostrarConfiguracionUsuarios("Administrador");
                         _vistaTabs.Show();
                         this.Hide();
                     }
-                    else if (db.IniciarSesion(nu, co) == "Trabajador")
+                    else if (db.IniciarSesion(nu, coe) == "Trabajador")
                     {
+                        _vistaTabs.Bienvenido(nu);
                         _vistaTabs.Show();
                         this.Hide();
                     }
@@ -194,6 +216,14 @@ namespace WindowsFormsApp1
                         MessageBox.Show("Error! Usuario y/o Contraseña Incorrectas", "Sesión fallida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                     db.CerrarConexion();
+                    /*
+                     *NO BORRAR COMENTARIO 
+                     *DBConnection.Connection conexion = new DBConnection.Connection();
+                    conexion.AbrirConexion();
+                    String pass = txtContrasena.Text;
+                    MD5 md5Hash = MD5.Create();
+                    string hash = GetMd5Hash(md5Hash, pass);
+                    conexion.CerrarConexion();*/
                 }
             }
         }

@@ -18,10 +18,12 @@ namespace WindowsFormsApp1.Views
             //------------------------------------------------------
             CtxtConfirmarContrasenaU.PasswordChar = '*';
             
+
+            
         }
         private void btnAceptarr_Click(object sender, EventArgs e)
         {
-            if (CtxtNombreUsuario.Text.Equals("") || CtxtNombreU.Text.Equals("") || CtxtApellidoU.Text.Equals("") || CtxtCorreoU.Text.Equals("") 
+            if (CtxtNombreUsuario.Text.Equals("") || CtxtNombreU.Text.Equals("") || CtxtApellidoU.Text.Equals("") || CtxtCorreoU.Text.Equals("")
                 || CtxtTelefonoU.Text.Equals("") || CtxtContrasenaU.Text.Equals("") || CtxtConfirmarContrasenaU.Text.Equals(""))
             {
                 MessageBox.Show("NO SE PUEDE AGREGAR UN NUEVO USUARIO POR LA EXISTENCIA DE CAMPOS VACIOS", "ERROR DE CAMPOS", MessageBoxButtons.OK, MessageBoxIcon.Question);
@@ -43,13 +45,21 @@ namespace WindowsFormsApp1.Views
                             String _query = "INSERT INTO Usuario (Id,NombreUsuario,Nombre,Apellido,Telefono,Correo,Contra,Rol) VALUES (" + id + ",'" + CtxtNombreUsuario.Text + "','" + CtxtNombreU.Text + "','" + CtxtApellidoU.Text + "','" + CtxtTelefonoU.Text + "','" + CtxtCorreoU.Text + "','" + coe + "','Trabajador')";
                             conexion.AddElements(_query);
                             //------------------------------------------------
-                            CtxtNombreUsuario.Text = "";
-                            CtxtNombreU.Text = "";
-                            CtxtApellidoU.Text = "";
-                            CtxtTelefonoU.Text = "";
-                            CtxtCorreoU.Text = "";
-                            CtxtContrasenaU.Text = "";
-                            CtxtConfirmarContrasenaU.Text = "";
+                            DialogResult resultado = MessageBox.Show("¿Desea agregar otro usuario?", "Nuevo Usuario", MessageBoxButtons.YesNo);
+                            if (resultado == DialogResult.Yes)
+                            {
+                                CtxtNombreUsuario.Text = "";
+                                CtxtNombreU.Text = "";
+                                CtxtApellidoU.Text = "";
+                                CtxtTelefonoU.Text = "";
+                                CtxtCorreoU.Text = "";
+                                CtxtContrasenaU.Text = "";
+                                CtxtConfirmarContrasenaU.Text = "";
+                            }
+                            else if (resultado == DialogResult.No)
+                            {
+                                this.Hide();
+                            }
                             conexion.CerrarConexion();
                         }
                         else
@@ -116,7 +126,7 @@ namespace WindowsFormsApp1.Views
         }
         private void CtxtTelefonoU_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(Char.IsDigit(e.KeyChar))
+            if (Char.IsDigit(e.KeyChar))
             {
                 e.Handled = false;
             }
@@ -133,62 +143,136 @@ namespace WindowsFormsApp1.Views
                 e.Handled = true;
             }
         }
-        /*private void CtxtNombreUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        public void PeticionDe()
         {
-            if (Char.IsLetter(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-            }
-        }*/
-        private void CtxtNombreU_KeyPress(object sender, KeyPressEventArgs e)
-        {
+            reciboPeticionDe = 1;
+        }
 
-            if (Char.IsLetter(e.KeyChar))
+        private void NuevoUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar==(Char)Keys.Enter)
             {
-                e.Handled = false;
-            }
-            else if (Char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
+                if (CtxtNombreUsuario.Text.Equals("") || CtxtNombreU.Text.Equals("") || CtxtApellidoU.Text.Equals("") || CtxtCorreoU.Text.Equals("")
+               || CtxtTelefonoU.Text.Equals("") || CtxtContrasenaU.Text.Equals("") || CtxtConfirmarContrasenaU.Text.Equals(""))
+                {
+                    MessageBox.Show("NO SE PUEDE AGREGAR UN NUEVO USUARIO POR LA EXISTENCIA DE CAMPOS VACIOS", "ERROR DE CAMPOS", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                }
+                else
+                {
+                    CtxtNombreUsuario.Text = CtxtNombreUsuario.Text.ToUpper();
+                    string usuario = CtxtNombreUsuario.Text.ToUpper();
+                    if (validarEmail(CtxtCorreoU.Text))
+                    {
+                        if (CtxtContrasenaU.Text == CtxtConfirmarContrasenaU.Text)
+                        {
+                            Connection conexion = new Connection();
+                            conexion.AbrirConexion();
+                            if (!(conexion.ExisteUsuario(CtxtNombreUsuario.Text.ToUpper())))
+                            {
+                                decimal id = GenerarId();
+                                string coe = Controllers.Encrypt.GetMD5(CtxtContrasenaU.Text);
+                                String _query = "INSERT INTO Usuario (Id,NombreUsuario,Nombre,Apellido,Telefono,Correo,Contra,Rol) VALUES (" + id + ",'" + CtxtNombreUsuario.Text + "','" + CtxtNombreU.Text + "','" + CtxtApellidoU.Text + "','" + CtxtTelefonoU.Text + "','" + CtxtCorreoU.Text + "','" + coe + "','Trabajador')";
+                                conexion.AddElements(_query);
+                                //------------------------------------------------
+                                conexion.CerrarConexion();
+                                DialogResult resultado = MessageBox.Show("¿Desea agregar otro usuario?", "Nuevo Usuario", MessageBoxButtons.YesNo);
+                                if (resultado == DialogResult.Yes)
+                                {
+                                    CtxtNombreUsuario.Text = "";
+                                    CtxtNombreU.Text = "";
+                                    CtxtApellidoU.Text = "";
+                                    CtxtTelefonoU.Text = "";
+                                    CtxtCorreoU.Text = "";
+                                    CtxtContrasenaU.Text = "";
+                                    CtxtConfirmarContrasenaU.Text = "";
+                                }
+                                else if (resultado==DialogResult.No)
+                                {
+                                    this.Hide();
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("NO SE PUEDE AGREGAR UN NUEVO USUARIO PORQUE EL NOMBRE DE USUARIO YA EXISTE", "NOMBRE DE USUARIO INVALIDO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                CtxtNombreUsuario.Text = "";
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("LOS CAMPOS DE CONTRASEÑAS NO SON IGUALES", "NO COINCIDENCIAS", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                            CtxtContrasenaU.Text = "";
+                            CtxtConfirmarContrasenaU.Text = "";
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("NO SE PUEDE AGREGAR UN NUEVO USUARIO PORQUE EL FORMATO DE CORREO ES INVALIDO", "FORMATO NO VALIDO", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                    }
+                }
             }
         }
-        private void CtxtApellidoU_KeyPress(object sender, KeyPressEventArgs e)
+
+        private void CtxtConfirmarContrasenaU_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsLetter(e.KeyChar))
+            if (e.KeyChar == (Char)Keys.Enter)
             {
-                e.Handled = false;
-            }
-            else if (Char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
+                if (CtxtNombreUsuario.Text.Equals("") || CtxtNombreU.Text.Equals("") || CtxtApellidoU.Text.Equals("") || CtxtCorreoU.Text.Equals("")
+               || CtxtTelefonoU.Text.Equals("") || CtxtContrasenaU.Text.Equals("") || CtxtConfirmarContrasenaU.Text.Equals(""))
+                {
+                    MessageBox.Show("NO SE PUEDE AGREGAR UN NUEVO USUARIO POR LA EXISTENCIA DE CAMPOS VACIOS", "ERROR DE CAMPOS", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                }
+                else
+                {
+                    CtxtNombreUsuario.Text = CtxtNombreUsuario.Text.ToUpper();
+                    string usuario = CtxtNombreUsuario.Text.ToUpper();
+                    if (validarEmail(CtxtCorreoU.Text))
+                    {
+                        if (CtxtContrasenaU.Text == CtxtConfirmarContrasenaU.Text)
+                        {
+                            Connection conexion = new Connection();
+                            conexion.AbrirConexion();
+                            if (!(conexion.ExisteUsuario(CtxtNombreUsuario.Text.ToUpper())))
+                            {
+                                decimal id = GenerarId();
+                                string coe = Controllers.Encrypt.GetMD5(CtxtContrasenaU.Text);
+                                String _query = "INSERT INTO Usuario (Id,NombreUsuario,Nombre,Apellido,Telefono,Correo,Contra,Rol) VALUES (" + id + ",'" + CtxtNombreUsuario.Text + "','" + CtxtNombreU.Text + "','" + CtxtApellidoU.Text + "','" + CtxtTelefonoU.Text + "','" + CtxtCorreoU.Text + "','" + coe + "','Trabajador')";
+                                conexion.AddElements(_query);
+                                //------------------------------------------------
+                                DialogResult resultado = MessageBox.Show("¿Desea agregar otro usuario?", "Nuevo Usuario", MessageBoxButtons.YesNo);
+                                if (resultado == DialogResult.Yes)
+                                {
+                                    CtxtNombreUsuario.Text = "";
+                                    CtxtNombreU.Text = "";
+                                    CtxtApellidoU.Text = "";
+                                    CtxtTelefonoU.Text = "";
+                                    CtxtCorreoU.Text = "";
+                                    CtxtContrasenaU.Text = "";
+                                    CtxtConfirmarContrasenaU.Text = "";
+                                }
+                                else if (resultado == DialogResult.No)
+                                {
+                                    this.Hide();
+                                }
+                                conexion.CerrarConexion();
+                            }
+                            else
+                            {
+                                MessageBox.Show("NO SE PUEDE AGREGAR UN NUEVO USUARIO PORQUE EL NOMBRE DE USUARIO YA EXISTE", "NOMBRE DE USUARIO INVALIDO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                CtxtNombreUsuario.Text = "";
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("LOS CAMPOS DE CONTRASEÑAS NO SON IGUALES", "NO COINCIDENCIAS", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                            CtxtContrasenaU.Text = "";
+                            CtxtConfirmarContrasenaU.Text = "";
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("NO SE PUEDE AGREGAR UN NUEVO USUARIO PORQUE EL FORMATO DE CORREO ES INVALIDO", "FORMATO NO VALIDO", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                    }
+                }
             }
         }
         public void PeticionDe()
