@@ -103,9 +103,11 @@
             // 
             // cancelarBtnMOrdens
             // 
-            this.cancelarBtnMOrdens.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cancelarBtnMOrdens.BackColor = System.Drawing.Color.DimGray;
+            this.cancelarBtnMOrdens.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cancelarBtnMOrdens.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.cancelarBtnMOrdens.Location = new System.Drawing.Point(55, 249);
+            this.cancelarBtnMOrdens.ForeColor = System.Drawing.Color.Turquoise;
+            this.cancelarBtnMOrdens.Location = new System.Drawing.Point(55, 225);
             this.cancelarBtnMOrdens.Name = "cancelarBtnMOrdens";
             this.cancelarBtnMOrdens.Size = new System.Drawing.Size(98, 39);
             this.cancelarBtnMOrdens.TabIndex = 7;
@@ -114,9 +116,11 @@
             // 
             // aceptarBtnMOrdenes
             // 
-            this.aceptarBtnMOrdenes.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.aceptarBtnMOrdenes.BackColor = System.Drawing.Color.DimGray;
+            this.aceptarBtnMOrdenes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.aceptarBtnMOrdenes.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.aceptarBtnMOrdenes.Location = new System.Drawing.Point(205, 249);
+            this.aceptarBtnMOrdenes.ForeColor = System.Drawing.Color.Turquoise;
+            this.aceptarBtnMOrdenes.Location = new System.Drawing.Point(185, 225);
             this.aceptarBtnMOrdenes.Name = "aceptarBtnMOrdenes";
             this.aceptarBtnMOrdenes.Size = new System.Drawing.Size(87, 39);
             this.aceptarBtnMOrdenes.TabIndex = 8;
@@ -157,7 +161,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(370, 322);
+            this.BackColor = System.Drawing.Color.LightGray;
+            this.ClientSize = new System.Drawing.Size(320, 291);
+           // this.ClientSize = new System.Drawing.Size(370, 322);
             this.Controls.Add(this.layoutModificar);
             this.Controls.Add(this.modificarLblOrdenes);
             this.Controls.Add(this.aceptarBtnMOrdenes);

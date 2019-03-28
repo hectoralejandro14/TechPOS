@@ -57,9 +57,11 @@
             // 
             // regresarBtnCVenta
             // 
-            this.regresarBtnCVenta.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.regresarBtnCVenta.BackColor = System.Drawing.Color.DimGray;
+            this.regresarBtnCVenta.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.regresarBtnCVenta.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.regresarBtnCVenta.Location = new System.Drawing.Point(320, 329);
+            this.regresarBtnCVenta.ForeColor = System.Drawing.Color.Turquoise;
+            this.regresarBtnCVenta.Location = new System.Drawing.Point(385, 371);
             this.regresarBtnCVenta.Name = "regresarBtnCVenta";
             this.regresarBtnCVenta.Size = new System.Drawing.Size(104, 43);
             this.regresarBtnCVenta.TabIndex = 3;
@@ -68,9 +70,11 @@
             // 
             // aceptarBtnCancelV
             // 
-            this.aceptarBtnCancelV.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.aceptarBtnCancelV.BackColor = System.Drawing.Color.DimGray;
+            this.aceptarBtnCancelV.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.aceptarBtnCancelV.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.aceptarBtnCancelV.Location = new System.Drawing.Point(453, 329);
+            this.aceptarBtnCancelV.ForeColor = System.Drawing.Color.Turquoise;
+            this.aceptarBtnCancelV.Location = new System.Drawing.Point(523, 371);
             this.aceptarBtnCancelV.Name = "aceptarBtnCancelV";
             this.aceptarBtnCancelV.Size = new System.Drawing.Size(100, 43);
             this.aceptarBtnCancelV.TabIndex = 4;
@@ -92,8 +96,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(586, 391);
+            //this.ClientSize = new System.Drawing.Size(586, 391);
             this.Controls.Add(this.CancelarVentaGBx);
+            this.BackColor = System.Drawing.Color.LightGray;
+            this.ClientSize = new System.Drawing.Size(671, 426);
             this.Controls.Add(this.aceptarBtnCancelV);
             this.Controls.Add(this.regresarBtnCVenta);
             this.Controls.Add(this.cancelarVLbl);

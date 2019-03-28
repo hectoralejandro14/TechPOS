@@ -119,9 +119,11 @@
             // 
             // btnAceptarr
             // 
-            this.btnAceptarr.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAceptarr.BackColor = System.Drawing.Color.DimGray;
+            this.btnAceptarr.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAceptarr.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.btnAceptarr.Location = new System.Drawing.Point(365, 478);
+            this.btnAceptarr.ForeColor = System.Drawing.Color.Turquoise;
+            this.btnAceptarr.Location = new System.Drawing.Point(237, 478);
             this.btnAceptarr.Name = "btnAceptarr";
             this.btnAceptarr.Size = new System.Drawing.Size(93, 39);
             this.btnAceptarr.TabIndex = 9;
@@ -131,9 +133,11 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCancelar.BackColor = System.Drawing.Color.DimGray;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.btnCancelar.Location = new System.Drawing.Point(188, 478);
+            this.btnCancelar.ForeColor = System.Drawing.Color.Turquoise;
+            this.btnCancelar.Location = new System.Drawing.Point(120, 478);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(103, 39);
             this.btnCancelar.TabIndex = 10;
@@ -223,7 +227,8 @@
             // 
             this.ClblNotaNU.AutoSize = true;
             this.ClblNotaNU.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClblNotaNU.Location = new System.Drawing.Point(508, 521);
+            this.ClblNotaNU.ForeColor = System.Drawing.Color.Red;
+            this.ClblNotaNU.Location = new System.Drawing.Point(315, 520);
             this.ClblNotaNU.Name = "ClblNotaNU";
             this.ClblNotaNU.Size = new System.Drawing.Size(183, 9);
             this.ClblNotaNU.TabIndex = 20;
