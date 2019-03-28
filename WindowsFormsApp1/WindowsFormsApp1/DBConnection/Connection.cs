@@ -294,7 +294,7 @@ namespace WindowsFormsApp1.DBConnectio
         }
         
 
-        public int generarIdCliente(string sql)
+        public int generarId(string sql)
         {
             int id = 0;
             SqlCommand sqlCommand = new SqlCommand(sql, conexion);

@@ -404,6 +404,7 @@ namespace WindowsFormsApp1.Views
                     pictureBuscar.Visible = true;
                     //---------------------------------------
                     GenerarId();
+                    GenerarIdEquipo();
 
                 }
                 else
@@ -499,7 +500,6 @@ namespace WindowsFormsApp1.Views
             txtApellido.Enabled = false;
             txtTelefono.Enabled = false;
             txtCorreo.Enabled = false;
-            lblIdCliente.Visible = false;
             lblIdCliente.Visible = false;
             txtBuscarCliente.Enabled = true;
 
@@ -636,23 +636,16 @@ namespace WindowsFormsApp1.Views
             lblIdCliente.Text = Convert.ToString(idCliente);
             connection.CerrarConexion();
         }
+
         public void GenerarIdEquipo()
         {
-            Connection conexion = new Connection();
-            Random random = new Random();
-            conexion.AbrirConexion();
-            decimal idR = random.Next(0, 1000000000);
-            do
-            {
-                idR = random.Next(0, 1000000000);
-                if (!conexion.VerificarExistenciaDeIdRep(Convert.ToString(idR)))
-                {
-                    break;
-                }
-            } while (true);
-            conexion.CerrarConexion();
-            lblIdEquipo.Text = "" + idR;
+            Connection connection = new Connection();
+            connection.AbrirConexion();
+            int idReparacion = connection.generarId("SELECT MAX(Id) FROM Reparacion");
+            lblIdEquipo.Text = Convert.ToString(idReparacion);
+            connection.CerrarConexion();
         }
+
         public void Bienvenido(string usuario)
         {
             this.CNombreUsuarioLblVenta.Text = usuario;
