@@ -275,9 +275,9 @@ namespace WindowsFormsApp1.Views
                 }
             }
         }
-        public void PeticionDe()
-        {
-            reciboPeticionDe = 1;
-        }
+        //public void PeticionDe()
+        //{
+        //    reciboPeticionDe = 1;
+        //}
     }
 }

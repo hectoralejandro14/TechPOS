@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Net.Mail;
 using System.Windows.Forms;
 using WindowsFormsApp1.DBConnectio;
@@ -71,6 +72,12 @@ namespace WindowsFormsApp1.Views
             //---------------------------------------------
             //limitar tamañ de ComboBox
             //ccbTipoServicio1
+            Connection connection = new Connection();
+            connection.AbrirConexion();
+            CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id  order by Reparacion.Fecha asc");
+            connection.CerrarConexion();
+            colores();
+            
         }
        
         private void linkCerrarSesion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -82,15 +89,17 @@ namespace WindowsFormsApp1.Views
         private void ViewTabs_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'techPOSdbDataSet.Cliente' table. You can move, or remove it, as needed.
-            this.clienteTableAdapter.Fill(this.techPOSdbDataSet.Cliente);
+            //clienteTableAdapter.Fill(this.techPOSdbDataSet.Cliente);
             // TODO: This line of code loads data into the 'techPOSdbDataSet.Reparacion' table. You can move, or remove it, as needed.
             //this.reparacionTableAdapter.Fill(this.techPOSdbDataSet.Reparacion);
             Connection connection = new Connection();
             connection.AbrirConexion();
-            CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id  order by Reparacion.Fecha desc");
-            CDGReparacion.DataSource = connection.buscar("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id");
+            //CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id  order by Reparacion.Fecha desc");
+            //CDGReparacion.DataSource = connection.buscar("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id");
+
             dgClientes.DataSource = connection.buscar("SELECT * FROM Cliente");
             connection.CerrarConexion();
+            colores();
         }
         private void ViewTabs_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -139,7 +148,7 @@ namespace WindowsFormsApp1.Views
                 string c = JtxtBuscar2.Text;
                 Connection connection = new Connection();
                 connection.AbrirConexion();
-                CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id WHERE Reparacion.Id =" + c + "   order by Reparacion.Fecha desc");
+                CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id WHERE Reparacion.Id =" + c + "   order by Reparacion.Fecha asc");
                 connection.CerrarConexion();
                 JradioTodos.Checked = false;
                 JTerminados.Checked = false;
@@ -170,32 +179,60 @@ namespace WindowsFormsApp1.Views
 
             Connection connection = new Connection();
             connection.AbrirConexion();
-            CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id   order by Reparacion.Fecha desc");
+            CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id   order by Reparacion.Fecha asc");
             connection.CerrarConexion();
+            colores();
         }
         private void JProceso_CheckedChanged(object sender, EventArgs e)
         {
 
             Connection connection = new Connection();
             connection.AbrirConexion();
-            CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id WHERE IdEstado = '" + 7 + "'  order by Reparacion.Fecha desc");
+            CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id WHERE IdEstado = '" + 7 + "'  order by Reparacion.Fecha asc");
             connection.CerrarConexion();
+            colores();
+
+        }
+        public void colores()
+        {
+            foreach (DataGridViewRow row in CDGReparacion.Rows)
+            {
+                DateTime Hoy = DateTime.Today;
+                DateTime fecha = Convert.ToDateTime(row.Cells["Fecha"].Value.ToString());
+                string fecha_actual = Hoy.ToString("yyyy-MM-dd");
+                int daysDiff = ((TimeSpan)(Hoy - fecha)).Days;
+
+                if (daysDiff <=3)
+                {
+                    row.DefaultCellStyle.BackColor = Color.Green;
+                    // MessageBox.Show(daysDiff + "");
+                }else if (daysDiff > 3 && daysDiff <=5)
+                {
+                    row.DefaultCellStyle.BackColor = Color.Yellow;
+                }
+                else if (daysDiff > 5)
+                {
+                    row.DefaultCellStyle.BackColor = Color.Red;
+                }
+            }
         }
         private void CEspera_CheckedChanged(object sender, EventArgs e)
         {
 
             Connection connection = new Connection();
             connection.AbrirConexion();
-            CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id WHERE IdEstado = '" + 6 + "'  order by Reparacion.Fecha desc");
+            CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id WHERE IdEstado = '" + 6 + "'  order by Reparacion.Fecha asc");
             connection.CerrarConexion();
+            colores();
         }
         private void JTerminados_CheckedChanged(object sender, EventArgs e)
         {
 
             Connection connection = new Connection();
             connection.AbrirConexion();
-            CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id WHERE IdEstado = '" + 3 + "'   order by Reparacion.Fecha desc");
+            CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id WHERE IdEstado = '" + 3 + "'   order by Reparacion.Fecha asc");
             connection.CerrarConexion();
+            colores();
         }
         private void CDGReparacion_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -333,9 +370,10 @@ namespace WindowsFormsApp1.Views
             else
             {
                 bool encontro = false;
-                DBConnectio.Connection db = new DBConnectio.Connection();
+                Connection db = new DBConnectio.Connection();
                 db.AbrirConexion();
-                SqlDataReader dr = db.consulta("select * from Cliente where Nombre = '" + txtBuscarCliente.Text+"'");
+
+                SqlDataReader dr = db.consulta("select * from Cliente where Id = '" + txtBuscarCliente.Text+"'");
                 //MessageBox.Show("select * from Cliente where Id=" + txtBuscarCliente.Text);
                 if (dr.Read())
                 {
@@ -345,6 +383,7 @@ namespace WindowsFormsApp1.Views
                     txtCorreo.Text = Convert.ToString(dr["Contacto"]);
                     encontro = true;
                 }
+                
                 dr.Close();
                 db.CerrarConexion();
                 if (!encontro)
@@ -362,6 +401,7 @@ namespace WindowsFormsApp1.Views
                     txtApellido.Text = "";
                     txtCorreo.Text = "";
                     txtTelefono.Text = "";
+                    pictureBuscar.Visible = true;
                     //---------------------------------------
                     GenerarId();
 
@@ -759,6 +799,16 @@ namespace WindowsFormsApp1.Views
             txtTelefono.Enabled = true;
             txtCorreo.Enabled = true;
             txtBuscarCliente.Text = "";
+        }
+
+        private void CDGReparacion_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void tabPuntoVenta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            colores();
         }
     }
 }

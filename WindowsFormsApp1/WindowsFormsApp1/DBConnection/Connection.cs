@@ -19,6 +19,8 @@ namespace WindowsFormsApp1.DBConnectio
         {
             conexion.ConnectionString = cadena;
         }
+
+
         public void AbrirConexion()
         {
             try
@@ -110,6 +112,12 @@ namespace WindowsFormsApp1.DBConnectio
         }
         //-----------------------------------------------------------------------------   
         public SqlDataReader consulta(string SQL)
+        {
+            SqlCommand cmd = new SqlCommand(SQL, conexion);
+            SqlDataReader dr = cmd.ExecuteReader();
+            return dr;
+        }
+        public SqlDataReader consultaq(string SQL)
         {
             SqlCommand cmd = new SqlCommand(SQL, conexion);
             SqlDataReader dr = cmd.ExecuteReader();
@@ -274,6 +282,17 @@ namespace WindowsFormsApp1.DBConnectio
             filas = sc.ExecuteNonQuery();
             return filas;
         }
+
+        public DataTable buscarReparacion(string cadena)
+        {
+            dataSet.Reset();
+            adapter.SelectCommand = new SqlCommand(cadena, conexion);
+            adapter.Fill(dataSet);
+            table = dataSet.Tables[0];
+
+            return table;
+        }
+        
 
         public int generarIdCliente(string sql)
         {
