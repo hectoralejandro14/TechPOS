@@ -121,7 +121,7 @@ namespace WindowsFormsApp1.DBConnectio
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             return da;
         }
-        public DataTable buscarReparacion(string cadena)
+        public DataTable buscar(string cadena)
         {
             dataSet.Reset();
             adapter.SelectCommand = new SqlCommand(cadena, conexion);
@@ -265,6 +265,31 @@ namespace WindowsFormsApp1.DBConnectio
             }
             return aux;
         }
-    }
 
+        public int modificarCliente(string sql)
+        {
+            int filas = 0;
+            SqlCommand sc = new SqlCommand(sql, conexion);
+            sc.CommandType = CommandType.Text;
+            filas = sc.ExecuteNonQuery();
+            return filas;
+        }
+
+        public int generarIdCliente(string sql)
+        {
+            int id = 0;
+            SqlCommand sqlCommand = new SqlCommand(sql, conexion);
+            sqlCommand.CommandType = CommandType.Text;
+            try
+            {
+                id = Convert.ToInt32(sqlCommand.ExecuteScalar());
+                id += 1;
+            }
+            catch (InvalidCastException)
+            {
+                id = 1;
+            }
+            return id;
+        }
+    }
 }
