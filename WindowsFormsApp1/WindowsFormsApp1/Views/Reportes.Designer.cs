@@ -91,8 +91,10 @@
             // 
             // btnImprimir
             // 
-            this.btnImprimir.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnImprimir.BackColor = System.Drawing.Color.DimGray;
+            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnImprimir.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.btnImprimir.ForeColor = System.Drawing.Color.Turquoise;
             this.btnImprimir.Location = new System.Drawing.Point(374, 433);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(87, 39);
@@ -161,6 +163,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(658, 490);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);

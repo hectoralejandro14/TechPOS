@@ -84,5 +84,10 @@ namespace WindowsFormsApp1
             Ecargar_Pieza p = new Ecargar_Pieza(idTxtBoxRepa.Text, ModeloTxtBoxRepa.Text, MarcaTxtBox.Text);
             p.Show();
         }
+
+        private void dRapidoTxtBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

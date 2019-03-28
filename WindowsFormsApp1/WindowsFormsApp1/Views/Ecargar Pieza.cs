@@ -42,5 +42,6 @@ namespace WindowsFormsApp1.Views
         {
             this.Hide();
         }
+
     }
 }

@@ -101,6 +101,25 @@
             this.btnPedirPieza = new System.Windows.Forms.Button();
             this.btnAgregrEquipos = new System.Windows.Forms.Button();
             this.btnLimpiarCampos = new System.Windows.Forms.Button();
+            this.lblAvisoNoCliente = new System.Windows.Forms.Label();
+            this.layoutCliente = new System.Windows.Forms.TableLayoutPanel();
+            this.SlblNombre = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.SlblApellido = new System.Windows.Forms.Label();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.SlblTelefono = new System.Windows.Forms.Label();
+            this.SlblCorreo = new System.Windows.Forms.Label();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
+            this.SbtnCancelar = new System.Windows.Forms.Button();
+            this.btnAddClientH = new System.Windows.Forms.Button();
+            this.lblTextoIdCliente = new System.Windows.Forms.Label();
+            this.lblIdCliente = new System.Windows.Forms.Label();
+            this.btnAgregarCliente = new System.Windows.Forms.Button();
+            this.recibirLogoCh = new System.Windows.Forms.PictureBox();
+            this.btnPedirPieza = new System.Windows.Forms.Button();
+            this.btnAgregrEquipos = new System.Windows.Forms.Button();
+            this.btnLimpiarCampos = new System.Windows.Forms.Button();
             this.tabReparacion = new System.Windows.Forms.TabPage();
             this.JtxtBuscar2 = new System.Windows.Forms.TextBox();
             this.CDGReparacion = new System.Windows.Forms.DataGridView();
@@ -129,6 +148,7 @@
             this.layBuscarCliente = new System.Windows.Forms.FlowLayoutPanel();
             this.lblClienteBuscar = new System.Windows.Forms.Label();
             this.txtCliente = new System.Windows.Forms.TextBox();
+            this.pbBuscar = new System.Windows.Forms.PictureBox();
             this.dgClientes = new System.Windows.Forms.DataGridView();
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.techPOSdbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -167,7 +187,9 @@
             this.LayEquipo.SuspendLayout();
             this.ClienteGBx.SuspendLayout();
             this.layCliente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).BeginInit();
             this.layoutCliente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.recibirLogoCh)).BeginInit();
             this.tabReparacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CDGReparacion)).BeginInit();
             this.tabConfiguracionesDeUsuario.SuspendLayout();
@@ -178,6 +200,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tableOrdenes)).BeginInit();
             this.TabClientes.SuspendLayout();
             this.layBuscarCliente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSetBindingSource)).BeginInit();
@@ -208,10 +231,12 @@
             this.tabPuntoVenta.SelectedIndex = 0;
             this.tabPuntoVenta.Size = new System.Drawing.Size(1336, 716);
             this.tabPuntoVenta.TabIndex = 0;
+            this.tabPuntoVenta.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabPuntoVenta_DrawItem);
             this.tabPuntoVenta.SelectedIndexChanged += new System.EventHandler(this.tabPuntoVenta_SelectedIndexChanged);
             // 
             // tabVenta
             // 
+            this.tabVenta.BackColor = System.Drawing.Color.LightGray;
             this.tabVenta.Controls.Add(this.ventaLogoCh);
             this.tabVenta.Controls.Add(this.ClblCodigoDeBarras);
             this.tabVenta.Controls.Add(this.CNombreUsuarioLblVenta);
@@ -232,7 +257,16 @@
             this.tabVenta.Size = new System.Drawing.Size(1328, 669);
             this.tabVenta.TabIndex = 0;
             this.tabVenta.Text = "Venta";
-            this.tabVenta.UseVisualStyleBackColor = true;
+            // 
+            // ventaLogoCh
+            // 
+            this.ventaLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.ventaLogoCh.Location = new System.Drawing.Point(6, 6);
+            this.ventaLogoCh.Name = "ventaLogoCh";
+            this.ventaLogoCh.Size = new System.Drawing.Size(62, 97);
+            this.ventaLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ventaLogoCh.TabIndex = 20;
+            this.ventaLogoCh.TabStop = false;
             // 
             // ClblCodigoDeBarras
             // 
@@ -358,7 +392,9 @@
             // 
             // CbtnCobrarVenta
             // 
-            this.CbtnCobrarVenta.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.CbtnCobrarVenta.BackColor = System.Drawing.Color.DimGray;
+            this.CbtnCobrarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.CbtnCobrarVenta.ForeColor = System.Drawing.Color.Turquoise;
             this.CbtnCobrarVenta.Location = new System.Drawing.Point(970, 570);
             this.CbtnCobrarVenta.Name = "CbtnCobrarVenta";
             this.CbtnCobrarVenta.Size = new System.Drawing.Size(159, 37);
@@ -369,7 +405,9 @@
             // 
             // CbtnCancelarVenta
             // 
-            this.CbtnCancelarVenta.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.CbtnCancelarVenta.BackColor = System.Drawing.Color.DimGray;
+            this.CbtnCancelarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.CbtnCancelarVenta.ForeColor = System.Drawing.Color.Turquoise;
             this.CbtnCancelarVenta.Location = new System.Drawing.Point(970, 613);
             this.CbtnCancelarVenta.Name = "CbtnCancelarVenta";
             this.CbtnCancelarVenta.Size = new System.Drawing.Size(159, 37);
@@ -389,6 +427,7 @@
             // 
             // tabRecibirEquipo
             // 
+            this.tabRecibirEquipo.BackColor = System.Drawing.Color.LightGray;
             this.tabRecibirEquipo.Controls.Add(this.layoutTotales);
             this.tabRecibirEquipo.Controls.Add(this.EquipoGbx);
             this.tabRecibirEquipo.Controls.Add(this.ClienteGBx);
@@ -402,7 +441,6 @@
             this.tabRecibirEquipo.Size = new System.Drawing.Size(1328, 669);
             this.tabRecibirEquipo.TabIndex = 1;
             this.tabRecibirEquipo.Text = "Recibir Equipo";
-            this.tabRecibirEquipo.UseVisualStyleBackColor = true;
             // 
             // layoutTotales
             // 
@@ -507,6 +545,10 @@
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.33448F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.66552F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 92F));
+            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 220F));
+            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.33448F));
+            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.66552F));
+            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 92F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 219F));
             this.LayEquipo.Controls.Add(this.SlblMarca, 0, 0);
             this.LayEquipo.Controls.Add(this.txtMarca, 1, 0);
@@ -519,6 +561,9 @@
             this.LayEquipo.Location = new System.Drawing.Point(23, 29);
             this.LayEquipo.Name = "LayEquipo";
             this.LayEquipo.RowCount = 3;
+            this.LayEquipo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.3299F));
+            this.LayEquipo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.6701F));
+            this.LayEquipo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 67F));
             this.LayEquipo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.3299F));
             this.LayEquipo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.6701F));
             this.LayEquipo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 67F));
@@ -548,7 +593,7 @@
             // 
             this.SlblModelo.AutoSize = true;
             this.SlblModelo.ForeColor = System.Drawing.Color.Black;
-            this.SlblModelo.Location = new System.Drawing.Point(616, 0);
+            this.SlblModelo.Location = new System.Drawing.Point(615, 0);
             this.SlblModelo.Name = "SlblModelo";
             this.SlblModelo.Size = new System.Drawing.Size(82, 34);
             this.SlblModelo.TabIndex = 19;
@@ -568,7 +613,7 @@
             // txtModelo
             // 
             this.txtModelo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModelo.Location = new System.Drawing.Point(708, 3);
+            this.txtModelo.Location = new System.Drawing.Point(707, 3);
             this.txtModelo.Multiline = true;
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(212, 29);
@@ -712,6 +757,17 @@
             this.txtBuscarCliente.TabIndex = 2;
             this.txtBuscarCliente.TextChanged += new System.EventHandler(this.txtBuscarCliente_TextChanged);
             // 
+            // pictureBuscar
+            // 
+            this.pictureBuscar.Image = global::WindowsFormsApp1.Properties.Resources.Lupa_Codigo;
+            this.pictureBuscar.Location = new System.Drawing.Point(505, 3);
+            this.pictureBuscar.Name = "pictureBuscar";
+            this.pictureBuscar.Size = new System.Drawing.Size(30, 30);
+            this.pictureBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBuscar.TabIndex = 42;
+            this.pictureBuscar.TabStop = false;
+            this.pictureBuscar.Click += new System.EventHandler(this.pictureBuscar_Click);
+            // 
             // lblAvisoNoCliente
             // 
             this.lblAvisoNoCliente.AutoSize = true;
@@ -729,6 +785,14 @@
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.95349F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.04651F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 274F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.95349F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.04651F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 272F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.95349F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.04651F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 273F));
             this.layoutCliente.Controls.Add(this.SlblNombre, 0, 0);
             this.layoutCliente.Controls.Add(this.txtNombre, 1, 0);
@@ -741,6 +805,10 @@
             this.layoutCliente.Location = new System.Drawing.Point(46, 106);
             this.layoutCliente.Name = "layoutCliente";
             this.layoutCliente.RowCount = 2;
+            this.layoutCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.layoutCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.layoutCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.layoutCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.layoutCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.layoutCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.layoutCliente.Size = new System.Drawing.Size(801, 97);
@@ -760,7 +828,7 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(106, 3);
+            this.txtNombre.Location = new System.Drawing.Point(105, 3);
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(313, 29);
@@ -781,7 +849,7 @@
             // txtApellido
             // 
             this.txtApellido.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido.Location = new System.Drawing.Point(106, 51);
+            this.txtApellido.Location = new System.Drawing.Point(105, 51);
             this.txtApellido.Multiline = true;
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(313, 29);
@@ -792,7 +860,7 @@
             // 
             this.SlblTelefono.AutoSize = true;
             this.SlblTelefono.ForeColor = System.Drawing.Color.Black;
-            this.SlblTelefono.Location = new System.Drawing.Point(432, 0);
+            this.SlblTelefono.Location = new System.Drawing.Point(431, 0);
             this.SlblTelefono.Name = "SlblTelefono";
             this.SlblTelefono.Size = new System.Drawing.Size(89, 48);
             this.SlblTelefono.TabIndex = 5;
@@ -802,7 +870,7 @@
             // 
             this.SlblCorreo.AutoSize = true;
             this.SlblCorreo.ForeColor = System.Drawing.Color.Black;
-            this.SlblCorreo.Location = new System.Drawing.Point(432, 48);
+            this.SlblCorreo.Location = new System.Drawing.Point(431, 48);
             this.SlblCorreo.Name = "SlblCorreo";
             this.SlblCorreo.Size = new System.Drawing.Size(84, 34);
             this.SlblCorreo.TabIndex = 6;
@@ -811,7 +879,7 @@
             // txtTelefono
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(530, 3);
+            this.txtTelefono.Location = new System.Drawing.Point(529, 3);
             this.txtTelefono.Multiline = true;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(266, 29);
@@ -821,7 +889,7 @@
             // txtCorreo
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.Location = new System.Drawing.Point(530, 51);
+            this.txtCorreo.Location = new System.Drawing.Point(529, 51);
             this.txtCorreo.Multiline = true;
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(266, 29);
@@ -830,8 +898,10 @@
             // SbtnCancelar
             // 
             this.SbtnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.SbtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SbtnCancelar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SbtnCancelar.Location = new System.Drawing.Point(1076, 152);
+            this.SbtnCancelar.ForeColor = System.Drawing.Color.Turquoise;
+            this.SbtnCancelar.Location = new System.Drawing.Point(1048, 148);
             this.SbtnCancelar.Name = "SbtnCancelar";
             this.SbtnCancelar.Size = new System.Drawing.Size(120, 38);
             this.SbtnCancelar.TabIndex = 47;
@@ -843,8 +913,10 @@
             // btnAddClientH
             // 
             this.btnAddClientH.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAddClientH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddClientH.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddClientH.Location = new System.Drawing.Point(948, 102);
+            this.btnAddClientH.ForeColor = System.Drawing.Color.Turquoise;
+            this.btnAddClientH.Location = new System.Drawing.Point(921, 102);
             this.btnAddClientH.Name = "btnAddClientH";
             this.btnAddClientH.Size = new System.Drawing.Size(248, 38);
             this.btnAddClientH.TabIndex = 48;
@@ -855,7 +927,7 @@
             // lblTextoIdCliente
             // 
             this.lblTextoIdCliente.AutoSize = true;
-            this.lblTextoIdCliente.Location = new System.Drawing.Point(850, 45);
+            this.lblTextoIdCliente.Location = new System.Drawing.Point(961, 25);
             this.lblTextoIdCliente.Name = "lblTextoIdCliente";
             this.lblTextoIdCliente.Size = new System.Drawing.Size(124, 34);
             this.lblTextoIdCliente.TabIndex = 49;
@@ -866,7 +938,7 @@
             // 
             this.lblIdCliente.AutoSize = true;
             this.lblIdCliente.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblIdCliente.Location = new System.Drawing.Point(976, 44);
+            this.lblIdCliente.Location = new System.Drawing.Point(1091, 25);
             this.lblIdCliente.Name = "lblIdCliente";
             this.lblIdCliente.Size = new System.Drawing.Size(55, 34);
             this.lblIdCliente.TabIndex = 50;
@@ -875,6 +947,28 @@
             // 
             // btnAgregarCliente
             // 
+            this.btnAgregarCliente.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAgregarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAgregarCliente.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarCliente.ForeColor = System.Drawing.Color.Turquoise;
+            this.btnAgregarCliente.Location = new System.Drawing.Point(922, 148);
+            this.btnAgregarCliente.Name = "btnAgregarCliente";
+            this.btnAgregarCliente.Size = new System.Drawing.Size(120, 38);
+            this.btnAgregarCliente.TabIndex = 10;
+            this.btnAgregarCliente.Text = "Agregar Cliente";
+            this.btnAgregarCliente.UseVisualStyleBackColor = false;
+            this.btnAgregarCliente.Visible = false;
+            this.btnAgregarCliente.Click += new System.EventHandler(this.btnAgregarCliente_Click);
+            // 
+            // recibirLogoCh
+            // 
+            this.recibirLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.recibirLogoCh.Location = new System.Drawing.Point(6, 6);
+            this.recibirLogoCh.Name = "recibirLogoCh";
+            this.recibirLogoCh.Size = new System.Drawing.Size(89, 142);
+            this.recibirLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.recibirLogoCh.TabIndex = 51;
+            this.recibirLogoCh.TabStop = false;
             this.btnAgregarCliente.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnAgregarCliente.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarCliente.Location = new System.Drawing.Point(950, 153);
@@ -889,7 +983,9 @@
             // btnPedirPieza
             // 
             this.btnPedirPieza.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnPedirPieza.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPedirPieza.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPedirPieza.ForeColor = System.Drawing.Color.Turquoise;
             this.btnPedirPieza.Location = new System.Drawing.Point(877, 621);
             this.btnPedirPieza.Name = "btnPedirPieza";
             this.btnPedirPieza.Size = new System.Drawing.Size(132, 43);
@@ -901,7 +997,9 @@
             // btnAgregrEquipos
             // 
             this.btnAgregrEquipos.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAgregrEquipos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregrEquipos.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregrEquipos.ForeColor = System.Drawing.Color.Turquoise;
             this.btnAgregrEquipos.Location = new System.Drawing.Point(1015, 621);
             this.btnAgregrEquipos.Name = "btnAgregrEquipos";
             this.btnAgregrEquipos.Size = new System.Drawing.Size(132, 43);
@@ -913,7 +1011,9 @@
             // btnLimpiarCampos
             // 
             this.btnLimpiarCampos.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnLimpiarCampos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLimpiarCampos.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarCampos.ForeColor = System.Drawing.Color.Turquoise;
             this.btnLimpiarCampos.Location = new System.Drawing.Point(1153, 621);
             this.btnLimpiarCampos.Name = "btnLimpiarCampos";
             this.btnLimpiarCampos.Size = new System.Drawing.Size(132, 43);
@@ -924,6 +1024,7 @@
             // 
             // tabReparacion
             // 
+            this.tabReparacion.BackColor = System.Drawing.Color.LightGray;
             this.tabReparacion.Controls.Add(this.reparacionLogoCh);
             this.tabReparacion.Controls.Add(this.JtxtBuscar2);
             this.tabReparacion.Controls.Add(this.CDGReparacion);
@@ -938,8 +1039,17 @@
             this.tabReparacion.Size = new System.Drawing.Size(1328, 669);
             this.tabReparacion.TabIndex = 2;
             this.tabReparacion.Text = "Reparación";
-            this.tabReparacion.UseVisualStyleBackColor = true;
             this.tabReparacion.Click += new System.EventHandler(this.tabReparacion_Click);
+            // 
+            // reparacionLogoCh
+            // 
+            this.reparacionLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.reparacionLogoCh.Location = new System.Drawing.Point(6, 6);
+            this.reparacionLogoCh.Name = "reparacionLogoCh";
+            this.reparacionLogoCh.Size = new System.Drawing.Size(63, 91);
+            this.reparacionLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.reparacionLogoCh.TabIndex = 11;
+            this.reparacionLogoCh.TabStop = false;
             // 
             // JtxtBuscar2
             // 
@@ -1030,7 +1140,7 @@
             // 
             // tabConfiguracionesDeUsuario
             // 
-            this.tabConfiguracionesDeUsuario.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tabConfiguracionesDeUsuario.BackColor = System.Drawing.Color.LightGray;
             this.tabConfiguracionesDeUsuario.Controls.Add(this.SgbConfiguraciones);
             this.tabConfiguracionesDeUsuario.Controls.Add(this.SgbAsignarRolATrabajador);
             this.tabConfiguracionesDeUsuario.Controls.Add(this.SgbRoles);
@@ -1055,8 +1165,10 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Location = new System.Drawing.Point(115, 83);
+            this.button1.BackColor = System.Drawing.Color.DimGray;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.ForeColor = System.Drawing.Color.Turquoise;
+            this.button1.Location = new System.Drawing.Point(115, 103);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(277, 37);
             this.button1.TabIndex = 3;
@@ -1065,7 +1177,9 @@
             // 
             // SbtnAgregarUsuario
             // 
-            this.SbtnAgregarUsuario.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.SbtnAgregarUsuario.BackColor = System.Drawing.Color.DimGray;
+            this.SbtnAgregarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SbtnAgregarUsuario.ForeColor = System.Drawing.Color.Turquoise;
             this.SbtnAgregarUsuario.Location = new System.Drawing.Point(115, 40);
             this.SbtnAgregarUsuario.Name = "SbtnAgregarUsuario";
             this.SbtnAgregarUsuario.Size = new System.Drawing.Size(277, 37);
@@ -1090,7 +1204,9 @@
             // 
             // SbtnAsiganrRolAUsuario
             // 
-            this.SbtnAsiganrRolAUsuario.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.SbtnAsiganrRolAUsuario.BackColor = System.Drawing.Color.DimGray;
+            this.SbtnAsiganrRolAUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SbtnAsiganrRolAUsuario.ForeColor = System.Drawing.Color.Turquoise;
             this.SbtnAsiganrRolAUsuario.Location = new System.Drawing.Point(428, 173);
             this.SbtnAsiganrRolAUsuario.Name = "SbtnAsiganrRolAUsuario";
             this.SbtnAsiganrRolAUsuario.Size = new System.Drawing.Size(146, 41);
@@ -1164,7 +1280,9 @@
             // 
             // SbtnGuardarRol
             // 
-            this.SbtnGuardarRol.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.SbtnGuardarRol.BackColor = System.Drawing.Color.DimGray;
+            this.SbtnGuardarRol.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SbtnGuardarRol.ForeColor = System.Drawing.Color.Turquoise;
             this.SbtnGuardarRol.Location = new System.Drawing.Point(458, 84);
             this.SbtnGuardarRol.Name = "SbtnGuardarRol";
             this.SbtnGuardarRol.Size = new System.Drawing.Size(116, 41);
@@ -1173,8 +1291,19 @@
             this.SbtnGuardarRol.UseVisualStyleBackColor = false;
             this.SbtnGuardarRol.Click += new System.EventHandler(this.SbtnGuardarRol_Click);
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.pictureBox4.Location = new System.Drawing.Point(6, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(62, 92);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 3;
+            this.pictureBox4.TabStop = false;
+            // 
             // ordenesTab
             // 
+            this.ordenesTab.BackColor = System.Drawing.Color.LightGray;
             this.ordenesTab.Controls.Add(this.SlblPiezasOrdenadas);
             this.ordenesTab.Controls.Add(this.tableOrdenes);
             this.ordenesTab.Controls.Add(this.ordenesLogoCh);
@@ -1186,6 +1315,16 @@
             this.ordenesTab.Text = "Piezas Ordenadas";
             this.ordenesTab.UseVisualStyleBackColor = true;
             // 
+            // ordenesLogoCh
+            // 
+            this.ordenesLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.ordenesLogoCh.Location = new System.Drawing.Point(6, 6);
+            this.ordenesLogoCh.Name = "ordenesLogoCh";
+            this.ordenesLogoCh.Size = new System.Drawing.Size(61, 98);
+            this.ordenesLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ordenesLogoCh.TabIndex = 5;
+            this.ordenesLogoCh.TabStop = false;
+            // 
             // tableOrdenes
             // 
             this.tableOrdenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1196,6 +1335,7 @@
             // 
             // TabClientes
             // 
+            this.TabClientes.BackColor = System.Drawing.Color.LightGray;
             this.TabClientes.Controls.Add(this.layBuscarCliente);
             this.TabClientes.Controls.Add(this.dgClientes);
             this.TabClientes.Controls.Add(this.ClientesLogoCh);
@@ -1205,7 +1345,6 @@
             this.TabClientes.Size = new System.Drawing.Size(1328, 669);
             this.TabClientes.TabIndex = 5;
             this.TabClientes.Text = "Clientes";
-            this.TabClientes.UseVisualStyleBackColor = true;
             // 
             // layBuscarCliente
             // 
@@ -1217,7 +1356,7 @@
             this.layBuscarCliente.Size = new System.Drawing.Size(585, 56);
             this.layBuscarCliente.TabIndex = 9;
             // 
-            // lblClienteBuscar
+            // pbBuscar
             // 
             this.lblClienteBuscar.AutoSize = true;
             this.lblClienteBuscar.Location = new System.Drawing.Point(3, 0);
@@ -1234,6 +1373,17 @@
             this.txtCliente.TabIndex = 7;
             this.txtCliente.TextChanged += new System.EventHandler(this.txtCliente_TextChanged);
             this.txtCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCliente_KeyPress);
+            // 
+            // pbBuscar
+            // 
+            this.pbBuscar.Image = global::WindowsFormsApp1.Properties.Resources.Lupa_Codigo;
+            this.pbBuscar.Location = new System.Drawing.Point(445, 3);
+            this.pbBuscar.Name = "pbBuscar";
+            this.pbBuscar.Size = new System.Drawing.Size(37, 41);
+            this.pbBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbBuscar.TabIndex = 8;
+            this.pbBuscar.TabStop = false;
+            this.pbBuscar.Click += new System.EventHandler(this.pbBuscar_Click);
             // 
             // dgClientes
             // 
@@ -1268,11 +1418,25 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgClientes.RowHeadersVisible = false;
+            this.dgClientes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dgClientes.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgClientes.Size = new System.Drawing.Size(1170, 502);
+            this.dgClientes.RowTemplate.ReadOnly = true;
+            this.dgClientes.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgClientes.Size = new System.Drawing.Size(901, 320);
             this.dgClientes.TabIndex = 5;
             this.dgClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgClientes_CellClick);
+            // 
+            // ClientesLogoCh
+            // 
+            this.ClientesLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.ClientesLogoCh.Location = new System.Drawing.Point(6, 6);
+            this.ClientesLogoCh.Name = "ClientesLogoCh";
+            this.ClientesLogoCh.Size = new System.Drawing.Size(62, 94);
+            this.ClientesLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ClientesLogoCh.TabIndex = 4;
+            this.ClientesLogoCh.TabStop = false;
             // 
             // clienteBindingSource
             // 
@@ -1501,8 +1665,10 @@
             this.ClienteGBx.PerformLayout();
             this.layCliente.ResumeLayout(false);
             this.layCliente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).EndInit();
             this.layoutCliente.ResumeLayout(false);
             this.layoutCliente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.recibirLogoCh)).EndInit();
             this.tabReparacion.ResumeLayout(false);
             this.tabReparacion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CDGReparacion)).EndInit();
@@ -1518,6 +1684,7 @@
             this.TabClientes.ResumeLayout(false);
             this.layBuscarCliente.ResumeLayout(false);
             this.layBuscarCliente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBuscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSetBindingSource)).EndInit();

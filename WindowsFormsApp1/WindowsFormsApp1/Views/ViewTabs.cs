@@ -82,7 +82,6 @@ namespace WindowsFormsApp1.Views
             conexion.CerrarConexion();
             //----------------------------------------------
             colores();
-            
         }
        
         private void linkCerrarSesion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -98,6 +97,8 @@ namespace WindowsFormsApp1.Views
             dgClientes.DataSource = connection.buscar("SELECT * FROM Cliente");
             connection.CerrarConexion();
             colores();
+
+            tabPuntoVenta.DrawMode=TabDrawMode.OwnerDrawFixed;
         }
         private void ViewTabs_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -202,7 +203,7 @@ namespace WindowsFormsApp1.Views
 
                 if (daysDiff <=3)
                 {
-                    row.DefaultCellStyle.BackColor = Color.Green;
+                    row.DefaultCellStyle.BackColor = Color.YellowGreen;
                     // MessageBox.Show(daysDiff + "");
                 }else if (daysDiff > 3 && daysDiff <=5)
                 {
@@ -210,7 +211,7 @@ namespace WindowsFormsApp1.Views
                 }
                 else if (daysDiff > 5)
                 {
-                    row.DefaultCellStyle.BackColor = Color.Red;
+                    row.DefaultCellStyle.BackColor = Color.Tomato;
                 }
             }
         }
@@ -309,9 +310,31 @@ namespace WindowsFormsApp1.Views
         {
             Connection conexion = new Connection();
             conexion.AbrirConexion();
-            if ((!txtNombre.Text.Equals("")) && (!txtApellido.Text.Equals("")) && (!txtTelefono.Text.Equals("")) && (!txtCorreo.Text.Equals("")))
+
+            if ((!txtNombre.Text.Equals("")) && (!txtApellido.Text.Equals("")) && (!txtTelefono.Text.Equals("")) )
             {
-                if (validarEmail(txtCorreo.Text)==true)
+                if (txtCorreo.Text=="")
+                {
+                    int idR = Convert.ToInt32(lblIdCliente.Text);
+                    //Agregar cliente
+                    String sql = "INSERT INTO Cliente (Id,Nombre,Apellido,Telefono,Contacto) VALUES (" + idR + ",'" + txtNombre.Text + "','" + txtApellido.Text + "','" + txtTelefono.Text + "','" + txtCorreo.Text + "')";
+                    conexion.AddElements(sql);
+                    conexion.CerrarConexion();
+                    //--------------------------------------------------
+                    SbtnCancelar.Visible = false;
+                    btnAgregarCliente.Visible = false;
+                    //--------------------------------------------------
+                    txtNombre.Enabled = false;
+                    txtApellido.Enabled = false;
+                    txtTelefono.Enabled = false;
+                    txtCorreo.Enabled = false;
+                    lblAvisoNoCliente.Visible = false;
+                    txtBuscarCliente.Enabled = true;
+                    //lblTextoIdCliente.Visible = false;
+                    //lblIdCliente.Visible = false;
+                    dgClientes.DataSource = conexion.buscar("SELECT * FROM Cliente");
+                }
+                else if (validarEmail(txtCorreo.Text)==true)
                 {
 
                     int idR = Convert.ToInt32(lblIdCliente.Text);
@@ -329,8 +352,8 @@ namespace WindowsFormsApp1.Views
                     txtCorreo.Enabled = false;
                     lblAvisoNoCliente.Visible = false;
                     txtBuscarCliente.Enabled = true;
-                    lblTextoIdCliente.Visible = false;
-                    lblIdCliente.Visible = false;
+                    //lblTextoIdCliente.Visible = false;
+                    //lblIdCliente.Visible = false;
                     dgClientes.DataSource = conexion.buscar("SELECT * FROM Cliente");
                 }
                 else
@@ -375,6 +398,9 @@ namespace WindowsFormsApp1.Views
                 //MessageBox.Show("select * from Cliente where Id=" + txtBuscarCliente.Text);
                 if (dr.Read())
                 {
+                    lblTextoIdCliente.Visible = true;
+                    lblIdCliente.Visible = true;
+                    lblIdCliente.Text= Convert.ToString(dr["Id"]);
                     txtNombre.Text = Convert.ToString(dr["Nombre"]);
                     txtApellido.Text = Convert.ToString(dr["Apellido"]);
                     txtTelefono.Text = Convert.ToString(dr["Telefono"]);
@@ -402,6 +428,7 @@ namespace WindowsFormsApp1.Views
                     pictureBuscar.Visible = true;
                     //---------------------------------------
                     GenerarId();
+                    GenerarIdEquipo();
 
                 }
                 else
@@ -497,7 +524,7 @@ namespace WindowsFormsApp1.Views
             txtApellido.Enabled = false;
             txtTelefono.Enabled = false;
             txtCorreo.Enabled = false;
-            lblIdCliente.Visible = false;
+            lblTextoIdCliente.Visible = false;
             lblIdCliente.Visible = false;
             txtBuscarCliente.Enabled = true;
 
@@ -505,7 +532,7 @@ namespace WindowsFormsApp1.Views
         }
         private void btnAgregrEquipos_Click(object sender, EventArgs e)
         {
-            if (txtBuscarCliente.Text != "")
+            if (lblIdCliente.Text != "")
             {
                 string tipoDiag = "";
                 DateTime Hoy = DateTime.Today;
@@ -536,7 +563,7 @@ namespace WindowsFormsApp1.Views
                                                     + "','" + txtDescripcionDeFalla.Text
                                                     + "','" + concatenarDiagTex
                                                     + "','" + ccbTipoServicio1.SelectedValue
-                                                    + ",0,6," + fecha_actual + "','" + txtBuscarCliente.Text
+                                                    + "',0,6,'" + fecha_actual + "','" + lblIdCliente.Text
                                                     + "','" + comboResponsable.SelectedValue.ToString() + "'," + txtTotal.Text
                                                     + ",1,'')";
                     }
@@ -547,7 +574,7 @@ namespace WindowsFormsApp1.Views
                             + "','" + txtDescripcionDeFalla.Text
                             + "','" + concatenarDiagTex
                             + "','" + ccbTipoServicio1.SelectedValue
-                            + "'," + txtAnticipo.Text + ",6,'" + fecha_actual + "','" + txtBuscarCliente.Text
+                            + "'," + txtAnticipo.Text + ",6,'" + fecha_actual + "','" + lblIdCliente.Text
                             + "','" + comboResponsable.SelectedValue.ToString() + "'," + txtTotal.Text
                             + ",1,'')";
                     }
@@ -627,26 +654,23 @@ namespace WindowsFormsApp1.Views
             Connection connection = new Connection();
             connection.AbrirConexion();
             int idCliente = connection.generarId("SELECT MAX(Id) FROM Cliente");
+            if (idCliente == null)
+            {
+                idCliente = 1;
+            }
             lblIdCliente.Text = Convert.ToString(idCliente);
             connection.CerrarConexion();
         }
+
         public void GenerarIdEquipo()
         {
-            Connection conexion = new Connection();
-            Random random = new Random();
-            conexion.AbrirConexion();
-            decimal idR = random.Next(0, 1000000000);
-            do
-            {
-                idR = random.Next(0, 1000000000);
-                if (!conexion.VerificarExistenciaDeIdRep(Convert.ToString(idR)))
-                {
-                    break;
-                }
-            } while (true);
-            conexion.CerrarConexion();
-            lblIdEquipo.Text = "" + idR;
+            Connection connection = new Connection();
+            connection.AbrirConexion();
+            int idReparacion = connection.generarId("SELECT MAX(Id) FROM Reparacion");
+            lblIdEquipo.Text = Convert.ToString(idReparacion);
+            connection.CerrarConexion();
         }
+
         public void Bienvenido(string usuario)
         {
             this.CNombreUsuarioLblVenta.Text = usuario;
@@ -805,7 +829,37 @@ namespace WindowsFormsApp1.Views
 
         private void tabPuntoVenta_SelectedIndexChanged(object sender, EventArgs e)
         {
+          
+            Connection connection = new Connection();
+            connection.AbrirConexion();
+            CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id");
+            connection.CerrarConexion();
             colores();
+        }
+
+        private void tabPuntoVenta_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            TabPage tp = tabPuntoVenta.TabPages[e.Index];
+
+            StringFormat sf = new StringFormat();
+            sf.Alignment = StringAlignment.Center;  //optional
+
+            // This is the rectangle to draw "over" the tabpage title
+            RectangleF headerRect = new RectangleF(e.Bounds.X, e.Bounds.Y + 2, e.Bounds.Width, e.Bounds.Height - 2);
+
+            // This is the default colour to use for the non-selected tabs
+            SolidBrush sb = new SolidBrush(Color.LightGray);
+
+            // This changes the colour if we're trying to draw the selected tabpage
+            if (tabPuntoVenta.SelectedIndex == e.Index)
+                sb.Color = Color.LightSkyBlue;
+
+            // Colour the header of the current tabpage based on what we did above
+            g.FillRectangle(sb, e.Bounds);
+
+            //Remember to redraw the text - I'm always using black for title text
+            g.DrawString(tp.Text, tabPuntoVenta.Font, new SolidBrush(Color.Black), headerRect, sf);
         }
 
         private void SbtnAgregarNuevoServicioCU_Click(object sender, EventArgs e)
