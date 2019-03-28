@@ -40,6 +40,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCancelarPieza = new System.Windows.Forms.Button();
             this.BtnAceptarPieza = new System.Windows.Forms.Button();
+            this.SdtCalendarFechaLlegada = new System.Windows.Forms.DateTimePicker();
+            this.SlblFechaAproximadaLLegaPieza = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +59,7 @@
             // 
             this.marcaLblEncargar.AutoSize = true;
             this.marcaLblEncargar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.marcaLblEncargar.Location = new System.Drawing.Point(148, 168);
+            this.marcaLblEncargar.Location = new System.Drawing.Point(140, 167);
             this.marcaLblEncargar.Name = "marcaLblEncargar";
             this.marcaLblEncargar.Size = new System.Drawing.Size(64, 34);
             this.marcaLblEncargar.TabIndex = 1;
@@ -77,7 +79,7 @@
             // 
             this.modeloLblEncargar.AutoSize = true;
             this.modeloLblEncargar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modeloLblEncargar.Location = new System.Drawing.Point(140, 101);
+            this.modeloLblEncargar.Location = new System.Drawing.Point(132, 101);
             this.modeloLblEncargar.Name = "modeloLblEncargar";
             this.modeloLblEncargar.Size = new System.Drawing.Size(72, 34);
             this.modeloLblEncargar.TabIndex = 3;
@@ -88,16 +90,15 @@
             this.equipoTbxEncagar.Location = new System.Drawing.Point(218, 36);
             this.equipoTbxEncagar.Multiline = true;
             this.equipoTbxEncagar.Name = "equipoTbxEncagar";
-            this.equipoTbxEncagar.Size = new System.Drawing.Size(182, 29);
+            this.equipoTbxEncagar.Size = new System.Drawing.Size(328, 29);
             this.equipoTbxEncagar.TabIndex = 4;
-            this.equipoTbxEncagar.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // marcaTbxEncargar
             // 
             this.marcaTbxEncargar.Location = new System.Drawing.Point(218, 168);
             this.marcaTbxEncargar.Multiline = true;
             this.marcaTbxEncargar.Name = "marcaTbxEncargar";
-            this.marcaTbxEncargar.Size = new System.Drawing.Size(182, 33);
+            this.marcaTbxEncargar.Size = new System.Drawing.Size(328, 33);
             this.marcaTbxEncargar.TabIndex = 5;
             // 
             // modeloTbxEncargar
@@ -105,7 +106,7 @@
             this.modeloTbxEncargar.Location = new System.Drawing.Point(218, 101);
             this.modeloTbxEncargar.Multiline = true;
             this.modeloTbxEncargar.Name = "modeloTbxEncargar";
-            this.modeloTbxEncargar.Size = new System.Drawing.Size(183, 28);
+            this.modeloTbxEncargar.Size = new System.Drawing.Size(328, 28);
             this.modeloTbxEncargar.TabIndex = 6;
             // 
             // piezasTbxEncargar
@@ -115,12 +116,11 @@
             this.piezasTbxEncargar.Name = "piezasTbxEncargar";
             this.piezasTbxEncargar.Size = new System.Drawing.Size(545, 173);
             this.piezasTbxEncargar.TabIndex = 7;
-            this.piezasTbxEncargar.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 1);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 134);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -131,19 +131,19 @@
             // 
             this.btnCancelarPieza.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnCancelarPieza.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelarPieza.Location = new System.Drawing.Point(388, 442);
+            this.btnCancelarPieza.Location = new System.Drawing.Point(388, 479);
             this.btnCancelarPieza.Name = "btnCancelarPieza";
             this.btnCancelarPieza.Size = new System.Drawing.Size(83, 37);
             this.btnCancelarPieza.TabIndex = 9;
             this.btnCancelarPieza.Text = "Cancelar";
             this.btnCancelarPieza.UseVisualStyleBackColor = false;
-            this.btnCancelarPieza.Click += new System.EventHandler(this.button1_Click);
+            this.btnCancelarPieza.Click += new System.EventHandler(this.btnCancelarPieza_Click);
             // 
             // BtnAceptarPieza
             // 
             this.BtnAceptarPieza.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BtnAceptarPieza.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAceptarPieza.Location = new System.Drawing.Point(477, 442);
+            this.BtnAceptarPieza.Location = new System.Drawing.Point(477, 479);
             this.BtnAceptarPieza.Name = "BtnAceptarPieza";
             this.BtnAceptarPieza.Size = new System.Drawing.Size(80, 37);
             this.BtnAceptarPieza.TabIndex = 10;
@@ -151,11 +151,30 @@
             this.BtnAceptarPieza.UseVisualStyleBackColor = false;
             this.BtnAceptarPieza.Click += new System.EventHandler(this.BtnAceptarPieza_Click);
             // 
+            // SdtCalendarFechaLlegada
+            // 
+            this.SdtCalendarFechaLlegada.Location = new System.Drawing.Point(349, 444);
+            this.SdtCalendarFechaLlegada.Name = "SdtCalendarFechaLlegada";
+            this.SdtCalendarFechaLlegada.Size = new System.Drawing.Size(207, 20);
+            this.SdtCalendarFechaLlegada.TabIndex = 11;
+            // 
+            // SlblFechaAproximadaLLegaPieza
+            // 
+            this.SlblFechaAproximadaLLegaPieza.AutoSize = true;
+            this.SlblFechaAproximadaLLegaPieza.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SlblFechaAproximadaLLegaPieza.Location = new System.Drawing.Point(12, 439);
+            this.SlblFechaAproximadaLLegaPieza.Name = "SlblFechaAproximadaLLegaPieza";
+            this.SlblFechaAproximadaLLegaPieza.Size = new System.Drawing.Size(331, 34);
+            this.SlblFechaAproximadaLLegaPieza.TabIndex = 12;
+            this.SlblFechaAproximadaLLegaPieza.Text = "Fecha Aproximada de Llegada de pieza";
+            // 
             // Ecargar_Pieza
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(572, 495);
+            this.ClientSize = new System.Drawing.Size(569, 526);
+            this.Controls.Add(this.SlblFechaAproximadaLLegaPieza);
+            this.Controls.Add(this.SdtCalendarFechaLlegada);
             this.Controls.Add(this.BtnAceptarPieza);
             this.Controls.Add(this.btnCancelarPieza);
             this.Controls.Add(this.pictureBox1);
@@ -170,7 +189,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Ecargar_Pieza";
             this.Text = "Encargar pieza";
-            this.Load += new System.EventHandler(this.Ecargar_Pieza_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -190,5 +208,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnCancelarPieza;
         private System.Windows.Forms.Button BtnAceptarPieza;
+        private System.Windows.Forms.DateTimePicker SdtCalendarFechaLlegada;
+        private System.Windows.Forms.Label SlblFechaAproximadaLLegaPieza;
     }
 }

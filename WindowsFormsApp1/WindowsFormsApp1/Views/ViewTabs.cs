@@ -76,6 +76,11 @@ namespace WindowsFormsApp1.Views
             connection.AbrirConexion();
             CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id  order by Reparacion.Fecha asc");
             connection.CerrarConexion();
+            //----------------------------------------------
+            conexion.AbrirConexion();
+            tableOrdenes.DataSource = conexion.buscarReparacion("SELECT * FROM Pieza");
+            conexion.CerrarConexion();
+            //----------------------------------------------
             colores();
             
         }
@@ -88,15 +93,8 @@ namespace WindowsFormsApp1.Views
         }
         private void ViewTabs_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'techPOSdbDataSet.Cliente' table. You can move, or remove it, as needed.
-            //clienteTableAdapter.Fill(this.techPOSdbDataSet.Cliente);
-            // TODO: This line of code loads data into the 'techPOSdbDataSet.Reparacion' table. You can move, or remove it, as needed.
-            //this.reparacionTableAdapter.Fill(this.techPOSdbDataSet.Reparacion);
             Connection connection = new Connection();
             connection.AbrirConexion();
-            //CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id  order by Reparacion.Fecha desc");
-            //CDGReparacion.DataSource = connection.buscar("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id");
-
             dgClientes.DataSource = connection.buscar("SELECT * FROM Cliente");
             connection.CerrarConexion();
             colores();
@@ -538,7 +536,7 @@ namespace WindowsFormsApp1.Views
                                                     + "','" + txtDescripcionDeFalla.Text
                                                     + "','" + concatenarDiagTex
                                                     + "','" + ccbTipoServicio1.SelectedValue
-                                                    + "',0,6,'" + fecha_actual + "','" + txtBuscarCliente.Text
+                                                    + ",0,6," + fecha_actual + "','" + txtBuscarCliente.Text
                                                     + "','" + comboResponsable.SelectedValue.ToString() + "'," + txtTotal.Text
                                                     + ",1,'')";
                     }
@@ -628,7 +626,7 @@ namespace WindowsFormsApp1.Views
         {
             Connection connection = new Connection();
             connection.AbrirConexion();
-            int idCliente = connection.generarIdCliente("SELECT MAX(Id) FROM Cliente");
+            int idCliente = connection.generarId("SELECT MAX(Id) FROM Cliente");
             lblIdCliente.Text = Convert.ToString(idCliente);
             connection.CerrarConexion();
         }
@@ -684,7 +682,6 @@ namespace WindowsFormsApp1.Views
         }
         private void ccbTipoServicio1_MeasureItem(object sender, System.Windows.Forms.MeasureItemEventArgs e)
         {
-
             switch (e.Index)
             {
                 case 0:
@@ -732,7 +729,7 @@ namespace WindowsFormsApp1.Views
                 connection.AbrirConexion();
                 if (txtCliente.Text == "")
                 {
-                    MessageBox.Show("Favor de llenar el campo", "Advertencia");
+                    MessageBox.Show("Favor de llenar el campo", "Advertencia",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
                 }
                 else
                 {
@@ -809,6 +806,12 @@ namespace WindowsFormsApp1.Views
         private void tabPuntoVenta_SelectedIndexChanged(object sender, EventArgs e)
         {
             colores();
+        }
+
+        private void SbtnAgregarNuevoServicioCU_Click(object sender, EventArgs e)
+        {
+            NuevoServicio nuevo = new NuevoServicio();
+            nuevo.Show();
         }
     }
 }
