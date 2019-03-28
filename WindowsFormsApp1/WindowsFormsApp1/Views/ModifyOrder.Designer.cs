@@ -101,8 +101,10 @@
             // 
             // cancelarBtnMOrdens
             // 
-            this.cancelarBtnMOrdens.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cancelarBtnMOrdens.BackColor = System.Drawing.Color.DimGray;
+            this.cancelarBtnMOrdens.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cancelarBtnMOrdens.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.cancelarBtnMOrdens.ForeColor = System.Drawing.Color.Turquoise;
             this.cancelarBtnMOrdens.Location = new System.Drawing.Point(55, 225);
             this.cancelarBtnMOrdens.Name = "cancelarBtnMOrdens";
             this.cancelarBtnMOrdens.Size = new System.Drawing.Size(98, 39);
@@ -112,8 +114,10 @@
             // 
             // aceptarBtnMOrdenes
             // 
-            this.aceptarBtnMOrdenes.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.aceptarBtnMOrdenes.BackColor = System.Drawing.Color.DimGray;
+            this.aceptarBtnMOrdenes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.aceptarBtnMOrdenes.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.aceptarBtnMOrdenes.ForeColor = System.Drawing.Color.Turquoise;
             this.aceptarBtnMOrdenes.Location = new System.Drawing.Point(185, 225);
             this.aceptarBtnMOrdenes.Name = "aceptarBtnMOrdenes";
             this.aceptarBtnMOrdenes.Size = new System.Drawing.Size(87, 39);
@@ -135,6 +139,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(320, 291);
             this.Controls.Add(this.modificarLblOrdenes);
             this.Controls.Add(this.aceptarBtnMOrdenes);

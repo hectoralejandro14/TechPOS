@@ -235,10 +235,11 @@
             // 
             // ActualizarBtn
             // 
-            this.ActualizarBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(198)))), ((int)(((byte)(206)))));
+            this.ActualizarBtn.BackColor = System.Drawing.Color.DimGray;
+            this.ActualizarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ActualizarBtn.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.ActualizarBtn.ForeColor = System.Drawing.Color.Black;
-            this.ActualizarBtn.Location = new System.Drawing.Point(19, 513);
+            this.ActualizarBtn.ForeColor = System.Drawing.Color.Turquoise;
+            this.ActualizarBtn.Location = new System.Drawing.Point(3, 513);
             this.ActualizarBtn.Name = "ActualizarBtn";
             this.ActualizarBtn.Size = new System.Drawing.Size(104, 34);
             this.ActualizarBtn.TabIndex = 20;
@@ -248,8 +249,10 @@
             // 
             // AbonarBtn
             // 
-            this.AbonarBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(198)))), ((int)(((byte)(206)))));
+            this.AbonarBtn.BackColor = System.Drawing.Color.DimGray;
+            this.AbonarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AbonarBtn.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.AbonarBtn.ForeColor = System.Drawing.Color.Turquoise;
             this.AbonarBtn.Location = new System.Drawing.Point(220, 513);
             this.AbonarBtn.Name = "AbonarBtn";
             this.AbonarBtn.Size = new System.Drawing.Size(82, 34);
@@ -260,9 +263,11 @@
             // 
             // AceptarBtn
             // 
-            this.AceptarBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(198)))), ((int)(((byte)(206)))));
+            this.AceptarBtn.BackColor = System.Drawing.Color.DimGray;
+            this.AceptarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AceptarBtn.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.AceptarBtn.Location = new System.Drawing.Point(308, 513);
+            this.AceptarBtn.ForeColor = System.Drawing.Color.Turquoise;
+            this.AceptarBtn.Location = new System.Drawing.Point(309, 513);
             this.AceptarBtn.Name = "AceptarBtn";
             this.AceptarBtn.Size = new System.Drawing.Size(90, 34);
             this.AceptarBtn.TabIndex = 22;
@@ -272,9 +277,11 @@
             // 
             // piezaOrderbtnC
             // 
-            this.piezaOrderbtnC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(198)))), ((int)(((byte)(206)))));
+            this.piezaOrderbtnC.BackColor = System.Drawing.Color.DimGray;
+            this.piezaOrderbtnC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.piezaOrderbtnC.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.piezaOrderbtnC.Location = new System.Drawing.Point(132, 513);
+            this.piezaOrderbtnC.ForeColor = System.Drawing.Color.Turquoise;
+            this.piezaOrderbtnC.Location = new System.Drawing.Point(123, 513);
             this.piezaOrderbtnC.Name = "piezaOrderbtnC";
             this.piezaOrderbtnC.Size = new System.Drawing.Size(82, 34);
             this.piezaOrderbtnC.TabIndex = 23;
@@ -294,6 +301,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(411, 568);
             this.Controls.Add(this.estadoCBoxC);
             this.Controls.Add(this.piezaOrderbtnC);

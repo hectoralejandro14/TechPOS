@@ -57,47 +57,53 @@
             this.CbtnCancelarVenta = new System.Windows.Forms.Button();
             this.usuarioLblVenta = new System.Windows.Forms.Label();
             this.tabRecibirEquipo = new System.Windows.Forms.TabPage();
-            this.recibirLogoCh = new System.Windows.Forms.PictureBox();
-            this.lblIdCliente = new System.Windows.Forms.Label();
-            this.lblTextoIdCliente = new System.Windows.Forms.Label();
-            this.btnAddClientH = new System.Windows.Forms.Button();
-            this.SbtnCancelar = new System.Windows.Forms.Button();
-            this.ccbTipoServicio1 = new System.Windows.Forms.ComboBox();
-            this.tiposervicioC1 = new System.Windows.Forms.Label();
-            this.lblAvisoNoCliente = new System.Windows.Forms.Label();
-            this.txtApellido = new System.Windows.Forms.TextBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtCorreo = new System.Windows.Forms.TextBox();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.SlblApellido = new System.Windows.Forms.Label();
-            this.btnPedirPieza = new System.Windows.Forms.Button();
-            this.btnAgregrEquipos = new System.Windows.Forms.Button();
-            this.btnLimpiarCampos = new System.Windows.Forms.Button();
-            this.comboResponsable = new System.Windows.Forms.ComboBox();
-            this.txtAnticipo = new System.Windows.Forms.TextBox();
+            this.layoutTotales = new System.Windows.Forms.TableLayoutPanel();
             this.txtTotal = new System.Windows.Forms.TextBox();
+            this.SlblTotal = new System.Windows.Forms.Label();
+            this.SlblAnticipo = new System.Windows.Forms.Label();
+            this.txtAnticipo = new System.Windows.Forms.TextBox();
             this.SlblResponsable = new System.Windows.Forms.Label();
+            this.comboResponsable = new System.Windows.Forms.ComboBox();
+            this.EquipoGbx = new System.Windows.Forms.GroupBox();
+            this.LayEquipo = new System.Windows.Forms.TableLayoutPanel();
+            this.SlblMarca = new System.Windows.Forms.Label();
+            this.txtMarca = new System.Windows.Forms.TextBox();
+            this.SlblModelo = new System.Windows.Forms.Label();
+            this.ccbTipoServicio1 = new System.Windows.Forms.ComboBox();
+            this.txtModelo = new System.Windows.Forms.TextBox();
+            this.tiposervicioC1 = new System.Windows.Forms.Label();
+            this.SlblDescripcionFalla = new System.Windows.Forms.Label();
+            this.txtDescripcionDeFalla = new System.Windows.Forms.TextBox();
+            this.lblIdEquipo = new System.Windows.Forms.Label();
+            this.SlblRecibirEquipo = new System.Windows.Forms.Label();
             this.txtDescripcionDiagnosticoEspecifico = new System.Windows.Forms.TextBox();
             this.rbDiagnosticoEspecifico = new System.Windows.Forms.RadioButton();
             this.rbDiagnosticoRapido = new System.Windows.Forms.RadioButton();
-            this.txtDescripcionDeFalla = new System.Windows.Forms.TextBox();
-            this.txtModelo = new System.Windows.Forms.TextBox();
-            this.txtMarca = new System.Windows.Forms.TextBox();
-            this.SlblRecibirEquipo = new System.Windows.Forms.Label();
-            this.lblIdEquipo = new System.Windows.Forms.Label();
-            this.SlblMarca = new System.Windows.Forms.Label();
-            this.SlblModelo = new System.Windows.Forms.Label();
-            this.SlblDescripcionFalla = new System.Windows.Forms.Label();
             this.SlblTipoDeDiagnostico = new System.Windows.Forms.Label();
-            this.SlblTotal = new System.Windows.Forms.Label();
-            this.SlblAnticipo = new System.Windows.Forms.Label();
-            this.btnAgregarCliente = new System.Windows.Forms.Button();
-            this.SlblCorreo = new System.Windows.Forms.Label();
-            this.SlblTelefono = new System.Windows.Forms.Label();
-            this.SlblNombre = new System.Windows.Forms.Label();
-            this.txtBuscarCliente = new System.Windows.Forms.TextBox();
+            this.ClienteGBx = new System.Windows.Forms.GroupBox();
+            this.layCliente = new System.Windows.Forms.FlowLayoutPanel();
             this.SlblBuscarCliente = new System.Windows.Forms.Label();
+            this.txtBuscarCliente = new System.Windows.Forms.TextBox();
             this.pictureBuscar = new System.Windows.Forms.PictureBox();
+            this.lblAvisoNoCliente = new System.Windows.Forms.Label();
+            this.layoutCliente = new System.Windows.Forms.TableLayoutPanel();
+            this.SlblNombre = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.SlblApellido = new System.Windows.Forms.Label();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.SlblTelefono = new System.Windows.Forms.Label();
+            this.SlblCorreo = new System.Windows.Forms.Label();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
+            this.SbtnCancelar = new System.Windows.Forms.Button();
+            this.btnAddClientH = new System.Windows.Forms.Button();
+            this.lblTextoIdCliente = new System.Windows.Forms.Label();
+            this.lblIdCliente = new System.Windows.Forms.Label();
+            this.btnAgregarCliente = new System.Windows.Forms.Button();
+            this.recibirLogoCh = new System.Windows.Forms.PictureBox();
+            this.btnPedirPieza = new System.Windows.Forms.Button();
+            this.btnAgregrEquipos = new System.Windows.Forms.Button();
+            this.btnLimpiarCampos = new System.Windows.Forms.Button();
             this.tabReparacion = new System.Windows.Forms.TabPage();
             this.reparacionLogoCh = new System.Windows.Forms.PictureBox();
             this.JtxtBuscar2 = new System.Windows.Forms.TextBox();
@@ -131,9 +137,10 @@
             this.fIngrClmOrdenes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fLlegaClmOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TabClientes = new System.Windows.Forms.TabPage();
-            this.pbBuscar = new System.Windows.Forms.PictureBox();
-            this.txtCliente = new System.Windows.Forms.TextBox();
+            this.layBuscarCliente = new System.Windows.Forms.FlowLayoutPanel();
             this.lblClienteBuscar = new System.Windows.Forms.Label();
+            this.txtCliente = new System.Windows.Forms.TextBox();
+            this.pbBuscar = new System.Windows.Forms.PictureBox();
             this.dgClientes = new System.Windows.Forms.DataGridView();
             this.ClientesLogoCh = new System.Windows.Forms.PictureBox();
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -154,20 +161,19 @@
             this.linkCerrarSesion = new System.Windows.Forms.LinkLabel();
             this.reparacionTableAdapter = new WindowsFormsApp1.TechPOSdbDataSetTableAdapters.ReparacionTableAdapter();
             this.clienteTableAdapter = new WindowsFormsApp1.TechPOSdbDataSetTableAdapters.ClienteTableAdapter();
-            this.ClienteGBx = new System.Windows.Forms.GroupBox();
-            this.layoutCliente = new System.Windows.Forms.TableLayoutPanel();
-            this.layCliente = new System.Windows.Forms.FlowLayoutPanel();
-            this.EquipoGbx = new System.Windows.Forms.GroupBox();
-            this.LayEquipo = new System.Windows.Forms.TableLayoutPanel();
-            this.layoutTotales = new System.Windows.Forms.TableLayoutPanel();
-            this.layBuscarCliente = new System.Windows.Forms.FlowLayoutPanel();
             this.tabPuntoVenta.SuspendLayout();
             this.tabVenta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ventaLogoCh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableVender)).BeginInit();
             this.tabRecibirEquipo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.recibirLogoCh)).BeginInit();
+            this.layoutTotales.SuspendLayout();
+            this.EquipoGbx.SuspendLayout();
+            this.LayEquipo.SuspendLayout();
+            this.ClienteGBx.SuspendLayout();
+            this.layCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).BeginInit();
+            this.layoutCliente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.recibirLogoCh)).BeginInit();
             this.tabReparacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reparacionLogoCh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CDGReparacion)).BeginInit();
@@ -180,6 +186,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ordenesLogoCh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableOrdenes)).BeginInit();
             this.TabClientes.SuspendLayout();
+            this.layBuscarCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClientesLogoCh)).BeginInit();
@@ -188,13 +195,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reparacionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.ClienteGBx.SuspendLayout();
-            this.layoutCliente.SuspendLayout();
-            this.layCliente.SuspendLayout();
-            this.EquipoGbx.SuspendLayout();
-            this.LayEquipo.SuspendLayout();
-            this.layoutTotales.SuspendLayout();
-            this.layBuscarCliente.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPuntoVenta
@@ -215,6 +215,7 @@
             // 
             // tabVenta
             // 
+            this.tabVenta.BackColor = System.Drawing.Color.LightGray;
             this.tabVenta.Controls.Add(this.ventaLogoCh);
             this.tabVenta.Controls.Add(this.ClblCodigoDeBarras);
             this.tabVenta.Controls.Add(this.CNombreUsuarioLblVenta);
@@ -235,14 +236,13 @@
             this.tabVenta.Size = new System.Drawing.Size(1328, 669);
             this.tabVenta.TabIndex = 0;
             this.tabVenta.Text = "Venta";
-            this.tabVenta.UseVisualStyleBackColor = true;
             // 
             // ventaLogoCh
             // 
             this.ventaLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
             this.ventaLogoCh.Location = new System.Drawing.Point(6, 6);
             this.ventaLogoCh.Name = "ventaLogoCh";
-            this.ventaLogoCh.Size = new System.Drawing.Size(118, 177);
+            this.ventaLogoCh.Size = new System.Drawing.Size(62, 97);
             this.ventaLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ventaLogoCh.TabIndex = 20;
             this.ventaLogoCh.TabStop = false;
@@ -371,7 +371,9 @@
             // 
             // CbtnCobrarVenta
             // 
-            this.CbtnCobrarVenta.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.CbtnCobrarVenta.BackColor = System.Drawing.Color.DimGray;
+            this.CbtnCobrarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.CbtnCobrarVenta.ForeColor = System.Drawing.Color.Turquoise;
             this.CbtnCobrarVenta.Location = new System.Drawing.Point(970, 570);
             this.CbtnCobrarVenta.Name = "CbtnCobrarVenta";
             this.CbtnCobrarVenta.Size = new System.Drawing.Size(159, 37);
@@ -382,7 +384,9 @@
             // 
             // CbtnCancelarVenta
             // 
-            this.CbtnCancelarVenta.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.CbtnCancelarVenta.BackColor = System.Drawing.Color.DimGray;
+            this.CbtnCancelarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.CbtnCancelarVenta.ForeColor = System.Drawing.Color.Turquoise;
             this.CbtnCancelarVenta.Location = new System.Drawing.Point(970, 613);
             this.CbtnCancelarVenta.Name = "CbtnCancelarVenta";
             this.CbtnCancelarVenta.Size = new System.Drawing.Size(159, 37);
@@ -402,6 +406,7 @@
             // 
             // tabRecibirEquipo
             // 
+            this.tabRecibirEquipo.BackColor = System.Drawing.Color.LightGray;
             this.tabRecibirEquipo.Controls.Add(this.layoutTotales);
             this.tabRecibirEquipo.Controls.Add(this.EquipoGbx);
             this.tabRecibirEquipo.Controls.Add(this.ClienteGBx);
@@ -415,180 +420,76 @@
             this.tabRecibirEquipo.Size = new System.Drawing.Size(1328, 669);
             this.tabRecibirEquipo.TabIndex = 1;
             this.tabRecibirEquipo.Text = "Recibir Equipo";
-            this.tabRecibirEquipo.UseVisualStyleBackColor = true;
             // 
-            // recibirLogoCh
+            // layoutTotales
             // 
-            this.recibirLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
-            this.recibirLogoCh.Location = new System.Drawing.Point(6, 6);
-            this.recibirLogoCh.Name = "recibirLogoCh";
-            this.recibirLogoCh.Size = new System.Drawing.Size(89, 142);
-            this.recibirLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.recibirLogoCh.TabIndex = 51;
-            this.recibirLogoCh.TabStop = false;
+            this.layoutTotales.ColumnCount = 2;
+            this.layoutTotales.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.layoutTotales.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.layoutTotales.Controls.Add(this.txtTotal, 1, 0);
+            this.layoutTotales.Controls.Add(this.SlblTotal, 0, 0);
+            this.layoutTotales.Controls.Add(this.SlblAnticipo, 0, 1);
+            this.layoutTotales.Controls.Add(this.txtAnticipo, 1, 1);
+            this.layoutTotales.Controls.Add(this.SlblResponsable, 0, 2);
+            this.layoutTotales.Controls.Add(this.comboResponsable, 1, 2);
+            this.layoutTotales.Location = new System.Drawing.Point(148, 542);
+            this.layoutTotales.Name = "layoutTotales";
+            this.layoutTotales.RowCount = 3;
+            this.layoutTotales.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.33333F));
+            this.layoutTotales.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.66667F));
+            this.layoutTotales.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+            this.layoutTotales.Size = new System.Drawing.Size(268, 115);
+            this.layoutTotales.TabIndex = 54;
             // 
-            // lblIdCliente
+            // txtTotal
             // 
-            this.lblIdCliente.AutoSize = true;
-            this.lblIdCliente.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblIdCliente.Location = new System.Drawing.Point(999, 37);
-            this.lblIdCliente.Name = "lblIdCliente";
-            this.lblIdCliente.Size = new System.Drawing.Size(55, 34);
-            this.lblIdCliente.TabIndex = 50;
-            this.lblIdCliente.Text = "0000";
-            this.lblIdCliente.Visible = false;
+            this.txtTotal.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotal.Location = new System.Drawing.Point(137, 3);
+            this.txtTotal.Multiline = true;
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(128, 29);
+            this.txtTotal.TabIndex = 30;
+            this.txtTotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTotal_KeyPress);
             // 
-            // lblTextoIdCliente
+            // SlblTotal
             // 
-            this.lblTextoIdCliente.AutoSize = true;
-            this.lblTextoIdCliente.Location = new System.Drawing.Point(869, 37);
-            this.lblTextoIdCliente.Name = "lblTextoIdCliente";
-            this.lblTextoIdCliente.Size = new System.Drawing.Size(124, 34);
-            this.lblTextoIdCliente.TabIndex = 49;
-            this.lblTextoIdCliente.Text = "ID del cliente:";
-            this.lblTextoIdCliente.Visible = false;
+            this.SlblTotal.AutoSize = true;
+            this.SlblTotal.ForeColor = System.Drawing.Color.Black;
+            this.SlblTotal.Location = new System.Drawing.Point(3, 0);
+            this.SlblTotal.Name = "SlblTotal";
+            this.SlblTotal.Size = new System.Drawing.Size(69, 34);
+            this.SlblTotal.TabIndex = 13;
+            this.SlblTotal.Text = "Total : ";
             // 
-            // btnAddClientH
+            // SlblAnticipo
             // 
-            this.btnAddClientH.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnAddClientH.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddClientH.Location = new System.Drawing.Point(922, 77);
-            this.btnAddClientH.Name = "btnAddClientH";
-            this.btnAddClientH.Size = new System.Drawing.Size(248, 38);
-            this.btnAddClientH.TabIndex = 48;
-            this.btnAddClientH.Text = "Agregar nuevo cliente";
-            this.btnAddClientH.UseVisualStyleBackColor = false;
-            this.btnAddClientH.Click += new System.EventHandler(this.btnAddClientH_Click_1);
+            this.SlblAnticipo.AutoSize = true;
+            this.SlblAnticipo.ForeColor = System.Drawing.Color.Black;
+            this.SlblAnticipo.Location = new System.Drawing.Point(3, 35);
+            this.SlblAnticipo.Name = "SlblAnticipo";
+            this.SlblAnticipo.Size = new System.Drawing.Size(94, 34);
+            this.SlblAnticipo.TabIndex = 12;
+            this.SlblAnticipo.Text = "Anticipo : ";
             // 
-            // SbtnCancelar
+            // txtAnticipo
             // 
-            this.SbtnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.SbtnCancelar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SbtnCancelar.Location = new System.Drawing.Point(1076, 139);
-            this.SbtnCancelar.Name = "SbtnCancelar";
-            this.SbtnCancelar.Size = new System.Drawing.Size(120, 38);
-            this.SbtnCancelar.TabIndex = 47;
-            this.SbtnCancelar.Text = "Cancelar";
-            this.SbtnCancelar.UseVisualStyleBackColor = false;
-            this.SbtnCancelar.Visible = false;
-            this.SbtnCancelar.Click += new System.EventHandler(this.SbtnCancelar_Click);
+            this.txtAnticipo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnticipo.Location = new System.Drawing.Point(137, 38);
+            this.txtAnticipo.Multiline = true;
+            this.txtAnticipo.Name = "txtAnticipo";
+            this.txtAnticipo.Size = new System.Drawing.Size(128, 29);
+            this.txtAnticipo.TabIndex = 31;
+            this.txtAnticipo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAnticipo_KeyPress);
             // 
-            // ccbTipoServicio1
+            // SlblResponsable
             // 
-            this.ccbTipoServicio1.DropDownHeight = 300;
-            this.ccbTipoServicio1.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ccbTipoServicio1.FormattingEnabled = true;
-            this.ccbTipoServicio1.IntegralHeight = false;
-            this.ccbTipoServicio1.Location = new System.Drawing.Point(220, 46);
-            this.ccbTipoServicio1.Name = "ccbTipoServicio1";
-            this.ccbTipoServicio1.Size = new System.Drawing.Size(386, 42);
-            this.ccbTipoServicio1.TabIndex = 46;
-            // 
-            // tiposervicioC1
-            // 
-            this.tiposervicioC1.AutoSize = true;
-            this.tiposervicioC1.Location = new System.Drawing.Point(3, 43);
-            this.tiposervicioC1.Name = "tiposervicioC1";
-            this.tiposervicioC1.Size = new System.Drawing.Size(145, 34);
-            this.tiposervicioC1.TabIndex = 45;
-            this.tiposervicioC1.Text = "Tipo de servicio:";
-            // 
-            // lblAvisoNoCliente
-            // 
-            this.lblAvisoNoCliente.AutoSize = true;
-            this.lblAvisoNoCliente.ForeColor = System.Drawing.Color.Red;
-            this.lblAvisoNoCliente.Location = new System.Drawing.Point(541, 0);
-            this.lblAvisoNoCliente.Name = "lblAvisoNoCliente";
-            this.lblAvisoNoCliente.Size = new System.Drawing.Size(200, 34);
-            this.lblAvisoNoCliente.TabIndex = 43;
-            this.lblAvisoNoCliente.Text = "No se encontró cliente.";
-            this.lblAvisoNoCliente.Visible = false;
-            // 
-            // txtApellido
-            // 
-            this.txtApellido.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido.Location = new System.Drawing.Point(106, 51);
-            this.txtApellido.Multiline = true;
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(313, 29);
-            this.txtApellido.TabIndex = 41;
-            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(106, 3);
-            this.txtNombre.Multiline = true;
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(313, 29);
-            this.txtNombre.TabIndex = 40;
-            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
-            // 
-            // txtCorreo
-            // 
-            this.txtCorreo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.Location = new System.Drawing.Point(532, 51);
-            this.txtCorreo.Multiline = true;
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(266, 29);
-            this.txtCorreo.TabIndex = 39;
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(532, 3);
-            this.txtTelefono.Multiline = true;
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(266, 29);
-            this.txtTelefono.TabIndex = 38;
-            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
-            // 
-            // SlblApellido
-            // 
-            this.SlblApellido.AutoSize = true;
-            this.SlblApellido.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SlblApellido.ForeColor = System.Drawing.Color.Black;
-            this.SlblApellido.Location = new System.Drawing.Point(3, 48);
-            this.SlblApellido.Name = "SlblApellido";
-            this.SlblApellido.Size = new System.Drawing.Size(88, 34);
-            this.SlblApellido.TabIndex = 36;
-            this.SlblApellido.Text = "Apellido :";
-            // 
-            // btnPedirPieza
-            // 
-            this.btnPedirPieza.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnPedirPieza.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPedirPieza.Location = new System.Drawing.Point(877, 621);
-            this.btnPedirPieza.Name = "btnPedirPieza";
-            this.btnPedirPieza.Size = new System.Drawing.Size(132, 43);
-            this.btnPedirPieza.TabIndex = 35;
-            this.btnPedirPieza.Text = "Pedido";
-            this.btnPedirPieza.UseVisualStyleBackColor = false;
-            this.btnPedirPieza.Click += new System.EventHandler(this.btnPedirPieza_Click);
-            // 
-            // btnAgregrEquipos
-            // 
-            this.btnAgregrEquipos.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnAgregrEquipos.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregrEquipos.Location = new System.Drawing.Point(1015, 621);
-            this.btnAgregrEquipos.Name = "btnAgregrEquipos";
-            this.btnAgregrEquipos.Size = new System.Drawing.Size(132, 43);
-            this.btnAgregrEquipos.TabIndex = 34;
-            this.btnAgregrEquipos.Text = "Agregar Equipo";
-            this.btnAgregrEquipos.UseVisualStyleBackColor = false;
-            this.btnAgregrEquipos.Click += new System.EventHandler(this.btnAgregrEquipos_Click);
-            // 
-            // btnLimpiarCampos
-            // 
-            this.btnLimpiarCampos.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnLimpiarCampos.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiarCampos.Location = new System.Drawing.Point(1153, 621);
-            this.btnLimpiarCampos.Name = "btnLimpiarCampos";
-            this.btnLimpiarCampos.Size = new System.Drawing.Size(132, 43);
-            this.btnLimpiarCampos.TabIndex = 33;
-            this.btnLimpiarCampos.Text = "Limpiar Campos";
-            this.btnLimpiarCampos.UseVisualStyleBackColor = false;
-            this.btnLimpiarCampos.Click += new System.EventHandler(this.btnLimpiarCampos_Click_1);
+            this.SlblResponsable.AutoSize = true;
+            this.SlblResponsable.ForeColor = System.Drawing.Color.Black;
+            this.SlblResponsable.Location = new System.Drawing.Point(3, 77);
+            this.SlblResponsable.Name = "SlblResponsable";
+            this.SlblResponsable.Size = new System.Drawing.Size(128, 34);
+            this.SlblResponsable.TabIndex = 29;
+            this.SlblResponsable.Text = "Responsable : ";
             // 
             // comboResponsable
             // 
@@ -601,35 +502,144 @@
             this.comboResponsable.Size = new System.Drawing.Size(128, 34);
             this.comboResponsable.TabIndex = 32;
             // 
-            // txtAnticipo
+            // EquipoGbx
             // 
-            this.txtAnticipo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAnticipo.Location = new System.Drawing.Point(137, 38);
-            this.txtAnticipo.Multiline = true;
-            this.txtAnticipo.Name = "txtAnticipo";
-            this.txtAnticipo.Size = new System.Drawing.Size(128, 29);
-            this.txtAnticipo.TabIndex = 31;
-            this.txtAnticipo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAnticipo_KeyPress);
+            this.EquipoGbx.Controls.Add(this.LayEquipo);
+            this.EquipoGbx.Controls.Add(this.lblIdEquipo);
+            this.EquipoGbx.Controls.Add(this.SlblRecibirEquipo);
+            this.EquipoGbx.Controls.Add(this.txtDescripcionDiagnosticoEspecifico);
+            this.EquipoGbx.Controls.Add(this.rbDiagnosticoEspecifico);
+            this.EquipoGbx.Controls.Add(this.rbDiagnosticoRapido);
+            this.EquipoGbx.Controls.Add(this.SlblTipoDeDiagnostico);
+            this.EquipoGbx.Location = new System.Drawing.Point(116, 198);
+            this.EquipoGbx.Name = "EquipoGbx";
+            this.EquipoGbx.Size = new System.Drawing.Size(1202, 338);
+            this.EquipoGbx.TabIndex = 53;
+            this.EquipoGbx.TabStop = false;
+            this.EquipoGbx.Text = "Equipo";
             // 
-            // txtTotal
+            // LayEquipo
             // 
-            this.txtTotal.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(137, 3);
-            this.txtTotal.Multiline = true;
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(128, 29);
-            this.txtTotal.TabIndex = 30;
-            this.txtTotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTotal_KeyPress);
+            this.LayEquipo.ColumnCount = 4;
+            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.33448F));
+            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.66552F));
+            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 92F));
+            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 218F));
+            this.LayEquipo.Controls.Add(this.SlblMarca, 0, 0);
+            this.LayEquipo.Controls.Add(this.txtMarca, 1, 0);
+            this.LayEquipo.Controls.Add(this.SlblModelo, 2, 0);
+            this.LayEquipo.Controls.Add(this.ccbTipoServicio1, 1, 1);
+            this.LayEquipo.Controls.Add(this.txtModelo, 3, 0);
+            this.LayEquipo.Controls.Add(this.tiposervicioC1, 0, 1);
+            this.LayEquipo.Controls.Add(this.SlblDescripcionFalla, 0, 2);
+            this.LayEquipo.Controls.Add(this.txtDescripcionDeFalla, 1, 2);
+            this.LayEquipo.Location = new System.Drawing.Point(23, 29);
+            this.LayEquipo.Name = "LayEquipo";
+            this.LayEquipo.RowCount = 3;
+            this.LayEquipo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.3299F));
+            this.LayEquipo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.6701F));
+            this.LayEquipo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 67F));
+            this.LayEquipo.Size = new System.Drawing.Size(925, 165);
+            this.LayEquipo.TabIndex = 54;
             // 
-            // SlblResponsable
+            // SlblMarca
             // 
-            this.SlblResponsable.AutoSize = true;
-            this.SlblResponsable.ForeColor = System.Drawing.Color.Black;
-            this.SlblResponsable.Location = new System.Drawing.Point(3, 77);
-            this.SlblResponsable.Name = "SlblResponsable";
-            this.SlblResponsable.Size = new System.Drawing.Size(128, 34);
-            this.SlblResponsable.TabIndex = 29;
-            this.SlblResponsable.Text = "Responsable : ";
+            this.SlblMarca.AutoSize = true;
+            this.SlblMarca.ForeColor = System.Drawing.Color.Black;
+            this.SlblMarca.Location = new System.Drawing.Point(3, 0);
+            this.SlblMarca.Name = "SlblMarca";
+            this.SlblMarca.Size = new System.Drawing.Size(74, 34);
+            this.SlblMarca.TabIndex = 20;
+            this.SlblMarca.Text = "Marca :";
+            // 
+            // txtMarca
+            // 
+            this.txtMarca.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMarca.Location = new System.Drawing.Point(220, 3);
+            this.txtMarca.Multiline = true;
+            this.txtMarca.Name = "txtMarca";
+            this.txtMarca.Size = new System.Drawing.Size(386, 29);
+            this.txtMarca.TabIndex = 23;
+            // 
+            // SlblModelo
+            // 
+            this.SlblModelo.AutoSize = true;
+            this.SlblModelo.ForeColor = System.Drawing.Color.Black;
+            this.SlblModelo.Location = new System.Drawing.Point(617, 0);
+            this.SlblModelo.Name = "SlblModelo";
+            this.SlblModelo.Size = new System.Drawing.Size(82, 34);
+            this.SlblModelo.TabIndex = 19;
+            this.SlblModelo.Text = "Modelo :";
+            // 
+            // ccbTipoServicio1
+            // 
+            this.ccbTipoServicio1.DropDownHeight = 300;
+            this.ccbTipoServicio1.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ccbTipoServicio1.FormattingEnabled = true;
+            this.ccbTipoServicio1.IntegralHeight = false;
+            this.ccbTipoServicio1.Location = new System.Drawing.Point(220, 46);
+            this.ccbTipoServicio1.Name = "ccbTipoServicio1";
+            this.ccbTipoServicio1.Size = new System.Drawing.Size(386, 42);
+            this.ccbTipoServicio1.TabIndex = 46;
+            // 
+            // txtModelo
+            // 
+            this.txtModelo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtModelo.Location = new System.Drawing.Point(709, 3);
+            this.txtModelo.Multiline = true;
+            this.txtModelo.Name = "txtModelo";
+            this.txtModelo.Size = new System.Drawing.Size(212, 29);
+            this.txtModelo.TabIndex = 24;
+            // 
+            // tiposervicioC1
+            // 
+            this.tiposervicioC1.AutoSize = true;
+            this.tiposervicioC1.Location = new System.Drawing.Point(3, 43);
+            this.tiposervicioC1.Name = "tiposervicioC1";
+            this.tiposervicioC1.Size = new System.Drawing.Size(145, 34);
+            this.tiposervicioC1.TabIndex = 45;
+            this.tiposervicioC1.Text = "Tipo de servicio:";
+            // 
+            // SlblDescripcionFalla
+            // 
+            this.SlblDescripcionFalla.AutoSize = true;
+            this.SlblDescripcionFalla.ForeColor = System.Drawing.Color.Black;
+            this.SlblDescripcionFalla.Location = new System.Drawing.Point(3, 97);
+            this.SlblDescripcionFalla.Name = "SlblDescripcionFalla";
+            this.SlblDescripcionFalla.Size = new System.Drawing.Size(188, 34);
+            this.SlblDescripcionFalla.TabIndex = 18;
+            this.SlblDescripcionFalla.Text = "Descripción de Falla :";
+            // 
+            // txtDescripcionDeFalla
+            // 
+            this.txtDescripcionDeFalla.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcionDeFalla.Location = new System.Drawing.Point(220, 100);
+            this.txtDescripcionDeFalla.Multiline = true;
+            this.txtDescripcionDeFalla.Name = "txtDescripcionDeFalla";
+            this.txtDescripcionDeFalla.Size = new System.Drawing.Size(389, 37);
+            this.txtDescripcionDeFalla.TabIndex = 25;
+            // 
+            // lblIdEquipo
+            // 
+            this.lblIdEquipo.AutoSize = true;
+            this.lblIdEquipo.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdEquipo.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lblIdEquipo.Location = new System.Drawing.Point(1115, 30);
+            this.lblIdEquipo.Name = "lblIdEquipo";
+            this.lblIdEquipo.Size = new System.Drawing.Size(55, 34);
+            this.lblIdEquipo.TabIndex = 21;
+            this.lblIdEquipo.Text = "0000";
+            // 
+            // SlblRecibirEquipo
+            // 
+            this.SlblRecibirEquipo.AutoSize = true;
+            this.SlblRecibirEquipo.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SlblRecibirEquipo.ForeColor = System.Drawing.Color.Black;
+            this.SlblRecibirEquipo.Location = new System.Drawing.Point(977, 29);
+            this.SlblRecibirEquipo.Name = "SlblRecibirEquipo";
+            this.SlblRecibirEquipo.Size = new System.Drawing.Size(132, 34);
+            this.SlblRecibirEquipo.TabIndex = 22;
+            this.SlblRecibirEquipo.Text = "ID de Equipo : ";
             // 
             // txtDescripcionDiagnosticoEspecifico
             // 
@@ -664,85 +674,6 @@
             this.rbDiagnosticoRapido.Text = "Rápido.";
             this.rbDiagnosticoRapido.UseVisualStyleBackColor = true;
             // 
-            // txtDescripcionDeFalla
-            // 
-            this.txtDescripcionDeFalla.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcionDeFalla.Location = new System.Drawing.Point(220, 100);
-            this.txtDescripcionDeFalla.Multiline = true;
-            this.txtDescripcionDeFalla.Name = "txtDescripcionDeFalla";
-            this.txtDescripcionDeFalla.Size = new System.Drawing.Size(389, 37);
-            this.txtDescripcionDeFalla.TabIndex = 25;
-            // 
-            // txtModelo
-            // 
-            this.txtModelo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModelo.Location = new System.Drawing.Point(710, 3);
-            this.txtModelo.Multiline = true;
-            this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(212, 29);
-            this.txtModelo.TabIndex = 24;
-            // 
-            // txtMarca
-            // 
-            this.txtMarca.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMarca.Location = new System.Drawing.Point(220, 3);
-            this.txtMarca.Multiline = true;
-            this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(386, 29);
-            this.txtMarca.TabIndex = 23;
-            // 
-            // SlblRecibirEquipo
-            // 
-            this.SlblRecibirEquipo.AutoSize = true;
-            this.SlblRecibirEquipo.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SlblRecibirEquipo.ForeColor = System.Drawing.Color.Black;
-            this.SlblRecibirEquipo.Location = new System.Drawing.Point(977, 29);
-            this.SlblRecibirEquipo.Name = "SlblRecibirEquipo";
-            this.SlblRecibirEquipo.Size = new System.Drawing.Size(132, 34);
-            this.SlblRecibirEquipo.TabIndex = 22;
-            this.SlblRecibirEquipo.Text = "ID de Equipo : ";
-            // 
-            // lblIdEquipo
-            // 
-            this.lblIdEquipo.AutoSize = true;
-            this.lblIdEquipo.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdEquipo.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblIdEquipo.Location = new System.Drawing.Point(1115, 30);
-            this.lblIdEquipo.Name = "lblIdEquipo";
-            this.lblIdEquipo.Size = new System.Drawing.Size(55, 34);
-            this.lblIdEquipo.TabIndex = 21;
-            this.lblIdEquipo.Text = "0000";
-            // 
-            // SlblMarca
-            // 
-            this.SlblMarca.AutoSize = true;
-            this.SlblMarca.ForeColor = System.Drawing.Color.Black;
-            this.SlblMarca.Location = new System.Drawing.Point(3, 0);
-            this.SlblMarca.Name = "SlblMarca";
-            this.SlblMarca.Size = new System.Drawing.Size(74, 34);
-            this.SlblMarca.TabIndex = 20;
-            this.SlblMarca.Text = "Marca :";
-            // 
-            // SlblModelo
-            // 
-            this.SlblModelo.AutoSize = true;
-            this.SlblModelo.ForeColor = System.Drawing.Color.Black;
-            this.SlblModelo.Location = new System.Drawing.Point(618, 0);
-            this.SlblModelo.Name = "SlblModelo";
-            this.SlblModelo.Size = new System.Drawing.Size(82, 34);
-            this.SlblModelo.TabIndex = 19;
-            this.SlblModelo.Text = "Modelo :";
-            // 
-            // SlblDescripcionFalla
-            // 
-            this.SlblDescripcionFalla.AutoSize = true;
-            this.SlblDescripcionFalla.ForeColor = System.Drawing.Color.Black;
-            this.SlblDescripcionFalla.Location = new System.Drawing.Point(3, 97);
-            this.SlblDescripcionFalla.Name = "SlblDescripcionFalla";
-            this.SlblDescripcionFalla.Size = new System.Drawing.Size(188, 34);
-            this.SlblDescripcionFalla.TabIndex = 18;
-            this.SlblDescripcionFalla.Text = "Descripción de Falla :";
-            // 
             // SlblTipoDeDiagnostico
             // 
             this.SlblTipoDeDiagnostico.AutoSize = true;
@@ -753,78 +684,32 @@
             this.SlblTipoDeDiagnostico.TabIndex = 17;
             this.SlblTipoDeDiagnostico.Text = "Tipo de Diagnóstico : ";
             // 
-            // SlblTotal
+            // ClienteGBx
             // 
-            this.SlblTotal.AutoSize = true;
-            this.SlblTotal.ForeColor = System.Drawing.Color.Black;
-            this.SlblTotal.Location = new System.Drawing.Point(3, 0);
-            this.SlblTotal.Name = "SlblTotal";
-            this.SlblTotal.Size = new System.Drawing.Size(69, 34);
-            this.SlblTotal.TabIndex = 13;
-            this.SlblTotal.Text = "Total : ";
+            this.ClienteGBx.Controls.Add(this.layCliente);
+            this.ClienteGBx.Controls.Add(this.layoutCliente);
+            this.ClienteGBx.Controls.Add(this.SbtnCancelar);
+            this.ClienteGBx.Controls.Add(this.btnAddClientH);
+            this.ClienteGBx.Controls.Add(this.lblTextoIdCliente);
+            this.ClienteGBx.Controls.Add(this.lblIdCliente);
+            this.ClienteGBx.Controls.Add(this.btnAgregarCliente);
+            this.ClienteGBx.Location = new System.Drawing.Point(116, 6);
+            this.ClienteGBx.Name = "ClienteGBx";
+            this.ClienteGBx.Size = new System.Drawing.Size(1202, 193);
+            this.ClienteGBx.TabIndex = 52;
+            this.ClienteGBx.TabStop = false;
+            this.ClienteGBx.Text = "Cliente";
             // 
-            // SlblAnticipo
+            // layCliente
             // 
-            this.SlblAnticipo.AutoSize = true;
-            this.SlblAnticipo.ForeColor = System.Drawing.Color.Black;
-            this.SlblAnticipo.Location = new System.Drawing.Point(3, 35);
-            this.SlblAnticipo.Name = "SlblAnticipo";
-            this.SlblAnticipo.Size = new System.Drawing.Size(94, 34);
-            this.SlblAnticipo.TabIndex = 12;
-            this.SlblAnticipo.Text = "Anticipo : ";
-            // 
-            // btnAgregarCliente
-            // 
-            this.btnAgregarCliente.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnAgregarCliente.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarCliente.Location = new System.Drawing.Point(922, 139);
-            this.btnAgregarCliente.Name = "btnAgregarCliente";
-            this.btnAgregarCliente.Size = new System.Drawing.Size(120, 38);
-            this.btnAgregarCliente.TabIndex = 10;
-            this.btnAgregarCliente.Text = "Agregar Cliente";
-            this.btnAgregarCliente.UseVisualStyleBackColor = false;
-            this.btnAgregarCliente.Visible = false;
-            this.btnAgregarCliente.Click += new System.EventHandler(this.btnAgregarCliente_Click);
-            // 
-            // SlblCorreo
-            // 
-            this.SlblCorreo.AutoSize = true;
-            this.SlblCorreo.ForeColor = System.Drawing.Color.Black;
-            this.SlblCorreo.Location = new System.Drawing.Point(434, 48);
-            this.SlblCorreo.Name = "SlblCorreo";
-            this.SlblCorreo.Size = new System.Drawing.Size(84, 34);
-            this.SlblCorreo.TabIndex = 6;
-            this.SlblCorreo.Text = "Correo : ";
-            // 
-            // SlblTelefono
-            // 
-            this.SlblTelefono.AutoSize = true;
-            this.SlblTelefono.ForeColor = System.Drawing.Color.Black;
-            this.SlblTelefono.Location = new System.Drawing.Point(434, 0);
-            this.SlblTelefono.Name = "SlblTelefono";
-            this.SlblTelefono.Size = new System.Drawing.Size(89, 48);
-            this.SlblTelefono.TabIndex = 5;
-            this.SlblTelefono.Text = "Teléfono :";
-            // 
-            // SlblNombre
-            // 
-            this.SlblNombre.AutoSize = true;
-            this.SlblNombre.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SlblNombre.ForeColor = System.Drawing.Color.Black;
-            this.SlblNombre.Location = new System.Drawing.Point(3, 0);
-            this.SlblNombre.Name = "SlblNombre";
-            this.SlblNombre.Size = new System.Drawing.Size(87, 34);
-            this.SlblNombre.TabIndex = 4;
-            this.SlblNombre.Text = "Nombre :";
-            // 
-            // txtBuscarCliente
-            // 
-            this.txtBuscarCliente.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarCliente.Location = new System.Drawing.Point(140, 3);
-            this.txtBuscarCliente.Name = "txtBuscarCliente";
-            this.txtBuscarCliente.Size = new System.Drawing.Size(359, 34);
-            this.txtBuscarCliente.TabIndex = 2;
-            this.txtBuscarCliente.TextChanged += new System.EventHandler(this.txtBuscarCliente_TextChanged);
+            this.layCliente.Controls.Add(this.SlblBuscarCliente);
+            this.layCliente.Controls.Add(this.txtBuscarCliente);
+            this.layCliente.Controls.Add(this.pictureBuscar);
+            this.layCliente.Controls.Add(this.lblAvisoNoCliente);
+            this.layCliente.Location = new System.Drawing.Point(84, 44);
+            this.layCliente.Name = "layCliente";
+            this.layCliente.Size = new System.Drawing.Size(760, 41);
+            this.layCliente.TabIndex = 1;
             // 
             // SlblBuscarCliente
             // 
@@ -834,6 +719,15 @@
             this.SlblBuscarCliente.Size = new System.Drawing.Size(131, 34);
             this.SlblBuscarCliente.TabIndex = 1;
             this.SlblBuscarCliente.Text = "Buscar Cliente";
+            // 
+            // txtBuscarCliente
+            // 
+            this.txtBuscarCliente.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscarCliente.Location = new System.Drawing.Point(140, 3);
+            this.txtBuscarCliente.Name = "txtBuscarCliente";
+            this.txtBuscarCliente.Size = new System.Drawing.Size(359, 34);
+            this.txtBuscarCliente.TabIndex = 2;
+            this.txtBuscarCliente.TextChanged += new System.EventHandler(this.txtBuscarCliente_TextChanged);
             // 
             // pictureBuscar
             // 
@@ -846,8 +740,241 @@
             this.pictureBuscar.TabStop = false;
             this.pictureBuscar.Click += new System.EventHandler(this.pictureBuscar_Click);
             // 
+            // lblAvisoNoCliente
+            // 
+            this.lblAvisoNoCliente.AutoSize = true;
+            this.lblAvisoNoCliente.ForeColor = System.Drawing.Color.Red;
+            this.lblAvisoNoCliente.Location = new System.Drawing.Point(541, 0);
+            this.lblAvisoNoCliente.Name = "lblAvisoNoCliente";
+            this.lblAvisoNoCliente.Size = new System.Drawing.Size(200, 34);
+            this.lblAvisoNoCliente.TabIndex = 43;
+            this.lblAvisoNoCliente.Text = "No se encontró cliente.";
+            this.lblAvisoNoCliente.Visible = false;
+            // 
+            // layoutCliente
+            // 
+            this.layoutCliente.ColumnCount = 4;
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.95349F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.04651F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 272F));
+            this.layoutCliente.Controls.Add(this.SlblNombre, 0, 0);
+            this.layoutCliente.Controls.Add(this.txtNombre, 1, 0);
+            this.layoutCliente.Controls.Add(this.SlblApellido, 0, 1);
+            this.layoutCliente.Controls.Add(this.txtApellido, 1, 1);
+            this.layoutCliente.Controls.Add(this.SlblTelefono, 2, 0);
+            this.layoutCliente.Controls.Add(this.SlblCorreo, 2, 1);
+            this.layoutCliente.Controls.Add(this.txtTelefono, 3, 0);
+            this.layoutCliente.Controls.Add(this.txtCorreo, 3, 1);
+            this.layoutCliente.Location = new System.Drawing.Point(46, 106);
+            this.layoutCliente.Name = "layoutCliente";
+            this.layoutCliente.RowCount = 2;
+            this.layoutCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.layoutCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.layoutCliente.Size = new System.Drawing.Size(801, 97);
+            this.layoutCliente.TabIndex = 0;
+            // 
+            // SlblNombre
+            // 
+            this.SlblNombre.AutoSize = true;
+            this.SlblNombre.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SlblNombre.ForeColor = System.Drawing.Color.Black;
+            this.SlblNombre.Location = new System.Drawing.Point(3, 0);
+            this.SlblNombre.Name = "SlblNombre";
+            this.SlblNombre.Size = new System.Drawing.Size(87, 34);
+            this.SlblNombre.TabIndex = 4;
+            this.SlblNombre.Text = "Nombre :";
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(106, 3);
+            this.txtNombre.Multiline = true;
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(313, 29);
+            this.txtNombre.TabIndex = 40;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
+            // 
+            // SlblApellido
+            // 
+            this.SlblApellido.AutoSize = true;
+            this.SlblApellido.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SlblApellido.ForeColor = System.Drawing.Color.Black;
+            this.SlblApellido.Location = new System.Drawing.Point(3, 48);
+            this.SlblApellido.Name = "SlblApellido";
+            this.SlblApellido.Size = new System.Drawing.Size(88, 34);
+            this.SlblApellido.TabIndex = 36;
+            this.SlblApellido.Text = "Apellido :";
+            // 
+            // txtApellido
+            // 
+            this.txtApellido.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellido.Location = new System.Drawing.Point(106, 51);
+            this.txtApellido.Multiline = true;
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(313, 29);
+            this.txtApellido.TabIndex = 41;
+            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
+            // 
+            // SlblTelefono
+            // 
+            this.SlblTelefono.AutoSize = true;
+            this.SlblTelefono.ForeColor = System.Drawing.Color.Black;
+            this.SlblTelefono.Location = new System.Drawing.Point(433, 0);
+            this.SlblTelefono.Name = "SlblTelefono";
+            this.SlblTelefono.Size = new System.Drawing.Size(89, 48);
+            this.SlblTelefono.TabIndex = 5;
+            this.SlblTelefono.Text = "Teléfono :";
+            // 
+            // SlblCorreo
+            // 
+            this.SlblCorreo.AutoSize = true;
+            this.SlblCorreo.ForeColor = System.Drawing.Color.Black;
+            this.SlblCorreo.Location = new System.Drawing.Point(433, 48);
+            this.SlblCorreo.Name = "SlblCorreo";
+            this.SlblCorreo.Size = new System.Drawing.Size(84, 34);
+            this.SlblCorreo.TabIndex = 6;
+            this.SlblCorreo.Text = "Correo : ";
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.Location = new System.Drawing.Point(531, 3);
+            this.txtTelefono.Multiline = true;
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(266, 29);
+            this.txtTelefono.TabIndex = 38;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
+            // 
+            // txtCorreo
+            // 
+            this.txtCorreo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCorreo.Location = new System.Drawing.Point(531, 51);
+            this.txtCorreo.Multiline = true;
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(266, 29);
+            this.txtCorreo.TabIndex = 39;
+            // 
+            // SbtnCancelar
+            // 
+            this.SbtnCancelar.BackColor = System.Drawing.Color.DimGray;
+            this.SbtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SbtnCancelar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SbtnCancelar.ForeColor = System.Drawing.Color.Turquoise;
+            this.SbtnCancelar.Location = new System.Drawing.Point(1076, 139);
+            this.SbtnCancelar.Name = "SbtnCancelar";
+            this.SbtnCancelar.Size = new System.Drawing.Size(120, 38);
+            this.SbtnCancelar.TabIndex = 47;
+            this.SbtnCancelar.Text = "Cancelar";
+            this.SbtnCancelar.UseVisualStyleBackColor = false;
+            this.SbtnCancelar.Visible = false;
+            this.SbtnCancelar.Click += new System.EventHandler(this.SbtnCancelar_Click);
+            // 
+            // btnAddClientH
+            // 
+            this.btnAddClientH.BackColor = System.Drawing.Color.DimGray;
+            this.btnAddClientH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddClientH.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddClientH.ForeColor = System.Drawing.Color.Turquoise;
+            this.btnAddClientH.Location = new System.Drawing.Point(922, 77);
+            this.btnAddClientH.Name = "btnAddClientH";
+            this.btnAddClientH.Size = new System.Drawing.Size(248, 38);
+            this.btnAddClientH.TabIndex = 48;
+            this.btnAddClientH.Text = "Agregar nuevo cliente";
+            this.btnAddClientH.UseVisualStyleBackColor = false;
+            this.btnAddClientH.Click += new System.EventHandler(this.btnAddClientH_Click_1);
+            // 
+            // lblTextoIdCliente
+            // 
+            this.lblTextoIdCliente.AutoSize = true;
+            this.lblTextoIdCliente.Location = new System.Drawing.Point(869, 37);
+            this.lblTextoIdCliente.Name = "lblTextoIdCliente";
+            this.lblTextoIdCliente.Size = new System.Drawing.Size(124, 34);
+            this.lblTextoIdCliente.TabIndex = 49;
+            this.lblTextoIdCliente.Text = "ID del cliente:";
+            this.lblTextoIdCliente.Visible = false;
+            // 
+            // lblIdCliente
+            // 
+            this.lblIdCliente.AutoSize = true;
+            this.lblIdCliente.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lblIdCliente.Location = new System.Drawing.Point(999, 37);
+            this.lblIdCliente.Name = "lblIdCliente";
+            this.lblIdCliente.Size = new System.Drawing.Size(55, 34);
+            this.lblIdCliente.TabIndex = 50;
+            this.lblIdCliente.Text = "0000";
+            this.lblIdCliente.Visible = false;
+            // 
+            // btnAgregarCliente
+            // 
+            this.btnAgregarCliente.BackColor = System.Drawing.Color.DimGray;
+            this.btnAgregarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAgregarCliente.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarCliente.ForeColor = System.Drawing.Color.Turquoise;
+            this.btnAgregarCliente.Location = new System.Drawing.Point(922, 139);
+            this.btnAgregarCliente.Name = "btnAgregarCliente";
+            this.btnAgregarCliente.Size = new System.Drawing.Size(120, 38);
+            this.btnAgregarCliente.TabIndex = 10;
+            this.btnAgregarCliente.Text = "Agregar Cliente";
+            this.btnAgregarCliente.UseVisualStyleBackColor = false;
+            this.btnAgregarCliente.Visible = false;
+            this.btnAgregarCliente.Click += new System.EventHandler(this.btnAgregarCliente_Click);
+            // 
+            // recibirLogoCh
+            // 
+            this.recibirLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.recibirLogoCh.Location = new System.Drawing.Point(6, 6);
+            this.recibirLogoCh.Name = "recibirLogoCh";
+            this.recibirLogoCh.Size = new System.Drawing.Size(58, 91);
+            this.recibirLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.recibirLogoCh.TabIndex = 51;
+            this.recibirLogoCh.TabStop = false;
+            // 
+            // btnPedirPieza
+            // 
+            this.btnPedirPieza.BackColor = System.Drawing.Color.DimGray;
+            this.btnPedirPieza.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPedirPieza.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPedirPieza.ForeColor = System.Drawing.Color.Turquoise;
+            this.btnPedirPieza.Location = new System.Drawing.Point(877, 621);
+            this.btnPedirPieza.Name = "btnPedirPieza";
+            this.btnPedirPieza.Size = new System.Drawing.Size(132, 43);
+            this.btnPedirPieza.TabIndex = 35;
+            this.btnPedirPieza.Text = "Pedido";
+            this.btnPedirPieza.UseVisualStyleBackColor = false;
+            this.btnPedirPieza.Click += new System.EventHandler(this.btnPedirPieza_Click);
+            // 
+            // btnAgregrEquipos
+            // 
+            this.btnAgregrEquipos.BackColor = System.Drawing.Color.DimGray;
+            this.btnAgregrEquipos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAgregrEquipos.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregrEquipos.ForeColor = System.Drawing.Color.Turquoise;
+            this.btnAgregrEquipos.Location = new System.Drawing.Point(1015, 621);
+            this.btnAgregrEquipos.Name = "btnAgregrEquipos";
+            this.btnAgregrEquipos.Size = new System.Drawing.Size(132, 43);
+            this.btnAgregrEquipos.TabIndex = 34;
+            this.btnAgregrEquipos.Text = "Agregar Equipo";
+            this.btnAgregrEquipos.UseVisualStyleBackColor = false;
+            this.btnAgregrEquipos.Click += new System.EventHandler(this.btnAgregrEquipos_Click);
+            // 
+            // btnLimpiarCampos
+            // 
+            this.btnLimpiarCampos.BackColor = System.Drawing.Color.DimGray;
+            this.btnLimpiarCampos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLimpiarCampos.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarCampos.ForeColor = System.Drawing.Color.Turquoise;
+            this.btnLimpiarCampos.Location = new System.Drawing.Point(1153, 621);
+            this.btnLimpiarCampos.Name = "btnLimpiarCampos";
+            this.btnLimpiarCampos.Size = new System.Drawing.Size(132, 43);
+            this.btnLimpiarCampos.TabIndex = 33;
+            this.btnLimpiarCampos.Text = "Limpiar Campos";
+            this.btnLimpiarCampos.UseVisualStyleBackColor = false;
+            this.btnLimpiarCampos.Click += new System.EventHandler(this.btnLimpiarCampos_Click_1);
+            // 
             // tabReparacion
             // 
+            this.tabReparacion.BackColor = System.Drawing.Color.LightGray;
             this.tabReparacion.Controls.Add(this.reparacionLogoCh);
             this.tabReparacion.Controls.Add(this.JtxtBuscar2);
             this.tabReparacion.Controls.Add(this.CDGReparacion);
@@ -862,7 +989,6 @@
             this.tabReparacion.Size = new System.Drawing.Size(1328, 669);
             this.tabReparacion.TabIndex = 2;
             this.tabReparacion.Text = "Reparación";
-            this.tabReparacion.UseVisualStyleBackColor = true;
             this.tabReparacion.Click += new System.EventHandler(this.tabReparacion_Click);
             // 
             // reparacionLogoCh
@@ -870,7 +996,7 @@
             this.reparacionLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
             this.reparacionLogoCh.Location = new System.Drawing.Point(6, 6);
             this.reparacionLogoCh.Name = "reparacionLogoCh";
-            this.reparacionLogoCh.Size = new System.Drawing.Size(118, 177);
+            this.reparacionLogoCh.Size = new System.Drawing.Size(63, 91);
             this.reparacionLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.reparacionLogoCh.TabIndex = 11;
             this.reparacionLogoCh.TabStop = false;
@@ -964,7 +1090,7 @@
             // 
             // tabConfiguracionesDeUsuario
             // 
-            this.tabConfiguracionesDeUsuario.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tabConfiguracionesDeUsuario.BackColor = System.Drawing.Color.LightGray;
             this.tabConfiguracionesDeUsuario.Controls.Add(this.SgbConfiguraciones);
             this.tabConfiguracionesDeUsuario.Controls.Add(this.SgbAsignarRolATrabajador);
             this.tabConfiguracionesDeUsuario.Controls.Add(this.SgbRoles);
@@ -988,7 +1114,9 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.BackColor = System.Drawing.Color.DimGray;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.ForeColor = System.Drawing.Color.Turquoise;
             this.button1.Location = new System.Drawing.Point(115, 103);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(277, 37);
@@ -998,7 +1126,9 @@
             // 
             // SbtnAgregarUsuario
             // 
-            this.SbtnAgregarUsuario.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.SbtnAgregarUsuario.BackColor = System.Drawing.Color.DimGray;
+            this.SbtnAgregarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SbtnAgregarUsuario.ForeColor = System.Drawing.Color.Turquoise;
             this.SbtnAgregarUsuario.Location = new System.Drawing.Point(115, 40);
             this.SbtnAgregarUsuario.Name = "SbtnAgregarUsuario";
             this.SbtnAgregarUsuario.Size = new System.Drawing.Size(277, 37);
@@ -1023,7 +1153,9 @@
             // 
             // SbtnAsiganrRolAUsuario
             // 
-            this.SbtnAsiganrRolAUsuario.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.SbtnAsiganrRolAUsuario.BackColor = System.Drawing.Color.DimGray;
+            this.SbtnAsiganrRolAUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SbtnAsiganrRolAUsuario.ForeColor = System.Drawing.Color.Turquoise;
             this.SbtnAsiganrRolAUsuario.Location = new System.Drawing.Point(428, 173);
             this.SbtnAsiganrRolAUsuario.Name = "SbtnAsiganrRolAUsuario";
             this.SbtnAsiganrRolAUsuario.Size = new System.Drawing.Size(146, 41);
@@ -1097,7 +1229,9 @@
             // 
             // SbtnGuardarRol
             // 
-            this.SbtnGuardarRol.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.SbtnGuardarRol.BackColor = System.Drawing.Color.DimGray;
+            this.SbtnGuardarRol.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SbtnGuardarRol.ForeColor = System.Drawing.Color.Turquoise;
             this.SbtnGuardarRol.Location = new System.Drawing.Point(458, 84);
             this.SbtnGuardarRol.Name = "SbtnGuardarRol";
             this.SbtnGuardarRol.Size = new System.Drawing.Size(116, 41);
@@ -1111,13 +1245,14 @@
             this.pictureBox4.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
             this.pictureBox4.Location = new System.Drawing.Point(6, 3);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(118, 177);
+            this.pictureBox4.Size = new System.Drawing.Size(62, 92);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
             // 
             // ordenesTab
             // 
+            this.ordenesTab.BackColor = System.Drawing.Color.LightGray;
             this.ordenesTab.Controls.Add(this.ordenesLogoCh);
             this.ordenesTab.Controls.Add(this.tableOrdenes);
             this.ordenesTab.Location = new System.Drawing.Point(4, 43);
@@ -1126,14 +1261,13 @@
             this.ordenesTab.Size = new System.Drawing.Size(1328, 669);
             this.ordenesTab.TabIndex = 4;
             this.ordenesTab.Text = "Ordenes";
-            this.ordenesTab.UseVisualStyleBackColor = true;
             // 
             // ordenesLogoCh
             // 
             this.ordenesLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
             this.ordenesLogoCh.Location = new System.Drawing.Point(6, 6);
             this.ordenesLogoCh.Name = "ordenesLogoCh";
-            this.ordenesLogoCh.Size = new System.Drawing.Size(118, 177);
+            this.ordenesLogoCh.Size = new System.Drawing.Size(61, 98);
             this.ordenesLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ordenesLogoCh.TabIndex = 5;
             this.ordenesLogoCh.TabStop = false;
@@ -1184,6 +1318,7 @@
             // 
             // TabClientes
             // 
+            this.TabClientes.BackColor = System.Drawing.Color.LightGray;
             this.TabClientes.Controls.Add(this.layBuscarCliente);
             this.TabClientes.Controls.Add(this.dgClientes);
             this.TabClientes.Controls.Add(this.ClientesLogoCh);
@@ -1193,7 +1328,34 @@
             this.TabClientes.Size = new System.Drawing.Size(1328, 669);
             this.TabClientes.TabIndex = 5;
             this.TabClientes.Text = "Clientes";
-            this.TabClientes.UseVisualStyleBackColor = true;
+            // 
+            // layBuscarCliente
+            // 
+            this.layBuscarCliente.Controls.Add(this.lblClienteBuscar);
+            this.layBuscarCliente.Controls.Add(this.txtCliente);
+            this.layBuscarCliente.Controls.Add(this.pbBuscar);
+            this.layBuscarCliente.Location = new System.Drawing.Point(297, 56);
+            this.layBuscarCliente.Name = "layBuscarCliente";
+            this.layBuscarCliente.Size = new System.Drawing.Size(585, 56);
+            this.layBuscarCliente.TabIndex = 9;
+            // 
+            // lblClienteBuscar
+            // 
+            this.lblClienteBuscar.AutoSize = true;
+            this.lblClienteBuscar.Location = new System.Drawing.Point(3, 0);
+            this.lblClienteBuscar.Name = "lblClienteBuscar";
+            this.lblClienteBuscar.Size = new System.Drawing.Size(134, 34);
+            this.lblClienteBuscar.TabIndex = 6;
+            this.lblClienteBuscar.Text = "Buscar cliente:";
+            // 
+            // txtCliente
+            // 
+            this.txtCliente.Location = new System.Drawing.Point(143, 3);
+            this.txtCliente.Name = "txtCliente";
+            this.txtCliente.Size = new System.Drawing.Size(296, 41);
+            this.txtCliente.TabIndex = 7;
+            this.txtCliente.TextChanged += new System.EventHandler(this.txtCliente_TextChanged);
+            this.txtCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCliente_KeyPress);
             // 
             // pbBuscar
             // 
@@ -1205,24 +1367,6 @@
             this.pbBuscar.TabIndex = 8;
             this.pbBuscar.TabStop = false;
             this.pbBuscar.Click += new System.EventHandler(this.pbBuscar_Click);
-            // 
-            // txtCliente
-            // 
-            this.txtCliente.Location = new System.Drawing.Point(143, 3);
-            this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Size = new System.Drawing.Size(296, 41);
-            this.txtCliente.TabIndex = 7;
-            this.txtCliente.TextChanged += new System.EventHandler(this.txtCliente_TextChanged);
-            this.txtCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCliente_KeyPress);
-            // 
-            // lblClienteBuscar
-            // 
-            this.lblClienteBuscar.AutoSize = true;
-            this.lblClienteBuscar.Location = new System.Drawing.Point(3, 0);
-            this.lblClienteBuscar.Name = "lblClienteBuscar";
-            this.lblClienteBuscar.Size = new System.Drawing.Size(134, 34);
-            this.lblClienteBuscar.TabIndex = 6;
-            this.lblClienteBuscar.Text = "Buscar cliente:";
             // 
             // dgClientes
             // 
@@ -1268,7 +1412,7 @@
             this.ClientesLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
             this.ClientesLogoCh.Location = new System.Drawing.Point(6, 6);
             this.ClientesLogoCh.Name = "ClientesLogoCh";
-            this.ClientesLogoCh.Size = new System.Drawing.Size(118, 177);
+            this.ClientesLogoCh.Size = new System.Drawing.Size(62, 94);
             this.ClientesLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ClientesLogoCh.TabIndex = 4;
             this.ClientesLogoCh.TabStop = false;
@@ -1367,126 +1511,6 @@
             // 
             this.clienteTableAdapter.ClearBeforeFill = true;
             // 
-            // ClienteGBx
-            // 
-            this.ClienteGBx.Controls.Add(this.layCliente);
-            this.ClienteGBx.Controls.Add(this.layoutCliente);
-            this.ClienteGBx.Controls.Add(this.SbtnCancelar);
-            this.ClienteGBx.Controls.Add(this.btnAddClientH);
-            this.ClienteGBx.Controls.Add(this.lblTextoIdCliente);
-            this.ClienteGBx.Controls.Add(this.lblIdCliente);
-            this.ClienteGBx.Controls.Add(this.btnAgregarCliente);
-            this.ClienteGBx.Location = new System.Drawing.Point(116, 6);
-            this.ClienteGBx.Name = "ClienteGBx";
-            this.ClienteGBx.Size = new System.Drawing.Size(1202, 193);
-            this.ClienteGBx.TabIndex = 52;
-            this.ClienteGBx.TabStop = false;
-            this.ClienteGBx.Text = "Cliente";
-            // 
-            // layoutCliente
-            // 
-            this.layoutCliente.ColumnCount = 4;
-            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.95349F));
-            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.04651F));
-            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
-            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 271F));
-            this.layoutCliente.Controls.Add(this.SlblNombre, 0, 0);
-            this.layoutCliente.Controls.Add(this.txtNombre, 1, 0);
-            this.layoutCliente.Controls.Add(this.SlblApellido, 0, 1);
-            this.layoutCliente.Controls.Add(this.txtApellido, 1, 1);
-            this.layoutCliente.Controls.Add(this.SlblTelefono, 2, 0);
-            this.layoutCliente.Controls.Add(this.SlblCorreo, 2, 1);
-            this.layoutCliente.Controls.Add(this.txtTelefono, 3, 0);
-            this.layoutCliente.Controls.Add(this.txtCorreo, 3, 1);
-            this.layoutCliente.Location = new System.Drawing.Point(46, 106);
-            this.layoutCliente.Name = "layoutCliente";
-            this.layoutCliente.RowCount = 2;
-            this.layoutCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.layoutCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.layoutCliente.Size = new System.Drawing.Size(801, 97);
-            this.layoutCliente.TabIndex = 0;
-            // 
-            // layCliente
-            // 
-            this.layCliente.Controls.Add(this.SlblBuscarCliente);
-            this.layCliente.Controls.Add(this.txtBuscarCliente);
-            this.layCliente.Controls.Add(this.pictureBuscar);
-            this.layCliente.Controls.Add(this.lblAvisoNoCliente);
-            this.layCliente.Location = new System.Drawing.Point(84, 44);
-            this.layCliente.Name = "layCliente";
-            this.layCliente.Size = new System.Drawing.Size(760, 41);
-            this.layCliente.TabIndex = 1;
-            // 
-            // EquipoGbx
-            // 
-            this.EquipoGbx.Controls.Add(this.LayEquipo);
-            this.EquipoGbx.Controls.Add(this.lblIdEquipo);
-            this.EquipoGbx.Controls.Add(this.SlblRecibirEquipo);
-            this.EquipoGbx.Controls.Add(this.txtDescripcionDiagnosticoEspecifico);
-            this.EquipoGbx.Controls.Add(this.rbDiagnosticoEspecifico);
-            this.EquipoGbx.Controls.Add(this.rbDiagnosticoRapido);
-            this.EquipoGbx.Controls.Add(this.SlblTipoDeDiagnostico);
-            this.EquipoGbx.Location = new System.Drawing.Point(116, 198);
-            this.EquipoGbx.Name = "EquipoGbx";
-            this.EquipoGbx.Size = new System.Drawing.Size(1202, 338);
-            this.EquipoGbx.TabIndex = 53;
-            this.EquipoGbx.TabStop = false;
-            this.EquipoGbx.Text = "Equipo";
-            // 
-            // LayEquipo
-            // 
-            this.LayEquipo.ColumnCount = 4;
-            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.33448F));
-            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.66552F));
-            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 92F));
-            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 217F));
-            this.LayEquipo.Controls.Add(this.SlblMarca, 0, 0);
-            this.LayEquipo.Controls.Add(this.txtMarca, 1, 0);
-            this.LayEquipo.Controls.Add(this.SlblModelo, 2, 0);
-            this.LayEquipo.Controls.Add(this.ccbTipoServicio1, 1, 1);
-            this.LayEquipo.Controls.Add(this.txtModelo, 3, 0);
-            this.LayEquipo.Controls.Add(this.tiposervicioC1, 0, 1);
-            this.LayEquipo.Controls.Add(this.SlblDescripcionFalla, 0, 2);
-            this.LayEquipo.Controls.Add(this.txtDescripcionDeFalla, 1, 2);
-            this.LayEquipo.Location = new System.Drawing.Point(23, 29);
-            this.LayEquipo.Name = "LayEquipo";
-            this.LayEquipo.RowCount = 3;
-            this.LayEquipo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.3299F));
-            this.LayEquipo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.6701F));
-            this.LayEquipo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 67F));
-            this.LayEquipo.Size = new System.Drawing.Size(925, 165);
-            this.LayEquipo.TabIndex = 54;
-            // 
-            // layoutTotales
-            // 
-            this.layoutTotales.ColumnCount = 2;
-            this.layoutTotales.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.layoutTotales.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.layoutTotales.Controls.Add(this.txtTotal, 1, 0);
-            this.layoutTotales.Controls.Add(this.SlblTotal, 0, 0);
-            this.layoutTotales.Controls.Add(this.SlblAnticipo, 0, 1);
-            this.layoutTotales.Controls.Add(this.txtAnticipo, 1, 1);
-            this.layoutTotales.Controls.Add(this.SlblResponsable, 0, 2);
-            this.layoutTotales.Controls.Add(this.comboResponsable, 1, 2);
-            this.layoutTotales.Location = new System.Drawing.Point(148, 542);
-            this.layoutTotales.Name = "layoutTotales";
-            this.layoutTotales.RowCount = 3;
-            this.layoutTotales.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.33333F));
-            this.layoutTotales.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.66667F));
-            this.layoutTotales.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-            this.layoutTotales.Size = new System.Drawing.Size(268, 115);
-            this.layoutTotales.TabIndex = 54;
-            // 
-            // layBuscarCliente
-            // 
-            this.layBuscarCliente.Controls.Add(this.lblClienteBuscar);
-            this.layBuscarCliente.Controls.Add(this.txtCliente);
-            this.layBuscarCliente.Controls.Add(this.pbBuscar);
-            this.layBuscarCliente.Location = new System.Drawing.Point(297, 56);
-            this.layBuscarCliente.Name = "layBuscarCliente";
-            this.layBuscarCliente.Size = new System.Drawing.Size(585, 56);
-            this.layBuscarCliente.TabIndex = 9;
-            // 
             // ViewTabs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1508,9 +1532,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.ventaLogoCh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableVender)).EndInit();
             this.tabRecibirEquipo.ResumeLayout(false);
-            this.tabRecibirEquipo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.recibirLogoCh)).EndInit();
+            this.layoutTotales.ResumeLayout(false);
+            this.layoutTotales.PerformLayout();
+            this.EquipoGbx.ResumeLayout(false);
+            this.EquipoGbx.PerformLayout();
+            this.LayEquipo.ResumeLayout(false);
+            this.LayEquipo.PerformLayout();
+            this.ClienteGBx.ResumeLayout(false);
+            this.ClienteGBx.PerformLayout();
+            this.layCliente.ResumeLayout(false);
+            this.layCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).EndInit();
+            this.layoutCliente.ResumeLayout(false);
+            this.layoutCliente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.recibirLogoCh)).EndInit();
             this.tabReparacion.ResumeLayout(false);
             this.tabReparacion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reparacionLogoCh)).EndInit();
@@ -1526,6 +1561,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ordenesLogoCh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableOrdenes)).EndInit();
             this.TabClientes.ResumeLayout(false);
+            this.layBuscarCliente.ResumeLayout(false);
+            this.layBuscarCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbBuscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClientesLogoCh)).EndInit();
@@ -1534,20 +1571,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reparacionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.ClienteGBx.ResumeLayout(false);
-            this.ClienteGBx.PerformLayout();
-            this.layoutCliente.ResumeLayout(false);
-            this.layoutCliente.PerformLayout();
-            this.layCliente.ResumeLayout(false);
-            this.layCliente.PerformLayout();
-            this.EquipoGbx.ResumeLayout(false);
-            this.EquipoGbx.PerformLayout();
-            this.LayEquipo.ResumeLayout(false);
-            this.LayEquipo.PerformLayout();
-            this.layoutTotales.ResumeLayout(false);
-            this.layoutTotales.PerformLayout();
-            this.layBuscarCliente.ResumeLayout(false);
-            this.layBuscarCliente.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
