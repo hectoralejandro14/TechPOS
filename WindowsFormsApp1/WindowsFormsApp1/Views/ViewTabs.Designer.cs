@@ -91,12 +91,10 @@
             this.SlblTipoDeDiagnostico = new System.Windows.Forms.Label();
             this.SlblTotal = new System.Windows.Forms.Label();
             this.SlblAnticipo = new System.Windows.Forms.Label();
-            this.SlblDatosEquipo = new System.Windows.Forms.Label();
             this.btnAgregarCliente = new System.Windows.Forms.Button();
             this.SlblCorreo = new System.Windows.Forms.Label();
             this.SlblTelefono = new System.Windows.Forms.Label();
             this.SlblNombre = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.txtBuscarCliente = new System.Windows.Forms.TextBox();
             this.SlblBuscarCliente = new System.Windows.Forms.Label();
             this.pictureBuscar = new System.Windows.Forms.PictureBox();
@@ -156,6 +154,13 @@
             this.linkCerrarSesion = new System.Windows.Forms.LinkLabel();
             this.reparacionTableAdapter = new WindowsFormsApp1.TechPOSdbDataSetTableAdapters.ReparacionTableAdapter();
             this.clienteTableAdapter = new WindowsFormsApp1.TechPOSdbDataSetTableAdapters.ClienteTableAdapter();
+            this.ClienteGBx = new System.Windows.Forms.GroupBox();
+            this.layoutCliente = new System.Windows.Forms.TableLayoutPanel();
+            this.layCliente = new System.Windows.Forms.FlowLayoutPanel();
+            this.EquipoGbx = new System.Windows.Forms.GroupBox();
+            this.LayEquipo = new System.Windows.Forms.TableLayoutPanel();
+            this.layoutTotales = new System.Windows.Forms.TableLayoutPanel();
+            this.layBuscarCliente = new System.Windows.Forms.FlowLayoutPanel();
             this.tabPuntoVenta.SuspendLayout();
             this.tabVenta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ventaLogoCh)).BeginInit();
@@ -183,6 +188,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reparacionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.ClienteGBx.SuspendLayout();
+            this.layoutCliente.SuspendLayout();
+            this.layCliente.SuspendLayout();
+            this.EquipoGbx.SuspendLayout();
+            this.LayEquipo.SuspendLayout();
+            this.layoutTotales.SuspendLayout();
+            this.layBuscarCliente.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPuntoVenta
@@ -390,49 +402,13 @@
             // 
             // tabRecibirEquipo
             // 
+            this.tabRecibirEquipo.Controls.Add(this.layoutTotales);
+            this.tabRecibirEquipo.Controls.Add(this.EquipoGbx);
+            this.tabRecibirEquipo.Controls.Add(this.ClienteGBx);
             this.tabRecibirEquipo.Controls.Add(this.recibirLogoCh);
-            this.tabRecibirEquipo.Controls.Add(this.lblIdCliente);
-            this.tabRecibirEquipo.Controls.Add(this.lblTextoIdCliente);
-            this.tabRecibirEquipo.Controls.Add(this.btnAddClientH);
-            this.tabRecibirEquipo.Controls.Add(this.SbtnCancelar);
-            this.tabRecibirEquipo.Controls.Add(this.ccbTipoServicio1);
-            this.tabRecibirEquipo.Controls.Add(this.tiposervicioC1);
-            this.tabRecibirEquipo.Controls.Add(this.lblAvisoNoCliente);
-            this.tabRecibirEquipo.Controls.Add(this.txtApellido);
-            this.tabRecibirEquipo.Controls.Add(this.txtNombre);
-            this.tabRecibirEquipo.Controls.Add(this.txtCorreo);
-            this.tabRecibirEquipo.Controls.Add(this.txtTelefono);
-            this.tabRecibirEquipo.Controls.Add(this.SlblApellido);
             this.tabRecibirEquipo.Controls.Add(this.btnPedirPieza);
             this.tabRecibirEquipo.Controls.Add(this.btnAgregrEquipos);
             this.tabRecibirEquipo.Controls.Add(this.btnLimpiarCampos);
-            this.tabRecibirEquipo.Controls.Add(this.comboResponsable);
-            this.tabRecibirEquipo.Controls.Add(this.txtAnticipo);
-            this.tabRecibirEquipo.Controls.Add(this.txtTotal);
-            this.tabRecibirEquipo.Controls.Add(this.SlblResponsable);
-            this.tabRecibirEquipo.Controls.Add(this.txtDescripcionDiagnosticoEspecifico);
-            this.tabRecibirEquipo.Controls.Add(this.rbDiagnosticoEspecifico);
-            this.tabRecibirEquipo.Controls.Add(this.rbDiagnosticoRapido);
-            this.tabRecibirEquipo.Controls.Add(this.txtDescripcionDeFalla);
-            this.tabRecibirEquipo.Controls.Add(this.txtModelo);
-            this.tabRecibirEquipo.Controls.Add(this.txtMarca);
-            this.tabRecibirEquipo.Controls.Add(this.SlblRecibirEquipo);
-            this.tabRecibirEquipo.Controls.Add(this.lblIdEquipo);
-            this.tabRecibirEquipo.Controls.Add(this.SlblMarca);
-            this.tabRecibirEquipo.Controls.Add(this.SlblModelo);
-            this.tabRecibirEquipo.Controls.Add(this.SlblDescripcionFalla);
-            this.tabRecibirEquipo.Controls.Add(this.SlblTipoDeDiagnostico);
-            this.tabRecibirEquipo.Controls.Add(this.SlblTotal);
-            this.tabRecibirEquipo.Controls.Add(this.SlblAnticipo);
-            this.tabRecibirEquipo.Controls.Add(this.SlblDatosEquipo);
-            this.tabRecibirEquipo.Controls.Add(this.btnAgregarCliente);
-            this.tabRecibirEquipo.Controls.Add(this.SlblCorreo);
-            this.tabRecibirEquipo.Controls.Add(this.SlblTelefono);
-            this.tabRecibirEquipo.Controls.Add(this.SlblNombre);
-            this.tabRecibirEquipo.Controls.Add(this.label7);
-            this.tabRecibirEquipo.Controls.Add(this.txtBuscarCliente);
-            this.tabRecibirEquipo.Controls.Add(this.SlblBuscarCliente);
-            this.tabRecibirEquipo.Controls.Add(this.pictureBuscar);
             this.tabRecibirEquipo.Location = new System.Drawing.Point(4, 43);
             this.tabRecibirEquipo.Name = "tabRecibirEquipo";
             this.tabRecibirEquipo.Padding = new System.Windows.Forms.Padding(3);
@@ -446,7 +422,7 @@
             this.recibirLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
             this.recibirLogoCh.Location = new System.Drawing.Point(6, 6);
             this.recibirLogoCh.Name = "recibirLogoCh";
-            this.recibirLogoCh.Size = new System.Drawing.Size(118, 177);
+            this.recibirLogoCh.Size = new System.Drawing.Size(89, 142);
             this.recibirLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.recibirLogoCh.TabIndex = 51;
             this.recibirLogoCh.TabStop = false;
@@ -455,7 +431,7 @@
             // 
             this.lblIdCliente.AutoSize = true;
             this.lblIdCliente.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblIdCliente.Location = new System.Drawing.Point(1173, 14);
+            this.lblIdCliente.Location = new System.Drawing.Point(999, 37);
             this.lblIdCliente.Name = "lblIdCliente";
             this.lblIdCliente.Size = new System.Drawing.Size(55, 34);
             this.lblIdCliente.TabIndex = 50;
@@ -465,7 +441,7 @@
             // lblTextoIdCliente
             // 
             this.lblTextoIdCliente.AutoSize = true;
-            this.lblTextoIdCliente.Location = new System.Drawing.Point(1045, 14);
+            this.lblTextoIdCliente.Location = new System.Drawing.Point(869, 37);
             this.lblTextoIdCliente.Name = "lblTextoIdCliente";
             this.lblTextoIdCliente.Size = new System.Drawing.Size(124, 34);
             this.lblTextoIdCliente.TabIndex = 49;
@@ -476,7 +452,7 @@
             // 
             this.btnAddClientH.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnAddClientH.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddClientH.Location = new System.Drawing.Point(1045, 57);
+            this.btnAddClientH.Location = new System.Drawing.Point(922, 77);
             this.btnAddClientH.Name = "btnAddClientH";
             this.btnAddClientH.Size = new System.Drawing.Size(248, 38);
             this.btnAddClientH.TabIndex = 48;
@@ -488,7 +464,7 @@
             // 
             this.SbtnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.SbtnCancelar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SbtnCancelar.Location = new System.Drawing.Point(1173, 115);
+            this.SbtnCancelar.Location = new System.Drawing.Point(1076, 139);
             this.SbtnCancelar.Name = "SbtnCancelar";
             this.SbtnCancelar.Size = new System.Drawing.Size(120, 38);
             this.SbtnCancelar.TabIndex = 47;
@@ -503,7 +479,7 @@
             this.ccbTipoServicio1.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ccbTipoServicio1.FormattingEnabled = true;
             this.ccbTipoServicio1.IntegralHeight = false;
-            this.ccbTipoServicio1.Location = new System.Drawing.Point(204, 299);
+            this.ccbTipoServicio1.Location = new System.Drawing.Point(220, 46);
             this.ccbTipoServicio1.Name = "ccbTipoServicio1";
             this.ccbTipoServicio1.Size = new System.Drawing.Size(386, 42);
             this.ccbTipoServicio1.TabIndex = 46;
@@ -511,7 +487,7 @@
             // tiposervicioC1
             // 
             this.tiposervicioC1.AutoSize = true;
-            this.tiposervicioC1.Location = new System.Drawing.Point(53, 302);
+            this.tiposervicioC1.Location = new System.Drawing.Point(3, 43);
             this.tiposervicioC1.Name = "tiposervicioC1";
             this.tiposervicioC1.Size = new System.Drawing.Size(145, 34);
             this.tiposervicioC1.TabIndex = 45;
@@ -521,7 +497,7 @@
             // 
             this.lblAvisoNoCliente.AutoSize = true;
             this.lblAvisoNoCliente.ForeColor = System.Drawing.Color.Red;
-            this.lblAvisoNoCliente.Location = new System.Drawing.Point(763, 16);
+            this.lblAvisoNoCliente.Location = new System.Drawing.Point(541, 0);
             this.lblAvisoNoCliente.Name = "lblAvisoNoCliente";
             this.lblAvisoNoCliente.Size = new System.Drawing.Size(200, 34);
             this.lblAvisoNoCliente.TabIndex = 43;
@@ -531,7 +507,7 @@
             // txtApellido
             // 
             this.txtApellido.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido.Location = new System.Drawing.Point(269, 121);
+            this.txtApellido.Location = new System.Drawing.Point(106, 51);
             this.txtApellido.Multiline = true;
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(313, 29);
@@ -541,7 +517,7 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(269, 66);
+            this.txtNombre.Location = new System.Drawing.Point(106, 3);
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(313, 29);
@@ -551,19 +527,19 @@
             // txtCorreo
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.Location = new System.Drawing.Point(707, 121);
+            this.txtCorreo.Location = new System.Drawing.Point(532, 51);
             this.txtCorreo.Multiline = true;
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(313, 29);
+            this.txtCorreo.Size = new System.Drawing.Size(266, 29);
             this.txtCorreo.TabIndex = 39;
             // 
             // txtTelefono
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(707, 66);
+            this.txtTelefono.Location = new System.Drawing.Point(532, 3);
             this.txtTelefono.Multiline = true;
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(313, 29);
+            this.txtTelefono.Size = new System.Drawing.Size(266, 29);
             this.txtTelefono.TabIndex = 38;
             this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
@@ -572,7 +548,7 @@
             this.SlblApellido.AutoSize = true;
             this.SlblApellido.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SlblApellido.ForeColor = System.Drawing.Color.Black;
-            this.SlblApellido.Location = new System.Drawing.Point(185, 119);
+            this.SlblApellido.Location = new System.Drawing.Point(3, 48);
             this.SlblApellido.Name = "SlblApellido";
             this.SlblApellido.Size = new System.Drawing.Size(88, 34);
             this.SlblApellido.TabIndex = 36;
@@ -620,28 +596,28 @@
             this.comboResponsable.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboResponsable.FormattingEnabled = true;
             this.comboResponsable.IntegralHeight = false;
-            this.comboResponsable.Location = new System.Drawing.Point(269, 621);
+            this.comboResponsable.Location = new System.Drawing.Point(137, 80);
             this.comboResponsable.Name = "comboResponsable";
-            this.comboResponsable.Size = new System.Drawing.Size(207, 34);
+            this.comboResponsable.Size = new System.Drawing.Size(128, 34);
             this.comboResponsable.TabIndex = 32;
             // 
             // txtAnticipo
             // 
             this.txtAnticipo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAnticipo.Location = new System.Drawing.Point(269, 582);
+            this.txtAnticipo.Location = new System.Drawing.Point(137, 38);
             this.txtAnticipo.Multiline = true;
             this.txtAnticipo.Name = "txtAnticipo";
-            this.txtAnticipo.Size = new System.Drawing.Size(207, 29);
+            this.txtAnticipo.Size = new System.Drawing.Size(128, 29);
             this.txtAnticipo.TabIndex = 31;
             this.txtAnticipo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAnticipo_KeyPress);
             // 
             // txtTotal
             // 
             this.txtTotal.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(269, 542);
+            this.txtTotal.Location = new System.Drawing.Point(137, 3);
             this.txtTotal.Multiline = true;
             this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(207, 29);
+            this.txtTotal.Size = new System.Drawing.Size(128, 29);
             this.txtTotal.TabIndex = 30;
             this.txtTotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTotal_KeyPress);
             // 
@@ -649,26 +625,26 @@
             // 
             this.SlblResponsable.AutoSize = true;
             this.SlblResponsable.ForeColor = System.Drawing.Color.Black;
-            this.SlblResponsable.Location = new System.Drawing.Point(81, 631);
+            this.SlblResponsable.Location = new System.Drawing.Point(3, 77);
             this.SlblResponsable.Name = "SlblResponsable";
-            this.SlblResponsable.Size = new System.Drawing.Size(133, 34);
+            this.SlblResponsable.Size = new System.Drawing.Size(128, 34);
             this.SlblResponsable.TabIndex = 29;
             this.SlblResponsable.Text = "Responsable : ";
             // 
             // txtDescripcionDiagnosticoEspecifico
             // 
             this.txtDescripcionDiagnosticoEspecifico.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcionDiagnosticoEspecifico.Location = new System.Drawing.Point(63, 440);
+            this.txtDescripcionDiagnosticoEspecifico.Location = new System.Drawing.Point(32, 224);
             this.txtDescripcionDiagnosticoEspecifico.Multiline = true;
             this.txtDescripcionDiagnosticoEspecifico.Name = "txtDescripcionDiagnosticoEspecifico";
-            this.txtDescripcionDiagnosticoEspecifico.Size = new System.Drawing.Size(939, 63);
+            this.txtDescripcionDiagnosticoEspecifico.Size = new System.Drawing.Size(913, 97);
             this.txtDescripcionDiagnosticoEspecifico.TabIndex = 28;
             // 
             // rbDiagnosticoEspecifico
             // 
             this.rbDiagnosticoEspecifico.AutoSize = true;
             this.rbDiagnosticoEspecifico.ForeColor = System.Drawing.Color.Black;
-            this.rbDiagnosticoEspecifico.Location = new System.Drawing.Point(382, 404);
+            this.rbDiagnosticoEspecifico.Location = new System.Drawing.Point(342, 195);
             this.rbDiagnosticoEspecifico.Name = "rbDiagnosticoEspecifico";
             this.rbDiagnosticoEspecifico.Size = new System.Drawing.Size(123, 38);
             this.rbDiagnosticoEspecifico.TabIndex = 27;
@@ -680,7 +656,7 @@
             // 
             this.rbDiagnosticoRapido.AutoSize = true;
             this.rbDiagnosticoRapido.ForeColor = System.Drawing.Color.Black;
-            this.rbDiagnosticoRapido.Location = new System.Drawing.Point(278, 404);
+            this.rbDiagnosticoRapido.Location = new System.Drawing.Point(220, 193);
             this.rbDiagnosticoRapido.Name = "rbDiagnosticoRapido";
             this.rbDiagnosticoRapido.Size = new System.Drawing.Size(93, 38);
             this.rbDiagnosticoRapido.TabIndex = 26;
@@ -691,25 +667,25 @@
             // txtDescripcionDeFalla
             // 
             this.txtDescripcionDeFalla.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcionDeFalla.Location = new System.Drawing.Point(204, 361);
+            this.txtDescripcionDeFalla.Location = new System.Drawing.Point(220, 100);
             this.txtDescripcionDeFalla.Multiline = true;
             this.txtDescripcionDeFalla.Name = "txtDescripcionDeFalla";
-            this.txtDescripcionDeFalla.Size = new System.Drawing.Size(726, 37);
+            this.txtDescripcionDeFalla.Size = new System.Drawing.Size(389, 37);
             this.txtDescripcionDeFalla.TabIndex = 25;
             // 
             // txtModelo
             // 
             this.txtModelo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModelo.Location = new System.Drawing.Point(684, 248);
+            this.txtModelo.Location = new System.Drawing.Point(710, 3);
             this.txtModelo.Multiline = true;
             this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(409, 29);
+            this.txtModelo.Size = new System.Drawing.Size(212, 29);
             this.txtModelo.TabIndex = 24;
             // 
             // txtMarca
             // 
             this.txtMarca.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMarca.Location = new System.Drawing.Point(204, 248);
+            this.txtMarca.Location = new System.Drawing.Point(220, 3);
             this.txtMarca.Multiline = true;
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(386, 29);
@@ -720,7 +696,7 @@
             this.SlblRecibirEquipo.AutoSize = true;
             this.SlblRecibirEquipo.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SlblRecibirEquipo.ForeColor = System.Drawing.Color.Black;
-            this.SlblRecibirEquipo.Location = new System.Drawing.Point(1039, 186);
+            this.SlblRecibirEquipo.Location = new System.Drawing.Point(977, 29);
             this.SlblRecibirEquipo.Name = "SlblRecibirEquipo";
             this.SlblRecibirEquipo.Size = new System.Drawing.Size(132, 34);
             this.SlblRecibirEquipo.TabIndex = 22;
@@ -731,7 +707,7 @@
             this.lblIdEquipo.AutoSize = true;
             this.lblIdEquipo.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdEquipo.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblIdEquipo.Location = new System.Drawing.Point(1167, 186);
+            this.lblIdEquipo.Location = new System.Drawing.Point(1115, 30);
             this.lblIdEquipo.Name = "lblIdEquipo";
             this.lblIdEquipo.Size = new System.Drawing.Size(55, 34);
             this.lblIdEquipo.TabIndex = 21;
@@ -741,7 +717,7 @@
             // 
             this.SlblMarca.AutoSize = true;
             this.SlblMarca.ForeColor = System.Drawing.Color.Black;
-            this.SlblMarca.Location = new System.Drawing.Point(124, 243);
+            this.SlblMarca.Location = new System.Drawing.Point(3, 0);
             this.SlblMarca.Name = "SlblMarca";
             this.SlblMarca.Size = new System.Drawing.Size(74, 34);
             this.SlblMarca.TabIndex = 20;
@@ -751,7 +727,7 @@
             // 
             this.SlblModelo.AutoSize = true;
             this.SlblModelo.ForeColor = System.Drawing.Color.Black;
-            this.SlblModelo.Location = new System.Drawing.Point(596, 246);
+            this.SlblModelo.Location = new System.Drawing.Point(618, 0);
             this.SlblModelo.Name = "SlblModelo";
             this.SlblModelo.Size = new System.Drawing.Size(82, 34);
             this.SlblModelo.TabIndex = 19;
@@ -761,7 +737,7 @@
             // 
             this.SlblDescripcionFalla.AutoSize = true;
             this.SlblDescripcionFalla.ForeColor = System.Drawing.Color.Black;
-            this.SlblDescripcionFalla.Location = new System.Drawing.Point(10, 359);
+            this.SlblDescripcionFalla.Location = new System.Drawing.Point(3, 97);
             this.SlblDescripcionFalla.Name = "SlblDescripcionFalla";
             this.SlblDescripcionFalla.Size = new System.Drawing.Size(188, 34);
             this.SlblDescripcionFalla.TabIndex = 18;
@@ -771,7 +747,7 @@
             // 
             this.SlblTipoDeDiagnostico.AutoSize = true;
             this.SlblTipoDeDiagnostico.ForeColor = System.Drawing.Color.Black;
-            this.SlblTipoDeDiagnostico.Location = new System.Drawing.Point(59, 408);
+            this.SlblTipoDeDiagnostico.Location = new System.Drawing.Point(26, 197);
             this.SlblTipoDeDiagnostico.Name = "SlblTipoDeDiagnostico";
             this.SlblTipoDeDiagnostico.Size = new System.Drawing.Size(188, 34);
             this.SlblTipoDeDiagnostico.TabIndex = 17;
@@ -781,7 +757,7 @@
             // 
             this.SlblTotal.AutoSize = true;
             this.SlblTotal.ForeColor = System.Drawing.Color.Black;
-            this.SlblTotal.Location = new System.Drawing.Point(81, 542);
+            this.SlblTotal.Location = new System.Drawing.Point(3, 0);
             this.SlblTotal.Name = "SlblTotal";
             this.SlblTotal.Size = new System.Drawing.Size(69, 34);
             this.SlblTotal.TabIndex = 13;
@@ -791,28 +767,17 @@
             // 
             this.SlblAnticipo.AutoSize = true;
             this.SlblAnticipo.ForeColor = System.Drawing.Color.Black;
-            this.SlblAnticipo.Location = new System.Drawing.Point(81, 585);
+            this.SlblAnticipo.Location = new System.Drawing.Point(3, 35);
             this.SlblAnticipo.Name = "SlblAnticipo";
             this.SlblAnticipo.Size = new System.Drawing.Size(94, 34);
             this.SlblAnticipo.TabIndex = 12;
             this.SlblAnticipo.Text = "Anticipo : ";
             // 
-            // SlblDatosEquipo
-            // 
-            this.SlblDatosEquipo.AutoSize = true;
-            this.SlblDatosEquipo.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SlblDatosEquipo.ForeColor = System.Drawing.Color.Black;
-            this.SlblDatosEquipo.Location = new System.Drawing.Point(1, 186);
-            this.SlblDatosEquipo.Name = "SlblDatosEquipo";
-            this.SlblDatosEquipo.Size = new System.Drawing.Size(165, 29);
-            this.SlblDatosEquipo.TabIndex = 11;
-            this.SlblDatosEquipo.Text = "Datos de Equipo";
-            // 
             // btnAgregarCliente
             // 
             this.btnAgregarCliente.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnAgregarCliente.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarCliente.Location = new System.Drawing.Point(1045, 115);
+            this.btnAgregarCliente.Location = new System.Drawing.Point(922, 139);
             this.btnAgregarCliente.Name = "btnAgregarCliente";
             this.btnAgregarCliente.Size = new System.Drawing.Size(120, 38);
             this.btnAgregarCliente.TabIndex = 10;
@@ -825,7 +790,7 @@
             // 
             this.SlblCorreo.AutoSize = true;
             this.SlblCorreo.ForeColor = System.Drawing.Color.Black;
-            this.SlblCorreo.Location = new System.Drawing.Point(617, 119);
+            this.SlblCorreo.Location = new System.Drawing.Point(434, 48);
             this.SlblCorreo.Name = "SlblCorreo";
             this.SlblCorreo.Size = new System.Drawing.Size(84, 34);
             this.SlblCorreo.TabIndex = 6;
@@ -835,9 +800,9 @@
             // 
             this.SlblTelefono.AutoSize = true;
             this.SlblTelefono.ForeColor = System.Drawing.Color.Black;
-            this.SlblTelefono.Location = new System.Drawing.Point(607, 61);
+            this.SlblTelefono.Location = new System.Drawing.Point(434, 0);
             this.SlblTelefono.Name = "SlblTelefono";
-            this.SlblTelefono.Size = new System.Drawing.Size(94, 34);
+            this.SlblTelefono.Size = new System.Drawing.Size(89, 48);
             this.SlblTelefono.TabIndex = 5;
             this.SlblTelefono.Text = "Teléfono :";
             // 
@@ -846,26 +811,16 @@
             this.SlblNombre.AutoSize = true;
             this.SlblNombre.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SlblNombre.ForeColor = System.Drawing.Color.Black;
-            this.SlblNombre.Location = new System.Drawing.Point(185, 61);
+            this.SlblNombre.Location = new System.Drawing.Point(3, 0);
             this.SlblNombre.Name = "SlblNombre";
             this.SlblNombre.Size = new System.Drawing.Size(87, 34);
             this.SlblNombre.TabIndex = 4;
             this.SlblNombre.Text = "Nombre :";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(-46, 153);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(1383, 34);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "_________________________________________________________________________________" +
-    "_______________________________________________________________________";
-            // 
             // txtBuscarCliente
             // 
             this.txtBuscarCliente.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarCliente.Location = new System.Drawing.Point(322, 14);
+            this.txtBuscarCliente.Location = new System.Drawing.Point(140, 3);
             this.txtBuscarCliente.Name = "txtBuscarCliente";
             this.txtBuscarCliente.Size = new System.Drawing.Size(359, 34);
             this.txtBuscarCliente.TabIndex = 2;
@@ -874,7 +829,7 @@
             // SlblBuscarCliente
             // 
             this.SlblBuscarCliente.AutoSize = true;
-            this.SlblBuscarCliente.Location = new System.Drawing.Point(185, 14);
+            this.SlblBuscarCliente.Location = new System.Drawing.Point(3, 0);
             this.SlblBuscarCliente.Name = "SlblBuscarCliente";
             this.SlblBuscarCliente.Size = new System.Drawing.Size(131, 34);
             this.SlblBuscarCliente.TabIndex = 1;
@@ -883,7 +838,7 @@
             // pictureBuscar
             // 
             this.pictureBuscar.Image = global::WindowsFormsApp1.Properties.Resources.Lupa_Codigo;
-            this.pictureBuscar.Location = new System.Drawing.Point(697, 16);
+            this.pictureBuscar.Location = new System.Drawing.Point(505, 3);
             this.pictureBuscar.Name = "pictureBuscar";
             this.pictureBuscar.Size = new System.Drawing.Size(30, 30);
             this.pictureBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1024,9 +979,9 @@
             // 
             this.SgbConfiguraciones.Controls.Add(this.button1);
             this.SgbConfiguraciones.Controls.Add(this.SbtnAgregarUsuario);
-            this.SgbConfiguraciones.Location = new System.Drawing.Point(1015, 3);
+            this.SgbConfiguraciones.Location = new System.Drawing.Point(331, 432);
             this.SgbConfiguraciones.Name = "SgbConfiguraciones";
-            this.SgbConfiguraciones.Size = new System.Drawing.Size(300, 131);
+            this.SgbConfiguraciones.Size = new System.Drawing.Size(580, 158);
             this.SgbConfiguraciones.TabIndex = 6;
             this.SgbConfiguraciones.TabStop = false;
             this.SgbConfiguraciones.Text = "Configuraciones";
@@ -1034,7 +989,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Location = new System.Drawing.Point(15, 77);
+            this.button1.Location = new System.Drawing.Point(115, 103);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(277, 37);
             this.button1.TabIndex = 3;
@@ -1044,7 +999,7 @@
             // SbtnAgregarUsuario
             // 
             this.SbtnAgregarUsuario.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.SbtnAgregarUsuario.Location = new System.Drawing.Point(15, 34);
+            this.SbtnAgregarUsuario.Location = new System.Drawing.Point(115, 40);
             this.SbtnAgregarUsuario.Name = "SbtnAgregarUsuario";
             this.SbtnAgregarUsuario.Size = new System.Drawing.Size(277, 37);
             this.SbtnAgregarUsuario.TabIndex = 2;
@@ -1059,7 +1014,7 @@
             this.SgbAsignarRolATrabajador.Controls.Add(this.ScbxSeleccionarRol);
             this.SgbAsignarRolATrabajador.Controls.Add(this.ScbxUsuariosRol);
             this.SgbAsignarRolATrabajador.Controls.Add(this.SlblSeleccioneNombreDeUsuario);
-            this.SgbAsignarRolATrabajador.Location = new System.Drawing.Point(130, 140);
+            this.SgbAsignarRolATrabajador.Location = new System.Drawing.Point(331, 178);
             this.SgbAsignarRolATrabajador.Name = "SgbAsignarRolATrabajador";
             this.SgbAsignarRolATrabajador.Size = new System.Drawing.Size(580, 220);
             this.SgbAsignarRolATrabajador.TabIndex = 4;
@@ -1116,7 +1071,7 @@
             this.SgbRoles.Controls.Add(this.StxtRol);
             this.SgbRoles.Controls.Add(this.SlblNombreRol);
             this.SgbRoles.Controls.Add(this.SbtnGuardarRol);
-            this.SgbRoles.Location = new System.Drawing.Point(130, 3);
+            this.SgbRoles.Location = new System.Drawing.Point(331, 20);
             this.SgbRoles.Name = "SgbRoles";
             this.SgbRoles.Size = new System.Drawing.Size(580, 131);
             this.SgbRoles.TabIndex = 1;
@@ -1229,9 +1184,7 @@
             // 
             // TabClientes
             // 
-            this.TabClientes.Controls.Add(this.pbBuscar);
-            this.TabClientes.Controls.Add(this.txtCliente);
-            this.TabClientes.Controls.Add(this.lblClienteBuscar);
+            this.TabClientes.Controls.Add(this.layBuscarCliente);
             this.TabClientes.Controls.Add(this.dgClientes);
             this.TabClientes.Controls.Add(this.ClientesLogoCh);
             this.TabClientes.Location = new System.Drawing.Point(4, 43);
@@ -1245,9 +1198,9 @@
             // pbBuscar
             // 
             this.pbBuscar.Image = global::WindowsFormsApp1.Properties.Resources.Lupa_Codigo;
-            this.pbBuscar.Location = new System.Drawing.Point(938, 60);
+            this.pbBuscar.Location = new System.Drawing.Point(445, 3);
             this.pbBuscar.Name = "pbBuscar";
-            this.pbBuscar.Size = new System.Drawing.Size(46, 42);
+            this.pbBuscar.Size = new System.Drawing.Size(37, 41);
             this.pbBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbBuscar.TabIndex = 8;
             this.pbBuscar.TabStop = false;
@@ -1255,7 +1208,7 @@
             // 
             // txtCliente
             // 
-            this.txtCliente.Location = new System.Drawing.Point(625, 61);
+            this.txtCliente.Location = new System.Drawing.Point(143, 3);
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Size = new System.Drawing.Size(296, 41);
             this.txtCliente.TabIndex = 7;
@@ -1265,7 +1218,7 @@
             // lblClienteBuscar
             // 
             this.lblClienteBuscar.AutoSize = true;
-            this.lblClienteBuscar.Location = new System.Drawing.Point(485, 64);
+            this.lblClienteBuscar.Location = new System.Drawing.Point(3, 0);
             this.lblClienteBuscar.Name = "lblClienteBuscar";
             this.lblClienteBuscar.Size = new System.Drawing.Size(134, 34);
             this.lblClienteBuscar.TabIndex = 6;
@@ -1414,6 +1367,126 @@
             // 
             this.clienteTableAdapter.ClearBeforeFill = true;
             // 
+            // ClienteGBx
+            // 
+            this.ClienteGBx.Controls.Add(this.layCliente);
+            this.ClienteGBx.Controls.Add(this.layoutCliente);
+            this.ClienteGBx.Controls.Add(this.SbtnCancelar);
+            this.ClienteGBx.Controls.Add(this.btnAddClientH);
+            this.ClienteGBx.Controls.Add(this.lblTextoIdCliente);
+            this.ClienteGBx.Controls.Add(this.lblIdCliente);
+            this.ClienteGBx.Controls.Add(this.btnAgregarCliente);
+            this.ClienteGBx.Location = new System.Drawing.Point(116, 6);
+            this.ClienteGBx.Name = "ClienteGBx";
+            this.ClienteGBx.Size = new System.Drawing.Size(1202, 193);
+            this.ClienteGBx.TabIndex = 52;
+            this.ClienteGBx.TabStop = false;
+            this.ClienteGBx.Text = "Cliente";
+            // 
+            // layoutCliente
+            // 
+            this.layoutCliente.ColumnCount = 4;
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.95349F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.04651F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 271F));
+            this.layoutCliente.Controls.Add(this.SlblNombre, 0, 0);
+            this.layoutCliente.Controls.Add(this.txtNombre, 1, 0);
+            this.layoutCliente.Controls.Add(this.SlblApellido, 0, 1);
+            this.layoutCliente.Controls.Add(this.txtApellido, 1, 1);
+            this.layoutCliente.Controls.Add(this.SlblTelefono, 2, 0);
+            this.layoutCliente.Controls.Add(this.SlblCorreo, 2, 1);
+            this.layoutCliente.Controls.Add(this.txtTelefono, 3, 0);
+            this.layoutCliente.Controls.Add(this.txtCorreo, 3, 1);
+            this.layoutCliente.Location = new System.Drawing.Point(46, 106);
+            this.layoutCliente.Name = "layoutCliente";
+            this.layoutCliente.RowCount = 2;
+            this.layoutCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.layoutCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.layoutCliente.Size = new System.Drawing.Size(801, 97);
+            this.layoutCliente.TabIndex = 0;
+            // 
+            // layCliente
+            // 
+            this.layCliente.Controls.Add(this.SlblBuscarCliente);
+            this.layCliente.Controls.Add(this.txtBuscarCliente);
+            this.layCliente.Controls.Add(this.pictureBuscar);
+            this.layCliente.Controls.Add(this.lblAvisoNoCliente);
+            this.layCliente.Location = new System.Drawing.Point(84, 44);
+            this.layCliente.Name = "layCliente";
+            this.layCliente.Size = new System.Drawing.Size(760, 41);
+            this.layCliente.TabIndex = 1;
+            // 
+            // EquipoGbx
+            // 
+            this.EquipoGbx.Controls.Add(this.LayEquipo);
+            this.EquipoGbx.Controls.Add(this.lblIdEquipo);
+            this.EquipoGbx.Controls.Add(this.SlblRecibirEquipo);
+            this.EquipoGbx.Controls.Add(this.txtDescripcionDiagnosticoEspecifico);
+            this.EquipoGbx.Controls.Add(this.rbDiagnosticoEspecifico);
+            this.EquipoGbx.Controls.Add(this.rbDiagnosticoRapido);
+            this.EquipoGbx.Controls.Add(this.SlblTipoDeDiagnostico);
+            this.EquipoGbx.Location = new System.Drawing.Point(116, 198);
+            this.EquipoGbx.Name = "EquipoGbx";
+            this.EquipoGbx.Size = new System.Drawing.Size(1202, 338);
+            this.EquipoGbx.TabIndex = 53;
+            this.EquipoGbx.TabStop = false;
+            this.EquipoGbx.Text = "Equipo";
+            // 
+            // LayEquipo
+            // 
+            this.LayEquipo.ColumnCount = 4;
+            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.33448F));
+            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.66552F));
+            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 92F));
+            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 217F));
+            this.LayEquipo.Controls.Add(this.SlblMarca, 0, 0);
+            this.LayEquipo.Controls.Add(this.txtMarca, 1, 0);
+            this.LayEquipo.Controls.Add(this.SlblModelo, 2, 0);
+            this.LayEquipo.Controls.Add(this.ccbTipoServicio1, 1, 1);
+            this.LayEquipo.Controls.Add(this.txtModelo, 3, 0);
+            this.LayEquipo.Controls.Add(this.tiposervicioC1, 0, 1);
+            this.LayEquipo.Controls.Add(this.SlblDescripcionFalla, 0, 2);
+            this.LayEquipo.Controls.Add(this.txtDescripcionDeFalla, 1, 2);
+            this.LayEquipo.Location = new System.Drawing.Point(23, 29);
+            this.LayEquipo.Name = "LayEquipo";
+            this.LayEquipo.RowCount = 3;
+            this.LayEquipo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.3299F));
+            this.LayEquipo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.6701F));
+            this.LayEquipo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 67F));
+            this.LayEquipo.Size = new System.Drawing.Size(925, 165);
+            this.LayEquipo.TabIndex = 54;
+            // 
+            // layoutTotales
+            // 
+            this.layoutTotales.ColumnCount = 2;
+            this.layoutTotales.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.layoutTotales.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.layoutTotales.Controls.Add(this.txtTotal, 1, 0);
+            this.layoutTotales.Controls.Add(this.SlblTotal, 0, 0);
+            this.layoutTotales.Controls.Add(this.SlblAnticipo, 0, 1);
+            this.layoutTotales.Controls.Add(this.txtAnticipo, 1, 1);
+            this.layoutTotales.Controls.Add(this.SlblResponsable, 0, 2);
+            this.layoutTotales.Controls.Add(this.comboResponsable, 1, 2);
+            this.layoutTotales.Location = new System.Drawing.Point(148, 542);
+            this.layoutTotales.Name = "layoutTotales";
+            this.layoutTotales.RowCount = 3;
+            this.layoutTotales.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.33333F));
+            this.layoutTotales.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.66667F));
+            this.layoutTotales.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+            this.layoutTotales.Size = new System.Drawing.Size(268, 115);
+            this.layoutTotales.TabIndex = 54;
+            // 
+            // layBuscarCliente
+            // 
+            this.layBuscarCliente.Controls.Add(this.lblClienteBuscar);
+            this.layBuscarCliente.Controls.Add(this.txtCliente);
+            this.layBuscarCliente.Controls.Add(this.pbBuscar);
+            this.layBuscarCliente.Location = new System.Drawing.Point(297, 56);
+            this.layBuscarCliente.Name = "layBuscarCliente";
+            this.layBuscarCliente.Size = new System.Drawing.Size(585, 56);
+            this.layBuscarCliente.TabIndex = 9;
+            // 
             // ViewTabs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1453,7 +1526,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ordenesLogoCh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableOrdenes)).EndInit();
             this.TabClientes.ResumeLayout(false);
-            this.TabClientes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbBuscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClientesLogoCh)).EndInit();
@@ -1462,6 +1534,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reparacionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.ClienteGBx.ResumeLayout(false);
+            this.ClienteGBx.PerformLayout();
+            this.layoutCliente.ResumeLayout(false);
+            this.layoutCliente.PerformLayout();
+            this.layCliente.ResumeLayout(false);
+            this.layCliente.PerformLayout();
+            this.EquipoGbx.ResumeLayout(false);
+            this.EquipoGbx.PerformLayout();
+            this.LayEquipo.ResumeLayout(false);
+            this.LayEquipo.PerformLayout();
+            this.layoutTotales.ResumeLayout(false);
+            this.layoutTotales.PerformLayout();
+            this.layBuscarCliente.ResumeLayout(false);
+            this.layBuscarCliente.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1497,7 +1583,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.DataGridViewTextBoxColumn idReparacion;
         private System.Windows.Forms.LinkLabel linkCerrarSesion;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtBuscarCliente;
         private System.Windows.Forms.Label SlblBuscarCliente;
         private System.Windows.Forms.Button btnAgregarCliente;
@@ -1525,7 +1610,6 @@
         private System.Windows.Forms.Label SlblTipoDeDiagnostico;
         private System.Windows.Forms.Label SlblTotal;
         private System.Windows.Forms.Label SlblAnticipo;
-        private System.Windows.Forms.Label SlblDatosEquipo;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtCorreo;
@@ -1616,6 +1700,13 @@
         private System.Windows.Forms.PictureBox recibirLogoCh;
         private System.Windows.Forms.PictureBox reparacionLogoCh;
         private System.Windows.Forms.PictureBox ordenesLogoCh;
+        private System.Windows.Forms.TableLayoutPanel layoutTotales;
+        private System.Windows.Forms.GroupBox EquipoGbx;
+        private System.Windows.Forms.TableLayoutPanel LayEquipo;
+        private System.Windows.Forms.GroupBox ClienteGBx;
+        private System.Windows.Forms.FlowLayoutPanel layCliente;
+        private System.Windows.Forms.TableLayoutPanel layoutCliente;
+        private System.Windows.Forms.FlowLayoutPanel layBuscarCliente;
         //  private System.Windows.Forms.TextBox textBox1;
         //private System.Windows.Forms.Label UnaLabel;
         //  private System.Windows.Forms.Label label5;
