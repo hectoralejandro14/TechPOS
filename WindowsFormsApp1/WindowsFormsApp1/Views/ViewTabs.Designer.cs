@@ -525,7 +525,7 @@
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.33448F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.66552F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 92F));
-            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 219F));
+            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 220F));
             this.LayEquipo.Controls.Add(this.SlblMarca, 0, 0);
             this.LayEquipo.Controls.Add(this.txtMarca, 1, 0);
             this.LayEquipo.Controls.Add(this.SlblModelo, 2, 0);
@@ -566,7 +566,7 @@
             // 
             this.SlblModelo.AutoSize = true;
             this.SlblModelo.ForeColor = System.Drawing.Color.Black;
-            this.SlblModelo.Location = new System.Drawing.Point(616, 0);
+            this.SlblModelo.Location = new System.Drawing.Point(615, 0);
             this.SlblModelo.Name = "SlblModelo";
             this.SlblModelo.Size = new System.Drawing.Size(82, 34);
             this.SlblModelo.TabIndex = 19;
@@ -586,7 +586,7 @@
             // txtModelo
             // 
             this.txtModelo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModelo.Location = new System.Drawing.Point(708, 3);
+            this.txtModelo.Location = new System.Drawing.Point(707, 3);
             this.txtModelo.Multiline = true;
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(212, 29);
@@ -758,7 +758,7 @@
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.95349F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.04651F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
-            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 273F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 274F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.95349F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.04651F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
@@ -795,7 +795,7 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(106, 3);
+            this.txtNombre.Location = new System.Drawing.Point(105, 3);
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(313, 29);
@@ -816,7 +816,7 @@
             // txtApellido
             // 
             this.txtApellido.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido.Location = new System.Drawing.Point(106, 51);
+            this.txtApellido.Location = new System.Drawing.Point(105, 51);
             this.txtApellido.Multiline = true;
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(313, 29);
@@ -827,7 +827,7 @@
             // 
             this.SlblTelefono.AutoSize = true;
             this.SlblTelefono.ForeColor = System.Drawing.Color.Black;
-            this.SlblTelefono.Location = new System.Drawing.Point(432, 0);
+            this.SlblTelefono.Location = new System.Drawing.Point(431, 0);
             this.SlblTelefono.Name = "SlblTelefono";
             this.SlblTelefono.Size = new System.Drawing.Size(89, 48);
             this.SlblTelefono.TabIndex = 5;
@@ -837,7 +837,7 @@
             // 
             this.SlblCorreo.AutoSize = true;
             this.SlblCorreo.ForeColor = System.Drawing.Color.Black;
-            this.SlblCorreo.Location = new System.Drawing.Point(432, 48);
+            this.SlblCorreo.Location = new System.Drawing.Point(431, 48);
             this.SlblCorreo.Name = "SlblCorreo";
             this.SlblCorreo.Size = new System.Drawing.Size(84, 34);
             this.SlblCorreo.TabIndex = 6;
@@ -846,7 +846,7 @@
             // txtTelefono
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(530, 3);
+            this.txtTelefono.Location = new System.Drawing.Point(529, 3);
             this.txtTelefono.Multiline = true;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(266, 29);
@@ -856,7 +856,7 @@
             // txtCorreo
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.Location = new System.Drawing.Point(530, 51);
+            this.txtCorreo.Location = new System.Drawing.Point(529, 51);
             this.txtCorreo.Multiline = true;
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(266, 29);
@@ -864,7 +864,7 @@
             // 
             // SbtnCancelar
             // 
-            this.SbtnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.SbtnCancelar.BackColor = System.Drawing.Color.DimGray;
             this.SbtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SbtnCancelar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SbtnCancelar.ForeColor = System.Drawing.Color.Turquoise;
@@ -879,7 +879,7 @@
             // 
             // btnAddClientH
             // 
-            this.btnAddClientH.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAddClientH.BackColor = System.Drawing.Color.DimGray;
             this.btnAddClientH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddClientH.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddClientH.ForeColor = System.Drawing.Color.Turquoise;
@@ -914,7 +914,7 @@
             // 
             // btnAgregarCliente
             // 
-            this.btnAgregarCliente.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAgregarCliente.BackColor = System.Drawing.Color.DimGray;
             this.btnAgregarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregarCliente.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarCliente.ForeColor = System.Drawing.Color.Turquoise;
@@ -939,7 +939,7 @@
             // 
             // btnPedirPieza
             // 
-            this.btnPedirPieza.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnPedirPieza.BackColor = System.Drawing.Color.DimGray;
             this.btnPedirPieza.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPedirPieza.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPedirPieza.ForeColor = System.Drawing.Color.Turquoise;
@@ -953,7 +953,7 @@
             // 
             // btnAgregrEquipos
             // 
-            this.btnAgregrEquipos.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAgregrEquipos.BackColor = System.Drawing.Color.DimGray;
             this.btnAgregrEquipos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregrEquipos.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregrEquipos.ForeColor = System.Drawing.Color.Turquoise;
@@ -967,7 +967,7 @@
             // 
             // btnLimpiarCampos
             // 
-            this.btnLimpiarCampos.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnLimpiarCampos.BackColor = System.Drawing.Color.DimGray;
             this.btnLimpiarCampos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLimpiarCampos.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiarCampos.ForeColor = System.Drawing.Color.Turquoise;
