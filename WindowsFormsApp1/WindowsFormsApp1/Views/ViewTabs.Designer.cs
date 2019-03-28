@@ -37,6 +37,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewTabs));
             this.tabPuntoVenta = new System.Windows.Forms.TabControl();
             this.tabVenta = new System.Windows.Forms.TabPage();
+            this.ventaLogoCh = new System.Windows.Forms.PictureBox();
             this.ClblCodigoDeBarras = new System.Windows.Forms.Label();
             this.CNombreUsuarioLblVenta = new System.Windows.Forms.Label();
             this.totalTbxVenta = new System.Windows.Forms.TextBox();
@@ -56,6 +57,7 @@
             this.CbtnCancelarVenta = new System.Windows.Forms.Button();
             this.usuarioLblVenta = new System.Windows.Forms.Label();
             this.tabRecibirEquipo = new System.Windows.Forms.TabPage();
+            this.recibirLogoCh = new System.Windows.Forms.PictureBox();
             this.lblIdCliente = new System.Windows.Forms.Label();
             this.lblTextoIdCliente = new System.Windows.Forms.Label();
             this.btnAddClientH = new System.Windows.Forms.Button();
@@ -99,6 +101,7 @@
             this.SlblBuscarCliente = new System.Windows.Forms.Label();
             this.pictureBuscar = new System.Windows.Forms.PictureBox();
             this.tabReparacion = new System.Windows.Forms.TabPage();
+            this.reparacionLogoCh = new System.Windows.Forms.PictureBox();
             this.JtxtBuscar2 = new System.Windows.Forms.TextBox();
             this.CDGReparacion = new System.Windows.Forms.DataGridView();
             this.CEspera = new System.Windows.Forms.RadioButton();
@@ -122,6 +125,7 @@
             this.SbtnGuardarRol = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.ordenesTab = new System.Windows.Forms.TabPage();
+            this.ordenesLogoCh = new System.Windows.Forms.PictureBox();
             this.tableOrdenes = new System.Windows.Forms.DataGridView();
             this.idClmOrdenes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descClmOrdenes = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -133,10 +137,10 @@
             this.txtCliente = new System.Windows.Forms.TextBox();
             this.lblClienteBuscar = new System.Windows.Forms.Label();
             this.dgClientes = new System.Windows.Forms.DataGridView();
+            this.ClientesLogoCh = new System.Windows.Forms.PictureBox();
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.techPOSdbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.techPOSdbDataSet = new WindowsFormsApp1.TechPOSdbDataSet();
-            this.ClientesLogoCh = new System.Windows.Forms.PictureBox();
             this.reparacionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.UnaLabel = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -152,16 +156,15 @@
             this.linkCerrarSesion = new System.Windows.Forms.LinkLabel();
             this.reparacionTableAdapter = new WindowsFormsApp1.TechPOSdbDataSetTableAdapters.ReparacionTableAdapter();
             this.clienteTableAdapter = new WindowsFormsApp1.TechPOSdbDataSetTableAdapters.ClienteTableAdapter();
-            this.ordenesLogoCh = new System.Windows.Forms.PictureBox();
-            this.reparacionLogoCh = new System.Windows.Forms.PictureBox();
-            this.recibirLogoCh = new System.Windows.Forms.PictureBox();
-            this.ventaLogoCh = new System.Windows.Forms.PictureBox();
             this.tabPuntoVenta.SuspendLayout();
             this.tabVenta.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ventaLogoCh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableVender)).BeginInit();
             this.tabRecibirEquipo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.recibirLogoCh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).BeginInit();
             this.tabReparacion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reparacionLogoCh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CDGReparacion)).BeginInit();
             this.tabConfiguracionesDeUsuario.SuspendLayout();
             this.SgbConfiguraciones.SuspendLayout();
@@ -169,20 +172,17 @@
             this.SgbRoles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.ordenesTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ordenesLogoCh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableOrdenes)).BeginInit();
             this.TabClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClientesLogoCh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ClientesLogoCh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reparacionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ordenesLogoCh)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reparacionLogoCh)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.recibirLogoCh)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ventaLogoCh)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPuntoVenta
@@ -224,6 +224,16 @@
             this.tabVenta.TabIndex = 0;
             this.tabVenta.Text = "Venta";
             this.tabVenta.UseVisualStyleBackColor = true;
+            // 
+            // ventaLogoCh
+            // 
+            this.ventaLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.ventaLogoCh.Location = new System.Drawing.Point(6, 6);
+            this.ventaLogoCh.Name = "ventaLogoCh";
+            this.ventaLogoCh.Size = new System.Drawing.Size(118, 177);
+            this.ventaLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ventaLogoCh.TabIndex = 20;
+            this.ventaLogoCh.TabStop = false;
             // 
             // ClblCodigoDeBarras
             // 
@@ -430,6 +440,16 @@
             this.tabRecibirEquipo.TabIndex = 1;
             this.tabRecibirEquipo.Text = "Recibir Equipo";
             this.tabRecibirEquipo.UseVisualStyleBackColor = true;
+            // 
+            // recibirLogoCh
+            // 
+            this.recibirLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.recibirLogoCh.Location = new System.Drawing.Point(6, 6);
+            this.recibirLogoCh.Name = "recibirLogoCh";
+            this.recibirLogoCh.Size = new System.Drawing.Size(118, 177);
+            this.recibirLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.recibirLogoCh.TabIndex = 51;
+            this.recibirLogoCh.TabStop = false;
             // 
             // lblIdCliente
             // 
@@ -890,6 +910,16 @@
             this.tabReparacion.UseVisualStyleBackColor = true;
             this.tabReparacion.Click += new System.EventHandler(this.tabReparacion_Click);
             // 
+            // reparacionLogoCh
+            // 
+            this.reparacionLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.reparacionLogoCh.Location = new System.Drawing.Point(6, 6);
+            this.reparacionLogoCh.Name = "reparacionLogoCh";
+            this.reparacionLogoCh.Size = new System.Drawing.Size(118, 177);
+            this.reparacionLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.reparacionLogoCh.TabIndex = 11;
+            this.reparacionLogoCh.TabStop = false;
+            // 
             // JtxtBuscar2
             // 
             this.JtxtBuscar2.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1143,6 +1173,16 @@
             this.ordenesTab.Text = "Ordenes";
             this.ordenesTab.UseVisualStyleBackColor = true;
             // 
+            // ordenesLogoCh
+            // 
+            this.ordenesLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.ordenesLogoCh.Location = new System.Drawing.Point(6, 6);
+            this.ordenesLogoCh.Name = "ordenesLogoCh";
+            this.ordenesLogoCh.Size = new System.Drawing.Size(118, 177);
+            this.ordenesLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ordenesLogoCh.TabIndex = 5;
+            this.ordenesLogoCh.TabStop = false;
+            // 
             // tableOrdenes
             // 
             this.tableOrdenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1270,6 +1310,16 @@
             this.dgClientes.TabIndex = 5;
             this.dgClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgClientes_CellClick);
             // 
+            // ClientesLogoCh
+            // 
+            this.ClientesLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.ClientesLogoCh.Location = new System.Drawing.Point(6, 6);
+            this.ClientesLogoCh.Name = "ClientesLogoCh";
+            this.ClientesLogoCh.Size = new System.Drawing.Size(118, 177);
+            this.ClientesLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ClientesLogoCh.TabIndex = 4;
+            this.ClientesLogoCh.TabStop = false;
+            // 
             // clienteBindingSource
             // 
             this.clienteBindingSource.DataMember = "Cliente";
@@ -1284,16 +1334,6 @@
             // 
             this.techPOSdbDataSet.DataSetName = "TechPOSdbDataSet";
             this.techPOSdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ClientesLogoCh
-            // 
-            this.ClientesLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
-            this.ClientesLogoCh.Location = new System.Drawing.Point(6, 6);
-            this.ClientesLogoCh.Name = "ClientesLogoCh";
-            this.ClientesLogoCh.Size = new System.Drawing.Size(118, 177);
-            this.ClientesLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ClientesLogoCh.TabIndex = 4;
-            this.ClientesLogoCh.TabStop = false;
             // 
             // reparacionBindingSource
             // 
@@ -1374,46 +1414,6 @@
             // 
             this.clienteTableAdapter.ClearBeforeFill = true;
             // 
-            // ordenesLogoCh
-            // 
-            this.ordenesLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
-            this.ordenesLogoCh.Location = new System.Drawing.Point(6, 6);
-            this.ordenesLogoCh.Name = "ordenesLogoCh";
-            this.ordenesLogoCh.Size = new System.Drawing.Size(118, 177);
-            this.ordenesLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ordenesLogoCh.TabIndex = 5;
-            this.ordenesLogoCh.TabStop = false;
-            // 
-            // reparacionLogoCh
-            // 
-            this.reparacionLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
-            this.reparacionLogoCh.Location = new System.Drawing.Point(6, 6);
-            this.reparacionLogoCh.Name = "reparacionLogoCh";
-            this.reparacionLogoCh.Size = new System.Drawing.Size(118, 177);
-            this.reparacionLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.reparacionLogoCh.TabIndex = 11;
-            this.reparacionLogoCh.TabStop = false;
-            // 
-            // recibirLogoCh
-            // 
-            this.recibirLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
-            this.recibirLogoCh.Location = new System.Drawing.Point(6, 6);
-            this.recibirLogoCh.Name = "recibirLogoCh";
-            this.recibirLogoCh.Size = new System.Drawing.Size(118, 177);
-            this.recibirLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.recibirLogoCh.TabIndex = 51;
-            this.recibirLogoCh.TabStop = false;
-            // 
-            // ventaLogoCh
-            // 
-            this.ventaLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
-            this.ventaLogoCh.Location = new System.Drawing.Point(6, 6);
-            this.ventaLogoCh.Name = "ventaLogoCh";
-            this.ventaLogoCh.Size = new System.Drawing.Size(118, 177);
-            this.ventaLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ventaLogoCh.TabIndex = 20;
-            this.ventaLogoCh.TabStop = false;
-            // 
             // ViewTabs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1432,12 +1432,15 @@
             this.tabPuntoVenta.ResumeLayout(false);
             this.tabVenta.ResumeLayout(false);
             this.tabVenta.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ventaLogoCh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableVender)).EndInit();
             this.tabRecibirEquipo.ResumeLayout(false);
             this.tabRecibirEquipo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.recibirLogoCh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).EndInit();
             this.tabReparacion.ResumeLayout(false);
             this.tabReparacion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reparacionLogoCh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CDGReparacion)).EndInit();
             this.tabConfiguracionesDeUsuario.ResumeLayout(false);
             this.SgbConfiguraciones.ResumeLayout(false);
@@ -1447,21 +1450,18 @@
             this.SgbRoles.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ordenesTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ordenesLogoCh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableOrdenes)).EndInit();
             this.TabClientes.ResumeLayout(false);
             this.TabClientes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbBuscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClientesLogoCh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ClientesLogoCh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reparacionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ordenesLogoCh)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reparacionLogoCh)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.recibirLogoCh)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ventaLogoCh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
