@@ -16,5 +16,10 @@ namespace WindowsFormsApp1.Views
         {
             InitializeComponent();
         }
+
+        private void motivoTbxCancelarV_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

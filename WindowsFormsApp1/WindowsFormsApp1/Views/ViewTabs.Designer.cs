@@ -100,10 +100,10 @@
             this.lblTextoIdCliente = new System.Windows.Forms.Label();
             this.lblIdCliente = new System.Windows.Forms.Label();
             this.btnAgregarCliente = new System.Windows.Forms.Button();
-            this.recibirLogoCh = new System.Windows.Forms.PictureBox();
             this.btnPedirPieza = new System.Windows.Forms.Button();
             this.btnAgregrEquipos = new System.Windows.Forms.Button();
             this.btnLimpiarCampos = new System.Windows.Forms.Button();
+            this.recibirLogoCh = new System.Windows.Forms.PictureBox();
             this.tabReparacion = new System.Windows.Forms.TabPage();
             this.reparacionLogoCh = new System.Windows.Forms.PictureBox();
             this.JtxtBuscar2 = new System.Windows.Forms.TextBox();
@@ -129,13 +129,9 @@
             this.SbtnGuardarRol = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.ordenesTab = new System.Windows.Forms.TabPage();
-            this.ordenesLogoCh = new System.Windows.Forms.PictureBox();
+            this.SlblPiezasOrdenadas = new System.Windows.Forms.Label();
             this.tableOrdenes = new System.Windows.Forms.DataGridView();
-            this.idClmOrdenes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descClmOrdenes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estadoClmOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fIngrClmOrdenes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fLlegaClmOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ordenesLogoCh = new System.Windows.Forms.PictureBox();
             this.TabClientes = new System.Windows.Forms.TabPage();
             this.layBuscarCliente = new System.Windows.Forms.FlowLayoutPanel();
             this.lblClienteBuscar = new System.Windows.Forms.Label();
@@ -158,9 +154,10 @@
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idReparacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.linkCerrarSesion = new System.Windows.Forms.LinkLabel();
             this.reparacionTableAdapter = new WindowsFormsApp1.TechPOSdbDataSetTableAdapters.ReparacionTableAdapter();
             this.clienteTableAdapter = new WindowsFormsApp1.TechPOSdbDataSetTableAdapters.ClienteTableAdapter();
+            this.SbtnAgregarNuevoServicioCU = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tabPuntoVenta.SuspendLayout();
             this.tabVenta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ventaLogoCh)).BeginInit();
@@ -183,8 +180,8 @@
             this.SgbRoles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.ordenesTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ordenesLogoCh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableOrdenes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordenesLogoCh)).BeginInit();
             this.TabClientes.SuspendLayout();
             this.layBuscarCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbBuscar)).BeginInit();
@@ -195,6 +192,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reparacionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPuntoVenta
@@ -243,7 +241,7 @@
             this.ventaLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
             this.ventaLogoCh.Location = new System.Drawing.Point(6, 6);
             this.ventaLogoCh.Name = "ventaLogoCh";
-            this.ventaLogoCh.Size = new System.Drawing.Size(62, 97);
+            this.ventaLogoCh.Size = new System.Drawing.Size(118, 177);
             this.ventaLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ventaLogoCh.TabIndex = 20;
             this.ventaLogoCh.TabStop = false;
@@ -411,10 +409,10 @@
             this.tabRecibirEquipo.Controls.Add(this.layoutTotales);
             this.tabRecibirEquipo.Controls.Add(this.EquipoGbx);
             this.tabRecibirEquipo.Controls.Add(this.ClienteGBx);
-            this.tabRecibirEquipo.Controls.Add(this.recibirLogoCh);
             this.tabRecibirEquipo.Controls.Add(this.btnPedirPieza);
             this.tabRecibirEquipo.Controls.Add(this.btnAgregrEquipos);
             this.tabRecibirEquipo.Controls.Add(this.btnLimpiarCampos);
+            this.tabRecibirEquipo.Controls.Add(this.recibirLogoCh);
             this.tabRecibirEquipo.Location = new System.Drawing.Point(4, 43);
             this.tabRecibirEquipo.Name = "tabRecibirEquipo";
             this.tabRecibirEquipo.Padding = new System.Windows.Forms.Padding(3);
@@ -525,7 +523,11 @@
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.33448F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.66552F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 92F));
-            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 220F));
+            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 221F));
+            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.33448F));
+            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.66552F));
+            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 92F));
+            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 219F));
             this.LayEquipo.Controls.Add(this.SlblMarca, 0, 0);
             this.LayEquipo.Controls.Add(this.txtMarca, 1, 0);
             this.LayEquipo.Controls.Add(this.SlblModelo, 2, 0);
@@ -537,6 +539,9 @@
             this.LayEquipo.Location = new System.Drawing.Point(23, 29);
             this.LayEquipo.Name = "LayEquipo";
             this.LayEquipo.RowCount = 3;
+            this.LayEquipo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.3299F));
+            this.LayEquipo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.6701F));
+            this.LayEquipo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 67F));
             this.LayEquipo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.3299F));
             this.LayEquipo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.6701F));
             this.LayEquipo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 67F));
@@ -566,7 +571,7 @@
             // 
             this.SlblModelo.AutoSize = true;
             this.SlblModelo.ForeColor = System.Drawing.Color.Black;
-            this.SlblModelo.Location = new System.Drawing.Point(615, 0);
+            this.SlblModelo.Location = new System.Drawing.Point(614, 0);
             this.SlblModelo.Name = "SlblModelo";
             this.SlblModelo.Size = new System.Drawing.Size(82, 34);
             this.SlblModelo.TabIndex = 19;
@@ -586,7 +591,7 @@
             // txtModelo
             // 
             this.txtModelo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModelo.Location = new System.Drawing.Point(707, 3);
+            this.txtModelo.Location = new System.Drawing.Point(706, 3);
             this.txtModelo.Multiline = true;
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(212, 29);
@@ -758,11 +763,19 @@
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.95349F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.04651F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
-            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 274F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 275F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.95349F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.04651F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 272F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.95349F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.04651F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 272F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.95349F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.04651F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 273F));
             this.layoutCliente.Controls.Add(this.SlblNombre, 0, 0);
             this.layoutCliente.Controls.Add(this.txtNombre, 1, 0);
             this.layoutCliente.Controls.Add(this.SlblApellido, 0, 1);
@@ -778,6 +791,8 @@
             this.layoutCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.layoutCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.layoutCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.layoutCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            //this.layoutCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.layoutCliente.Size = new System.Drawing.Size(801, 97);
             this.layoutCliente.TabIndex = 0;
             // 
@@ -827,7 +842,7 @@
             // 
             this.SlblTelefono.AutoSize = true;
             this.SlblTelefono.ForeColor = System.Drawing.Color.Black;
-            this.SlblTelefono.Location = new System.Drawing.Point(431, 0);
+            this.SlblTelefono.Location = new System.Drawing.Point(430, 0);
             this.SlblTelefono.Name = "SlblTelefono";
             this.SlblTelefono.Size = new System.Drawing.Size(89, 48);
             this.SlblTelefono.TabIndex = 5;
@@ -837,7 +852,7 @@
             // 
             this.SlblCorreo.AutoSize = true;
             this.SlblCorreo.ForeColor = System.Drawing.Color.Black;
-            this.SlblCorreo.Location = new System.Drawing.Point(431, 48);
+            this.SlblCorreo.Location = new System.Drawing.Point(430, 48);
             this.SlblCorreo.Name = "SlblCorreo";
             this.SlblCorreo.Size = new System.Drawing.Size(84, 34);
             this.SlblCorreo.TabIndex = 6;
@@ -846,7 +861,7 @@
             // txtTelefono
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(529, 3);
+            this.txtTelefono.Location = new System.Drawing.Point(528, 3);
             this.txtTelefono.Multiline = true;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(266, 29);
@@ -856,7 +871,7 @@
             // txtCorreo
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.Location = new System.Drawing.Point(529, 51);
+            this.txtCorreo.Location = new System.Drawing.Point(528, 51);
             this.txtCorreo.Multiline = true;
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(266, 29);
@@ -868,7 +883,7 @@
             this.SbtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SbtnCancelar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SbtnCancelar.ForeColor = System.Drawing.Color.Turquoise;
-            this.SbtnCancelar.Location = new System.Drawing.Point(1076, 139);
+            this.SbtnCancelar.Location = new System.Drawing.Point(1048, 148);
             this.SbtnCancelar.Name = "SbtnCancelar";
             this.SbtnCancelar.Size = new System.Drawing.Size(120, 38);
             this.SbtnCancelar.TabIndex = 47;
@@ -894,7 +909,7 @@
             // lblTextoIdCliente
             // 
             this.lblTextoIdCliente.AutoSize = true;
-            this.lblTextoIdCliente.Location = new System.Drawing.Point(869, 37);
+            this.lblTextoIdCliente.Location = new System.Drawing.Point(961, 25);
             this.lblTextoIdCliente.Name = "lblTextoIdCliente";
             this.lblTextoIdCliente.Size = new System.Drawing.Size(124, 34);
             this.lblTextoIdCliente.TabIndex = 49;
@@ -905,7 +920,7 @@
             // 
             this.lblIdCliente.AutoSize = true;
             this.lblIdCliente.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblIdCliente.Location = new System.Drawing.Point(999, 37);
+            this.lblIdCliente.Location = new System.Drawing.Point(1091, 25);
             this.lblIdCliente.Name = "lblIdCliente";
             this.lblIdCliente.Size = new System.Drawing.Size(55, 34);
             this.lblIdCliente.TabIndex = 50;
@@ -918,7 +933,7 @@
             this.btnAgregarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregarCliente.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarCliente.ForeColor = System.Drawing.Color.Turquoise;
-            this.btnAgregarCliente.Location = new System.Drawing.Point(922, 139);
+            this.btnAgregarCliente.Location = new System.Drawing.Point(950, 153);
             this.btnAgregarCliente.Name = "btnAgregarCliente";
             this.btnAgregarCliente.Size = new System.Drawing.Size(120, 38);
             this.btnAgregarCliente.TabIndex = 10;
@@ -926,16 +941,6 @@
             this.btnAgregarCliente.UseVisualStyleBackColor = false;
             this.btnAgregarCliente.Visible = false;
             this.btnAgregarCliente.Click += new System.EventHandler(this.btnAgregarCliente_Click);
-            // 
-            // recibirLogoCh
-            // 
-            this.recibirLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
-            this.recibirLogoCh.Location = new System.Drawing.Point(6, 6);
-            this.recibirLogoCh.Name = "recibirLogoCh";
-            this.recibirLogoCh.Size = new System.Drawing.Size(89, 142);
-            this.recibirLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.recibirLogoCh.TabIndex = 51;
-            this.recibirLogoCh.TabStop = false;
             // 
             // btnPedirPieza
             // 
@@ -979,6 +984,16 @@
             this.btnLimpiarCampos.UseVisualStyleBackColor = false;
             this.btnLimpiarCampos.Click += new System.EventHandler(this.btnLimpiarCampos_Click_1);
             // 
+            // recibirLogoCh
+            // 
+            this.recibirLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.recibirLogoCh.Location = new System.Drawing.Point(6, 6);
+            this.recibirLogoCh.Name = "recibirLogoCh";
+            this.recibirLogoCh.Size = new System.Drawing.Size(89, 142);
+            this.recibirLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.recibirLogoCh.TabIndex = 51;
+            this.recibirLogoCh.TabStop = false;
+            // 
             // tabReparacion
             // 
             this.tabReparacion.BackColor = System.Drawing.Color.LightGray;
@@ -1003,7 +1018,7 @@
             this.reparacionLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
             this.reparacionLogoCh.Location = new System.Drawing.Point(6, 6);
             this.reparacionLogoCh.Name = "reparacionLogoCh";
-            this.reparacionLogoCh.Size = new System.Drawing.Size(63, 91);
+            this.reparacionLogoCh.Size = new System.Drawing.Size(118, 177);
             this.reparacionLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.reparacionLogoCh.TabIndex = 11;
             this.reparacionLogoCh.TabStop = false;
@@ -1110,11 +1125,12 @@
             // 
             // SgbConfiguraciones
             // 
+            this.SgbConfiguraciones.Controls.Add(this.SbtnAgregarNuevoServicioCU);
             this.SgbConfiguraciones.Controls.Add(this.button1);
             this.SgbConfiguraciones.Controls.Add(this.SbtnAgregarUsuario);
             this.SgbConfiguraciones.Location = new System.Drawing.Point(331, 432);
             this.SgbConfiguraciones.Name = "SgbConfiguraciones";
-            this.SgbConfiguraciones.Size = new System.Drawing.Size(580, 158);
+            this.SgbConfiguraciones.Size = new System.Drawing.Size(580, 198);
             this.SgbConfiguraciones.TabIndex = 6;
             this.SgbConfiguraciones.TabStop = false;
             this.SgbConfiguraciones.Text = "Configuraciones";
@@ -1124,7 +1140,7 @@
             this.button1.BackColor = System.Drawing.Color.DimGray;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.ForeColor = System.Drawing.Color.Turquoise;
-            this.button1.Location = new System.Drawing.Point(115, 103);
+            this.button1.Location = new System.Drawing.Point(115, 83);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(277, 37);
             this.button1.TabIndex = 3;
@@ -1252,7 +1268,7 @@
             this.pictureBox4.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
             this.pictureBox4.Location = new System.Drawing.Point(6, 3);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(62, 92);
+            this.pictureBox4.Size = new System.Drawing.Size(118, 177);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
@@ -1260,68 +1276,44 @@
             // ordenesTab
             // 
             this.ordenesTab.BackColor = System.Drawing.Color.LightGray;
-            this.ordenesTab.Controls.Add(this.ordenesLogoCh);
+            this.ordenesTab.Controls.Add(this.SlblPiezasOrdenadas);
             this.ordenesTab.Controls.Add(this.tableOrdenes);
+            this.ordenesTab.Controls.Add(this.ordenesLogoCh);
             this.ordenesTab.Location = new System.Drawing.Point(4, 43);
             this.ordenesTab.Name = "ordenesTab";
             this.ordenesTab.Padding = new System.Windows.Forms.Padding(3);
             this.ordenesTab.Size = new System.Drawing.Size(1328, 669);
             this.ordenesTab.TabIndex = 4;
-            this.ordenesTab.Text = "Ordenes";
+            this.ordenesTab.Text = "Piezas Ordenadas";
+            this.ordenesTab.UseVisualStyleBackColor = true;
+            // 
+            // SlblPiezasOrdenadas
+            // 
+            this.SlblPiezasOrdenadas.AutoSize = true;
+            this.SlblPiezasOrdenadas.Font = new System.Drawing.Font("Cordia New", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SlblPiezasOrdenadas.Location = new System.Drawing.Point(574, 45);
+            this.SlblPiezasOrdenadas.Name = "SlblPiezasOrdenadas";
+            this.SlblPiezasOrdenadas.Size = new System.Drawing.Size(291, 66);
+            this.SlblPiezasOrdenadas.TabIndex = 6;
+            this.SlblPiezasOrdenadas.Text = "Piezas Ordenadas";
+            // 
+            // tableOrdenes
+            // 
+            this.tableOrdenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tableOrdenes.Location = new System.Drawing.Point(150, 147);
+            this.tableOrdenes.Name = "tableOrdenes";
+            this.tableOrdenes.Size = new System.Drawing.Size(1142, 488);
+            this.tableOrdenes.TabIndex = 1;
             // 
             // ordenesLogoCh
             // 
             this.ordenesLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
             this.ordenesLogoCh.Location = new System.Drawing.Point(6, 6);
             this.ordenesLogoCh.Name = "ordenesLogoCh";
-            this.ordenesLogoCh.Size = new System.Drawing.Size(61, 98);
+            this.ordenesLogoCh.Size = new System.Drawing.Size(118, 177);
             this.ordenesLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ordenesLogoCh.TabIndex = 5;
             this.ordenesLogoCh.TabStop = false;
-            // 
-            // tableOrdenes
-            // 
-            this.tableOrdenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tableOrdenes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idClmOrdenes,
-            this.descClmOrdenes,
-            this.estadoClmOrden,
-            this.fIngrClmOrdenes,
-            this.fLlegaClmOrden});
-            this.tableOrdenes.Location = new System.Drawing.Point(266, 147);
-            this.tableOrdenes.Name = "tableOrdenes";
-            this.tableOrdenes.Size = new System.Drawing.Size(890, 356);
-            this.tableOrdenes.TabIndex = 1;
-            // 
-            // idClmOrdenes
-            // 
-            this.idClmOrdenes.HeaderText = "Id";
-            this.idClmOrdenes.Name = "idClmOrdenes";
-            this.idClmOrdenes.Width = 130;
-            // 
-            // descClmOrdenes
-            // 
-            this.descClmOrdenes.HeaderText = "Descripción";
-            this.descClmOrdenes.Name = "descClmOrdenes";
-            this.descClmOrdenes.Width = 230;
-            // 
-            // estadoClmOrden
-            // 
-            this.estadoClmOrden.HeaderText = "Estado";
-            this.estadoClmOrden.Name = "estadoClmOrden";
-            this.estadoClmOrden.Width = 230;
-            // 
-            // fIngrClmOrdenes
-            // 
-            this.fIngrClmOrdenes.HeaderText = "Fecha Enc.";
-            this.fIngrClmOrdenes.Name = "fIngrClmOrdenes";
-            this.fIngrClmOrdenes.Width = 130;
-            // 
-            // fLlegaClmOrden
-            // 
-            this.fLlegaClmOrden.HeaderText = "Fecha Ll.";
-            this.fLlegaClmOrden.Name = "fLlegaClmOrden";
-            this.fLlegaClmOrden.Width = 130;
             // 
             // TabClientes
             // 
@@ -1396,7 +1388,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgClientes.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgClientes.Location = new System.Drawing.Point(199, 150);
+            this.dgClientes.Location = new System.Drawing.Point(130, 150);
             this.dgClientes.Name = "dgClientes";
             this.dgClientes.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -1423,7 +1415,7 @@
             this.ClientesLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
             this.ClientesLogoCh.Location = new System.Drawing.Point(6, 6);
             this.ClientesLogoCh.Name = "ClientesLogoCh";
-            this.ClientesLogoCh.Size = new System.Drawing.Size(62, 94);
+            this.ClientesLogoCh.Size = new System.Drawing.Size(118, 177);
             this.ClientesLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ClientesLogoCh.TabIndex = 4;
             this.ClientesLogoCh.TabStop = false;
@@ -1502,18 +1494,6 @@
             this.idReparacion.HeaderText = "ID reparación";
             this.idReparacion.Name = "idReparacion";
             // 
-            // linkCerrarSesion
-            // 
-            this.linkCerrarSesion.AutoSize = true;
-            this.linkCerrarSesion.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkCerrarSesion.Location = new System.Drawing.Point(1230, 715);
-            this.linkCerrarSesion.Name = "linkCerrarSesion";
-            this.linkCerrarSesion.Size = new System.Drawing.Size(101, 26);
-            this.linkCerrarSesion.TabIndex = 1;
-            this.linkCerrarSesion.TabStop = true;
-            this.linkCerrarSesion.Text = "Cerrar Sesión";
-            this.linkCerrarSesion.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkCerrarSesion_LinkClicked);
-            // 
             // reparacionTableAdapter
             // 
             this.reparacionTableAdapter.ClearBeforeFill = true;
@@ -1522,12 +1502,36 @@
             // 
             this.clienteTableAdapter.ClearBeforeFill = true;
             // 
+            // SbtnAgregarNuevoServicioCU
+            // 
+            this.SbtnAgregarNuevoServicioCU.BackColor = System.Drawing.Color.DimGray;
+            this.SbtnAgregarNuevoServicioCU.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SbtnAgregarNuevoServicioCU.ForeColor = System.Drawing.Color.Turquoise;
+            this.SbtnAgregarNuevoServicioCU.Location = new System.Drawing.Point(115, 126);
+            this.SbtnAgregarNuevoServicioCU.Name = "SbtnAgregarNuevoServicioCU";
+            this.SbtnAgregarNuevoServicioCU.Size = new System.Drawing.Size(277, 37);
+            this.SbtnAgregarNuevoServicioCU.TabIndex = 5;
+            this.SbtnAgregarNuevoServicioCU.Text = "Agregar Nuevo Servicio";
+            this.SbtnAgregarNuevoServicioCU.UseVisualStyleBackColor = false;
+            this.SbtnAgregarNuevoServicioCU.Click += new System.EventHandler(this.SbtnAgregarNuevoServicioCU_Click_1);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(1257, 718);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(45, 31);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 21;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
             // ViewTabs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1350, 749);
-            this.Controls.Add(this.linkCerrarSesion);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.tabPuntoVenta);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1569,8 +1573,9 @@
             this.SgbRoles.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ordenesTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ordenesLogoCh)).EndInit();
+            this.ordenesTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableOrdenes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordenesLogoCh)).EndInit();
             this.TabClientes.ResumeLayout(false);
             this.layBuscarCliente.ResumeLayout(false);
             this.layBuscarCliente.PerformLayout();
@@ -1582,8 +1587,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reparacionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -1616,7 +1621,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.DataGridViewTextBoxColumn idReparacion;
-        private System.Windows.Forms.LinkLabel linkCerrarSesion;
         private System.Windows.Forms.TextBox txtBuscarCliente;
         private System.Windows.Forms.Label SlblBuscarCliente;
         private System.Windows.Forms.Button btnAgregarCliente;
@@ -1684,15 +1688,6 @@
         private System.Windows.Forms.Label SlblNombreRol;
         private System.Windows.Forms.Button SbtnGuardarRol;
         private System.Windows.Forms.Button SbtnAgregarUsuario;
-        //
-       // private System.Windows.Forms.PictureBox pictureBox3;
-        //
-       // private System.Windows.Forms.PictureBox logoOrden;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idClmOrdenes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descClmOrdenes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estadoClmOrden;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fIngrClmOrdenes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fLlegaClmOrden;
         private System.Windows.Forms.ComboBox ccbTipoServicio1;
         private System.Windows.Forms.Label tiposervicioC1;
         private System.Windows.Forms.RadioButton CEspera;
@@ -1741,6 +1736,9 @@
         private System.Windows.Forms.FlowLayoutPanel layCliente;
         private System.Windows.Forms.TableLayoutPanel layoutCliente;
         private System.Windows.Forms.FlowLayoutPanel layBuscarCliente;
+        private System.Windows.Forms.Label SlblPiezasOrdenadas;
+        private System.Windows.Forms.Button SbtnAgregarNuevoServicioCU;
+        private System.Windows.Forms.PictureBox pictureBox3;
         //  private System.Windows.Forms.TextBox textBox1;
         //private System.Windows.Forms.Label UnaLabel;
         //  private System.Windows.Forms.Label label5;
