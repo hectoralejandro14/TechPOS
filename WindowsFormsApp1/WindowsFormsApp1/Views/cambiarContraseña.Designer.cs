@@ -38,22 +38,28 @@
             // 
             // btnAceptarA
             // 
+            this.btnAceptarA.BackColor = System.Drawing.Color.DimGray;
+            this.btnAceptarA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAceptarA.ForeColor = System.Drawing.Color.Turquoise;
             this.btnAceptarA.Location = new System.Drawing.Point(25, 161);
             this.btnAceptarA.Name = "btnAceptarA";
             this.btnAceptarA.Size = new System.Drawing.Size(75, 23);
             this.btnAceptarA.TabIndex = 0;
             this.btnAceptarA.Text = "Aceptar";
-            this.btnAceptarA.UseVisualStyleBackColor = true;
+            this.btnAceptarA.UseVisualStyleBackColor = false;
             this.btnAceptarA.Click += new System.EventHandler(this.btnAceptarA_Click);
             // 
             // btnSalirA
             // 
+            this.btnSalirA.BackColor = System.Drawing.Color.DimGray;
+            this.btnSalirA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSalirA.ForeColor = System.Drawing.Color.Turquoise;
             this.btnSalirA.Location = new System.Drawing.Point(172, 161);
             this.btnSalirA.Name = "btnSalirA";
             this.btnSalirA.Size = new System.Drawing.Size(75, 23);
             this.btnSalirA.TabIndex = 1;
             this.btnSalirA.Text = "Salir";
-            this.btnSalirA.UseVisualStyleBackColor = true;
+            this.btnSalirA.UseVisualStyleBackColor = false;
             this.btnSalirA.Click += new System.EventHandler(this.btnSalirA_Click);
             // 
             // lblUserNameA
@@ -92,6 +98,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(304, 189);
             this.Controls.Add(this.txtNewPasswordA);
             this.Controls.Add(this.txtUserNameA);

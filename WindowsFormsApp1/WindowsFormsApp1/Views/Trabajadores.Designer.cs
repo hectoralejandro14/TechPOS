@@ -33,11 +33,11 @@
             this.labelFecha = new System.Windows.Forms.Label();
             this.todo = new System.Windows.Forms.RadioButton();
             this.dataTrabajadores = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboTrabajador = new System.Windows.Forms.ComboBox();
             this.dateTiempo = new System.Windows.Forms.DateTimePicker();
             this.btncerrar = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTrabajadores)).BeginInit();
             this.SuspendLayout();
@@ -96,6 +96,18 @@
             this.dataTrabajadores.Size = new System.Drawing.Size(466, 196);
             this.dataTrabajadores.TabIndex = 5;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Fecha";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 210;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Trabajo";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 210;
+            // 
             // comboTrabajador
             // 
             this.comboTrabajador.FormattingEnabled = true;
@@ -114,8 +126,10 @@
             // 
             // btncerrar
             // 
-            this.btncerrar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btncerrar.BackColor = System.Drawing.Color.DimGray;
+            this.btncerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btncerrar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.btncerrar.ForeColor = System.Drawing.Color.Turquoise;
             this.btncerrar.Location = new System.Drawing.Point(489, 424);
             this.btncerrar.Name = "btncerrar";
             this.btncerrar.Size = new System.Drawing.Size(90, 39);
@@ -123,22 +137,11 @@
             this.btncerrar.Text = "Cerrar";
             this.btncerrar.UseVisualStyleBackColor = false;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Fecha";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 210;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Trabajo";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 210;
-            // 
             // Trabajadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(713, 475);
             this.Controls.Add(this.btncerrar);
             this.Controls.Add(this.dateTiempo);

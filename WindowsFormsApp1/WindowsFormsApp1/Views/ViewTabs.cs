@@ -77,7 +77,6 @@ namespace WindowsFormsApp1.Views
             CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id  order by Reparacion.Fecha asc");
             connection.CerrarConexion();
             colores();
-            
         }
        
         private void linkCerrarSesion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -100,6 +99,8 @@ namespace WindowsFormsApp1.Views
             dgClientes.DataSource = connection.buscar("SELECT * FROM Cliente");
             connection.CerrarConexion();
             colores();
+
+            tabPuntoVenta.DrawMode=TabDrawMode.OwnerDrawFixed;
         }
         private void ViewTabs_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -837,6 +838,31 @@ namespace WindowsFormsApp1.Views
             CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id");
             connection.CerrarConexion();
             colores();
+        }
+
+        private void tabPuntoVenta_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            TabPage tp = tabPuntoVenta.TabPages[e.Index];
+
+            StringFormat sf = new StringFormat();
+            sf.Alignment = StringAlignment.Center;  //optional
+
+            // This is the rectangle to draw "over" the tabpage title
+            RectangleF headerRect = new RectangleF(e.Bounds.X, e.Bounds.Y + 2, e.Bounds.Width, e.Bounds.Height - 2);
+
+            // This is the default colour to use for the non-selected tabs
+            SolidBrush sb = new SolidBrush(Color.LightGray);
+
+            // This changes the colour if we're trying to draw the selected tabpage
+            if (tabPuntoVenta.SelectedIndex == e.Index)
+                sb.Color = Color.LightSkyBlue;
+
+            // Colour the header of the current tabpage based on what we did above
+            g.FillRectangle(sb, e.Bounds);
+
+            //Remember to redraw the text - I'm always using black for title text
+            g.DrawString(tp.Text, tabPuntoVenta.Font, new SolidBrush(Color.Black), headerRect, sf);
         }
     }
 }

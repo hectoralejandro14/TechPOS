@@ -59,7 +59,7 @@
             this.logoImg.Image = global::WindowsFormsApp1.Properties.Resources.logoUp1;
             this.logoImg.Location = new System.Drawing.Point(12, 12);
             this.logoImg.Name = "logoImg";
-            this.logoImg.Size = new System.Drawing.Size(118, 177);
+            this.logoImg.Size = new System.Drawing.Size(64, 104);
             this.logoImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logoImg.TabIndex = 10;
             this.logoImg.TabStop = false;
@@ -138,8 +138,10 @@
             // 
             // btnModificarCliente
             // 
-            this.btnModificarCliente.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnModificarCliente.BackColor = System.Drawing.Color.DimGray;
+            this.btnModificarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnModificarCliente.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.btnModificarCliente.ForeColor = System.Drawing.Color.Turquoise;
             this.btnModificarCliente.Location = new System.Drawing.Point(192, 334);
             this.btnModificarCliente.Name = "btnModificarCliente";
             this.btnModificarCliente.Size = new System.Drawing.Size(118, 39);
@@ -150,8 +152,10 @@
             // 
             // btnAceptarCliente
             // 
-            this.btnAceptarCliente.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAceptarCliente.BackColor = System.Drawing.Color.DimGray;
+            this.btnAceptarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAceptarCliente.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.btnAceptarCliente.ForeColor = System.Drawing.Color.Turquoise;
             this.btnAceptarCliente.Location = new System.Drawing.Point(12, 334);
             this.btnAceptarCliente.Name = "btnAceptarCliente";
             this.btnAceptarCliente.Size = new System.Drawing.Size(118, 39);
@@ -162,8 +166,10 @@
             // 
             // btnCancelarMod
             // 
-            this.btnCancelarMod.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCancelarMod.BackColor = System.Drawing.Color.DimGray;
+            this.btnCancelarMod.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelarMod.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.btnCancelarMod.ForeColor = System.Drawing.Color.Turquoise;
             this.btnCancelarMod.Location = new System.Drawing.Point(370, 334);
             this.btnCancelarMod.Name = "btnCancelarMod";
             this.btnCancelarMod.Size = new System.Drawing.Size(118, 39);
@@ -177,6 +183,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(522, 393);
             this.Controls.Add(this.btnCancelarMod);
             this.Controls.Add(this.btnAceptarCliente);

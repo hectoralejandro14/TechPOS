@@ -92,8 +92,10 @@
             // 
             // cancelarBtnCobrar
             // 
-            this.cancelarBtnCobrar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cancelarBtnCobrar.BackColor = System.Drawing.Color.DimGray;
+            this.cancelarBtnCobrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cancelarBtnCobrar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.cancelarBtnCobrar.ForeColor = System.Drawing.Color.Turquoise;
             this.cancelarBtnCobrar.Location = new System.Drawing.Point(128, 262);
             this.cancelarBtnCobrar.Name = "cancelarBtnCobrar";
             this.cancelarBtnCobrar.Size = new System.Drawing.Size(95, 35);
@@ -103,8 +105,10 @@
             // 
             // cobrarBtn
             // 
-            this.cobrarBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cobrarBtn.BackColor = System.Drawing.Color.DimGray;
+            this.cobrarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cobrarBtn.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.cobrarBtn.ForeColor = System.Drawing.Color.Turquoise;
             this.cobrarBtn.Location = new System.Drawing.Point(254, 262);
             this.cobrarBtn.Name = "cobrarBtn";
             this.cobrarBtn.Size = new System.Drawing.Size(78, 35);
@@ -141,6 +145,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(405, 324);
             this.Controls.Add(this.efectivoTbx);
             this.Controls.Add(this.tipoPagoCbx);
