@@ -214,6 +214,7 @@
             this.CtxtConfirmarContrasenaU.Name = "CtxtConfirmarContrasenaU";
             this.CtxtConfirmarContrasenaU.Size = new System.Drawing.Size(351, 20);
             this.CtxtConfirmarContrasenaU.TabIndex = 19;
+            //this.CtxtConfirmarContrasenaU.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CtxtConfirmarContrasenaU_KeyPress);
             // 
             // ClblNotaNU
             // 
@@ -253,6 +254,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NuevoUsuario";
             this.Text = "Nuevo Usuario";
+            //this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NuevoUsuario_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.CpictureNuevoUsuario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

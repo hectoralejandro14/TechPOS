@@ -628,7 +628,11 @@ namespace WindowsFormsApp1.Views
         {
             Connection connection = new Connection();
             connection.AbrirConexion();
-            int idCliente = connection.generarId("SELECT MAX(Id) FROM Cliente");
+            int idCliente = connection.generarIdCliente("SELECT MAX(Id) FROM Cliente");
+            if (idCliente == null)
+            {
+                idCliente = 1;
+            }
             lblIdCliente.Text = Convert.ToString(idCliente);
             connection.CerrarConexion();
         }
