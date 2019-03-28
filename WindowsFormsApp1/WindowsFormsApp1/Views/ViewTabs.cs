@@ -861,8 +861,7 @@ namespace WindowsFormsApp1.Views
             //Remember to redraw the text - I'm always using black for title text
             g.DrawString(tp.Text, tabPuntoVenta.Font, new SolidBrush(Color.Black), headerRect, sf);
         }
-
-        private void SbtnAgregarNuevoServicioCU_Click(object sender, EventArgs e)
+        private void SbtnAgregarNuevoServicioCU_Click_1(object sender, EventArgs e)
         {
             NuevoServicio nuevo = new NuevoServicio();
             nuevo.Show();
