@@ -7,9 +7,9 @@ namespace WindowsFormsApp1.DBConnectio
 {
     class Connection
     {
-        
-        //private string cadena = "Data Source=.\\SQLEXPRESS;Initial Catalog=TechPOSdb; Integrated Security=True";
-        private string cadena = "Data Source=DESKTOP-4U4TDTF;Initial Catalog=TechPOSdb; Integrated Security=True";
+
+        private string cadena = "Data Source=.\\SQLEXPRESS;Initial Catalog=TechPOSdb; Integrated Security=True";
+        //private string cadena = "Data Source=DESKTOP-4U4TDTF;Initial Catalog=TechPOSdb; Integrated Security=True";
         private SqlConnection conexion = new SqlConnection();
         SqlCommand SqlCommand;
         DataTable table = new DataTable();
@@ -89,13 +89,13 @@ namespace WindowsFormsApp1.DBConnectio
                 MessageBox.Show("Ocurrio un error con la conexión a la Base de Datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public void ActualizarDatos(string query,string rol)
+        public void ActualizarDatos(string query, string rol)
         {
             try
             {
                 SqlCommand comando = new SqlCommand(query, conexion);
                 comando.ExecuteNonQuery();
-                MessageBox.Show("EL ROL DE ["+rol+"] FUE AGREDADO CON EXITO AL USUARIO", "ROL ACTUALIZADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("EL ROL DE [" + rol + "] FUE AGREDADO CON EXITO AL USUARIO", "ROL ACTUALIZADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch
             {
@@ -108,7 +108,7 @@ namespace WindowsFormsApp1.DBConnectio
         }
         public void modificar(string SQL)
         {
-            SqlCommand = new SqlCommand (SQL, conexion);
+            SqlCommand = new SqlCommand(SQL, conexion);
             SqlCommand.ExecuteNonQuery();
 
         }
@@ -294,7 +294,7 @@ namespace WindowsFormsApp1.DBConnectio
 
             return table;
         }
-        
+
 
         public int generarId(string sql)
         {
@@ -311,6 +311,30 @@ namespace WindowsFormsApp1.DBConnectio
                 id = 1;
             }
             return id;
+        }
+
+        public string verificarExistenciaUser (string name, string lastname){
+            bool aux = false;
+            try
+            {
+                SqlCommand cmd = new SqlCommand("SELECT Id, Nombre, Apellido FROM Cliente", conexion);
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                for(int i = 0; i < dt.Rows.Count;i++)
+                {
+                    if ((dt.Rows[i][1].ToString().Equals(name)) && (dt.Rows[i][2].ToString().Equals(lastname)))
+                    {
+                        return dt.Rows[i][0].ToString();
+                    }
+                } 
+                
+            }
+            catch /*(IndexOutOfRangeException e3)*/
+            {
+                MessageBox.Show("ERROR SQL", "Error de Conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return "";         
         }
     }
 }

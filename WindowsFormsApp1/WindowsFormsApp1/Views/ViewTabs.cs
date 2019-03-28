@@ -313,7 +313,16 @@ namespace WindowsFormsApp1.Views
 
             if ((!txtNombre.Text.Equals("")) && (!txtApellido.Text.Equals("")) && (!txtTelefono.Text.Equals("")) )
             {
-                if (txtCorreo.Text=="")
+                string idVerif = conexion.verificarExistenciaUser(txtNombre.Text, txtApellido.Text);
+                if (idVerif!="")
+                {
+                    txtNombre.Text = "";
+                    txtApellido.Text = "";
+                    txtCorreo.Text = "";
+                    txtTelefono.Text = "";
+                    MessageBox.Show("Existe un cliente con el nombre " + txtNombre.Text + " " + txtApellido.Text+" con el id: "+idVerif);
+                }
+                else if (txtCorreo.Text=="")
                 {
                     int idR = Convert.ToInt32(lblIdCliente.Text);
                     //Agregar cliente
