@@ -40,11 +40,10 @@
             this.totalLblRepa = new System.Windows.Forms.Label();
             this.abonoLblRepa = new System.Windows.Forms.Label();
             this.dRapidoTxtBox = new System.Windows.Forms.TextBox();
-            this.dEspecificoTxtBox = new System.Windows.Forms.TextBox();
+            this.trabajoRealizadotxtC = new System.Windows.Forms.TextBox();
             this.idTxtBoxRepa = new System.Windows.Forms.TextBox();
             this.MarcaTxtBox = new System.Windows.Forms.TextBox();
             this.fallaTxtBoxRepa = new System.Windows.Forms.TextBox();
-            this.EstadoTxtBox = new System.Windows.Forms.TextBox();
             this.ModeloTxtBoxRepa = new System.Windows.Forms.TextBox();
             this.ResponsableTxtBox = new System.Windows.Forms.TextBox();
             this.TotalTxtBox = new System.Windows.Forms.TextBox();
@@ -52,6 +51,8 @@
             this.ActualizarBtn = new System.Windows.Forms.Button();
             this.AbonarBtn = new System.Windows.Forms.Button();
             this.AceptarBtn = new System.Windows.Forms.Button();
+            this.piezaOrderbtnC = new System.Windows.Forms.Button();
+            this.estadoCBoxC = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // idLblRepa
@@ -121,9 +122,9 @@
             this.dEspLblRepa.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
             this.dEspLblRepa.Location = new System.Drawing.Point(17, 310);
             this.dEspLblRepa.Name = "dEspLblRepa";
-            this.dEspLblRepa.Size = new System.Drawing.Size(198, 34);
+            this.dEspLblRepa.Size = new System.Drawing.Size(153, 34);
             this.dEspLblRepa.TabIndex = 6;
-            this.dEspLblRepa.Text = "Diagnóstico específico";
+            this.dEspLblRepa.Text = "Trabajo realizado";
             // 
             // responsLblRepa
             // 
@@ -166,17 +167,18 @@
             this.dRapidoTxtBox.Size = new System.Drawing.Size(376, 82);
             this.dRapidoTxtBox.TabIndex = 10;
             // 
-            // dEspecificoTxtBox
+            // trabajoRealizadotxtC
             // 
-            this.dEspecificoTxtBox.Location = new System.Drawing.Point(22, 337);
-            this.dEspecificoTxtBox.Multiline = true;
-            this.dEspecificoTxtBox.Name = "dEspecificoTxtBox";
-            this.dEspecificoTxtBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dEspecificoTxtBox.Size = new System.Drawing.Size(376, 77);
-            this.dEspecificoTxtBox.TabIndex = 11;
+            this.trabajoRealizadotxtC.Location = new System.Drawing.Point(22, 337);
+            this.trabajoRealizadotxtC.Multiline = true;
+            this.trabajoRealizadotxtC.Name = "trabajoRealizadotxtC";
+            this.trabajoRealizadotxtC.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.trabajoRealizadotxtC.Size = new System.Drawing.Size(376, 77);
+            this.trabajoRealizadotxtC.TabIndex = 11;
             // 
             // idTxtBoxRepa
             // 
+            this.idTxtBoxRepa.Enabled = false;
             this.idTxtBoxRepa.Location = new System.Drawing.Point(72, 27);
             this.idTxtBoxRepa.Name = "idTxtBoxRepa";
             this.idTxtBoxRepa.Size = new System.Drawing.Size(120, 20);
@@ -184,6 +186,7 @@
             // 
             // MarcaTxtBox
             // 
+            this.MarcaTxtBox.Enabled = false;
             this.MarcaTxtBox.Location = new System.Drawing.Point(72, 62);
             this.MarcaTxtBox.Name = "MarcaTxtBox";
             this.MarcaTxtBox.Size = new System.Drawing.Size(120, 20);
@@ -198,15 +201,9 @@
             this.fallaTxtBoxRepa.Size = new System.Drawing.Size(375, 76);
             this.fallaTxtBoxRepa.TabIndex = 14;
             // 
-            // EstadoTxtBox
-            // 
-            this.EstadoTxtBox.Location = new System.Drawing.Point(278, 27);
-            this.EstadoTxtBox.Name = "EstadoTxtBox";
-            this.EstadoTxtBox.Size = new System.Drawing.Size(120, 20);
-            this.EstadoTxtBox.TabIndex = 15;
-            // 
             // ModeloTxtBoxRepa
             // 
+            this.ModeloTxtBoxRepa.Enabled = false;
             this.ModeloTxtBoxRepa.Location = new System.Drawing.Point(278, 60);
             this.ModeloTxtBoxRepa.Name = "ModeloTxtBoxRepa";
             this.ModeloTxtBoxRepa.Size = new System.Drawing.Size(120, 20);
@@ -214,6 +211,7 @@
             // 
             // ResponsableTxtBox
             // 
+            this.ResponsableTxtBox.Enabled = false;
             this.ResponsableTxtBox.Location = new System.Drawing.Point(140, 435);
             this.ResponsableTxtBox.Name = "ResponsableTxtBox";
             this.ResponsableTxtBox.Size = new System.Drawing.Size(258, 20);
@@ -221,6 +219,7 @@
             // 
             // TotalTxtBox
             // 
+            this.TotalTxtBox.Enabled = false;
             this.TotalTxtBox.Location = new System.Drawing.Point(81, 469);
             this.TotalTxtBox.Name = "TotalTxtBox";
             this.TotalTxtBox.Size = new System.Drawing.Size(100, 20);
@@ -228,6 +227,7 @@
             // 
             // AbonoTxtBox
             // 
+            this.AbonoTxtBox.Enabled = false;
             this.AbonoTxtBox.Location = new System.Drawing.Point(298, 470);
             this.AbonoTxtBox.Name = "AbonoTxtBox";
             this.AbonoTxtBox.Size = new System.Drawing.Size(100, 20);
@@ -238,18 +238,19 @@
             this.ActualizarBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(198)))), ((int)(((byte)(206)))));
             this.ActualizarBtn.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
             this.ActualizarBtn.ForeColor = System.Drawing.Color.Black;
-            this.ActualizarBtn.Location = new System.Drawing.Point(43, 513);
+            this.ActualizarBtn.Location = new System.Drawing.Point(19, 513);
             this.ActualizarBtn.Name = "ActualizarBtn";
             this.ActualizarBtn.Size = new System.Drawing.Size(104, 34);
             this.ActualizarBtn.TabIndex = 20;
             this.ActualizarBtn.Text = "Actualizar";
             this.ActualizarBtn.UseVisualStyleBackColor = false;
+            this.ActualizarBtn.Click += new System.EventHandler(this.ActualizarBtn_Click);
             // 
             // AbonarBtn
             // 
             this.AbonarBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(198)))), ((int)(((byte)(206)))));
             this.AbonarBtn.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.AbonarBtn.Location = new System.Drawing.Point(167, 513);
+            this.AbonarBtn.Location = new System.Drawing.Point(220, 513);
             this.AbonarBtn.Name = "AbonarBtn";
             this.AbonarBtn.Size = new System.Drawing.Size(82, 34);
             this.AbonarBtn.TabIndex = 21;
@@ -261,19 +262,41 @@
             // 
             this.AceptarBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(198)))), ((int)(((byte)(206)))));
             this.AceptarBtn.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.AceptarBtn.Location = new System.Drawing.Point(288, 513);
+            this.AceptarBtn.Location = new System.Drawing.Point(308, 513);
             this.AceptarBtn.Name = "AceptarBtn";
             this.AceptarBtn.Size = new System.Drawing.Size(90, 34);
             this.AceptarBtn.TabIndex = 22;
-            this.AceptarBtn.Text = "Aceptar";
+            this.AceptarBtn.Text = "Cerrar";
             this.AceptarBtn.UseVisualStyleBackColor = false;
             this.AceptarBtn.Click += new System.EventHandler(this.AceptarBtn_Click);
+            // 
+            // piezaOrderbtnC
+            // 
+            this.piezaOrderbtnC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(198)))), ((int)(((byte)(206)))));
+            this.piezaOrderbtnC.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.piezaOrderbtnC.Location = new System.Drawing.Point(132, 513);
+            this.piezaOrderbtnC.Name = "piezaOrderbtnC";
+            this.piezaOrderbtnC.Size = new System.Drawing.Size(82, 34);
+            this.piezaOrderbtnC.TabIndex = 23;
+            this.piezaOrderbtnC.Text = "Pieza";
+            this.piezaOrderbtnC.UseVisualStyleBackColor = false;
+            this.piezaOrderbtnC.Click += new System.EventHandler(this.piezaOrderbtnC_Click);
+            // 
+            // estadoCBoxC
+            // 
+            this.estadoCBoxC.FormattingEnabled = true;
+            this.estadoCBoxC.Location = new System.Drawing.Point(277, 27);
+            this.estadoCBoxC.Name = "estadoCBoxC";
+            this.estadoCBoxC.Size = new System.Drawing.Size(121, 21);
+            this.estadoCBoxC.TabIndex = 24;
             // 
             // Reparacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(411, 568);
+            this.Controls.Add(this.estadoCBoxC);
+            this.Controls.Add(this.piezaOrderbtnC);
             this.Controls.Add(this.AceptarBtn);
             this.Controls.Add(this.AbonarBtn);
             this.Controls.Add(this.ActualizarBtn);
@@ -281,11 +304,10 @@
             this.Controls.Add(this.TotalTxtBox);
             this.Controls.Add(this.ResponsableTxtBox);
             this.Controls.Add(this.ModeloTxtBoxRepa);
-            this.Controls.Add(this.EstadoTxtBox);
             this.Controls.Add(this.fallaTxtBoxRepa);
             this.Controls.Add(this.MarcaTxtBox);
             this.Controls.Add(this.idTxtBoxRepa);
-            this.Controls.Add(this.dEspecificoTxtBox);
+            this.Controls.Add(this.trabajoRealizadotxtC);
             this.Controls.Add(this.dRapidoTxtBox);
             this.Controls.Add(this.abonoLblRepa);
             this.Controls.Add(this.totalLblRepa);
@@ -319,11 +341,10 @@
         private System.Windows.Forms.Label totalLblRepa;
         private System.Windows.Forms.Label abonoLblRepa;
         private System.Windows.Forms.TextBox dRapidoTxtBox;
-        private System.Windows.Forms.TextBox dEspecificoTxtBox;
+        private System.Windows.Forms.TextBox trabajoRealizadotxtC;
         private System.Windows.Forms.TextBox idTxtBoxRepa;
         private System.Windows.Forms.TextBox MarcaTxtBox;
         private System.Windows.Forms.TextBox fallaTxtBoxRepa;
-        private System.Windows.Forms.TextBox EstadoTxtBox;
         private System.Windows.Forms.TextBox ModeloTxtBoxRepa;
         private System.Windows.Forms.TextBox ResponsableTxtBox;
         private System.Windows.Forms.TextBox TotalTxtBox;
@@ -331,5 +352,7 @@
         private System.Windows.Forms.Button ActualizarBtn;
         private System.Windows.Forms.Button AbonarBtn;
         private System.Windows.Forms.Button AceptarBtn;
+        private System.Windows.Forms.Button piezaOrderbtnC;
+        private System.Windows.Forms.ComboBox estadoCBoxC;
     }
 }

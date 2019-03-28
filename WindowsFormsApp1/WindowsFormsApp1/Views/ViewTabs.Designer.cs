@@ -40,9 +40,7 @@
             this.totalLblVentas = new System.Windows.Forms.Label();
             this.ivaLblVenta = new System.Windows.Forms.Label();
             this.subTotalLblVenta = new System.Windows.Forms.Label();
-            this.lupaImg = new System.Windows.Forms.PictureBox();
             this.buscarTbxVentas = new System.Windows.Forms.TextBox();
-            this.logoImg = new System.Windows.Forms.PictureBox();
             this.tableVender = new System.Windows.Forms.DataGridView();
             this.codClmVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantClVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,9 +55,7 @@
             this.SbtnCancelar = new System.Windows.Forms.Button();
             this.ccbTipoServicio1 = new System.Windows.Forms.ComboBox();
             this.tiposervicioC1 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblAvisoNoCliente = new System.Windows.Forms.Label();
-            this.pictureBuscar = new System.Windows.Forms.PictureBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
@@ -102,16 +98,21 @@
             this.JProceso = new System.Windows.Forms.RadioButton();
             this.JradioTodos = new System.Windows.Forms.RadioButton();
             this.JlblBuscar = new System.Windows.Forms.Label();
-            this.JPicture = new System.Windows.Forms.PictureBox();
-            this.JpictureBox = new System.Windows.Forms.PictureBox();
             this.tabConfiguracionesDeUsuario = new System.Windows.Forms.TabPage();
+            this.SgbConfiguraciones = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SbtnAgregarUsuario = new System.Windows.Forms.Button();
+            this.SgbAsignarRolATrabajador = new System.Windows.Forms.GroupBox();
+            this.SbtnAsiganrRolAUsuario = new System.Windows.Forms.Button();
+            this.SlblSeleccioneRol = new System.Windows.Forms.Label();
+            this.ScbxSeleccionarRol = new System.Windows.Forms.ComboBox();
+            this.ScbxUsuariosRol = new System.Windows.Forms.ComboBox();
+            this.SlblSeleccioneNombreDeUsuario = new System.Windows.Forms.Label();
             this.SgbRoles = new System.Windows.Forms.GroupBox();
             this.StxtRol = new System.Windows.Forms.TextBox();
             this.SlblNombreRol = new System.Windows.Forms.Label();
             this.SbtnGuardarRol = new System.Windows.Forms.Button();
             this.ordenesTab = new System.Windows.Forms.TabPage();
-            this.logoOrden = new System.Windows.Forms.PictureBox();
             this.tableOrdenes = new System.Windows.Forms.DataGridView();
             this.idClmOrdenes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descClmOrdenes = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -134,39 +135,38 @@
             this.idReparacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.linkCerrarSesion = new System.Windows.Forms.LinkLabel();
             this.reparacionTableAdapter = new WindowsFormsApp1.TechPOSdbDataSetTableAdapters.ReparacionTableAdapter();
+            this.lupaImg = new System.Windows.Forms.PictureBox();
+            this.logoImg = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBuscar = new System.Windows.Forms.PictureBox();
+            this.JPicture = new System.Windows.Forms.PictureBox();
+            this.JpictureBox = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.SgbAsignarRolATrabajador = new System.Windows.Forms.GroupBox();
-            this.SlblSeleccioneNombreDeUsuario = new System.Windows.Forms.Label();
-            this.SgbConfiguraciones = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.ScbxUsuariosRol = new System.Windows.Forms.ComboBox();
-            this.ScbxSeleccionarRol = new System.Windows.Forms.ComboBox();
-            this.SlblSeleccioneRol = new System.Windows.Forms.Label();
-            this.SbtnAsiganrRolAUsuario = new System.Windows.Forms.Button();
+            this.logoOrden = new System.Windows.Forms.PictureBox();
             this.tabPuntoVenta.SuspendLayout();
             this.tabVenta.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lupaImg)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logoImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableVender)).BeginInit();
             this.tabRecibirEquipo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).BeginInit();
             this.tabReparacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CDGReparacion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.JPicture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.JpictureBox)).BeginInit();
             this.tabConfiguracionesDeUsuario.SuspendLayout();
+            this.SgbConfiguraciones.SuspendLayout();
+            this.SgbAsignarRolATrabajador.SuspendLayout();
             this.SgbRoles.SuspendLayout();
             this.ordenesTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logoOrden)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableOrdenes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reparacionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lupaImg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoImg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.JPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.JpictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.SgbAsignarRolATrabajador.SuspendLayout();
-            this.SgbConfiguraciones.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoOrden)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPuntoVenta
@@ -277,17 +277,6 @@
             this.subTotalLblVenta.TabIndex = 12;
             this.subTotalLblVenta.Text = "SubTotal:";
             // 
-            // lupaImg
-            // 
-            this.lupaImg.Image = global::WindowsFormsApp1.Properties.Resources.lupa;
-            this.lupaImg.Location = new System.Drawing.Point(904, 59);
-            this.lupaImg.Name = "lupaImg";
-            this.lupaImg.Size = new System.Drawing.Size(31, 32);
-            this.lupaImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.lupaImg.TabIndex = 11;
-            this.lupaImg.TabStop = false;
-            this.lupaImg.Click += new System.EventHandler(this.lupaImg_Click);
-            // 
             // buscarTbxVentas
             // 
             this.buscarTbxVentas.Location = new System.Drawing.Point(474, 59);
@@ -296,16 +285,6 @@
             this.buscarTbxVentas.Size = new System.Drawing.Size(405, 32);
             this.buscarTbxVentas.TabIndex = 10;
             this.buscarTbxVentas.TextChanged += new System.EventHandler(this.buscarTbxVentas_TextChanged);
-            // 
-            // logoImg
-            // 
-            this.logoImg.Image = global::WindowsFormsApp1.Properties.Resources.logoUp1;
-            this.logoImg.Location = new System.Drawing.Point(16, 6);
-            this.logoImg.Name = "logoImg";
-            this.logoImg.Size = new System.Drawing.Size(118, 177);
-            this.logoImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.logoImg.TabIndex = 9;
-            this.logoImg.TabStop = false;
             // 
             // tableVender
             // 
@@ -388,9 +367,7 @@
             this.tabRecibirEquipo.Controls.Add(this.SbtnCancelar);
             this.tabRecibirEquipo.Controls.Add(this.ccbTipoServicio1);
             this.tabRecibirEquipo.Controls.Add(this.tiposervicioC1);
-            this.tabRecibirEquipo.Controls.Add(this.pictureBox3);
             this.tabRecibirEquipo.Controls.Add(this.lblAvisoNoCliente);
-            this.tabRecibirEquipo.Controls.Add(this.pictureBuscar);
             this.tabRecibirEquipo.Controls.Add(this.txtApellido);
             this.tabRecibirEquipo.Controls.Add(this.txtNombre);
             this.tabRecibirEquipo.Controls.Add(this.txtCorreo);
@@ -425,6 +402,8 @@
             this.tabRecibirEquipo.Controls.Add(this.label7);
             this.tabRecibirEquipo.Controls.Add(this.txtBuscarCliente);
             this.tabRecibirEquipo.Controls.Add(this.SlblBuscarCliente);
+            this.tabRecibirEquipo.Controls.Add(this.pictureBox3);
+            this.tabRecibirEquipo.Controls.Add(this.pictureBuscar);
             this.tabRecibirEquipo.Location = new System.Drawing.Point(4, 43);
             this.tabRecibirEquipo.Name = "tabRecibirEquipo";
             this.tabRecibirEquipo.Padding = new System.Windows.Forms.Padding(3);
@@ -460,7 +439,10 @@
             // 
             // ccbTipoServicio1
             // 
+            this.ccbTipoServicio1.DropDownHeight = 300;
+            this.ccbTipoServicio1.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ccbTipoServicio1.FormattingEnabled = true;
+            this.ccbTipoServicio1.IntegralHeight = false;
             this.ccbTipoServicio1.Location = new System.Drawing.Point(204, 299);
             this.ccbTipoServicio1.Name = "ccbTipoServicio1";
             this.ccbTipoServicio1.Size = new System.Drawing.Size(386, 42);
@@ -475,16 +457,6 @@
             this.tiposervicioC1.TabIndex = 45;
             this.tiposervicioC1.Text = "Tipo de servicio:";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
-            this.pictureBox3.Location = new System.Drawing.Point(16, 6);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(118, 167);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 44;
-            this.pictureBox3.TabStop = false;
-            // 
             // lblAvisoNoCliente
             // 
             this.lblAvisoNoCliente.AutoSize = true;
@@ -495,17 +467,6 @@
             this.lblAvisoNoCliente.TabIndex = 43;
             this.lblAvisoNoCliente.Text = "No se econtró cliente.";
             this.lblAvisoNoCliente.Visible = false;
-            // 
-            // pictureBuscar
-            // 
-            this.pictureBuscar.Image = global::WindowsFormsApp1.Properties.Resources.lupa;
-            this.pictureBuscar.Location = new System.Drawing.Point(874, 18);
-            this.pictureBuscar.Name = "pictureBuscar";
-            this.pictureBuscar.Size = new System.Drawing.Size(30, 30);
-            this.pictureBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBuscar.TabIndex = 42;
-            this.pictureBuscar.TabStop = false;
-            this.pictureBuscar.Click += new System.EventHandler(this.pictureBuscar_Click);
             // 
             // txtApellido
             // 
@@ -595,8 +556,10 @@
             // 
             // comboResponsable
             // 
+            this.comboResponsable.DropDownHeight = 207;
             this.comboResponsable.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboResponsable.FormattingEnabled = true;
+            this.comboResponsable.IntegralHeight = false;
             this.comboResponsable.Location = new System.Drawing.Point(269, 621);
             this.comboResponsable.Name = "comboResponsable";
             this.comboResponsable.Size = new System.Drawing.Size(207, 34);
@@ -902,18 +865,18 @@
             // CEspera
             // 
             this.CEspera.AutoSize = true;
-            this.CEspera.Location = new System.Drawing.Point(597, 182);
+            this.CEspera.Location = new System.Drawing.Point(579, 182);
             this.CEspera.Name = "CEspera";
-            this.CEspera.Size = new System.Drawing.Size(115, 38);
+            this.CEspera.Size = new System.Drawing.Size(89, 38);
             this.CEspera.TabIndex = 8;
-            this.CEspera.Text = "En Espera";
+            this.CEspera.Text = "Espera";
             this.CEspera.UseVisualStyleBackColor = true;
             this.CEspera.CheckedChanged += new System.EventHandler(this.CEspera_CheckedChanged);
             // 
             // JTerminados
             // 
             this.JTerminados.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.JTerminados.Location = new System.Drawing.Point(718, 183);
+            this.JTerminados.Location = new System.Drawing.Point(674, 183);
             this.JTerminados.Name = "JTerminados";
             this.JTerminados.Size = new System.Drawing.Size(124, 37);
             this.JTerminados.TabIndex = 6;
@@ -928,7 +891,7 @@
             this.JProceso.Name = "JProceso";
             this.JProceso.Size = new System.Drawing.Size(127, 43);
             this.JProceso.TabIndex = 5;
-            this.JProceso.Text = "En Proceso";
+            this.JProceso.Text = "Proceso";
             this.JProceso.UseVisualStyleBackColor = true;
             this.JProceso.CheckedChanged += new System.EventHandler(this.JProceso_CheckedChanged);
             // 
@@ -954,40 +917,39 @@
             this.JlblBuscar.TabIndex = 1;
             this.JlblBuscar.Text = "Buscar";
             // 
-            // JPicture
-            // 
-            this.JPicture.Image = global::WindowsFormsApp1.Properties.Resources.lupa;
-            this.JPicture.Location = new System.Drawing.Point(753, 78);
-            this.JPicture.Name = "JPicture";
-            this.JPicture.Size = new System.Drawing.Size(38, 34);
-            this.JPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.JPicture.TabIndex = 3;
-            this.JPicture.TabStop = false;
-            this.JPicture.Click += new System.EventHandler(this.JPicture_Click);
-            // 
-            // JpictureBox
-            // 
-            this.JpictureBox.Image = global::WindowsFormsApp1.Properties.Resources.logoUp1;
-            this.JpictureBox.Location = new System.Drawing.Point(6, 3);
-            this.JpictureBox.Name = "JpictureBox";
-            this.JpictureBox.Size = new System.Drawing.Size(118, 177);
-            this.JpictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.JpictureBox.TabIndex = 0;
-            this.JpictureBox.TabStop = false;
-            this.JpictureBox.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
             // tabConfiguracionesDeUsuario
             // 
             this.tabConfiguracionesDeUsuario.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tabConfiguracionesDeUsuario.Controls.Add(this.SgbConfiguraciones);
             this.tabConfiguracionesDeUsuario.Controls.Add(this.SgbAsignarRolATrabajador);
-            this.tabConfiguracionesDeUsuario.Controls.Add(this.pictureBox4);
             this.tabConfiguracionesDeUsuario.Controls.Add(this.SgbRoles);
+            this.tabConfiguracionesDeUsuario.Controls.Add(this.pictureBox4);
             this.tabConfiguracionesDeUsuario.Location = new System.Drawing.Point(4, 43);
             this.tabConfiguracionesDeUsuario.Name = "tabConfiguracionesDeUsuario";
             this.tabConfiguracionesDeUsuario.Size = new System.Drawing.Size(1328, 669);
             this.tabConfiguracionesDeUsuario.TabIndex = 3;
             this.tabConfiguracionesDeUsuario.Text = "Configuraciones de Usuario";
+            // 
+            // SgbConfiguraciones
+            // 
+            this.SgbConfiguraciones.Controls.Add(this.button1);
+            this.SgbConfiguraciones.Controls.Add(this.SbtnAgregarUsuario);
+            this.SgbConfiguraciones.Location = new System.Drawing.Point(1015, 3);
+            this.SgbConfiguraciones.Name = "SgbConfiguraciones";
+            this.SgbConfiguraciones.Size = new System.Drawing.Size(300, 131);
+            this.SgbConfiguraciones.TabIndex = 6;
+            this.SgbConfiguraciones.TabStop = false;
+            this.SgbConfiguraciones.Text = "Configuraciones";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.Location = new System.Drawing.Point(15, 77);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(277, 37);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Reporte de Ventas";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // SbtnAgregarUsuario
             // 
@@ -999,6 +961,65 @@
             this.SbtnAgregarUsuario.Text = "Agregar Nuevo Trabajador";
             this.SbtnAgregarUsuario.UseVisualStyleBackColor = false;
             this.SbtnAgregarUsuario.Click += new System.EventHandler(this.SbtnAgregarUsuario_Click);
+            // 
+            // SgbAsignarRolATrabajador
+            // 
+            this.SgbAsignarRolATrabajador.Controls.Add(this.SbtnAsiganrRolAUsuario);
+            this.SgbAsignarRolATrabajador.Controls.Add(this.SlblSeleccioneRol);
+            this.SgbAsignarRolATrabajador.Controls.Add(this.ScbxSeleccionarRol);
+            this.SgbAsignarRolATrabajador.Controls.Add(this.ScbxUsuariosRol);
+            this.SgbAsignarRolATrabajador.Controls.Add(this.SlblSeleccioneNombreDeUsuario);
+            this.SgbAsignarRolATrabajador.Location = new System.Drawing.Point(6, 186);
+            this.SgbAsignarRolATrabajador.Name = "SgbAsignarRolATrabajador";
+            this.SgbAsignarRolATrabajador.Size = new System.Drawing.Size(503, 220);
+            this.SgbAsignarRolATrabajador.TabIndex = 4;
+            this.SgbAsignarRolATrabajador.TabStop = false;
+            this.SgbAsignarRolATrabajador.Text = "Asignar Rol a Trabajador";
+            // 
+            // SbtnAsiganrRolAUsuario
+            // 
+            this.SbtnAsiganrRolAUsuario.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.SbtnAsiganrRolAUsuario.Location = new System.Drawing.Point(313, 160);
+            this.SbtnAsiganrRolAUsuario.Name = "SbtnAsiganrRolAUsuario";
+            this.SbtnAsiganrRolAUsuario.Size = new System.Drawing.Size(146, 41);
+            this.SbtnAsiganrRolAUsuario.TabIndex = 3;
+            this.SbtnAsiganrRolAUsuario.Text = "Asignar Rol";
+            this.SbtnAsiganrRolAUsuario.UseVisualStyleBackColor = false;
+            this.SbtnAsiganrRolAUsuario.Click += new System.EventHandler(this.SbtnAsiganrRolAUsuario_Click);
+            // 
+            // SlblSeleccioneRol
+            // 
+            this.SlblSeleccioneRol.AutoSize = true;
+            this.SlblSeleccioneRol.Location = new System.Drawing.Point(6, 102);
+            this.SlblSeleccioneRol.Name = "SlblSeleccioneRol";
+            this.SlblSeleccioneRol.Size = new System.Drawing.Size(134, 34);
+            this.SlblSeleccioneRol.TabIndex = 3;
+            this.SlblSeleccioneRol.Text = "Seleccione Rol";
+            // 
+            // ScbxSeleccionarRol
+            // 
+            this.ScbxSeleccionarRol.FormattingEnabled = true;
+            this.ScbxSeleccionarRol.Location = new System.Drawing.Point(176, 99);
+            this.ScbxSeleccionarRol.Name = "ScbxSeleccionarRol";
+            this.ScbxSeleccionarRol.Size = new System.Drawing.Size(283, 42);
+            this.ScbxSeleccionarRol.TabIndex = 2;
+            // 
+            // ScbxUsuariosRol
+            // 
+            this.ScbxUsuariosRol.FormattingEnabled = true;
+            this.ScbxUsuariosRol.Location = new System.Drawing.Point(176, 34);
+            this.ScbxUsuariosRol.Name = "ScbxUsuariosRol";
+            this.ScbxUsuariosRol.Size = new System.Drawing.Size(283, 42);
+            this.ScbxUsuariosRol.TabIndex = 1;
+            // 
+            // SlblSeleccioneNombreDeUsuario
+            // 
+            this.SlblSeleccioneNombreDeUsuario.AutoSize = true;
+            this.SlblSeleccioneNombreDeUsuario.Location = new System.Drawing.Point(6, 37);
+            this.SlblSeleccioneNombreDeUsuario.Name = "SlblSeleccioneNombreDeUsuario";
+            this.SlblSeleccioneNombreDeUsuario.Size = new System.Drawing.Size(170, 34);
+            this.SlblSeleccioneNombreDeUsuario.TabIndex = 0;
+            this.SlblSeleccioneNombreDeUsuario.Text = "Seleccione Usuario";
             // 
             // SgbRoles
             // 
@@ -1051,16 +1072,6 @@
             this.ordenesTab.TabIndex = 4;
             this.ordenesTab.Text = "Ordenes";
             this.ordenesTab.UseVisualStyleBackColor = true;
-            // 
-            // logoOrden
-            // 
-            this.logoOrden.Image = global::WindowsFormsApp1.Properties.Resources.logoUp1;
-            this.logoOrden.Location = new System.Drawing.Point(16, 6);
-            this.logoOrden.Name = "logoOrden";
-            this.logoOrden.Size = new System.Drawing.Size(118, 177);
-            this.logoOrden.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.logoOrden.TabIndex = 2;
-            this.logoOrden.TabStop = false;
             // 
             // tableOrdenes
             // 
@@ -1191,6 +1202,70 @@
             // 
             this.reparacionTableAdapter.ClearBeforeFill = true;
             // 
+            // lupaImg
+            // 
+            this.lupaImg.Image = global::WindowsFormsApp1.Properties.Resources.lupa;
+            this.lupaImg.Location = new System.Drawing.Point(904, 59);
+            this.lupaImg.Name = "lupaImg";
+            this.lupaImg.Size = new System.Drawing.Size(31, 32);
+            this.lupaImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.lupaImg.TabIndex = 11;
+            this.lupaImg.TabStop = false;
+            this.lupaImg.Click += new System.EventHandler(this.lupaImg_Click);
+            // 
+            // logoImg
+            // 
+            this.logoImg.Image = global::WindowsFormsApp1.Properties.Resources.logoUp1;
+            this.logoImg.Location = new System.Drawing.Point(16, 6);
+            this.logoImg.Name = "logoImg";
+            this.logoImg.Size = new System.Drawing.Size(118, 177);
+            this.logoImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logoImg.TabIndex = 9;
+            this.logoImg.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.pictureBox3.Location = new System.Drawing.Point(16, 6);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(118, 167);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 44;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBuscar
+            // 
+            this.pictureBuscar.Image = global::WindowsFormsApp1.Properties.Resources.lupa;
+            this.pictureBuscar.Location = new System.Drawing.Point(874, 18);
+            this.pictureBuscar.Name = "pictureBuscar";
+            this.pictureBuscar.Size = new System.Drawing.Size(30, 30);
+            this.pictureBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBuscar.TabIndex = 42;
+            this.pictureBuscar.TabStop = false;
+            this.pictureBuscar.Click += new System.EventHandler(this.pictureBuscar_Click);
+            // 
+            // JPicture
+            // 
+            this.JPicture.Image = global::WindowsFormsApp1.Properties.Resources.lupa;
+            this.JPicture.Location = new System.Drawing.Point(753, 78);
+            this.JPicture.Name = "JPicture";
+            this.JPicture.Size = new System.Drawing.Size(38, 34);
+            this.JPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.JPicture.TabIndex = 3;
+            this.JPicture.TabStop = false;
+            this.JPicture.Click += new System.EventHandler(this.JPicture_Click);
+            // 
+            // JpictureBox
+            // 
+            this.JpictureBox.Image = global::WindowsFormsApp1.Properties.Resources.logoUp1;
+            this.JpictureBox.Location = new System.Drawing.Point(6, 3);
+            this.JpictureBox.Name = "JpictureBox";
+            this.JpictureBox.Size = new System.Drawing.Size(118, 177);
+            this.JpictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.JpictureBox.TabIndex = 0;
+            this.JpictureBox.TabStop = false;
+            this.JpictureBox.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
@@ -1201,85 +1276,15 @@
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
             // 
-            // SgbAsignarRolATrabajador
+            // logoOrden
             // 
-            this.SgbAsignarRolATrabajador.Controls.Add(this.SbtnAsiganrRolAUsuario);
-            this.SgbAsignarRolATrabajador.Controls.Add(this.SlblSeleccioneRol);
-            this.SgbAsignarRolATrabajador.Controls.Add(this.ScbxSeleccionarRol);
-            this.SgbAsignarRolATrabajador.Controls.Add(this.ScbxUsuariosRol);
-            this.SgbAsignarRolATrabajador.Controls.Add(this.SlblSeleccioneNombreDeUsuario);
-            this.SgbAsignarRolATrabajador.Location = new System.Drawing.Point(6, 186);
-            this.SgbAsignarRolATrabajador.Name = "SgbAsignarRolATrabajador";
-            this.SgbAsignarRolATrabajador.Size = new System.Drawing.Size(503, 220);
-            this.SgbAsignarRolATrabajador.TabIndex = 4;
-            this.SgbAsignarRolATrabajador.TabStop = false;
-            this.SgbAsignarRolATrabajador.Text = "Asignar Rol a Trabajador";
-            // 
-            // SlblSeleccioneNombreDeUsuario
-            // 
-            this.SlblSeleccioneNombreDeUsuario.AutoSize = true;
-            this.SlblSeleccioneNombreDeUsuario.Location = new System.Drawing.Point(6, 37);
-            this.SlblSeleccioneNombreDeUsuario.Name = "SlblSeleccioneNombreDeUsuario";
-            this.SlblSeleccioneNombreDeUsuario.Size = new System.Drawing.Size(170, 34);
-            this.SlblSeleccioneNombreDeUsuario.TabIndex = 0;
-            this.SlblSeleccioneNombreDeUsuario.Text = "Seleccione Usuario";
-            // 
-            // SgbConfiguraciones
-            // 
-            this.SgbConfiguraciones.Controls.Add(this.button1);
-            this.SgbConfiguraciones.Controls.Add(this.SbtnAgregarUsuario);
-            this.SgbConfiguraciones.Location = new System.Drawing.Point(1015, 3);
-            this.SgbConfiguraciones.Name = "SgbConfiguraciones";
-            this.SgbConfiguraciones.Size = new System.Drawing.Size(300, 131);
-            this.SgbConfiguraciones.TabIndex = 6;
-            this.SgbConfiguraciones.TabStop = false;
-            this.SgbConfiguraciones.Text = "Configuraciones";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Location = new System.Drawing.Point(15, 77);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(277, 37);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Reporte de Ventas";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // ScbxUsuariosRol
-            // 
-            this.ScbxUsuariosRol.FormattingEnabled = true;
-            this.ScbxUsuariosRol.Location = new System.Drawing.Point(176, 34);
-            this.ScbxUsuariosRol.Name = "ScbxUsuariosRol";
-            this.ScbxUsuariosRol.Size = new System.Drawing.Size(283, 42);
-            this.ScbxUsuariosRol.TabIndex = 1;
-            // 
-            // ScbxSeleccionarRol
-            // 
-            this.ScbxSeleccionarRol.FormattingEnabled = true;
-            this.ScbxSeleccionarRol.Location = new System.Drawing.Point(176, 99);
-            this.ScbxSeleccionarRol.Name = "ScbxSeleccionarRol";
-            this.ScbxSeleccionarRol.Size = new System.Drawing.Size(283, 42);
-            this.ScbxSeleccionarRol.TabIndex = 2;
-            // 
-            // SlblSeleccioneRol
-            // 
-            this.SlblSeleccioneRol.AutoSize = true;
-            this.SlblSeleccioneRol.Location = new System.Drawing.Point(6, 102);
-            this.SlblSeleccioneRol.Name = "SlblSeleccioneRol";
-            this.SlblSeleccioneRol.Size = new System.Drawing.Size(134, 34);
-            this.SlblSeleccioneRol.TabIndex = 3;
-            this.SlblSeleccioneRol.Text = "Seleccione Rol";
-            // 
-            // SbtnAsiganrRolAUsuario
-            // 
-            this.SbtnAsiganrRolAUsuario.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.SbtnAsiganrRolAUsuario.Location = new System.Drawing.Point(313, 160);
-            this.SbtnAsiganrRolAUsuario.Name = "SbtnAsiganrRolAUsuario";
-            this.SbtnAsiganrRolAUsuario.Size = new System.Drawing.Size(146, 41);
-            this.SbtnAsiganrRolAUsuario.TabIndex = 3;
-            this.SbtnAsiganrRolAUsuario.Text = "Asignar Rol";
-            this.SbtnAsiganrRolAUsuario.UseVisualStyleBackColor = false;
-            this.SbtnAsiganrRolAUsuario.Click += new System.EventHandler(this.SbtnAsiganrRolAUsuario_Click);
+            this.logoOrden.Image = global::WindowsFormsApp1.Properties.Resources.logoUp1;
+            this.logoOrden.Location = new System.Drawing.Point(16, 6);
+            this.logoOrden.Name = "logoOrden";
+            this.logoOrden.Size = new System.Drawing.Size(118, 177);
+            this.logoOrden.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logoOrden.TabIndex = 2;
+            this.logoOrden.TabStop = false;
             // 
             // ViewTabs
             // 
@@ -1299,32 +1304,32 @@
             this.tabPuntoVenta.ResumeLayout(false);
             this.tabVenta.ResumeLayout(false);
             this.tabVenta.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lupaImg)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logoImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableVender)).EndInit();
             this.tabRecibirEquipo.ResumeLayout(false);
             this.tabRecibirEquipo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).EndInit();
             this.tabReparacion.ResumeLayout(false);
             this.tabReparacion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CDGReparacion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.JPicture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.JpictureBox)).EndInit();
             this.tabConfiguracionesDeUsuario.ResumeLayout(false);
+            this.SgbConfiguraciones.ResumeLayout(false);
+            this.SgbAsignarRolATrabajador.ResumeLayout(false);
+            this.SgbAsignarRolATrabajador.PerformLayout();
             this.SgbRoles.ResumeLayout(false);
             this.SgbRoles.PerformLayout();
             this.ordenesTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.logoOrden)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableOrdenes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reparacionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lupaImg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoImg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.JPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.JpictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.SgbAsignarRolATrabajador.ResumeLayout(false);
-            this.SgbAsignarRolATrabajador.PerformLayout();
-            this.SgbConfiguraciones.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.logoOrden)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

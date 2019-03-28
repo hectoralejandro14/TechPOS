@@ -14,6 +14,7 @@ namespace WindowsFormsApp1
 {
     public partial class Reparacion : Form
     {
+        DBConnectio.Connection conn = new DBConnectio.Connection();
         public String ID;
         public Reparacion(String id)
         {
@@ -23,18 +24,26 @@ namespace WindowsFormsApp1
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            DataTable dt = new DataTable();
             //MessageBox.Show("SELECT Reparacion.Id as ID, Reparacion.Marca as Marca, Reparacion.Modelo as Modelo, Reparacion.Falla as Falla, Reparacion.Diagnostico as Diagnostico, Servicio.Nombre as Servicio, Reparacion.Anticipo as Anticipo, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Cliente.Nombre as Cliente, Usuario.Nombre as Usuario, Reparacion.CostoTotal as Total, Pieza.Descripcion as Pieza FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio = Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente = Cliente.Id INNER JOIN Estado on Reparacion.IdEstado = Estado.Id INNER JOIN Usuario on Reparacion.IdUsuario = Usuario.Id INNER JOIN Pieza on Reparacion.IdPieza = Pieza.Id WHERE Reparacion.Id =" + id);
-            DBConnectio.Connection conn = new DBConnectio.Connection();
             conn.AbrirConexion();
-            SqlDataReader dr = conn.consulta("SELECT Reparacion.Id as ID, Reparacion.Marca as Marca, Reparacion.Modelo as Modelo, Reparacion.Falla as Falla, Reparacion.Diagnostico as Diagnostico, Servicio.Nombre as Servicio, Reparacion.Anticipo as Anticipo, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Cliente.Nombre as Cliente, Usuario.Nombre as Usuario, Reparacion.CostoTotal as Total, Pieza.Descripcion as Pieza FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio = Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente = Cliente.Id INNER JOIN Estado on Reparacion.IdEstado = Estado.Id INNER JOIN Usuario on Reparacion.IdUsuario = Usuario.Id INNER JOIN Pieza on Reparacion.IdPieza = Pieza.Id WHERE Reparacion.Id = '" + id + "'");
+            SqlDataAdapter da = conn.consultaMasDatos("select Id, Nombre from Estado");
+            da.Fill(dt);
+            conn.CerrarConexion();
+            estadoCBoxC.DisplayMember = "Nombre";
+            estadoCBoxC.ValueMember = "Id";
+            estadoCBoxC.DataSource = dt;
+            conn.AbrirConexion();
+            SqlDataReader dr = conn.consulta("SELECT Reparacion.trabajoRealizado as Trabajo, Reparacion.Id as ID, Reparacion.Marca as Marca, Reparacion.Modelo as Modelo, Reparacion.Falla as Falla, Reparacion.Diagnostico as Diagnostico, Servicio.Nombre as Servicio, Reparacion.Anticipo as Anticipo, Estado.Id as Estado, Reparacion.Fecha as Fecha, Cliente.Nombre as Cliente, Usuario.Nombre as Usuario, Reparacion.CostoTotal as Total, Pieza.Descripcion as Pieza FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio = Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente = Cliente.Id INNER JOIN Estado on Reparacion.IdEstado = Estado.Id INNER JOIN Usuario on Reparacion.IdUsuario = Usuario.Id INNER JOIN Pieza on Reparacion.IdPieza = Pieza.Id WHERE Reparacion.Id = '" + id + "'");
             if (dr.Read())
             {
                 idTxtBoxRepa.Text = Convert.ToString(dr["ID"]);
                 MarcaTxtBox.Text = Convert.ToString(dr["Marca"]);
                 ModeloTxtBoxRepa.Text = Convert.ToString(dr["Modelo"]);
-                EstadoTxtBox.Text = Convert.ToString(dr["Estado"]);
+                estadoCBoxC.SelectedIndex = Convert.ToInt32(dr["Estado"])-1;
                 fallaTxtBoxRepa.Text = Convert.ToString(dr["Falla"]);
                 dRapidoTxtBox.Text = Convert.ToString(dr["Diagnostico"]);
+                trabajoRealizadotxtC.Text= Convert.ToString(dr["Trabajo"]);
                 ResponsableTxtBox.Text = Convert.ToString(dr["Usuario"]);
                 TotalTxtBox.Text = Convert.ToString(dr["Total"]);
                 AbonoTxtBox.Text = Convert.ToString(dr["Anticipo"]);
@@ -60,6 +69,20 @@ namespace WindowsFormsApp1
         private void AceptarBtn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ActualizarBtn_Click(object sender, EventArgs e)
+        {
+            conn.AbrirConexion();
+            conn.modificar("Update Reparacion set Falla='" + fallaTxtBoxRepa.Text + "', IdEstado='"+estadoCBoxC.SelectedValue+"', Diagnostico='"+dRapidoTxtBox.Text+"', trabajoRealizado='"+trabajoRealizadotxtC.Text+"' where Id="+idTxtBoxRepa.Text);
+            conn.CerrarConexion();
+            MessageBox.Show("Realizado con exito");
+        }
+
+        private void piezaOrderbtnC_Click(object sender, EventArgs e)
+        {
+            Ecargar_Pieza p = new Ecargar_Pieza(idTxtBoxRepa.Text, ModeloTxtBoxRepa.Text, MarcaTxtBox.Text);
+            p.Show();
         }
     }
 }
