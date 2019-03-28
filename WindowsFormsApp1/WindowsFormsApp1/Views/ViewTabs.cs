@@ -833,5 +833,12 @@ namespace WindowsFormsApp1.Views
             //Remember to redraw the text - I'm always using black for title text
             g.DrawString(tp.Text, tabPuntoVenta.Font, new SolidBrush(Color.Black), headerRect, sf);
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ViewLogin view = new ViewLogin();
+            view.Show();
+        }
     }
 }
