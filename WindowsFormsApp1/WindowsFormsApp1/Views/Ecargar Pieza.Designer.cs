@@ -49,7 +49,7 @@
             // 
             this.equipoLblEncargar.AutoSize = true;
             this.equipoLblEncargar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.equipoLblEncargar.Location = new System.Drawing.Point(134, 28);
+            this.equipoLblEncargar.Location = new System.Drawing.Point(144, 28);
             this.equipoLblEncargar.Name = "equipoLblEncargar";
             this.equipoLblEncargar.Size = new System.Drawing.Size(70, 34);
             this.equipoLblEncargar.TabIndex = 0;
@@ -59,7 +59,7 @@
             // 
             this.marcaLblEncargar.AutoSize = true;
             this.marcaLblEncargar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.marcaLblEncargar.Location = new System.Drawing.Point(140, 167);
+            this.marcaLblEncargar.Location = new System.Drawing.Point(150, 167);
             this.marcaLblEncargar.Name = "marcaLblEncargar";
             this.marcaLblEncargar.Size = new System.Drawing.Size(64, 34);
             this.marcaLblEncargar.TabIndex = 1;
@@ -69,7 +69,7 @@
             // 
             this.piezaLblEncargar.AutoSize = true;
             this.piezaLblEncargar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.piezaLblEncargar.Location = new System.Drawing.Point(12, 226);
+            this.piezaLblEncargar.Location = new System.Drawing.Point(12, 182);
             this.piezaLblEncargar.Name = "piezaLblEncargar";
             this.piezaLblEncargar.Size = new System.Drawing.Size(80, 34);
             this.piezaLblEncargar.TabIndex = 2;
@@ -79,7 +79,7 @@
             // 
             this.modeloLblEncargar.AutoSize = true;
             this.modeloLblEncargar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modeloLblEncargar.Location = new System.Drawing.Point(132, 101);
+            this.modeloLblEncargar.Location = new System.Drawing.Point(142, 101);
             this.modeloLblEncargar.Name = "modeloLblEncargar";
             this.modeloLblEncargar.Size = new System.Drawing.Size(72, 34);
             this.modeloLblEncargar.TabIndex = 3;
@@ -87,7 +87,7 @@
             // 
             // equipoTbxEncagar
             // 
-            this.equipoTbxEncagar.Location = new System.Drawing.Point(218, 36);
+            this.equipoTbxEncagar.Location = new System.Drawing.Point(228, 36);
             this.equipoTbxEncagar.Multiline = true;
             this.equipoTbxEncagar.Name = "equipoTbxEncagar";
             this.equipoTbxEncagar.Size = new System.Drawing.Size(328, 29);
@@ -95,7 +95,7 @@
             // 
             // marcaTbxEncargar
             // 
-            this.marcaTbxEncargar.Location = new System.Drawing.Point(218, 168);
+            this.marcaTbxEncargar.Location = new System.Drawing.Point(228, 168);
             this.marcaTbxEncargar.Multiline = true;
             this.marcaTbxEncargar.Name = "marcaTbxEncargar";
             this.marcaTbxEncargar.Size = new System.Drawing.Size(328, 33);
@@ -103,7 +103,7 @@
             // 
             // modeloTbxEncargar
             // 
-            this.modeloTbxEncargar.Location = new System.Drawing.Point(218, 101);
+            this.modeloTbxEncargar.Location = new System.Drawing.Point(228, 101);
             this.modeloTbxEncargar.Multiline = true;
             this.modeloTbxEncargar.Name = "modeloTbxEncargar";
             this.modeloTbxEncargar.Size = new System.Drawing.Size(328, 28);
@@ -111,7 +111,7 @@
             // 
             // piezasTbxEncargar
             // 
-            this.piezasTbxEncargar.Location = new System.Drawing.Point(12, 263);
+            this.piezasTbxEncargar.Location = new System.Drawing.Point(12, 219);
             this.piezasTbxEncargar.Multiline = true;
             this.piezasTbxEncargar.Name = "piezasTbxEncargar";
             this.piezasTbxEncargar.Size = new System.Drawing.Size(545, 173);
@@ -133,7 +133,7 @@
             this.btnCancelarPieza.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelarPieza.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelarPieza.ForeColor = System.Drawing.Color.Turquoise;
-            this.btnCancelarPieza.Location = new System.Drawing.Point(388, 442);
+            this.btnCancelarPieza.Location = new System.Drawing.Point(474, 442);
             this.btnCancelarPieza.Name = "btnCancelarPieza";
             this.btnCancelarPieza.Size = new System.Drawing.Size(83, 37);
             this.btnCancelarPieza.TabIndex = 9;
@@ -147,7 +147,7 @@
             this.BtnAceptarPieza.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnAceptarPieza.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAceptarPieza.ForeColor = System.Drawing.Color.Turquoise;
-            this.BtnAceptarPieza.Location = new System.Drawing.Point(477, 442);
+            this.BtnAceptarPieza.Location = new System.Drawing.Point(370, 442);
             this.BtnAceptarPieza.Name = "BtnAceptarPieza";
             this.BtnAceptarPieza.Size = new System.Drawing.Size(80, 37);
             this.BtnAceptarPieza.TabIndex = 10;
@@ -157,7 +157,7 @@
             // 
             // SdtCalendarFechaLlegada
             // 
-            this.SdtCalendarFechaLlegada.Location = new System.Drawing.Point(349, 444);
+            this.SdtCalendarFechaLlegada.Location = new System.Drawing.Point(350, 403);
             this.SdtCalendarFechaLlegada.Name = "SdtCalendarFechaLlegada";
             this.SdtCalendarFechaLlegada.Size = new System.Drawing.Size(207, 20);
             this.SdtCalendarFechaLlegada.TabIndex = 11;
@@ -166,7 +166,7 @@
             // 
             this.SlblFechaAproximadaLLegaPieza.AutoSize = true;
             this.SlblFechaAproximadaLLegaPieza.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SlblFechaAproximadaLLegaPieza.Location = new System.Drawing.Point(12, 439);
+            this.SlblFechaAproximadaLLegaPieza.Location = new System.Drawing.Point(12, 398);
             this.SlblFechaAproximadaLLegaPieza.Name = "SlblFechaAproximadaLLegaPieza";
             this.SlblFechaAproximadaLLegaPieza.Size = new System.Drawing.Size(331, 34);
             this.SlblFechaAproximadaLLegaPieza.TabIndex = 12;
@@ -176,11 +176,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(569, 526);
-            this.Controls.Add(this.SlblFechaAproximadaLLegaPieza);
-            this.Controls.Add(this.SdtCalendarFechaLlegada);
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(572, 495);
+            this.Controls.Add(this.SlblFechaAproximadaLLegaPieza);
+            this.Controls.Add(this.SdtCalendarFechaLlegada);
             this.Controls.Add(this.BtnAceptarPieza);
             this.Controls.Add(this.btnCancelarPieza);
             this.Controls.Add(this.pictureBox1);

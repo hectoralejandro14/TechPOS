@@ -78,7 +78,7 @@ namespace WindowsFormsApp1.Views
             connection.CerrarConexion();
             //----------------------------------------------
             conexion.AbrirConexion();
-            tableOrdenes.DataSource = conexion.buscarReparacion("SELECT * FROM Pieza");
+            tableOrdenes.DataSource = conexion.buscarReparacion("SELECT * FROM Pieza order by FechaPedida asc");
             conexion.CerrarConexion();
             //----------------------------------------------
             colores();
@@ -977,6 +977,43 @@ namespace WindowsFormsApp1.Views
                     }
                 }
             }
+        }
+
+        private void tableOrdenes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow fila = tableOrdenes.Rows[e.RowIndex];
+                if (Convert.ToString(fila.Cells["Id"].Value).Equals("") || Convert.ToString(fila.Cells["Descripcion"].Value).Equals("")
+                    || Convert.ToString(fila.Cells["Estado"].Value).Equals("") || Convert.ToString(fila.Cells["FechaPedida"].Value).Equals("")
+                    || Convert.ToString(fila.Cells["FechaLlegaAprox"].Value).Equals(""))
+                {
+                    Console.WriteLine("Datos vacios");
+                }
+                else
+                {
+                    int id = Convert.ToInt32(fila.Cells["Id"].Value);
+                    DatosPieza datosPieza = new DatosPieza(id);
+                    datosPieza.Show();
+                }
+            }
+            catch (Exception)
+            {
+            }
+        }
+
+        private void ordenesTab_Enter(object sender, EventArgs e)
+        {
+            conexion.AbrirConexion();
+            tableOrdenes.DataSource = conexion.buscarReparacion("SELECT * FROM Pieza order by FechaPedida asc");
+            conexion.CerrarConexion();
+        }
+
+        private void SlblPiezasOrdenadas_MouseMove(object sender, MouseEventArgs e)
+        {
+            conexion.AbrirConexion();
+            tableOrdenes.DataSource = conexion.buscarReparacion("SELECT * FROM Pieza order by FechaPedida asc");
+            conexion.CerrarConexion();
         }
     }
 }
