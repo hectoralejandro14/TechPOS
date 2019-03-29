@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Drawing;
-using System.Windows.Forms;
-using WindowsFormsApp1.Views;
 using System.Security.Cryptography;
 using System.Text;
+using System.Windows.Forms;
 using WindowsFormsApp1.DBConnectio;
+using WindowsFormsApp1.Views;
 
 namespace WindowsFormsApp1
 {

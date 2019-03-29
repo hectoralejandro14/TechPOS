@@ -133,9 +133,9 @@
             this.btnCancelarPieza.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelarPieza.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelarPieza.ForeColor = System.Drawing.Color.Turquoise;
-            this.btnCancelarPieza.Location = new System.Drawing.Point(388, 442);
+            this.btnCancelarPieza.Location = new System.Drawing.Point(300, 470);
             this.btnCancelarPieza.Name = "btnCancelarPieza";
-            this.btnCancelarPieza.Size = new System.Drawing.Size(83, 37);
+            this.btnCancelarPieza.Size = new System.Drawing.Size(125, 37);
             this.btnCancelarPieza.TabIndex = 9;
             this.btnCancelarPieza.Text = "Cancelar";
             this.btnCancelarPieza.UseVisualStyleBackColor = false;
@@ -147,9 +147,9 @@
             this.BtnAceptarPieza.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnAceptarPieza.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAceptarPieza.ForeColor = System.Drawing.Color.Turquoise;
-            this.BtnAceptarPieza.Location = new System.Drawing.Point(477, 442);
+            this.BtnAceptarPieza.Location = new System.Drawing.Point(431, 470);
             this.BtnAceptarPieza.Name = "BtnAceptarPieza";
-            this.BtnAceptarPieza.Size = new System.Drawing.Size(80, 37);
+            this.BtnAceptarPieza.Size = new System.Drawing.Size(125, 37);
             this.BtnAceptarPieza.TabIndex = 10;
             this.BtnAceptarPieza.Text = "Aceptar";
             this.BtnAceptarPieza.UseVisualStyleBackColor = false;
@@ -176,11 +176,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(569, 526);
+            this.BackColor = System.Drawing.Color.LightGray;
+            this.ClientSize = new System.Drawing.Size(572, 522);
             this.Controls.Add(this.SlblFechaAproximadaLLegaPieza);
             this.Controls.Add(this.SdtCalendarFechaLlegada);
-            this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(572, 495);
             this.Controls.Add(this.BtnAceptarPieza);
             this.Controls.Add(this.btnCancelarPieza);
             this.Controls.Add(this.pictureBox1);

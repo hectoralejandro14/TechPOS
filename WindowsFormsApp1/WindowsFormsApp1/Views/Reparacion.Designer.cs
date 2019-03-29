@@ -54,6 +54,10 @@
             this.FallaReparacionGBx = new System.Windows.Forms.GroupBox();
             this.DiagnosticoGBx = new System.Windows.Forms.GroupBox();
             this.TrabajoRealizadoGBx = new System.Windows.Forms.GroupBox();
+            this.SlblCantidadRestanteAPagar = new System.Windows.Forms.Label();
+            this.StxtCantidadRestanteAPagar = new System.Windows.Forms.TextBox();
+            this.SlblAbonarAProductoCliente = new System.Windows.Forms.Label();
+            this.StxtNuevoAbonoCliente = new System.Windows.Forms.TextBox();
             this.layDatosReparacion.SuspendLayout();
             this.FallaReparacionGBx.SuspendLayout();
             this.DiagnosticoGBx.SuspendLayout();
@@ -75,7 +79,7 @@
             // 
             this.estadoLblRepa.AutoSize = true;
             this.estadoLblRepa.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.estadoLblRepa.Location = new System.Drawing.Point(204, 0);
+            this.estadoLblRepa.Location = new System.Drawing.Point(331, 0);
             this.estadoLblRepa.Name = "estadoLblRepa";
             this.estadoLblRepa.Size = new System.Drawing.Size(70, 34);
             this.estadoLblRepa.TabIndex = 1;
@@ -85,7 +89,7 @@
             // 
             this.marccaLblRepa.AutoSize = true;
             this.marccaLblRepa.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.marccaLblRepa.Location = new System.Drawing.Point(3, 38);
+            this.marccaLblRepa.Location = new System.Drawing.Point(3, 37);
             this.marccaLblRepa.Name = "marccaLblRepa";
             this.marccaLblRepa.Size = new System.Drawing.Size(64, 34);
             this.marccaLblRepa.TabIndex = 2;
@@ -95,7 +99,7 @@
             // 
             this.modeloLblRepa.AutoSize = true;
             this.modeloLblRepa.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.modeloLblRepa.Location = new System.Drawing.Point(204, 38);
+            this.modeloLblRepa.Location = new System.Drawing.Point(331, 37);
             this.modeloLblRepa.Name = "modeloLblRepa";
             this.modeloLblRepa.Size = new System.Drawing.Size(72, 34);
             this.modeloLblRepa.TabIndex = 3;
@@ -115,7 +119,7 @@
             // 
             this.totalLblRepa.AutoSize = true;
             this.totalLblRepa.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.totalLblRepa.Location = new System.Drawing.Point(41, 461);
+            this.totalLblRepa.Location = new System.Drawing.Point(345, 431);
             this.totalLblRepa.Name = "totalLblRepa";
             this.totalLblRepa.Size = new System.Drawing.Size(54, 34);
             this.totalLblRepa.TabIndex = 8;
@@ -125,11 +129,11 @@
             // 
             this.abonoLblRepa.AutoSize = true;
             this.abonoLblRepa.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.abonoLblRepa.Location = new System.Drawing.Point(267, 462);
+            this.abonoLblRepa.Location = new System.Drawing.Point(41, 468);
             this.abonoLblRepa.Name = "abonoLblRepa";
-            this.abonoLblRepa.Size = new System.Drawing.Size(66, 34);
+            this.abonoLblRepa.Size = new System.Drawing.Size(136, 34);
             this.abonoLblRepa.TabIndex = 9;
-            this.abonoLblRepa.Text = "Abono";
+            this.abonoLblRepa.Text = "Abono Anterios";
             // 
             // dRapidoTxtBox
             // 
@@ -139,7 +143,7 @@
             this.dRapidoTxtBox.Name = "dRapidoTxtBox";
             this.dRapidoTxtBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dRapidoTxtBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dRapidoTxtBox.Size = new System.Drawing.Size(376, 82);
+            this.dRapidoTxtBox.Size = new System.Drawing.Size(584, 82);
             this.dRapidoTxtBox.TabIndex = 10;
             this.dRapidoTxtBox.TextChanged += new System.EventHandler(this.dRapidoTxtBox_TextChanged);
             // 
@@ -149,23 +153,23 @@
             this.trabajoRealizadotxtC.Multiline = true;
             this.trabajoRealizadotxtC.Name = "trabajoRealizadotxtC";
             this.trabajoRealizadotxtC.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.trabajoRealizadotxtC.Size = new System.Drawing.Size(376, 77);
+            this.trabajoRealizadotxtC.Size = new System.Drawing.Size(578, 77);
             this.trabajoRealizadotxtC.TabIndex = 11;
             // 
             // idTxtBoxRepa
             // 
             this.idTxtBoxRepa.Enabled = false;
-            this.idTxtBoxRepa.Location = new System.Drawing.Point(73, 3);
+            this.idTxtBoxRepa.Location = new System.Drawing.Point(76, 3);
             this.idTxtBoxRepa.Name = "idTxtBoxRepa";
-            this.idTxtBoxRepa.Size = new System.Drawing.Size(120, 20);
+            this.idTxtBoxRepa.Size = new System.Drawing.Size(249, 20);
             this.idTxtBoxRepa.TabIndex = 12;
             // 
             // MarcaTxtBox
             // 
             this.MarcaTxtBox.Enabled = false;
-            this.MarcaTxtBox.Location = new System.Drawing.Point(73, 41);
+            this.MarcaTxtBox.Location = new System.Drawing.Point(76, 40);
             this.MarcaTxtBox.Name = "MarcaTxtBox";
-            this.MarcaTxtBox.Size = new System.Drawing.Size(120, 20);
+            this.MarcaTxtBox.Size = new System.Drawing.Size(249, 20);
             this.MarcaTxtBox.TabIndex = 13;
             // 
             // fallaTxtBoxRepa
@@ -174,39 +178,39 @@
             this.fallaTxtBoxRepa.Multiline = true;
             this.fallaTxtBoxRepa.Name = "fallaTxtBoxRepa";
             this.fallaTxtBoxRepa.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.fallaTxtBoxRepa.Size = new System.Drawing.Size(375, 76);
+            this.fallaTxtBoxRepa.Size = new System.Drawing.Size(583, 76);
             this.fallaTxtBoxRepa.TabIndex = 14;
             // 
             // ModeloTxtBoxRepa
             // 
             this.ModeloTxtBoxRepa.Enabled = false;
-            this.ModeloTxtBoxRepa.Location = new System.Drawing.Point(295, 41);
+            this.ModeloTxtBoxRepa.Location = new System.Drawing.Point(410, 40);
             this.ModeloTxtBoxRepa.Name = "ModeloTxtBoxRepa";
-            this.ModeloTxtBoxRepa.Size = new System.Drawing.Size(120, 20);
+            this.ModeloTxtBoxRepa.Size = new System.Drawing.Size(200, 20);
             this.ModeloTxtBoxRepa.TabIndex = 16;
             // 
             // ResponsableTxtBox
             // 
             this.ResponsableTxtBox.Enabled = false;
-            this.ResponsableTxtBox.Location = new System.Drawing.Point(180, 435);
+            this.ResponsableTxtBox.Location = new System.Drawing.Point(183, 435);
             this.ResponsableTxtBox.Name = "ResponsableTxtBox";
-            this.ResponsableTxtBox.Size = new System.Drawing.Size(258, 20);
+            this.ResponsableTxtBox.Size = new System.Drawing.Size(156, 20);
             this.ResponsableTxtBox.TabIndex = 17;
             // 
             // TotalTxtBox
             // 
             this.TotalTxtBox.Enabled = false;
-            this.TotalTxtBox.Location = new System.Drawing.Point(114, 469);
+            this.TotalTxtBox.Location = new System.Drawing.Point(422, 435);
             this.TotalTxtBox.Name = "TotalTxtBox";
-            this.TotalTxtBox.Size = new System.Drawing.Size(100, 20);
+            this.TotalTxtBox.Size = new System.Drawing.Size(202, 20);
             this.TotalTxtBox.TabIndex = 18;
             // 
             // AbonoTxtBox
             // 
             this.AbonoTxtBox.Enabled = false;
-            this.AbonoTxtBox.Location = new System.Drawing.Point(339, 470);
+            this.AbonoTxtBox.Location = new System.Drawing.Point(183, 476);
             this.AbonoTxtBox.Name = "AbonoTxtBox";
-            this.AbonoTxtBox.Size = new System.Drawing.Size(100, 20);
+            this.AbonoTxtBox.Size = new System.Drawing.Size(156, 20);
             this.AbonoTxtBox.TabIndex = 19;
             // 
             // ActualizarBtn
@@ -215,9 +219,9 @@
             this.ActualizarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ActualizarBtn.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
             this.ActualizarBtn.ForeColor = System.Drawing.Color.Turquoise;
-            this.ActualizarBtn.Location = new System.Drawing.Point(3, 513);
+            this.ActualizarBtn.Location = new System.Drawing.Point(19, 542);
             this.ActualizarBtn.Name = "ActualizarBtn";
-            this.ActualizarBtn.Size = new System.Drawing.Size(104, 34);
+            this.ActualizarBtn.Size = new System.Drawing.Size(130, 43);
             this.ActualizarBtn.TabIndex = 20;
             this.ActualizarBtn.Text = "Actualizar";
             this.ActualizarBtn.UseVisualStyleBackColor = false;
@@ -229,9 +233,9 @@
             this.AbonarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AbonarBtn.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
             this.AbonarBtn.ForeColor = System.Drawing.Color.Turquoise;
-            this.AbonarBtn.Location = new System.Drawing.Point(220, 513);
+            this.AbonarBtn.Location = new System.Drawing.Point(327, 542);
             this.AbonarBtn.Name = "AbonarBtn";
-            this.AbonarBtn.Size = new System.Drawing.Size(82, 34);
+            this.AbonarBtn.Size = new System.Drawing.Size(130, 43);
             this.AbonarBtn.TabIndex = 21;
             this.AbonarBtn.Text = "Abonar";
             this.AbonarBtn.UseVisualStyleBackColor = false;
@@ -243,9 +247,9 @@
             this.AceptarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AceptarBtn.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
             this.AceptarBtn.ForeColor = System.Drawing.Color.Turquoise;
-            this.AceptarBtn.Location = new System.Drawing.Point(309, 513);
+            this.AceptarBtn.Location = new System.Drawing.Point(494, 540);
             this.AceptarBtn.Name = "AceptarBtn";
-            this.AceptarBtn.Size = new System.Drawing.Size(90, 34);
+            this.AceptarBtn.Size = new System.Drawing.Size(130, 43);
             this.AceptarBtn.TabIndex = 22;
             this.AceptarBtn.Text = "Cerrar";
             this.AceptarBtn.UseVisualStyleBackColor = false;
@@ -257,9 +261,9 @@
             this.piezaOrderbtnC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.piezaOrderbtnC.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
             this.piezaOrderbtnC.ForeColor = System.Drawing.Color.Turquoise;
-            this.piezaOrderbtnC.Location = new System.Drawing.Point(123, 513);
+            this.piezaOrderbtnC.Location = new System.Drawing.Point(172, 542);
             this.piezaOrderbtnC.Name = "piezaOrderbtnC";
-            this.piezaOrderbtnC.Size = new System.Drawing.Size(82, 34);
+            this.piezaOrderbtnC.Size = new System.Drawing.Size(130, 43);
             this.piezaOrderbtnC.TabIndex = 23;
             this.piezaOrderbtnC.Text = "Pieza";
             this.piezaOrderbtnC.UseVisualStyleBackColor = false;
@@ -268,32 +272,32 @@
             // estadoCBoxC
             // 
             this.estadoCBoxC.FormattingEnabled = true;
-            this.estadoCBoxC.Location = new System.Drawing.Point(295, 3);
+            this.estadoCBoxC.Location = new System.Drawing.Point(410, 3);
             this.estadoCBoxC.Name = "estadoCBoxC";
-            this.estadoCBoxC.Size = new System.Drawing.Size(121, 21);
+            this.estadoCBoxC.Size = new System.Drawing.Size(200, 21);
             this.estadoCBoxC.TabIndex = 24;
             // 
             // layDatosReparacion
             // 
             this.layDatosReparacion.ColumnCount = 4;
-            this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.82587F));
-            this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.17413F));
-            this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 91F));
-            this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 136F));
-            this.layDatosReparacion.Controls.Add(this.idLblRepa, 0, 0);
+            this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.2561F));
+            this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.7439F));
+            this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 79F));
+            this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 205F));
             this.layDatosReparacion.Controls.Add(this.estadoCBoxC, 3, 0);
-            this.layDatosReparacion.Controls.Add(this.idTxtBoxRepa, 1, 0);
-            this.layDatosReparacion.Controls.Add(this.marccaLblRepa, 0, 1);
+            this.layDatosReparacion.Controls.Add(this.idLblRepa, 0, 0);
             this.layDatosReparacion.Controls.Add(this.MarcaTxtBox, 1, 1);
             this.layDatosReparacion.Controls.Add(this.estadoLblRepa, 2, 0);
             this.layDatosReparacion.Controls.Add(this.modeloLblRepa, 2, 1);
             this.layDatosReparacion.Controls.Add(this.ModeloTxtBoxRepa, 3, 1);
+            this.layDatosReparacion.Controls.Add(this.marccaLblRepa, 0, 1);
+            this.layDatosReparacion.Controls.Add(this.idTxtBoxRepa, 1, 0);
             this.layDatosReparacion.Location = new System.Drawing.Point(23, 12);
             this.layDatosReparacion.Name = "layDatosReparacion";
             this.layDatosReparacion.RowCount = 2;
             this.layDatosReparacion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.70588F));
             this.layDatosReparacion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.29412F));
-            this.layDatosReparacion.Size = new System.Drawing.Size(429, 85);
+            this.layDatosReparacion.Size = new System.Drawing.Size(613, 85);
             this.layDatosReparacion.TabIndex = 25;
             // 
             // FallaReparacionGBx
@@ -302,7 +306,7 @@
             this.FallaReparacionGBx.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FallaReparacionGBx.Location = new System.Drawing.Point(23, 99);
             this.FallaReparacionGBx.Name = "FallaReparacionGBx";
-            this.FallaReparacionGBx.Size = new System.Drawing.Size(426, 104);
+            this.FallaReparacionGBx.Size = new System.Drawing.Size(613, 104);
             this.FallaReparacionGBx.TabIndex = 26;
             this.FallaReparacionGBx.TabStop = false;
             this.FallaReparacionGBx.Text = "Falla";
@@ -313,7 +317,7 @@
             this.DiagnosticoGBx.Font = new System.Drawing.Font("Cordia New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DiagnosticoGBx.Location = new System.Drawing.Point(23, 203);
             this.DiagnosticoGBx.Name = "DiagnosticoGBx";
-            this.DiagnosticoGBx.Size = new System.Drawing.Size(429, 113);
+            this.DiagnosticoGBx.Size = new System.Drawing.Size(607, 113);
             this.DiagnosticoGBx.TabIndex = 27;
             this.DiagnosticoGBx.TabStop = false;
             this.DiagnosticoGBx.Text = "Diagnóstico";
@@ -324,19 +328,57 @@
             this.TrabajoRealizadoGBx.Font = new System.Drawing.Font("Cordia New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TrabajoRealizadoGBx.Location = new System.Drawing.Point(19, 322);
             this.TrabajoRealizadoGBx.Name = "TrabajoRealizadoGBx";
-            this.TrabajoRealizadoGBx.Size = new System.Drawing.Size(433, 106);
+            this.TrabajoRealizadoGBx.Size = new System.Drawing.Size(611, 106);
             this.TrabajoRealizadoGBx.TabIndex = 28;
             this.TrabajoRealizadoGBx.TabStop = false;
             this.TrabajoRealizadoGBx.Text = "Trabajo Realizado";
+            // 
+            // SlblCantidadRestanteAPagar
+            // 
+            this.SlblCantidadRestanteAPagar.AutoSize = true;
+            this.SlblCantidadRestanteAPagar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.SlblCantidadRestanteAPagar.Location = new System.Drawing.Point(339, 505);
+            this.SlblCantidadRestanteAPagar.Name = "SlblCantidadRestanteAPagar";
+            this.SlblCantidadRestanteAPagar.Size = new System.Drawing.Size(85, 34);
+            this.SlblCantidadRestanteAPagar.TabIndex = 29;
+            this.SlblCantidadRestanteAPagar.Text = "Restante";
+            // 
+            // StxtCantidadRestanteAPagar
+            // 
+            this.StxtCantidadRestanteAPagar.Enabled = false;
+            this.StxtCantidadRestanteAPagar.Location = new System.Drawing.Point(422, 514);
+            this.StxtCantidadRestanteAPagar.Name = "StxtCantidadRestanteAPagar";
+            this.StxtCantidadRestanteAPagar.Size = new System.Drawing.Size(202, 20);
+            this.StxtCantidadRestanteAPagar.TabIndex = 30;
+            // 
+            // SlblAbonarAProductoCliente
+            // 
+            this.SlblAbonarAProductoCliente.AutoSize = true;
+            this.SlblAbonarAProductoCliente.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.SlblAbonarAProductoCliente.Location = new System.Drawing.Point(343, 468);
+            this.SlblAbonarAProductoCliente.Name = "SlblAbonarAProductoCliente";
+            this.SlblAbonarAProductoCliente.Size = new System.Drawing.Size(72, 34);
+            this.SlblAbonarAProductoCliente.TabIndex = 31;
+            this.SlblAbonarAProductoCliente.Text = "Abonar";
+            // 
+            // StxtNuevoAbonoCliente
+            // 
+            this.StxtNuevoAbonoCliente.Enabled = false;
+            this.StxtNuevoAbonoCliente.Location = new System.Drawing.Point(422, 476);
+            this.StxtNuevoAbonoCliente.Name = "StxtNuevoAbonoCliente";
+            this.StxtNuevoAbonoCliente.Size = new System.Drawing.Size(202, 20);
+            this.StxtNuevoAbonoCliente.TabIndex = 32;
             // 
             // Reparacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            //this.ClientSize = new System.Drawing.Size(411, 568);
-            this.Controls.Add(this.estadoCBoxC);
-            this.ClientSize = new System.Drawing.Size(486, 568);
+            this.ClientSize = new System.Drawing.Size(648, 595);
+            this.Controls.Add(this.StxtNuevoAbonoCliente);
+            this.Controls.Add(this.SlblAbonarAProductoCliente);
+            this.Controls.Add(this.StxtCantidadRestanteAPagar);
+            this.Controls.Add(this.SlblCantidadRestanteAPagar);
             this.Controls.Add(this.TrabajoRealizadoGBx);
             this.Controls.Add(this.DiagnosticoGBx);
             this.Controls.Add(this.FallaReparacionGBx);
@@ -396,5 +438,9 @@
         private System.Windows.Forms.GroupBox FallaReparacionGBx;
         private System.Windows.Forms.GroupBox DiagnosticoGBx;
         private System.Windows.Forms.GroupBox TrabajoRealizadoGBx;
+        private System.Windows.Forms.Label SlblCantidadRestanteAPagar;
+        private System.Windows.Forms.TextBox StxtCantidadRestanteAPagar;
+        private System.Windows.Forms.Label SlblAbonarAProductoCliente;
+        private System.Windows.Forms.TextBox StxtNuevoAbonoCliente;
     }
 }
