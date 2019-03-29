@@ -312,5 +312,14 @@ namespace WindowsFormsApp1.DBConnectio
             }
             return id;
         }
+
+        public int actualizarDatos(string sql)
+        {
+            int fila = 0;
+            SqlCommand sc = new SqlCommand(sql, conexion);
+            sc.CommandType = CommandType.Text;
+            fila = sc.ExecuteNonQuery();
+            return fila;
+        }
     }
 }

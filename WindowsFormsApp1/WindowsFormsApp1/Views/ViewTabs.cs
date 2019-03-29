@@ -79,7 +79,7 @@ namespace WindowsFormsApp1.Views
             connection.CerrarConexion();
             //------------------------------------------------------------------------------------------------------------------------------------------------------
             conexion.AbrirConexion();
-            tableOrdenes.DataSource = conexion.buscarReparacion("SELECT * FROM Pieza");
+            tableOrdenes.DataSource = conexion.buscarReparacion("SELECT * FROM Pieza order by FechaPedida asc");
             conexion.CerrarConexion();
             //Adaptar datos a DataGridTableView
             tableOrdenes.AutoResizeColumns();
@@ -404,6 +404,8 @@ namespace WindowsFormsApp1.Views
                 {
                     lblTextoIdCliente.Visible = true;
                     lblIdCliente.Visible = true;
+                    lblIdEquipo.Visible = true;
+                    SlblRecibirEquipo.Visible = true;
                     lblIdCliente.Text= Convert.ToString(dr["Id"]);
                     txtNombre.Text = Convert.ToString(dr["Nombre"]);
                     txtApellido.Text = Convert.ToString(dr["Apellido"]);
@@ -480,6 +482,10 @@ namespace WindowsFormsApp1.Views
             {
                 e.Handled = false;
             }
+            else if(Char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = false;
+            }
             else
             {
                 e.Handled = true;
@@ -496,6 +502,10 @@ namespace WindowsFormsApp1.Views
                 e.Handled = false;
             }
             else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsPunctuation(e.KeyChar))
             {
                 e.Handled = false;
             }
@@ -589,6 +599,15 @@ namespace WindowsFormsApp1.Views
                     txtModelo.Text = "";
                     txtTotal.Text = "";
                     txtAnticipo.Text = "";
+                    txtNombre.Text = "";
+                    txtApellido.Text = "";
+                    txtTelefono.Text = "";
+                    txtCorreo.Text = "";
+                    txtBuscarCliente.Text = "";
+                    lblIdCliente.Visible = false;
+                    lblTextoIdCliente.Visible = false;
+                    lblIdEquipo.Visible = false;
+                    SlblRecibirEquipo.Visible = false;
                     db.AddElements(sql);
                     db.CerrarConexion();
                     //------------------------------------------------------------------------------------------------
@@ -848,10 +867,140 @@ namespace WindowsFormsApp1.Views
             g.FillRectangle(sb, e.Bounds);
             g.DrawString(tp.Text, tabPuntoVenta.Font, new SolidBrush(Color.Black), headerRect, sf);
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ViewLogin view = new ViewLogin();
+            view.Show();
+        }
         private void SbtnAgregarNuevoServicioCU_Click_1(object sender, EventArgs e)
         {
             NuevoServicio nuevo = new NuevoServicio();
             nuevo.Show();
+        }
+
+        private void JtxtBuscar2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar==(char)Keys.Enter)
+            {
+                Connection connection = new Connection();
+                connection.AbrirConexion();
+                CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id where Reparacion.Id = "+JtxtBuscar2.Text);
+                connection.CerrarConexion();
+            }
+        }
+
+        private void pBoxBuscarRep_Click(object sender, EventArgs e)
+        {
+            Connection connection = new Connection();
+            connection.AbrirConexion();
+            CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id where Reparacion.Id = " + JtxtBuscar2.Text);
+            connection.CerrarConexion();
+        }
+
+        private void txtBuscarCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar==(char)Keys.Enter)
+            {
+                if (txtBuscarCliente.Text == "")
+                {
+                    MessageBox.Show("El campo esta vacio", "Alerta");
+                }
+                else
+                {
+                    bool encontro = false;
+                    Connection db = new DBConnectio.Connection();
+                    db.AbrirConexion();
+
+                    SqlDataReader dr = db.consulta("select * from Cliente where Id = '" + txtBuscarCliente.Text + "'");
+                    //MessageBox.Show("select * from Cliente where Id=" + txtBuscarCliente.Text);
+                    if (dr.Read())
+                    {
+                        lblTextoIdCliente.Visible = true;
+                        lblIdCliente.Visible = true;
+                        lblIdEquipo.Visible = true;
+                        SlblRecibirEquipo.Visible = true;
+                        lblIdCliente.Text = Convert.ToString(dr["Id"]);
+                        txtNombre.Text = Convert.ToString(dr["Nombre"]);
+                        txtApellido.Text = Convert.ToString(dr["Apellido"]);
+                        txtTelefono.Text = Convert.ToString(dr["Telefono"]);
+                        txtCorreo.Text = Convert.ToString(dr["Contacto"]);
+                        encontro = true;
+                    }
+
+                    dr.Close();
+                    db.CerrarConexion();
+                    if (!encontro)
+                    {
+                        SbtnCancelar.Visible = true;
+                        lblAvisoNoCliente.Visible = true;
+                        btnAgregarCliente.Visible = true;
+                        //---------------------------------------
+                        SbtnCancelar.Visible = true;
+                        txtNombre.Enabled = true;
+                        txtApellido.Enabled = true;
+                        txtTelefono.Enabled = true;
+                        txtCorreo.Enabled = true;
+                        txtNombre.Text = "";
+                        txtApellido.Text = "";
+                        txtCorreo.Text = "";
+                        txtTelefono.Text = "";
+                        pictureBuscar.Visible = true;
+                        //---------------------------------------
+                        GenerarId();
+                        GenerarIdEquipo();
+
+                    }
+                    else
+                    {
+                        lblAvisoNoCliente.Visible = false;
+                        btnAddClientH.Visible = true;
+                        btnAgregarCliente.Visible = false;
+                        SbtnCancelar.Visible = false;
+                        txtNombre.Enabled = false;
+                        txtApellido.Enabled = false;
+
+                    }
+                }
+            }
+        }
+
+        private void tableOrdenes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow fila = tableOrdenes.Rows[e.RowIndex];
+                if (Convert.ToString(fila.Cells["Id"].Value).Equals("") || Convert.ToString(fila.Cells["Descripcion"].Value).Equals("")
+                    || Convert.ToString(fila.Cells["Estado"].Value).Equals("") || Convert.ToString(fila.Cells["FechaPedida"].Value).Equals("")
+                    || Convert.ToString(fila.Cells["FechaLlegaAprox"].Value).Equals(""))
+                {
+                    Console.WriteLine("Datos vacios");
+                }
+                else
+                {
+                    int id = Convert.ToInt32(fila.Cells["Id"].Value);
+                    DatosPieza datosPieza = new DatosPieza(id);
+                    datosPieza.Show();
+                }
+            }
+            catch (Exception)
+            {
+            }
+        }
+
+        private void ordenesTab_Enter(object sender, EventArgs e)
+        {
+            conexion.AbrirConexion();
+            tableOrdenes.DataSource = conexion.buscarReparacion("SELECT * FROM Pieza order by FechaPedida asc");
+            conexion.CerrarConexion();
+        }
+
+        private void SlblPiezasOrdenadas_MouseMove(object sender, MouseEventArgs e)
+        {
+            conexion.AbrirConexion();
+            tableOrdenes.DataSource = conexion.buscarReparacion("SELECT * FROM Pieza order by FechaPedida asc");
+            conexion.CerrarConexion();
         }
     }
 }

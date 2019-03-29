@@ -286,6 +286,8 @@
             this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 205F));
             this.layDatosReparacion.Controls.Add(this.estadoCBoxC, 3, 0);
             this.layDatosReparacion.Controls.Add(this.idLblRepa, 0, 0);
+            this.layDatosReparacion.Controls.Add(this.idTxtBoxRepa, 1, 0);
+            this.layDatosReparacion.Controls.Add(this.marccaLblRepa, 0, 1);
             this.layDatosReparacion.Controls.Add(this.MarcaTxtBox, 1, 1);
             this.layDatosReparacion.Controls.Add(this.estadoLblRepa, 2, 0);
             this.layDatosReparacion.Controls.Add(this.modeloLblRepa, 2, 1);
@@ -379,6 +381,7 @@
             this.Controls.Add(this.SlblAbonarAProductoCliente);
             this.Controls.Add(this.StxtCantidadRestanteAPagar);
             this.Controls.Add(this.SlblCantidadRestanteAPagar);
+            this.ClientSize = new System.Drawing.Size(486, 568);
             this.Controls.Add(this.TrabajoRealizadoGBx);
             this.Controls.Add(this.DiagnosticoGBx);
             this.Controls.Add(this.FallaReparacionGBx);
