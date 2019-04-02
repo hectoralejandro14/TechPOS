@@ -63,8 +63,7 @@ namespace WindowsFormsApp1.DBConnectio
             }
             catch (System.Data.SqlClient.SqlException e2)
             {
-                MessageBox.Show("Ocurrio un error con la conexión a la Base de Datos { " + e2.Message + " } ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
+               return false;
             }
         }
         public void AgregarRoles(string cadena, decimal Id, string NombreROL)
@@ -89,7 +88,7 @@ namespace WindowsFormsApp1.DBConnectio
                 MessageBox.Show("Ocurrio un error con la conexión a la Base de Datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public void ActualizarDatos(string query, string rol)
+        public void ActualizarDatos(string query)
         {
             try
             {
