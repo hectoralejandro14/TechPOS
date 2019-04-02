@@ -79,7 +79,7 @@
             // 
             this.estadoLblRepa.AutoSize = true;
             this.estadoLblRepa.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.estadoLblRepa.Location = new System.Drawing.Point(331, 0);
+            this.estadoLblRepa.Location = new System.Drawing.Point(330, 0);
             this.estadoLblRepa.Name = "estadoLblRepa";
             this.estadoLblRepa.Size = new System.Drawing.Size(70, 34);
             this.estadoLblRepa.TabIndex = 1;
@@ -99,7 +99,7 @@
             // 
             this.modeloLblRepa.AutoSize = true;
             this.modeloLblRepa.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.modeloLblRepa.Location = new System.Drawing.Point(331, 37);
+            this.modeloLblRepa.Location = new System.Drawing.Point(330, 37);
             this.modeloLblRepa.Name = "modeloLblRepa";
             this.modeloLblRepa.Size = new System.Drawing.Size(72, 34);
             this.modeloLblRepa.TabIndex = 3;
@@ -161,7 +161,7 @@
             this.idTxtBoxRepa.Enabled = false;
             this.idTxtBoxRepa.Location = new System.Drawing.Point(76, 3);
             this.idTxtBoxRepa.Name = "idTxtBoxRepa";
-            this.idTxtBoxRepa.Size = new System.Drawing.Size(249, 20);
+            this.idTxtBoxRepa.Size = new System.Drawing.Size(248, 20);
             this.idTxtBoxRepa.TabIndex = 12;
             // 
             // MarcaTxtBox
@@ -169,7 +169,7 @@
             this.MarcaTxtBox.Enabled = false;
             this.MarcaTxtBox.Location = new System.Drawing.Point(76, 40);
             this.MarcaTxtBox.Name = "MarcaTxtBox";
-            this.MarcaTxtBox.Size = new System.Drawing.Size(249, 20);
+            this.MarcaTxtBox.Size = new System.Drawing.Size(248, 20);
             this.MarcaTxtBox.TabIndex = 13;
             // 
             // fallaTxtBoxRepa
@@ -184,7 +184,7 @@
             // ModeloTxtBoxRepa
             // 
             this.ModeloTxtBoxRepa.Enabled = false;
-            this.ModeloTxtBoxRepa.Location = new System.Drawing.Point(410, 40);
+            this.ModeloTxtBoxRepa.Location = new System.Drawing.Point(409, 40);
             this.ModeloTxtBoxRepa.Name = "ModeloTxtBoxRepa";
             this.ModeloTxtBoxRepa.Size = new System.Drawing.Size(200, 20);
             this.ModeloTxtBoxRepa.TabIndex = 16;
@@ -272,7 +272,7 @@
             // estadoCBoxC
             // 
             this.estadoCBoxC.FormattingEnabled = true;
-            this.estadoCBoxC.Location = new System.Drawing.Point(410, 3);
+            this.estadoCBoxC.Location = new System.Drawing.Point(409, 3);
             this.estadoCBoxC.Name = "estadoCBoxC";
             this.estadoCBoxC.Size = new System.Drawing.Size(200, 21);
             this.estadoCBoxC.TabIndex = 24;
@@ -283,11 +283,9 @@
             this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.2561F));
             this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.7439F));
             this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 79F));
-            this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 205F));
+            this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 206F));
             this.layDatosReparacion.Controls.Add(this.estadoCBoxC, 3, 0);
             this.layDatosReparacion.Controls.Add(this.idLblRepa, 0, 0);
-            this.layDatosReparacion.Controls.Add(this.idTxtBoxRepa, 1, 0);
-            this.layDatosReparacion.Controls.Add(this.marccaLblRepa, 0, 1);
             this.layDatosReparacion.Controls.Add(this.MarcaTxtBox, 1, 1);
             this.layDatosReparacion.Controls.Add(this.estadoLblRepa, 2, 0);
             this.layDatosReparacion.Controls.Add(this.modeloLblRepa, 2, 1);
@@ -376,12 +374,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(648, 595);
+            this.ClientSize = new System.Drawing.Size(656, 602);
             this.Controls.Add(this.StxtNuevoAbonoCliente);
             this.Controls.Add(this.SlblAbonarAProductoCliente);
             this.Controls.Add(this.StxtCantidadRestanteAPagar);
             this.Controls.Add(this.SlblCantidadRestanteAPagar);
-            this.ClientSize = new System.Drawing.Size(486, 568);
             this.Controls.Add(this.TrabajoRealizadoGBx);
             this.Controls.Add(this.DiagnosticoGBx);
             this.Controls.Add(this.FallaReparacionGBx);

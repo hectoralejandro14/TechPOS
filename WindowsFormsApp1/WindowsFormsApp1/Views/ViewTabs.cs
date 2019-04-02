@@ -79,7 +79,7 @@ namespace WindowsFormsApp1.Views
             connection.CerrarConexion();
             //------------------------------------------------------------------------------------------------------------------------------------------------------
             conexion.AbrirConexion();
-            tableOrdenes.DataSource = conexion.buscarReparacion("SELECT * FROM Pieza order by FechaPedida asc");
+            tableOrdenes.DataSource = conexion.buscarReparacion("SELECT * FROM Pieza order by FechaEncargada asc");
             conexion.CerrarConexion();
             //Adaptar datos a DataGridTableView
             tableOrdenes.AutoResizeColumns();
@@ -239,10 +239,17 @@ namespace WindowsFormsApp1.Views
         }
         private void CDGReparacion_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow fila = CDGReparacion.Rows[e.RowIndex];
-            String id = Convert.ToString(fila.Cells["ID"].Value);
-            Reparacion r = new Reparacion(id);
-            r.Show();
+            try
+            {
+                DataGridViewRow fila = CDGReparacion.Rows[e.RowIndex];
+                String id = Convert.ToString(fila.Cells["ID"].Value);
+                Reparacion r = new Reparacion(id);
+                r.Show();
+            }
+            catch
+            {
+
+            }
         }
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -992,14 +999,14 @@ namespace WindowsFormsApp1.Views
         private void ordenesTab_Enter(object sender, EventArgs e)
         {
             conexion.AbrirConexion();
-            tableOrdenes.DataSource = conexion.buscarReparacion("SELECT * FROM Pieza order by FechaPedida asc");
+            tableOrdenes.DataSource = conexion.buscarReparacion("SELECT * FROM Pieza order by FechaEncargada asc");
             conexion.CerrarConexion();
         }
 
         private void SlblPiezasOrdenadas_MouseMove(object sender, MouseEventArgs e)
         {
             conexion.AbrirConexion();
-            tableOrdenes.DataSource = conexion.buscarReparacion("SELECT * FROM Pieza order by FechaPedida asc");
+            tableOrdenes.DataSource = conexion.buscarReparacion("SELECT * FROM Pieza order by FechaEncargada asc");
             conexion.CerrarConexion();
         }
     }

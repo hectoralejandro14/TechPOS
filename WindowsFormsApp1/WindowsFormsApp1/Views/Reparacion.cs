@@ -71,9 +71,9 @@ namespace WindowsFormsApp1
         {
             DBConnectio.Connection con = new DBConnectio.Connection();
             con.AbrirConexion();
-            if (StxtNuevoAbonoCliente.Text.Equals(""))
+            if (StxtNuevoAbonoCliente.Text.Equals("") || Convert.ToDouble(StxtNuevoAbonoCliente.Text)<=0)
             {
-                MessageBox.Show("NO SE PUEDE REALIZAR UN ABONO AEQUIPO CON IDENTIFICADOR [" + idTxtBoxRepa.Text + "] DEBIDO A LA LA EXISTENCIA DE CAMPO VACIO", "ABONO NO REALIZADO", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("NO SE PUEDE REALIZAR UN ABONO AL EQUIPO CON IDENTIFICADOR [" + idTxtBoxRepa.Text + "] DEBIDO A LA LA EXISTENCIA DE CAMPO VACIO  O CANTIDAD MENOR O IGUAL A 0", "ABONO NO REALIZADO", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
             else
             {
@@ -82,7 +82,6 @@ namespace WindowsFormsApp1
                 if (resultado == DialogResult.Yes)
                 {
                     con.ActualizarDatos("UPDATE Reparacion set Anticipo = " + StxtNuevoAbonoCliente.Text + " WHERE Id ='" + idTxtBoxRepa.Text + "'");
-                    //vaciar campo de abono
                     StxtNuevoAbonoCliente.Text = "";
                     /*SqlDataReader dr = conn.consulta("SELECT Anticipo FROM Reparacion WHERE Id ='" + idTxtBoxRepa.Text + "'");
                     if (dr.Read())

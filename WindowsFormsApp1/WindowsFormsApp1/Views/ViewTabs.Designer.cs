@@ -1439,7 +1439,7 @@
             // 
             // linkCerrarSesion
             // 
-            this.linkCerrarSesion.AutoSize = true;
+            /*this.linkCerrarSesion.AutoSize = true;
             this.linkCerrarSesion.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkCerrarSesion.Location = new System.Drawing.Point(1237, 719);
             this.linkCerrarSesion.Name = "linkCerrarSesion";
@@ -1447,7 +1447,7 @@
             this.linkCerrarSesion.TabIndex = 1;
             this.linkCerrarSesion.TabStop = true;
             this.linkCerrarSesion.Text = "Cerrar Sesión";
-            this.linkCerrarSesion.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkCerrarSesion_LinkClicked);
+            this.linkCerrarSesion.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkCerrarSesion_LinkClicked);*/
             // 
             // reparacionTableAdapter
             // 
