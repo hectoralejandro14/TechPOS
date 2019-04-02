@@ -882,5 +882,11 @@ namespace WindowsFormsApp1.Views
             NuevoServicio nuevo = new NuevoServicio();
             nuevo.Show();
         }
+
+        private void JbtnaddServicio_Click(object sender, EventArgs e)
+        {
+            NuevoServicio nuevo = new NuevoServicio();
+            nuevo.Show();
+        }
     }
 }
