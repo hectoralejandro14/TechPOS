@@ -91,7 +91,6 @@
             this.txtContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContrasena.HideSelection = false;
             this.txtContrasena.Location = new System.Drawing.Point(375, 336);
-            this.txtContrasena.Multiline = true;
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(234, 26);
             this.txtContrasena.TabIndex = 5;

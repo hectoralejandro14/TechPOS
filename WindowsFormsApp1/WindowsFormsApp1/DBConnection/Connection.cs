@@ -8,14 +8,14 @@ namespace WindowsFormsApp1.DBConnectio
     class Connection
     {
         
-        //private string cadena = "Data Source=.\\SQLEXPRESS;Initial Catalog=TechPOSdb; Integrated Security=True";
-        private string cadena = "Data Source=DESKTOP-4U4TDTF;Initial Catalog=TechPOSdb; Integrated Security=True";
+        private string cadena = "Data Source=.\\SQLEXPRESS;Initial Catalog=TechPOSdb; Integrated Security=True";
+        //private string cadena = "Data Source=DESKTOP-4U4TDTF;Initial Catalog=TechPOSdb; Integrated Security=True";
         private SqlConnection conexion = new SqlConnection();
         SqlCommand SqlCommand;
         DataTable table = new DataTable();
         DataSet dataSet = new DataSet();
         SqlDataAdapter adapter = new SqlDataAdapter();
-        //-----------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------------------------------------------------------------------------
         //Metodos de conexion
         public Connection()
         {
@@ -51,7 +51,7 @@ namespace WindowsFormsApp1.DBConnectio
                   "Falló Cerradura", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //-----------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------------------------------------------------------------------------
         public bool AddElements(string SQL)
         {
             try
@@ -89,13 +89,13 @@ namespace WindowsFormsApp1.DBConnectio
                 MessageBox.Show("Ocurrio un error con la conexión a la Base de Datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public void ActualizarDatos(string query,string rol)
+        public void ActualizarDatos(string query)
         {
             try
             {
                 SqlCommand comando = new SqlCommand(query, conexion);
                 comando.ExecuteNonQuery();
-                MessageBox.Show("EL ROL DE ["+rol+"] FUE AGREDADO CON EXITO AL USUARIO", "ROL ACTUALIZADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("LOS DATOS FUERON ACTUALIZADOS CORRECTAMENTE", "ACTUALIZADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch
             {
@@ -311,6 +311,15 @@ namespace WindowsFormsApp1.DBConnectio
                 id = 1;
             }
             return id;
+        }
+
+        public int actualizarDatos(string sql)
+        {
+            int fila = 0;
+            SqlCommand sc = new SqlCommand(sql, conexion);
+            sc.CommandType = CommandType.Text;
+            fila = sc.ExecuteNonQuery();
+            return fila;
         }
     }
 }

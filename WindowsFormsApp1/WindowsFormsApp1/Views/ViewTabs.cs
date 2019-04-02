@@ -12,7 +12,6 @@ namespace WindowsFormsApp1.Views
     public partial class ViewTabs : Form
     {
         private DBConnectio.Connection conexion = new DBConnectio.Connection();
-        //---------------------------------------------------------------------------------------------------
         //GENERALES  
         public ViewTabs()
         {
@@ -31,7 +30,8 @@ namespace WindowsFormsApp1.Views
             ccbTipoServicio1.DisplayMember = "Nombre";
             ccbTipoServicio1.ValueMember = "Id";
             ccbTipoServicio1.DataSource = dt;
-            //---------Combo box responsable
+            //------------------------------------------------------------------------------------------------------------------------------------------------------
+            //Combo box responsable
             DataTable dt1 = new DataTable();
             conexion.AbrirConexion();
             SqlDataAdapter da1 = conexion.consultaMasDatos("select Id, Nombre from Usuario");
@@ -40,7 +40,8 @@ namespace WindowsFormsApp1.Views
             comboResponsable.DisplayMember = "Nombre";
             comboResponsable.ValueMember = "Id";
             comboResponsable.DataSource = dt1;
-            //---------Combo box asignar rol a usuario
+            //------------------------------------------------------------------------------------------------------------------------------------------------------
+            //Combo box asignar rol a usuario
             DataTable dt2 = new DataTable();
             conexion.AbrirConexion();
             SqlDataAdapter da2 = conexion.consultaMasDatos("select Id, Nombre from Usuario");
@@ -49,18 +50,18 @@ namespace WindowsFormsApp1.Views
             ScbxUsuariosRol.DisplayMember = "Nombre";
             ScbxUsuariosRol.ValueMember = "Id";
             ScbxUsuariosRol.DataSource = dt2;
-            //------------------------------------------
+            //------------------------------------------------------------------------------------------------------------------------------------------------------
             SbtnCancelar.Visible = false;
             txtNombre.Enabled = false;
             txtApellido.Enabled = false;
             txtTelefono.Enabled = false;
             txtCorreo.Enabled = false;
-            //------------------------------------------
+            //------------------------------------------------------------------------------------------------------------------------------------------------------
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
             GenerarIdEquipo();
-            //-------------------------------------------
+            //------------------------------------------------------------------------------------------------------------------------------------------------------
             ArrayList roles = new ArrayList();
             ScbxSeleccionarRol.Text = "Elija el Rol de Usuario";
             roles.Add("Administrador");
@@ -69,18 +70,21 @@ namespace WindowsFormsApp1.Views
             {
                 ScbxSeleccionarRol.Items.Add(roles[i]);
             }
-            //---------------------------------------------
+            //------------------------------------------------------------------------------------------------------------------------------------------------------
             //limitar tamañ de ComboBox
             //ccbTipoServicio1
             Connection connection = new Connection();
             connection.AbrirConexion();
             CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id  order by Reparacion.Fecha asc");
             connection.CerrarConexion();
-            //----------------------------------------------
+            //------------------------------------------------------------------------------------------------------------------------------------------------------
             conexion.AbrirConexion();
-            tableOrdenes.DataSource = conexion.buscarReparacion("SELECT * FROM Pieza");
+            tableOrdenes.DataSource = conexion.buscarReparacion("SELECT * FROM Pieza order by FechaPedida asc");
             conexion.CerrarConexion();
-            //----------------------------------------------
+            //Adaptar datos a DataGridTableView
+            tableOrdenes.AutoResizeColumns();
+            tableOrdenes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            //------------------------------------------------------------------------------------------------------------------------------------------------------
             colores();
         }
        
@@ -104,7 +108,7 @@ namespace WindowsFormsApp1.Views
         {
             Application.Exit();
         }
-        //---------------------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------------------------------------------------------------------------
         //TAB "VENTA"
         private void CbtnCobrarVenta_Click(object sender, EventArgs e)
         {
@@ -133,7 +137,7 @@ namespace WindowsFormsApp1.Views
             }
             db.CerrarConexion();
         }
-        //---------------------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------------------------------------------------------------------------
         private void JPicture_Click(object sender, EventArgs e)
         {
             if (JtxtBuscar2.Text == "")
@@ -278,7 +282,7 @@ namespace WindowsFormsApp1.Views
                 e.Handled = true;
             }
         }
-        //---------------------------------------------------------------------------------------------------           
+        //------------------------------------------------------------------------------------------------------------------------------------------------------        
         private void btnLimpiarCampos_Click(object sender, EventArgs e)
         {
             txtMarca.Text = "";
@@ -288,7 +292,7 @@ namespace WindowsFormsApp1.Views
             txtTotal.Text = "";
             txtAnticipo.Text = "";
         }
-        //---------------------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------------------------------------------------------------------------
         //TAB "RECIBIRI EQUIPO"
         private void btnAddClientH_Click(object sender, EventArgs e)
         {
@@ -342,10 +346,10 @@ namespace WindowsFormsApp1.Views
                     String sql = "INSERT INTO Cliente (Id,Nombre,Apellido,Telefono,Contacto) VALUES (" + idR + ",'" + txtNombre.Text + "','" + txtApellido.Text + "','" + txtTelefono.Text + "','" + txtCorreo.Text + "')";
                     conexion.AddElements(sql);
                     conexion.CerrarConexion();
-                    //--------------------------------------------------
+                    //------------------------------------------------------------------------------------------------------------------------------------------------------
                     SbtnCancelar.Visible = false;
                     btnAgregarCliente.Visible = false;
-                    //--------------------------------------------------
+                    //------------------------------------------------------------------------------------------------------------------------------------------------------
                     txtNombre.Enabled = false;
                     txtApellido.Enabled = false;
                     txtTelefono.Enabled = false;
@@ -400,6 +404,8 @@ namespace WindowsFormsApp1.Views
                 {
                     lblTextoIdCliente.Visible = true;
                     lblIdCliente.Visible = true;
+                    lblIdEquipo.Visible = true;
+                    SlblRecibirEquipo.Visible = true;
                     lblIdCliente.Text= Convert.ToString(dr["Id"]);
                     txtNombre.Text = Convert.ToString(dr["Nombre"]);
                     txtApellido.Text = Convert.ToString(dr["Apellido"]);
@@ -415,7 +421,7 @@ namespace WindowsFormsApp1.Views
                     SbtnCancelar.Visible = true;
                     lblAvisoNoCliente.Visible = true;
                     btnAgregarCliente.Visible = true;
-                    //---------------------------------------
+                    //------------------------------------------------------------------------------------------------------------------------------------------------------
                     SbtnCancelar.Visible = true;
                     txtNombre.Enabled = true;
                     txtApellido.Enabled = true;
@@ -426,7 +432,7 @@ namespace WindowsFormsApp1.Views
                     txtCorreo.Text = "";
                     txtTelefono.Text = "";
                     pictureBuscar.Visible = true;
-                    //---------------------------------------
+                    //------------------------------------------------------------------------------------------------------------------------------------------------------
                     GenerarId();
                     GenerarIdEquipo();
 
@@ -476,6 +482,10 @@ namespace WindowsFormsApp1.Views
             {
                 e.Handled = false;
             }
+            else if(Char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = false;
+            }
             else
             {
                 e.Handled = true;
@@ -492,6 +502,10 @@ namespace WindowsFormsApp1.Views
                 e.Handled = false;
             }
             else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsPunctuation(e.KeyChar))
             {
                 e.Handled = false;
             }
@@ -515,11 +529,11 @@ namespace WindowsFormsApp1.Views
             txtApellido.Text = "";
             txtCorreo.Text = "";
             txtTelefono.Text = "";
-            //--------------------------------
+            //------------------------------------------------------------------------------------------------------------------------------------------------------
             SbtnCancelar.Visible = false;
             btnAddClientH.Visible = true;
             btnAgregarCliente.Visible = false;
-            //--------------------------------
+            //------------------------------------------------------------------------------------------------------------------------------------------------------
             txtNombre.Enabled = false;
             txtApellido.Enabled = false;
             txtTelefono.Enabled = false;
@@ -585,6 +599,15 @@ namespace WindowsFormsApp1.Views
                     txtModelo.Text = "";
                     txtTotal.Text = "";
                     txtAnticipo.Text = "";
+                    txtNombre.Text = "";
+                    txtApellido.Text = "";
+                    txtTelefono.Text = "";
+                    txtCorreo.Text = "";
+                    txtBuscarCliente.Text = "";
+                    lblIdCliente.Visible = false;
+                    lblTextoIdCliente.Visible = false;
+                    lblIdEquipo.Visible = false;
+                    SlblRecibirEquipo.Visible = false;
                     db.AddElements(sql);
                     db.CerrarConexion();
                     //------------------------------------------------------------------------------------------------
@@ -604,25 +627,25 @@ namespace WindowsFormsApp1.Views
             txtApellido.Text = "";
             txtCorreo.Text = "";
             txtTelefono.Text = "";
-            //----------------------------------------------
+            //------------------------------------------------------------------------------------------------------------------------------------------------
             txtMarca.Text = "";
             txtModelo.Text = "";
             txtDescripcionDeFalla.Text = "";
             txtDescripcionDiagnosticoEspecifico.Text = "";
-            //---------------------------------------------
+            //-----------------------------------------------------------------------------------------------------------------------------------------------
             txtTotal.Text = "";
             txtAnticipo.Text = "";
-            //----------------------------------------------
+            //------------------------------------------------------------------------------------------------------------------------------------------------
             txtBuscarCliente.Text = "";
             txtNombre.Text = "";
             txtApellido.Text = "";
             txtCorreo.Text = "";
             txtCorreo.Text = "";
-            //-----------------------------------------------
+            //-------------------------------------------------------------------------------------------------------------------------------------------------
             btnAddClientH.Visible = true;
 
         }
-        //---------------------------------------------------------------------------------------------------
+        //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         //TAB "CONFIGURACION DE USUARIO"
         private void SbtnGuardarRol_Click(object sender, EventArgs e)
         {
@@ -647,7 +670,7 @@ namespace WindowsFormsApp1.Views
             NuevoUsuario nuevoUsuario = new NuevoUsuario();
             nuevoUsuario.Show();
         }
-        //---------------------------------------------------------------------------------------------------
+        //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         //METOODOS PROGRAMADOS POR NOSOTROS
         public void GenerarId()
         {
@@ -701,7 +724,7 @@ namespace WindowsFormsApp1.Views
             Connection db = new Connection();
             db.AbrirConexion();
             string query = "UPDATE Usuario SET Rol ='"+rol+"' WHERE Id = "+idUsuario;
-            db.ActualizarDatos(query,rol);
+            db.ActualizarDatos(query);
             db.CerrarConexion();
         }
         private void ccbTipoServicio1_MeasureItem(object sender, System.Windows.Forms.MeasureItemEventArgs e)
@@ -744,7 +767,6 @@ namespace WindowsFormsApp1.Views
                 allValues();
             }
         }
-
         private void txtCliente_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar==(char)Keys.Enter)
@@ -753,7 +775,7 @@ namespace WindowsFormsApp1.Views
                 connection.AbrirConexion();
                 if (txtCliente.Text == "")
                 {
-                    MessageBox.Show("Favor de llenar el campo", "Advertencia",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                    MessageBox.Show("FAVOR DE LLENAR LOS COMPOS", "ADVERTENCIA",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
                 }
                 else
                 {
@@ -762,7 +784,6 @@ namespace WindowsFormsApp1.Views
                 connection.CerrarConexion();
             }
         }
-
         private void pbBuscar_Click(object sender, EventArgs e)
         {
             Connection connection = new Connection();
@@ -805,7 +826,6 @@ namespace WindowsFormsApp1.Views
                 datosCliente.Show();
             }
         }
-
         private void allValues()
         {
             GenerarId();
@@ -821,12 +841,10 @@ namespace WindowsFormsApp1.Views
             txtCorreo.Enabled = true;
             txtBuscarCliente.Text = "";
         }
-
         private void CDGReparacion_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
-
         private void tabPuntoVenta_SelectedIndexChanged(object sender, EventArgs e)
         {
           
@@ -836,29 +854,17 @@ namespace WindowsFormsApp1.Views
             connection.CerrarConexion();
             colores();
         }
-
         private void tabPuntoVenta_DrawItem(object sender, DrawItemEventArgs e)
         {
             Graphics g = e.Graphics;
             TabPage tp = tabPuntoVenta.TabPages[e.Index];
-
             StringFormat sf = new StringFormat();
-            sf.Alignment = StringAlignment.Center;  //optional
-
-            // This is the rectangle to draw "over" the tabpage title
+            sf.Alignment = StringAlignment.Center;
             RectangleF headerRect = new RectangleF(e.Bounds.X, e.Bounds.Y + 2, e.Bounds.Width, e.Bounds.Height - 2);
-
-            // This is the default colour to use for the non-selected tabs
             SolidBrush sb = new SolidBrush(Color.LightGray);
-
-            // This changes the colour if we're trying to draw the selected tabpage
             if (tabPuntoVenta.SelectedIndex == e.Index)
                 sb.Color = Color.LightSkyBlue;
-
-            // Colour the header of the current tabpage based on what we did above
             g.FillRectangle(sb, e.Bounds);
-
-            //Remember to redraw the text - I'm always using black for title text
             g.DrawString(tp.Text, tabPuntoVenta.Font, new SolidBrush(Color.Black), headerRect, sf);
         }
 
@@ -872,6 +878,129 @@ namespace WindowsFormsApp1.Views
         {
             NuevoServicio nuevo = new NuevoServicio();
             nuevo.Show();
+        }
+
+        private void JtxtBuscar2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar==(char)Keys.Enter)
+            {
+                Connection connection = new Connection();
+                connection.AbrirConexion();
+                CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id where Reparacion.Id = "+JtxtBuscar2.Text);
+                connection.CerrarConexion();
+            }
+        }
+
+        private void pBoxBuscarRep_Click(object sender, EventArgs e)
+        {
+            Connection connection = new Connection();
+            connection.AbrirConexion();
+            CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id where Reparacion.Id = " + JtxtBuscar2.Text);
+            connection.CerrarConexion();
+        }
+
+        private void txtBuscarCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar==(char)Keys.Enter)
+            {
+                if (txtBuscarCliente.Text == "")
+                {
+                    MessageBox.Show("El campo esta vacio", "Alerta");
+                }
+                else
+                {
+                    bool encontro = false;
+                    Connection db = new DBConnectio.Connection();
+                    db.AbrirConexion();
+
+                    SqlDataReader dr = db.consulta("select * from Cliente where Id = '" + txtBuscarCliente.Text + "'");
+                    //MessageBox.Show("select * from Cliente where Id=" + txtBuscarCliente.Text);
+                    if (dr.Read())
+                    {
+                        lblTextoIdCliente.Visible = true;
+                        lblIdCliente.Visible = true;
+                        lblIdEquipo.Visible = true;
+                        SlblRecibirEquipo.Visible = true;
+                        lblIdCliente.Text = Convert.ToString(dr["Id"]);
+                        txtNombre.Text = Convert.ToString(dr["Nombre"]);
+                        txtApellido.Text = Convert.ToString(dr["Apellido"]);
+                        txtTelefono.Text = Convert.ToString(dr["Telefono"]);
+                        txtCorreo.Text = Convert.ToString(dr["Contacto"]);
+                        encontro = true;
+                    }
+
+                    dr.Close();
+                    db.CerrarConexion();
+                    if (!encontro)
+                    {
+                        SbtnCancelar.Visible = true;
+                        lblAvisoNoCliente.Visible = true;
+                        btnAgregarCliente.Visible = true;
+                        //---------------------------------------
+                        SbtnCancelar.Visible = true;
+                        txtNombre.Enabled = true;
+                        txtApellido.Enabled = true;
+                        txtTelefono.Enabled = true;
+                        txtCorreo.Enabled = true;
+                        txtNombre.Text = "";
+                        txtApellido.Text = "";
+                        txtCorreo.Text = "";
+                        txtTelefono.Text = "";
+                        pictureBuscar.Visible = true;
+                        //---------------------------------------
+                        GenerarId();
+                        GenerarIdEquipo();
+
+                    }
+                    else
+                    {
+                        lblAvisoNoCliente.Visible = false;
+                        btnAddClientH.Visible = true;
+                        btnAgregarCliente.Visible = false;
+                        SbtnCancelar.Visible = false;
+                        txtNombre.Enabled = false;
+                        txtApellido.Enabled = false;
+
+                    }
+                }
+            }
+        }
+
+        private void tableOrdenes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow fila = tableOrdenes.Rows[e.RowIndex];
+                if (Convert.ToString(fila.Cells["Id"].Value).Equals("") || Convert.ToString(fila.Cells["Descripcion"].Value).Equals("")
+                    || Convert.ToString(fila.Cells["Estado"].Value).Equals("") || Convert.ToString(fila.Cells["FechaPedida"].Value).Equals("")
+                    || Convert.ToString(fila.Cells["FechaLlegaAprox"].Value).Equals(""))
+                {
+                    Console.WriteLine("Datos vacios");
+                }
+                else
+                {
+                    int id = Convert.ToInt32(fila.Cells["Id"].Value);
+                    DatosPieza datosPieza = new DatosPieza(id);
+                    datosPieza.Show();
+                }
+            }
+            catch (Exception)
+            {
+            }
+        }
+
+        private void ordenesTab_Enter(object sender, EventArgs e)
+        {
+            conexion.AbrirConexion();
+            tableOrdenes.DataSource = conexion.buscarReparacion("SELECT * FROM Pieza order by FechaPedida asc");
+            conexion.CerrarConexion();
+        }
+
+        private void SlblPiezasOrdenadas_MouseMove(object sender, MouseEventArgs e)
+        {
+            conexion.AbrirConexion();
+            tableOrdenes.DataSource = conexion.buscarReparacion("SELECT * FROM Pieza order by FechaPedida asc");
+            conexion.CerrarConexion();
         }
     }
 }
