@@ -15,7 +15,7 @@ namespace WindowsFormsApp1.DBConnectio
         DataTable table = new DataTable();
         DataSet dataSet = new DataSet();
         SqlDataAdapter adapter = new SqlDataAdapter();
-        //-----------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------------------------------------------------------------------------
         //Metodos de conexion
         public Connection()
         {
@@ -51,7 +51,7 @@ namespace WindowsFormsApp1.DBConnectio
                   "Falló Cerradura", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //-----------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------------------------------------------------------------------------
         public bool AddElements(string SQL)
         {
             try
@@ -95,7 +95,7 @@ namespace WindowsFormsApp1.DBConnectio
             {
                 SqlCommand comando = new SqlCommand(query, conexion);
                 comando.ExecuteNonQuery();
-                MessageBox.Show("EL ROL DE [" + rol + "] FUE AGREDADO CON EXITO AL USUARIO", "ROL ACTUALIZADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("LOS DATOS FUERON ACTUALIZADOS CORRECTAMENTE", "ACTUALIZADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch
             {
@@ -335,6 +335,15 @@ namespace WindowsFormsApp1.DBConnectio
                 MessageBox.Show("ERROR SQL", "Error de Conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return "";         
+        }
+
+        public int actualizarDatos(string sql)
+        {
+            int fila = 0;
+            SqlCommand sc = new SqlCommand(sql, conexion);
+            sc.CommandType = CommandType.Text;
+            fila = sc.ExecuteNonQuery();
+            return fila;
         }
     }
 }
