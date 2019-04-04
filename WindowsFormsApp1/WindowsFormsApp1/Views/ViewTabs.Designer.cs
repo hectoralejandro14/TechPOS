@@ -115,6 +115,7 @@
             this.JlblBuscar = new System.Windows.Forms.Label();
             this.tabConfiguracionesDeUsuario = new System.Windows.Forms.TabPage();
             this.SgbConfiguraciones = new System.Windows.Forms.GroupBox();
+            this.SbtnAgregarNuevoServicioCU = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.SbtnAgregarUsuario = new System.Windows.Forms.Button();
             this.SgbAsignarRolATrabajador = new System.Windows.Forms.GroupBox();
@@ -156,7 +157,6 @@
             this.idReparacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reparacionTableAdapter = new WindowsFormsApp1.TechPOSdbDataSetTableAdapters.ReparacionTableAdapter();
             this.clienteTableAdapter = new WindowsFormsApp1.TechPOSdbDataSetTableAdapters.ClienteTableAdapter();
-            this.SbtnAgregarNuevoServicioCU = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tabPuntoVenta.SuspendLayout();
             this.tabVenta.SuspendLayout();
@@ -241,7 +241,7 @@
             this.ventaLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
             this.ventaLogoCh.Location = new System.Drawing.Point(6, 6);
             this.ventaLogoCh.Name = "ventaLogoCh";
-            this.ventaLogoCh.Size = new System.Drawing.Size(118, 177);
+            this.ventaLogoCh.Size = new System.Drawing.Size(72, 101);
             this.ventaLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ventaLogoCh.TabIndex = 20;
             this.ventaLogoCh.TabStop = false;
@@ -372,7 +372,7 @@
             // 
             this.CbtnCobrarVenta.BackColor = System.Drawing.Color.DimGray;
             this.CbtnCobrarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.CbtnCobrarVenta.ForeColor = System.Drawing.Color.Turquoise;
+            this.CbtnCobrarVenta.ForeColor = System.Drawing.Color.White;
             this.CbtnCobrarVenta.Location = new System.Drawing.Point(970, 570);
             this.CbtnCobrarVenta.Name = "CbtnCobrarVenta";
             this.CbtnCobrarVenta.Size = new System.Drawing.Size(159, 37);
@@ -385,7 +385,7 @@
             // 
             this.CbtnCancelarVenta.BackColor = System.Drawing.Color.DimGray;
             this.CbtnCancelarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.CbtnCancelarVenta.ForeColor = System.Drawing.Color.Turquoise;
+            this.CbtnCancelarVenta.ForeColor = System.Drawing.Color.White;
             this.CbtnCancelarVenta.Location = new System.Drawing.Point(970, 613);
             this.CbtnCancelarVenta.Name = "CbtnCancelarVenta";
             this.CbtnCancelarVenta.Size = new System.Drawing.Size(159, 37);
@@ -523,7 +523,7 @@
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.33448F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.66552F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 92F));
-            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 221F));
+            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 223F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.33448F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.66552F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 92F));
@@ -561,7 +561,7 @@
             // txtMarca
             // 
             this.txtMarca.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMarca.Location = new System.Drawing.Point(219, 3);
+            this.txtMarca.Location = new System.Drawing.Point(218, 3);
             this.txtMarca.Multiline = true;
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(386, 29);
@@ -571,7 +571,7 @@
             // 
             this.SlblModelo.AutoSize = true;
             this.SlblModelo.ForeColor = System.Drawing.Color.Black;
-            this.SlblModelo.Location = new System.Drawing.Point(614, 0);
+            this.SlblModelo.Location = new System.Drawing.Point(612, 0);
             this.SlblModelo.Name = "SlblModelo";
             this.SlblModelo.Size = new System.Drawing.Size(82, 34);
             this.SlblModelo.TabIndex = 19;
@@ -583,7 +583,7 @@
             this.ccbTipoServicio1.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ccbTipoServicio1.FormattingEnabled = true;
             this.ccbTipoServicio1.IntegralHeight = false;
-            this.ccbTipoServicio1.Location = new System.Drawing.Point(219, 46);
+            this.ccbTipoServicio1.Location = new System.Drawing.Point(218, 46);
             this.ccbTipoServicio1.Name = "ccbTipoServicio1";
             this.ccbTipoServicio1.Size = new System.Drawing.Size(386, 42);
             this.ccbTipoServicio1.TabIndex = 46;
@@ -591,7 +591,7 @@
             // txtModelo
             // 
             this.txtModelo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModelo.Location = new System.Drawing.Point(706, 3);
+            this.txtModelo.Location = new System.Drawing.Point(704, 3);
             this.txtModelo.Multiline = true;
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(212, 29);
@@ -619,10 +619,10 @@
             // txtDescripcionDeFalla
             // 
             this.txtDescripcionDeFalla.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcionDeFalla.Location = new System.Drawing.Point(219, 100);
+            this.txtDescripcionDeFalla.Location = new System.Drawing.Point(218, 100);
             this.txtDescripcionDeFalla.Multiline = true;
             this.txtDescripcionDeFalla.Name = "txtDescripcionDeFalla";
-            this.txtDescripcionDeFalla.Size = new System.Drawing.Size(389, 37);
+            this.txtDescripcionDeFalla.Size = new System.Drawing.Size(388, 37);
             this.txtDescripcionDeFalla.TabIndex = 25;
             // 
             // lblIdEquipo
@@ -763,7 +763,7 @@
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.95349F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.04651F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
-            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 275F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 277F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.95349F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.04651F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
@@ -792,7 +792,6 @@
             this.layoutCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.layoutCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.layoutCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            //this.layoutCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.layoutCliente.Size = new System.Drawing.Size(801, 97);
             this.layoutCliente.TabIndex = 0;
             // 
@@ -842,7 +841,7 @@
             // 
             this.SlblTelefono.AutoSize = true;
             this.SlblTelefono.ForeColor = System.Drawing.Color.Black;
-            this.SlblTelefono.Location = new System.Drawing.Point(430, 0);
+            this.SlblTelefono.Location = new System.Drawing.Point(428, 0);
             this.SlblTelefono.Name = "SlblTelefono";
             this.SlblTelefono.Size = new System.Drawing.Size(89, 48);
             this.SlblTelefono.TabIndex = 5;
@@ -852,7 +851,7 @@
             // 
             this.SlblCorreo.AutoSize = true;
             this.SlblCorreo.ForeColor = System.Drawing.Color.Black;
-            this.SlblCorreo.Location = new System.Drawing.Point(430, 48);
+            this.SlblCorreo.Location = new System.Drawing.Point(428, 48);
             this.SlblCorreo.Name = "SlblCorreo";
             this.SlblCorreo.Size = new System.Drawing.Size(84, 34);
             this.SlblCorreo.TabIndex = 6;
@@ -861,7 +860,7 @@
             // txtTelefono
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(528, 3);
+            this.txtTelefono.Location = new System.Drawing.Point(526, 3);
             this.txtTelefono.Multiline = true;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(266, 29);
@@ -871,7 +870,7 @@
             // txtCorreo
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.Location = new System.Drawing.Point(528, 51);
+            this.txtCorreo.Location = new System.Drawing.Point(526, 51);
             this.txtCorreo.Multiline = true;
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(266, 29);
@@ -882,7 +881,7 @@
             this.SbtnCancelar.BackColor = System.Drawing.Color.DimGray;
             this.SbtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SbtnCancelar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SbtnCancelar.ForeColor = System.Drawing.Color.Turquoise;
+            this.SbtnCancelar.ForeColor = System.Drawing.Color.White;
             this.SbtnCancelar.Location = new System.Drawing.Point(1048, 148);
             this.SbtnCancelar.Name = "SbtnCancelar";
             this.SbtnCancelar.Size = new System.Drawing.Size(120, 38);
@@ -897,7 +896,7 @@
             this.btnAddClientH.BackColor = System.Drawing.Color.DimGray;
             this.btnAddClientH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddClientH.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddClientH.ForeColor = System.Drawing.Color.Turquoise;
+            this.btnAddClientH.ForeColor = System.Drawing.Color.White;
             this.btnAddClientH.Location = new System.Drawing.Point(922, 77);
             this.btnAddClientH.Name = "btnAddClientH";
             this.btnAddClientH.Size = new System.Drawing.Size(248, 38);
@@ -932,7 +931,7 @@
             this.btnAgregarCliente.BackColor = System.Drawing.Color.DimGray;
             this.btnAgregarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregarCliente.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarCliente.ForeColor = System.Drawing.Color.Turquoise;
+            this.btnAgregarCliente.ForeColor = System.Drawing.Color.White;
             this.btnAgregarCliente.Location = new System.Drawing.Point(950, 153);
             this.btnAgregarCliente.Name = "btnAgregarCliente";
             this.btnAgregarCliente.Size = new System.Drawing.Size(120, 38);
@@ -947,7 +946,7 @@
             this.btnPedirPieza.BackColor = System.Drawing.Color.DimGray;
             this.btnPedirPieza.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPedirPieza.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPedirPieza.ForeColor = System.Drawing.Color.Turquoise;
+            this.btnPedirPieza.ForeColor = System.Drawing.Color.White;
             this.btnPedirPieza.Location = new System.Drawing.Point(877, 621);
             this.btnPedirPieza.Name = "btnPedirPieza";
             this.btnPedirPieza.Size = new System.Drawing.Size(132, 43);
@@ -961,7 +960,7 @@
             this.btnAgregrEquipos.BackColor = System.Drawing.Color.DimGray;
             this.btnAgregrEquipos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregrEquipos.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregrEquipos.ForeColor = System.Drawing.Color.Turquoise;
+            this.btnAgregrEquipos.ForeColor = System.Drawing.Color.White;
             this.btnAgregrEquipos.Location = new System.Drawing.Point(1015, 621);
             this.btnAgregrEquipos.Name = "btnAgregrEquipos";
             this.btnAgregrEquipos.Size = new System.Drawing.Size(132, 43);
@@ -975,7 +974,7 @@
             this.btnLimpiarCampos.BackColor = System.Drawing.Color.DimGray;
             this.btnLimpiarCampos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLimpiarCampos.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiarCampos.ForeColor = System.Drawing.Color.Turquoise;
+            this.btnLimpiarCampos.ForeColor = System.Drawing.Color.White;
             this.btnLimpiarCampos.Location = new System.Drawing.Point(1153, 621);
             this.btnLimpiarCampos.Name = "btnLimpiarCampos";
             this.btnLimpiarCampos.Size = new System.Drawing.Size(132, 43);
@@ -989,7 +988,7 @@
             this.recibirLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
             this.recibirLogoCh.Location = new System.Drawing.Point(6, 6);
             this.recibirLogoCh.Name = "recibirLogoCh";
-            this.recibirLogoCh.Size = new System.Drawing.Size(89, 142);
+            this.recibirLogoCh.Size = new System.Drawing.Size(63, 97);
             this.recibirLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.recibirLogoCh.TabIndex = 51;
             this.recibirLogoCh.TabStop = false;
@@ -1018,7 +1017,7 @@
             this.reparacionLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
             this.reparacionLogoCh.Location = new System.Drawing.Point(6, 6);
             this.reparacionLogoCh.Name = "reparacionLogoCh";
-            this.reparacionLogoCh.Size = new System.Drawing.Size(118, 177);
+            this.reparacionLogoCh.Size = new System.Drawing.Size(66, 93);
             this.reparacionLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.reparacionLogoCh.TabIndex = 11;
             this.reparacionLogoCh.TabStop = false;
@@ -1135,11 +1134,24 @@
             this.SgbConfiguraciones.TabStop = false;
             this.SgbConfiguraciones.Text = "Configuraciones";
             // 
+            // SbtnAgregarNuevoServicioCU
+            // 
+            this.SbtnAgregarNuevoServicioCU.BackColor = System.Drawing.Color.DimGray;
+            this.SbtnAgregarNuevoServicioCU.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SbtnAgregarNuevoServicioCU.ForeColor = System.Drawing.Color.White;
+            this.SbtnAgregarNuevoServicioCU.Location = new System.Drawing.Point(115, 126);
+            this.SbtnAgregarNuevoServicioCU.Name = "SbtnAgregarNuevoServicioCU";
+            this.SbtnAgregarNuevoServicioCU.Size = new System.Drawing.Size(277, 37);
+            this.SbtnAgregarNuevoServicioCU.TabIndex = 5;
+            this.SbtnAgregarNuevoServicioCU.Text = "Agregar Nuevo Servicio";
+            this.SbtnAgregarNuevoServicioCU.UseVisualStyleBackColor = false;
+            this.SbtnAgregarNuevoServicioCU.Click += new System.EventHandler(this.SbtnAgregarNuevoServicioCU_Click_1);
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.DimGray;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.ForeColor = System.Drawing.Color.Turquoise;
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(115, 83);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(277, 37);
@@ -1151,7 +1163,7 @@
             // 
             this.SbtnAgregarUsuario.BackColor = System.Drawing.Color.DimGray;
             this.SbtnAgregarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.SbtnAgregarUsuario.ForeColor = System.Drawing.Color.Turquoise;
+            this.SbtnAgregarUsuario.ForeColor = System.Drawing.Color.White;
             this.SbtnAgregarUsuario.Location = new System.Drawing.Point(115, 40);
             this.SbtnAgregarUsuario.Name = "SbtnAgregarUsuario";
             this.SbtnAgregarUsuario.Size = new System.Drawing.Size(277, 37);
@@ -1178,7 +1190,7 @@
             // 
             this.SbtnAsiganrRolAUsuario.BackColor = System.Drawing.Color.DimGray;
             this.SbtnAsiganrRolAUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.SbtnAsiganrRolAUsuario.ForeColor = System.Drawing.Color.Turquoise;
+            this.SbtnAsiganrRolAUsuario.ForeColor = System.Drawing.Color.White;
             this.SbtnAsiganrRolAUsuario.Location = new System.Drawing.Point(428, 173);
             this.SbtnAsiganrRolAUsuario.Name = "SbtnAsiganrRolAUsuario";
             this.SbtnAsiganrRolAUsuario.Size = new System.Drawing.Size(146, 41);
@@ -1254,7 +1266,7 @@
             // 
             this.SbtnGuardarRol.BackColor = System.Drawing.Color.DimGray;
             this.SbtnGuardarRol.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.SbtnGuardarRol.ForeColor = System.Drawing.Color.Turquoise;
+            this.SbtnGuardarRol.ForeColor = System.Drawing.Color.White;
             this.SbtnGuardarRol.Location = new System.Drawing.Point(458, 84);
             this.SbtnGuardarRol.Name = "SbtnGuardarRol";
             this.SbtnGuardarRol.Size = new System.Drawing.Size(116, 41);
@@ -1268,7 +1280,7 @@
             this.pictureBox4.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
             this.pictureBox4.Location = new System.Drawing.Point(6, 3);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(118, 177);
+            this.pictureBox4.Size = new System.Drawing.Size(59, 92);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
@@ -1310,7 +1322,7 @@
             this.ordenesLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
             this.ordenesLogoCh.Location = new System.Drawing.Point(6, 6);
             this.ordenesLogoCh.Name = "ordenesLogoCh";
-            this.ordenesLogoCh.Size = new System.Drawing.Size(118, 177);
+            this.ordenesLogoCh.Size = new System.Drawing.Size(61, 95);
             this.ordenesLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ordenesLogoCh.TabIndex = 5;
             this.ordenesLogoCh.TabStop = false;
@@ -1415,7 +1427,7 @@
             this.ClientesLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
             this.ClientesLogoCh.Location = new System.Drawing.Point(6, 6);
             this.ClientesLogoCh.Name = "ClientesLogoCh";
-            this.ClientesLogoCh.Size = new System.Drawing.Size(118, 177);
+            this.ClientesLogoCh.Size = new System.Drawing.Size(59, 94);
             this.ClientesLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ClientesLogoCh.TabIndex = 4;
             this.ClientesLogoCh.TabStop = false;
@@ -1501,19 +1513,6 @@
             // clienteTableAdapter
             // 
             this.clienteTableAdapter.ClearBeforeFill = true;
-            // 
-            // SbtnAgregarNuevoServicioCU
-            // 
-            this.SbtnAgregarNuevoServicioCU.BackColor = System.Drawing.Color.DimGray;
-            this.SbtnAgregarNuevoServicioCU.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.SbtnAgregarNuevoServicioCU.ForeColor = System.Drawing.Color.Turquoise;
-            this.SbtnAgregarNuevoServicioCU.Location = new System.Drawing.Point(115, 126);
-            this.SbtnAgregarNuevoServicioCU.Name = "SbtnAgregarNuevoServicioCU";
-            this.SbtnAgregarNuevoServicioCU.Size = new System.Drawing.Size(277, 37);
-            this.SbtnAgregarNuevoServicioCU.TabIndex = 5;
-            this.SbtnAgregarNuevoServicioCU.Text = "Agregar Nuevo Servicio";
-            this.SbtnAgregarNuevoServicioCU.UseVisualStyleBackColor = false;
-            this.SbtnAgregarNuevoServicioCU.Click += new System.EventHandler(this.SbtnAgregarNuevoServicioCU_Click_1);
             // 
             // pictureBox3
             // 

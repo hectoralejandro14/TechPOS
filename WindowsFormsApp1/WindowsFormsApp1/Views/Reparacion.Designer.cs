@@ -75,7 +75,7 @@
             // 
             this.estadoLblRepa.AutoSize = true;
             this.estadoLblRepa.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.estadoLblRepa.Location = new System.Drawing.Point(202, 0);
+            this.estadoLblRepa.Location = new System.Drawing.Point(201, 0);
             this.estadoLblRepa.Name = "estadoLblRepa";
             this.estadoLblRepa.Size = new System.Drawing.Size(70, 34);
             this.estadoLblRepa.TabIndex = 1;
@@ -95,7 +95,7 @@
             // 
             this.modeloLblRepa.AutoSize = true;
             this.modeloLblRepa.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.modeloLblRepa.Location = new System.Drawing.Point(202, 37);
+            this.modeloLblRepa.Location = new System.Drawing.Point(201, 37);
             this.modeloLblRepa.Name = "modeloLblRepa";
             this.modeloLblRepa.Size = new System.Drawing.Size(72, 34);
             this.modeloLblRepa.TabIndex = 3;
@@ -157,7 +157,7 @@
             this.idTxtBoxRepa.Enabled = false;
             this.idTxtBoxRepa.Location = new System.Drawing.Point(80, 3);
             this.idTxtBoxRepa.Name = "idTxtBoxRepa";
-            this.idTxtBoxRepa.Size = new System.Drawing.Size(116, 20);
+            this.idTxtBoxRepa.Size = new System.Drawing.Size(115, 20);
             this.idTxtBoxRepa.TabIndex = 12;
             // 
             // MarcaTxtBox
@@ -165,7 +165,7 @@
             this.MarcaTxtBox.Enabled = false;
             this.MarcaTxtBox.Location = new System.Drawing.Point(80, 40);
             this.MarcaTxtBox.Name = "MarcaTxtBox";
-            this.MarcaTxtBox.Size = new System.Drawing.Size(116, 20);
+            this.MarcaTxtBox.Size = new System.Drawing.Size(115, 20);
             this.MarcaTxtBox.TabIndex = 13;
             // 
             // fallaTxtBoxRepa
@@ -180,7 +180,7 @@
             // ModeloTxtBoxRepa
             // 
             this.ModeloTxtBoxRepa.Enabled = false;
-            this.ModeloTxtBoxRepa.Location = new System.Drawing.Point(293, 40);
+            this.ModeloTxtBoxRepa.Location = new System.Drawing.Point(292, 40);
             this.ModeloTxtBoxRepa.Name = "ModeloTxtBoxRepa";
             this.ModeloTxtBoxRepa.Size = new System.Drawing.Size(120, 20);
             this.ModeloTxtBoxRepa.TabIndex = 16;
@@ -214,7 +214,7 @@
             this.ActualizarBtn.BackColor = System.Drawing.Color.DimGray;
             this.ActualizarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ActualizarBtn.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.ActualizarBtn.ForeColor = System.Drawing.Color.Turquoise;
+            this.ActualizarBtn.ForeColor = System.Drawing.Color.White;
             this.ActualizarBtn.Location = new System.Drawing.Point(32, 522);
             this.ActualizarBtn.Name = "ActualizarBtn";
             this.ActualizarBtn.Size = new System.Drawing.Size(104, 34);
@@ -228,7 +228,7 @@
             this.AbonarBtn.BackColor = System.Drawing.Color.DimGray;
             this.AbonarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AbonarBtn.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.AbonarBtn.ForeColor = System.Drawing.Color.Turquoise;
+            this.AbonarBtn.ForeColor = System.Drawing.Color.White;
             this.AbonarBtn.Location = new System.Drawing.Point(261, 522);
             this.AbonarBtn.Name = "AbonarBtn";
             this.AbonarBtn.Size = new System.Drawing.Size(82, 34);
@@ -242,7 +242,7 @@
             this.AceptarBtn.BackColor = System.Drawing.Color.DimGray;
             this.AceptarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AceptarBtn.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.AceptarBtn.ForeColor = System.Drawing.Color.Turquoise;
+            this.AceptarBtn.ForeColor = System.Drawing.Color.White;
             this.AceptarBtn.Location = new System.Drawing.Point(359, 522);
             this.AceptarBtn.Name = "AceptarBtn";
             this.AceptarBtn.Size = new System.Drawing.Size(90, 34);
@@ -256,7 +256,7 @@
             this.piezaOrderbtnC.BackColor = System.Drawing.Color.DimGray;
             this.piezaOrderbtnC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.piezaOrderbtnC.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.piezaOrderbtnC.ForeColor = System.Drawing.Color.Turquoise;
+            this.piezaOrderbtnC.ForeColor = System.Drawing.Color.White;
             this.piezaOrderbtnC.Location = new System.Drawing.Point(159, 522);
             this.piezaOrderbtnC.Name = "piezaOrderbtnC";
             this.piezaOrderbtnC.Size = new System.Drawing.Size(82, 34);
@@ -268,7 +268,7 @@
             // estadoCBoxC
             // 
             this.estadoCBoxC.FormattingEnabled = true;
-            this.estadoCBoxC.Location = new System.Drawing.Point(293, 3);
+            this.estadoCBoxC.Location = new System.Drawing.Point(292, 3);
             this.estadoCBoxC.Name = "estadoCBoxC";
             this.estadoCBoxC.Size = new System.Drawing.Size(121, 21);
             this.estadoCBoxC.TabIndex = 24;
@@ -279,7 +279,7 @@
             this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.69347F));
             this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.30653F));
             this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 91F));
-            this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 138F));
+            this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 139F));
             this.layDatosReparacion.Controls.Add(this.estadoCBoxC, 3, 0);
             this.layDatosReparacion.Controls.Add(this.idLblRepa, 0, 0);
             this.layDatosReparacion.Controls.Add(this.idTxtBoxRepa, 1, 0);
