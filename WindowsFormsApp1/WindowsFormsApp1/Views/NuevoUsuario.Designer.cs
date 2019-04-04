@@ -115,6 +115,7 @@
             this.CtxtTelefonoU.Name = "CtxtTelefonoU";
             this.CtxtTelefonoU.Size = new System.Drawing.Size(235, 20);
             this.CtxtTelefonoU.TabIndex = 7;
+            this.CtxtTelefonoU.TextChanged += new System.EventHandler(this.CtxtTelefonoU_TextChanged);
             this.CtxtTelefonoU.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CtxtTelefonoU_KeyPress);
             // 
             // btnAceptarr
