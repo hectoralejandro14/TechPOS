@@ -49,6 +49,12 @@ namespace WindowsFormsApp1
                 AbonoTxtBox.Text = Convert.ToString(dr["Anticipo"]);
             }
             conn.CerrarConexion();
+            //---------------------------------------------------------------------------------------------------------------------------
+            StxtCantidadRestanteAPagar.Enabled = false;
+            StxtNuevoAbonoCliente.Enabled = true;
+            //----------------------------------------------------------------------------------------------------------------------------
+            decimal restante = Convert.ToDecimal(TotalTxtBox.Text) - Convert.ToDecimal(AbonoTxtBox.Text);
+            StxtCantidadRestanteAPagar.Text = "" + restante;
 
         }
         private void label1_Click(object sender, EventArgs e)
@@ -63,14 +69,38 @@ namespace WindowsFormsApp1
 
         private void AbonarBtn_Click(object sender, EventArgs e)
         {
-
+            DBConnectio.Connection con = new DBConnectio.Connection();
+            con.AbrirConexion();
+            if (StxtNuevoAbonoCliente.Text.Equals("") || Convert.ToDouble(StxtNuevoAbonoCliente.Text)<=0)
+            {
+                MessageBox.Show("NO SE PUEDE REALIZAR UN ABONO AL EQUIPO CON IDENTIFICADOR [" + idTxtBoxRepa.Text + "] DEBIDO A LA LA EXISTENCIA DE CAMPO VACIO  O CANTIDAD MENOR O IGUAL A 0", "ABONO NO REALIZADO", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            else
+            {
+                decimal restante = Convert.ToDecimal(TotalTxtBox.Text) - Convert.ToDecimal(AbonoTxtBox.Text);
+                DialogResult resultado = MessageBox.Show("¿SEGURO QUE DESEA ABONAR AL EQUIPO " + idTxtBoxRepa.Text + "?", "ABONO", MessageBoxButtons.YesNo);
+                if (resultado == DialogResult.Yes)
+                {
+                    con.ActualizarDatos("UPDATE Reparacion set Anticipo = " + StxtNuevoAbonoCliente.Text + " WHERE Id ='" + idTxtBoxRepa.Text + "'");
+                    StxtNuevoAbonoCliente.Text = "";
+                    /*SqlDataReader dr = conn.consulta("SELECT Anticipo FROM Reparacion WHERE Id ='" + idTxtBoxRepa.Text + "'");
+                    if (dr.Read())
+                    {
+                        AbonoTxtBox.Text = Convert.ToString(dr["Anticipo"]);
+                    }*/
+                    StxtCantidadRestanteAPagar.Text = "" + restante;
+                }
+                else if (resultado == DialogResult.No)
+                {
+                    this.Hide();
+                }              
+            }
+            con.CerrarConexion();
         }
-
         private void AceptarBtn_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void ActualizarBtn_Click(object sender, EventArgs e)
         {
             conn.AbrirConexion();
@@ -78,13 +108,11 @@ namespace WindowsFormsApp1
             conn.CerrarConexion();
             MessageBox.Show("Realizado con exito");
         }
-
         private void piezaOrderbtnC_Click(object sender, EventArgs e)
         {
             Ecargar_Pieza p = new Ecargar_Pieza(idTxtBoxRepa.Text, ModeloTxtBoxRepa.Text, MarcaTxtBox.Text);
             p.Show();
         }
-
         private void dRapidoTxtBox_TextChanged(object sender, EventArgs e)
         {
 

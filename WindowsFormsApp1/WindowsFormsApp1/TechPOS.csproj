@@ -78,6 +78,12 @@
     <Compile Include="Views\DatosCliente.Designer.cs">
       <DependentUpon>DatosCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\DatosPieza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DatosPieza.Designer.cs">
+      <DependentUpon>DatosPieza.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Ecargar Pieza.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +180,9 @@
     <EmbeddedResource Include="Views\DatosCliente.resx">
       <DependentUpon>DatosCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\DatosPieza.resx">
+      <DependentUpon>DatosPieza.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Ecargar Pieza.resx">
       <DependentUpon>Ecargar Pieza.cs</DependentUpon>
     </EmbeddedResource>
@@ -245,6 +254,8 @@
     <None Include="Images\logoUp.png" />
     <Content Include="Images\lupa.png" />
     <Content Include="Images\sub-fondo.png" />
+    <None Include="Resources\refrescar.png" />
+    <Content Include="Resources\refresh.png" />
     <Content Include="Resources\sub_fondo.png" />
     <None Include="Resources\logoUp.png" />
     <Content Include="Resources\lupa.png" />

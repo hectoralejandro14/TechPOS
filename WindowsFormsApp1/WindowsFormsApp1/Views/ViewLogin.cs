@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Drawing;
-using System.Windows.Forms;
-using WindowsFormsApp1.Views;
 using System.Security.Cryptography;
 using System.Text;
+using System.Windows.Forms;
 using WindowsFormsApp1.DBConnectio;
+using WindowsFormsApp1.Views;
 
 namespace WindowsFormsApp1
 {
@@ -15,7 +14,8 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             //Cambiar el tipo de letra que se muestra en el TextBox
-            txtContrasena.PasswordChar = '*';
+            //txtContrasena.PasswordChar = '*';
+            
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
