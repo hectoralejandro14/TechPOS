@@ -73,27 +73,38 @@ namespace WindowsFormsApp1
             con.AbrirConexion();
             if (StxtNuevoAbonoCliente.Text.Equals("") || Convert.ToDouble(StxtNuevoAbonoCliente.Text)<=0)
             {
-                MessageBox.Show("NO SE PUEDE REALIZAR UN ABONO AL EQUIPO CON IDENTIFICADOR [" + idTxtBoxRepa.Text + "] DEBIDO A LA LA EXISTENCIA DE CAMPO VACIO  O CANTIDAD MENOR O IGUAL A 0", "ABONO NO REALIZADO", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("No se puede realizar un abono al equipo con identificador [" + idTxtBoxRepa.Text + "] debido a la existencia de campos vacios o un abono menor a 0.", "Abono no realizado.", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
             else
             {
                 decimal restante = Convert.ToDecimal(TotalTxtBox.Text) - Convert.ToDecimal(AbonoTxtBox.Text);
-                DialogResult resultado = MessageBox.Show("¿SEGURO QUE DESEA ABONAR AL EQUIPO " + idTxtBoxRepa.Text + "?", "ABONO", MessageBoxButtons.YesNo);
-                if (resultado == DialogResult.Yes)
+                if (Convert.ToDecimal(AbonoTxtBox.Text) > restante)
                 {
-                    con.ActualizarDatos("UPDATE Reparacion set Anticipo = " + StxtNuevoAbonoCliente.Text + " WHERE Id ='" + idTxtBoxRepa.Text + "'");
-                    StxtNuevoAbonoCliente.Text = "";
-                    /*SqlDataReader dr = conn.consulta("SELECT Anticipo FROM Reparacion WHERE Id ='" + idTxtBoxRepa.Text + "'");
-                    if (dr.Read())
-                    {
-                        AbonoTxtBox.Text = Convert.ToString(dr["Anticipo"]);
-                    }*/
-                    StxtCantidadRestanteAPagar.Text = "" + restante;
+                    MessageBox.Show("La reparación esta completamente pagada.","",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 }
-                else if (resultado == DialogResult.No)
+                else
                 {
-                    this.Hide();
-                }              
+                    DialogResult resultado = MessageBox.Show("¿SEGURO QUE DESEA ABONAR AL EQUIPO " + idTxtBoxRepa.Text + "?", "ABONO", MessageBoxButtons.YesNo);
+                    if (resultado == DialogResult.Yes)
+                    {
+                        //AbonoTxtBox - TotalTxtBox < StxtNuevoAbonoCliente
+                        if (((Convert.ToDecimal(AbonoTxtBox.Text)) + (Convert.ToDecimal(StxtNuevoAbonoCliente.Text))) <= (Convert.ToDecimal(TotalTxtBox.Text)))
+                        {
+                            con.ActualizarDatos("UPDATE Reparacion set Anticipo = " + StxtNuevoAbonoCliente.Text + "+Anticipo WHERE Id ='" + idTxtBoxRepa.Text + "'");
+                            StxtNuevoAbonoCliente.Text = "";
+                            StxtCantidadRestanteAPagar.Text = "" + restante;
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se puede recibir abono porque excede el limite del total del servicio.", "Advertencia.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            StxtNuevoAbonoCliente.Text = "";
+                        }
+                    }
+                    else if (resultado == DialogResult.No)
+                    {
+                        this.Hide();
+                    }
+                }
             }
             con.CerrarConexion();
         }

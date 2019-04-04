@@ -86,8 +86,7 @@ namespace WindowsFormsApp1.Views
             tableOrdenes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             //------------------------------------------------------------------------------------------------------------------------------------------------------
             colores();
-        }
-       
+        }   
         private void linkCerrarSesion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
@@ -693,6 +692,7 @@ namespace WindowsFormsApp1.Views
         private void SbtnAgregarUsuario_Click(object sender, EventArgs e)
         {
             NuevoUsuario nuevoUsuario = new NuevoUsuario();
+            nuevoUsuario.PeticionDe();
             nuevoUsuario.Show();
         }
         //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -709,7 +709,6 @@ namespace WindowsFormsApp1.Views
             lblIdCliente.Text = Convert.ToString(idCliente);
             connection.CerrarConexion();
         }
-
         public void GenerarIdEquipo()
         {
             Connection connection = new Connection();
@@ -718,7 +717,6 @@ namespace WindowsFormsApp1.Views
             lblIdEquipo.Text = Convert.ToString(idReparacion);
             connection.CerrarConexion();
         }
-
         public void Bienvenido(string usuario)
         {
             this.CNombreUsuarioLblVenta.Text = usuario;
@@ -768,7 +766,6 @@ namespace WindowsFormsApp1.Views
             }
             e.ItemWidth = 260;
         }
-
         private void txtBuscarCliente_TextChanged(object sender, EventArgs e)
         {
             if (txtBuscarCliente.Text=="")
@@ -776,7 +773,6 @@ namespace WindowsFormsApp1.Views
                 lblAvisoNoCliente.Hide();
             }
         }
-
         private void btnAddClientH_Click_1(object sender, EventArgs e)
         {
             if (txtNombre.Text!=""||txtApellido.Text!=""||txtTelefono.Text!=""||txtCorreo.Text!="")
@@ -823,7 +819,6 @@ namespace WindowsFormsApp1.Views
             }
             connection.CerrarConexion();
         }
-
         private void txtCliente_TextChanged(object sender, EventArgs e)
         {
             Connection connection = new Connection();
@@ -834,7 +829,6 @@ namespace WindowsFormsApp1.Views
             }
             connection.CerrarConexion();
         }
-
         private void dgClientes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow fila = dgClientes.Rows[e.RowIndex];
@@ -892,7 +886,6 @@ namespace WindowsFormsApp1.Views
             g.FillRectangle(sb, e.Bounds);
             g.DrawString(tp.Text, tabPuntoVenta.Font, new SolidBrush(Color.Black), headerRect, sf);
         }
-
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -904,7 +897,6 @@ namespace WindowsFormsApp1.Views
             NuevoServicio nuevo = new NuevoServicio();
             nuevo.Show();
         }
-
         private void JtxtBuscar2_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar==(char)Keys.Enter)
@@ -915,7 +907,6 @@ namespace WindowsFormsApp1.Views
                 connection.CerrarConexion();
             }
         }
-
         private void pBoxBuscarRep_Click(object sender, EventArgs e)
         {
             Connection connection = new Connection();
@@ -923,7 +914,6 @@ namespace WindowsFormsApp1.Views
             CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id where Reparacion.Id = " + JtxtBuscar2.Text);
             connection.CerrarConexion();
         }
-
         private void txtBuscarCliente_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar==(char)Keys.Enter)
@@ -990,7 +980,6 @@ namespace WindowsFormsApp1.Views
                 }
             }
         }
-
         private void tableOrdenes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -1013,27 +1002,23 @@ namespace WindowsFormsApp1.Views
             {
             }
         }
-
         private void ordenesTab_Enter(object sender, EventArgs e)
         {
             conexion.AbrirConexion();
             tableOrdenes.DataSource = conexion.buscarReparacion("SELECT * FROM Pieza order by FechaEncargada asc");
             conexion.CerrarConexion();
         }
-
         private void SlblPiezasOrdenadas_MouseMove(object sender, MouseEventArgs e)
         {
             conexion.AbrirConexion();
             tableOrdenes.DataSource = conexion.buscarReparacion("SELECT * FROM Pieza order by FechaEncargada asc");
             conexion.CerrarConexion();
         }
-
         private void JbtnaddServicio_Click(object sender, EventArgs e)
         {
             NuevoServicio nuevo = new NuevoServicio();
             nuevo.Show();
         }
-
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             if(JradioTodos.Checked){
@@ -1050,10 +1035,38 @@ namespace WindowsFormsApp1.Views
                 JProceso_CheckedChanged(sender, e);
             }
         }
-
         private void ccbTipoServicio1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+        private void SgbAsignarRolATrabajador_Enter(object sender, EventArgs e)
+        {
+
+        }
+        private void SbtnNuevoServicioRE_Click(object sender, EventArgs e)
+        {
+            NuevoServicio nuevoServicio = new NuevoServicio();
+            nuevoServicio.Show();
+        }
+        private void txtTotal_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTotal.Text == "")
+            {
+                txtAnticipo.Text = "";
+            }
+            else
+            {
+                txtAnticipo.Text = "" + (Convert.ToDecimal(txtTotal.Text)) / 2;
+            }
+        }
+
+        private void txtTelefono_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTelefono.Text.Length > 10)
+            {
+                MessageBox.Show("Esta excediendo la longitud de número telefónico.", "Teléfono no válido.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtTelefono.Text = "";
+            }
         }
     }
 }

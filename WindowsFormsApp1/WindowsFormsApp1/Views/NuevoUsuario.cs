@@ -58,7 +58,9 @@ namespace WindowsFormsApp1.Views
                             }
                             else if (resultado == DialogResult.No)
                             {
+                                ViewLogin login = new ViewLogin();
                                 this.Hide();
+                                login.Show();
                             }
                             conexion.CerrarConexion();
                         }
@@ -274,6 +276,16 @@ namespace WindowsFormsApp1.Views
                     }
                 }
             }
+        }
+
+        private void CtxtTelefonoU_TextChanged(object sender, EventArgs e)
+        {
+            if (CtxtTelefonoU.Text.Length > 10)
+            {
+                MessageBox.Show("Esta excediendo la longitud de número telefónico.", "Teléfono no válido.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                CtxtTelefonoU.Text = "";
+            }
+            
         }
         //public void PeticionDe()
         //{
