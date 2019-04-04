@@ -48,7 +48,7 @@
             this.PBoxPieza.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
             this.PBoxPieza.Location = new System.Drawing.Point(12, 12);
             this.PBoxPieza.Name = "PBoxPieza";
-            this.PBoxPieza.Size = new System.Drawing.Size(118, 177);
+            this.PBoxPieza.Size = new System.Drawing.Size(56, 86);
             this.PBoxPieza.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PBoxPieza.TabIndex = 5;
             this.PBoxPieza.TabStop = false;
@@ -135,7 +135,7 @@
             this.BtnAceptarPieza.BackColor = System.Drawing.Color.DimGray;
             this.BtnAceptarPieza.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnAceptarPieza.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAceptarPieza.ForeColor = System.Drawing.Color.Turquoise;
+            this.BtnAceptarPieza.ForeColor = System.Drawing.Color.White;
             this.BtnAceptarPieza.Location = new System.Drawing.Point(69, 370);
             this.BtnAceptarPieza.Name = "BtnAceptarPieza";
             this.BtnAceptarPieza.Size = new System.Drawing.Size(80, 37);
@@ -149,7 +149,7 @@
             this.btnCancelarPieza.BackColor = System.Drawing.Color.DimGray;
             this.btnCancelarPieza.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelarPieza.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelarPieza.ForeColor = System.Drawing.Color.Turquoise;
+            this.btnCancelarPieza.ForeColor = System.Drawing.Color.White;
             this.btnCancelarPieza.Location = new System.Drawing.Point(340, 370);
             this.btnCancelarPieza.Name = "btnCancelarPieza";
             this.btnCancelarPieza.Size = new System.Drawing.Size(83, 37);
@@ -164,7 +164,7 @@
             this.btnModifcarPieza.BackColor = System.Drawing.Color.DimGray;
             this.btnModifcarPieza.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnModifcarPieza.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModifcarPieza.ForeColor = System.Drawing.Color.Turquoise;
+            this.btnModifcarPieza.ForeColor = System.Drawing.Color.White;
             this.btnModifcarPieza.Location = new System.Drawing.Point(204, 370);
             this.btnModifcarPieza.Name = "btnModifcarPieza";
             this.btnModifcarPieza.Size = new System.Drawing.Size(80, 37);

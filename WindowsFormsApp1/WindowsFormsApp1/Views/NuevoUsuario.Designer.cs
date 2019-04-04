@@ -122,7 +122,7 @@
             this.btnAceptarr.BackColor = System.Drawing.Color.DimGray;
             this.btnAceptarr.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAceptarr.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.btnAceptarr.ForeColor = System.Drawing.Color.Turquoise;
+            this.btnAceptarr.ForeColor = System.Drawing.Color.White;
             this.btnAceptarr.Location = new System.Drawing.Point(423, 464);
             this.btnAceptarr.Name = "btnAceptarr";
             this.btnAceptarr.Size = new System.Drawing.Size(93, 39);
@@ -136,7 +136,7 @@
             this.btnCancelar.BackColor = System.Drawing.Color.DimGray;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.btnCancelar.ForeColor = System.Drawing.Color.Turquoise;
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.Location = new System.Drawing.Point(291, 464);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(103, 39);
