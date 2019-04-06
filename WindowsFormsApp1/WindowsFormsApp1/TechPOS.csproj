@@ -255,14 +255,16 @@
     <Content Include="Images\lupa.png" />
     <Content Include="Images\sub-fondo.png" />
     <None Include="Resources\refrescar.png" />
+    <None Include="Resources\cerrar.png" />
+    <None Include="Resources\minimazar.png" />
     <Content Include="Resources\refresh.png" />
     <Content Include="Resources\sub_fondo.png" />
     <None Include="Resources\logoUp.png" />
     <Content Include="Resources\lupa.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Betta\" />
     <Folder Include="Models\" />
+    <Folder Include="ViewsBetta\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

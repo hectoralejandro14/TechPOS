@@ -29,159 +29,222 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewLogin));
-            this.btnAceptar = new System.Windows.Forms.Button();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtContrasena = new System.Windows.Forms.TextBox();
-            this.SlinklabelRecuperarContrasena = new System.Windows.Forms.LinkLabel();
-            this.btnCerrar = new System.Windows.Forms.Button();
+            this.SpanelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.SlinklabelNuevoTrabajador = new System.Windows.Forms.LinkLabel();
+            this.SlLInUser = new System.Windows.Forms.LinkLabel();
+            this.SlLInContraseña = new System.Windows.Forms.LinkLabel();
+            this.txtContrasena = new System.Windows.Forms.TextBox();
+            this.SlbTituloLogin = new System.Windows.Forms.Label();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.SlLOlvidasteContasena = new System.Windows.Forms.LinkLabel();
+            this.btnMinimizarAplicacion = new System.Windows.Forms.PictureBox();
+            this.btnCerrarAplicacion = new System.Windows.Forms.PictureBox();
+            this.SlLNuevoUsuarioL = new System.Windows.Forms.LinkLabel();
+            this.SpanelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizarAplicacion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrarAplicacion)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnAceptar
-            // 
-            this.btnAceptar.BackColor = System.Drawing.Color.DimGray;
-            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.ForeColor = System.Drawing.Color.Turquoise;
-            this.btnAceptar.Location = new System.Drawing.Point(286, 389);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(130, 40);
-            this.btnAceptar.TabIndex = 6;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = false;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.ForeColor = System.Drawing.Color.DimGray;
             this.txtUsuario.HideSelection = false;
-            this.txtUsuario.Location = new System.Drawing.Point(375, 287);
+            this.txtUsuario.Location = new System.Drawing.Point(296, 59);
             this.txtUsuario.Multiline = true;
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(234, 26);
-            this.txtUsuario.TabIndex = 4;
-            this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
+            this.txtUsuario.Size = new System.Drawing.Size(454, 26);
+            this.txtUsuario.TabIndex = 1;
+            this.txtUsuario.Text = "USUARIO";
+            this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
+            this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
             // 
-            // label1
+            // SpanelLogo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(223, 283);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 29);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Usuario";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(223, 333);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 29);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Contraseña";
-            // 
-            // txtContrasena
-            // 
-            this.txtContrasena.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContrasena.HideSelection = false;
-            this.txtContrasena.Location = new System.Drawing.Point(375, 336);
-            this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.PasswordChar = '*';
-            this.txtContrasena.Size = new System.Drawing.Size(234, 29);
-            this.txtContrasena.TabIndex = 5;
-            this.txtContrasena.UseSystemPasswordChar = true;
-            this.txtContrasena.TextChanged += new System.EventHandler(this.txtContrasena_TextChanged);
-            this.txtContrasena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContrasena_KeyPress);
-            // 
-            // SlinklabelRecuperarContrasena
-            // 
-            this.SlinklabelRecuperarContrasena.AutoSize = true;
-            this.SlinklabelRecuperarContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SlinklabelRecuperarContrasena.Location = new System.Drawing.Point(12, 496);
-            this.SlinklabelRecuperarContrasena.Name = "SlinklabelRecuperarContrasena";
-            this.SlinklabelRecuperarContrasena.Size = new System.Drawing.Size(220, 24);
-            this.SlinklabelRecuperarContrasena.TabIndex = 9;
-            this.SlinklabelRecuperarContrasena.TabStop = true;
-            this.SlinklabelRecuperarContrasena.Text = "Recuperar Contraseña";
-            this.SlinklabelRecuperarContrasena.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SlinklabelRecuperarContrasena_LinkClicked);
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.Color.DimGray;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.ForeColor = System.Drawing.Color.Turquoise;
-            this.btnCerrar.Location = new System.Drawing.Point(428, 389);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(130, 38);
-            this.btnCerrar.TabIndex = 7;
-            this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.SpanelLogo.BackColor = System.Drawing.Color.DimGray;
+            this.SpanelLogo.Controls.Add(this.pictureBox1);
+            this.SpanelLogo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.SpanelLogo.Location = new System.Drawing.Point(0, 0);
+            this.SpanelLogo.Name = "SpanelLogo";
+            this.SpanelLogo.Size = new System.Drawing.Size(250, 330);
+            this.SpanelLogo.TabIndex = 12;
+            this.SpanelLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SpanelLogo_MouseDown);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
-            this.pictureBox1.Location = new System.Drawing.Point(338, 36);
+            this.pictureBox1.Location = new System.Drawing.Point(40, 42);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(161, 245);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
-            // SlinklabelNuevoTrabajador
+            // SlLInUser
             // 
-            this.SlinklabelNuevoTrabajador.AutoSize = true;
-            this.SlinklabelNuevoTrabajador.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SlinklabelNuevoTrabajador.Location = new System.Drawing.Point(238, 496);
-            this.SlinklabelNuevoTrabajador.Name = "SlinklabelNuevoTrabajador";
-            this.SlinklabelNuevoTrabajador.Size = new System.Drawing.Size(178, 24);
-            this.SlinklabelNuevoTrabajador.TabIndex = 12;
-            this.SlinklabelNuevoTrabajador.TabStop = true;
-            this.SlinklabelNuevoTrabajador.Text = "Nuevo Trabajador";
-            this.SlinklabelNuevoTrabajador.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SlinklabelNuevoTrabajador_LinkClicked);
+            this.SlLInUser.AutoSize = true;
+            this.SlLInUser.LinkColor = System.Drawing.Color.DimGray;
+            this.SlLInUser.Location = new System.Drawing.Point(293, 88);
+            this.SlLInUser.Name = "SlLInUser";
+            this.SlLInUser.Size = new System.Drawing.Size(457, 13);
+            this.SlLInUser.TabIndex = 13;
+            this.SlLInUser.TabStop = true;
+            this.SlLInUser.Text = "___________________________________________________________________________";
+            // 
+            // SlLInContraseña
+            // 
+            this.SlLInContraseña.AutoSize = true;
+            this.SlLInContraseña.LinkColor = System.Drawing.Color.DimGray;
+            this.SlLInContraseña.Location = new System.Drawing.Point(293, 154);
+            this.SlLInContraseña.Name = "SlLInContraseña";
+            this.SlLInContraseña.Size = new System.Drawing.Size(457, 13);
+            this.SlLInContraseña.TabIndex = 14;
+            this.SlLInContraseña.TabStop = true;
+            this.SlLInContraseña.Text = "___________________________________________________________________________";
+            // 
+            // txtContrasena
+            // 
+            this.txtContrasena.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.txtContrasena.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtContrasena.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContrasena.ForeColor = System.Drawing.Color.DimGray;
+            this.txtContrasena.HideSelection = false;
+            this.txtContrasena.Location = new System.Drawing.Point(296, 132);
+            this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.Size = new System.Drawing.Size(454, 19);
+            this.txtContrasena.TabIndex = 2;
+            this.txtContrasena.Text = "CONTRASEÑA";
+            this.txtContrasena.Enter += new System.EventHandler(this.txtContrasena_Enter);
+            this.txtContrasena.Leave += new System.EventHandler(this.txtContrasena_Leave);
+            // 
+            // SlbTituloLogin
+            // 
+            this.SlbTituloLogin.AutoSize = true;
+            this.SlbTituloLogin.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SlbTituloLogin.ForeColor = System.Drawing.Color.DimGray;
+            this.SlbTituloLogin.Location = new System.Drawing.Point(482, 0);
+            this.SlbTituloLogin.Name = "SlbTituloLogin";
+            this.SlbTituloLogin.Size = new System.Drawing.Size(81, 32);
+            this.SlbTituloLogin.TabIndex = 16;
+            this.SlbTituloLogin.Text = "Login";
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnAceptar.FlatAppearance.BorderSize = 0;
+            this.btnAceptar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAceptar.ForeColor = System.Drawing.Color.Orange;
+            this.btnAceptar.Location = new System.Drawing.Point(296, 200);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(454, 40);
+            this.btnAceptar.TabIndex = 3;
+            this.btnAceptar.Text = "Acceder";
+            this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
+            // SlLOlvidasteContasena
+            // 
+            this.SlLOlvidasteContasena.ActiveLinkColor = System.Drawing.Color.Orange;
+            this.SlLOlvidasteContasena.AutoSize = true;
+            this.SlLOlvidasteContasena.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SlLOlvidasteContasena.LinkColor = System.Drawing.Color.DimGray;
+            this.SlLOlvidasteContasena.Location = new System.Drawing.Point(432, 260);
+            this.SlLOlvidasteContasena.Name = "SlLOlvidasteContasena";
+            this.SlLOlvidasteContasena.Size = new System.Drawing.Size(179, 17);
+            this.SlLOlvidasteContasena.TabIndex = 0;
+            this.SlLOlvidasteContasena.TabStop = true;
+            this.SlLOlvidasteContasena.Text = "¿Olvidaste tu contraseña?";
+            this.SlLOlvidasteContasena.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SlLOlvidasteContasena_LinkClicked);
+            // 
+            // btnMinimizarAplicacion
+            // 
+            this.btnMinimizarAplicacion.Image = global::WindowsFormsApp1.Properties.Resources.minimazar;
+            this.btnMinimizarAplicacion.Location = new System.Drawing.Point(741, 0);
+            this.btnMinimizarAplicacion.Name = "btnMinimizarAplicacion";
+            this.btnMinimizarAplicacion.Size = new System.Drawing.Size(15, 15);
+            this.btnMinimizarAplicacion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMinimizarAplicacion.TabIndex = 20;
+            this.btnMinimizarAplicacion.TabStop = false;
+            this.btnMinimizarAplicacion.Click += new System.EventHandler(this.btnMinimizarAplicacion_Click);
+            // 
+            // btnCerrarAplicacion
+            // 
+            this.btnCerrarAplicacion.Image = global::WindowsFormsApp1.Properties.Resources.cerrar;
+            this.btnCerrarAplicacion.Location = new System.Drawing.Point(762, 0);
+            this.btnCerrarAplicacion.Name = "btnCerrarAplicacion";
+            this.btnCerrarAplicacion.Size = new System.Drawing.Size(15, 15);
+            this.btnCerrarAplicacion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrarAplicacion.TabIndex = 19;
+            this.btnCerrarAplicacion.TabStop = false;
+            this.btnCerrarAplicacion.Click += new System.EventHandler(this.btnCerrarAplicacion_Click);
+            // 
+            // SlLNuevoUsuarioL
+            // 
+            this.SlLNuevoUsuarioL.ActiveLinkColor = System.Drawing.Color.Orange;
+            this.SlLNuevoUsuarioL.AutoSize = true;
+            this.SlLNuevoUsuarioL.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SlLNuevoUsuarioL.LinkColor = System.Drawing.Color.DimGray;
+            this.SlLNuevoUsuarioL.Location = new System.Drawing.Point(476, 289);
+            this.SlLNuevoUsuarioL.Name = "SlLNuevoUsuarioL";
+            this.SlLNuevoUsuarioL.Size = new System.Drawing.Size(103, 17);
+            this.SlLNuevoUsuarioL.TabIndex = 21;
+            this.SlLNuevoUsuarioL.TabStop = true;
+            this.SlLNuevoUsuarioL.Text = "Nuevo Usuario";
+            this.SlLNuevoUsuarioL.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SlLNuevoUsuarioL_LinkClicked);
             // 
             // ViewLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(830, 526);
-            this.Controls.Add(this.SlinklabelNuevoTrabajador);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnCerrar);
-            this.Controls.Add(this.SlinklabelRecuperarContrasena);
-            this.Controls.Add(this.txtContrasena);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtUsuario);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.ClientSize = new System.Drawing.Size(780, 330);
+            this.Controls.Add(this.SlLNuevoUsuarioL);
+            this.Controls.Add(this.btnMinimizarAplicacion);
+            this.Controls.Add(this.btnCerrarAplicacion);
+            this.Controls.Add(this.SlLOlvidasteContasena);
             this.Controls.Add(this.btnAceptar);
+            this.Controls.Add(this.SlbTituloLogin);
+            this.Controls.Add(this.txtContrasena);
+            this.Controls.Add(this.SlLInContraseña);
+            this.Controls.Add(this.SlLInUser);
+            this.Controls.Add(this.SpanelLogo);
+            this.Controls.Add(this.txtUsuario);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ViewLogin";
+            this.Opacity = 0.9D;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UP - Software : Soluciones de TI";
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ViewLogin_KeyPress);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ViewLogin_MouseDown);
+            this.SpanelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizarAplicacion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrarAplicacion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtContrasena;
-        private System.Windows.Forms.LinkLabel SlinklabelRecuperarContrasena;
-        private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.LinkLabel SlinklabelNuevoTrabajador;
+        private System.Windows.Forms.Panel SpanelLogo;
+        private System.Windows.Forms.LinkLabel SlLInUser;
+        private System.Windows.Forms.LinkLabel SlLInContraseña;
+        private System.Windows.Forms.TextBox txtContrasena;
+        private System.Windows.Forms.Label SlbTituloLogin;
+        private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.LinkLabel SlLOlvidasteContasena;
+        private System.Windows.Forms.PictureBox btnCerrarAplicacion;
+        private System.Windows.Forms.PictureBox btnMinimizarAplicacion;
+        private System.Windows.Forms.LinkLabel SlLNuevoUsuarioL;
     }
 }
 
