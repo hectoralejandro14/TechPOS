@@ -55,18 +55,15 @@ namespace WindowsFormsApp1
             //----------------------------------------------------------------------------------------------------------------------------
             decimal restante = Convert.ToDecimal(TotalTxtBox.Text) - Convert.ToDecimal(AbonoTxtBox.Text);
             StxtCantidadRestanteAPagar.Text = "" + restante;
-
         }
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
-
         private void Reparacion_Load(object sender, EventArgs e)
         {
 
         }
-
         private void AbonarBtn_Click(object sender, EventArgs e)
         {
             DBConnectio.Connection con = new DBConnectio.Connection();
@@ -78,9 +75,9 @@ namespace WindowsFormsApp1
             else
             {
                 decimal restante = Convert.ToDecimal(TotalTxtBox.Text) - Convert.ToDecimal(AbonoTxtBox.Text);
-                if (Convert.ToDecimal(AbonoTxtBox.Text) > restante)
+                if ((Convert.ToDecimal(StxtNuevoAbonoCliente.Text)) > restante)
                 {
-                    MessageBox.Show("La reparación esta completamente pagada.","",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                    MessageBox.Show("Se esta excediendo el total de costo de reparación.","Advertencia",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 }
                 else
                 {
