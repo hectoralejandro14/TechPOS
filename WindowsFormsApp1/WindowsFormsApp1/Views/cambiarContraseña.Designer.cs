@@ -40,7 +40,7 @@
             // 
             this.btnAceptarA.BackColor = System.Drawing.Color.DimGray;
             this.btnAceptarA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAceptarA.ForeColor = System.Drawing.Color.Turquoise;
+            this.btnAceptarA.ForeColor = System.Drawing.Color.White;
             this.btnAceptarA.Location = new System.Drawing.Point(25, 161);
             this.btnAceptarA.Name = "btnAceptarA";
             this.btnAceptarA.Size = new System.Drawing.Size(75, 23);
@@ -53,7 +53,7 @@
             // 
             this.btnSalirA.BackColor = System.Drawing.Color.DimGray;
             this.btnSalirA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSalirA.ForeColor = System.Drawing.Color.Turquoise;
+            this.btnSalirA.ForeColor = System.Drawing.Color.White;
             this.btnSalirA.Location = new System.Drawing.Point(172, 161);
             this.btnSalirA.Name = "btnSalirA";
             this.btnSalirA.Size = new System.Drawing.Size(75, 23);

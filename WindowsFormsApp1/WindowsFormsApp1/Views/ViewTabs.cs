@@ -1068,5 +1068,10 @@ namespace WindowsFormsApp1.Views
                 txtTelefono.Text = "";
             }
         }
+
+        private void ordenesTab_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
