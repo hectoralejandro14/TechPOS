@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using WindowsFormsApp1.DBConnectio;
 using WindowsFormsApp1.Views;
 using System.Runtime.InteropServices;
+using WindowsFormsApp1.ViewsBetta;
 
 namespace WindowsFormsApp1
 {
@@ -200,6 +201,8 @@ namespace WindowsFormsApp1
         //--------------------------------------------------------------------------------------------
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+            Principal principal = new Principal();
+            principal.Show();
             if (txtContrasena.Text.Equals("CONTRASEÑA") || txtUsuario.Text.Equals("USUARIO"))
             {
                 MessageBox.Show("No se pudo iniciar sesión por existencia de campos vacios", "Campos Vacios", MessageBoxButtons.OK, MessageBoxIcon.Question);

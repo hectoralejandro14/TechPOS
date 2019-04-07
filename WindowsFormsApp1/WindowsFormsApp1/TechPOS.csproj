@@ -49,10 +49,27 @@
     <Compile Include="Controllers\Encrypt.cs" />
     <Compile Include="Controllers\ValidacionCampos.cs" />
     <Compile Include="DBConnection\Connection.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="TechPOSdbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TechPOSdbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ViewsBetta\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewsBetta\Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewsBetta\Ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewsBetta\Ventas.Designer.cs">
+      <DependentUpon>Ventas.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Buscar.cs">
       <SubType>Form</SubType>
@@ -160,14 +177,15 @@
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
+    <EmbeddedResource Include="ViewsBetta\Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewsBetta\Ventas.resx">
+      <DependentUpon>Ventas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Buscar.resx">
       <DependentUpon>Buscar.cs</DependentUpon>
     </EmbeddedResource>
@@ -251,12 +269,22 @@
     <Content Include="GuiaConsultas.txt" />
     <Content Include="Images\Icons\iconUP.ico" />
     <Content Include="Images\sub-fondo.png" />
+    <None Include="Resources\venta.png" />
     <None Include="Images\logoUp.png" />
     <Content Include="Images\lupa.png" />
     <Content Include="Images\sub-fondo.png" />
     <None Include="Resources\refrescar.png" />
     <None Include="Resources\cerrar.png" />
     <None Include="Resources\minimazar.png" />
+    <None Include="Resources\Mobile-Menu-Icon.png" />
+    <None Include="Resources\maxi.png" />
+    <None Include="Resources\icon cerrar2.png" />
+    <None Include="Resources\icon maximizar.png" />
+    <None Include="Resources\icon minimizar.png" />
+    <None Include="Resources\icon restaurar.png" />
+    <None Include="Resources\icon restaurar1.png" />
+    <None Include="Resources\producto.png" />
+    <None Include="Resources\clientes.png" />
     <Content Include="Resources\refresh.png" />
     <Content Include="Resources\sub_fondo.png" />
     <None Include="Resources\logoUp.png" />
@@ -264,7 +292,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
-    <Folder Include="ViewsBetta\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
