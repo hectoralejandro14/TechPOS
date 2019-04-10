@@ -24,7 +24,7 @@ namespace WindowsFormsApp1.Views
                 connection.AbrirConexion();
                 int idServicio = connection.generarId("SELECT MAX(Id) FROM Servicio");
                 String query = "INSERT INTO Servicio (Id,Nombre,Precio,Actividad) VALUES (" + idServicio + ",'" + StxtNombreNuevoServicio.Text + "'," + StxtPrecioNuevoServicio.Text + ",'" + StxtActividadNuevoServicio.Text + "')";
-                connection.AddElements(query);
+                connection.AddElements(query,"servicio");
                 DialogResult result = MessageBox.Show("DESEA AGREGAR UN NUEVO SERVICIO?", "SERVICIOS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
