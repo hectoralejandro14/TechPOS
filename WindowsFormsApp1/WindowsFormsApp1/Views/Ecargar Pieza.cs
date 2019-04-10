@@ -35,7 +35,7 @@ namespace WindowsFormsApp1.Views
                 DateTime fecha_pedida = DateTime.Now;
                 DateTime fecha_llegada_aproximada = SdtCalendarFechaLlegada.Value;
                 int IdPieza = conexion.generarId("SELECT MAX(Id) FROM Pieza");
-                bool si = conexion.AddElements("INSERT INTO Pieza VALUES(" + IdPieza + ",'" + piezasTbxEncargar.Text + "','Ordenada','" + fecha_pedida + "','" + fecha_llegada_aproximada + "')");
+                bool si = conexion.AddElements("INSERT INTO Pieza VALUES(" + IdPieza + ",'" + piezasTbxEncargar.Text + "','Ordenada','" + fecha_pedida + "','" + fecha_llegada_aproximada + "')","pieza");
                 conexion.CerrarConexion();
                 if (si)
                 {
