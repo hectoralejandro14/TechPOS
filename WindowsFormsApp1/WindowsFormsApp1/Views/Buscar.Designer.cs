@@ -103,7 +103,7 @@
             this.cancelarBtnBuscar.BackColor = System.Drawing.Color.DimGray;
             this.cancelarBtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cancelarBtnBuscar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelarBtnBuscar.ForeColor = System.Drawing.Color.Turquoise;
+            this.cancelarBtnBuscar.ForeColor = System.Drawing.Color.White;
             this.cancelarBtnBuscar.Location = new System.Drawing.Point(264, 396);
             this.cancelarBtnBuscar.Name = "cancelarBtnBuscar";
             this.cancelarBtnBuscar.Size = new System.Drawing.Size(96, 37);
@@ -116,7 +116,7 @@
             this.aceptarBtnBuscar.BackColor = System.Drawing.Color.DimGray;
             this.aceptarBtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.aceptarBtnBuscar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.aceptarBtnBuscar.ForeColor = System.Drawing.Color.Turquoise;
+            this.aceptarBtnBuscar.ForeColor = System.Drawing.Color.White;
             this.aceptarBtnBuscar.Location = new System.Drawing.Point(381, 396);
             this.aceptarBtnBuscar.Name = "aceptarBtnBuscar";
             this.aceptarBtnBuscar.Size = new System.Drawing.Size(88, 37);

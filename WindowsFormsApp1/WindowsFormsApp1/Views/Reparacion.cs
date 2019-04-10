@@ -55,46 +55,53 @@ namespace WindowsFormsApp1
             //----------------------------------------------------------------------------------------------------------------------------
             decimal restante = Convert.ToDecimal(TotalTxtBox.Text) - Convert.ToDecimal(AbonoTxtBox.Text);
             StxtCantidadRestanteAPagar.Text = "" + restante;
-
         }
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
-
         private void Reparacion_Load(object sender, EventArgs e)
         {
 
         }
-
         private void AbonarBtn_Click(object sender, EventArgs e)
         {
             DBConnectio.Connection con = new DBConnectio.Connection();
             con.AbrirConexion();
-            if (StxtNuevoAbonoCliente.Text.Equals(""))
+            if (StxtNuevoAbonoCliente.Text.Equals("") || Convert.ToDouble(StxtNuevoAbonoCliente.Text)<=0)
             {
-                MessageBox.Show("NO SE PUEDE REALIZAR UN ABONO AEQUIPO CON IDENTIFICADOR [" + idTxtBoxRepa.Text + "] DEBIDO A LA LA EXISTENCIA DE CAMPO VACIO", "ABONO NO REALIZADO", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("No se puede realizar un abono al equipo con identificador [" + idTxtBoxRepa.Text + "] debido a la existencia de campos vacios o un abono menor a 0.", "Abono no realizado.", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
             else
             {
                 decimal restante = Convert.ToDecimal(TotalTxtBox.Text) - Convert.ToDecimal(AbonoTxtBox.Text);
-                DialogResult resultado = MessageBox.Show("¿SEGURO QUE DESEA ABONAR AL EQUIPO " + idTxtBoxRepa.Text + "?", "ABONO", MessageBoxButtons.YesNo);
-                if (resultado == DialogResult.Yes)
+                if ((Convert.ToDecimal(StxtNuevoAbonoCliente.Text)) > restante)
                 {
-                    con.ActualizarDatos("UPDATE Reparacion set Anticipo = " + StxtNuevoAbonoCliente.Text + " WHERE Id ='" + idTxtBoxRepa.Text + "'");
-                    //vaciar campo de abono
-                    StxtNuevoAbonoCliente.Text = "";
-                    /*SqlDataReader dr = conn.consulta("SELECT Anticipo FROM Reparacion WHERE Id ='" + idTxtBoxRepa.Text + "'");
-                    if (dr.Read())
-                    {
-                        AbonoTxtBox.Text = Convert.ToString(dr["Anticipo"]);
-                    }*/
-                    StxtCantidadRestanteAPagar.Text = "" + restante;
+                    MessageBox.Show("Se esta excediendo el total de costo de reparación.","Advertencia",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 }
-                else if (resultado == DialogResult.No)
+                else
                 {
-                    this.Hide();
-                }              
+                    DialogResult resultado = MessageBox.Show("¿SEGURO QUE DESEA ABONAR AL EQUIPO " + idTxtBoxRepa.Text + "?", "ABONO", MessageBoxButtons.YesNo);
+                    if (resultado == DialogResult.Yes)
+                    {
+                        //AbonoTxtBox - TotalTxtBox < StxtNuevoAbonoCliente
+                        if (((Convert.ToDecimal(AbonoTxtBox.Text)) + (Convert.ToDecimal(StxtNuevoAbonoCliente.Text))) <= (Convert.ToDecimal(TotalTxtBox.Text)))
+                        {
+                            con.ActualizarDatos("UPDATE Reparacion set Anticipo = " + StxtNuevoAbonoCliente.Text + "+Anticipo WHERE Id ='" + idTxtBoxRepa.Text + "'");
+                            StxtNuevoAbonoCliente.Text = "";
+                            StxtCantidadRestanteAPagar.Text = "" + restante;
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se puede recibir abono porque excede el limite del total del servicio.", "Advertencia.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            StxtNuevoAbonoCliente.Text = "";
+                        }
+                    }
+                    else if (resultado == DialogResult.No)
+                    {
+                        this.Hide();
+                    }
+                }
             }
             con.CerrarConexion();
         }

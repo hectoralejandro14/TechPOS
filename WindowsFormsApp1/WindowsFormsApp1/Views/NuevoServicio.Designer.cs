@@ -116,22 +116,28 @@
             // 
             // SbtnAceptarNuevoServicio
             // 
+            this.SbtnAceptarNuevoServicio.BackColor = System.Drawing.Color.DimGray;
+            this.SbtnAceptarNuevoServicio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SbtnAceptarNuevoServicio.ForeColor = System.Drawing.Color.White;
             this.SbtnAceptarNuevoServicio.Location = new System.Drawing.Point(668, 198);
             this.SbtnAceptarNuevoServicio.Name = "SbtnAceptarNuevoServicio";
             this.SbtnAceptarNuevoServicio.Size = new System.Drawing.Size(101, 23);
             this.SbtnAceptarNuevoServicio.TabIndex = 10;
             this.SbtnAceptarNuevoServicio.Text = "Aceptar";
-            this.SbtnAceptarNuevoServicio.UseVisualStyleBackColor = true;
+            this.SbtnAceptarNuevoServicio.UseVisualStyleBackColor = false;
             this.SbtnAceptarNuevoServicio.Click += new System.EventHandler(this.SbtnAceptarNuevoServicio_Click);
             // 
             // SbtnVolverPaginaPrincipal
             // 
+            this.SbtnVolverPaginaPrincipal.BackColor = System.Drawing.Color.DimGray;
+            this.SbtnVolverPaginaPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SbtnVolverPaginaPrincipal.ForeColor = System.Drawing.Color.White;
             this.SbtnVolverPaginaPrincipal.Location = new System.Drawing.Point(561, 198);
             this.SbtnVolverPaginaPrincipal.Name = "SbtnVolverPaginaPrincipal";
             this.SbtnVolverPaginaPrincipal.Size = new System.Drawing.Size(101, 23);
             this.SbtnVolverPaginaPrincipal.TabIndex = 11;
             this.SbtnVolverPaginaPrincipal.Text = "Volver";
-            this.SbtnVolverPaginaPrincipal.UseVisualStyleBackColor = true;
+            this.SbtnVolverPaginaPrincipal.UseVisualStyleBackColor = false;
             this.SbtnVolverPaginaPrincipal.Click += new System.EventHandler(this.SbtnVolverPaginaPrincipal_Click);
             // 
             // NuevoServicio

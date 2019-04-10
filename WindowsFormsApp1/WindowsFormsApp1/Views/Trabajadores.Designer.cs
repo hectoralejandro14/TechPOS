@@ -129,7 +129,7 @@
             this.btncerrar.BackColor = System.Drawing.Color.DimGray;
             this.btncerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btncerrar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.btncerrar.ForeColor = System.Drawing.Color.Turquoise;
+            this.btncerrar.ForeColor = System.Drawing.Color.White;
             this.btncerrar.Location = new System.Drawing.Point(489, 424);
             this.btncerrar.Name = "btncerrar";
             this.btncerrar.Size = new System.Drawing.Size(90, 39);

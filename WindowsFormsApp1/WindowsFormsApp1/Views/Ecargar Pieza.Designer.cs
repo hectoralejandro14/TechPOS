@@ -132,7 +132,7 @@
             this.btnCancelarPieza.BackColor = System.Drawing.Color.DimGray;
             this.btnCancelarPieza.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelarPieza.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelarPieza.ForeColor = System.Drawing.Color.Turquoise;
+            this.btnCancelarPieza.ForeColor = System.Drawing.Color.White;
             this.btnCancelarPieza.Location = new System.Drawing.Point(300, 470);
             this.btnCancelarPieza.Name = "btnCancelarPieza";
             this.btnCancelarPieza.Size = new System.Drawing.Size(125, 37);
@@ -146,7 +146,7 @@
             this.BtnAceptarPieza.BackColor = System.Drawing.Color.DimGray;
             this.BtnAceptarPieza.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnAceptarPieza.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAceptarPieza.ForeColor = System.Drawing.Color.Turquoise;
+            this.BtnAceptarPieza.ForeColor = System.Drawing.Color.White;
             this.BtnAceptarPieza.Location = new System.Drawing.Point(431, 470);
             this.BtnAceptarPieza.Name = "BtnAceptarPieza";
             this.BtnAceptarPieza.Size = new System.Drawing.Size(125, 37);
