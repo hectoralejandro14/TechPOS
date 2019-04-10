@@ -80,7 +80,7 @@
             this.layCliente = new System.Windows.Forms.FlowLayoutPanel();
             this.SlblBuscarCliente = new System.Windows.Forms.Label();
             this.txtBuscarCliente = new System.Windows.Forms.TextBox();
-            this.pictureBuscar = new System.Windows.Forms.PictureBox();
+            //this.pictureBuscar = new System.Windows.Forms.PictureBox();
             this.lblAvisoNoCliente = new System.Windows.Forms.Label();
             this.layoutCliente = new System.Windows.Forms.TableLayoutPanel();
             this.SlblNombre = new System.Windows.Forms.Label();
@@ -166,7 +166,7 @@
             this.LayEquipo.SuspendLayout();
             this.ClienteGBx.SuspendLayout();
             this.layCliente.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).BeginInit();
+           // ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).BeginInit();
             this.layoutCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.recibirLogoCh)).BeginInit();
             this.tabReparacion.SuspendLayout();
@@ -761,14 +761,14 @@
             // 
             // pictureBuscar
             // 
-            this.pictureBuscar.Image = global::WindowsFormsApp1.Properties.Resources.Lupa_Codigo;
-            this.pictureBuscar.Location = new System.Drawing.Point(505, 3);
-            this.pictureBuscar.Name = "pictureBuscar";
-            this.pictureBuscar.Size = new System.Drawing.Size(30, 30);
-            this.pictureBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBuscar.TabIndex = 42;
-            this.pictureBuscar.TabStop = false;
-            this.pictureBuscar.Click += new System.EventHandler(this.pictureBuscar_Click);
+            //this.pictureBuscar.Image = global::WindowsFormsApp1.Properties.Resources.Lupa_Codigo;
+            //this.pictureBuscar.Location = new System.Drawing.Point(505, 3);
+            //this.pictureBuscar.Name = "pictureBuscar";
+            //this.pictureBuscar.Size = new System.Drawing.Size(30, 30);
+            //this.pictureBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            //this.pictureBuscar.TabIndex = 42;
+            //this.pictureBuscar.TabStop = false;
+            //this.pictureBuscar.Click += new System.EventHandler(this.pictureBuscar_Click);
             // 
             // lblAvisoNoCliente
             // 
@@ -1582,7 +1582,7 @@
             this.ClienteGBx.PerformLayout();
             this.layCliente.ResumeLayout(false);
             this.layCliente.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).EndInit();
+          //  ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).EndInit();
             this.layoutCliente.ResumeLayout(false);
             this.layoutCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.recibirLogoCh)).EndInit();
