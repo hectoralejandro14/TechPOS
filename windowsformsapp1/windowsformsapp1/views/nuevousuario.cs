@@ -43,7 +43,7 @@ namespace WindowsFormsApp1.Views
                             decimal id = GenerarId();
                             string coe = Controllers.Encrypt.GetMD5(CtxtContrasenaU.Text);
                             String _query = "INSERT INTO Usuario (Id,NombreUsuario,Nombre,Apellido,Telefono,Correo,Contra,Rol) VALUES (" + id + ",'" + CtxtNombreUsuario.Text + "','" + CtxtNombreU.Text + "','" + CtxtApellidoU.Text + "','" + CtxtTelefonoU.Text + "','" + CtxtCorreoU.Text + "','" + coe + "','Trabajador')";
-                            conexion.AddElements(_query);
+                            conexion.AddElements(_query,"usuario");
                             //------------------------------------------------
                             DialogResult resultado = MessageBox.Show("¿Desea agregar otro usuario?", "Nuevo Usuario", MessageBoxButtons.YesNo);
                             if (resultado == DialogResult.Yes)
@@ -174,7 +174,7 @@ namespace WindowsFormsApp1.Views
                                 decimal id = GenerarId();
                                 string coe = Controllers.Encrypt.GetMD5(CtxtContrasenaU.Text);
                                 String _query = "INSERT INTO Usuario (Id,NombreUsuario,Nombre,Apellido,Telefono,Correo,Contra,Rol) VALUES (" + id + ",'" + CtxtNombreUsuario.Text + "','" + CtxtNombreU.Text + "','" + CtxtApellidoU.Text + "','" + CtxtTelefonoU.Text + "','" + CtxtCorreoU.Text + "','" + coe + "','Trabajador')";
-                                conexion.AddElements(_query);
+                                conexion.AddElements(_query,"usuario");
                                 //------------------------------------------------
                                 conexion.CerrarConexion();
                                 DialogResult resultado = MessageBox.Show("¿Desea agregar otro usuario?", "Nuevo Usuario", MessageBoxButtons.YesNo);
@@ -238,7 +238,7 @@ namespace WindowsFormsApp1.Views
                                 decimal id = GenerarId();
                                 string coe = Controllers.Encrypt.GetMD5(CtxtContrasenaU.Text);
                                 String _query = "INSERT INTO Usuario (Id,NombreUsuario,Nombre,Apellido,Telefono,Correo,Contra,Rol) VALUES (" + id + ",'" + CtxtNombreUsuario.Text + "','" + CtxtNombreU.Text + "','" + CtxtApellidoU.Text + "','" + CtxtTelefonoU.Text + "','" + CtxtCorreoU.Text + "','" + coe + "','Trabajador')";
-                                conexion.AddElements(_query);
+                                conexion.AddElements(_query,"usuario");
                                 //------------------------------------------------
                                 DialogResult resultado = MessageBox.Show("¿Desea agregar otro usuario?", "Nuevo Usuario", MessageBoxButtons.YesNo);
                                 if (resultado == DialogResult.Yes)
