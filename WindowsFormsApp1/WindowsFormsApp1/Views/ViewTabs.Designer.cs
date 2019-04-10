@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewTabs));
             this.tabPuntoVenta = new System.Windows.Forms.TabControl();
             this.tabVenta = new System.Windows.Forms.TabPage();
@@ -85,7 +80,6 @@
             this.layCliente = new System.Windows.Forms.FlowLayoutPanel();
             this.SlblBuscarCliente = new System.Windows.Forms.Label();
             this.txtBuscarCliente = new System.Windows.Forms.TextBox();
-            this.pictureBuscar = new System.Windows.Forms.PictureBox();
             this.lblAvisoNoCliente = new System.Windows.Forms.Label();
             this.layoutCliente = new System.Windows.Forms.TableLayoutPanel();
             this.SlblNombre = new System.Windows.Forms.Label();
@@ -171,7 +165,6 @@
             this.LayEquipo.SuspendLayout();
             this.ClienteGBx.SuspendLayout();
             this.layCliente.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).BeginInit();
             this.layoutCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.recibirLogoCh)).BeginInit();
             this.tabReparacion.SuspendLayout();
@@ -529,7 +522,7 @@
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.33448F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.66552F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 92F));
-            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 224F));
+            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 225F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 224F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.33448F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.66552F));
@@ -579,7 +572,7 @@
             // 
             this.SlblModelo.AutoSize = true;
             this.SlblModelo.ForeColor = System.Drawing.Color.Black;
-            this.SlblModelo.Location = new System.Drawing.Point(608, 0);
+            this.SlblModelo.Location = new System.Drawing.Point(610, 0);
             this.SlblModelo.Name = "SlblModelo";
             this.SlblModelo.Size = new System.Drawing.Size(82, 34);
             this.SlblModelo.TabIndex = 19;
@@ -600,10 +593,10 @@
             // txtModelo
             // 
             this.txtModelo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModelo.Location = new System.Drawing.Point(700, 3);
+            this.txtModelo.Location = new System.Drawing.Point(702, 3);
             this.txtModelo.Multiline = true;
             this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(221, 29);
+            this.txtModelo.Size = new System.Drawing.Size(220, 29);
             this.txtModelo.TabIndex = 24;
             // 
             // tiposervicioC1
@@ -639,9 +632,9 @@
             this.SbtnNuevoServicioRE.BackColor = System.Drawing.Color.DimGray;
             this.SbtnNuevoServicioRE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SbtnNuevoServicioRE.ForeColor = System.Drawing.Color.Turquoise;
-            this.SbtnNuevoServicioRE.Location = new System.Drawing.Point(700, 46);
+            this.SbtnNuevoServicioRE.Location = new System.Drawing.Point(702, 46);
             this.SbtnNuevoServicioRE.Name = "SbtnNuevoServicioRE";
-            this.SbtnNuevoServicioRE.Size = new System.Drawing.Size(221, 37);
+            this.SbtnNuevoServicioRE.Size = new System.Drawing.Size(220, 37);
             this.SbtnNuevoServicioRE.TabIndex = 47;
             this.SbtnNuevoServicioRE.Text = "Agregar Nuevo Servicio";
             this.SbtnNuevoServicioRE.UseVisualStyleBackColor = false;
@@ -734,7 +727,6 @@
             // 
             this.layCliente.Controls.Add(this.SlblBuscarCliente);
             this.layCliente.Controls.Add(this.txtBuscarCliente);
-            this.layCliente.Controls.Add(this.pictureBuscar);
             this.layCliente.Controls.Add(this.lblAvisoNoCliente);
             this.layCliente.Location = new System.Drawing.Point(84, 44);
             this.layCliente.Name = "layCliente";
@@ -760,22 +752,11 @@
             this.txtBuscarCliente.TextChanged += new System.EventHandler(this.txtBuscarCliente_TextChanged);
             this.txtBuscarCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscarCliente_KeyPress);
             // 
-            // pictureBuscar
-            // 
-            this.pictureBuscar.Image = global::WindowsFormsApp1.Properties.Resources.Lupa_Codigo;
-            this.pictureBuscar.Location = new System.Drawing.Point(505, 3);
-            this.pictureBuscar.Name = "pictureBuscar";
-            this.pictureBuscar.Size = new System.Drawing.Size(30, 30);
-            this.pictureBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBuscar.TabIndex = 42;
-            this.pictureBuscar.TabStop = false;
-            this.pictureBuscar.Click += new System.EventHandler(this.pictureBuscar_Click);
-            // 
             // lblAvisoNoCliente
             // 
             this.lblAvisoNoCliente.AutoSize = true;
             this.lblAvisoNoCliente.ForeColor = System.Drawing.Color.Red;
-            this.lblAvisoNoCliente.Location = new System.Drawing.Point(541, 0);
+            this.lblAvisoNoCliente.Location = new System.Drawing.Point(505, 0);
             this.lblAvisoNoCliente.Name = "lblAvisoNoCliente";
             this.lblAvisoNoCliente.Size = new System.Drawing.Size(200, 34);
             this.lblAvisoNoCliente.TabIndex = 43;
@@ -788,7 +769,7 @@
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.95349F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.04651F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
-            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 278F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 279F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 278F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.95349F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.04651F));
@@ -835,10 +816,10 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.ImeMode = System.Windows.Forms.ImeMode.On;
             this.txtNombre.Location = new System.Drawing.Point(104, 3);
-            this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(313, 29);
+            this.txtNombre.Size = new System.Drawing.Size(313, 34);
             this.txtNombre.TabIndex = 40;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
@@ -856,10 +837,10 @@
             // txtApellido
             // 
             this.txtApellido.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellido.ImeMode = System.Windows.Forms.ImeMode.On;
             this.txtApellido.Location = new System.Drawing.Point(104, 51);
-            this.txtApellido.Multiline = true;
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(313, 29);
+            this.txtApellido.Size = new System.Drawing.Size(313, 34);
             this.txtApellido.TabIndex = 41;
             this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
@@ -867,7 +848,7 @@
             // 
             this.SlblTelefono.AutoSize = true;
             this.SlblTelefono.ForeColor = System.Drawing.Color.Black;
-            this.SlblTelefono.Location = new System.Drawing.Point(424, 0);
+            this.SlblTelefono.Location = new System.Drawing.Point(426, 0);
             this.SlblTelefono.Name = "SlblTelefono";
             this.SlblTelefono.Size = new System.Drawing.Size(89, 48);
             this.SlblTelefono.TabIndex = 5;
@@ -877,7 +858,7 @@
             // 
             this.SlblCorreo.AutoSize = true;
             this.SlblCorreo.ForeColor = System.Drawing.Color.Black;
-            this.SlblCorreo.Location = new System.Drawing.Point(424, 48);
+            this.SlblCorreo.Location = new System.Drawing.Point(426, 48);
             this.SlblCorreo.Name = "SlblCorreo";
             this.SlblCorreo.Size = new System.Drawing.Size(84, 34);
             this.SlblCorreo.TabIndex = 6;
@@ -886,10 +867,11 @@
             // txtTelefono
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(522, 3);
-            this.txtTelefono.Multiline = true;
+            this.txtTelefono.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.txtTelefono.Location = new System.Drawing.Point(524, 3);
+            this.txtTelefono.MaxLength = 10;
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(266, 29);
+            this.txtTelefono.Size = new System.Drawing.Size(266, 34);
             this.txtTelefono.TabIndex = 38;
             this.txtTelefono.TextChanged += new System.EventHandler(this.txtTelefono_TextChanged);
             this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
@@ -897,10 +879,10 @@
             // txtCorreo
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.Location = new System.Drawing.Point(522, 51);
-            this.txtCorreo.Multiline = true;
+            this.txtCorreo.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.txtCorreo.Location = new System.Drawing.Point(524, 51);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(266, 29);
+            this.txtCorreo.Size = new System.Drawing.Size(266, 34);
             this.txtCorreo.TabIndex = 39;
             // 
             // SbtnCancelar
@@ -1087,14 +1069,6 @@
             this.CDGReparacion.AllowUserToAddRows = false;
             this.CDGReparacion.AllowUserToDeleteRows = false;
             this.CDGReparacion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            /*dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.CDGReparacion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;*/
             this.CDGReparacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.CDGReparacion.Location = new System.Drawing.Point(3, 241);
             this.CDGReparacion.Name = "CDGReparacion";
@@ -1442,38 +1416,12 @@
             // 
             this.dgClientes.AllowUserToAddRows = false;
             this.dgClientes.AllowUserToDeleteRows = false;
-            /*dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;*/
             this.dgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-           /* dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgClientes.DefaultCellStyle = dataGridViewCellStyle12;*/
             this.dgClientes.Location = new System.Drawing.Point(130, 150);
             this.dgClientes.Name = "dgClientes";
             this.dgClientes.ReadOnly = true;
-            /*dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;*/
             this.dgClientes.RowHeadersVisible = false;
             this.dgClientes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            /*dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgClientes.RowsDefaultCellStyle = dataGridViewCellStyle14;*/
             this.dgClientes.RowTemplate.ReadOnly = true;
             this.dgClientes.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1615,7 +1563,6 @@
             this.ClienteGBx.PerformLayout();
             this.layCliente.ResumeLayout(false);
             this.layCliente.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBuscar)).EndInit();
             this.layoutCliente.ResumeLayout(false);
             this.layoutCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.recibirLogoCh)).EndInit();
@@ -1726,7 +1673,6 @@
         private System.Windows.Forms.RadioButton JProceso;
         private System.Windows.Forms.RadioButton JradioTodos;
         private System.Windows.Forms.Label lblAvisoNoCliente;
-        private System.Windows.Forms.PictureBox pictureBuscar;
         //
        // private System.Windows.Forms.PictureBox logoImg;
         private System.Windows.Forms.DataGridView tableVender;

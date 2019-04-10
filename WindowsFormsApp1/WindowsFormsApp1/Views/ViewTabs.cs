@@ -330,7 +330,7 @@ namespace WindowsFormsApp1.Views
                     txtApellido.Text = "";
                     txtCorreo.Text = "";
                     txtTelefono.Text = "";
-                    MessageBox.Show("Existe un cliente con el nombre " + txtNombre.Text + " " + txtApellido.Text+" con el id: "+idVerif);
+                    MessageBox.Show("Ya existe un cliente con datos similares, favor de verificar");
                 }
                 else if (txtCorreo.Text=="")
                 {
@@ -413,7 +413,7 @@ namespace WindowsFormsApp1.Views
                 Connection db = new DBConnectio.Connection();
                 db.AbrirConexion();
 
-                SqlDataReader dr = db.consulta("select * from Cliente where Id = '" + txtBuscarCliente.Text+"'");
+                SqlDataReader dr = db.consulta("select * from Cliente where Nombre = " + txtBuscarCliente.Text);
                 //MessageBox.Show("select * from Cliente where Id=" + txtBuscarCliente.Text);
                 if (dr.Read())
                 {
@@ -446,7 +446,7 @@ namespace WindowsFormsApp1.Views
                     txtApellido.Text = "";
                     txtCorreo.Text = "";
                     txtTelefono.Text = "";
-                    pictureBuscar.Visible = true;
+                    //pictureBuscar.Visible = true;
                     //------------------------------------------------------------------------------------------------------------------------------------------------------
                     GenerarId();
                     GenerarIdEquipo();
@@ -771,6 +771,13 @@ namespace WindowsFormsApp1.Views
             if (txtBuscarCliente.Text=="")
             {
                 lblAvisoNoCliente.Hide();
+                txtNombre.Text = "";
+                txtApellido.Text = "";
+                txtTelefono.Text = "";
+                txtCorreo.Text = "";
+                lblTextoIdCliente.Visible = false;
+                lblIdCliente.Visible = false;
+
             }
         }
         private void btnAddClientH_Click_1(object sender, EventArgs e)
@@ -928,7 +935,7 @@ namespace WindowsFormsApp1.Views
                     Connection db = new DBConnectio.Connection();
                     db.AbrirConexion();
 
-                    SqlDataReader dr = db.consulta("select * from Cliente where Id = '" + txtBuscarCliente.Text + "'");
+                    SqlDataReader dr = db.consulta("select * from Cliente where Nombre = '" + txtBuscarCliente.Text +"'");
                     //MessageBox.Show("select * from Cliente where Id=" + txtBuscarCliente.Text);
                     if (dr.Read())
                     {
@@ -961,7 +968,7 @@ namespace WindowsFormsApp1.Views
                         txtApellido.Text = "";
                         txtCorreo.Text = "";
                         txtTelefono.Text = "";
-                        pictureBuscar.Visible = true;
+                        //pictureBuscar.Visible = true;
                         //---------------------------------------
                         GenerarId();
                         GenerarIdEquipo();
