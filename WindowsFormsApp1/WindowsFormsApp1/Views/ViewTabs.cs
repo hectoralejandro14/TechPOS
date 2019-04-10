@@ -242,7 +242,7 @@ namespace WindowsFormsApp1.Views
             DataGridViewRow fila = CDGReparacion.Rows[e.RowIndex];
             String id = Convert.ToString(fila.Cells["ID"].Value);
             Reparacion r = new Reparacion(id);
-            r.Show();
+            r.ShowDialog();
         }
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -331,7 +331,7 @@ namespace WindowsFormsApp1.Views
                     int idR = Convert.ToInt32(lblIdCliente.Text);
                     //Agregar cliente
                     String sql = "INSERT INTO Cliente (Id,Nombre,Apellido,Telefono,Contacto) VALUES (" + idR + ",'" + txtNombre.Text + "','" + txtApellido.Text + "','" + txtTelefono.Text + "','" + txtCorreo.Text + "')";
-                    conexion.AddElements(sql);
+                    conexion.AddElements(sql, "cliente");
                     conexion.CerrarConexion();
                     //--------------------------------------------------
                     SbtnCancelar.Visible = false;
@@ -353,7 +353,7 @@ namespace WindowsFormsApp1.Views
                     int idR = Convert.ToInt32(lblIdCliente.Text);
                     //Agregar cliente
                     String sql = "INSERT INTO Cliente (Id,Nombre,Apellido,Telefono,Contacto) VALUES (" + idR + ",'" + txtNombre.Text + "','" + txtApellido.Text + "','" + txtTelefono.Text + "','" + txtCorreo.Text + "')";
-                    conexion.AddElements(sql);
+                    conexion.AddElements(sql, "cliente");
                     conexion.CerrarConexion();
                     //------------------------------------------------------------------------------------------------------------------------------------------------------
                     SbtnCancelar.Visible = false;
@@ -387,7 +387,7 @@ namespace WindowsFormsApp1.Views
             {
                 Ecargar_Pieza encargar = new Ecargar_Pieza(lblIdEquipo.Text, txtModelo.Text, txtMarca.Text);
 
-                encargar.Show();
+                encargar.ShowDialog();
             }
             else
             {
@@ -605,7 +605,7 @@ namespace WindowsFormsApp1.Views
                                 + ",1,'')";
                         }
                         Console.WriteLine(sql);
-                        bool data=db.AddElements(sql);
+                        bool data=db.AddElements(sql,"reparación");
                         db.CerrarConexion();
                         if (!data)
                         {
@@ -675,7 +675,7 @@ namespace WindowsFormsApp1.Views
                 decimal id_random = random.Next(1, 1000000000);
                 string consulta = "INSERT INTO Rol (Id,NombreRol) VALUES (" + id_random + ",'" + _rol + "')";
                 MessageBox.Show(consulta);
-                conexion.AddElements(consulta);
+                conexion.AddElements(consulta,"rol");
             }
             else
             {
@@ -686,7 +686,7 @@ namespace WindowsFormsApp1.Views
         private void SbtnAgregarUsuario_Click(object sender, EventArgs e)
         {
             NuevoUsuario nuevoUsuario = new NuevoUsuario();
-            nuevoUsuario.Show();
+            nuevoUsuario.ShowDialog();
         }
         //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         //METOODOS PROGRAMADOS POR NOSOTROS
@@ -1045,6 +1045,22 @@ namespace WindowsFormsApp1.Views
         }
 
         private void ccbTipoServicio1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!ccbTipoServicio1.SelectedValue.Equals("27"))
+            {
+                rbDiagnosticoEspecifico.Enabled = true;
+                rbDiagnosticoRapido.Enabled = true;
+                txtDescripcionDiagnosticoEspecifico.Enabled = true;
+
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDescripcionDiagnosticoEspecifico_TextChanged(object sender, EventArgs e)
         {
 
         }

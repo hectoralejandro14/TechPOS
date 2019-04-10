@@ -52,13 +52,13 @@ namespace WindowsFormsApp1.DBConnectio
             }
         }
         //------------------------------------------------------------------------------------------------------------------------------------------------------
-        public bool AddElements(string SQL)
+        public bool AddElements(string SQL, string mensaje)
         {
             try
             {
                 SqlCommand cmd = new SqlCommand(SQL, conexion);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Los datos fueron registrados exitosamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Los datos sobre "+mensaje+" fueron registrados exitosamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return true;
             }
             catch (System.Data.SqlClient.SqlException e2)
@@ -166,7 +166,7 @@ namespace WindowsFormsApp1.DBConnectio
             }
             catch /*(IndexOutOfRangeException e3)*/
             {
-                MessageBox.Show("ERROR SQL", "Error de Conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("ERROR SQL", "Error de Conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return aux;
         }
