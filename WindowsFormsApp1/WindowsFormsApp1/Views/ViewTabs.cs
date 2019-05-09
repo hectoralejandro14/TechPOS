@@ -18,6 +18,8 @@ namespace WindowsFormsApp1.Views
         public ViewTabs()
         {
             InitializeComponent();
+
+            //------------------------------------------------------------------------------
             txtDescripcionDeFalla.ScrollBars = ScrollBars.Vertical;
             txtDescripcionDiagnosticoEspecifico.ScrollBars = ScrollBars.Vertical;
             tabPuntoVenta.TabPages.Remove(tabConfiguracionesDeUsuario);
@@ -1148,6 +1150,11 @@ namespace WindowsFormsApp1.Views
                 }
                 conexion.Close();
             }
+        }
+
+        private void Tiempo_Tick(object sender, EventArgs e)
+        {
+            HoraMinutoSegundo.Text = DateTime.Now.ToLongTimeString();
         }
     }
 }
