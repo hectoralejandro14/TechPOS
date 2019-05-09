@@ -382,16 +382,24 @@ namespace WindowsFormsApp1.Views
         }
         private void btnPedirPieza_Click(object sender, System.EventArgs e)
         {
-            if (lblIdEquipo.Text != "0000" || txtModelo.Text != "" || txtMarca.Text != "")
+            if ((Convert.ToDecimal(txtAnticipo.Text)) == ((Convert.ToDecimal(txtTotal.Text))/2) || (Convert.ToDecimal(txtAnticipo.Text)) > ((Convert.ToDecimal(txtTotal.Text)) / 2))
             {
-                Ecargar_Pieza encargar = new Ecargar_Pieza(lblIdEquipo.Text, txtModelo.Text, txtMarca.Text);
+                if (lblIdEquipo.Text != "0000" || txtModelo.Text != "" || txtMarca.Text != "")
+                {
+                    Ecargar_Pieza encargar = new Ecargar_Pieza(lblIdEquipo.Text, txtModelo.Text, txtMarca.Text);
 
-                encargar.ShowDialog();
+                    encargar.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Se requiere de una marca y modelo");
+                }
             }
             else
             {
-                MessageBox.Show("Se requiere de una marca y modelo");
+                MessageBox.Show("No se puede realizar pedido de pieza. Debido a que se esta recibiendo menos de la mitad del total.", "Valor no permitido.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+            
 
         }
         private void pictureBuscar_Click(object sender, System.EventArgs e)
@@ -556,81 +564,89 @@ namespace WindowsFormsApp1.Views
         {
             if (lblIdCliente.Text != "")
             {
-                if (txtDescripcionDeFalla.Text != "" && txtMarca.Text != "" && txtModelo.Text != "")
+                if ((Convert.ToDecimal(txtAnticipo.Text)) == ((Convert.ToDecimal(txtTotal.Text)) / 2) || (Convert.ToDecimal(txtAnticipo.Text)) > ((Convert.ToDecimal(txtTotal.Text)) / 2))
                 {
-                    string tipoDiag = "";
-                    DateTime Hoy = DateTime.Today;
-                    string fecha_actual = Hoy.ToString("yyyy-MM-dd");
-                    DBConnectio.Connection db = new DBConnectio.Connection();
-                    db.AbrirConexion();
-                    if (rbDiagnosticoEspecifico.Checked)
+                    if (txtDescripcionDeFalla.Text != "" && txtMarca.Text != "" && txtModelo.Text != "")
                     {
-                        tipoDiag = "Diagnóstico específico";
-                    }
-                    else if (rbDiagnosticoRapido.Checked)
-                    {
-                        tipoDiag = "Diagnóstico rápido";
-                    }
-                    else
-                    {
-                        MessageBox.Show("Seleccione un tipo de diagnóstico", "Diagnóstico", MessageBoxButtons.OK, MessageBoxIcon.Question);
-                    }
-                    if (rbDiagnosticoEspecifico.Checked || rbDiagnosticoRapido.Checked)
-                    {
-                        string concatenarDiagTex = tipoDiag + " : " + txtDescripcionDiagnosticoEspecifico.Text;
-                        String sql = "";
-                        if (txtAnticipo.Text == "")
+                        string tipoDiag = "";
+                        DateTime Hoy = DateTime.Today;
+                        string fecha_actual = Hoy.ToString("yyyy-MM-dd");
+                        DBConnectio.Connection db = new DBConnectio.Connection();
+                        db.AbrirConexion();
+                        if (rbDiagnosticoEspecifico.Checked)
                         {
-                            sql = "Insert into Reparacion (Id,Marca,Modelo,Falla,Diagnostico,IdServicio,Anticipo,IdEstado,Fecha,IdCliente,IdUsuario,CostoTotal,IdPieza,trabajoRealizado) values("
-                                                        + lblIdEquipo.Text + ",'" + txtMarca.Text
-                                                        + "','" + txtModelo.Text
-                                                        + "','" + txtDescripcionDeFalla.Text
-                                                        + "','" + concatenarDiagTex
-                                                        + "','" + ccbTipoServicio1.SelectedValue
-                                                        + "',0,6,'" + fecha_actual + "','" + lblIdCliente.Text
-                                                        + "','" + comboResponsable.SelectedValue.ToString() + "'," + txtTotal.Text
-                                                        + ",1,'')";
+                            tipoDiag = "Diagnóstico específico";
+                        }
+                        else if (rbDiagnosticoRapido.Checked)
+                        {
+                            tipoDiag = "Diagnóstico rápido";
                         }
                         else
                         {
-                            sql = "Insert into Reparacion (Id,Marca,Modelo,Falla,Diagnostico,IdServicio,Anticipo,IdEstado,Fecha,IdCliente,IdUsuario,CostoTotal,IdPieza,trabajoRealizado) values("
-                                + lblIdEquipo.Text + ",'" + txtMarca.Text
-                                + "','" + txtModelo.Text
-                                + "','" + txtDescripcionDeFalla.Text
-                                + "','" + concatenarDiagTex
-                                + "','" + ccbTipoServicio1.SelectedValue
-                                + "'," + txtAnticipo.Text + ",6,'" + fecha_actual + "','" + lblIdCliente.Text
-                                + "','" + comboResponsable.SelectedValue.ToString() + "'," + txtTotal.Text
-                                + ",1,'')";
+                            MessageBox.Show("Seleccione un tipo de diagnóstico", "Diagnóstico", MessageBoxButtons.OK, MessageBoxIcon.Question);
                         }
-                        Console.WriteLine(sql);
-                        bool data=db.AddElements(sql,"reparación");
-                        db.CerrarConexion();
-                        if (!data)
+                        if (rbDiagnosticoEspecifico.Checked || rbDiagnosticoRapido.Checked)
                         {
-                            MessageBox.Show("Ocurrio un error con la conexión a la Base de Datos ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            string concatenarDiagTex = tipoDiag + " : " + txtDescripcionDiagnosticoEspecifico.Text;
+                            String sql = "";
+                            if (txtAnticipo.Text == "")
+                            {
+                                sql = "Insert into Reparacion (Id,Marca,Modelo,Falla,Diagnostico,IdServicio,Anticipo,IdEstado,Fecha,IdCliente,IdUsuario,CostoTotal,IdPieza,trabajoRealizado) values("
+                                                            + lblIdEquipo.Text + ",'" + txtMarca.Text
+                                                            + "','" + txtModelo.Text
+                                                            + "','" + txtDescripcionDeFalla.Text
+                                                            + "','" + concatenarDiagTex
+                                                            + "','" + ccbTipoServicio1.SelectedValue
+                                                            + "',0,6,'" + fecha_actual + "','" + lblIdCliente.Text
+                                                            + "','" + comboResponsable.SelectedValue.ToString() + "'," + txtTotal.Text
+                                                            + ",1,'')";
+                            }
+                            else
+                            {
+                                sql = "Insert into Reparacion (Id,Marca,Modelo,Falla,Diagnostico,IdServicio,Anticipo,IdEstado,Fecha,IdCliente,IdUsuario,CostoTotal,IdPieza,trabajoRealizado) values("
+                                    + lblIdEquipo.Text + ",'" + txtMarca.Text
+                                    + "','" + txtModelo.Text
+                                    + "','" + txtDescripcionDeFalla.Text
+                                    + "','" + concatenarDiagTex
+                                    + "','" + ccbTipoServicio1.SelectedValue
+                                    + "'," + txtAnticipo.Text + ",6,'" + fecha_actual + "','" + lblIdCliente.Text
+                                    + "','" + comboResponsable.SelectedValue.ToString() + "'," + txtTotal.Text
+                                    + ",1,'')";
+                            }
+                            Console.WriteLine(sql);
+                            bool data = db.AddElements(sql, "reparación");
+                            db.CerrarConexion();
+                            if (!data)
+                            {
+                                MessageBox.Show("Ocurrio un error con la conexión a la Base de Datos ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            txtMarca.Text = "";
+                            txtDescripcionDeFalla.Text = "";
+                            txtDescripcionDiagnosticoEspecifico.Text = "";
+                            txtModelo.Text = "";
+                            txtTotal.Text = "";
+                            txtAnticipo.Text = "";
+                            txtNombre.Text = "";
+                            txtApellido.Text = "";
+                            txtTelefono.Text = "";
+                            txtCorreo.Text = "";
+                            txtBuscarCliente.Text = "";
+                            lblIdCliente.Visible = false;
+                            lblTextoIdCliente.Visible = false;
+                            lblIdEquipo.Visible = false;
+                            SlblRecibirEquipo.Visible = false;
+
+                            //------------------------------------------------------------------------------------------------
+                            btnAddClientH.Visible = true;
+                            GenerarIdEquipo();
                         }
-                        txtMarca.Text = "";
-                        txtDescripcionDeFalla.Text = "";
-                        txtDescripcionDiagnosticoEspecifico.Text = "";
-                        txtModelo.Text = "";
-                        txtTotal.Text = "";
-                        txtAnticipo.Text = "";
-                        txtNombre.Text = "";
-                        txtApellido.Text = "";
-                        txtTelefono.Text = "";
-                        txtCorreo.Text = "";
-                        txtBuscarCliente.Text = "";
-                        lblIdCliente.Visible = false;
-                        lblTextoIdCliente.Visible = false;
-                        lblIdEquipo.Visible = false;
-                        SlblRecibirEquipo.Visible = false;
-                        
-                        //------------------------------------------------------------------------------------------------
-                        btnAddClientH.Visible = true;
-                        GenerarIdEquipo();
                     }
                 }
+                else
+                {
+                    MessageBox.Show("No se puede realizar pedido de pieza. Debido a que se esta recibiendo menos de la mitad del total.", "Valor no permitido.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                    
             }
             else
             {

@@ -24,8 +24,6 @@ namespace WindowsFormsApp1.DBConnectio
         {
             conexion.ConnectionString = cadena;
         }
-
-
         public void AbrirConexion()
         {
             try
@@ -277,7 +275,6 @@ namespace WindowsFormsApp1.DBConnectio
             }
             return aux;
         }
-
         public int modificarCliente(string sql)
         {
             int filas = 0;
@@ -286,7 +283,6 @@ namespace WindowsFormsApp1.DBConnectio
             filas = sc.ExecuteNonQuery();
             return filas;
         }
-
         public DataTable buscarReparacion(string cadena)
         {
             dataSet.Reset();
@@ -296,8 +292,6 @@ namespace WindowsFormsApp1.DBConnectio
 
             return table;
         }
-
-
         public int generarId(string sql)
         {
             int id = 0;
@@ -314,7 +308,6 @@ namespace WindowsFormsApp1.DBConnectio
             }
             return id;
         }
-
         public string verificarExistenciaUser (string name, string lastname){
             bool aux = false;
             try
@@ -338,7 +331,6 @@ namespace WindowsFormsApp1.DBConnectio
             }
             return "";         
         }
-
         public int actualizarDatos(string sql)
         {
             int fila = 0;
