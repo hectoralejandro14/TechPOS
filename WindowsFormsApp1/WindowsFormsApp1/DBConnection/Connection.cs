@@ -347,5 +347,23 @@ namespace WindowsFormsApp1.DBConnectio
             fila = sc.ExecuteNonQuery();
             return fila;
         }
+        public DataRow BProducto(DataTable dtVenta, string text)
+        {
+            SqlCommand cmd = new SqlCommand("select * from Producto where ClaveProducto='" + text + "'",conexion);
+            SqlDataReader dr = cmd.ExecuteReader();
+            DataRow row = dtVenta.NewRow();
+            if (dr.Read())
+            {
+                row["cod"] = Convert.ToString(dr["ClaveProducto"]);
+                row["des"] = Convert.ToString(dr["Descripcion"]);
+                row["preciou"] = Convert.ToString(dr["Costo"]);
+                row["cant"] = Convert.ToString("Cantidad");
+                row["preciot"] = Convert.ToString("345635");
+                MessageBox.Show(Convert.ToString(dr["Costo"]));
+                
+                return row;
+            }
+            return null;
+        }
     }
 }
