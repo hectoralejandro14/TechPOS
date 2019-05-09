@@ -11,6 +11,8 @@ namespace WindowsFormsApp1.Views
 {
     public partial class ViewTabs : Form
     {
+        private DataTable dtVenta;
+
         private DBConnectio.Connection conexion = new DBConnectio.Connection();
         //GENERALES  
         public ViewTabs()
@@ -33,6 +35,12 @@ namespace WindowsFormsApp1.Views
             ccbTipoServicio1.ValueMember = "Id";
             ccbTipoServicio1.DataSource = dt;
             //------------------------------------------------------------------------------------------------------------------------------------------------------
+            dtVenta = new DataTable();
+            dtVenta.Columns.Add("cant");
+            dtVenta.Columns.Add("cod");
+            dtVenta.Columns.Add("des");
+            dtVenta.Columns.Add("preciou");
+            dtVenta.Columns.Add("preciot");
             //Combo box responsable
             DataTable dt1 = new DataTable();
             conexion.AbrirConexion();
@@ -121,7 +129,7 @@ namespace WindowsFormsApp1.Views
         }
         private void buscarTbxVentas_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
         private void lupaImg_Click(object sender, EventArgs e)
         {
@@ -1107,6 +1115,41 @@ namespace WindowsFormsApp1.Views
         private void txtDescripcionDiagnosticoEspecifico_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void buscarTbxVentas_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                string cadena = "Data Source=.\\SQLEXPRESS;Initial Catalog=TechPOSdb; Integrated Security=True";
+                SqlConnection conexion = new SqlConnection(cadena);
+                conexion.Open();
+                SqlCommand cmd = new SqlCommand("select * from Producto where ClaveProducto='" + buscarTbxVentas.Text + "'", conexion);
+                SqlDataReader dr = cmd.ExecuteReader();
+                DataRow row = dtVenta.NewRow();
+                tableVender.DataSource = dtVenta;
+                //---------------------------------
+                if (dr.Read())
+                {
+                    double price = Convert.ToDouble(Convert.ToString(dr["Costo"]));
+                    double subtotal = Convert.ToDouble(subTotalTbxVentas.Text) + (Convert.ToDouble(Convert.ToString("2")) * price);
+                    double iva = Convert.ToDouble(((subtotal*16)/100));
+                        row["cod"] = Convert.ToString(dr["ClaveProducto"]);
+                        row["des"] = Convert.ToString(dr["Descripcion"]);
+                        row["preciou"] = Convert.ToString(dr["Costo"]);
+                        row["cant"] = Convert.ToString("2");
+                        row["preciot"] = Convert.ToString(Convert.ToDouble(Convert.ToString("2"))*price);
+                        MessageBox.Show(Convert.ToString(dr["Costo"]));
+                        dtVenta.Rows.Add(row);
+                    subTotalTbxVentas.Text = Convert.ToString(subtotal);
+                    ivaTbxVentas.Text = Convert.ToString(iva);
+                    totalTbxVenta.Text = Convert.ToString(subtotal+iva);
+
+                    
+                }
+                conexion.Close();
+            }
         }
 
         private void Tiempo_Tick(object sender, EventArgs e)

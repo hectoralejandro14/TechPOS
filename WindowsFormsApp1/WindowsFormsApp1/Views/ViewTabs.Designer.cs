@@ -43,11 +43,6 @@
             this.subTotalLblVenta = new System.Windows.Forms.Label();
             this.buscarTbxVentas = new System.Windows.Forms.TextBox();
             this.tableVender = new System.Windows.Forms.DataGridView();
-            this.codClmVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantClVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descrClmVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioUClmVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioTClmVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CbtnCobrarVenta = new System.Windows.Forms.Button();
             this.CbtnCancelarVenta = new System.Windows.Forms.Button();
             this.usuarioLblVenta = new System.Windows.Forms.Label();
@@ -155,6 +150,11 @@
             this.reparacionTableAdapter = new WindowsFormsApp1.TechPOSdbDataSetTableAdapters.ReparacionTableAdapter();
             this.clienteTableAdapter = new WindowsFormsApp1.TechPOSdbDataSetTableAdapters.ClienteTableAdapter();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.des = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preciou = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cant = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preciot = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoraMinutoSegundo = new System.Windows.Forms.Label();
             this.Tiempo = new System.Windows.Forms.Timer(this.components);
             this.tabPuntoVenta.SuspendLayout();
@@ -272,6 +272,7 @@
             this.totalTbxVenta.Name = "totalTbxVenta";
             this.totalTbxVenta.Size = new System.Drawing.Size(210, 34);
             this.totalTbxVenta.TabIndex = 17;
+            this.totalTbxVenta.Text = "0";
             // 
             // ivaTbxVentas
             // 
@@ -280,6 +281,7 @@
             this.ivaTbxVentas.Name = "ivaTbxVentas";
             this.ivaTbxVentas.Size = new System.Drawing.Size(210, 34);
             this.ivaTbxVentas.TabIndex = 16;
+            this.ivaTbxVentas.Text = "0";
             // 
             // subTotalTbxVentas
             // 
@@ -288,6 +290,7 @@
             this.subTotalTbxVentas.Name = "subTotalTbxVentas";
             this.subTotalTbxVentas.Size = new System.Drawing.Size(210, 34);
             this.subTotalTbxVentas.TabIndex = 15;
+            this.subTotalTbxVentas.Text = "0";
             // 
             // totalLblVentas
             // 
@@ -319,55 +322,31 @@
             // buscarTbxVentas
             // 
             this.buscarTbxVentas.Location = new System.Drawing.Point(474, 59);
-            this.buscarTbxVentas.Multiline = true;
             this.buscarTbxVentas.Name = "buscarTbxVentas";
-            this.buscarTbxVentas.Size = new System.Drawing.Size(405, 32);
+            this.buscarTbxVentas.Size = new System.Drawing.Size(405, 41);
             this.buscarTbxVentas.TabIndex = 10;
             this.buscarTbxVentas.TextChanged += new System.EventHandler(this.buscarTbxVentas_TextChanged);
+            this.buscarTbxVentas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.buscarTbxVentas_KeyPress);
             // 
             // tableVender
             // 
+            this.tableVender.AllowUserToAddRows = false;
+            this.tableVender.AllowUserToDeleteRows = false;
+            this.tableVender.BackgroundColor = System.Drawing.Color.Azure;
             this.tableVender.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableVender.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codClmVenta,
-            this.cantClVenta,
-            this.descrClmVenta,
-            this.precioUClmVenta,
-            this.precioTClmVenta});
+            this.cod,
+            this.des,
+            this.preciou,
+            this.cant,
+            this.preciot});
             this.tableVender.Location = new System.Drawing.Point(191, 110);
             this.tableVender.Name = "tableVender";
+            this.tableVender.ReadOnly = true;
             this.tableVender.RowHeadersVisible = false;
             this.tableVender.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tableVender.Size = new System.Drawing.Size(938, 382);
             this.tableVender.TabIndex = 8;
-            // 
-            // codClmVenta
-            // 
-            this.codClmVenta.HeaderText = "Código";
-            this.codClmVenta.Name = "codClmVenta";
-            // 
-            // cantClVenta
-            // 
-            this.cantClVenta.HeaderText = "Cantidad";
-            this.cantClVenta.Name = "cantClVenta";
-            // 
-            // descrClmVenta
-            // 
-            this.descrClmVenta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.descrClmVenta.HeaderText = "Descripción";
-            this.descrClmVenta.Name = "descrClmVenta";
-            // 
-            // precioUClmVenta
-            // 
-            this.precioUClmVenta.HeaderText = "Precio U.";
-            this.precioUClmVenta.Name = "precioUClmVenta";
-            this.precioUClmVenta.Width = 125;
-            // 
-            // precioTClmVenta
-            // 
-            this.precioTClmVenta.HeaderText = "Precio T.";
-            this.precioTClmVenta.Name = "precioTClmVenta";
-            this.precioTClmVenta.Width = 125;
             // 
             // CbtnCobrarVenta
             // 
@@ -1541,6 +1520,47 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
+            // cod
+            // 
+            this.cod.DataPropertyName = "cod";
+            this.cod.HeaderText = "CÓDIGO";
+            this.cod.Name = "cod";
+            this.cod.ReadOnly = true;
+            this.cod.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.cod.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.cod.Width = 150;
+            // 
+            // des
+            // 
+            this.des.DataPropertyName = "des";
+            this.des.HeaderText = "DESCRIPCIÓN";
+            this.des.Name = "des";
+            this.des.ReadOnly = true;
+            this.des.Width = 400;
+            // 
+            // preciou
+            // 
+            this.preciou.DataPropertyName = "preciou";
+            this.preciou.HeaderText = "PRECIO UNIT";
+            this.preciou.Name = "preciou";
+            this.preciou.ReadOnly = true;
+            this.preciou.Width = 150;
+            // 
+            // cant
+            // 
+            this.cant.DataPropertyName = "cant";
+            this.cant.HeaderText = "CANTIDAD";
+            this.cant.Name = "cant";
+            this.cant.ReadOnly = true;
+            // 
+            // preciot
+            // 
+            this.preciot.DataPropertyName = "preciot";
+            this.preciot.HeaderText = "PRECIOT";
+            this.preciot.Name = "preciot";
+            this.preciot.ReadOnly = true;
+            this.preciot.Width = 150;
+            // 
             // HoraMinutoSegundo
             // 
             this.HoraMinutoSegundo.AutoSize = true;
@@ -1730,11 +1750,6 @@
         private System.Windows.Forms.Button btnAddClientH;
         private System.Windows.Forms.Label CNombreUsuarioLblVenta;
         private System.Windows.Forms.Label ClblCodigoDeBarras;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codClmVenta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cantClVenta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descrClmVenta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precioUClmVenta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precioTClmVenta;
         private System.Windows.Forms.TextBox JtxtBuscar2;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.GroupBox SgbConfiguraciones;
@@ -1772,6 +1787,11 @@
         private System.Windows.Forms.PictureBox pBoxBuscarRep;
         private System.Windows.Forms.PictureBox refresIconCheno;
         private System.Windows.Forms.Button SbtnNuevoServicioRE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cod;
+        private System.Windows.Forms.DataGridViewTextBoxColumn des;
+        private System.Windows.Forms.DataGridViewTextBoxColumn preciou;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cant;
+        private System.Windows.Forms.DataGridViewTextBoxColumn preciot;
         private System.Windows.Forms.Label HoraMinutoSegundo;
         private System.Windows.Forms.Timer Tiempo;
         //  private System.Windows.Forms.TextBox textBox1;
