@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             this.MenuVertical = new System.Windows.Forms.Panel();
+            this.SBtnClientes = new System.Windows.Forms.Button();
+            this.SBtnVentas = new System.Windows.Forms.Button();
+            this.SBtnProductos = new System.Windows.Forms.Button();
+            this.LogoPrincipal = new System.Windows.Forms.PictureBox();
             this.BarraTitulo = new System.Windows.Forms.Panel();
-            this.PanelContenedor = new System.Windows.Forms.Panel();
             this.SpbBtnRestaurar = new System.Windows.Forms.PictureBox();
             this.SpbBtnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnSlide = new System.Windows.Forms.PictureBox();
             this.SpbBtnMaximizar = new System.Windows.Forms.PictureBox();
             this.SpbBtnCerrar = new System.Windows.Forms.PictureBox();
-            this.SBtnClientes = new System.Windows.Forms.Button();
-            this.SBtnVentas = new System.Windows.Forms.Button();
-            this.SBtnProductos = new System.Windows.Forms.Button();
-            this.LogoPrincipal = new System.Windows.Forms.PictureBox();
+            this.PanelContenedor = new System.Windows.Forms.Panel();
             this.MenuVertical.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoPrincipal)).BeginInit();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SpbBtnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpbBtnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpbBtnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpbBtnCerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LogoPrincipal)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuVertical
@@ -60,9 +60,72 @@
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuVertical.Location = new System.Drawing.Point(0, 0);
             this.MenuVertical.Name = "MenuVertical";
-            this.MenuVertical.Size = new System.Drawing.Size(250, 650);
+            this.MenuVertical.Size = new System.Drawing.Size(190, 650);
             this.MenuVertical.TabIndex = 0;
             this.MenuVertical.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MenuVertical_MouseDown);
+            // 
+            // SBtnClientes
+            // 
+            this.SBtnClientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SBtnClientes.FlatAppearance.BorderSize = 0;
+            this.SBtnClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
+            this.SBtnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SBtnClientes.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SBtnClientes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.SBtnClientes.Image = global::WindowsFormsApp1.Properties.Resources.clientes;
+            this.SBtnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SBtnClientes.Location = new System.Drawing.Point(0, 174);
+            this.SBtnClientes.Name = "SBtnClientes";
+            this.SBtnClientes.Size = new System.Drawing.Size(231, 57);
+            this.SBtnClientes.TabIndex = 3;
+            this.SBtnClientes.Text = "Clientes";
+            this.SBtnClientes.UseVisualStyleBackColor = true;
+            // 
+            // SBtnVentas
+            // 
+            this.SBtnVentas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SBtnVentas.FlatAppearance.BorderSize = 0;
+            this.SBtnVentas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
+            this.SBtnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SBtnVentas.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SBtnVentas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.SBtnVentas.Image = global::WindowsFormsApp1.Properties.Resources.venta;
+            this.SBtnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SBtnVentas.Location = new System.Drawing.Point(3, 111);
+            this.SBtnVentas.Name = "SBtnVentas";
+            this.SBtnVentas.Size = new System.Drawing.Size(217, 57);
+            this.SBtnVentas.TabIndex = 2;
+            this.SBtnVentas.Text = "Ventas";
+            this.SBtnVentas.UseVisualStyleBackColor = true;
+            this.SBtnVentas.Click += new System.EventHandler(this.SBtnVentas_Click);
+            // 
+            // SBtnProductos
+            // 
+            this.SBtnProductos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SBtnProductos.FlatAppearance.BorderSize = 0;
+            this.SBtnProductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
+            this.SBtnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SBtnProductos.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SBtnProductos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.SBtnProductos.Image = global::WindowsFormsApp1.Properties.Resources.producto;
+            this.SBtnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SBtnProductos.Location = new System.Drawing.Point(3, 237);
+            this.SBtnProductos.Name = "SBtnProductos";
+            this.SBtnProductos.Size = new System.Drawing.Size(245, 57);
+            this.SBtnProductos.TabIndex = 1;
+            this.SBtnProductos.Text = "Productos";
+            this.SBtnProductos.UseVisualStyleBackColor = true;
+            this.SBtnProductos.Click += new System.EventHandler(this.SBtnProductos_Click);
+            // 
+            // LogoPrincipal
+            // 
+            this.LogoPrincipal.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.LogoPrincipal.Location = new System.Drawing.Point(0, 3);
+            this.LogoPrincipal.Name = "LogoPrincipal";
+            this.LogoPrincipal.Size = new System.Drawing.Size(93, 102);
+            this.LogoPrincipal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.LogoPrincipal.TabIndex = 0;
+            this.LogoPrincipal.TabStop = false;
             // 
             // BarraTitulo
             // 
@@ -73,28 +136,18 @@
             this.BarraTitulo.Controls.Add(this.SpbBtnMaximizar);
             this.BarraTitulo.Controls.Add(this.SpbBtnCerrar);
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BarraTitulo.Location = new System.Drawing.Point(250, 0);
+            this.BarraTitulo.Location = new System.Drawing.Point(190, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(1050, 50);
+            this.BarraTitulo.Size = new System.Drawing.Size(1110, 50);
             this.BarraTitulo.TabIndex = 1;
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
-            // 
-            // PanelContenedor
-            // 
-            this.PanelContenedor.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelContenedor.Location = new System.Drawing.Point(250, 50);
-            this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(1050, 600);
-            this.PanelContenedor.TabIndex = 2;
-            this.PanelContenedor.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelContenedor_MouseDown);
             // 
             // SpbBtnRestaurar
             // 
             this.SpbBtnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SpbBtnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SpbBtnRestaurar.Image = global::WindowsFormsApp1.Properties.Resources.icon_restaurar;
-            this.SpbBtnRestaurar.Location = new System.Drawing.Point(1001, 3);
+            this.SpbBtnRestaurar.Location = new System.Drawing.Point(1061, 3);
             this.SpbBtnRestaurar.Name = "SpbBtnRestaurar";
             this.SpbBtnRestaurar.Size = new System.Drawing.Size(20, 20);
             this.SpbBtnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -107,7 +160,7 @@
             this.SpbBtnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SpbBtnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SpbBtnMinimizar.Image = global::WindowsFormsApp1.Properties.Resources.icon_minimizar;
-            this.SpbBtnMinimizar.Location = new System.Drawing.Point(975, 3);
+            this.SpbBtnMinimizar.Location = new System.Drawing.Point(1035, 3);
             this.SpbBtnMinimizar.Name = "SpbBtnMinimizar";
             this.SpbBtnMinimizar.Size = new System.Drawing.Size(20, 20);
             this.SpbBtnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -132,7 +185,7 @@
             this.SpbBtnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SpbBtnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SpbBtnMaximizar.Image = global::WindowsFormsApp1.Properties.Resources.icon_maximizar;
-            this.SpbBtnMaximizar.Location = new System.Drawing.Point(1001, 3);
+            this.SpbBtnMaximizar.Location = new System.Drawing.Point(1061, 3);
             this.SpbBtnMaximizar.Name = "SpbBtnMaximizar";
             this.SpbBtnMaximizar.Size = new System.Drawing.Size(20, 20);
             this.SpbBtnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -145,7 +198,7 @@
             this.SpbBtnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SpbBtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SpbBtnCerrar.Image = global::WindowsFormsApp1.Properties.Resources.icon_cerrar2;
-            this.SpbBtnCerrar.Location = new System.Drawing.Point(1027, 3);
+            this.SpbBtnCerrar.Location = new System.Drawing.Point(1087, 3);
             this.SpbBtnCerrar.Name = "SpbBtnCerrar";
             this.SpbBtnCerrar.Size = new System.Drawing.Size(20, 20);
             this.SpbBtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -153,68 +206,15 @@
             this.SpbBtnCerrar.TabStop = false;
             this.SpbBtnCerrar.Click += new System.EventHandler(this.SpbBtnCerrar_Click);
             // 
-            // SBtnClientes
+            // PanelContenedor
             // 
-            this.SBtnClientes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SBtnClientes.FlatAppearance.BorderSize = 0;
-            this.SBtnClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
-            this.SBtnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SBtnClientes.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SBtnClientes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.SBtnClientes.Image = global::WindowsFormsApp1.Properties.Resources.clientes;
-            this.SBtnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SBtnClientes.Location = new System.Drawing.Point(3, 237);
-            this.SBtnClientes.Name = "SBtnClientes";
-            this.SBtnClientes.Size = new System.Drawing.Size(245, 57);
-            this.SBtnClientes.TabIndex = 3;
-            this.SBtnClientes.Text = "Clientes";
-            this.SBtnClientes.UseVisualStyleBackColor = true;
-            // 
-            // SBtnVentas
-            // 
-            this.SBtnVentas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SBtnVentas.FlatAppearance.BorderSize = 0;
-            this.SBtnVentas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
-            this.SBtnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SBtnVentas.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SBtnVentas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.SBtnVentas.Image = global::WindowsFormsApp1.Properties.Resources.venta;
-            this.SBtnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SBtnVentas.Location = new System.Drawing.Point(3, 174);
-            this.SBtnVentas.Name = "SBtnVentas";
-            this.SBtnVentas.Size = new System.Drawing.Size(245, 57);
-            this.SBtnVentas.TabIndex = 2;
-            this.SBtnVentas.Text = "Ventas";
-            this.SBtnVentas.UseVisualStyleBackColor = true;
-            this.SBtnVentas.Click += new System.EventHandler(this.SBtnVentas_Click);
-            // 
-            // SBtnProductos
-            // 
-            this.SBtnProductos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SBtnProductos.FlatAppearance.BorderSize = 0;
-            this.SBtnProductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
-            this.SBtnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SBtnProductos.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SBtnProductos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.SBtnProductos.Image = global::WindowsFormsApp1.Properties.Resources.producto;
-            this.SBtnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SBtnProductos.Location = new System.Drawing.Point(3, 111);
-            this.SBtnProductos.Name = "SBtnProductos";
-            this.SBtnProductos.Size = new System.Drawing.Size(245, 57);
-            this.SBtnProductos.TabIndex = 1;
-            this.SBtnProductos.Text = "Productos";
-            this.SBtnProductos.UseVisualStyleBackColor = true;
-            this.SBtnProductos.Click += new System.EventHandler(this.SBtnProductos_Click);
-            // 
-            // LogoPrincipal
-            // 
-            this.LogoPrincipal.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
-            this.LogoPrincipal.Location = new System.Drawing.Point(0, 3);
-            this.LogoPrincipal.Name = "LogoPrincipal";
-            this.LogoPrincipal.Size = new System.Drawing.Size(93, 102);
-            this.LogoPrincipal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.LogoPrincipal.TabIndex = 0;
-            this.LogoPrincipal.TabStop = false;
+            this.PanelContenedor.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelContenedor.Location = new System.Drawing.Point(190, 50);
+            this.PanelContenedor.Name = "PanelContenedor";
+            this.PanelContenedor.Size = new System.Drawing.Size(1110, 600);
+            this.PanelContenedor.TabIndex = 2;
+            this.PanelContenedor.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelContenedor_MouseDown);
             // 
             // Principal
             // 
@@ -228,13 +228,13 @@
             this.Name = "Principal";
             this.Text = "Principal";
             this.MenuVertical.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.LogoPrincipal)).EndInit();
             this.BarraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SpbBtnRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpbBtnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpbBtnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpbBtnCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LogoPrincipal)).EndInit();
             this.ResumeLayout(false);
 
         }

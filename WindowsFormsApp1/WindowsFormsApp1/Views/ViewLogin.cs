@@ -7,16 +7,31 @@ using WindowsFormsApp1.DBConnectio;
 using WindowsFormsApp1.Views;
 using System.Runtime.InteropServices;
 using WindowsFormsApp1.ViewsBetta;
+using System.Threading;
 
 namespace WindowsFormsApp1
 {
     public partial class ViewLogin : Form
     {
         private ViewTabs _vistaTabs = new ViewTabs();
+        static int splasAcitivty = 0;
         public ViewLogin()
         {
+            Thread tiempo = new Thread(new ThreadStart(LoadingSplashScreen));
+            if (splasAcitivty == 0)
+            {
+                tiempo.Start();
+            }
             InitializeComponent();
-            //txtContrasena.PasswordChar = '*';
+            if (splasAcitivty == 0)
+            {
+                for (int i = 0; i <= 1000; i++)
+                {
+                    Thread.Sleep(5);
+                }
+                tiempo.Abort();
+                splasAcitivty = 1;
+            }
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -201,8 +216,8 @@ namespace WindowsFormsApp1
         //--------------------------------------------------------------------------------------------
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            Principal principal = new Principal();
-            principal.Show();
+            /*Principal principal = new Principal();
+            principal.Show();*/
             if (txtContrasena.Text.Equals("CONTRASEÑA") || txtUsuario.Text.Equals("USUARIO"))
             {
                 MessageBox.Show("No se pudo iniciar sesión por existencia de campos vacios", "Campos Vacios", MessageBoxButtons.OK, MessageBoxIcon.Question);
@@ -219,6 +234,8 @@ namespace WindowsFormsApp1
                 db.AbrirConexion();
                 if (db.IniciarSesion(nu, coe) == "Administrador")
                 {
+                    /*Principal p = new Principal();
+                    p.Show();*/
                     _vistaTabs.Bienvenido(nu);
                     _vistaTabs.MostrarConfiguracionUsuarios("Administrador");
                     _vistaTabs.Show();
@@ -237,20 +254,29 @@ namespace WindowsFormsApp1
                 db.CerrarConexion();
             }
         }
-
         private void SlLOlvidasteContasena_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            cambiarContraseña c = new cambiarContraseña();
+            /*cambiarContraseña c = new cambiarContraseña();
             c.Show();
+            this.Hide();*/
+            CambiarClave cambiarClave = new CambiarClave();
+            cambiarClave.Show();
             this.Hide();
         }
-
         private void SlLNuevoUsuarioL_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            NuevoUsuario nu = new NuevoUsuario();
+            /*NuevoUsuario nu = new NuevoUsuario();
+            nu.Show();*/
+            NINuevoUsuario nu = new NINuevoUsuario();
             nu.Show();
             this.Hide();
         }
+        private void LoadingSplashScreen()
+        {
+            SplashScreen splash = new SplashScreen();
+            Application.Run(splash);
+        }
+    }   
 
         private void TxtContrasena_KeyPress_1(object sender, KeyPressEventArgs e)
         {

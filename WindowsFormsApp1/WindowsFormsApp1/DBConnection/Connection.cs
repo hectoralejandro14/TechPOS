@@ -24,8 +24,6 @@ namespace WindowsFormsApp1.DBConnectio
         {
             conexion.ConnectionString = cadena;
         }
-
-
         public void AbrirConexion()
         {
             try
@@ -55,13 +53,13 @@ namespace WindowsFormsApp1.DBConnectio
             }
         }
         //------------------------------------------------------------------------------------------------------------------------------------------------------
-        public bool AddElements(string SQL)
+        public bool AddElements(string SQL, string mensaje)
         {
             try
             {
                 SqlCommand cmd = new SqlCommand(SQL, conexion);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Los datos fueron registrados exitosamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Los datos sobre "+mensaje+" fueron registrados exitosamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return true;
             }
             catch (System.Data.SqlClient.SqlException e2)
@@ -169,7 +167,7 @@ namespace WindowsFormsApp1.DBConnectio
             }
             catch /*(IndexOutOfRangeException e3)*/
             {
-                MessageBox.Show("ERROR SQL", "Error de Conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("ERROR SQL", "Error de Conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return aux;
         }
@@ -277,7 +275,6 @@ namespace WindowsFormsApp1.DBConnectio
             }
             return aux;
         }
-
         public int modificarCliente(string sql)
         {
             int filas = 0;
@@ -286,7 +283,6 @@ namespace WindowsFormsApp1.DBConnectio
             filas = sc.ExecuteNonQuery();
             return filas;
         }
-
         public DataTable buscarReparacion(string cadena)
         {
             dataSet.Reset();
@@ -296,8 +292,6 @@ namespace WindowsFormsApp1.DBConnectio
 
             return table;
         }
-
-
         public int generarId(string sql)
         {
             int id = 0;
@@ -314,7 +308,6 @@ namespace WindowsFormsApp1.DBConnectio
             }
             return id;
         }
-
         public string verificarExistenciaUser (string name, string lastname){
             bool aux = false;
             try
@@ -338,7 +331,6 @@ namespace WindowsFormsApp1.DBConnectio
             }
             return "";         
         }
-
         public int actualizarDatos(string sql)
         {
             int fila = 0;
@@ -370,6 +362,24 @@ namespace WindowsFormsApp1.DBConnectio
                 Console.WriteLine(e);
             }
             return "";
+        }
+        public DataRow BProducto(DataTable dtVenta, string text)
+        {
+            SqlCommand cmd = new SqlCommand("select * from Producto where ClaveProducto='" + text + "'",conexion);
+            SqlDataReader dr = cmd.ExecuteReader();
+            DataRow row = dtVenta.NewRow();
+            if (dr.Read())
+            {
+                row["cod"] = Convert.ToString(dr["ClaveProducto"]);
+                row["des"] = Convert.ToString(dr["Descripcion"]);
+                row["preciou"] = Convert.ToString(dr["Costo"]);
+                row["cant"] = Convert.ToString("Cantidad");
+                row["preciot"] = Convert.ToString("345635");
+                MessageBox.Show(Convert.ToString(dr["Costo"]));
+                
+                return row;
+            }
+            return null;
         }
     }
 }

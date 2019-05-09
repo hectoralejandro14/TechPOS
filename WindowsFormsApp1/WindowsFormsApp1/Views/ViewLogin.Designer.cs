@@ -126,7 +126,7 @@
             this.SlbTituloLogin.AutoSize = true;
             this.SlbTituloLogin.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SlbTituloLogin.ForeColor = System.Drawing.Color.DimGray;
-            this.SlbTituloLogin.Location = new System.Drawing.Point(482, 0);
+            this.SlbTituloLogin.Location = new System.Drawing.Point(473, 9);
             this.SlbTituloLogin.Name = "SlbTituloLogin";
             this.SlbTituloLogin.Size = new System.Drawing.Size(81, 32);
             this.SlbTituloLogin.TabIndex = 16;
@@ -135,10 +135,12 @@
             // btnAceptar
             // 
             this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnAceptar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAceptar.FlatAppearance.BorderSize = 0;
             this.btnAceptar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.btnAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAceptar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.Orange;
             this.btnAceptar.Location = new System.Drawing.Point(296, 200);
             this.btnAceptar.Name = "btnAceptar";
@@ -152,6 +154,7 @@
             // 
             this.SlLOlvidasteContasena.ActiveLinkColor = System.Drawing.Color.Orange;
             this.SlLOlvidasteContasena.AutoSize = true;
+            this.SlLOlvidasteContasena.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SlLOlvidasteContasena.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SlLOlvidasteContasena.LinkColor = System.Drawing.Color.DimGray;
             this.SlLOlvidasteContasena.Location = new System.Drawing.Point(432, 260);
@@ -164,6 +167,7 @@
             // 
             // btnMinimizarAplicacion
             // 
+            this.btnMinimizarAplicacion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimizarAplicacion.Image = global::WindowsFormsApp1.Properties.Resources.minimazar;
             this.btnMinimizarAplicacion.Location = new System.Drawing.Point(741, 0);
             this.btnMinimizarAplicacion.Name = "btnMinimizarAplicacion";
@@ -175,6 +179,7 @@
             // 
             // btnCerrarAplicacion
             // 
+            this.btnCerrarAplicacion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrarAplicacion.Image = global::WindowsFormsApp1.Properties.Resources.cerrar;
             this.btnCerrarAplicacion.Location = new System.Drawing.Point(762, 0);
             this.btnCerrarAplicacion.Name = "btnCerrarAplicacion";
@@ -188,6 +193,7 @@
             // 
             this.SlLNuevoUsuarioL.ActiveLinkColor = System.Drawing.Color.Orange;
             this.SlLNuevoUsuarioL.AutoSize = true;
+            this.SlLNuevoUsuarioL.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SlLNuevoUsuarioL.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SlLNuevoUsuarioL.LinkColor = System.Drawing.Color.DimGray;
             this.SlLNuevoUsuarioL.Location = new System.Drawing.Point(476, 289);
