@@ -79,7 +79,7 @@
             // 
             this.estadoLblRepa.AutoSize = true;
             this.estadoLblRepa.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.estadoLblRepa.Location = new System.Drawing.Point(384, 0);
+            this.estadoLblRepa.Location = new System.Drawing.Point(383, 0);
             this.estadoLblRepa.Name = "estadoLblRepa";
             this.estadoLblRepa.Size = new System.Drawing.Size(70, 34);
             this.estadoLblRepa.TabIndex = 1;
@@ -99,7 +99,7 @@
             // 
             this.modeloLblRepa.AutoSize = true;
             this.modeloLblRepa.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.modeloLblRepa.Location = new System.Drawing.Point(384, 37);
+            this.modeloLblRepa.Location = new System.Drawing.Point(383, 37);
             this.modeloLblRepa.Name = "modeloLblRepa";
             this.modeloLblRepa.Size = new System.Drawing.Size(72, 34);
             this.modeloLblRepa.TabIndex = 3;
@@ -161,7 +161,7 @@
             this.idTxtBoxRepa.Enabled = false;
             this.idTxtBoxRepa.Location = new System.Drawing.Point(150, 3);
             this.idTxtBoxRepa.Name = "idTxtBoxRepa";
-            this.idTxtBoxRepa.Size = new System.Drawing.Size(228, 20);
+            this.idTxtBoxRepa.Size = new System.Drawing.Size(227, 20);
             this.idTxtBoxRepa.TabIndex = 12;
             // 
             // MarcaTxtBox
@@ -169,7 +169,7 @@
             this.MarcaTxtBox.Enabled = false;
             this.MarcaTxtBox.Location = new System.Drawing.Point(150, 40);
             this.MarcaTxtBox.Name = "MarcaTxtBox";
-            this.MarcaTxtBox.Size = new System.Drawing.Size(228, 20);
+            this.MarcaTxtBox.Size = new System.Drawing.Size(227, 20);
             this.MarcaTxtBox.TabIndex = 13;
             // 
             // fallaTxtBoxRepa
@@ -184,7 +184,7 @@
             // ModeloTxtBoxRepa
             // 
             this.ModeloTxtBoxRepa.Enabled = false;
-            this.ModeloTxtBoxRepa.Location = new System.Drawing.Point(475, 40);
+            this.ModeloTxtBoxRepa.Location = new System.Drawing.Point(474, 40);
             this.ModeloTxtBoxRepa.Name = "ModeloTxtBoxRepa";
             this.ModeloTxtBoxRepa.Size = new System.Drawing.Size(135, 20);
             this.ModeloTxtBoxRepa.TabIndex = 16;
@@ -272,7 +272,7 @@
             // estadoCBoxC
             // 
             this.estadoCBoxC.FormattingEnabled = true;
-            this.estadoCBoxC.Location = new System.Drawing.Point(475, 3);
+            this.estadoCBoxC.Location = new System.Drawing.Point(474, 3);
             this.estadoCBoxC.Name = "estadoCBoxC";
             this.estadoCBoxC.Size = new System.Drawing.Size(135, 21);
             this.estadoCBoxC.TabIndex = 24;
@@ -283,7 +283,7 @@
             this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.69347F));
             this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.30653F));
             this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 91F));
-            this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140F));
+            this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 141F));
             this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.2561F));
             this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.7439F));
             this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 79F));

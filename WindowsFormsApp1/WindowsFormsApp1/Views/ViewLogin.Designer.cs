@@ -55,9 +55,8 @@
             this.txtUsuario.ForeColor = System.Drawing.Color.DimGray;
             this.txtUsuario.HideSelection = false;
             this.txtUsuario.Location = new System.Drawing.Point(296, 59);
-            this.txtUsuario.Multiline = true;
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(454, 26);
+            this.txtUsuario.Size = new System.Drawing.Size(454, 19);
             this.txtUsuario.TabIndex = 1;
             this.txtUsuario.Text = "USUARIO";
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
@@ -119,6 +118,7 @@
             this.txtContrasena.TabIndex = 2;
             this.txtContrasena.Text = "CONTRASEÑA";
             this.txtContrasena.Enter += new System.EventHandler(this.txtContrasena_Enter);
+            this.txtContrasena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtContrasena_KeyPress_1);
             this.txtContrasena.Leave += new System.EventHandler(this.txtContrasena_Leave);
             // 
             // SlbTituloLogin

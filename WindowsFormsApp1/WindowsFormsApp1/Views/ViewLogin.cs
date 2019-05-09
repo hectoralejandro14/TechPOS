@@ -251,6 +251,48 @@ namespace WindowsFormsApp1
             nu.Show();
             this.Hide();
         }
+
+        private void TxtContrasena_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (Char)Keys.Enter)
+            {
+                if (txtContrasena.Text.Equals("") || txtUsuario.Text.Equals(""))
+                {
+                    MessageBox.Show("No se pudo iniciar sesión por existencia de campos vacios", "Campos Vacios", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                    txtContrasena.Text = "";
+                    txtUsuario.Text = "";
+                }
+                else
+                {
+                    Connection db = new Connection();
+                    string auxNu = txtUsuario.Text;
+                    string nu = auxNu.ToUpper();
+                    string co = txtContrasena.Text;
+                    //Controllers.Encrypt ect = new Controllers.Encrypt();
+                    string coe = Controllers.Encrypt.GetMD5(txtContrasena.Text);
+                    //MessageBox.Show(coe);
+                    db.AbrirConexion();
+                    if (db.IniciarSesion(nu, coe) == "Administrador")
+                    {
+                        _vistaTabs.Bienvenido(nu);
+                        _vistaTabs.MostrarConfiguracionUsuarios("Administrador");
+                        _vistaTabs.Show();
+                        this.Hide();
+                    }
+                    else if (db.IniciarSesion(nu, coe) == "Trabajador")
+                    {
+                        _vistaTabs.Bienvenido(nu);
+                        _vistaTabs.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error! Usuario y/o Contraseña Incorrectas", "Sesión fallida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    db.CerrarConexion();
+                }
+            }
+        }
     }
     
 }

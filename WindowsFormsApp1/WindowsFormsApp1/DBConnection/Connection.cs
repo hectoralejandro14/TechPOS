@@ -347,5 +347,29 @@ namespace WindowsFormsApp1.DBConnectio
             fila = sc.ExecuteNonQuery();
             return fila;
         }
+
+        public string buscarEstado(string sql)
+        {
+            SqlCommand cmd = new SqlCommand(sql, conexion);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            try
+            {
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    if ((dt.Rows[i][2].ToString().Equals("Ordenada")))
+                    {
+                        MessageBox.Show(dt.Rows[i][2].ToString());
+                        return dt.Rows[i][2].ToString();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+            return "";
+        }
     }
 }
