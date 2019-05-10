@@ -129,7 +129,7 @@ namespace WindowsFormsApp1.Views
         }
         private void buscarTbxVentas_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
         private void lupaImg_Click(object sender, EventArgs e)
         {
@@ -393,7 +393,7 @@ namespace WindowsFormsApp1.Views
         }
         private void btnPedirPieza_Click(object sender, System.EventArgs e)
         {
-            if ((Convert.ToDecimal(txtAnticipo.Text)) == ((Convert.ToDecimal(txtTotal.Text))/2) || (Convert.ToDecimal(txtAnticipo.Text)) > ((Convert.ToDecimal(txtTotal.Text)) / 2))
+            if ((Convert.ToDecimal(txtAnticipo.Text)) == ((Convert.ToDecimal(txtTotal.Text)) / 2) || (Convert.ToDecimal(txtAnticipo.Text)) > ((Convert.ToDecimal(txtTotal.Text)) / 2))
             {
                 if (lblIdEquipo.Text != "0000" || txtModelo.Text != "" || txtMarca.Text != "")
                 {
@@ -410,7 +410,7 @@ namespace WindowsFormsApp1.Views
             {
                 MessageBox.Show("No se puede realizar pedido de pieza. Debido a que se esta recibiendo menos de la mitad del total.", "Valor no permitido.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            
+
 
         }
         private void pictureBuscar_Click(object sender, System.EventArgs e)
@@ -656,88 +656,85 @@ namespace WindowsFormsApp1.Views
                 else
                 {
                     MessageBox.Show("No se puede realizar pedido de pieza. Debido a que se esta recibiendo menos de la mitad del total.", "Valor no permitido.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                if (txtDescripcionDeFalla.Text != "" && txtMarca.Text != "" && txtModelo.Text != "")
-                {
-                    string tipoDiag = "";
-                    DateTime Hoy = DateTime.Today;
-                    string fecha_actual = Hoy.ToString("yyyy-MM-dd");
-                    DBConnectio.Connection db = new DBConnectio.Connection();
-                    db.AbrirConexion();
-                    if (rbDiagnosticoEspecifico.Checked)
+                    if (txtDescripcionDeFalla.Text != "" && txtMarca.Text != "" && txtModelo.Text != "")
                     {
-                        tipoDiag = "Diagnóstico específico";
-                    }
-                    else if (rbDiagnosticoRapido.Checked)
-                    {
-                        tipoDiag = "Diagnóstico rápido";
-                    }
-                    else
-                    {
-                        MessageBox.Show("Seleccione un tipo de diagnóstico", "Diagnóstico", MessageBoxButtons.OK, MessageBoxIcon.Question);
-                    }
-                    if (rbDiagnosticoEspecifico.Checked || rbDiagnosticoRapido.Checked)
-                    {
-                        string concatenarDiagTex = tipoDiag + " : " + txtDescripcionDiagnosticoEspecifico.Text;
-                        String sql = "";
-                        if (txtAnticipo.Text == "")
+                        string tipoDiag = "";
+                        DateTime Hoy = DateTime.Today;
+                        string fecha_actual = Hoy.ToString("yyyy-MM-dd");
+                        DBConnectio.Connection db = new DBConnectio.Connection();
+                        db.AbrirConexion();
+                        if (rbDiagnosticoEspecifico.Checked)
                         {
-                            sql = "Insert into Reparacion (Id,Marca,Modelo,Falla,Diagnostico,IdServicio,Anticipo,IdEstado,Fecha,IdCliente,IdUsuario,CostoTotal,IdPieza,trabajoRealizado) values("
-                                                        + lblIdEquipo.Text + ",'" + txtMarca.Text
-                                                        + "','" + txtModelo.Text
-                                                        + "','" + txtDescripcionDeFalla.Text
-                                                        + "','" + concatenarDiagTex
-                                                        + "','" + ccbTipoServicio1.SelectedValue
-                                                        + "',0,6,'" + fecha_actual + "','" + lblIdCliente.Text
-                                                        + "','" + comboResponsable.SelectedValue.ToString() + "'," + txtTotal.Text
-                                                        + ",1,'')";
+                            tipoDiag = "Diagnóstico específico";
+                        }
+                        else if (rbDiagnosticoRapido.Checked)
+                        {
+                            tipoDiag = "Diagnóstico rápido";
                         }
                         else
                         {
-                            sql = "Insert into Reparacion (Id,Marca,Modelo,Falla,Diagnostico,IdServicio,Anticipo,IdEstado,Fecha,IdCliente,IdUsuario,CostoTotal,IdPieza,trabajoRealizado) values("
-                                + lblIdEquipo.Text + ",'" + txtMarca.Text
-                                + "','" + txtModelo.Text
-                                + "','" + txtDescripcionDeFalla.Text
-                                + "','" + concatenarDiagTex
-                                + "','" + ccbTipoServicio1.SelectedValue
-                                + "'," + txtAnticipo.Text + ",6,'" + fecha_actual + "','" + lblIdCliente.Text
-                                + "','" + comboResponsable.SelectedValue.ToString() + "'," + txtTotal.Text
-                                + ",1,'')";
+                            MessageBox.Show("Seleccione un tipo de diagnóstico", "Diagnóstico", MessageBoxButtons.OK, MessageBoxIcon.Question);
                         }
-                        Console.WriteLine(sql);
-                        bool data = db.AddElements(sql);
-                        db.CerrarConexion();
-                        if (!data)
+                        if (rbDiagnosticoEspecifico.Checked || rbDiagnosticoRapido.Checked)
                         {
-                            MessageBox.Show("Ocurrio un error con la conexión a la Base de Datos ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        txtMarca.Text = "";
-                        txtDescripcionDeFalla.Text = "";
-                        txtDescripcionDiagnosticoEspecifico.Text = "";
-                        txtModelo.Text = "";
-                        txtTotal.Text = "";
-                        txtAnticipo.Text = "";
-                        txtNombre.Text = "";
-                        txtApellido.Text = "";
-                        txtTelefono.Text = "";
-                        txtCorreo.Text = "";
-                        txtBuscarCliente.Text = "";
-                        lblIdCliente.Visible = false;
-                        lblTextoIdCliente.Visible = false;
-                        lblIdEquipo.Visible = false;
-                        SlblRecibirEquipo.Visible = false;
+                            string concatenarDiagTex = tipoDiag + " : " + txtDescripcionDiagnosticoEspecifico.Text;
+                            String sql = "";
+                            if (txtAnticipo.Text == "")
+                            {
+                                sql = "Insert into Reparacion (Id,Marca,Modelo,Falla,Diagnostico,IdServicio,Anticipo,IdEstado,Fecha,IdCliente,IdUsuario,CostoTotal,IdPieza,trabajoRealizado) values("
+                                                            + lblIdEquipo.Text + ",'" + txtMarca.Text
+                                                            + "','" + txtModelo.Text
+                                                            + "','" + txtDescripcionDeFalla.Text
+                                                            + "','" + concatenarDiagTex
+                                                            + "','" + ccbTipoServicio1.SelectedValue
+                                                            + "',0,6,'" + fecha_actual + "','" + lblIdCliente.Text
+                                                            + "','" + comboResponsable.SelectedValue.ToString() + "'," + txtTotal.Text
+                                                            + ",1,'')";
+                            }
+                            else
+                            {
+                                sql = "Insert into Reparacion (Id,Marca,Modelo,Falla,Diagnostico,IdServicio,Anticipo,IdEstado,Fecha,IdCliente,IdUsuario,CostoTotal,IdPieza,trabajoRealizado) values("
+                                    + lblIdEquipo.Text + ",'" + txtMarca.Text
+                                    + "','" + txtModelo.Text
+                                    + "','" + txtDescripcionDeFalla.Text
+                                    + "','" + concatenarDiagTex
+                                    + "','" + ccbTipoServicio1.SelectedValue
+                                    + "'," + txtAnticipo.Text + ",6,'" + fecha_actual + "','" + lblIdCliente.Text
+                                    + "','" + comboResponsable.SelectedValue.ToString() + "'," + txtTotal.Text
+                                    + ",1,'')";
+                            }
+                            Console.WriteLine(sql);
+                            bool data = db.AddElements(sql,"");
+                            db.CerrarConexion();
+                            if (!data)
+                            {
+                                MessageBox.Show("Ocurrio un error con la conexión a la Base de Datos ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            txtMarca.Text = "";
+                            txtDescripcionDeFalla.Text = "";
+                            txtDescripcionDiagnosticoEspecifico.Text = "";
+                            txtModelo.Text = "";
+                            txtTotal.Text = "";
+                            txtAnticipo.Text = "";
+                            txtNombre.Text = "";
+                            txtApellido.Text = "";
+                            txtTelefono.Text = "";
+                            txtCorreo.Text = "";
+                            txtBuscarCliente.Text = "";
+                            lblIdCliente.Visible = false;
+                            lblTextoIdCliente.Visible = false;
+                            lblIdEquipo.Visible = false;
+                            SlblRecibirEquipo.Visible = false;
 
-                        //------------------------------------------------------------------------------------------------
-                        btnAddClientH.Visible = true;
-                        GenerarIdEquipo();
+                            //------------------------------------------------------------------------------------------------
+                            btnAddClientH.Visible = true;
+                            GenerarIdEquipo();
+                        }
                     }
                 }
-                    
-            }
-            else
-            {
-                MessageBox.Show("Id del cliente vacio");
             }
         }
+
         private void btnLimpiarCampos_Click_1(object sender, EventArgs e)
         {
             txtBuscarCliente.Text = "";
@@ -775,7 +772,7 @@ namespace WindowsFormsApp1.Views
                 decimal id_random = random.Next(1, 1000000000);
                 string consulta = "INSERT INTO Rol (Id,NombreRol) VALUES (" + id_random + ",'" + _rol + "')";
                 MessageBox.Show(consulta);
-                conexion.AddElements(consulta,"rol");
+                conexion.AddElements(consulta, "rol");
             }
             else
             {
@@ -788,7 +785,7 @@ namespace WindowsFormsApp1.Views
             NuevoUsuario nuevoUsuario = new NuevoUsuario();
             nuevoUsuario.ShowDialog();
             nuevoUsuario.PeticionDe();
-      
+
         }
         //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         //METOODOS PROGRAMADOS POR NOSOTROS
@@ -1197,7 +1194,7 @@ namespace WindowsFormsApp1.Views
 
         private void buscarTbxVentas_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+
             if ((int)e.KeyChar == (int)Keys.Enter)
             {
                 string cadena = "Data Source=.\\SQLEXPRESS;Initial Catalog=TechPOSdb; Integrated Security=True";
@@ -1212,25 +1209,24 @@ namespace WindowsFormsApp1.Views
                 {
                     double price = Convert.ToDouble(Convert.ToString(dr["Costo"]));
                     double subtotal = Convert.ToDouble(subTotalTbxVentas.Text) + (Convert.ToDouble(Convert.ToString("2")) * price);
-                    double iva = Convert.ToDouble(((subtotal*16)/100));
-                        row["cod"] = Convert.ToString(dr["ClaveProducto"]);
-                        row["des"] = Convert.ToString(dr["Descripcion"]);
-                        row["preciou"] = Convert.ToString(dr["Costo"]);
-                        row["cant"] = Convert.ToString("2");
-                        row["preciot"] = Convert.ToString(Convert.ToDouble(Convert.ToString("2"))*price);
-                        MessageBox.Show(Convert.ToString(dr["Costo"]));
-                        dtVenta.Rows.Add(row);
+                    double iva = Convert.ToDouble(((subtotal * 16) / 100));
+                    row["cod"] = Convert.ToString(dr["ClaveProducto"]);
+                    row["des"] = Convert.ToString(dr["Descripcion"]);
+                    row["preciou"] = Convert.ToString(dr["Costo"]);
+                    row["cant"] = Convert.ToString("2");
+                    row["preciot"] = Convert.ToString(Convert.ToDouble(Convert.ToString("2")) * price);
+                    MessageBox.Show(Convert.ToString(dr["Costo"]));
+                    dtVenta.Rows.Add(row);
                     subTotalTbxVentas.Text = Convert.ToString(subtotal);
                     ivaTbxVentas.Text = Convert.ToString(iva);
-                    totalTbxVenta.Text = Convert.ToString(subtotal+iva);
+                    totalTbxVenta.Text = Convert.ToString(subtotal + iva);
 
-                    
+
                 }
                 conexion.Close();
             }
         }
 
-        }
 
         private void TabPuntoVenta_KeyUp(object sender, KeyEventArgs e)
         {
@@ -1258,6 +1254,8 @@ namespace WindowsFormsApp1.Views
             {
                 tabPuntoVenta.SelectedIndex = 5;
             }
+
+        }
         private void Tiempo_Tick(object sender, EventArgs e)
         {
             HoraMinutoSegundo.Text = DateTime.Now.ToLongTimeString();

@@ -33,6 +33,7 @@ namespace WindowsFormsApp1
                 splasAcitivty = 1;
             }
         }
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -79,7 +80,7 @@ namespace WindowsFormsApp1
         }
         private void ViewLogin_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar==(Char)Keys.Enter)
+            if (e.KeyChar == (Char)Keys.Enter)
             {
                 if (txtContrasena.Text.Equals("") || txtUsuario.Text.Equals(""))
                 {
@@ -117,8 +118,9 @@ namespace WindowsFormsApp1
                     db.CerrarConexion();
                 }
             }
-            
+
         }
+
         private void txtContrasena_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (Char)Keys.Enter)
@@ -163,7 +165,7 @@ namespace WindowsFormsApp1
         //---------------------------------------------------------------------------
         private void txtUsuario_Enter(object sender, EventArgs e)
         {
-            if(txtUsuario.Text == "USUARIO")
+            if (txtUsuario.Text == "USUARIO")
             {
                 txtUsuario.Text = "";
                 txtUsuario.ForeColor = Color.Orange;
@@ -276,7 +278,6 @@ namespace WindowsFormsApp1
             SplashScreen splash = new SplashScreen();
             Application.Run(splash);
         }
-    }   
 
         private void TxtContrasena_KeyPress_1(object sender, KeyPressEventArgs e)
         {
@@ -320,5 +321,4 @@ namespace WindowsFormsApp1
             }
         }
     }
-    
 }
