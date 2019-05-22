@@ -275,8 +275,15 @@ namespace WindowsFormsApp1
         }
         private void LoadingSplashScreen()
         {
-            SplashScreen splash = new SplashScreen();
-            Application.Run(splash);
+            try
+            {
+                SplashScreen splash = new SplashScreen();
+                Application.Run(splash);
+            }
+            catch
+            {
+
+            }
         }
 
         private void TxtContrasena_KeyPress_1(object sender, KeyPressEventArgs e)
