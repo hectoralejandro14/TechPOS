@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewTabs));
             this.tabPuntoVenta = new System.Windows.Forms.TabControl();
             this.tabVenta = new System.Windows.Forms.TabPage();
@@ -211,6 +212,7 @@
             this.tabPuntoVenta.TabIndex = 0;
             this.tabPuntoVenta.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabPuntoVenta_DrawItem);
             this.tabPuntoVenta.SelectedIndexChanged += new System.EventHandler(this.tabPuntoVenta_SelectedIndexChanged);
+            this.tabPuntoVenta.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TabPuntoVenta_KeyUp);
             // 
             // tabVenta
             // 
@@ -235,7 +237,7 @@
             this.tabVenta.Padding = new System.Windows.Forms.Padding(3);
             this.tabVenta.Size = new System.Drawing.Size(1328, 669);
             this.tabVenta.TabIndex = 0;
-            this.tabVenta.Text = "Venta";
+            this.tabVenta.Text = "Venta (F1)";
             // 
             // HoraMinutoSegundo
             // 
@@ -277,6 +279,7 @@
             // 
             // totalTbxVenta
             // 
+            this.totalTbxVenta.Enabled = false;
             this.totalTbxVenta.Location = new System.Drawing.Point(281, 616);
             this.totalTbxVenta.Multiline = true;
             this.totalTbxVenta.Name = "totalTbxVenta";
@@ -286,6 +289,7 @@
             // 
             // ivaTbxVentas
             // 
+            this.ivaTbxVentas.Enabled = false;
             this.ivaTbxVentas.Location = new System.Drawing.Point(281, 567);
             this.ivaTbxVentas.Multiline = true;
             this.ivaTbxVentas.Name = "ivaTbxVentas";
@@ -295,6 +299,7 @@
             // 
             // subTotalTbxVentas
             // 
+            this.subTotalTbxVentas.Enabled = false;
             this.subTotalTbxVentas.Location = new System.Drawing.Point(281, 514);
             this.subTotalTbxVentas.Multiline = true;
             this.subTotalTbxVentas.Name = "subTotalTbxVentas";
@@ -449,7 +454,7 @@
             this.tabRecibirEquipo.Padding = new System.Windows.Forms.Padding(3);
             this.tabRecibirEquipo.Size = new System.Drawing.Size(1328, 669);
             this.tabRecibirEquipo.TabIndex = 1;
-            this.tabRecibirEquipo.Text = "Recibir Equipo";
+            this.tabRecibirEquipo.Text = "Recibir Equipo (F2)";
             // 
             // layoutTotales
             // 
@@ -555,6 +560,7 @@
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.33448F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.66552F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 92F));
+            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 229F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 230F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 224F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.33448F));
@@ -1011,7 +1017,7 @@
             this.btnAgregrEquipos.Name = "btnAgregrEquipos";
             this.btnAgregrEquipos.Size = new System.Drawing.Size(132, 43);
             this.btnAgregrEquipos.TabIndex = 34;
-            this.btnAgregrEquipos.Text = "Agregar Equipo";
+            this.btnAgregrEquipos.Text = "Agregar";
             this.btnAgregrEquipos.UseVisualStyleBackColor = false;
             this.btnAgregrEquipos.Click += new System.EventHandler(this.btnAgregrEquipos_Click);
             // 
@@ -1025,7 +1031,7 @@
             this.btnLimpiarCampos.Name = "btnLimpiarCampos";
             this.btnLimpiarCampos.Size = new System.Drawing.Size(132, 43);
             this.btnLimpiarCampos.TabIndex = 33;
-            this.btnLimpiarCampos.Text = "Limpiar Campos";
+            this.btnLimpiarCampos.Text = "Limpiar";
             this.btnLimpiarCampos.UseVisualStyleBackColor = false;
             this.btnLimpiarCampos.Click += new System.EventHandler(this.btnLimpiarCampos_Click_1);
             // 
@@ -1057,7 +1063,7 @@
             this.tabReparacion.Padding = new System.Windows.Forms.Padding(3);
             this.tabReparacion.Size = new System.Drawing.Size(1328, 669);
             this.tabReparacion.TabIndex = 2;
-            this.tabReparacion.Text = "Reparación";
+            this.tabReparacion.Text = "Reparación (F3)";
             this.tabReparacion.Click += new System.EventHandler(this.tabReparacion_Click);
             // 
             // refresIconCheno
@@ -1183,7 +1189,7 @@
             this.tabConfiguracionesDeUsuario.Name = "tabConfiguracionesDeUsuario";
             this.tabConfiguracionesDeUsuario.Size = new System.Drawing.Size(1328, 669);
             this.tabConfiguracionesDeUsuario.TabIndex = 3;
-            this.tabConfiguracionesDeUsuario.Text = "Configuraciones de Usuario";
+            this.tabConfiguracionesDeUsuario.Text = "Configuraciones de Usuario (F6)";
             // 
             // SgbConfiguraciones
             // 
@@ -1361,7 +1367,7 @@
             this.ordenesTab.Padding = new System.Windows.Forms.Padding(3);
             this.ordenesTab.Size = new System.Drawing.Size(1328, 669);
             this.ordenesTab.TabIndex = 4;
-            this.ordenesTab.Text = "Piezas Ordenadas";
+            this.ordenesTab.Text = "Piezas Ordenadas (F4)";
             this.ordenesTab.Click += new System.EventHandler(this.ordenesTab_Click);
             this.ordenesTab.Enter += new System.EventHandler(this.ordenesTab_Enter);
             // 
@@ -1378,13 +1384,19 @@
             // 
             // tableOrdenes
             // 
+            this.tableOrdenes.AllowUserToAddRows = false;
+            this.tableOrdenes.AllowUserToDeleteRows = false;
+            this.tableOrdenes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tableOrdenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tableOrdenes.Location = new System.Drawing.Point(150, 147);
+            this.tableOrdenes.Location = new System.Drawing.Point(316, 114);
+            this.tableOrdenes.MultiSelect = false;
             this.tableOrdenes.Name = "tableOrdenes";
+            this.tableOrdenes.ReadOnly = true;
             this.tableOrdenes.RowHeadersVisible = false;
+            this.tableOrdenes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.tableOrdenes.RowTemplate.ReadOnly = true;
             this.tableOrdenes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tableOrdenes.Size = new System.Drawing.Size(1142, 488);
+            this.tableOrdenes.Size = new System.Drawing.Size(817, 488);
             this.tableOrdenes.TabIndex = 1;
             this.tableOrdenes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableOrdenes_CellClick);
             // 
@@ -1409,7 +1421,7 @@
             this.TabClientes.Padding = new System.Windows.Forms.Padding(3);
             this.TabClientes.Size = new System.Drawing.Size(1328, 669);
             this.TabClientes.TabIndex = 5;
-            this.TabClientes.Text = "Clientes";
+            this.TabClientes.Text = "Clientes (F5)";
             // 
             // layBuscarCliente
             // 
@@ -1454,8 +1466,18 @@
             // 
             this.dgClientes.AllowUserToAddRows = false;
             this.dgClientes.AllowUserToDeleteRows = false;
+            this.dgClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgClientes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgClientes.Location = new System.Drawing.Point(130, 150);
+            this.dgClientes.Location = new System.Drawing.Point(92, 142);
             this.dgClientes.Name = "dgClientes";
             this.dgClientes.ReadOnly = true;
             this.dgClientes.RowHeadersVisible = false;
@@ -1463,7 +1485,7 @@
             this.dgClientes.RowTemplate.ReadOnly = true;
             this.dgClientes.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgClientes.Size = new System.Drawing.Size(901, 320);
+            this.dgClientes.Size = new System.Drawing.Size(1131, 370);
             this.dgClientes.TabIndex = 5;
             this.dgClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgClientes_CellClick);
             // 
@@ -1584,6 +1606,7 @@
             this.Controls.Add(this.tabPuntoVenta);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Name = "ViewTabs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UP - Software";

@@ -30,7 +30,7 @@ namespace WindowsFormsApp1.Views
             SqlDataAdapter da = conexion.consultaMasDatos("select Id, Nombre from Servicio");
             da.Fill(dt);
             conexion.CerrarConexion();
-           
+
             ccbTipoServicio1.DisplayMember = "Nombre";
             ccbTipoServicio1.ValueMember = "Id";
             ccbTipoServicio1.DataSource = dt;
@@ -76,7 +76,7 @@ namespace WindowsFormsApp1.Views
             ScbxSeleccionarRol.Text = "Elija el Rol de Usuario";
             roles.Add("Administrador");
             roles.Add("Trabajador");
-            for (int i = 0;i<roles.Count;i++)
+            for (int i = 0; i < roles.Count; i++)
             {
                 ScbxSeleccionarRol.Items.Add(roles[i]);
             }
@@ -96,7 +96,7 @@ namespace WindowsFormsApp1.Views
             tableOrdenes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             //------------------------------------------------------------------------------------------------------------------------------------------------------
             colores();
-        }   
+        }
         private void linkCerrarSesion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
@@ -111,7 +111,7 @@ namespace WindowsFormsApp1.Views
             connection.CerrarConexion();
             colores();
 
-            tabPuntoVenta.DrawMode=TabDrawMode.OwnerDrawFixed;
+            tabPuntoVenta.DrawMode = TabDrawMode.OwnerDrawFixed;
         }
         private void ViewTabs_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -129,7 +129,7 @@ namespace WindowsFormsApp1.Views
         }
         private void buscarTbxVentas_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
         private void lupaImg_Click(object sender, EventArgs e)
         {
@@ -214,11 +214,12 @@ namespace WindowsFormsApp1.Views
                 string fecha_actual = Hoy.ToString("yyyy-MM-dd");
                 int daysDiff = ((TimeSpan)(Hoy - fecha)).Days;
 
-                if (daysDiff <=3)
+                if (daysDiff <= 3)
                 {
                     row.DefaultCellStyle.BackColor = Color.YellowGreen;
                     // MessageBox.Show(daysDiff + "");
-                }else if (daysDiff > 3 && daysDiff <=5)
+                }
+                else if (daysDiff > 3 && daysDiff <= 5)
                 {
                     row.DefaultCellStyle.BackColor = Color.Yellow;
                 }
@@ -324,10 +325,10 @@ namespace WindowsFormsApp1.Views
             Connection conexion = new Connection();
             conexion.AbrirConexion();
 
-            if ((!txtNombre.Text.Equals("")) && (!txtApellido.Text.Equals("")) && (!txtTelefono.Text.Equals("")) )
+            if ((!txtNombre.Text.Equals("")) && (!txtApellido.Text.Equals("")) && (!txtTelefono.Text.Equals("")))
             {
                 string idVerif = conexion.verificarExistenciaUser(txtNombre.Text, txtApellido.Text);
-                if (idVerif!="")
+                if (idVerif != "")
                 {
                     txtNombre.Text = "";
                     txtApellido.Text = "";
@@ -335,7 +336,7 @@ namespace WindowsFormsApp1.Views
                     txtTelefono.Text = "";
                     MessageBox.Show("Ya existe un cliente con datos similares, favor de verificar");
                 }
-                else if (txtCorreo.Text=="")
+                else if (txtCorreo.Text == "")
                 {
                     int idR = Convert.ToInt32(lblIdCliente.Text);
                     //Agregar cliente
@@ -356,7 +357,7 @@ namespace WindowsFormsApp1.Views
                     //lblIdCliente.Visible = false;
                     dgClientes.DataSource = conexion.buscar("SELECT * FROM Cliente");
                 }
-                else if (validarEmail(txtCorreo.Text)==true)
+                else if (validarEmail(txtCorreo.Text) == true)
                 {
 
                     int idR = Convert.ToInt32(lblIdCliente.Text);
@@ -392,7 +393,7 @@ namespace WindowsFormsApp1.Views
         }
         private void btnPedirPieza_Click(object sender, System.EventArgs e)
         {
-            if ((Convert.ToDecimal(txtAnticipo.Text)) == ((Convert.ToDecimal(txtTotal.Text))/2) || (Convert.ToDecimal(txtAnticipo.Text)) > ((Convert.ToDecimal(txtTotal.Text)) / 2))
+            if ((Convert.ToDecimal(txtAnticipo.Text)) == ((Convert.ToDecimal(txtTotal.Text)) / 2) || (Convert.ToDecimal(txtAnticipo.Text)) > ((Convert.ToDecimal(txtTotal.Text)) / 2))
             {
                 if (lblIdEquipo.Text != "0000" || txtModelo.Text != "" || txtMarca.Text != "")
                 {
@@ -409,7 +410,7 @@ namespace WindowsFormsApp1.Views
             {
                 MessageBox.Show("No se puede realizar pedido de pieza. Debido a que se esta recibiendo menos de la mitad del total.", "Valor no permitido.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            
+
 
         }
         private void pictureBuscar_Click(object sender, System.EventArgs e)
@@ -432,14 +433,14 @@ namespace WindowsFormsApp1.Views
                     lblIdCliente.Visible = true;
                     lblIdEquipo.Visible = true;
                     SlblRecibirEquipo.Visible = true;
-                    lblIdCliente.Text= Convert.ToString(dr["Id"]);
+                    lblIdCliente.Text = Convert.ToString(dr["Id"]);
                     txtNombre.Text = Convert.ToString(dr["Nombre"]);
                     txtApellido.Text = Convert.ToString(dr["Apellido"]);
                     txtTelefono.Text = Convert.ToString(dr["Telefono"]);
                     txtCorreo.Text = Convert.ToString(dr["Contacto"]);
                     encontro = true;
                 }
-                
+
                 dr.Close();
                 db.CerrarConexion();
                 if (!encontro)
@@ -508,7 +509,7 @@ namespace WindowsFormsApp1.Views
             {
                 e.Handled = false;
             }
-            else if(Char.IsPunctuation(e.KeyChar))
+            else if (Char.IsPunctuation(e.KeyChar))
             {
                 e.Handled = false;
             }
@@ -655,14 +656,85 @@ namespace WindowsFormsApp1.Views
                 else
                 {
                     MessageBox.Show("No se puede realizar pedido de pieza. Debido a que se esta recibiendo menos de la mitad del total.", "Valor no permitido.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    if (txtDescripcionDeFalla.Text != "" && txtMarca.Text != "" && txtModelo.Text != "")
+                    {
+                        string tipoDiag = "";
+                        DateTime Hoy = DateTime.Today;
+                        string fecha_actual = Hoy.ToString("yyyy-MM-dd");
+                        DBConnectio.Connection db = new DBConnectio.Connection();
+                        db.AbrirConexion();
+                        if (rbDiagnosticoEspecifico.Checked)
+                        {
+                            tipoDiag = "Diagnóstico específico";
+                        }
+                        else if (rbDiagnosticoRapido.Checked)
+                        {
+                            tipoDiag = "Diagnóstico rápido";
+                        }
+                        else
+                        {
+                            MessageBox.Show("Seleccione un tipo de diagnóstico", "Diagnóstico", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                        }
+                        if (rbDiagnosticoEspecifico.Checked || rbDiagnosticoRapido.Checked)
+                        {
+                            string concatenarDiagTex = tipoDiag + " : " + txtDescripcionDiagnosticoEspecifico.Text;
+                            String sql = "";
+                            if (txtAnticipo.Text == "")
+                            {
+                                sql = "Insert into Reparacion (Id,Marca,Modelo,Falla,Diagnostico,IdServicio,Anticipo,IdEstado,Fecha,IdCliente,IdUsuario,CostoTotal,IdPieza,trabajoRealizado) values("
+                                                            + lblIdEquipo.Text + ",'" + txtMarca.Text
+                                                            + "','" + txtModelo.Text
+                                                            + "','" + txtDescripcionDeFalla.Text
+                                                            + "','" + concatenarDiagTex
+                                                            + "','" + ccbTipoServicio1.SelectedValue
+                                                            + "',0,6,'" + fecha_actual + "','" + lblIdCliente.Text
+                                                            + "','" + comboResponsable.SelectedValue.ToString() + "'," + txtTotal.Text
+                                                            + ",1,'')";
+                            }
+                            else
+                            {
+                                sql = "Insert into Reparacion (Id,Marca,Modelo,Falla,Diagnostico,IdServicio,Anticipo,IdEstado,Fecha,IdCliente,IdUsuario,CostoTotal,IdPieza,trabajoRealizado) values("
+                                    + lblIdEquipo.Text + ",'" + txtMarca.Text
+                                    + "','" + txtModelo.Text
+                                    + "','" + txtDescripcionDeFalla.Text
+                                    + "','" + concatenarDiagTex
+                                    + "','" + ccbTipoServicio1.SelectedValue
+                                    + "'," + txtAnticipo.Text + ",6,'" + fecha_actual + "','" + lblIdCliente.Text
+                                    + "','" + comboResponsable.SelectedValue.ToString() + "'," + txtTotal.Text
+                                    + ",1,'')";
+                            }
+                            Console.WriteLine(sql);
+                            bool data = db.AddElements(sql,"");
+                            db.CerrarConexion();
+                            if (!data)
+                            {
+                                MessageBox.Show("Ocurrio un error con la conexión a la Base de Datos ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            txtMarca.Text = "";
+                            txtDescripcionDeFalla.Text = "";
+                            txtDescripcionDiagnosticoEspecifico.Text = "";
+                            txtModelo.Text = "";
+                            txtTotal.Text = "";
+                            txtAnticipo.Text = "";
+                            txtNombre.Text = "";
+                            txtApellido.Text = "";
+                            txtTelefono.Text = "";
+                            txtCorreo.Text = "";
+                            txtBuscarCliente.Text = "";
+                            lblIdCliente.Visible = false;
+                            lblTextoIdCliente.Visible = false;
+                            lblIdEquipo.Visible = false;
+                            SlblRecibirEquipo.Visible = false;
+
+                            //------------------------------------------------------------------------------------------------
+                            btnAddClientH.Visible = true;
+                            GenerarIdEquipo();
+                        }
+                    }
                 }
-                    
-            }
-            else
-            {
-                MessageBox.Show("Id del cliente vacio");
             }
         }
+
         private void btnLimpiarCampos_Click_1(object sender, EventArgs e)
         {
             txtBuscarCliente.Text = "";
@@ -700,7 +772,7 @@ namespace WindowsFormsApp1.Views
                 decimal id_random = random.Next(1, 1000000000);
                 string consulta = "INSERT INTO Rol (Id,NombreRol) VALUES (" + id_random + ",'" + _rol + "')";
                 MessageBox.Show(consulta);
-                conexion.AddElements(consulta,"rol");
+                conexion.AddElements(consulta, "rol");
             }
             else
             {
@@ -713,7 +785,7 @@ namespace WindowsFormsApp1.Views
             NuevoUsuario nuevoUsuario = new NuevoUsuario();
             nuevoUsuario.ShowDialog();
             nuevoUsuario.PeticionDe();
-      
+
         }
         //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         //METOODOS PROGRAMADOS POR NOSOTROS
@@ -722,7 +794,7 @@ namespace WindowsFormsApp1.Views
             Connection connection = new Connection();
             connection.AbrirConexion();
             int idCliente = connection.generarId("SELECT MAX(Id) FROM Cliente");
-            if (idCliente == null)
+            if (idCliente == 0)
             {
                 idCliente = 1;
             }
@@ -766,7 +838,7 @@ namespace WindowsFormsApp1.Views
             string rol = ScbxSeleccionarRol.SelectedItem.ToString();
             Connection db = new Connection();
             db.AbrirConexion();
-            string query = "UPDATE Usuario SET Rol ='"+rol+"' WHERE Id = "+idUsuario;
+            string query = "UPDATE Usuario SET Rol ='" + rol + "' WHERE Id = " + idUsuario;
             db.ActualizarDatos(query);
             db.CerrarConexion();
         }
@@ -788,7 +860,7 @@ namespace WindowsFormsApp1.Views
         }
         private void txtBuscarCliente_TextChanged(object sender, EventArgs e)
         {
-            if (txtBuscarCliente.Text=="")
+            if (txtBuscarCliente.Text == "")
             {
                 lblAvisoNoCliente.Hide();
                 txtNombre.Text = "";
@@ -802,7 +874,7 @@ namespace WindowsFormsApp1.Views
         }
         private void btnAddClientH_Click_1(object sender, EventArgs e)
         {
-            if (txtNombre.Text!=""||txtApellido.Text!=""||txtTelefono.Text!=""||txtCorreo.Text!="")
+            if (txtNombre.Text != "" || txtApellido.Text != "" || txtTelefono.Text != "" || txtCorreo.Text != "")
             {
                 txtNombre.Text = "";
                 txtApellido.Text = "";
@@ -817,13 +889,13 @@ namespace WindowsFormsApp1.Views
         }
         private void txtCliente_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar==(char)Keys.Enter)
+            if (e.KeyChar == (char)Keys.Enter)
             {
                 Connection connection = new Connection();
                 connection.AbrirConexion();
                 if (txtCliente.Text == "")
                 {
-                    MessageBox.Show("FAVOR DE LLENAR LOS COMPOS", "ADVERTENCIA",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                    MessageBox.Show("FAVOR DE LLENAR LOS COMPOS", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {
@@ -836,9 +908,9 @@ namespace WindowsFormsApp1.Views
         {
             Connection connection = new Connection();
             connection.AbrirConexion();
-            if (txtCliente.Text=="")
+            if (txtCliente.Text == "")
             {
-                MessageBox.Show("Favor de llenar el campo","Advertencia");
+                MessageBox.Show("Favor de llenar el campo", "Advertencia");
             }
             else
             {
@@ -850,7 +922,7 @@ namespace WindowsFormsApp1.Views
         {
             Connection connection = new Connection();
             connection.AbrirConexion();
-            if (txtCliente.Text=="")
+            if (txtCliente.Text == "")
             {
                 dgClientes.DataSource = connection.buscar("SELECT * FROM Cliente");
             }
@@ -893,7 +965,7 @@ namespace WindowsFormsApp1.Views
         }
         private void tabPuntoVenta_SelectedIndexChanged(object sender, EventArgs e)
         {
-          
+
             Connection connection = new Connection();
             connection.AbrirConexion();
             CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id");
@@ -926,11 +998,11 @@ namespace WindowsFormsApp1.Views
         }
         private void JtxtBuscar2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar==(char)Keys.Enter)
+            if (e.KeyChar == (char)Keys.Enter)
             {
                 Connection connection = new Connection();
                 connection.AbrirConexion();
-                CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id where Reparacion.Id = "+JtxtBuscar2.Text);
+                CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id where Reparacion.Id = " + JtxtBuscar2.Text);
                 connection.CerrarConexion();
             }
         }
@@ -943,7 +1015,7 @@ namespace WindowsFormsApp1.Views
         }
         private void txtBuscarCliente_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar==(char)Keys.Enter)
+            if (e.KeyChar == (char)Keys.Enter)
             {
                 if (txtBuscarCliente.Text == "")
                 {
@@ -955,7 +1027,7 @@ namespace WindowsFormsApp1.Views
                     Connection db = new DBConnectio.Connection();
                     db.AbrirConexion();
 
-                    SqlDataReader dr = db.consulta("select * from Cliente where Nombre = '" + txtBuscarCliente.Text +"'");
+                    SqlDataReader dr = db.consulta("select * from Cliente where Nombre = '" + txtBuscarCliente.Text + "'");
                     //MessageBox.Show("select * from Cliente where Id=" + txtBuscarCliente.Text);
                     if (dr.Read())
                     {
@@ -1048,12 +1120,15 @@ namespace WindowsFormsApp1.Views
         }
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            if(JradioTodos.Checked){
+            if (JradioTodos.Checked)
+            {
                 JradioTodos_CheckedChanged(sender, e);
-            }else if (JTerminados.Checked)
+            }
+            else if (JTerminados.Checked)
             {
                 JTerminados_CheckedChanged(sender, e);
-            }else if (CEspera.Checked)
+            }
+            else if (CEspera.Checked)
             {
                 CEspera_CheckedChanged(sender, e);
             }
@@ -1119,7 +1194,7 @@ namespace WindowsFormsApp1.Views
 
         private void buscarTbxVentas_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+
             if ((int)e.KeyChar == (int)Keys.Enter)
             {
                 string cadena = "Data Source=.\\SQLEXPRESS;Initial Catalog=TechPOSdb; Integrated Security=True";
@@ -1134,24 +1209,53 @@ namespace WindowsFormsApp1.Views
                 {
                     double price = Convert.ToDouble(Convert.ToString(dr["Costo"]));
                     double subtotal = Convert.ToDouble(subTotalTbxVentas.Text) + (Convert.ToDouble(Convert.ToString("2")) * price);
-                    double iva = Convert.ToDouble(((subtotal*16)/100));
-                        row["cod"] = Convert.ToString(dr["ClaveProducto"]);
-                        row["des"] = Convert.ToString(dr["Descripcion"]);
-                        row["preciou"] = Convert.ToString(dr["Costo"]);
-                        row["cant"] = Convert.ToString("2");
-                        row["preciot"] = Convert.ToString(Convert.ToDouble(Convert.ToString("2"))*price);
-                        MessageBox.Show(Convert.ToString(dr["Costo"]));
-                        dtVenta.Rows.Add(row);
+                    double iva = Convert.ToDouble(((subtotal * 16) / 100));
+                    row["cod"] = Convert.ToString(dr["ClaveProducto"]);
+                    row["des"] = Convert.ToString(dr["Descripcion"]);
+                    row["preciou"] = Convert.ToString(dr["Costo"]);
+                    row["cant"] = Convert.ToString("2");
+                    row["preciot"] = Convert.ToString(Convert.ToDouble(Convert.ToString("2")) * price);
+                    MessageBox.Show(Convert.ToString(dr["Costo"]));
+                    dtVenta.Rows.Add(row);
                     subTotalTbxVentas.Text = Convert.ToString(subtotal);
                     ivaTbxVentas.Text = Convert.ToString(iva);
-                    totalTbxVenta.Text = Convert.ToString(subtotal+iva);
+                    totalTbxVenta.Text = Convert.ToString(subtotal + iva);
 
-                    
+
                 }
                 conexion.Close();
             }
         }
 
+
+        private void TabPuntoVenta_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F1)
+            {
+                tabPuntoVenta.SelectedIndex = 0;
+            }
+            if (e.KeyCode == Keys.F2)
+            {
+                tabPuntoVenta.SelectedIndex = 1;
+            }
+            if (e.KeyCode == Keys.F3)
+            {
+                tabPuntoVenta.SelectedIndex = 2;
+            }
+            if (e.KeyCode == Keys.F4)
+            {
+                tabPuntoVenta.SelectedIndex = 3;
+            }
+            if (e.KeyCode == Keys.F5)
+            {
+                tabPuntoVenta.SelectedIndex = 4;
+            }
+            if (e.KeyCode == Keys.F6)
+            {
+                tabPuntoVenta.SelectedIndex = 5;
+            }
+
+        }
         private void Tiempo_Tick(object sender, EventArgs e)
         {
             HoraMinutoSegundo.Text = DateTime.Now.ToLongTimeString();

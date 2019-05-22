@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.DBConnectio;
 using WindowsFormsApp1.Views;
 
 namespace WindowsFormsApp1
@@ -18,8 +19,6 @@ namespace WindowsFormsApp1
         public String ID;
         public Reparacion(String id)
         {
-            
-
             InitializeComponent();
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -112,9 +111,21 @@ namespace WindowsFormsApp1
         private void ActualizarBtn_Click(object sender, EventArgs e)
         {
             conn.AbrirConexion();
-            conn.modificar("Update Reparacion set Falla='" + fallaTxtBoxRepa.Text + "', IdEstado='"+estadoCBoxC.SelectedValue+"', Diagnostico='"+dRapidoTxtBox.Text+"', trabajoRealizado='"+trabajoRealizadotxtC.Text+"' where Id="+idTxtBoxRepa.Text);
+            string estadoPieza = conn.buscarEstado("SELECT P.Estado FROM Pieza P INNER JOIN Reparacion R ON R.IdPieza=P.Id WHERE R.Id ='" + idTxtBoxRepa.Text + "'");
+            MessageBox.Show(estadoPieza);
             conn.CerrarConexion();
-            MessageBox.Show("Realizado con exito");
+            if (estadoPieza.Equals("Ordenada"))
+            {
+                MessageBox.Show("Lo sentimos, el equipo al que desea cambiar el estado necesita una o varias piezas, por lo tanto, no se permite cambiar el estado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                estadoCBoxC.SelectedIndex = 5;
+            }
+            else
+            {
+                conn.AbrirConexion();
+                conn.modificar("Update Reparacion set Falla='" + fallaTxtBoxRepa.Text + "', IdEstado='" + estadoCBoxC.SelectedValue + "', Diagnostico='" + dRapidoTxtBox.Text + "', trabajoRealizado='" + trabajoRealizadotxtC.Text + "' where Id=" + idTxtBoxRepa.Text);
+                conn.CerrarConexion();
+                MessageBox.Show("Realizado con exito");
+            }
         }
         private void piezaOrderbtnC_Click(object sender, EventArgs e)
         {
