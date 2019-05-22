@@ -381,5 +381,28 @@ namespace WindowsFormsApp1.DBConnectio
             }
             return null;
         }
+
+        public int IdCategoria(string sql)
+        {
+            int id = 0;
+            SqlCommand sqlCommand = new SqlCommand(sql, conexion);
+            sqlCommand.CommandType = CommandType.Text;
+            try
+            {
+                id = Convert.ToInt32(sqlCommand.ExecuteScalar());
+            }
+            catch (InvalidCastException)
+            {
+            }
+            return id;
+        }
+
+        public DataTable TablaProductos(string sql)
+        {
+            adapter.SelectCommand = new SqlCommand(sql, conexion);
+            adapter.Fill(dataSet);
+            table = dataSet.Tables[0];
+            return table;
+        }
     }
 }
