@@ -95,6 +95,7 @@ namespace WindowsFormsApp1.Views
             tableOrdenes.AutoResizeColumns();
             tableOrdenes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             //------------------------------------------------------------------------------------------------------------------------------------------------------
+            FillingProducts(); //Metodo para el llenado del dataGridView de productos.
             colores();
         }
         private void linkCerrarSesion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -249,10 +250,14 @@ namespace WindowsFormsApp1.Views
         }
         private void CDGReparacion_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            Connection connection = new Connection();
             DataGridViewRow fila = CDGReparacion.Rows[e.RowIndex];
             String id = Convert.ToString(fila.Cells["ID"].Value);
             Reparacion r = new Reparacion(id);
             r.ShowDialog();
+            connection.AbrirConexion();
+            CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id  order by Reparacion.Fecha asc");
+            connection.CerrarConexion();
         }
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -895,7 +900,7 @@ namespace WindowsFormsApp1.Views
                 connection.AbrirConexion();
                 if (txtCliente.Text == "")
                 {
-                    MessageBox.Show("FAVOR DE LLENAR LOS COMPOS", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("FAVOR DE LLENAR LOS CAMPOS", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {
@@ -958,10 +963,6 @@ namespace WindowsFormsApp1.Views
             txtTelefono.Enabled = true;
             txtCorreo.Enabled = true;
             txtBuscarCliente.Text = "";
-        }
-        private void CDGReparacion_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
         private void tabPuntoVenta_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1254,11 +1255,101 @@ namespace WindowsFormsApp1.Views
             {
                 tabPuntoVenta.SelectedIndex = 5;
             }
-
+            if (e.KeyCode == Keys.F7)
+            {
+                tabPuntoVenta.SelectedIndex = 6;
+            }
         }
         private void Tiempo_Tick(object sender, EventArgs e)
         {
             HoraMinutoSegundo.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void FillingProducts()
+        {
+            Connection connection = new Connection();
+            connection.AbrirConexion(); //Llenado de tabla para productos
+            dGVProducts.DataSource = connection.TablaProductos("SELECT ClaveProducto AS Clave, ClaveFabricante AS Fabricante, Marca, Categoria.Nombre AS Categoria, Descripcion, Costo, Moneda, Cantidad from Producto INNER JOIN Categoria ON Producto.IdCategoria = Categoria.Id");
+            connection.CerrarConexion();
+        }
+
+        private void DGVProducts_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Connection connection = new Connection();
+            try
+            {
+                DataGridViewRow fila = dGVProducts.Rows[e.RowIndex];
+                if (Convert.ToString(fila.Cells["Clave"].Value).Equals("") || Convert.ToString(fila.Cells["Fabricante"].Value).Equals("")
+                    || Convert.ToString(fila.Cells["Marca"].Value).Equals("") || Convert.ToString(fila.Cells["Categoria"].Value).Equals("")
+                    || Convert.ToString(fila.Cells["Descripcion"].Value).Equals("") || Convert.ToString(fila.Cells["Costo"].Value).Equals("")
+                    || Convert.ToString(fila.Cells["Moneda"].Value).Equals("") || Convert.ToString(fila.Cells["Cantidad"].Value).Equals(""))
+                {
+                    Console.WriteLine("Datos vacios");
+                }
+                else
+                {
+                    string clave = fila.Cells["Clave"].Value.ToString();
+                    ProductDetails productDetails = new ProductDetails(clave);
+                    productDetails.ShowDialog();
+                    connection.AbrirConexion();
+                    dGVProducts.DataSource = connection.TablaProductos("SELECT ClaveProducto AS Clave, ClaveFabricante AS Fabricante, Marca, Categoria.Nombre AS Categoria, Descripcion, Costo, Moneda, Cantidad from Producto INNER JOIN Categoria ON Producto.IdCategoria = Categoria.Id");
+                    connection.CerrarConexion();
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        private void TxtBSearchProduct_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                Connection connection = new Connection();
+                connection.AbrirConexion();
+                if (txtBSearchProduct.Text != "")
+                {
+                    dGVProducts.DataSource = connection.TablaProductos("SELECT ClaveProducto AS Clave, ClaveFabricante AS Fabricante, Marca, Categoria.Nombre AS Categoria, Descripcion, Costo, Moneda, Cantidad from Producto INNER JOIN Categoria ON Producto.IdCategoria = Categoria.Id WHERE ClaveProducto LIKE '%" + txtBSearchProduct.Text + "%'");
+                }
+                connection.CerrarConexion();
+            }
+        }
+
+        private void BtnSearchProduct_Click(object sender, EventArgs e)
+        {
+            Connection connection = new Connection();
+            connection.AbrirConexion();
+            if (txtBSearchProduct.Text == "")
+            {
+                MessageBox.Show("Favor de no dejar el campo vacio", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                dGVProducts.DataSource = connection.TablaProductos("SELECT ClaveProducto AS Clave, ClaveFabricante AS Fabricante, Marca, Categoria.Nombre AS Categoria, Descripcion, Costo, Moneda, Cantidad from Producto INNER JOIN Categoria ON Producto.IdCategoria = Categoria.Id WHERE ClaveProducto LIKE '" + txtBSearchProduct.Text + "*'");
+            }
+            connection.CerrarConexion();
+        }
+
+        private void PBoxAddProduct_Click(object sender, EventArgs e)
+        {
+            Connection connection = new Connection();
+            AddProduct add = new AddProduct();
+            add.ShowDialog();
+            connection.AbrirConexion();
+            dGVProducts.DataSource = connection.TablaProductos("SELECT ClaveProducto AS Clave, ClaveFabricante AS Fabricante, Marca, Categoria.Nombre AS Categoria, Descripcion, Costo, Moneda, Cantidad from Producto INNER JOIN Categoria ON Producto.IdCategoria = Categoria.Id");
+            connection.CerrarConexion();
+        }
+
+        private void TxtBSearchProduct_TextChanged(object sender, EventArgs e)
+        {
+            Connection connection = new Connection();
+            if (txtBSearchProduct.Text.Equals(""))
+            {
+                connection.AbrirConexion();
+                dGVProducts.DataSource = connection.TablaProductos("SELECT ClaveProducto AS Clave, ClaveFabricante AS Fabricante, Marca, Categoria.Nombre AS Categoria, Descripcion, Costo, Moneda, Cantidad from Producto INNER JOIN Categoria ON Producto.IdCategoria = Categoria.Id");
+                connection.CerrarConexion();
+            }
         }
     }
 }

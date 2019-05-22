@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewTabs));
             this.tabPuntoVenta = new System.Windows.Forms.TabControl();
             this.tabVenta = new System.Windows.Forms.TabPage();
+            this.HoraMinutoSegundo = new System.Windows.Forms.Label();
             this.ventaLogoCh = new System.Windows.Forms.PictureBox();
             this.ClblCodigoDeBarras = new System.Windows.Forms.Label();
             this.CNombreUsuarioLblVenta = new System.Windows.Forms.Label();
@@ -44,6 +45,11 @@
             this.subTotalLblVenta = new System.Windows.Forms.Label();
             this.buscarTbxVentas = new System.Windows.Forms.TextBox();
             this.tableVender = new System.Windows.Forms.DataGridView();
+            this.cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.des = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preciou = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cant = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preciot = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CbtnCobrarVenta = new System.Windows.Forms.Button();
             this.CbtnCancelarVenta = new System.Windows.Forms.Button();
             this.usuarioLblVenta = new System.Windows.Forms.Label();
@@ -133,6 +139,12 @@
             this.pbBuscar = new System.Windows.Forms.PictureBox();
             this.dgClientes = new System.Windows.Forms.DataGridView();
             this.ClientesLogoCh = new System.Windows.Forms.PictureBox();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pBoxAddProduct = new System.Windows.Forms.PictureBox();
+            this.btnSearchProduct = new System.Windows.Forms.Button();
+            this.txtBSearchProduct = new System.Windows.Forms.TextBox();
+            this.lblSearchProduct = new System.Windows.Forms.Label();
+            this.dGVProducts = new System.Windows.Forms.DataGridView();
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.techPOSdbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.techPOSdbDataSet = new WindowsFormsApp1.TechPOSdbDataSet();
@@ -150,14 +162,10 @@
             this.idReparacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reparacionTableAdapter = new WindowsFormsApp1.TechPOSdbDataSetTableAdapters.ReparacionTableAdapter();
             this.clienteTableAdapter = new WindowsFormsApp1.TechPOSdbDataSetTableAdapters.ClienteTableAdapter();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.des = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.preciou = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cant = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.preciot = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoraMinutoSegundo = new System.Windows.Forms.Label();
             this.Tiempo = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.PProducts = new System.Windows.Forms.Panel();
+            this.LogoProducts = new System.Windows.Forms.PictureBox();
             this.tabPuntoVenta.SuspendLayout();
             this.tabVenta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ventaLogoCh)).BeginInit();
@@ -188,12 +196,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClientesLogoCh)).BeginInit();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBoxAddProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reparacionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.PProducts.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoProducts)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPuntoVenta
@@ -204,6 +217,7 @@
             this.tabPuntoVenta.Controls.Add(this.tabConfiguracionesDeUsuario);
             this.tabPuntoVenta.Controls.Add(this.ordenesTab);
             this.tabPuntoVenta.Controls.Add(this.TabClientes);
+            this.tabPuntoVenta.Controls.Add(this.tabPage1);
             this.tabPuntoVenta.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPuntoVenta.Location = new System.Drawing.Point(2, 0);
             this.tabPuntoVenta.Name = "tabPuntoVenta";
@@ -238,6 +252,16 @@
             this.tabVenta.Size = new System.Drawing.Size(1328, 669);
             this.tabVenta.TabIndex = 0;
             this.tabVenta.Text = "Venta (F1)";
+            // 
+            // HoraMinutoSegundo
+            // 
+            this.HoraMinutoSegundo.AutoSize = true;
+            this.HoraMinutoSegundo.ForeColor = System.Drawing.Color.Orange;
+            this.HoraMinutoSegundo.Location = new System.Drawing.Point(20, 186);
+            this.HoraMinutoSegundo.Name = "HoraMinutoSegundo";
+            this.HoraMinutoSegundo.Size = new System.Drawing.Size(85, 34);
+            this.HoraMinutoSegundo.TabIndex = 21;
+            this.HoraMinutoSegundo.Text = "00:00:00";
             // 
             // ventaLogoCh
             // 
@@ -352,6 +376,47 @@
             this.tableVender.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tableVender.Size = new System.Drawing.Size(938, 382);
             this.tableVender.TabIndex = 8;
+            // 
+            // cod
+            // 
+            this.cod.DataPropertyName = "cod";
+            this.cod.HeaderText = "CÓDIGO";
+            this.cod.Name = "cod";
+            this.cod.ReadOnly = true;
+            this.cod.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.cod.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.cod.Width = 150;
+            // 
+            // des
+            // 
+            this.des.DataPropertyName = "des";
+            this.des.HeaderText = "DESCRIPCIÓN";
+            this.des.Name = "des";
+            this.des.ReadOnly = true;
+            this.des.Width = 400;
+            // 
+            // preciou
+            // 
+            this.preciou.DataPropertyName = "preciou";
+            this.preciou.HeaderText = "PRECIO UNIT";
+            this.preciou.Name = "preciou";
+            this.preciou.ReadOnly = true;
+            this.preciou.Width = 150;
+            // 
+            // cant
+            // 
+            this.cant.DataPropertyName = "cant";
+            this.cant.HeaderText = "CANTIDAD";
+            this.cant.Name = "cant";
+            this.cant.ReadOnly = true;
+            // 
+            // preciot
+            // 
+            this.preciot.DataPropertyName = "preciot";
+            this.preciot.HeaderText = "PRECIOT";
+            this.preciot.Name = "preciot";
+            this.preciot.ReadOnly = true;
+            this.preciot.Width = 150;
             // 
             // CbtnCobrarVenta
             // 
@@ -509,7 +574,7 @@
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.33448F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.66552F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 92F));
-            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 229F));
+            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 238F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 230F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 224F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.33448F));
@@ -550,17 +615,16 @@
             // txtMarca
             // 
             this.txtMarca.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMarca.Location = new System.Drawing.Point(216, 3);
-            this.txtMarca.Multiline = true;
+            this.txtMarca.Location = new System.Drawing.Point(213, 3);
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(384, 29);
+            this.txtMarca.Size = new System.Drawing.Size(378, 34);
             this.txtMarca.TabIndex = 23;
             // 
             // SlblModelo
             // 
             this.SlblModelo.AutoSize = true;
             this.SlblModelo.ForeColor = System.Drawing.Color.Black;
-            this.SlblModelo.Location = new System.Drawing.Point(605, 0);
+            this.SlblModelo.Location = new System.Drawing.Point(597, 0);
             this.SlblModelo.Name = "SlblModelo";
             this.SlblModelo.Size = new System.Drawing.Size(82, 34);
             this.SlblModelo.TabIndex = 19;
@@ -572,19 +636,18 @@
             this.ccbTipoServicio1.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ccbTipoServicio1.FormattingEnabled = true;
             this.ccbTipoServicio1.IntegralHeight = false;
-            this.ccbTipoServicio1.Location = new System.Drawing.Point(216, 46);
+            this.ccbTipoServicio1.Location = new System.Drawing.Point(213, 46);
             this.ccbTipoServicio1.Name = "ccbTipoServicio1";
-            this.ccbTipoServicio1.Size = new System.Drawing.Size(384, 42);
+            this.ccbTipoServicio1.Size = new System.Drawing.Size(378, 42);
             this.ccbTipoServicio1.TabIndex = 46;
             this.ccbTipoServicio1.SelectedIndexChanged += new System.EventHandler(this.ccbTipoServicio1_SelectedIndexChanged);
             // 
             // txtModelo
             // 
             this.txtModelo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModelo.Location = new System.Drawing.Point(697, 3);
-            this.txtModelo.Multiline = true;
+            this.txtModelo.Location = new System.Drawing.Point(689, 3);
             this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(220, 29);
+            this.txtModelo.Size = new System.Drawing.Size(220, 34);
             this.txtModelo.TabIndex = 24;
             // 
             // tiposervicioC1
@@ -609,10 +672,10 @@
             // txtDescripcionDeFalla
             // 
             this.txtDescripcionDeFalla.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcionDeFalla.Location = new System.Drawing.Point(216, 100);
+            this.txtDescripcionDeFalla.Location = new System.Drawing.Point(213, 100);
             this.txtDescripcionDeFalla.Multiline = true;
             this.txtDescripcionDeFalla.Name = "txtDescripcionDeFalla";
-            this.txtDescripcionDeFalla.Size = new System.Drawing.Size(384, 37);
+            this.txtDescripcionDeFalla.Size = new System.Drawing.Size(378, 37);
             this.txtDescripcionDeFalla.TabIndex = 25;
             // 
             // SbtnNuevoServicioRE
@@ -620,7 +683,7 @@
             this.SbtnNuevoServicioRE.BackColor = System.Drawing.Color.DimGray;
             this.SbtnNuevoServicioRE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SbtnNuevoServicioRE.ForeColor = System.Drawing.Color.Turquoise;
-            this.SbtnNuevoServicioRE.Location = new System.Drawing.Point(698, 46);
+            this.SbtnNuevoServicioRE.Location = new System.Drawing.Point(689, 46);
             this.SbtnNuevoServicioRE.Name = "SbtnNuevoServicioRE";
             this.SbtnNuevoServicioRE.Size = new System.Drawing.Size(220, 37);
             this.SbtnNuevoServicioRE.TabIndex = 47;
@@ -762,7 +825,7 @@
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.95349F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.04651F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
-            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 283F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 292F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 278F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.95349F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.04651F));
@@ -810,9 +873,9 @@
             // 
             this.txtNombre.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.txtNombre.Location = new System.Drawing.Point(103, 3);
+            this.txtNombre.Location = new System.Drawing.Point(101, 3);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(312, 34);
+            this.txtNombre.Size = new System.Drawing.Size(306, 34);
             this.txtNombre.TabIndex = 40;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
@@ -831,9 +894,9 @@
             // 
             this.txtApellido.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellido.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.txtApellido.Location = new System.Drawing.Point(103, 51);
+            this.txtApellido.Location = new System.Drawing.Point(101, 51);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(312, 34);
+            this.txtApellido.Size = new System.Drawing.Size(306, 34);
             this.txtApellido.TabIndex = 41;
             this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
@@ -841,7 +904,7 @@
             // 
             this.SlblTelefono.AutoSize = true;
             this.SlblTelefono.ForeColor = System.Drawing.Color.Black;
-            this.SlblTelefono.Location = new System.Drawing.Point(421, 0);
+            this.SlblTelefono.Location = new System.Drawing.Point(413, 0);
             this.SlblTelefono.Name = "SlblTelefono";
             this.SlblTelefono.Size = new System.Drawing.Size(89, 48);
             this.SlblTelefono.TabIndex = 5;
@@ -851,7 +914,7 @@
             // 
             this.SlblCorreo.AutoSize = true;
             this.SlblCorreo.ForeColor = System.Drawing.Color.Black;
-            this.SlblCorreo.Location = new System.Drawing.Point(421, 48);
+            this.SlblCorreo.Location = new System.Drawing.Point(413, 48);
             this.SlblCorreo.Name = "SlblCorreo";
             this.SlblCorreo.Size = new System.Drawing.Size(84, 34);
             this.SlblCorreo.TabIndex = 6;
@@ -861,7 +924,7 @@
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.txtTelefono.Location = new System.Drawing.Point(519, 3);
+            this.txtTelefono.Location = new System.Drawing.Point(511, 3);
             this.txtTelefono.MaxLength = 10;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(266, 34);
@@ -873,7 +936,7 @@
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.txtCorreo.Location = new System.Drawing.Point(519, 51);
+            this.txtCorreo.Location = new System.Drawing.Point(511, 51);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(266, 34);
             this.txtCorreo.TabIndex = 39;
@@ -1071,7 +1134,6 @@
             this.CDGReparacion.Size = new System.Drawing.Size(1319, 422);
             this.CDGReparacion.TabIndex = 9;
             this.CDGReparacion.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CDGReparacion_CellClick);
-            this.CDGReparacion.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CDGReparacion_CellContentClick);
             // 
             // CEspera
             // 
@@ -1139,7 +1201,7 @@
             this.tabConfiguracionesDeUsuario.Name = "tabConfiguracionesDeUsuario";
             this.tabConfiguracionesDeUsuario.Size = new System.Drawing.Size(1328, 669);
             this.tabConfiguracionesDeUsuario.TabIndex = 3;
-            this.tabConfiguracionesDeUsuario.Text = "Configuraciones de Usuario (F6)";
+            this.tabConfiguracionesDeUsuario.Text = "Configuraciones de Usuario (F7)";
             // 
             // SgbConfiguraciones
             // 
@@ -1418,14 +1480,14 @@
             this.dgClientes.AllowUserToDeleteRows = false;
             this.dgClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgClientes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgClientes.Location = new System.Drawing.Point(92, 142);
             this.dgClientes.Name = "dgClientes";
@@ -1448,6 +1510,80 @@
             this.ClientesLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ClientesLogoCh.TabIndex = 4;
             this.ClientesLogoCh.TabStop = false;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.LightGray;
+            this.tabPage1.Controls.Add(this.PProducts);
+            this.tabPage1.Controls.Add(this.pBoxAddProduct);
+            this.tabPage1.Controls.Add(this.btnSearchProduct);
+            this.tabPage1.Controls.Add(this.txtBSearchProduct);
+            this.tabPage1.Controls.Add(this.lblSearchProduct);
+            this.tabPage1.Controls.Add(this.dGVProducts);
+            this.tabPage1.Location = new System.Drawing.Point(4, 37);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1328, 675);
+            this.tabPage1.TabIndex = 6;
+            this.tabPage1.Text = "Productos (F6)";
+            // 
+            // pBoxAddProduct
+            // 
+            this.pBoxAddProduct.Image = global::WindowsFormsApp1.Properties.Resources._64244;
+            this.pBoxAddProduct.Location = new System.Drawing.Point(1277, 51);
+            this.pBoxAddProduct.Name = "pBoxAddProduct";
+            this.pBoxAddProduct.Size = new System.Drawing.Size(45, 40);
+            this.pBoxAddProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBoxAddProduct.TabIndex = 35;
+            this.pBoxAddProduct.TabStop = false;
+            this.pBoxAddProduct.Click += new System.EventHandler(this.PBoxAddProduct_Click);
+            // 
+            // btnSearchProduct
+            // 
+            this.btnSearchProduct.BackColor = System.Drawing.Color.DimGray;
+            this.btnSearchProduct.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSearchProduct.ForeColor = System.Drawing.Color.Turquoise;
+            this.btnSearchProduct.Location = new System.Drawing.Point(749, 49);
+            this.btnSearchProduct.Name = "btnSearchProduct";
+            this.btnSearchProduct.Size = new System.Drawing.Size(228, 39);
+            this.btnSearchProduct.TabIndex = 34;
+            this.btnSearchProduct.Text = "Buscar Producto";
+            this.btnSearchProduct.UseVisualStyleBackColor = false;
+            this.btnSearchProduct.Click += new System.EventHandler(this.BtnSearchProduct_Click);
+            // 
+            // txtBSearchProduct
+            // 
+            this.txtBSearchProduct.Location = new System.Drawing.Point(338, 48);
+            this.txtBSearchProduct.Name = "txtBSearchProduct";
+            this.txtBSearchProduct.Size = new System.Drawing.Size(405, 41);
+            this.txtBSearchProduct.TabIndex = 33;
+            this.txtBSearchProduct.TextChanged += new System.EventHandler(this.TxtBSearchProduct_TextChanged);
+            this.txtBSearchProduct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBSearchProduct_KeyPress);
+            // 
+            // lblSearchProduct
+            // 
+            this.lblSearchProduct.AutoSize = true;
+            this.lblSearchProduct.Location = new System.Drawing.Point(179, 51);
+            this.lblSearchProduct.Name = "lblSearchProduct";
+            this.lblSearchProduct.Size = new System.Drawing.Size(153, 34);
+            this.lblSearchProduct.TabIndex = 32;
+            this.lblSearchProduct.Text = "Buscar Producto:";
+            // 
+            // dGVProducts
+            // 
+            this.dGVProducts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dGVProducts.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dGVProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGVProducts.Location = new System.Drawing.Point(179, 97);
+            this.dGVProducts.MultiSelect = false;
+            this.dGVProducts.Name = "dGVProducts";
+            this.dGVProducts.ReadOnly = true;
+            this.dGVProducts.RowHeadersVisible = false;
+            this.dGVProducts.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dGVProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dGVProducts.Size = new System.Drawing.Size(1143, 566);
+            this.dGVProducts.TabIndex = 29;
+            this.dGVProducts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVProducts_CellClick);
             // 
             // clienteBindingSource
             // 
@@ -1531,77 +1667,47 @@
             // 
             this.clienteTableAdapter.ClearBeforeFill = true;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(1257, 718);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(45, 31);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 21;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // cod
-            // 
-            this.cod.DataPropertyName = "cod";
-            this.cod.HeaderText = "CÓDIGO";
-            this.cod.Name = "cod";
-            this.cod.ReadOnly = true;
-            this.cod.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.cod.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.cod.Width = 150;
-            // 
-            // des
-            // 
-            this.des.DataPropertyName = "des";
-            this.des.HeaderText = "DESCRIPCIÓN";
-            this.des.Name = "des";
-            this.des.ReadOnly = true;
-            this.des.Width = 400;
-            // 
-            // preciou
-            // 
-            this.preciou.DataPropertyName = "preciou";
-            this.preciou.HeaderText = "PRECIO UNIT";
-            this.preciou.Name = "preciou";
-            this.preciou.ReadOnly = true;
-            this.preciou.Width = 150;
-            // 
-            // cant
-            // 
-            this.cant.DataPropertyName = "cant";
-            this.cant.HeaderText = "CANTIDAD";
-            this.cant.Name = "cant";
-            this.cant.ReadOnly = true;
-            // 
-            // preciot
-            // 
-            this.preciot.DataPropertyName = "preciot";
-            this.preciot.HeaderText = "PRECIOT";
-            this.preciot.Name = "preciot";
-            this.preciot.ReadOnly = true;
-            this.preciot.Width = 150;
-            // 
-            // HoraMinutoSegundo
-            // 
-            this.HoraMinutoSegundo.AutoSize = true;
-            this.HoraMinutoSegundo.ForeColor = System.Drawing.Color.Orange;
-            this.HoraMinutoSegundo.Location = new System.Drawing.Point(20, 186);
-            this.HoraMinutoSegundo.Name = "HoraMinutoSegundo";
-            this.HoraMinutoSegundo.Size = new System.Drawing.Size(85, 34);
-            this.HoraMinutoSegundo.TabIndex = 21;
-            this.HoraMinutoSegundo.Text = "00:00:00";
-            // 
             // Tiempo
             // 
             this.Tiempo.Enabled = true;
             this.Tiempo.Tick += new System.EventHandler(this.Tiempo_Tick);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(1257, 718);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(43, 28);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 21;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // PProducts
+            // 
+            this.PProducts.BackColor = System.Drawing.Color.DimGray;
+            this.PProducts.Controls.Add(this.LogoProducts);
+            this.PProducts.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PProducts.Location = new System.Drawing.Point(3, 3);
+            this.PProducts.Name = "PProducts";
+            this.PProducts.Size = new System.Drawing.Size(170, 669);
+            this.PProducts.TabIndex = 41;
+            // 
+            // LogoProducts
+            // 
+            this.LogoProducts.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.LogoProducts.Location = new System.Drawing.Point(3, 3);
+            this.LogoProducts.Name = "LogoProducts";
+            this.LogoProducts.Size = new System.Drawing.Size(164, 175);
+            this.LogoProducts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.LogoProducts.TabIndex = 1;
+            this.LogoProducts.TabStop = false;
+            // 
             // ViewTabs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(1350, 749);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.tabPuntoVenta);
@@ -1656,12 +1762,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbBuscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClientesLogoCh)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBoxAddProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVProducts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reparacionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.PProducts.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.LogoProducts)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1817,6 +1929,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn preciot;
         private System.Windows.Forms.Label HoraMinutoSegundo;
         private System.Windows.Forms.Timer Tiempo;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Button btnSearchProduct;
+        private System.Windows.Forms.TextBox txtBSearchProduct;
+        private System.Windows.Forms.Label lblSearchProduct;
+        private System.Windows.Forms.DataGridView dGVProducts;
+        private System.Windows.Forms.PictureBox pBoxAddProduct;
+        private System.Windows.Forms.Panel PProducts;
+        private System.Windows.Forms.PictureBox LogoProducts;
         //  private System.Windows.Forms.TextBox textBox1;
         //private System.Windows.Forms.Label UnaLabel;
         //  private System.Windows.Forms.Label label5;
