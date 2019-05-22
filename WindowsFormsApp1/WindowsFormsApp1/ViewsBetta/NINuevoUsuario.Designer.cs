@@ -29,57 +29,35 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NINuevoUsuario));
-            this.PanelNiNuevoUsuario = new System.Windows.Forms.Panel();
-            this.LogoPrincipal = new System.Windows.Forms.PictureBox();
             this.NUNuevoUsuarioNI = new System.Windows.Forms.Label();
             this.BtnVolverLoginNUNI = new System.Windows.Forms.Button();
             this.BtnRegistrarNuevoUsuario = new System.Windows.Forms.Button();
-            this.NINombreDeUsuario = new System.Windows.Forms.Label();
-            this.NINombre = new System.Windows.Forms.Label();
-            this.NIApellido = new System.Windows.Forms.Label();
-            this.NITelefono = new System.Windows.Forms.Label();
-            this.NICorreo = new System.Windows.Forms.Label();
-            this.NIContrasena = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.CtxtNombreUsuarioNI = new System.Windows.Forms.TextBox();
-            this.CtxtNombreUNI = new System.Windows.Forms.TextBox();
-            this.CtxtApellidoUNI = new System.Windows.Forms.TextBox();
-            this.CtxtTelefonoUNI = new System.Windows.Forms.TextBox();
-            this.CtxtCorreoUNI = new System.Windows.Forms.TextBox();
-            this.CtxtConfirmarContrasenaUNI = new System.Windows.Forms.TextBox();
-            this.CtxtContrasenaUNI = new System.Windows.Forms.TextBox();
-            this.PanelNiNuevoUsuario.SuspendLayout();
+            this.LogoPrincipal = new System.Windows.Forms.PictureBox();
+            this.PanelNiNuevoUsuario = new System.Windows.Forms.Panel();
+            this.SlLInUser = new System.Windows.Forms.LinkLabel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel5 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel6 = new System.Windows.Forms.LinkLabel();
+            this.NICtxtNombreUsuario = new System.Windows.Forms.TextBox();
+            this.NICtxtNombreU = new System.Windows.Forms.TextBox();
+            this.NICtxtApellidoU = new System.Windows.Forms.TextBox();
+            this.NiCtxtTelefonoU = new System.Windows.Forms.TextBox();
+            this.NICtxtCorreoU = new System.Windows.Forms.TextBox();
+            this.NICtxtContrasenaU = new System.Windows.Forms.TextBox();
+            this.NICtxtConfirmarContrasenaU = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPrincipal)).BeginInit();
+            this.PanelNiNuevoUsuario.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // PanelNiNuevoUsuario
-            // 
-            this.PanelNiNuevoUsuario.BackColor = System.Drawing.Color.DimGray;
-            this.PanelNiNuevoUsuario.Controls.Add(this.LogoPrincipal);
-            this.PanelNiNuevoUsuario.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PanelNiNuevoUsuario.Location = new System.Drawing.Point(0, 0);
-            this.PanelNiNuevoUsuario.Name = "PanelNiNuevoUsuario";
-            this.PanelNiNuevoUsuario.Size = new System.Drawing.Size(94, 491);
-            this.PanelNiNuevoUsuario.TabIndex = 0;
-            this.PanelNiNuevoUsuario.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelNiNuevoUsuario_MouseDown);
-            // 
-            // LogoPrincipal
-            // 
-            this.LogoPrincipal.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
-            this.LogoPrincipal.Location = new System.Drawing.Point(1, 9);
-            this.LogoPrincipal.Name = "LogoPrincipal";
-            this.LogoPrincipal.Size = new System.Drawing.Size(93, 102);
-            this.LogoPrincipal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.LogoPrincipal.TabIndex = 1;
-            this.LogoPrincipal.TabStop = false;
-            this.LogoPrincipal.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LogoPrincipal_MouseDown);
             // 
             // NUNuevoUsuarioNI
             // 
             this.NUNuevoUsuarioNI.AutoSize = true;
             this.NUNuevoUsuarioNI.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NUNuevoUsuarioNI.ForeColor = System.Drawing.Color.DimGray;
-            this.NUNuevoUsuarioNI.Location = new System.Drawing.Point(320, 9);
+            this.NUNuevoUsuarioNI.Location = new System.Drawing.Point(430, 9);
             this.NUNuevoUsuarioNI.Name = "NUNuevoUsuarioNI";
             this.NUNuevoUsuarioNI.Size = new System.Drawing.Size(193, 32);
             this.NUNuevoUsuarioNI.TabIndex = 18;
@@ -95,7 +73,7 @@
             this.BtnVolverLoginNUNI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnVolverLoginNUNI.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnVolverLoginNUNI.ForeColor = System.Drawing.Color.Orange;
-            this.BtnVolverLoginNUNI.Location = new System.Drawing.Point(412, 442);
+            this.BtnVolverLoginNUNI.Location = new System.Drawing.Point(436, 427);
             this.BtnVolverLoginNUNI.Name = "BtnVolverLoginNUNI";
             this.BtnVolverLoginNUNI.Size = new System.Drawing.Size(141, 31);
             this.BtnVolverLoginNUNI.TabIndex = 21;
@@ -113,158 +91,234 @@
             this.BtnRegistrarNuevoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnRegistrarNuevoUsuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnRegistrarNuevoUsuario.ForeColor = System.Drawing.Color.Orange;
-            this.BtnRegistrarNuevoUsuario.Location = new System.Drawing.Point(559, 442);
+            this.BtnRegistrarNuevoUsuario.Location = new System.Drawing.Point(583, 427);
             this.BtnRegistrarNuevoUsuario.Name = "BtnRegistrarNuevoUsuario";
             this.BtnRegistrarNuevoUsuario.Size = new System.Drawing.Size(141, 31);
             this.BtnRegistrarNuevoUsuario.TabIndex = 22;
             this.BtnRegistrarNuevoUsuario.Text = "Guardar";
             this.BtnRegistrarNuevoUsuario.UseVisualStyleBackColor = false;
+            this.BtnRegistrarNuevoUsuario.Click += new System.EventHandler(this.BtnRegistrarNuevoUsuario_Click);
             // 
-            // NINombreDeUsuario
+            // LogoPrincipal
             // 
-            this.NINombreDeUsuario.AutoSize = true;
-            this.NINombreDeUsuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NINombreDeUsuario.ForeColor = System.Drawing.Color.DimGray;
-            this.NINombreDeUsuario.Location = new System.Drawing.Point(170, 72);
-            this.NINombreDeUsuario.Name = "NINombreDeUsuario";
-            this.NINombreDeUsuario.Size = new System.Drawing.Size(122, 18);
-            this.NINombreDeUsuario.TabIndex = 23;
-            this.NINombreDeUsuario.Text = "Nombre Usuario";
+            this.LogoPrincipal.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.LogoPrincipal.Location = new System.Drawing.Point(41, 76);
+            this.LogoPrincipal.Name = "LogoPrincipal";
+            this.LogoPrincipal.Size = new System.Drawing.Size(161, 245);
+            this.LogoPrincipal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.LogoPrincipal.TabIndex = 1;
+            this.LogoPrincipal.TabStop = false;
+            this.LogoPrincipal.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LogoPrincipal_MouseDown);
             // 
-            // NINombre
+            // PanelNiNuevoUsuario
             // 
-            this.NINombre.AutoSize = true;
-            this.NINombre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NINombre.ForeColor = System.Drawing.Color.DimGray;
-            this.NINombre.Location = new System.Drawing.Point(210, 117);
-            this.NINombre.Name = "NINombre";
-            this.NINombre.Size = new System.Drawing.Size(82, 18);
-            this.NINombre.TabIndex = 24;
-            this.NINombre.Text = "Nombre(s)";
+            this.PanelNiNuevoUsuario.BackColor = System.Drawing.Color.DimGray;
+            this.PanelNiNuevoUsuario.Controls.Add(this.LogoPrincipal);
+            this.PanelNiNuevoUsuario.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PanelNiNuevoUsuario.Location = new System.Drawing.Point(0, 0);
+            this.PanelNiNuevoUsuario.Name = "PanelNiNuevoUsuario";
+            this.PanelNiNuevoUsuario.Size = new System.Drawing.Size(250, 480);
+            this.PanelNiNuevoUsuario.TabIndex = 0;
+            this.PanelNiNuevoUsuario.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelNiNuevoUsuario_MouseDown);
             // 
-            // NIApellido
+            // SlLInUser
             // 
-            this.NIApellido.AutoSize = true;
-            this.NIApellido.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NIApellido.ForeColor = System.Drawing.Color.DimGray;
-            this.NIApellido.Location = new System.Drawing.Point(209, 170);
-            this.NIApellido.Name = "NIApellido";
-            this.NIApellido.Size = new System.Drawing.Size(83, 18);
-            this.NIApellido.TabIndex = 25;
-            this.NIApellido.Text = "Apellido(s)";
+            this.SlLInUser.AutoSize = true;
+            this.SlLInUser.LinkColor = System.Drawing.Color.DimGray;
+            this.SlLInUser.Location = new System.Drawing.Point(267, 76);
+            this.SlLInUser.Name = "SlLInUser";
+            this.SlLInUser.Size = new System.Drawing.Size(457, 13);
+            this.SlLInUser.TabIndex = 40;
+            this.SlLInUser.TabStop = true;
+            this.SlLInUser.Text = "___________________________________________________________________________";
             // 
-            // NITelefono
+            // linkLabel1
             // 
-            this.NITelefono.AutoSize = true;
-            this.NITelefono.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NITelefono.ForeColor = System.Drawing.Color.DimGray;
-            this.NITelefono.Location = new System.Drawing.Point(226, 222);
-            this.NITelefono.Name = "NITelefono";
-            this.NITelefono.Size = new System.Drawing.Size(66, 18);
-            this.NITelefono.TabIndex = 26;
-            this.NITelefono.Text = "Telefono";
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.LinkColor = System.Drawing.Color.DimGray;
+            this.linkLabel1.Location = new System.Drawing.Point(267, 236);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(457, 13);
+            this.linkLabel1.TabIndex = 41;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "___________________________________________________________________________";
             // 
-            // NICorreo
+            // linkLabel2
             // 
-            this.NICorreo.AutoSize = true;
-            this.NICorreo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NICorreo.ForeColor = System.Drawing.Color.DimGray;
-            this.NICorreo.Location = new System.Drawing.Point(235, 269);
-            this.NICorreo.Name = "NICorreo";
-            this.NICorreo.Size = new System.Drawing.Size(57, 18);
-            this.NICorreo.TabIndex = 27;
-            this.NICorreo.Text = "Correo";
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.LinkColor = System.Drawing.Color.DimGray;
+            this.linkLabel2.Location = new System.Drawing.Point(267, 289);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(457, 13);
+            this.linkLabel2.TabIndex = 42;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "___________________________________________________________________________";
             // 
-            // NIContrasena
+            // linkLabel3
             // 
-            this.NIContrasena.AutoSize = true;
-            this.NIContrasena.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NIContrasena.ForeColor = System.Drawing.Color.DimGray;
-            this.NIContrasena.Location = new System.Drawing.Point(203, 322);
-            this.NIContrasena.Name = "NIContrasena";
-            this.NIContrasena.Size = new System.Drawing.Size(89, 18);
-            this.NIContrasena.TabIndex = 28;
-            this.NIContrasena.Text = "Contraseña";
+            this.linkLabel3.AutoSize = true;
+            this.linkLabel3.LinkColor = System.Drawing.Color.DimGray;
+            this.linkLabel3.Location = new System.Drawing.Point(267, 181);
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.Size = new System.Drawing.Size(457, 13);
+            this.linkLabel3.TabIndex = 43;
+            this.linkLabel3.TabStop = true;
+            this.linkLabel3.Text = "___________________________________________________________________________";
             // 
-            // label1
+            // linkLabel4
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(130, 371);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 18);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "Confirmar Contraseña";
+            this.linkLabel4.AutoSize = true;
+            this.linkLabel4.LinkColor = System.Drawing.Color.DimGray;
+            this.linkLabel4.Location = new System.Drawing.Point(267, 127);
+            this.linkLabel4.Name = "linkLabel4";
+            this.linkLabel4.Size = new System.Drawing.Size(457, 13);
+            this.linkLabel4.TabIndex = 44;
+            this.linkLabel4.TabStop = true;
+            this.linkLabel4.Text = "___________________________________________________________________________";
             // 
-            // CtxtNombreUsuarioNI
+            // linkLabel5
             // 
-            this.CtxtNombreUsuarioNI.Location = new System.Drawing.Point(309, 70);
-            this.CtxtNombreUsuarioNI.Name = "CtxtNombreUsuarioNI";
-            this.CtxtNombreUsuarioNI.Size = new System.Drawing.Size(391, 20);
-            this.CtxtNombreUsuarioNI.TabIndex = 30;
+            this.linkLabel5.AutoSize = true;
+            this.linkLabel5.LinkColor = System.Drawing.Color.DimGray;
+            this.linkLabel5.Location = new System.Drawing.Point(267, 338);
+            this.linkLabel5.Name = "linkLabel5";
+            this.linkLabel5.Size = new System.Drawing.Size(457, 13);
+            this.linkLabel5.TabIndex = 45;
+            this.linkLabel5.TabStop = true;
+            this.linkLabel5.Text = "___________________________________________________________________________";
             // 
-            // CtxtNombreUNI
+            // linkLabel6
             // 
-            this.CtxtNombreUNI.Location = new System.Drawing.Point(309, 115);
-            this.CtxtNombreUNI.Name = "CtxtNombreUNI";
-            this.CtxtNombreUNI.Size = new System.Drawing.Size(391, 20);
-            this.CtxtNombreUNI.TabIndex = 31;
+            this.linkLabel6.AutoSize = true;
+            this.linkLabel6.LinkColor = System.Drawing.Color.DimGray;
+            this.linkLabel6.Location = new System.Drawing.Point(267, 392);
+            this.linkLabel6.Name = "linkLabel6";
+            this.linkLabel6.Size = new System.Drawing.Size(457, 13);
+            this.linkLabel6.TabIndex = 46;
+            this.linkLabel6.TabStop = true;
+            this.linkLabel6.Text = "___________________________________________________________________________";
             // 
-            // CtxtApellidoUNI
+            // NICtxtNombreUsuario
             // 
-            this.CtxtApellidoUNI.Location = new System.Drawing.Point(309, 168);
-            this.CtxtApellidoUNI.Name = "CtxtApellidoUNI";
-            this.CtxtApellidoUNI.Size = new System.Drawing.Size(391, 20);
-            this.CtxtApellidoUNI.TabIndex = 32;
+            this.NICtxtNombreUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.NICtxtNombreUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NICtxtNombreUsuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NICtxtNombreUsuario.ForeColor = System.Drawing.Color.DimGray;
+            this.NICtxtNombreUsuario.Location = new System.Drawing.Point(270, 54);
+            this.NICtxtNombreUsuario.Name = "NICtxtNombreUsuario";
+            this.NICtxtNombreUsuario.Size = new System.Drawing.Size(454, 19);
+            this.NICtxtNombreUsuario.TabIndex = 47;
+            this.NICtxtNombreUsuario.Text = "NOMBRE DE USUARIO";
+            this.NICtxtNombreUsuario.Enter += new System.EventHandler(this.NICtxtNombreUsuario_Enter);
+            this.NICtxtNombreUsuario.Leave += new System.EventHandler(this.NICtxtNombreUsuario_Leave);
             // 
-            // CtxtTelefonoUNI
+            // NICtxtNombreU
             // 
-            this.CtxtTelefonoUNI.Location = new System.Drawing.Point(309, 222);
-            this.CtxtTelefonoUNI.Name = "CtxtTelefonoUNI";
-            this.CtxtTelefonoUNI.Size = new System.Drawing.Size(391, 20);
-            this.CtxtTelefonoUNI.TabIndex = 33;
+            this.NICtxtNombreU.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.NICtxtNombreU.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NICtxtNombreU.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NICtxtNombreU.ForeColor = System.Drawing.Color.DimGray;
+            this.NICtxtNombreU.Location = new System.Drawing.Point(270, 105);
+            this.NICtxtNombreU.Name = "NICtxtNombreU";
+            this.NICtxtNombreU.Size = new System.Drawing.Size(454, 19);
+            this.NICtxtNombreU.TabIndex = 48;
+            this.NICtxtNombreU.Text = "NOMBRE";
+            this.NICtxtNombreU.Enter += new System.EventHandler(this.NICtxtNombreU_Enter);
+            this.NICtxtNombreU.Leave += new System.EventHandler(this.NICtxtNombreU_Leave);
             // 
-            // CtxtCorreoUNI
+            // NICtxtApellidoU
             // 
-            this.CtxtCorreoUNI.Location = new System.Drawing.Point(309, 270);
-            this.CtxtCorreoUNI.Name = "CtxtCorreoUNI";
-            this.CtxtCorreoUNI.Size = new System.Drawing.Size(391, 20);
-            this.CtxtCorreoUNI.TabIndex = 34;
+            this.NICtxtApellidoU.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.NICtxtApellidoU.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NICtxtApellidoU.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NICtxtApellidoU.ForeColor = System.Drawing.Color.DimGray;
+            this.NICtxtApellidoU.Location = new System.Drawing.Point(270, 159);
+            this.NICtxtApellidoU.Name = "NICtxtApellidoU";
+            this.NICtxtApellidoU.Size = new System.Drawing.Size(454, 19);
+            this.NICtxtApellidoU.TabIndex = 49;
+            this.NICtxtApellidoU.Text = "APELLIDO";
+            this.NICtxtApellidoU.Enter += new System.EventHandler(this.NICtxtApellidoU_Enter);
+            this.NICtxtApellidoU.Leave += new System.EventHandler(this.NICtxtApellidoU_Leave);
             // 
-            // CtxtConfirmarContrasenaUNI
+            // NiCtxtTelefonoU
             // 
-            this.CtxtConfirmarContrasenaUNI.Location = new System.Drawing.Point(309, 369);
-            this.CtxtConfirmarContrasenaUNI.Name = "CtxtConfirmarContrasenaUNI";
-            this.CtxtConfirmarContrasenaUNI.Size = new System.Drawing.Size(391, 20);
-            this.CtxtConfirmarContrasenaUNI.TabIndex = 36;
+            this.NiCtxtTelefonoU.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.NiCtxtTelefonoU.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NiCtxtTelefonoU.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NiCtxtTelefonoU.ForeColor = System.Drawing.Color.DimGray;
+            this.NiCtxtTelefonoU.Location = new System.Drawing.Point(270, 214);
+            this.NiCtxtTelefonoU.Name = "NiCtxtTelefonoU";
+            this.NiCtxtTelefonoU.Size = new System.Drawing.Size(454, 19);
+            this.NiCtxtTelefonoU.TabIndex = 50;
+            this.NiCtxtTelefonoU.Text = "TELEFONO";
+            this.NiCtxtTelefonoU.TextChanged += new System.EventHandler(this.NiCtxtTelefonoU_TextChanged);
+            this.NiCtxtTelefonoU.Enter += new System.EventHandler(this.NiCtxtTelefonoU_Enter);
+            this.NiCtxtTelefonoU.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NiCtxtTelefonoU_KeyPress);
+            this.NiCtxtTelefonoU.Leave += new System.EventHandler(this.NiCtxtTelefonoU_Leave);
             // 
-            // CtxtContrasenaUNI
+            // NICtxtCorreoU
             // 
-            this.CtxtContrasenaUNI.Location = new System.Drawing.Point(309, 322);
-            this.CtxtContrasenaUNI.Name = "CtxtContrasenaUNI";
-            this.CtxtContrasenaUNI.Size = new System.Drawing.Size(391, 20);
-            this.CtxtContrasenaUNI.TabIndex = 37;
+            this.NICtxtCorreoU.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.NICtxtCorreoU.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NICtxtCorreoU.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NICtxtCorreoU.ForeColor = System.Drawing.Color.DimGray;
+            this.NICtxtCorreoU.Location = new System.Drawing.Point(270, 267);
+            this.NICtxtCorreoU.Name = "NICtxtCorreoU";
+            this.NICtxtCorreoU.Size = new System.Drawing.Size(454, 19);
+            this.NICtxtCorreoU.TabIndex = 51;
+            this.NICtxtCorreoU.Text = "CORREO";
+            this.NICtxtCorreoU.Enter += new System.EventHandler(this.NICtxtCorreoU_Enter);
+            this.NICtxtCorreoU.Leave += new System.EventHandler(this.NICtxtCorreoU_Leave);
+            // 
+            // NICtxtContrasenaU
+            // 
+            this.NICtxtContrasenaU.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.NICtxtContrasenaU.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NICtxtContrasenaU.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NICtxtContrasenaU.ForeColor = System.Drawing.Color.DimGray;
+            this.NICtxtContrasenaU.Location = new System.Drawing.Point(270, 316);
+            this.NICtxtContrasenaU.Name = "NICtxtContrasenaU";
+            this.NICtxtContrasenaU.Size = new System.Drawing.Size(454, 19);
+            this.NICtxtContrasenaU.TabIndex = 52;
+            this.NICtxtContrasenaU.Text = "CONTRASEÑA";
+            this.NICtxtContrasenaU.Enter += new System.EventHandler(this.NICtxtContrasenaU_Enter);
+            this.NICtxtContrasenaU.Leave += new System.EventHandler(this.NICtxtContrasenaU_Leave);
+            // 
+            // NICtxtConfirmarContrasenaU
+            // 
+            this.NICtxtConfirmarContrasenaU.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.NICtxtConfirmarContrasenaU.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NICtxtConfirmarContrasenaU.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NICtxtConfirmarContrasenaU.ForeColor = System.Drawing.Color.DimGray;
+            this.NICtxtConfirmarContrasenaU.Location = new System.Drawing.Point(270, 370);
+            this.NICtxtConfirmarContrasenaU.Name = "NICtxtConfirmarContrasenaU";
+            this.NICtxtConfirmarContrasenaU.Size = new System.Drawing.Size(454, 19);
+            this.NICtxtConfirmarContrasenaU.TabIndex = 53;
+            this.NICtxtConfirmarContrasenaU.Text = "CONFIRMAR CONTRASEÑA";
+            this.NICtxtConfirmarContrasenaU.Enter += new System.EventHandler(this.NICtxtConfirmarContrasenaU_Enter);
+            this.NICtxtConfirmarContrasenaU.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NICtxtConfirmarContrasenaU_KeyPress);
+            this.NICtxtConfirmarContrasenaU.Leave += new System.EventHandler(this.NICtxtConfirmarContrasenaU_Leave);
             // 
             // NINuevoUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(719, 491);
-            this.Controls.Add(this.CtxtContrasenaUNI);
-            this.Controls.Add(this.CtxtConfirmarContrasenaUNI);
-            this.Controls.Add(this.CtxtCorreoUNI);
-            this.Controls.Add(this.CtxtTelefonoUNI);
-            this.Controls.Add(this.CtxtApellidoUNI);
-            this.Controls.Add(this.CtxtNombreUNI);
-            this.Controls.Add(this.CtxtNombreUsuarioNI);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.NIContrasena);
-            this.Controls.Add(this.NICorreo);
-            this.Controls.Add(this.NITelefono);
-            this.Controls.Add(this.NIApellido);
-            this.Controls.Add(this.NINombre);
-            this.Controls.Add(this.NINombreDeUsuario);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.ClientSize = new System.Drawing.Size(780, 480);
+            this.Controls.Add(this.NICtxtConfirmarContrasenaU);
+            this.Controls.Add(this.NICtxtContrasenaU);
+            this.Controls.Add(this.NICtxtCorreoU);
+            this.Controls.Add(this.NiCtxtTelefonoU);
+            this.Controls.Add(this.NICtxtApellidoU);
+            this.Controls.Add(this.NICtxtNombreU);
+            this.Controls.Add(this.NICtxtNombreUsuario);
+            this.Controls.Add(this.linkLabel6);
+            this.Controls.Add(this.linkLabel5);
+            this.Controls.Add(this.linkLabel4);
+            this.Controls.Add(this.linkLabel3);
+            this.Controls.Add(this.linkLabel2);
+            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.SlLInUser);
             this.Controls.Add(this.BtnRegistrarNuevoUsuario);
             this.Controls.Add(this.BtnVolverLoginNUNI);
             this.Controls.Add(this.NUNuevoUsuarioNI);
@@ -272,35 +326,36 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NINuevoUsuario";
+            this.Opacity = 0.9D;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NINuevoUsuario";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.NINuevoUsuario_MouseDown);
-            this.PanelNiNuevoUsuario.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.LogoPrincipal)).EndInit();
+            this.PanelNiNuevoUsuario.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel PanelNiNuevoUsuario;
-        private System.Windows.Forms.PictureBox LogoPrincipal;
         private System.Windows.Forms.Label NUNuevoUsuarioNI;
         private System.Windows.Forms.Button BtnVolverLoginNUNI;
         private System.Windows.Forms.Button BtnRegistrarNuevoUsuario;
-        private System.Windows.Forms.Label NINombreDeUsuario;
-        private System.Windows.Forms.Label NINombre;
-        private System.Windows.Forms.Label NIApellido;
-        private System.Windows.Forms.Label NITelefono;
-        private System.Windows.Forms.Label NICorreo;
-        private System.Windows.Forms.Label NIContrasena;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox CtxtNombreUsuarioNI;
-        private System.Windows.Forms.TextBox CtxtNombreUNI;
-        private System.Windows.Forms.TextBox CtxtApellidoUNI;
-        private System.Windows.Forms.TextBox CtxtTelefonoUNI;
-        private System.Windows.Forms.TextBox CtxtCorreoUNI;
-        private System.Windows.Forms.TextBox CtxtConfirmarContrasenaUNI;
-        private System.Windows.Forms.TextBox CtxtContrasenaUNI;
+        private System.Windows.Forms.PictureBox LogoPrincipal;
+        private System.Windows.Forms.Panel PanelNiNuevoUsuario;
+        private System.Windows.Forms.LinkLabel SlLInUser;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.LinkLabel linkLabel3;
+        private System.Windows.Forms.LinkLabel linkLabel4;
+        private System.Windows.Forms.LinkLabel linkLabel5;
+        private System.Windows.Forms.LinkLabel linkLabel6;
+        private System.Windows.Forms.TextBox NICtxtNombreUsuario;
+        private System.Windows.Forms.TextBox NICtxtNombreU;
+        private System.Windows.Forms.TextBox NICtxtApellidoU;
+        private System.Windows.Forms.TextBox NiCtxtTelefonoU;
+        private System.Windows.Forms.TextBox NICtxtCorreoU;
+        private System.Windows.Forms.TextBox NICtxtContrasenaU;
+        private System.Windows.Forms.TextBox NICtxtConfirmarContrasenaU;
     }
 }

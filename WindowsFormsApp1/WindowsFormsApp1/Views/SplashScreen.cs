@@ -1,6 +1,4 @@
-﻿using System.Windows.Forms;
-
-namespace WindowsFormsApp1.Views
+﻿namespace WindowsFormsApp1.Views
 {
     public partial class SplashScreen : MetroFramework.Forms.MetroForm
     {
@@ -9,7 +7,6 @@ namespace WindowsFormsApp1.Views
             InitializeComponent();
             
         }
-
         private void TiempoRespuestaBar_Tick(object sender, System.EventArgs e)
         {
             this.metroProgressBar1.Increment(1);
