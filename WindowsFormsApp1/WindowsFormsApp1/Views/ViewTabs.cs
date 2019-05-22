@@ -935,6 +935,7 @@ namespace WindowsFormsApp1.Views
         }
         private void dgClientes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            Connection connection = new Connection();
             DataGridViewRow fila = dgClientes.Rows[e.RowIndex];
             if (Convert.ToString(fila.Cells["Id"].Value).Equals("") || Convert.ToString(fila.Cells["Nombre"].Value).Equals("")
                 || Convert.ToString(fila.Cells["Apellido"].Value).Equals("") || Convert.ToString(fila.Cells["Telefono"].Value).Equals("")
@@ -946,7 +947,12 @@ namespace WindowsFormsApp1.Views
             {
                 int id = Convert.ToInt32(fila.Cells["Id"].Value);
                 DatosCliente datosCliente = new DatosCliente(id);
-                datosCliente.Show();
+                datosCliente.ShowDialog();
+                connection.AbrirConexion();
+                connection.buscar("SELECT * FROM Cliente");
+                connection.CerrarConexion();
+                
+
             }
         }
         private void allValues()
@@ -1082,6 +1088,7 @@ namespace WindowsFormsApp1.Views
         }
         private void tableOrdenes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            Connection connection = new Connection();
             try
             {
                 DataGridViewRow fila = tableOrdenes.Rows[e.RowIndex];
@@ -1095,7 +1102,10 @@ namespace WindowsFormsApp1.Views
                 {
                     int id = Convert.ToInt32(fila.Cells["Id"].Value);
                     DatosPieza datosPieza = new DatosPieza(id);
-                    datosPieza.Show();
+                    datosPieza.ShowDialog();
+                    connection.AbrirConexion();
+                    tableOrdenes.DataSource = conexion.buscarReparacion("SELECT * FROM Pieza order by FechaEncargada asc");
+                    connection.CerrarConexion();
                 }
             }
             catch (Exception)

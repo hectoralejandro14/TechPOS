@@ -67,7 +67,7 @@
             this.btnAddCancelarP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.btnAddCancelarP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddCancelarP.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnAddCancelarP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddCancelarP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddCancelarP.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCancelarP.ForeColor = System.Drawing.Color.Orange;
             this.btnAddCancelarP.Location = new System.Drawing.Point(598, 359);
@@ -83,7 +83,7 @@
             this.btnAddAceptarP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.btnAddAceptarP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddAceptarP.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnAddAceptarP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddAceptarP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddAceptarP.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddAceptarP.ForeColor = System.Drawing.Color.Orange;
             this.btnAddAceptarP.Location = new System.Drawing.Point(598, 289);
@@ -98,7 +98,7 @@
             // 
             this.tBoxAddDescripcion.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tBoxAddDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.tBoxAddDescripcion.Location = new System.Drawing.Point(263, 229);
+            this.tBoxAddDescripcion.Location = new System.Drawing.Point(285, 229);
             this.tBoxAddDescripcion.Multiline = true;
             this.tBoxAddDescripcion.Name = "tBoxAddDescripcion";
             this.tBoxAddDescripcion.Size = new System.Drawing.Size(206, 183);
@@ -128,7 +128,7 @@
             // 
             this.tBoxAddCostoP.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tBoxAddCostoP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.tBoxAddCostoP.Location = new System.Drawing.Point(263, 181);
+            this.tBoxAddCostoP.Location = new System.Drawing.Point(285, 181);
             this.tBoxAddCostoP.Name = "tBoxAddCostoP";
             this.tBoxAddCostoP.Size = new System.Drawing.Size(206, 26);
             this.tBoxAddCostoP.TabIndex = 73;
@@ -147,7 +147,7 @@
             // 
             this.tBoxAddClaveF.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tBoxAddClaveF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.tBoxAddClaveF.Location = new System.Drawing.Point(263, 132);
+            this.tBoxAddClaveF.Location = new System.Drawing.Point(285, 132);
             this.tBoxAddClaveF.Name = "tBoxAddClaveF";
             this.tBoxAddClaveF.Size = new System.Drawing.Size(206, 26);
             this.tBoxAddClaveF.TabIndex = 71;
@@ -156,7 +156,7 @@
             // 
             this.tBoxAddClaveP.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tBoxAddClaveP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.tBoxAddClaveP.Location = new System.Drawing.Point(263, 85);
+            this.tBoxAddClaveP.Location = new System.Drawing.Point(285, 85);
             this.tBoxAddClaveP.Name = "tBoxAddClaveP";
             this.tBoxAddClaveP.Size = new System.Drawing.Size(206, 26);
             this.tBoxAddClaveP.TabIndex = 70;
@@ -165,7 +165,7 @@
             // 
             this.lblAddCantidad.AutoSize = true;
             this.lblAddCantidad.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddCantidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.lblAddCantidad.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblAddCantidad.Location = new System.Drawing.Point(507, 229);
             this.lblAddCantidad.Name = "lblAddCantidad";
             this.lblAddCantidad.Size = new System.Drawing.Size(76, 18);
@@ -176,7 +176,7 @@
             // 
             this.lblAddMoneda.AutoSize = true;
             this.lblAddMoneda.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddMoneda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.lblAddMoneda.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblAddMoneda.Location = new System.Drawing.Point(516, 184);
             this.lblAddMoneda.Name = "lblAddMoneda";
             this.lblAddMoneda.Size = new System.Drawing.Size(69, 18);
@@ -188,8 +188,8 @@
             // 
             this.lblAddCosto.AutoSize = true;
             this.lblAddCosto.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddCosto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.lblAddCosto.Location = new System.Drawing.Point(194, 184);
+            this.lblAddCosto.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lblAddCosto.Location = new System.Drawing.Point(216, 184);
             this.lblAddCosto.Name = "lblAddCosto";
             this.lblAddCosto.Size = new System.Drawing.Size(54, 18);
             this.lblAddCosto.TabIndex = 67;
@@ -200,8 +200,8 @@
             // 
             this.lblAddDescripcion.AutoSize = true;
             this.lblAddDescripcion.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.lblAddDescripcion.Location = new System.Drawing.Point(154, 232);
+            this.lblAddDescripcion.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lblAddDescripcion.Location = new System.Drawing.Point(176, 232);
             this.lblAddDescripcion.Name = "lblAddDescripcion";
             this.lblAddDescripcion.Size = new System.Drawing.Size(96, 18);
             this.lblAddDescripcion.TabIndex = 66;
@@ -212,7 +212,7 @@
             // 
             this.lblAddCategoriaProducto.AutoSize = true;
             this.lblAddCategoriaProducto.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddCategoriaProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.lblAddCategoriaProducto.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblAddCategoriaProducto.Location = new System.Drawing.Point(503, 135);
             this.lblAddCategoriaProducto.Name = "lblAddCategoriaProducto";
             this.lblAddCategoriaProducto.Size = new System.Drawing.Size(82, 18);
@@ -224,7 +224,7 @@
             // 
             this.lblAddMarcaProducto.AutoSize = true;
             this.lblAddMarcaProducto.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddMarcaProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.lblAddMarcaProducto.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblAddMarcaProducto.Location = new System.Drawing.Point(529, 88);
             this.lblAddMarcaProducto.Name = "lblAddMarcaProducto";
             this.lblAddMarcaProducto.Size = new System.Drawing.Size(56, 18);
@@ -235,8 +235,8 @@
             // 
             this.lblAddClaveFabricante.AutoSize = true;
             this.lblAddClaveFabricante.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddClaveFabricante.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.lblAddClaveFabricante.Location = new System.Drawing.Point(95, 135);
+            this.lblAddClaveFabricante.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lblAddClaveFabricante.Location = new System.Drawing.Point(117, 135);
             this.lblAddClaveFabricante.Name = "lblAddClaveFabricante";
             this.lblAddClaveFabricante.Size = new System.Drawing.Size(156, 18);
             this.lblAddClaveFabricante.TabIndex = 63;
@@ -246,8 +246,8 @@
             // 
             this.lblAddClaveProducto.AutoSize = true;
             this.lblAddClaveProducto.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddClaveProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.lblAddClaveProducto.Location = new System.Drawing.Point(109, 88);
+            this.lblAddClaveProducto.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lblAddClaveProducto.Location = new System.Drawing.Point(131, 88);
             this.lblAddClaveProducto.Name = "lblAddClaveProducto";
             this.lblAddClaveProducto.Size = new System.Drawing.Size(142, 18);
             this.lblAddClaveProducto.TabIndex = 62;
@@ -278,7 +278,7 @@
             // 
             this.lblAddProduct.AutoSize = true;
             this.lblAddProduct.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.lblAddProduct.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblAddProduct.Location = new System.Drawing.Point(311, 9);
             this.lblAddProduct.Name = "lblAddProduct";
             this.lblAddProduct.Size = new System.Drawing.Size(227, 32);
@@ -289,7 +289,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(828, 450);
             this.Controls.Add(this.lblAddProduct);
             this.Controls.Add(this.cBoxAddCategoriaP);
