@@ -597,10 +597,10 @@ namespace WindowsFormsApp1.Views
                         {
                             tipoDiag = "Diagnóstico rápido";
                         }
-                        else
-                        {
-                            MessageBox.Show("Seleccione un tipo de diagnóstico", "Diagnóstico", MessageBoxButtons.OK, MessageBoxIcon.Question);
-                        }
+                        //else
+                        //{
+                        //    MessageBox.Show("Seleccione un tipo de diagnóstico", "Diagnóstico", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                        //}
                         if (rbDiagnosticoEspecifico.Checked || rbDiagnosticoRapido.Checked)
                         {
                             string concatenarDiagTex = tipoDiag + " : " + txtDescripcionDiagnosticoEspecifico.Text;

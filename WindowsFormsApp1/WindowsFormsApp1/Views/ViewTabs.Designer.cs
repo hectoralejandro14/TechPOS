@@ -742,7 +742,6 @@
             // rbDiagnosticoRapido
             // 
             this.rbDiagnosticoRapido.AutoSize = true;
-            this.rbDiagnosticoRapido.Enabled = false;
             this.rbDiagnosticoRapido.ForeColor = System.Drawing.Color.Black;
             this.rbDiagnosticoRapido.Location = new System.Drawing.Point(220, 193);
             this.rbDiagnosticoRapido.Name = "rbDiagnosticoRapido";
