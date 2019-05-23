@@ -122,7 +122,15 @@ namespace WindowsFormsApp1.Views
         //TAB "VENTA"
         private void CbtnCobrarVenta_Click(object sender, EventArgs e)
         {
-
+            Cobrar c = new Cobrar();
+            decimal venta_total = 0;
+            for (int i = 0; i < tableVender.Rows.Count; i++)
+            {
+                string valor = tableVender.Rows[i].Cells[3].Value.ToString();
+                venta_total = venta_total + Convert.ToDecimal(valor);
+            }
+            c.setTotal(venta_total);
+            c.ShowDialog();
         }
         private void CbtnCancelarVenta_Click(object sender, EventArgs e)
         {
