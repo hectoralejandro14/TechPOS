@@ -341,6 +341,7 @@
     <None Include="Resources\producto.png" />
     <None Include="Resources\clientes.png" />
     <None Include="Resources\64244.png" />
+    <Content Include="Resources\Por hacer.txt" />
     <Content Include="Resources\refresh.png" />
     <Content Include="Resources\sub_fondo.png" />
     <None Include="Resources\logoUp.png" />
