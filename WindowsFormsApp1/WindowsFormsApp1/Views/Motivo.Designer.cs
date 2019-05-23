@@ -48,7 +48,7 @@
             // 
             // motivoTbxCancelarV
             // 
-            this.motivoTbxCancelarV.Location = new System.Drawing.Point(27, 30);
+            this.motivoTbxCancelarV.Location = new System.Drawing.Point(19, 26);
             this.motivoTbxCancelarV.Name = "motivoTbxCancelarV";
             this.motivoTbxCancelarV.Size = new System.Drawing.Size(342, 163);
             this.motivoTbxCancelarV.TabIndex = 2;
