@@ -313,6 +313,7 @@
             this.Controls.Add(this.PAddProducts);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddProduct";
+            this.Opacity = 0.9D;
             this.Text = "AddProduct";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AddProduct_MouseDown);
             this.PAddProducts.ResumeLayout(false);

@@ -36,9 +36,30 @@ namespace WindowsFormsApp1.Views
 
         private void BtnAddAceptarP_Click(object sender, EventArgs e)
         {
-            if (true)
+            Connection connection = new Connection();
+            if (tBoxAddClaveP.Text.Equals("") || tBoxAddClaveF.Text.Equals("") || tBoxAddCostoP.Text.Equals("") || tBoxAddMarca.Text.Equals("") 
+                || tBoxAddDescripcion.Text.Equals("") || tBoxAddCantidadP.Text.Equals("") || cBoxAddCategoriaP.Text.Equals("") 
+                || tBoxAddMoneda.Text.Equals(""))
             {
-
+                MessageBox.Show("No se permiten datos vacios","Aviso",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                if (Convert.ToDouble(tBoxAddCostoP.Text)<=0)
+                {
+                    MessageBox.Show("No se permiten cantidades menores o igual a 0", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    connection.AbrirConexion();
+                    int idCategoria = connection.IdCategoria("SELECT Id From Categoria WHERE Nombre='" + cBoxAddCategoriaP.Text + "'");
+                    connection.CerrarConexion();
+                    connection.AbrirConexion();
+                    connection.actualizarDatos("INSERT INTO Producto (ClaveProducto, ClaveFabricante, Marca, IdCategoria, Descripcion, Costo, Moneda, Cantidad) VALUES ( ClaveProducto='" + tBoxAddClaveP.Text + "', ClaveFabricante='" + tBoxAddClaveF.Text + "', Marca='" + tBoxAddMarca.Text + "', IdCategoria=" + idCategoria + ", Descripcion='" + tBoxAddDescripcion.Text + "', Costo=" + Convert.ToDouble(tBoxAddCostoP.Text) + ", Moneda='" + tBoxAddMoneda.Text + "', Cantidad=" + Convert.ToInt32(tBoxAddCantidadP.Text) + ")");
+                    MessageBox.Show("El producto se agrego correctamente","Informacion",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    this.Hide();
+                    connection.CerrarConexion();
+                }
             }
         }
 

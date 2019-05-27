@@ -358,6 +358,7 @@
             this.Controls.Add(this.PProducts);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ProductDetails";
+            this.Opacity = 0.9D;
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ProductDetails_MouseDown);
             this.PProducts.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.LogoProducts)).EndInit();
