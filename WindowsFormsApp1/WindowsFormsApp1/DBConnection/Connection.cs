@@ -407,7 +407,7 @@ namespace WindowsFormsApp1.DBConnectio
 
         public string BuscarCliente(string sql)
         {
-            string nomCliente;
+            string nomCliente = "";
             SqlCommand sqlCommand = new SqlCommand(sql, conexion);
             sqlCommand.CommandType = CommandType.Text;
             nomCliente = sqlCommand.ExecuteScalar().ToString();
@@ -416,10 +416,11 @@ namespace WindowsFormsApp1.DBConnectio
 
         public int ingresarDatos(string sql)
         {
+            SqlCommand sqlCommand;
             int filas = 0;
-            SqlCommand sqlCommand = new SqlCommand(sql, conexion);
+            sqlCommand = new SqlCommand(sql, conexion);
             sqlCommand.CommandType = CommandType.Text;
-            filas = SqlCommand.ExecuteNonQuery();
+            filas = sqlCommand.ExecuteNonQuery();
             return filas;
         }
         public int AgregarCancelacion(string cadena, decimal Id, string datos, string fecha,int IdU,int IdV)
@@ -445,6 +446,21 @@ namespace WindowsFormsApp1.DBConnectio
                 MessageBox.Show("Error de conexion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return modificacion;
+        }
+
+        public int idProducto(string sql)
+        {
+            int id = 0;
+            SqlCommand sqlCommand = new SqlCommand(sql, conexion);
+            sqlCommand.CommandType = CommandType.Text;
+            try
+            {
+                id = Convert.ToInt32(sqlCommand.ExecuteScalar());
+            }
+            catch (InvalidCastException)
+            {
+            }
+            return id;
         }
     }
 }

@@ -113,6 +113,7 @@
             this.tBoxAddCantidadP.Size = new System.Drawing.Size(206, 26);
             this.tBoxAddCantidadP.TabIndex = 75;
             this.tBoxAddCantidadP.Text = "0";
+            this.tBoxAddCantidadP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBoxAddCantidadP_KeyPress);
             // 
             // tBoxAddMoneda
             // 
@@ -133,6 +134,7 @@
             this.tBoxAddCostoP.Size = new System.Drawing.Size(206, 26);
             this.tBoxAddCostoP.TabIndex = 73;
             this.tBoxAddCostoP.Text = "0";
+            this.tBoxAddCostoP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBoxAddCostoP_KeyPress);
             // 
             // tBoxAddMarca
             // 

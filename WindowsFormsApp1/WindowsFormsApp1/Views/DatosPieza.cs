@@ -23,12 +23,12 @@ namespace WindowsFormsApp1.Views
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
             Connection connection = new Connection();
             connection.AbrirConexion();
-            SqlDataReader dataReader = connection.consulta("SELECT Descripcion,Estado,FechaPedida,FechaLlegaAprox FROM Pieza WHERE Id=" + id);
+            SqlDataReader dataReader = connection.consulta("SELECT Descripcion,Estado,FechaEncargada,FechaLlegaAprox FROM Pieza WHERE Id=" + id);
             if (dataReader.Read())
             {
                 txtDescPieza.Text = Convert.ToString(dataReader["Descripcion"]);
                 cBoxEstadosPieza.Text = Convert.ToString(dataReader["Estado"]);
-                txtFechaPPieza.Text = Convert.ToString(dataReader["FechaPedida"]);
+                txtFechaPPieza.Text = Convert.ToString(dataReader["FechaEncargada"]);
                 txtFechaLPieza.Text = Convert.ToString(dataReader["FechaLlegaAprox"]);
             }
             idPieza = id;
@@ -66,12 +66,12 @@ namespace WindowsFormsApp1.Views
             DialogResult result = MessageBox.Show("Esta seguro que desea cancelar la modificacion?", "Informacion", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (result == DialogResult.Yes)
             {
-                SqlDataReader dataReader = connection.consulta("SELECT Descripcion,Estado,FechaPedida,FechaLlegaAprox FROM Pieza WHERE Id=" + idPieza);
+                SqlDataReader dataReader = connection.consulta("SELECT Descripcion,Estado,FechaEncargada,FechaLlegaAprox FROM Pieza WHERE Id=" + idPieza);
                 if (dataReader.Read())
                 {
                     txtDescPieza.Text = Convert.ToString(dataReader["Descripcion"]);
                     cBoxEstadosPieza.Text = Convert.ToString(dataReader["Estado"]);
-                    txtFechaPPieza.Text = Convert.ToString(dataReader["FechaPedida"]);
+                    txtFechaPPieza.Text = Convert.ToString(dataReader["FechaEncargada"]);
                     txtFechaLPieza.Text = Convert.ToString(dataReader["FechaLlegaAprox"]);
                     cBoxEstadosPieza.Enabled = false;
                     btnCancelarPieza.Visible = false;

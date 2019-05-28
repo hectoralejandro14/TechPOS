@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.PBoxPieza = new System.Windows.Forms.PictureBox();
             this.txtDescPieza = new System.Windows.Forms.TextBox();
             this.lblDescPieza = new System.Windows.Forms.Label();
             this.lblEstadoPieza = new System.Windows.Forms.Label();
@@ -40,33 +39,31 @@
             this.BtnAceptarPieza = new System.Windows.Forms.Button();
             this.btnCancelarPieza = new System.Windows.Forms.Button();
             this.btnModifcarPieza = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.PBoxPieza)).BeginInit();
+            this.PDatosPieza = new System.Windows.Forms.Panel();
+            this.LogoDatosPieza = new System.Windows.Forms.PictureBox();
+            this.lblDatosPieza = new System.Windows.Forms.Label();
+            this.PDatosPieza.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoDatosPieza)).BeginInit();
             this.SuspendLayout();
-            // 
-            // PBoxPieza
-            // 
-            this.PBoxPieza.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
-            this.PBoxPieza.Location = new System.Drawing.Point(12, 12);
-            this.PBoxPieza.Name = "PBoxPieza";
-            this.PBoxPieza.Size = new System.Drawing.Size(56, 86);
-            this.PBoxPieza.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PBoxPieza.TabIndex = 5;
-            this.PBoxPieza.TabStop = false;
             // 
             // txtDescPieza
             // 
+            this.txtDescPieza.BackColor = System.Drawing.Color.White;
             this.txtDescPieza.Enabled = false;
-            this.txtDescPieza.Location = new System.Drawing.Point(185, 49);
+            this.txtDescPieza.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescPieza.ForeColor = System.Drawing.Color.Black;
+            this.txtDescPieza.Location = new System.Drawing.Point(164, 114);
             this.txtDescPieza.Multiline = true;
             this.txtDescPieza.Name = "txtDescPieza";
-            this.txtDescPieza.Size = new System.Drawing.Size(247, 78);
+            this.txtDescPieza.Size = new System.Drawing.Size(247, 219);
             this.txtDescPieza.TabIndex = 7;
             // 
             // lblDescPieza
             // 
             this.lblDescPieza.AutoSize = true;
             this.lblDescPieza.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescPieza.Location = new System.Drawing.Point(179, 12);
+            this.lblDescPieza.ForeColor = System.Drawing.Color.Orange;
+            this.lblDescPieza.Location = new System.Drawing.Point(230, 77);
             this.lblDescPieza.Name = "lblDescPieza";
             this.lblDescPieza.Size = new System.Drawing.Size(115, 34);
             this.lblDescPieza.TabIndex = 6;
@@ -76,7 +73,8 @@
             // 
             this.lblEstadoPieza.AutoSize = true;
             this.lblEstadoPieza.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadoPieza.Location = new System.Drawing.Point(179, 155);
+            this.lblEstadoPieza.ForeColor = System.Drawing.Color.Orange;
+            this.lblEstadoPieza.Location = new System.Drawing.Point(478, 77);
             this.lblEstadoPieza.Name = "lblEstadoPieza";
             this.lblEstadoPieza.Size = new System.Drawing.Size(148, 34);
             this.lblEstadoPieza.TabIndex = 8;
@@ -86,7 +84,8 @@
             // 
             this.lblFPedPieza.AutoSize = true;
             this.lblFPedPieza.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFPedPieza.Location = new System.Drawing.Point(36, 239);
+            this.lblFPedPieza.ForeColor = System.Drawing.Color.Orange;
+            this.lblFPedPieza.Location = new System.Drawing.Point(478, 261);
             this.lblFPedPieza.Name = "lblFPedPieza";
             this.lblFPedPieza.Size = new System.Drawing.Size(154, 34);
             this.lblFPedPieza.TabIndex = 10;
@@ -96,7 +95,8 @@
             // 
             this.lblFLlegPieza.AutoSize = true;
             this.lblFLlegPieza.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFLlegPieza.Location = new System.Drawing.Point(302, 239);
+            this.lblFLlegPieza.ForeColor = System.Drawing.Color.Orange;
+            this.lblFLlegPieza.Location = new System.Drawing.Point(478, 163);
             this.lblFLlegPieza.Name = "lblFLlegPieza";
             this.lblFLlegPieza.Size = new System.Drawing.Size(164, 34);
             this.lblFLlegPieza.TabIndex = 11;
@@ -105,40 +105,46 @@
             // txtFechaPPieza
             // 
             this.txtFechaPPieza.Enabled = false;
-            this.txtFechaPPieza.Location = new System.Drawing.Point(12, 287);
+            this.txtFechaPPieza.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFechaPPieza.ForeColor = System.Drawing.Color.Black;
+            this.txtFechaPPieza.Location = new System.Drawing.Point(484, 307);
             this.txtFechaPPieza.Name = "txtFechaPPieza";
-            this.txtFechaPPieza.Size = new System.Drawing.Size(203, 20);
+            this.txtFechaPPieza.Size = new System.Drawing.Size(247, 26);
             this.txtFechaPPieza.TabIndex = 12;
             // 
             // txtFechaLPieza
             // 
             this.txtFechaLPieza.Enabled = false;
-            this.txtFechaLPieza.Location = new System.Drawing.Point(279, 287);
+            this.txtFechaLPieza.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFechaLPieza.ForeColor = System.Drawing.Color.Black;
+            this.txtFechaLPieza.Location = new System.Drawing.Point(484, 213);
             this.txtFechaLPieza.Name = "txtFechaLPieza";
-            this.txtFechaLPieza.Size = new System.Drawing.Size(203, 20);
+            this.txtFechaLPieza.Size = new System.Drawing.Size(247, 26);
             this.txtFechaLPieza.TabIndex = 13;
             // 
             // cBoxEstadosPieza
             // 
             this.cBoxEstadosPieza.Enabled = false;
+            this.cBoxEstadosPieza.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cBoxEstadosPieza.ForeColor = System.Drawing.Color.Black;
             this.cBoxEstadosPieza.FormattingEnabled = true;
             this.cBoxEstadosPieza.Items.AddRange(new object[] {
             "Ordenada",
             "Recibida"});
-            this.cBoxEstadosPieza.Location = new System.Drawing.Point(185, 192);
+            this.cBoxEstadosPieza.Location = new System.Drawing.Point(484, 114);
             this.cBoxEstadosPieza.Name = "cBoxEstadosPieza";
-            this.cBoxEstadosPieza.Size = new System.Drawing.Size(247, 21);
+            this.cBoxEstadosPieza.Size = new System.Drawing.Size(247, 26);
             this.cBoxEstadosPieza.TabIndex = 14;
             // 
             // BtnAceptarPieza
             // 
-            this.BtnAceptarPieza.BackColor = System.Drawing.Color.DimGray;
+            this.BtnAceptarPieza.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.BtnAceptarPieza.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnAceptarPieza.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAceptarPieza.ForeColor = System.Drawing.Color.White;
-            this.BtnAceptarPieza.Location = new System.Drawing.Point(69, 370);
+            this.BtnAceptarPieza.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAceptarPieza.ForeColor = System.Drawing.Color.Orange;
+            this.BtnAceptarPieza.Location = new System.Drawing.Point(211, 384);
             this.BtnAceptarPieza.Name = "BtnAceptarPieza";
-            this.BtnAceptarPieza.Size = new System.Drawing.Size(80, 37);
+            this.BtnAceptarPieza.Size = new System.Drawing.Size(112, 34);
             this.BtnAceptarPieza.TabIndex = 15;
             this.BtnAceptarPieza.Text = "Aceptar";
             this.BtnAceptarPieza.UseVisualStyleBackColor = false;
@@ -146,13 +152,13 @@
             // 
             // btnCancelarPieza
             // 
-            this.btnCancelarPieza.BackColor = System.Drawing.Color.DimGray;
+            this.btnCancelarPieza.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.btnCancelarPieza.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelarPieza.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelarPieza.ForeColor = System.Drawing.Color.White;
-            this.btnCancelarPieza.Location = new System.Drawing.Point(340, 370);
+            this.btnCancelarPieza.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarPieza.ForeColor = System.Drawing.Color.Orange;
+            this.btnCancelarPieza.Location = new System.Drawing.Point(557, 384);
             this.btnCancelarPieza.Name = "btnCancelarPieza";
-            this.btnCancelarPieza.Size = new System.Drawing.Size(83, 37);
+            this.btnCancelarPieza.Size = new System.Drawing.Size(112, 34);
             this.btnCancelarPieza.TabIndex = 16;
             this.btnCancelarPieza.Text = "Cancelar";
             this.btnCancelarPieza.UseVisualStyleBackColor = false;
@@ -161,24 +167,58 @@
             // 
             // btnModifcarPieza
             // 
-            this.btnModifcarPieza.BackColor = System.Drawing.Color.DimGray;
+            this.btnModifcarPieza.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.btnModifcarPieza.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnModifcarPieza.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModifcarPieza.ForeColor = System.Drawing.Color.White;
-            this.btnModifcarPieza.Location = new System.Drawing.Point(204, 370);
+            this.btnModifcarPieza.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModifcarPieza.ForeColor = System.Drawing.Color.Orange;
+            this.btnModifcarPieza.Location = new System.Drawing.Point(384, 384);
             this.btnModifcarPieza.Name = "btnModifcarPieza";
-            this.btnModifcarPieza.Size = new System.Drawing.Size(80, 37);
+            this.btnModifcarPieza.Size = new System.Drawing.Size(112, 34);
             this.btnModifcarPieza.TabIndex = 17;
             this.btnModifcarPieza.Text = "Modificar";
             this.btnModifcarPieza.UseVisualStyleBackColor = false;
             this.btnModifcarPieza.Click += new System.EventHandler(this.btnModifcarPieza_Click);
             // 
+            // PDatosPieza
+            // 
+            this.PDatosPieza.AutoSize = true;
+            this.PDatosPieza.BackColor = System.Drawing.Color.DimGray;
+            this.PDatosPieza.Controls.Add(this.LogoDatosPieza);
+            this.PDatosPieza.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PDatosPieza.Location = new System.Drawing.Point(0, 0);
+            this.PDatosPieza.Name = "PDatosPieza";
+            this.PDatosPieza.Size = new System.Drawing.Size(97, 449);
+            this.PDatosPieza.TabIndex = 62;
+            // 
+            // LogoDatosPieza
+            // 
+            this.LogoDatosPieza.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.LogoDatosPieza.Location = new System.Drawing.Point(1, 9);
+            this.LogoDatosPieza.Name = "LogoDatosPieza";
+            this.LogoDatosPieza.Size = new System.Drawing.Size(93, 102);
+            this.LogoDatosPieza.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.LogoDatosPieza.TabIndex = 1;
+            this.LogoDatosPieza.TabStop = false;
+            // 
+            // lblDatosPieza
+            // 
+            this.lblDatosPieza.AutoSize = true;
+            this.lblDatosPieza.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDatosPieza.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lblDatosPieza.Location = new System.Drawing.Point(333, 9);
+            this.lblDatosPieza.Name = "lblDatosPieza";
+            this.lblDatosPieza.Size = new System.Drawing.Size(197, 32);
+            this.lblDatosPieza.TabIndex = 81;
+            this.lblDatosPieza.Text = "Datos de pieza";
+            // 
             // DatosPieza
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(494, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.ClientSize = new System.Drawing.Size(758, 449);
+            this.Controls.Add(this.lblDatosPieza);
+            this.Controls.Add(this.PDatosPieza);
             this.Controls.Add(this.btnModifcarPieza);
             this.Controls.Add(this.btnCancelarPieza);
             this.Controls.Add(this.BtnAceptarPieza);
@@ -190,18 +230,18 @@
             this.Controls.Add(this.lblEstadoPieza);
             this.Controls.Add(this.txtDescPieza);
             this.Controls.Add(this.lblDescPieza);
-            this.Controls.Add(this.PBoxPieza);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DatosPieza";
+            this.Opacity = 0.9D;
             this.Text = "DatosPieza";
-            ((System.ComponentModel.ISupportInitialize)(this.PBoxPieza)).EndInit();
+            this.PDatosPieza.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.LogoDatosPieza)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox PBoxPieza;
         private System.Windows.Forms.TextBox txtDescPieza;
         private System.Windows.Forms.Label lblDescPieza;
         private System.Windows.Forms.Label lblEstadoPieza;
@@ -213,5 +253,8 @@
         private System.Windows.Forms.Button BtnAceptarPieza;
         private System.Windows.Forms.Button btnCancelarPieza;
         private System.Windows.Forms.Button btnModifcarPieza;
+        private System.Windows.Forms.Panel PDatosPieza;
+        private System.Windows.Forms.PictureBox LogoDatosPieza;
+        private System.Windows.Forms.Label lblDatosPieza;
     }
 }

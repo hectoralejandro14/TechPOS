@@ -95,8 +95,6 @@ namespace WindowsFormsApp1.Views
             tableOrdenes.DataSource = conexion.buscarReparacion("SELECT * FROM Pieza order by FechaEncargada asc");
             conexion.CerrarConexion();
             //Adaptar datos a DataGridTableView
-            tableOrdenes.AutoResizeColumns();
-            tableOrdenes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             //------------------------------------------------------------------------------------------------------------------------------------------------------
             FillingProducts(); //Metodo para el llenado del dataGridView de productos.
             colores();
@@ -272,6 +270,7 @@ namespace WindowsFormsApp1.Views
             r.ShowDialog();
             connection.AbrirConexion();
             CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id  order by Reparacion.Fecha asc");
+            colores();
             connection.CerrarConexion();
         }
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
@@ -883,6 +882,7 @@ namespace WindowsFormsApp1.Views
             }
             e.ItemWidth = 260;
         }
+
         private void txtBuscarCliente_TextChanged(object sender, EventArgs e)
         {
             if (txtBuscarCliente.Text == "")
@@ -894,9 +894,13 @@ namespace WindowsFormsApp1.Views
                 txtCorreo.Text = "";
                 lblTextoIdCliente.Visible = false;
                 lblIdCliente.Visible = false;
-
+                txtNombre.Enabled = false;
+                txtApellido.Enabled = false;
+                txtTelefono.Enabled = false;
+                txtCorreo.Enabled = false;
             }
         }
+
         private void btnAddClientH_Click_1(object sender, EventArgs e)
         {
             if (txtNombre.Text != "" || txtApellido.Text != "" || txtTelefono.Text != "" || txtCorreo.Text != "")
@@ -1031,7 +1035,7 @@ namespace WindowsFormsApp1.Views
                 if (!JtxtBuscar2.Text.Equals(""))
                 {
                     connection.AbrirConexion();
-                    string nomCliente = connection.BuscarCliente("SELECT Nombre FROM Cliente WHERE Nombre ='" + JtxtBuscar2.Text + "'");
+                    string nomCliente = connection.BuscarCliente("SELECT Nombre FROM Cliente WHERE Nombre = '" + JtxtBuscar2.Text + "'");
                     connection.CerrarConexion();
                     connection.AbrirConexion();
                     CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id where Cliente.Nombre LIKE '%" + nomCliente + "%'");
@@ -1050,92 +1054,69 @@ namespace WindowsFormsApp1.Views
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
-                if (txtBuscarCliente.Text == "")
+                try
                 {
-                    MessageBox.Show("El campo esta vacio", "Alerta");
-                }
-                else
-                {
-                    bool encontro = false;
-                    Connection db = new DBConnectio.Connection();
-                    db.AbrirConexion();
-
-                    SqlDataReader dr = db.consulta("select * from Cliente where Nombre Like '%" + txtBuscarCliente.Text + "%'");
-                    //MessageBox.Show("select * from Cliente where Id=" + txtBuscarCliente.Text);
-                    if (dr.Read())
+                    if (txtBuscarCliente.Text == "")
                     {
-                        lblTextoIdCliente.Visible = true;
-                        lblIdCliente.Visible = true;
-                        lblIdEquipo.Visible = true;
-                        SlblRecibirEquipo.Visible = true;
-                        lblIdCliente.Text = Convert.ToString(dr["Id"]);
-                        txtNombre.Text = Convert.ToString(dr["Nombre"]);
-                        txtApellido.Text = Convert.ToString(dr["Apellido"]);
-                        txtTelefono.Text = Convert.ToString(dr["Telefono"]);
-                        txtCorreo.Text = Convert.ToString(dr["Contacto"]);
-                        encontro = true;
-                    }
-
-                    dr.Close();
-                    db.CerrarConexion();
-                    if (!encontro)
-                    {
-                        SbtnCancelar.Visible = true;
-                        lblAvisoNoCliente.Visible = true;
-                        btnAgregarCliente.Visible = true;
-                        //---------------------------------------
-                        SbtnCancelar.Visible = true;
-                        txtNombre.Enabled = true;
-                        txtApellido.Enabled = true;
-                        txtTelefono.Enabled = true;
-                        txtCorreo.Enabled = true;
-                        txtNombre.Text = "";
-                        txtApellido.Text = "";
-                        txtCorreo.Text = "";
-                        txtTelefono.Text = "";
-                        //pictureBuscar.Visible = true;
-                        //---------------------------------------
-                        GenerarId();
-                        GenerarIdEquipo();
-
+                        MessageBox.Show("El campo esta vacio", "Alerta");
                     }
                     else
                     {
-                        lblAvisoNoCliente.Visible = false;
-                        btnAddClientH.Visible = true;
-                        btnAgregarCliente.Visible = false;
-                        SbtnCancelar.Visible = false;
-                        txtNombre.Enabled = false;
-                        txtApellido.Enabled = false;
+                        bool encontro = false;
+                        Connection db = new DBConnectio.Connection();
+                        db.AbrirConexion();
 
+                        SqlDataReader dr = db.consulta("select * from Cliente where Id = " + txtBuscarCliente.Text + "");
+                        //MessageBox.Show("select * from Cliente where Id=" + txtBuscarCliente.Text);
+                        if (dr.Read())
+                        {
+                            lblTextoIdCliente.Visible = true;
+                            lblIdCliente.Visible = true;
+                            lblIdEquipo.Visible = true;
+                            SlblRecibirEquipo.Visible = true;
+                            lblIdCliente.Text = Convert.ToString(dr["Id"]);
+                            txtNombre.Text = Convert.ToString(dr["Nombre"]);
+                            txtApellido.Text = Convert.ToString(dr["Apellido"]);
+                            txtTelefono.Text = Convert.ToString(dr["Telefono"]);
+                            txtCorreo.Text = Convert.ToString(dr["Contacto"]);
+                            encontro = true;
+                        }
+
+                        dr.Close();
+                        db.CerrarConexion();
+                        if (!encontro)
+                        {
+                            SbtnCancelar.Visible = true;
+                            lblAvisoNoCliente.Visible = true;
+                            btnAgregarCliente.Visible = true;
+                            //---------------------------------------
+                            SbtnCancelar.Visible = true;
+                            txtNombre.Enabled = true;
+                            txtApellido.Enabled = true;
+                            txtTelefono.Enabled = true;
+                            txtCorreo.Enabled = true;
+                            txtNombre.Text = "";
+                            txtApellido.Text = "";
+                            txtCorreo.Text = "";
+                            txtTelefono.Text = "";
+                            //pictureBuscar.Visible = true;
+                            //---------------------------------------
+                            GenerarId();
+                            GenerarIdEquipo();
+
+                        }
+                        else
+                        {
+                            lblAvisoNoCliente.Visible = false;
+                            btnAddClientH.Visible = true;
+                            btnAgregarCliente.Visible = false;
+                            SbtnCancelar.Visible = false;
+                            txtNombre.Enabled = false;
+                            txtApellido.Enabled = false;
+                        }
                     }
                 }
-            }
-        }
-        private void tableOrdenes_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            Connection connection = new Connection();
-            try
-            {
-                DataGridViewRow fila = tableOrdenes.Rows[e.RowIndex];
-                if (Convert.ToString(fila.Cells["Id"].Value).Equals("") || Convert.ToString(fila.Cells["Descripcion"].Value).Equals("")
-                    || Convert.ToString(fila.Cells["Estado"].Value).Equals("") || Convert.ToString(fila.Cells["FechaPedida"].Value).Equals("")
-                    || Convert.ToString(fila.Cells["FechaLlegaAprox"].Value).Equals(""))
-                {
-                    Console.WriteLine("Datos vacios");
-                }
-                else
-                {
-                    int id = Convert.ToInt32(fila.Cells["Id"].Value);
-                    DatosPieza datosPieza = new DatosPieza(id);
-                    datosPieza.ShowDialog();
-                    connection.AbrirConexion();
-                    tableOrdenes.DataSource = conexion.buscarReparacion("SELECT * FROM Pieza order by FechaEncargada asc");
-                    connection.CerrarConexion();
-                }
-            }
-            catch (Exception)
-            {
+                catch(Exception){}
             }
         }
         private void ordenesTab_Enter(object sender, EventArgs e)
@@ -1405,6 +1386,7 @@ namespace WindowsFormsApp1.Views
                 connection.AbrirConexion();
                 CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id  order by Reparacion.Fecha asc");
                 connection.CerrarConexion();
+                colores();
             }
         }
 
@@ -1429,30 +1411,49 @@ namespace WindowsFormsApp1.Views
 
         }
 
-        private void TableOrdenes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void TableOrdenes_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             Connection connection = new Connection();
-            try
+            //try
+            //{
+            DataGridViewRow fila = tableOrdenes.Rows[e.RowIndex];
+            if (Convert.ToString(fila.Cells["Id"].Value).Equals("") || Convert.ToString(fila.Cells["Descripcion"].Value).Equals("")
+                || Convert.ToString(fila.Cells["Estado"].Value).Equals("") || Convert.ToString(fila.Cells["FechaEncargada"].Value).Equals("")
+                || Convert.ToString(fila.Cells["FechaLlegaAprox"].Value).Equals(""))
             {
-                DataGridViewRow fila = tableOrdenes.Rows[e.RowIndex];
-                if (Convert.ToString(fila.Cells["Id"].Value).Equals("") || Convert.ToString(fila.Cells["Descripcion"].Value).Equals("")
-                    || Convert.ToString(fila.Cells["Estado"].Value).Equals("") || Convert.ToString(fila.Cells["FechaPedida"].Value).Equals("")
-                    || Convert.ToString(fila.Cells["FechaLlegaAprox"].Value).Equals(""))
-                {
-                    Console.WriteLine("Datos vacios");
-                }
-                else
-                {
-                    int id = Convert.ToInt32(fila.Cells["Id"].Value);
-                    DatosPieza datosPieza = new DatosPieza(id);
-                    datosPieza.ShowDialog();
-                    connection.AbrirConexion();
-                    tableOrdenes.DataSource = conexion.buscarReparacion("SELECT * FROM Pieza order by FechaEncargada asc");
-                    connection.CerrarConexion();
-                }
+                Console.WriteLine("Datos vacios");
             }
-            catch (Exception)
+            else
             {
+                int id = Convert.ToInt32(fila.Cells["Id"].Value);
+                DatosPieza datosPieza = new DatosPieza(id);
+                datosPieza.ShowDialog();
+                connection.AbrirConexion();
+                tableOrdenes.DataSource = conexion.buscarReparacion("SELECT * FROM Pieza order by FechaEncargada asc");
+                connection.CerrarConexion();
+            }
+        }
+
+        private void TableOrdenes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Connection connection = new Connection();
+            //try
+            //{
+            DataGridViewRow fila = tableOrdenes.Rows[e.RowIndex];
+            if (Convert.ToString(fila.Cells["Id"].Value).Equals("") || Convert.ToString(fila.Cells["Descripcion"].Value).Equals("")
+                || Convert.ToString(fila.Cells["Estado"].Value).Equals("") || Convert.ToString(fila.Cells["FechaEncargada"].Value).Equals("")
+                || Convert.ToString(fila.Cells["FechaLlegaAprox"].Value).Equals(""))
+            {
+                Console.WriteLine("Datos vacios");
+            }
+            else
+            {
+                int id = Convert.ToInt32(fila.Cells["Id"].Value);
+                DatosPieza datosPieza = new DatosPieza(id);
+                datosPieza.ShowDialog();
+                connection.AbrirConexion();
+                tableOrdenes.DataSource = conexion.buscarReparacion("SELECT * FROM Pieza order by FechaEncargada asc");
+                connection.CerrarConexion();
             }
         }
     }
