@@ -9,7 +9,7 @@ namespace WindowsFormsApp1.DBConnectio
     {
 
         private string cadena = "Data Source=.\\SQLEXPRESS;Initial Catalog=TechPOSdb; Integrated Security=True";
-        //private string cadena = "Data Source=DESKTOP-4U4TDTF;Initial Catalog=TechPOSdb; Integrated Security=True";
+       // private string cadena = "Data Source=DESKTOP-4U4TDTF;Initial Catalog=TechPOSdb; Integrated Security=True";
         
         //private string cadena = "Data Source=.\\SQLEXPRESS;Initial Catalog=TechPOSdb; Integrated Security=True";
         //private string cadena = "Data Source=DESKTOP-4U4TDTF;Initial Catalog=TechPOSdb; Integrated Security=True";
@@ -421,6 +421,30 @@ namespace WindowsFormsApp1.DBConnectio
             sqlCommand.CommandType = CommandType.Text;
             filas = SqlCommand.ExecuteNonQuery();
             return filas;
+        }
+        public int AgregarCancelacion(string cadena, decimal Id, string datos, string fecha,int IdU,int IdV)
+        {
+            int modificacion = 0;
+            try
+            {
+                SqlCommand = new SqlCommand(cadena, conexion);
+                SqlCommand.Parameters.AddWithValue("@Id", Id);
+                SqlCommand.Parameters.AddWithValue("@Motivo", datos);
+                SqlCommand.Parameters.AddWithValue("@Fecha", fecha);
+                SqlCommand.Parameters.AddWithValue("@IdUsuario", IdU);
+                SqlCommand.Parameters.AddWithValue("@IdVenta", IdV);
+                modificacion = Convert.ToInt32(SqlCommand.ExecuteNonQuery());
+                if (modificacion > 0)
+                {
+                    //MessageBox.Show("Cancelacion Exitosa", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                    modificacion = 1;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error de conexion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return modificacion;
         }
     }
 }

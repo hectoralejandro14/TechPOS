@@ -280,9 +280,10 @@ namespace WindowsFormsApp1
                 SplashScreen splash = new SplashScreen();
                 Application.Run(splash);
             }
-            catch
+            catch (ThreadAbortException e1)
             {
-
+                //MessageBox.Show("No se pudo iniciar la aplicación. Favor de reiniciar la aplicación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show(e1.Message);
             }
         }
 

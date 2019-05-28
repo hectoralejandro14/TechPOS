@@ -379,6 +379,7 @@
             this.tableVender.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tableVender.Size = new System.Drawing.Size(1121, 382);
             this.tableVender.TabIndex = 8;
+            this.tableVender.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableVender_CellClick);
             // 
             // cod
             // 
@@ -439,7 +440,7 @@
             this.CbtnCancelarVenta.Name = "CbtnCancelarVenta";
             this.CbtnCancelarVenta.Size = new System.Drawing.Size(159, 37);
             this.CbtnCancelarVenta.TabIndex = 2;
-            this.CbtnCancelarVenta.Text = "Cancelar";
+            this.CbtnCancelarVenta.Text = "Cancelar venta";
             this.CbtnCancelarVenta.UseVisualStyleBackColor = false;
             this.CbtnCancelarVenta.Click += new System.EventHandler(this.CbtnCancelarVenta_Click);
             // 
