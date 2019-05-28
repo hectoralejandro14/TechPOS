@@ -139,7 +139,7 @@ namespace WindowsFormsApp1.Views
             {
                 tableVender.Rows.Clear();
             }
-            
+
         }
         private void buscarTbxVentas_TextChanged(object sender, EventArgs e)
         {
@@ -1241,7 +1241,7 @@ namespace WindowsFormsApp1.Views
                     row["preciou"] = Convert.ToString(dr["Costo"]);
                     row["cant"] = Convert.ToString("2");
                     row["preciot"] = Convert.ToString(Convert.ToDouble(Convert.ToString("2")) * price);
-                    MessageBox.Show(Convert.ToString(dr["Costo"]));
+                    //MessageBox.Show(Convert.ToString(dr["Costo"]));
                     dtVenta.Rows.Add(row);
                     subTotalTbxVentas.Text = Convert.ToString(subtotal);
                     ivaTbxVentas.Text = Convert.ToString(iva);
@@ -1366,7 +1366,6 @@ namespace WindowsFormsApp1.Views
             dGVProducts.DataSource = connection.TablaProductos("SELECT ClaveProducto AS Clave, ClaveFabricante AS Fabricante, Marca, Categoria.Nombre AS Categoria, Descripcion, Costo, Moneda, Cantidad from Producto INNER JOIN Categoria ON Producto.IdCategoria = Categoria.Id");
             connection.CerrarConexion();
         }
-
         private void TxtBSearchProduct_TextChanged(object sender, EventArgs e)
         {
             Connection connection = new Connection();
@@ -1389,24 +1388,32 @@ namespace WindowsFormsApp1.Views
                 colores();
             }
         }
-
         private void tableVender_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            //CNombreUsuarioLblVenta
             if (e.RowIndex > 0)
             {
                 //Obtener datos de renglon
                 DataGridViewRow renglon = this.tableVender.Rows[e.RowIndex];
+                string responsbla_de_cancelacion = CNombreUsuarioLblVenta.Text;
                 string codigo = renglon.Cells["cod"].Value.ToString();
                 string descripcion = renglon.Cells["des"].Value.ToString();
                 string cantidad = renglon.Cells["cant"].Value.ToString();
                 string total = renglon.Cells["preciot"].Value.ToString();
                 //Inicar variables de insancia
                 CancelarProductoVenta cancelar = new CancelarProductoVenta();
-                cancelar.setDatos(codigo, descripcion, cantidad, total, e.RowIndex);
+                cancelar.setDatos(codigo, descripcion, cantidad, total, e.RowIndex, responsbla_de_cancelacion);
                 cancelar.ShowDialog();
+                tableVender.Rows.RemoveAt(e.RowIndex);
+                //Quitar el valor al SUB_TOTAL
+                decimal valor = Convert.ToDecimal(tableVender.Rows[e.RowIndex].Cells[4].Value.ToString());
+                decimal aux_subTotal = (Convert.ToDecimal(subTotalTbxVentas.Text)) - valor;
+                subTotalTbxVentas.Text = "" + aux_subTotal;
+                tableVender.Refresh();
             }
         }
-        public void RemoveElement(int i)
+
+        private void subTotalTbxVentas_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -1455,6 +1462,11 @@ namespace WindowsFormsApp1.Views
                 tableOrdenes.DataSource = conexion.buscarReparacion("SELECT * FROM Pieza order by FechaEncargada asc");
                 connection.CerrarConexion();
             }
+            double subtotal = Convert.ToDouble(subTotalTbxVentas.Text);
+            double iva = Convert.ToDouble(((subtotal * 16) / 100));
+            subTotalTbxVentas.Text = Convert.ToString(subtotal);
+            ivaTbxVentas.Text = Convert.ToString(iva);
+            totalTbxVenta.Text = Convert.ToString(subtotal + iva);
         }
     }
 }

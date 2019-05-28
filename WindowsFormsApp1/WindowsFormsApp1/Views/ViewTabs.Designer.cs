@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewTabs));
             this.tabPuntoVenta = new System.Windows.Forms.TabControl();
             this.tabVenta = new System.Windows.Forms.TabPage();
@@ -171,6 +172,8 @@
             this.clienteTableAdapter = new WindowsFormsApp1.TechPOSdbDataSetTableAdapters.ClienteTableAdapter();
             this.Tiempo = new System.Windows.Forms.Timer(this.components);
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.PanelLogoPuntoDeVenta = new System.Windows.Forms.Panel();
+            this.SImgPanelPubtoDeVenta = new System.Windows.Forms.PictureBox();
             this.tableOrdenes = new System.Windows.Forms.DataGridView();
             this.tabPuntoVenta.SuspendLayout();
             this.tabVenta.SuspendLayout();
@@ -218,6 +221,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.reparacionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.PanelLogoPuntoDeVenta.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SImgPanelPubtoDeVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableOrdenes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -243,6 +248,8 @@
             // tabVenta
             // 
             this.tabVenta.BackColor = System.Drawing.Color.LightGray;
+            this.tabVenta.Controls.Add(this.PanelLogoPuntoDeVenta);
+            this.tabVenta.Controls.Add(this.HoraMinutoSegundo);
             this.tabVenta.Controls.Add(this.pVenta);
             this.tabVenta.Controls.Add(this.ClblCodigoDeBarras);
             this.tabVenta.Controls.Add(this.CNombreUsuarioLblVenta);
@@ -288,10 +295,11 @@
             // HoraMinutoSegundo
             // 
             this.HoraMinutoSegundo.AutoSize = true;
+            this.HoraMinutoSegundo.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HoraMinutoSegundo.ForeColor = System.Drawing.Color.Orange;
-            this.HoraMinutoSegundo.Location = new System.Drawing.Point(39, 200);
+            this.HoraMinutoSegundo.Location = new System.Drawing.Point(1075, 40);
             this.HoraMinutoSegundo.Name = "HoraMinutoSegundo";
-            this.HoraMinutoSegundo.Size = new System.Drawing.Size(85, 34);
+            this.HoraMinutoSegundo.Size = new System.Drawing.Size(154, 41);
             this.HoraMinutoSegundo.TabIndex = 21;
             this.HoraMinutoSegundo.Text = "00:00:00";
             // 
@@ -342,6 +350,7 @@
             this.subTotalTbxVentas.Size = new System.Drawing.Size(210, 34);
             this.subTotalTbxVentas.TabIndex = 15;
             this.subTotalTbxVentas.Text = "0";
+            this.subTotalTbxVentas.TextChanged += new System.EventHandler(this.subTotalTbxVentas_TextChanged);
             // 
             // totalLblVentas
             // 
@@ -1544,6 +1553,14 @@
             this.dgClientes.AllowUserToDeleteRows = false;
             this.dgClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgClientes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1773,6 +1790,26 @@
             this.tableOrdenes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TableOrdenes_CellClick);
             this.tableOrdenes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TableOrdenes_CellContentClick_1);
             // 
+            // PanelLogoPuntoDeVenta
+            // 
+            this.PanelLogoPuntoDeVenta.BackColor = System.Drawing.Color.DimGray;
+            this.PanelLogoPuntoDeVenta.Controls.Add(this.SImgPanelPubtoDeVenta);
+            this.PanelLogoPuntoDeVenta.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PanelLogoPuntoDeVenta.Location = new System.Drawing.Point(3, 3);
+            this.PanelLogoPuntoDeVenta.Name = "PanelLogoPuntoDeVenta";
+            this.PanelLogoPuntoDeVenta.Size = new System.Drawing.Size(148, 663);
+            this.PanelLogoPuntoDeVenta.TabIndex = 22;
+            // 
+            // SImgPanelPubtoDeVenta
+            // 
+            this.SImgPanelPubtoDeVenta.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.SImgPanelPubtoDeVenta.Location = new System.Drawing.Point(3, 3);
+            this.SImgPanelPubtoDeVenta.Name = "SImgPanelPubtoDeVenta";
+            this.SImgPanelPubtoDeVenta.Size = new System.Drawing.Size(136, 219);
+            this.SImgPanelPubtoDeVenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.SImgPanelPubtoDeVenta.TabIndex = 0;
+            this.SImgPanelPubtoDeVenta.TabStop = false;
+            // 
             // ViewTabs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1850,6 +1887,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.reparacionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.PanelLogoPuntoDeVenta.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SImgPanelPubtoDeVenta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableOrdenes)).EndInit();
             this.ResumeLayout(false);
 
@@ -1979,6 +2018,9 @@
         private System.Windows.Forms.Label lblClienteBuscar;
         private System.Windows.Forms.Label lblIdCliente;
         private System.Windows.Forms.Label lblTextoIdCliente;
+        private System.Windows.Forms.PictureBox recibirLogoCh;
+        private System.Windows.Forms.PictureBox reparacionLogoCh;
+        private System.Windows.Forms.PictureBox ordenesLogoCh;
         private System.Windows.Forms.TableLayoutPanel layoutTotales;
         private System.Windows.Forms.GroupBox EquipoGbx;
         private System.Windows.Forms.TableLayoutPanel LayEquipo;
@@ -2020,6 +2062,8 @@
         private System.Windows.Forms.Panel pVenta;
         private System.Windows.Forms.PictureBox pBoxVenta;
         private System.Windows.Forms.DataGridView tableOrdenes;
+        private System.Windows.Forms.Panel PanelLogoPuntoDeVenta;
+        private System.Windows.Forms.PictureBox SImgPanelPubtoDeVenta;
         //  private System.Windows.Forms.TextBox textBox1;
         //private System.Windows.Forms.Label UnaLabel;
         //  private System.Windows.Forms.Label label5;

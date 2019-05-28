@@ -9,7 +9,7 @@ namespace WindowsFormsApp1.DBConnectio
     {
 
         private string cadena = "Data Source=.\\SQLEXPRESS;Initial Catalog=TechPOSdb; Integrated Security=True";
-       // private string cadena = "Data Source=DESKTOP-4U4TDTF;Initial Catalog=TechPOSdb; Integrated Security=True";
+//        private string cadena = "Data Source=DESKTOP-4U4TDTF;Initial Catalog=TechPOSdb; Integrated Security=True";
         
         //private string cadena = "Data Source=.\\SQLEXPRESS;Initial Catalog=TechPOSdb; Integrated Security=True";
         //private string cadena = "Data Source=DESKTOP-4U4TDTF;Initial Catalog=TechPOSdb; Integrated Security=True";
@@ -59,12 +59,12 @@ namespace WindowsFormsApp1.DBConnectio
             {
                 SqlCommand cmd = new SqlCommand(SQL, conexion);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Los datos sobre "+mensaje+" fueron registrados exitosamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Los datos sobre " + mensaje + " fueron registrados exitosamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return true;
             }
             catch (System.Data.SqlClient.SqlException e2)
             {
-               return false;
+                return false;
             }
         }
         public void AgregarRoles(string cadena, decimal Id, string NombreROL)
@@ -163,7 +163,6 @@ namespace WindowsFormsApp1.DBConnectio
                         aux = true;
                     }
                 }
-
             }
             catch /*(IndexOutOfRangeException e3)*/
             {
@@ -308,7 +307,8 @@ namespace WindowsFormsApp1.DBConnectio
             }
             return id;
         }
-        public string verificarExistenciaUser (string name, string lastname){
+        public string verificarExistenciaUser(string name, string lastname)
+        {
             bool aux = false;
             try
             {
@@ -316,20 +316,20 @@ namespace WindowsFormsApp1.DBConnectio
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
-                for(int i = 0; i < dt.Rows.Count;i++)
+                for (int i = 0; i < dt.Rows.Count; i++)
                 {
                     if ((dt.Rows[i][1].ToString().Equals(name)) && (dt.Rows[i][2].ToString().Equals(lastname)))
                     {
                         return dt.Rows[i][0].ToString();
                     }
-                } 
-                
+                }
+
             }
             catch /*(IndexOutOfRangeException e3)*/
             {
                 MessageBox.Show("ERROR SQL", "Error de Conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            return "";         
+            return "";
         }
         public int actualizarDatos(string sql)
         {
@@ -365,7 +365,7 @@ namespace WindowsFormsApp1.DBConnectio
         }
         public DataRow BProducto(DataTable dtVenta, string text)
         {
-            SqlCommand cmd = new SqlCommand("select * from Producto where ClaveProducto='" + text + "'",conexion);
+            SqlCommand cmd = new SqlCommand("select * from Producto where ClaveProducto='" + text + "'", conexion);
             SqlDataReader dr = cmd.ExecuteReader();
             DataRow row = dtVenta.NewRow();
             if (dr.Read())
@@ -376,7 +376,7 @@ namespace WindowsFormsApp1.DBConnectio
                 row["cant"] = Convert.ToString("Cantidad");
                 row["preciot"] = Convert.ToString("345635");
                 MessageBox.Show(Convert.ToString(dr["Costo"]));
-                
+
                 return row;
             }
             return null;
@@ -426,26 +426,40 @@ namespace WindowsFormsApp1.DBConnectio
         public int AgregarCancelacion(string cadena, decimal Id, string datos, string fecha,int IdU,int IdV)
         {
             int modificacion = 0;
-            try
+            //try
+            //{
+            SqlCommand = new SqlCommand(cadena, conexion);
+            SqlCommand.Parameters.AddWithValue("@Id", Id);
+            SqlCommand.Parameters.AddWithValue("@Motivo", datos);
+            SqlCommand.Parameters.AddWithValue("@Fecha", fecha);
+            SqlCommand.Parameters.AddWithValue("@IdUsuario", IdU);
+            SqlCommand.Parameters.AddWithValue("@IdVenta", IdV);
+            modificacion = Convert.ToInt32(SqlCommand.ExecuteNonQuery());
+            if (modificacion > 0)
             {
-                SqlCommand = new SqlCommand(cadena, conexion);
-                SqlCommand.Parameters.AddWithValue("@Id", Id);
-                SqlCommand.Parameters.AddWithValue("@Motivo", datos);
-                SqlCommand.Parameters.AddWithValue("@Fecha", fecha);
-                SqlCommand.Parameters.AddWithValue("@IdUsuario", IdU);
-                SqlCommand.Parameters.AddWithValue("@IdVenta", IdV);
-                modificacion = Convert.ToInt32(SqlCommand.ExecuteNonQuery());
-                if (modificacion > 0)
-                {
-                    //MessageBox.Show("Cancelacion Exitosa", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Question);
-                    modificacion = 1;
-                }
+                //MessageBox.Show("Cancelacion Exitosa", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                modificacion = 1;
             }
-            catch
-            {
-                MessageBox.Show("Error de conexion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+
+            //catch
+            //{
+            //    MessageBox.Show("Error de conexion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
             return modificacion;
+        }
+        public string getIdUsuario(string query)
+        {
+            string id = "";
+
+            SqlCommand sqc = new SqlCommand(query, conexion);
+            SqlDataReader reader = sqc.ExecuteReader();
+            reader.Read();
+            id = reader.GetValue(0).ToString();
+            MessageBox.Show("Id Obtenida = " + id);
+
+
+
+            return id;
         }
 
         public int idProducto(string sql)
