@@ -1418,28 +1418,6 @@ namespace WindowsFormsApp1.Views
 
         }
 
-        private void TableOrdenes_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-            Connection connection = new Connection();
-            //try
-            //{
-            DataGridViewRow fila = tableOrdenes.Rows[e.RowIndex];
-            if (Convert.ToString(fila.Cells["Id"].Value).Equals("") || Convert.ToString(fila.Cells["Descripcion"].Value).Equals("")
-                || Convert.ToString(fila.Cells["Estado"].Value).Equals("") || Convert.ToString(fila.Cells["FechaEncargada"].Value).Equals("")
-                || Convert.ToString(fila.Cells["FechaLlegaAprox"].Value).Equals(""))
-            {
-                Console.WriteLine("Datos vacios");
-            }
-            else
-            {
-                int id = Convert.ToInt32(fila.Cells["Id"].Value);
-                DatosPieza datosPieza = new DatosPieza(id);
-                datosPieza.ShowDialog();
-                connection.AbrirConexion();
-                tableOrdenes.DataSource = conexion.buscarReparacion("SELECT * FROM Pieza order by FechaEncargada asc");
-                connection.CerrarConexion();
-            }
-        }
 
         private void TableOrdenes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
