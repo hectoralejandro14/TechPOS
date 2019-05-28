@@ -238,6 +238,7 @@ namespace WindowsFormsApp1
                 {
                     /*Principal p = new Principal();
                     p.Show();*/
+                    //Hola amigos
                     _vistaTabs.Bienvenido(nu);
                     _vistaTabs.MostrarConfiguracionUsuarios("Administrador");
                     _vistaTabs.Show();
