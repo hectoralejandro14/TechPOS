@@ -37,7 +37,7 @@ namespace WindowsFormsApp1.Views
                 decimal id = UltimoIdIngresado();
                 //-------------------------------------------------------------------
                 //Buscar IdUsuario
-                string idUsuario = connection.getIdUsuario("SELECT Id FROM Usuario WHERE NombreUsuario = '"+ responsable + "'");
+                int idUsuario = Convert.ToInt32(connection.getIdUsuario("SELECT Id FROM Usuario WHERE NombreUsuario = '"+ responsable + "'"));
                 connection.CerrarConexion();
                 //-------------------------------------------------------------------
                 //Insertar datos en tabla cancelacion
