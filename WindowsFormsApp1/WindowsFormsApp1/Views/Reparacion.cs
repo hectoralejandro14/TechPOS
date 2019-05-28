@@ -105,7 +105,6 @@ namespace WindowsFormsApp1
         {
             conn.AbrirConexion();
             string estadoPieza = conn.buscarEstado("SELECT P.Estado FROM Pieza P INNER JOIN Reparacion R ON R.IdPieza=P.Id WHERE R.Id ='" + idTxtBoxRepa.Text + "'");
-            MessageBox.Show(estadoPieza);
             conn.CerrarConexion();
             if (estadoPieza.Equals("Ordenada"))
             {

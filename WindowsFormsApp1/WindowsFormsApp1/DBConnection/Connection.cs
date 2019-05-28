@@ -404,5 +404,23 @@ namespace WindowsFormsApp1.DBConnectio
             table = dataSet.Tables[0];
             return table;
         }
+
+        public string BuscarCliente(string sql)
+        {
+            string nomCliente;
+            SqlCommand sqlCommand = new SqlCommand(sql, conexion);
+            sqlCommand.CommandType = CommandType.Text;
+            nomCliente = sqlCommand.ExecuteScalar().ToString();
+            return nomCliente;
+        }
+
+        public int ingresarDatos(string sql)
+        {
+            int filas = 0;
+            SqlCommand sqlCommand = new SqlCommand(sql, conexion);
+            sqlCommand.CommandType = CommandType.Text;
+            filas = SqlCommand.ExecuteNonQuery();
+            return filas;
+        }
     }
 }

@@ -406,25 +406,30 @@ namespace WindowsFormsApp1.Views
         }
         private void btnPedirPieza_Click(object sender, System.EventArgs e)
         {
-            if ((Convert.ToDecimal(txtAnticipo.Text)) == ((Convert.ToDecimal(txtTotal.Text)) / 2) || (Convert.ToDecimal(txtAnticipo.Text)) > ((Convert.ToDecimal(txtTotal.Text)) / 2))
+            if (!txtAnticipo.Text.Equals("") || !txtTotal.Text.Equals(""))
             {
-                if (lblIdEquipo.Text != "0000" || txtModelo.Text != "" || txtMarca.Text != "")
+                if ((Convert.ToDecimal(txtAnticipo.Text)) == ((Convert.ToDecimal(txtTotal.Text)) / 2) || (Convert.ToDecimal(txtAnticipo.Text)) > ((Convert.ToDecimal(txtTotal.Text)) / 2))
                 {
-                    Ecargar_Pieza encargar = new Ecargar_Pieza(lblIdEquipo.Text, txtModelo.Text, txtMarca.Text);
+                    if (lblIdEquipo.Text != "0000" || txtModelo.Text != "" || txtMarca.Text != "")
+                    {
+                        Ecargar_Pieza encargar = new Ecargar_Pieza(lblIdEquipo.Text, txtModelo.Text, txtMarca.Text);
 
-                    encargar.ShowDialog();
+                        encargar.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se requiere de una marca y modelo");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Se requiere de una marca y modelo");
+                    MessageBox.Show("No se puede realizar pedido de pieza. Debido a que se esta recibiendo menos de la mitad del total.", "Valor no permitido.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             else
             {
-                MessageBox.Show("No se puede realizar pedido de pieza. Debido a que se esta recibiendo menos de la mitad del total.", "Valor no permitido.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Favor de llenar los datos para poder realizar el pedido","Informacion",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
-
-
         }
         private void pictureBuscar_Click(object sender, System.EventArgs e)
         {
@@ -957,7 +962,7 @@ namespace WindowsFormsApp1.Views
                 DatosCliente datosCliente = new DatosCliente(id);
                 datosCliente.ShowDialog();
                 connection.AbrirConexion();
-                connection.buscar("SELECT * FROM Cliente");
+                dgClientes.DataSource = connection.buscar("SELECT * FROM Cliente");
                 connection.CerrarConexion();
                 
 
@@ -1013,12 +1018,18 @@ namespace WindowsFormsApp1.Views
         }
         private void JtxtBuscar2_KeyPress(object sender, KeyPressEventArgs e)
         {
+            Connection connection = new Connection();
             if (e.KeyChar == (char)Keys.Enter)
             {
-                Connection connection = new Connection();
-                connection.AbrirConexion();
-                CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id where Reparacion.Id = " + JtxtBuscar2.Text);
-                connection.CerrarConexion();
+                if (!JtxtBuscar2.Text.Equals(""))
+                {
+                    connection.AbrirConexion();
+                    string nomCliente = connection.BuscarCliente("SELECT Nombre FROM Cliente WHERE Nombre ='" + JtxtBuscar2.Text + "'");
+                    connection.CerrarConexion();
+                    connection.AbrirConexion();
+                    CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id where Cliente.Nombre LIKE '%" + nomCliente + "%'");
+                    connection.CerrarConexion();
+                }
             }
         }
         private void pBoxBuscarRep_Click(object sender, EventArgs e)
@@ -1042,7 +1053,7 @@ namespace WindowsFormsApp1.Views
                     Connection db = new DBConnectio.Connection();
                     db.AbrirConexion();
 
-                    SqlDataReader dr = db.consulta("select * from Cliente where Nombre = '" + txtBuscarCliente.Text + "'");
+                    SqlDataReader dr = db.consulta("select * from Cliente where Nombre Like '%" + txtBuscarCliente.Text + "%'");
                     //MessageBox.Show("select * from Cliente where Id=" + txtBuscarCliente.Text);
                     if (dr.Read())
                     {
@@ -1166,8 +1177,16 @@ namespace WindowsFormsApp1.Views
         }
         private void SbtnNuevoServicioRE_Click(object sender, EventArgs e)
         {
+            DataTable dt = new DataTable();
             NuevoServicio nuevoServicio = new NuevoServicio();
-            nuevoServicio.Show();
+            nuevoServicio.ShowDialog();
+            conexion.AbrirConexion();
+            SqlDataAdapter da = conexion.consultaMasDatos("select Id, Nombre from Servicio");
+            da.Fill(dt);
+            conexion.CerrarConexion();
+            ccbTipoServicio1.DisplayMember = "Nombre";
+            ccbTipoServicio1.ValueMember = "Id";
+            ccbTipoServicio1.DataSource = dt;
         }
         private void txtTotal_TextChanged(object sender, EventArgs e)
         {
@@ -1312,6 +1331,7 @@ namespace WindowsFormsApp1.Views
                     connection.AbrirConexion();
                     dGVProducts.DataSource = connection.TablaProductos("SELECT ClaveProducto AS Clave, ClaveFabricante AS Fabricante, Marca, Categoria.Nombre AS Categoria, Descripcion, Costo, Moneda, Cantidad from Producto INNER JOIN Categoria ON Producto.IdCategoria = Categoria.Id");
                     connection.CerrarConexion();
+                    txtBSearchProduct.Text = "";
                 }
             }
             catch (Exception)
@@ -1328,7 +1348,7 @@ namespace WindowsFormsApp1.Views
                 connection.AbrirConexion();
                 if (txtBSearchProduct.Text != "")
                 {
-                    dGVProducts.DataSource = connection.TablaProductos("SELECT ClaveProducto AS Clave, ClaveFabricante AS Fabricante, Marca, Categoria.Nombre AS Categoria, Descripcion, Costo, Moneda, Cantidad from Producto INNER JOIN Categoria ON Producto.IdCategoria = Categoria.Id WHERE ClaveProducto LIKE '%" + txtBSearchProduct.Text + "%'");
+                    dGVProducts.DataSource = connection.TablaProductos("SELECT ClaveProducto AS Clave, ClaveFabricante AS Fabricante, Marca, Categoria.Nombre AS Categoria, Descripcion, Costo, Moneda, Cantidad from Producto INNER JOIN Categoria ON Producto.IdCategoria = Categoria.Id WHERE Descripcion LIKE '%" + txtBSearchProduct.Text + "%'");
                 }
                 connection.CerrarConexion();
             }
@@ -1367,6 +1387,44 @@ namespace WindowsFormsApp1.Views
                 connection.AbrirConexion();
                 dGVProducts.DataSource = connection.TablaProductos("SELECT ClaveProducto AS Clave, ClaveFabricante AS Fabricante, Marca, Categoria.Nombre AS Categoria, Descripcion, Costo, Moneda, Cantidad from Producto INNER JOIN Categoria ON Producto.IdCategoria = Categoria.Id");
                 connection.CerrarConexion();
+            }
+        }
+
+        private void JtxtBuscar2_TextChanged(object sender, EventArgs e)
+        {
+            Connection connection = new Connection();
+            if (JtxtBuscar2.Text.Equals(""))
+            {
+                connection.AbrirConexion();
+                CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id  order by Reparacion.Fecha asc");
+                connection.CerrarConexion();
+            }
+        }
+
+        private void TableOrdenes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Connection connection = new Connection();
+            try
+            {
+                DataGridViewRow fila = tableOrdenes.Rows[e.RowIndex];
+                if (Convert.ToString(fila.Cells["Id"].Value).Equals("") || Convert.ToString(fila.Cells["Descripcion"].Value).Equals("")
+                    || Convert.ToString(fila.Cells["Estado"].Value).Equals("") || Convert.ToString(fila.Cells["FechaPedida"].Value).Equals("")
+                    || Convert.ToString(fila.Cells["FechaLlegaAprox"].Value).Equals(""))
+                {
+                    Console.WriteLine("Datos vacios");
+                }
+                else
+                {
+                    int id = Convert.ToInt32(fila.Cells["Id"].Value);
+                    DatosPieza datosPieza = new DatosPieza(id);
+                    datosPieza.ShowDialog();
+                    connection.AbrirConexion();
+                    tableOrdenes.DataSource = conexion.buscarReparacion("SELECT * FROM Pieza order by FechaEncargada asc");
+                    connection.CerrarConexion();
+                }
+            }
+            catch (Exception)
+            {
             }
         }
     }

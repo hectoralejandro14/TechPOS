@@ -1,9 +1,7 @@
 Punto de Venta no funciona
-ComboBox de la vista Recibir Equipo no se actualiza
 Validar el boton del pedido en vista Recibir Equipo
 Alerta para boton de agregar en vista Recibir Equipo
 Modificar vista Recibir Equipo
-Convertir datos del clliente a mayusculas
-Buscar reparacion por nombre del cliente
+Convertir datos del cliente a mayusculas
 Quitar aviso en Punto de venta
 Dejar que el usuario elija la cantidad de producto en el punto de venta
