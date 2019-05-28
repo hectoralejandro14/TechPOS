@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Net.Mail;
+using System.Text;
 using System.Windows.Forms;
 using WindowsFormsApp1.DBConnectio;
 
@@ -14,6 +15,8 @@ namespace WindowsFormsApp1.Views
         private DataTable dtVenta;
 
         private DBConnectio.Connection conexion = new DBConnectio.Connection();
+        decimal subTotal = 0;
+        int posicion_cobrar = 0;
         //GENERALES  
         public ViewTabs()
         {
@@ -122,11 +125,23 @@ namespace WindowsFormsApp1.Views
         //TAB "VENTA"
         private void CbtnCobrarVenta_Click(object sender, EventArgs e)
         {
-
+            Cobrar c = new Cobrar();
+            decimal venta_total = 0;
+            for (int i = 0; i < tableVender.Rows.Count; i++)
+            {
+                string valor = tableVender.Rows[i].Cells[3].Value.ToString();
+                venta_total = venta_total + Convert.ToDecimal(valor);
+            }
+            c.setTotal(venta_total);
+            c.ShowDialog();
         }
         private void CbtnCancelarVenta_Click(object sender, EventArgs e)
         {
-
+            if (tableVender.Rows.Count > 0)
+            {
+                tableVender.Rows.Clear();
+            }
+            
         }
         private void buscarTbxVentas_TextChanged(object sender, EventArgs e)
         {
@@ -709,7 +724,7 @@ namespace WindowsFormsApp1.Views
                                     + ",1,'')";
                             }
                             Console.WriteLine(sql);
-                            bool data = db.AddElements(sql,"");
+                            bool data = db.AddElements(sql, "");
                             db.CerrarConexion();
                             if (!data)
                             {
@@ -935,6 +950,7 @@ namespace WindowsFormsApp1.Views
         }
         private void dgClientes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            Connection connection = new Connection();
             DataGridViewRow fila = dgClientes.Rows[e.RowIndex];
             if (Convert.ToString(fila.Cells["Id"].Value).Equals("") || Convert.ToString(fila.Cells["Nombre"].Value).Equals("")
                 || Convert.ToString(fila.Cells["Apellido"].Value).Equals("") || Convert.ToString(fila.Cells["Telefono"].Value).Equals("")
@@ -946,7 +962,12 @@ namespace WindowsFormsApp1.Views
             {
                 int id = Convert.ToInt32(fila.Cells["Id"].Value);
                 DatosCliente datosCliente = new DatosCliente(id);
-                datosCliente.Show();
+                datosCliente.ShowDialog();
+                connection.AbrirConexion();
+                connection.buscar("SELECT * FROM Cliente");
+                connection.CerrarConexion();
+
+
             }
         }
         private void allValues()
@@ -1082,6 +1103,7 @@ namespace WindowsFormsApp1.Views
         }
         private void tableOrdenes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            Connection connection = new Connection();
             try
             {
                 DataGridViewRow fila = tableOrdenes.Rows[e.RowIndex];
@@ -1095,7 +1117,10 @@ namespace WindowsFormsApp1.Views
                 {
                     int id = Convert.ToInt32(fila.Cells["Id"].Value);
                     DatosPieza datosPieza = new DatosPieza(id);
-                    datosPieza.Show();
+                    datosPieza.ShowDialog();
+                    connection.AbrirConexion();
+                    tableOrdenes.DataSource = conexion.buscarReparacion("SELECT * FROM Pieza order by FechaEncargada asc");
+                    connection.CerrarConexion();
                 }
             }
             catch (Exception)
@@ -1350,6 +1375,27 @@ namespace WindowsFormsApp1.Views
                 dGVProducts.DataSource = connection.TablaProductos("SELECT ClaveProducto AS Clave, ClaveFabricante AS Fabricante, Marca, Categoria.Nombre AS Categoria, Descripcion, Costo, Moneda, Cantidad from Producto INNER JOIN Categoria ON Producto.IdCategoria = Categoria.Id");
                 connection.CerrarConexion();
             }
+        }
+
+        private void tableVender_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > 0)
+            {
+                //Obtener datos de renglon
+                DataGridViewRow renglon = this.tableVender.Rows[e.RowIndex];
+                string codigo = renglon.Cells["cod"].Value.ToString();
+                string descripcion = renglon.Cells["des"].Value.ToString();
+                string cantidad = renglon.Cells["cant"].Value.ToString();
+                string total = renglon.Cells["preciot"].Value.ToString();
+                //Inicar variables de insancia
+                CancelarProductoVenta cancelar = new CancelarProductoVenta();
+                cancelar.setDatos(codigo, descripcion, cantidad, total, e.RowIndex);
+                cancelar.ShowDialog();
+            }
+        }
+        public void RemoveElement(int i)
+        {
+
         }
     }
 }

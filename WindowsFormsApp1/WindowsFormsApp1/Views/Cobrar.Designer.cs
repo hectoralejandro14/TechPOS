@@ -28,137 +28,183 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cobrar));
             this.totalLbl = new System.Windows.Forms.Label();
             this.tipoPagoLlb = new System.Windows.Forms.Label();
             this.cambioLbl = new System.Windows.Forms.Label();
             this.efectivoLbl = new System.Windows.Forms.Label();
             this.totalFinalLbl = new System.Windows.Forms.Label();
-            this.cancelarBtnCobrar = new System.Windows.Forms.Button();
-            this.cobrarBtn = new System.Windows.Forms.Button();
             this.cobrarLbl = new System.Windows.Forms.Label();
             this.tipoPagoCbx = new System.Windows.Forms.ComboBox();
-            this.efectivoTbx = new System.Windows.Forms.TextBox();
+            this.btnCobrarVentaNI = new System.Windows.Forms.Button();
+            this.txtReciboVenta = new System.Windows.Forms.TextBox();
+            this.txtCambioVenta = new System.Windows.Forms.TextBox();
+            this.SpanelLogo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtTotalVenta = new System.Windows.Forms.TextBox();
+            this.SpanelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // totalLbl
             // 
             this.totalLbl.AutoSize = true;
             this.totalLbl.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalLbl.Location = new System.Drawing.Point(83, 76);
+            this.totalLbl.ForeColor = System.Drawing.Color.DarkOrange;
+            this.totalLbl.Location = new System.Drawing.Point(140, 171);
             this.totalLbl.Name = "totalLbl";
-            this.totalLbl.Size = new System.Drawing.Size(59, 34);
+            this.totalLbl.Size = new System.Drawing.Size(64, 34);
             this.totalLbl.TabIndex = 0;
-            this.totalLbl.Text = "Total:";
+            this.totalLbl.Text = "Total :";
             // 
             // tipoPagoLlb
             // 
             this.tipoPagoLlb.AutoSize = true;
             this.tipoPagoLlb.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.tipoPagoLlb.Location = new System.Drawing.Point(83, 115);
+            this.tipoPagoLlb.ForeColor = System.Drawing.Color.DarkOrange;
+            this.tipoPagoLlb.Location = new System.Drawing.Point(75, 43);
             this.tipoPagoLlb.Name = "tipoPagoLlb";
-            this.tipoPagoLlb.Size = new System.Drawing.Size(124, 34);
+            this.tipoPagoLlb.Size = new System.Drawing.Size(129, 34);
             this.tipoPagoLlb.TabIndex = 1;
-            this.tipoPagoLlb.Text = "Tipo de pago:";
+            this.tipoPagoLlb.Text = "Tipo de pago :";
             // 
             // cambioLbl
             // 
             this.cambioLbl.AutoSize = true;
             this.cambioLbl.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.cambioLbl.Location = new System.Drawing.Point(87, 200);
+            this.cambioLbl.ForeColor = System.Drawing.Color.DarkOrange;
+            this.cambioLbl.Location = new System.Drawing.Point(119, 129);
             this.cambioLbl.Name = "cambioLbl";
-            this.cambioLbl.Size = new System.Drawing.Size(80, 34);
+            this.cambioLbl.Size = new System.Drawing.Size(85, 34);
             this.cambioLbl.TabIndex = 2;
-            this.cambioLbl.Text = "Cambio:";
+            this.cambioLbl.Text = "Cambio :";
             // 
             // efectivoLbl
             // 
             this.efectivoLbl.AutoSize = true;
             this.efectivoLbl.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.efectivoLbl.Location = new System.Drawing.Point(87, 158);
+            this.efectivoLbl.ForeColor = System.Drawing.Color.DarkOrange;
+            this.efectivoLbl.Location = new System.Drawing.Point(119, 86);
             this.efectivoLbl.Name = "efectivoLbl";
-            this.efectivoLbl.Size = new System.Drawing.Size(83, 34);
+            this.efectivoLbl.Size = new System.Drawing.Size(85, 34);
             this.efectivoLbl.TabIndex = 3;
-            this.efectivoLbl.Text = "Efectivo:";
+            this.efectivoLbl.Text = "Recibo : ";
             // 
             // totalFinalLbl
             // 
             this.totalFinalLbl.AutoSize = true;
             this.totalFinalLbl.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.totalFinalLbl.Location = new System.Drawing.Point(142, 76);
+            this.totalFinalLbl.Location = new System.Drawing.Point(443, 171);
             this.totalFinalLbl.Name = "totalFinalLbl";
             this.totalFinalLbl.Size = new System.Drawing.Size(25, 34);
             this.totalFinalLbl.TabIndex = 4;
             this.totalFinalLbl.Text = "$";
             // 
-            // cancelarBtnCobrar
-            // 
-            this.cancelarBtnCobrar.BackColor = System.Drawing.Color.DimGray;
-            this.cancelarBtnCobrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cancelarBtnCobrar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.cancelarBtnCobrar.ForeColor = System.Drawing.Color.White;
-            this.cancelarBtnCobrar.Location = new System.Drawing.Point(128, 262);
-            this.cancelarBtnCobrar.Name = "cancelarBtnCobrar";
-            this.cancelarBtnCobrar.Size = new System.Drawing.Size(95, 35);
-            this.cancelarBtnCobrar.TabIndex = 5;
-            this.cancelarBtnCobrar.Text = "Cancelar";
-            this.cancelarBtnCobrar.UseVisualStyleBackColor = false;
-            // 
-            // cobrarBtn
-            // 
-            this.cobrarBtn.BackColor = System.Drawing.Color.DimGray;
-            this.cobrarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cobrarBtn.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.cobrarBtn.ForeColor = System.Drawing.Color.White;
-            this.cobrarBtn.Location = new System.Drawing.Point(254, 262);
-            this.cobrarBtn.Name = "cobrarBtn";
-            this.cobrarBtn.Size = new System.Drawing.Size(78, 35);
-            this.cobrarBtn.TabIndex = 6;
-            this.cobrarBtn.Text = "Cobrar";
-            this.cobrarBtn.UseVisualStyleBackColor = false;
-            // 
             // cobrarLbl
             // 
             this.cobrarLbl.AutoSize = true;
-            this.cobrarLbl.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cobrarLbl.Location = new System.Drawing.Point(156, 19);
+            this.cobrarLbl.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cobrarLbl.ForeColor = System.Drawing.Color.DarkOrange;
+            this.cobrarLbl.Location = new System.Drawing.Point(225, 9);
             this.cobrarLbl.Name = "cobrarLbl";
-            this.cobrarLbl.Size = new System.Drawing.Size(80, 29);
+            this.cobrarLbl.Size = new System.Drawing.Size(79, 34);
             this.cobrarLbl.TabIndex = 7;
-            this.cobrarLbl.Text = "Cobrar";
+            this.cobrarLbl.Text = "Venta";
             // 
             // tipoPagoCbx
             // 
             this.tipoPagoCbx.FormattingEnabled = true;
-            this.tipoPagoCbx.Location = new System.Drawing.Point(232, 123);
+            this.tipoPagoCbx.Location = new System.Drawing.Point(210, 51);
             this.tipoPagoCbx.Name = "tipoPagoCbx";
-            this.tipoPagoCbx.Size = new System.Drawing.Size(97, 21);
+            this.tipoPagoCbx.Size = new System.Drawing.Size(227, 21);
             this.tipoPagoCbx.TabIndex = 8;
             // 
-            // efectivoTbx
+            // btnCobrarVentaNI
             // 
-            this.efectivoTbx.Location = new System.Drawing.Point(232, 158);
-            this.efectivoTbx.Name = "efectivoTbx";
-            this.efectivoTbx.Size = new System.Drawing.Size(97, 20);
-            this.efectivoTbx.TabIndex = 9;
+            this.btnCobrarVentaNI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnCobrarVentaNI.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCobrarVentaNI.FlatAppearance.BorderSize = 0;
+            this.btnCobrarVentaNI.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnCobrarVentaNI.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCobrarVentaNI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCobrarVentaNI.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCobrarVentaNI.ForeColor = System.Drawing.Color.DarkOrange;
+            this.btnCobrarVentaNI.Location = new System.Drawing.Point(310, 217);
+            this.btnCobrarVentaNI.Name = "btnCobrarVentaNI";
+            this.btnCobrarVentaNI.Size = new System.Drawing.Size(127, 29);
+            this.btnCobrarVentaNI.TabIndex = 11;
+            this.btnCobrarVentaNI.Text = "Cobrar";
+            this.btnCobrarVentaNI.UseVisualStyleBackColor = false;
+            this.btnCobrarVentaNI.Click += new System.EventHandler(this.btnCobrarVentaNI_Click);
+            // 
+            // txtReciboVenta
+            // 
+            this.txtReciboVenta.Location = new System.Drawing.Point(210, 94);
+            this.txtReciboVenta.Name = "txtReciboVenta";
+            this.txtReciboVenta.Size = new System.Drawing.Size(227, 20);
+            this.txtReciboVenta.TabIndex = 12;
+            this.txtReciboVenta.TextChanged += new System.EventHandler(this.txtReciboVenta_TextChanged);
+            // 
+            // txtCambioVenta
+            // 
+            this.txtCambioVenta.Location = new System.Drawing.Point(210, 137);
+            this.txtCambioVenta.Name = "txtCambioVenta";
+            this.txtCambioVenta.Size = new System.Drawing.Size(227, 20);
+            this.txtCambioVenta.TabIndex = 13;
+            // 
+            // SpanelLogo
+            // 
+            this.SpanelLogo.BackColor = System.Drawing.Color.DimGray;
+            this.SpanelLogo.Controls.Add(this.pictureBox1);
+            this.SpanelLogo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.SpanelLogo.Location = new System.Drawing.Point(0, 0);
+            this.SpanelLogo.Name = "SpanelLogo";
+            this.SpanelLogo.Size = new System.Drawing.Size(69, 258);
+            this.SpanelLogo.TabIndex = 14;
+            this.SpanelLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SpanelLogo_MouseDown);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(58, 114);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
+            // txtTotalVenta
+            // 
+            this.txtTotalVenta.Location = new System.Drawing.Point(210, 179);
+            this.txtTotalVenta.Name = "txtTotalVenta";
+            this.txtTotalVenta.Size = new System.Drawing.Size(227, 20);
+            this.txtTotalVenta.TabIndex = 9;
             // 
             // Cobrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(405, 324);
-            this.Controls.Add(this.efectivoTbx);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ClientSize = new System.Drawing.Size(471, 258);
+            this.Controls.Add(this.SpanelLogo);
+            this.Controls.Add(this.txtCambioVenta);
+            this.Controls.Add(this.txtReciboVenta);
+            this.Controls.Add(this.btnCobrarVentaNI);
+            this.Controls.Add(this.txtTotalVenta);
             this.Controls.Add(this.tipoPagoCbx);
             this.Controls.Add(this.cobrarLbl);
-            this.Controls.Add(this.cobrarBtn);
-            this.Controls.Add(this.cancelarBtnCobrar);
             this.Controls.Add(this.totalFinalLbl);
             this.Controls.Add(this.efectivoLbl);
             this.Controls.Add(this.cambioLbl);
             this.Controls.Add(this.tipoPagoLlb);
             this.Controls.Add(this.totalLbl);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Cobrar";
             this.Text = "Cobrar";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Cobrar_MouseDown);
+            this.SpanelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,10 +217,13 @@
         private System.Windows.Forms.Label cambioLbl;
         private System.Windows.Forms.Label efectivoLbl;
         private System.Windows.Forms.Label totalFinalLbl;
-        private System.Windows.Forms.Button cancelarBtnCobrar;
-        private System.Windows.Forms.Button cobrarBtn;
         private System.Windows.Forms.Label cobrarLbl;
         private System.Windows.Forms.ComboBox tipoPagoCbx;
-        private System.Windows.Forms.TextBox efectivoTbx;
+        private System.Windows.Forms.Button btnCobrarVentaNI;
+        private System.Windows.Forms.TextBox txtReciboVenta;
+        private System.Windows.Forms.TextBox txtCambioVenta;
+        private System.Windows.Forms.Panel SpanelLogo;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtTotalVenta;
     }
 }

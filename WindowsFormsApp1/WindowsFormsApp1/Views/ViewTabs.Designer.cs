@@ -133,13 +133,16 @@
             this.tableOrdenes = new System.Windows.Forms.DataGridView();
             this.ordenesLogoCh = new System.Windows.Forms.PictureBox();
             this.TabClientes = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.layBuscarCliente = new System.Windows.Forms.FlowLayoutPanel();
             this.lblClienteBuscar = new System.Windows.Forms.Label();
             this.txtCliente = new System.Windows.Forms.TextBox();
             this.pbBuscar = new System.Windows.Forms.PictureBox();
             this.dgClientes = new System.Windows.Forms.DataGridView();
-            this.ClientesLogoCh = new System.Windows.Forms.PictureBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.PProducts = new System.Windows.Forms.Panel();
+            this.LogoProducts = new System.Windows.Forms.PictureBox();
             this.pBoxAddProduct = new System.Windows.Forms.PictureBox();
             this.btnSearchProduct = new System.Windows.Forms.Button();
             this.txtBSearchProduct = new System.Windows.Forms.TextBox();
@@ -164,8 +167,6 @@
             this.clienteTableAdapter = new WindowsFormsApp1.TechPOSdbDataSetTableAdapters.ClienteTableAdapter();
             this.Tiempo = new System.Windows.Forms.Timer(this.components);
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.PProducts = new System.Windows.Forms.Panel();
-            this.LogoProducts = new System.Windows.Forms.PictureBox();
             this.tabPuntoVenta.SuspendLayout();
             this.tabVenta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ventaLogoCh)).BeginInit();
@@ -192,11 +193,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.tableOrdenes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordenesLogoCh)).BeginInit();
             this.TabClientes.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.layBuscarCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ClientesLogoCh)).BeginInit();
             this.tabPage1.SuspendLayout();
+            this.PProducts.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxAddProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
@@ -205,8 +209,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.reparacionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.PProducts.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LogoProducts)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPuntoVenta
@@ -376,6 +378,7 @@
             this.tableVender.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tableVender.Size = new System.Drawing.Size(938, 382);
             this.tableVender.TabIndex = 8;
+            this.tableVender.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableVender_CellClick);
             // 
             // cod
             // 
@@ -440,7 +443,7 @@
             this.CbtnCancelarVenta.Name = "CbtnCancelarVenta";
             this.CbtnCancelarVenta.Size = new System.Drawing.Size(159, 37);
             this.CbtnCancelarVenta.TabIndex = 2;
-            this.CbtnCancelarVenta.Text = "Cancelar";
+            this.CbtnCancelarVenta.Text = "Cancelar venta";
             this.CbtnCancelarVenta.UseVisualStyleBackColor = false;
             this.CbtnCancelarVenta.Click += new System.EventHandler(this.CbtnCancelarVenta_Click);
             // 
@@ -574,7 +577,7 @@
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.33448F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.66552F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 92F));
-            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 238F));
+            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 244F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 230F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 224F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.33448F));
@@ -615,16 +618,16 @@
             // txtMarca
             // 
             this.txtMarca.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMarca.Location = new System.Drawing.Point(213, 3);
+            this.txtMarca.Location = new System.Drawing.Point(211, 3);
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(378, 34);
+            this.txtMarca.Size = new System.Drawing.Size(374, 34);
             this.txtMarca.TabIndex = 23;
             // 
             // SlblModelo
             // 
             this.SlblModelo.AutoSize = true;
             this.SlblModelo.ForeColor = System.Drawing.Color.Black;
-            this.SlblModelo.Location = new System.Drawing.Point(597, 0);
+            this.SlblModelo.Location = new System.Drawing.Point(591, 0);
             this.SlblModelo.Name = "SlblModelo";
             this.SlblModelo.Size = new System.Drawing.Size(82, 34);
             this.SlblModelo.TabIndex = 19;
@@ -636,16 +639,16 @@
             this.ccbTipoServicio1.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ccbTipoServicio1.FormattingEnabled = true;
             this.ccbTipoServicio1.IntegralHeight = false;
-            this.ccbTipoServicio1.Location = new System.Drawing.Point(213, 46);
+            this.ccbTipoServicio1.Location = new System.Drawing.Point(211, 46);
             this.ccbTipoServicio1.Name = "ccbTipoServicio1";
-            this.ccbTipoServicio1.Size = new System.Drawing.Size(378, 42);
+            this.ccbTipoServicio1.Size = new System.Drawing.Size(374, 42);
             this.ccbTipoServicio1.TabIndex = 46;
             this.ccbTipoServicio1.SelectedIndexChanged += new System.EventHandler(this.ccbTipoServicio1_SelectedIndexChanged);
             // 
             // txtModelo
             // 
             this.txtModelo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModelo.Location = new System.Drawing.Point(689, 3);
+            this.txtModelo.Location = new System.Drawing.Point(683, 3);
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(220, 34);
             this.txtModelo.TabIndex = 24;
@@ -672,10 +675,10 @@
             // txtDescripcionDeFalla
             // 
             this.txtDescripcionDeFalla.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcionDeFalla.Location = new System.Drawing.Point(213, 100);
+            this.txtDescripcionDeFalla.Location = new System.Drawing.Point(211, 100);
             this.txtDescripcionDeFalla.Multiline = true;
             this.txtDescripcionDeFalla.Name = "txtDescripcionDeFalla";
-            this.txtDescripcionDeFalla.Size = new System.Drawing.Size(378, 37);
+            this.txtDescripcionDeFalla.Size = new System.Drawing.Size(374, 37);
             this.txtDescripcionDeFalla.TabIndex = 25;
             // 
             // SbtnNuevoServicioRE
@@ -683,7 +686,7 @@
             this.SbtnNuevoServicioRE.BackColor = System.Drawing.Color.DimGray;
             this.SbtnNuevoServicioRE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SbtnNuevoServicioRE.ForeColor = System.Drawing.Color.Turquoise;
-            this.SbtnNuevoServicioRE.Location = new System.Drawing.Point(689, 46);
+            this.SbtnNuevoServicioRE.Location = new System.Drawing.Point(683, 46);
             this.SbtnNuevoServicioRE.Name = "SbtnNuevoServicioRE";
             this.SbtnNuevoServicioRE.Size = new System.Drawing.Size(220, 37);
             this.SbtnNuevoServicioRE.TabIndex = 47;
@@ -824,7 +827,7 @@
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.95349F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.04651F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
-            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 292F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 298F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 278F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.95349F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.04651F));
@@ -872,9 +875,9 @@
             // 
             this.txtNombre.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.txtNombre.Location = new System.Drawing.Point(101, 3);
+            this.txtNombre.Location = new System.Drawing.Point(100, 3);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(306, 34);
+            this.txtNombre.Size = new System.Drawing.Size(301, 34);
             this.txtNombre.TabIndex = 40;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
@@ -893,9 +896,9 @@
             // 
             this.txtApellido.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellido.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.txtApellido.Location = new System.Drawing.Point(101, 51);
+            this.txtApellido.Location = new System.Drawing.Point(100, 51);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(306, 34);
+            this.txtApellido.Size = new System.Drawing.Size(301, 34);
             this.txtApellido.TabIndex = 41;
             this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
@@ -903,7 +906,7 @@
             // 
             this.SlblTelefono.AutoSize = true;
             this.SlblTelefono.ForeColor = System.Drawing.Color.Black;
-            this.SlblTelefono.Location = new System.Drawing.Point(413, 0);
+            this.SlblTelefono.Location = new System.Drawing.Point(407, 0);
             this.SlblTelefono.Name = "SlblTelefono";
             this.SlblTelefono.Size = new System.Drawing.Size(89, 48);
             this.SlblTelefono.TabIndex = 5;
@@ -913,7 +916,7 @@
             // 
             this.SlblCorreo.AutoSize = true;
             this.SlblCorreo.ForeColor = System.Drawing.Color.Black;
-            this.SlblCorreo.Location = new System.Drawing.Point(413, 48);
+            this.SlblCorreo.Location = new System.Drawing.Point(407, 48);
             this.SlblCorreo.Name = "SlblCorreo";
             this.SlblCorreo.Size = new System.Drawing.Size(84, 34);
             this.SlblCorreo.TabIndex = 6;
@@ -923,7 +926,7 @@
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.txtTelefono.Location = new System.Drawing.Point(511, 3);
+            this.txtTelefono.Location = new System.Drawing.Point(505, 3);
             this.txtTelefono.MaxLength = 10;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(266, 34);
@@ -935,7 +938,7 @@
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.txtCorreo.Location = new System.Drawing.Point(511, 51);
+            this.txtCorreo.Location = new System.Drawing.Point(505, 51);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(266, 34);
             this.txtCorreo.TabIndex = 39;
@@ -1424,9 +1427,9 @@
             // TabClientes
             // 
             this.TabClientes.BackColor = System.Drawing.Color.LightGray;
+            this.TabClientes.Controls.Add(this.panel1);
             this.TabClientes.Controls.Add(this.layBuscarCliente);
             this.TabClientes.Controls.Add(this.dgClientes);
-            this.TabClientes.Controls.Add(this.ClientesLogoCh);
             this.TabClientes.Location = new System.Drawing.Point(4, 43);
             this.TabClientes.Name = "TabClientes";
             this.TabClientes.Padding = new System.Windows.Forms.Padding(3);
@@ -1434,12 +1437,32 @@
             this.TabClientes.TabIndex = 5;
             this.TabClientes.Text = "Clientes (F5)";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DimGray;
+            this.panel1.Controls.Add(this.pictureBox5);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(170, 663);
+            this.panel1.TabIndex = 42;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.pictureBox5.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(164, 175);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 1;
+            this.pictureBox5.TabStop = false;
+            // 
             // layBuscarCliente
             // 
             this.layBuscarCliente.Controls.Add(this.lblClienteBuscar);
             this.layBuscarCliente.Controls.Add(this.txtCliente);
             this.layBuscarCliente.Controls.Add(this.pbBuscar);
-            this.layBuscarCliente.Location = new System.Drawing.Point(297, 56);
+            this.layBuscarCliente.Location = new System.Drawing.Point(189, 27);
             this.layBuscarCliente.Name = "layBuscarCliente";
             this.layBuscarCliente.Size = new System.Drawing.Size(585, 56);
             this.layBuscarCliente.TabIndex = 9;
@@ -1488,7 +1511,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgClientes.Location = new System.Drawing.Point(92, 142);
+            this.dgClientes.Location = new System.Drawing.Point(189, 89);
             this.dgClientes.Name = "dgClientes";
             this.dgClientes.ReadOnly = true;
             this.dgClientes.RowHeadersVisible = false;
@@ -1496,19 +1519,9 @@
             this.dgClientes.RowTemplate.ReadOnly = true;
             this.dgClientes.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgClientes.Size = new System.Drawing.Size(1131, 370);
+            this.dgClientes.Size = new System.Drawing.Size(1120, 574);
             this.dgClientes.TabIndex = 5;
             this.dgClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgClientes_CellClick);
-            // 
-            // ClientesLogoCh
-            // 
-            this.ClientesLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
-            this.ClientesLogoCh.Location = new System.Drawing.Point(6, 6);
-            this.ClientesLogoCh.Name = "ClientesLogoCh";
-            this.ClientesLogoCh.Size = new System.Drawing.Size(61, 106);
-            this.ClientesLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ClientesLogoCh.TabIndex = 4;
-            this.ClientesLogoCh.TabStop = false;
             // 
             // tabPage1
             // 
@@ -1519,12 +1532,32 @@
             this.tabPage1.Controls.Add(this.txtBSearchProduct);
             this.tabPage1.Controls.Add(this.lblSearchProduct);
             this.tabPage1.Controls.Add(this.dGVProducts);
-            this.tabPage1.Location = new System.Drawing.Point(4, 37);
+            this.tabPage1.Location = new System.Drawing.Point(4, 43);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1328, 675);
+            this.tabPage1.Size = new System.Drawing.Size(1328, 669);
             this.tabPage1.TabIndex = 6;
             this.tabPage1.Text = "Productos (F6)";
+            // 
+            // PProducts
+            // 
+            this.PProducts.BackColor = System.Drawing.Color.DimGray;
+            this.PProducts.Controls.Add(this.LogoProducts);
+            this.PProducts.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PProducts.Location = new System.Drawing.Point(3, 3);
+            this.PProducts.Name = "PProducts";
+            this.PProducts.Size = new System.Drawing.Size(170, 663);
+            this.PProducts.TabIndex = 41;
+            // 
+            // LogoProducts
+            // 
+            this.LogoProducts.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.LogoProducts.Location = new System.Drawing.Point(3, 3);
+            this.LogoProducts.Name = "LogoProducts";
+            this.LogoProducts.Size = new System.Drawing.Size(164, 175);
+            this.LogoProducts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.LogoProducts.TabIndex = 1;
+            this.LogoProducts.TabStop = false;
             // 
             // pBoxAddProduct
             // 
@@ -1682,26 +1715,6 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // PProducts
-            // 
-            this.PProducts.BackColor = System.Drawing.Color.DimGray;
-            this.PProducts.Controls.Add(this.LogoProducts);
-            this.PProducts.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PProducts.Location = new System.Drawing.Point(3, 3);
-            this.PProducts.Name = "PProducts";
-            this.PProducts.Size = new System.Drawing.Size(170, 669);
-            this.PProducts.TabIndex = 41;
-            // 
-            // LogoProducts
-            // 
-            this.LogoProducts.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
-            this.LogoProducts.Location = new System.Drawing.Point(3, 3);
-            this.LogoProducts.Name = "LogoProducts";
-            this.LogoProducts.Size = new System.Drawing.Size(164, 175);
-            this.LogoProducts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.LogoProducts.TabIndex = 1;
-            this.LogoProducts.TabStop = false;
-            // 
             // ViewTabs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1756,13 +1769,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.tableOrdenes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordenesLogoCh)).EndInit();
             this.TabClientes.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.layBuscarCliente.ResumeLayout(false);
             this.layBuscarCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbBuscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ClientesLogoCh)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.PProducts.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.LogoProducts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxAddProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVProducts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
@@ -1771,8 +1787,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.reparacionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.PProducts.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.LogoProducts)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1895,7 +1909,6 @@
         private System.Windows.Forms.Label SlblSeleccioneNombreDeUsuario;
         private System.Windows.Forms.Button SbtnAsiganrRolAUsuario;
         private System.Windows.Forms.TabPage TabClientes;
-        private System.Windows.Forms.PictureBox ClientesLogoCh;
         private System.Windows.Forms.DataGridView dgClientes;
         private System.Windows.Forms.BindingSource clienteBindingSource;
         private TechPOSdbDataSetTableAdapters.ClienteTableAdapter clienteTableAdapter;
@@ -1936,6 +1949,8 @@
         private System.Windows.Forms.PictureBox pBoxAddProduct;
         private System.Windows.Forms.Panel PProducts;
         private System.Windows.Forms.PictureBox LogoProducts;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox5;
         //  private System.Windows.Forms.TextBox textBox1;
         //private System.Windows.Forms.Label UnaLabel;
         //  private System.Windows.Forms.Label label5;

@@ -110,6 +110,12 @@
     <Compile Include="Views\cambiarContraseña.Designer.cs">
       <DependentUpon>cambiarContraseña.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\CancelarProductoVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CancelarProductoVenta.Designer.cs">
+      <DependentUpon>CancelarProductoVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Cobrar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -240,6 +246,9 @@
     <EmbeddedResource Include="Views\cambiarContraseña.resx">
       <DependentUpon>cambiarContraseña.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\CancelarProductoVenta.resx">
+      <DependentUpon>CancelarProductoVenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Cobrar.resx">
       <DependentUpon>Cobrar.cs</DependentUpon>
     </EmbeddedResource>
@@ -341,6 +350,7 @@
     <None Include="Resources\producto.png" />
     <None Include="Resources\clientes.png" />
     <None Include="Resources\64244.png" />
+    <Content Include="Resources\Por hacer.txt" />
     <Content Include="Resources\refresh.png" />
     <Content Include="Resources\sub_fondo.png" />
     <None Include="Resources\logoUp.png" />

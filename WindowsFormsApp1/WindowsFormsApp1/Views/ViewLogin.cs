@@ -276,8 +276,16 @@ namespace WindowsFormsApp1
         }
         private void LoadingSplashScreen()
         {
-            SplashScreen splash = new SplashScreen();
-            Application.Run(splash);
+            try
+            {
+                SplashScreen splash = new SplashScreen();
+                Application.Run(splash);
+            }
+            catch (ThreadAbortException e1)
+            {
+                //MessageBox.Show("No se pudo iniciar la aplicación. Favor de reiniciar la aplicación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show(e1.Message);
+            }
         }
 
         private void TxtContrasena_KeyPress_1(object sender, KeyPressEventArgs e)
