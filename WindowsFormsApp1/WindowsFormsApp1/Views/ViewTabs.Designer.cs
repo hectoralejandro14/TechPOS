@@ -378,6 +378,7 @@
             this.tableVender.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tableVender.Size = new System.Drawing.Size(938, 382);
             this.tableVender.TabIndex = 8;
+            this.tableVender.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableVender_CellClick);
             // 
             // cod
             // 
@@ -442,7 +443,7 @@
             this.CbtnCancelarVenta.Name = "CbtnCancelarVenta";
             this.CbtnCancelarVenta.Size = new System.Drawing.Size(159, 37);
             this.CbtnCancelarVenta.TabIndex = 2;
-            this.CbtnCancelarVenta.Text = "Cancelar";
+            this.CbtnCancelarVenta.Text = "Cancelar venta";
             this.CbtnCancelarVenta.UseVisualStyleBackColor = false;
             this.CbtnCancelarVenta.Click += new System.EventHandler(this.CbtnCancelarVenta_Click);
             // 
@@ -576,7 +577,7 @@
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.33448F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.66552F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 92F));
-            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 240F));
+            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 244F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 230F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 224F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.33448F));
@@ -617,16 +618,16 @@
             // txtMarca
             // 
             this.txtMarca.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMarca.Location = new System.Drawing.Point(212, 3);
+            this.txtMarca.Location = new System.Drawing.Point(211, 3);
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(377, 34);
+            this.txtMarca.Size = new System.Drawing.Size(374, 34);
             this.txtMarca.TabIndex = 23;
             // 
             // SlblModelo
             // 
             this.SlblModelo.AutoSize = true;
             this.SlblModelo.ForeColor = System.Drawing.Color.Black;
-            this.SlblModelo.Location = new System.Drawing.Point(595, 0);
+            this.SlblModelo.Location = new System.Drawing.Point(591, 0);
             this.SlblModelo.Name = "SlblModelo";
             this.SlblModelo.Size = new System.Drawing.Size(82, 34);
             this.SlblModelo.TabIndex = 19;
@@ -638,16 +639,16 @@
             this.ccbTipoServicio1.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ccbTipoServicio1.FormattingEnabled = true;
             this.ccbTipoServicio1.IntegralHeight = false;
-            this.ccbTipoServicio1.Location = new System.Drawing.Point(212, 46);
+            this.ccbTipoServicio1.Location = new System.Drawing.Point(211, 46);
             this.ccbTipoServicio1.Name = "ccbTipoServicio1";
-            this.ccbTipoServicio1.Size = new System.Drawing.Size(377, 42);
+            this.ccbTipoServicio1.Size = new System.Drawing.Size(374, 42);
             this.ccbTipoServicio1.TabIndex = 46;
             this.ccbTipoServicio1.SelectedIndexChanged += new System.EventHandler(this.ccbTipoServicio1_SelectedIndexChanged);
             // 
             // txtModelo
             // 
             this.txtModelo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModelo.Location = new System.Drawing.Point(687, 3);
+            this.txtModelo.Location = new System.Drawing.Point(683, 3);
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(220, 34);
             this.txtModelo.TabIndex = 24;
@@ -674,10 +675,10 @@
             // txtDescripcionDeFalla
             // 
             this.txtDescripcionDeFalla.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcionDeFalla.Location = new System.Drawing.Point(212, 100);
+            this.txtDescripcionDeFalla.Location = new System.Drawing.Point(211, 100);
             this.txtDescripcionDeFalla.Multiline = true;
             this.txtDescripcionDeFalla.Name = "txtDescripcionDeFalla";
-            this.txtDescripcionDeFalla.Size = new System.Drawing.Size(377, 37);
+            this.txtDescripcionDeFalla.Size = new System.Drawing.Size(374, 37);
             this.txtDescripcionDeFalla.TabIndex = 25;
             // 
             // SbtnNuevoServicioRE
@@ -685,7 +686,7 @@
             this.SbtnNuevoServicioRE.BackColor = System.Drawing.Color.DimGray;
             this.SbtnNuevoServicioRE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SbtnNuevoServicioRE.ForeColor = System.Drawing.Color.Turquoise;
-            this.SbtnNuevoServicioRE.Location = new System.Drawing.Point(687, 46);
+            this.SbtnNuevoServicioRE.Location = new System.Drawing.Point(683, 46);
             this.SbtnNuevoServicioRE.Name = "SbtnNuevoServicioRE";
             this.SbtnNuevoServicioRE.Size = new System.Drawing.Size(220, 37);
             this.SbtnNuevoServicioRE.TabIndex = 47;
@@ -826,7 +827,7 @@
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.95349F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.04651F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
-            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 294F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 298F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 278F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.95349F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.04651F));
@@ -876,7 +877,7 @@
             this.txtNombre.ImeMode = System.Windows.Forms.ImeMode.On;
             this.txtNombre.Location = new System.Drawing.Point(100, 3);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(305, 34);
+            this.txtNombre.Size = new System.Drawing.Size(301, 34);
             this.txtNombre.TabIndex = 40;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
@@ -897,7 +898,7 @@
             this.txtApellido.ImeMode = System.Windows.Forms.ImeMode.On;
             this.txtApellido.Location = new System.Drawing.Point(100, 51);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(305, 34);
+            this.txtApellido.Size = new System.Drawing.Size(301, 34);
             this.txtApellido.TabIndex = 41;
             this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
@@ -905,7 +906,7 @@
             // 
             this.SlblTelefono.AutoSize = true;
             this.SlblTelefono.ForeColor = System.Drawing.Color.Black;
-            this.SlblTelefono.Location = new System.Drawing.Point(411, 0);
+            this.SlblTelefono.Location = new System.Drawing.Point(407, 0);
             this.SlblTelefono.Name = "SlblTelefono";
             this.SlblTelefono.Size = new System.Drawing.Size(89, 48);
             this.SlblTelefono.TabIndex = 5;
@@ -915,7 +916,7 @@
             // 
             this.SlblCorreo.AutoSize = true;
             this.SlblCorreo.ForeColor = System.Drawing.Color.Black;
-            this.SlblCorreo.Location = new System.Drawing.Point(411, 48);
+            this.SlblCorreo.Location = new System.Drawing.Point(407, 48);
             this.SlblCorreo.Name = "SlblCorreo";
             this.SlblCorreo.Size = new System.Drawing.Size(84, 34);
             this.SlblCorreo.TabIndex = 6;
@@ -925,7 +926,7 @@
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.txtTelefono.Location = new System.Drawing.Point(509, 3);
+            this.txtTelefono.Location = new System.Drawing.Point(505, 3);
             this.txtTelefono.MaxLength = 10;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(266, 34);
@@ -937,7 +938,7 @@
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.txtCorreo.Location = new System.Drawing.Point(509, 51);
+            this.txtCorreo.Location = new System.Drawing.Point(505, 51);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(266, 34);
             this.txtCorreo.TabIndex = 39;
