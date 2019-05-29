@@ -128,7 +128,7 @@
             this.btnVolverCC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnVolverCC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolverCC.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolverCC.ForeColor = System.Drawing.Color.Orange;
+            this.btnVolverCC.ForeColor = System.Drawing.Color.DarkOrange;
             this.btnVolverCC.Location = new System.Drawing.Point(669, 287);
             this.btnVolverCC.Name = "btnVolverCC";
             this.btnVolverCC.Size = new System.Drawing.Size(82, 31);
@@ -139,10 +139,10 @@
             // 
             // CCtxtPinSeguridad
             // 
-            this.CCtxtPinSeguridad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.CCtxtPinSeguridad.BackColor = System.Drawing.SystemColors.ControlLight;
             this.CCtxtPinSeguridad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.CCtxtPinSeguridad.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CCtxtPinSeguridad.ForeColor = System.Drawing.Color.DimGray;
+            this.CCtxtPinSeguridad.ForeColor = System.Drawing.Color.DarkOrange;
             this.CCtxtPinSeguridad.Location = new System.Drawing.Point(297, 67);
             this.CCtxtPinSeguridad.Name = "CCtxtPinSeguridad";
             this.CCtxtPinSeguridad.Size = new System.Drawing.Size(454, 19);
@@ -151,7 +151,7 @@
             // 
             // CCbtnAceptarPinSeguridad
             // 
-            this.CCbtnAceptarPinSeguridad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.CCbtnAceptarPinSeguridad.BackColor = System.Drawing.SystemColors.ControlLight;
             this.CCbtnAceptarPinSeguridad.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CCbtnAceptarPinSeguridad.FlatAppearance.BorderSize = 0;
             this.CCbtnAceptarPinSeguridad.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
@@ -180,7 +180,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.textBox1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.DimGray;
@@ -194,7 +194,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(780, 330);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblPinSeguridadCC);

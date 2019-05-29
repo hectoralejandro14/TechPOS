@@ -73,7 +73,7 @@
             // 
             this.idLblRepa.AutoSize = true;
             this.idLblRepa.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.idLblRepa.ForeColor = System.Drawing.Color.Orange;
+            this.idLblRepa.ForeColor = System.Drawing.Color.DarkOrange;
             this.idLblRepa.Location = new System.Drawing.Point(3, 0);
             this.idLblRepa.Name = "idLblRepa";
             this.idLblRepa.Size = new System.Drawing.Size(32, 34);
@@ -85,8 +85,8 @@
             // 
             this.estadoLblRepa.AutoSize = true;
             this.estadoLblRepa.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.estadoLblRepa.ForeColor = System.Drawing.Color.Orange;
-            this.estadoLblRepa.Location = new System.Drawing.Point(382, 0);
+            this.estadoLblRepa.ForeColor = System.Drawing.Color.DarkOrange;
+            this.estadoLblRepa.Location = new System.Drawing.Point(380, 0);
             this.estadoLblRepa.Name = "estadoLblRepa";
             this.estadoLblRepa.Size = new System.Drawing.Size(70, 34);
             this.estadoLblRepa.TabIndex = 1;
@@ -96,7 +96,7 @@
             // 
             this.marccaLblRepa.AutoSize = true;
             this.marccaLblRepa.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.marccaLblRepa.ForeColor = System.Drawing.Color.Orange;
+            this.marccaLblRepa.ForeColor = System.Drawing.Color.DarkOrange;
             this.marccaLblRepa.Location = new System.Drawing.Point(3, 37);
             this.marccaLblRepa.Name = "marccaLblRepa";
             this.marccaLblRepa.Size = new System.Drawing.Size(64, 34);
@@ -107,8 +107,8 @@
             // 
             this.modeloLblRepa.AutoSize = true;
             this.modeloLblRepa.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.modeloLblRepa.ForeColor = System.Drawing.Color.Orange;
-            this.modeloLblRepa.Location = new System.Drawing.Point(382, 37);
+            this.modeloLblRepa.ForeColor = System.Drawing.Color.DarkOrange;
+            this.modeloLblRepa.Location = new System.Drawing.Point(380, 37);
             this.modeloLblRepa.Name = "modeloLblRepa";
             this.modeloLblRepa.Size = new System.Drawing.Size(72, 34);
             this.modeloLblRepa.TabIndex = 3;
@@ -118,7 +118,7 @@
             // 
             this.responsLblRepa.AutoSize = true;
             this.responsLblRepa.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.responsLblRepa.ForeColor = System.Drawing.Color.Orange;
+            this.responsLblRepa.ForeColor = System.Drawing.Color.DarkOrange;
             this.responsLblRepa.Location = new System.Drawing.Point(181, 489);
             this.responsLblRepa.Name = "responsLblRepa";
             this.responsLblRepa.Size = new System.Drawing.Size(118, 34);
@@ -129,7 +129,7 @@
             // 
             this.totalLblRepa.AutoSize = true;
             this.totalLblRepa.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.totalLblRepa.ForeColor = System.Drawing.Color.Orange;
+            this.totalLblRepa.ForeColor = System.Drawing.Color.DarkOrange;
             this.totalLblRepa.Location = new System.Drawing.Point(524, 489);
             this.totalLblRepa.Name = "totalLblRepa";
             this.totalLblRepa.Size = new System.Drawing.Size(54, 34);
@@ -140,7 +140,7 @@
             // 
             this.abonoLblRepa.AutoSize = true;
             this.abonoLblRepa.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.abonoLblRepa.ForeColor = System.Drawing.Color.Orange;
+            this.abonoLblRepa.ForeColor = System.Drawing.Color.DarkOrange;
             this.abonoLblRepa.Location = new System.Drawing.Point(181, 530);
             this.abonoLblRepa.Name = "abonoLblRepa";
             this.abonoLblRepa.Size = new System.Drawing.Size(133, 34);
@@ -171,17 +171,17 @@
             // idTxtBoxRepa
             // 
             this.idTxtBoxRepa.Enabled = false;
-            this.idTxtBoxRepa.Location = new System.Drawing.Point(150, 3);
+            this.idTxtBoxRepa.Location = new System.Drawing.Point(149, 3);
             this.idTxtBoxRepa.Name = "idTxtBoxRepa";
-            this.idTxtBoxRepa.Size = new System.Drawing.Size(226, 20);
+            this.idTxtBoxRepa.Size = new System.Drawing.Size(225, 20);
             this.idTxtBoxRepa.TabIndex = 12;
             // 
             // MarcaTxtBox
             // 
             this.MarcaTxtBox.Enabled = false;
-            this.MarcaTxtBox.Location = new System.Drawing.Point(150, 40);
+            this.MarcaTxtBox.Location = new System.Drawing.Point(149, 40);
             this.MarcaTxtBox.Name = "MarcaTxtBox";
-            this.MarcaTxtBox.Size = new System.Drawing.Size(226, 20);
+            this.MarcaTxtBox.Size = new System.Drawing.Size(225, 20);
             this.MarcaTxtBox.TabIndex = 13;
             // 
             // fallaTxtBoxRepa
@@ -196,7 +196,7 @@
             // ModeloTxtBoxRepa
             // 
             this.ModeloTxtBoxRepa.Enabled = false;
-            this.ModeloTxtBoxRepa.Location = new System.Drawing.Point(473, 40);
+            this.ModeloTxtBoxRepa.Location = new System.Drawing.Point(471, 40);
             this.ModeloTxtBoxRepa.Name = "ModeloTxtBoxRepa";
             this.ModeloTxtBoxRepa.Size = new System.Drawing.Size(135, 20);
             this.ModeloTxtBoxRepa.TabIndex = 16;
@@ -230,7 +230,7 @@
             this.ActualizarBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ActualizarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ActualizarBtn.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.ActualizarBtn.ForeColor = System.Drawing.Color.Orange;
+            this.ActualizarBtn.ForeColor = System.Drawing.Color.DarkOrange;
             this.ActualizarBtn.Location = new System.Drawing.Point(178, 607);
             this.ActualizarBtn.Name = "ActualizarBtn";
             this.ActualizarBtn.Size = new System.Drawing.Size(130, 43);
@@ -244,7 +244,7 @@
             this.AbonarBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.AbonarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AbonarBtn.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.AbonarBtn.ForeColor = System.Drawing.Color.Orange;
+            this.AbonarBtn.ForeColor = System.Drawing.Color.DarkOrange;
             this.AbonarBtn.Location = new System.Drawing.Point(498, 607);
             this.AbonarBtn.Name = "AbonarBtn";
             this.AbonarBtn.Size = new System.Drawing.Size(130, 43);
@@ -258,7 +258,7 @@
             this.AceptarBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.AceptarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AceptarBtn.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.AceptarBtn.ForeColor = System.Drawing.Color.Orange;
+            this.AceptarBtn.ForeColor = System.Drawing.Color.DarkOrange;
             this.AceptarBtn.Location = new System.Drawing.Point(653, 607);
             this.AceptarBtn.Name = "AceptarBtn";
             this.AceptarBtn.Size = new System.Drawing.Size(130, 43);
@@ -272,7 +272,7 @@
             this.piezaOrderbtnC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.piezaOrderbtnC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.piezaOrderbtnC.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.piezaOrderbtnC.ForeColor = System.Drawing.Color.Orange;
+            this.piezaOrderbtnC.ForeColor = System.Drawing.Color.DarkOrange;
             this.piezaOrderbtnC.Location = new System.Drawing.Point(337, 607);
             this.piezaOrderbtnC.Name = "piezaOrderbtnC";
             this.piezaOrderbtnC.Size = new System.Drawing.Size(130, 43);
@@ -284,7 +284,7 @@
             // estadoCBoxC
             // 
             this.estadoCBoxC.FormattingEnabled = true;
-            this.estadoCBoxC.Location = new System.Drawing.Point(473, 3);
+            this.estadoCBoxC.Location = new System.Drawing.Point(471, 3);
             this.estadoCBoxC.Name = "estadoCBoxC";
             this.estadoCBoxC.Size = new System.Drawing.Size(135, 21);
             this.estadoCBoxC.TabIndex = 24;
@@ -295,7 +295,7 @@
             this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.69347F));
             this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.30653F));
             this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 91F));
-            this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 142F));
+            this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 144F));
             this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.2561F));
             this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.7439F));
             this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 79F));
@@ -321,7 +321,7 @@
             // 
             this.FallaReparacionGBx.Controls.Add(this.fallaTxtBoxRepa);
             this.FallaReparacionGBx.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FallaReparacionGBx.ForeColor = System.Drawing.Color.Orange;
+            this.FallaReparacionGBx.ForeColor = System.Drawing.Color.DarkOrange;
             this.FallaReparacionGBx.Location = new System.Drawing.Point(178, 157);
             this.FallaReparacionGBx.Name = "FallaReparacionGBx";
             this.FallaReparacionGBx.Size = new System.Drawing.Size(613, 104);
@@ -333,7 +333,7 @@
             // 
             this.DiagnosticoGBx.Controls.Add(this.dRapidoTxtBox);
             this.DiagnosticoGBx.Font = new System.Drawing.Font("Cordia New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DiagnosticoGBx.ForeColor = System.Drawing.Color.Orange;
+            this.DiagnosticoGBx.ForeColor = System.Drawing.Color.DarkOrange;
             this.DiagnosticoGBx.Location = new System.Drawing.Point(178, 267);
             this.DiagnosticoGBx.Name = "DiagnosticoGBx";
             this.DiagnosticoGBx.Size = new System.Drawing.Size(613, 113);
@@ -345,7 +345,7 @@
             // 
             this.TrabajoRealizadoGBx.Controls.Add(this.trabajoRealizadotxtC);
             this.TrabajoRealizadoGBx.Font = new System.Drawing.Font("Cordia New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TrabajoRealizadoGBx.ForeColor = System.Drawing.Color.Orange;
+            this.TrabajoRealizadoGBx.ForeColor = System.Drawing.Color.DarkOrange;
             this.TrabajoRealizadoGBx.Location = new System.Drawing.Point(178, 380);
             this.TrabajoRealizadoGBx.Name = "TrabajoRealizadoGBx";
             this.TrabajoRealizadoGBx.Size = new System.Drawing.Size(617, 106);
@@ -357,7 +357,7 @@
             // 
             this.SlblCantidadRestanteAPagar.AutoSize = true;
             this.SlblCantidadRestanteAPagar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.SlblCantidadRestanteAPagar.ForeColor = System.Drawing.Color.Orange;
+            this.SlblCantidadRestanteAPagar.ForeColor = System.Drawing.Color.DarkOrange;
             this.SlblCantidadRestanteAPagar.Location = new System.Drawing.Point(492, 559);
             this.SlblCantidadRestanteAPagar.Name = "SlblCantidadRestanteAPagar";
             this.SlblCantidadRestanteAPagar.Size = new System.Drawing.Size(85, 34);
@@ -376,7 +376,7 @@
             // 
             this.SlblAbonarAProductoCliente.AutoSize = true;
             this.SlblAbonarAProductoCliente.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.SlblAbonarAProductoCliente.ForeColor = System.Drawing.Color.Orange;
+            this.SlblAbonarAProductoCliente.ForeColor = System.Drawing.Color.DarkOrange;
             this.SlblAbonarAProductoCliente.Location = new System.Drawing.Point(506, 522);
             this.SlblAbonarAProductoCliente.Name = "SlblAbonarAProductoCliente";
             this.SlblAbonarAProductoCliente.Size = new System.Drawing.Size(72, 34);
@@ -416,7 +416,7 @@
             // 
             this.reparacionDetailsLbl.AutoSize = true;
             this.reparacionDetailsLbl.Font = new System.Drawing.Font("Cordia New", 27F, System.Drawing.FontStyle.Bold);
-            this.reparacionDetailsLbl.ForeColor = System.Drawing.Color.Orange;
+            this.reparacionDetailsLbl.ForeColor = System.Drawing.Color.DarkOrange;
             this.reparacionDetailsLbl.Location = new System.Drawing.Point(362, 9);
             this.reparacionDetailsLbl.Name = "reparacionDetailsLbl";
             this.reparacionDetailsLbl.Size = new System.Drawing.Size(246, 50);
@@ -427,7 +427,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(857, 661);
             this.Controls.Add(this.reparacionDetailsLbl);
             this.Controls.Add(this.PAddProducts);
@@ -453,7 +453,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Reparacion";
-            this.Opacity = 0.9D;
             this.Text = "Equipo en reparación";
             this.Load += new System.EventHandler(this.Reparacion_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Reparacion_MouseDown);

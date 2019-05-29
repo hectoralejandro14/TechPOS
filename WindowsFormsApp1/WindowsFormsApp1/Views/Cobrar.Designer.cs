@@ -51,7 +51,7 @@
             this.totalLbl.AutoSize = true;
             this.totalLbl.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalLbl.ForeColor = System.Drawing.Color.DarkOrange;
-            this.totalLbl.Location = new System.Drawing.Point(140, 171);
+            this.totalLbl.Location = new System.Drawing.Point(150, 171);
             this.totalLbl.Name = "totalLbl";
             this.totalLbl.Size = new System.Drawing.Size(64, 34);
             this.totalLbl.TabIndex = 0;
@@ -62,7 +62,7 @@
             this.tipoPagoLlb.AutoSize = true;
             this.tipoPagoLlb.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
             this.tipoPagoLlb.ForeColor = System.Drawing.Color.DarkOrange;
-            this.tipoPagoLlb.Location = new System.Drawing.Point(75, 43);
+            this.tipoPagoLlb.Location = new System.Drawing.Point(96, 43);
             this.tipoPagoLlb.Name = "tipoPagoLlb";
             this.tipoPagoLlb.Size = new System.Drawing.Size(129, 34);
             this.tipoPagoLlb.TabIndex = 1;
@@ -73,7 +73,7 @@
             this.cambioLbl.AutoSize = true;
             this.cambioLbl.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
             this.cambioLbl.ForeColor = System.Drawing.Color.DarkOrange;
-            this.cambioLbl.Location = new System.Drawing.Point(119, 129);
+            this.cambioLbl.Location = new System.Drawing.Point(140, 129);
             this.cambioLbl.Name = "cambioLbl";
             this.cambioLbl.Size = new System.Drawing.Size(85, 34);
             this.cambioLbl.TabIndex = 2;
@@ -84,7 +84,7 @@
             this.efectivoLbl.AutoSize = true;
             this.efectivoLbl.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
             this.efectivoLbl.ForeColor = System.Drawing.Color.DarkOrange;
-            this.efectivoLbl.Location = new System.Drawing.Point(119, 86);
+            this.efectivoLbl.Location = new System.Drawing.Point(140, 86);
             this.efectivoLbl.Name = "efectivoLbl";
             this.efectivoLbl.Size = new System.Drawing.Size(85, 34);
             this.efectivoLbl.TabIndex = 3;
@@ -94,7 +94,8 @@
             // 
             this.totalFinalLbl.AutoSize = true;
             this.totalFinalLbl.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.totalFinalLbl.Location = new System.Drawing.Point(443, 171);
+            this.totalFinalLbl.ForeColor = System.Drawing.Color.DarkOrange;
+            this.totalFinalLbl.Location = new System.Drawing.Point(210, 171);
             this.totalFinalLbl.Name = "totalFinalLbl";
             this.totalFinalLbl.Size = new System.Drawing.Size(25, 34);
             this.totalFinalLbl.TabIndex = 4;
@@ -114,7 +115,7 @@
             // tipoPagoCbx
             // 
             this.tipoPagoCbx.FormattingEnabled = true;
-            this.tipoPagoCbx.Location = new System.Drawing.Point(210, 51);
+            this.tipoPagoCbx.Location = new System.Drawing.Point(231, 51);
             this.tipoPagoCbx.Name = "tipoPagoCbx";
             this.tipoPagoCbx.Size = new System.Drawing.Size(227, 21);
             this.tipoPagoCbx.TabIndex = 8;
@@ -139,7 +140,7 @@
             // 
             // txtReciboVenta
             // 
-            this.txtReciboVenta.Location = new System.Drawing.Point(210, 94);
+            this.txtReciboVenta.Location = new System.Drawing.Point(231, 94);
             this.txtReciboVenta.Name = "txtReciboVenta";
             this.txtReciboVenta.Size = new System.Drawing.Size(227, 20);
             this.txtReciboVenta.TabIndex = 12;
@@ -147,7 +148,7 @@
             // 
             // txtCambioVenta
             // 
-            this.txtCambioVenta.Location = new System.Drawing.Point(210, 137);
+            this.txtCambioVenta.Location = new System.Drawing.Point(231, 137);
             this.txtCambioVenta.Name = "txtCambioVenta";
             this.txtCambioVenta.Size = new System.Drawing.Size(227, 20);
             this.txtCambioVenta.TabIndex = 13;
@@ -159,23 +160,23 @@
             this.SpanelLogo.Dock = System.Windows.Forms.DockStyle.Left;
             this.SpanelLogo.Location = new System.Drawing.Point(0, 0);
             this.SpanelLogo.Name = "SpanelLogo";
-            this.SpanelLogo.Size = new System.Drawing.Size(69, 258);
+            this.SpanelLogo.Size = new System.Drawing.Size(81, 258);
             this.SpanelLogo.TabIndex = 14;
             this.SpanelLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SpanelLogo_MouseDown);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(58, 114);
+            this.pictureBox1.Size = new System.Drawing.Size(70, 120);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
             // txtTotalVenta
             // 
-            this.txtTotalVenta.Location = new System.Drawing.Point(210, 179);
+            this.txtTotalVenta.Location = new System.Drawing.Point(231, 179);
             this.txtTotalVenta.Name = "txtTotalVenta";
             this.txtTotalVenta.Size = new System.Drawing.Size(227, 20);
             this.txtTotalVenta.TabIndex = 9;
@@ -184,8 +185,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(471, 258);
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ClientSize = new System.Drawing.Size(500, 258);
             this.Controls.Add(this.SpanelLogo);
             this.Controls.Add(this.txtCambioVenta);
             this.Controls.Add(this.txtReciboVenta);
