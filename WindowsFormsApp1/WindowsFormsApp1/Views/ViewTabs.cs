@@ -1104,28 +1104,18 @@ namespace WindowsFormsApp1.Views
         private void tableOrdenes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             Connection connection = new Connection();
-            try
-            {
+
                 DataGridViewRow fila = tableOrdenes.Rows[e.RowIndex];
-                if (Convert.ToString(fila.Cells["Id"].Value).Equals("") || Convert.ToString(fila.Cells["Descripcion"].Value).Equals("")
-                    || Convert.ToString(fila.Cells["Estado"].Value).Equals("") || Convert.ToString(fila.Cells["FechaPedida"].Value).Equals("")
-                    || Convert.ToString(fila.Cells["FechaLlegaAprox"].Value).Equals(""))
-                {
-                    Console.WriteLine("Datos vacios");
-                }
-                else
-                {
+                               
                     int id = Convert.ToInt32(fila.Cells["Id"].Value);
-                    DatosPieza datosPieza = new DatosPieza(id);
+                MessageBox.Show(id+" ");
+                    DatosPieza datosPieza = new DatosPieza(16);
                     datosPieza.ShowDialog();
                     connection.AbrirConexion();
                     tableOrdenes.DataSource = conexion.buscarReparacion("SELECT * FROM Pieza order by FechaEncargada asc");
                     connection.CerrarConexion();
-                }
-            }
-            catch (Exception)
-            {
-            }
+                
+ 
         }
         private void ordenesTab_Enter(object sender, EventArgs e)
         {
@@ -1210,6 +1200,8 @@ namespace WindowsFormsApp1.Views
 
         private void button1_Click(object sender, EventArgs e)
         {
+            pruebapdf p = new pruebapdf(1);
+            p.ShowDialog();
 
         }
 
@@ -1396,6 +1388,22 @@ namespace WindowsFormsApp1.Views
         public void RemoveElement(int i)
         {
 
+        }
+
+        private void chenoReportePB_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CDGReparacion_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void repRep_Click(object sender, EventArgs e)
+        {
+            pruebapdf p = new pruebapdf(2);
+            p.ShowDialog();
         }
     }
 }
