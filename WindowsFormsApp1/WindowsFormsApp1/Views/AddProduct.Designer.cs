@@ -33,13 +33,11 @@
             this.btnAddAceptarP = new System.Windows.Forms.Button();
             this.tBoxAddDescripcion = new System.Windows.Forms.TextBox();
             this.tBoxAddCantidadP = new System.Windows.Forms.TextBox();
-            this.tBoxAddMoneda = new System.Windows.Forms.TextBox();
             this.tBoxAddCostoP = new System.Windows.Forms.TextBox();
             this.tBoxAddMarca = new System.Windows.Forms.TextBox();
             this.tBoxAddClaveF = new System.Windows.Forms.TextBox();
             this.tBoxAddClaveP = new System.Windows.Forms.TextBox();
             this.lblAddCantidad = new System.Windows.Forms.Label();
-            this.lblAddMoneda = new System.Windows.Forms.Label();
             this.lblAddCosto = new System.Windows.Forms.Label();
             this.lblAddDescripcion = new System.Windows.Forms.Label();
             this.lblAddCategoriaProducto = new System.Windows.Forms.Label();
@@ -70,7 +68,7 @@
             this.btnAddCancelarP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddCancelarP.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCancelarP.ForeColor = System.Drawing.Color.Orange;
-            this.btnAddCancelarP.Location = new System.Drawing.Point(598, 359);
+            this.btnAddCancelarP.Location = new System.Drawing.Point(598, 315);
             this.btnAddCancelarP.Name = "btnAddCancelarP";
             this.btnAddCancelarP.Size = new System.Drawing.Size(112, 34);
             this.btnAddCancelarP.TabIndex = 78;
@@ -86,7 +84,7 @@
             this.btnAddAceptarP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddAceptarP.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddAceptarP.ForeColor = System.Drawing.Color.Orange;
-            this.btnAddAceptarP.Location = new System.Drawing.Point(598, 289);
+            this.btnAddAceptarP.Location = new System.Drawing.Point(598, 246);
             this.btnAddAceptarP.Name = "btnAddAceptarP";
             this.btnAddAceptarP.Size = new System.Drawing.Size(112, 34);
             this.btnAddAceptarP.TabIndex = 77;
@@ -108,22 +106,12 @@
             // 
             this.tBoxAddCantidadP.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tBoxAddCantidadP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.tBoxAddCantidadP.Location = new System.Drawing.Point(598, 226);
+            this.tBoxAddCantidadP.Location = new System.Drawing.Point(598, 184);
             this.tBoxAddCantidadP.Name = "tBoxAddCantidadP";
             this.tBoxAddCantidadP.Size = new System.Drawing.Size(206, 26);
             this.tBoxAddCantidadP.TabIndex = 75;
             this.tBoxAddCantidadP.Text = "0";
             this.tBoxAddCantidadP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBoxAddCantidadP_KeyPress);
-            // 
-            // tBoxAddMoneda
-            // 
-            this.tBoxAddMoneda.BackColor = System.Drawing.SystemColors.Window;
-            this.tBoxAddMoneda.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBoxAddMoneda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.tBoxAddMoneda.Location = new System.Drawing.Point(598, 181);
-            this.tBoxAddMoneda.Name = "tBoxAddMoneda";
-            this.tBoxAddMoneda.Size = new System.Drawing.Size(206, 26);
-            this.tBoxAddMoneda.TabIndex = 74;
             // 
             // tBoxAddCostoP
             // 
@@ -168,23 +156,11 @@
             this.lblAddCantidad.AutoSize = true;
             this.lblAddCantidad.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddCantidad.ForeColor = System.Drawing.Color.DarkOrange;
-            this.lblAddCantidad.Location = new System.Drawing.Point(507, 229);
+            this.lblAddCantidad.Location = new System.Drawing.Point(507, 187);
             this.lblAddCantidad.Name = "lblAddCantidad";
             this.lblAddCantidad.Size = new System.Drawing.Size(76, 18);
             this.lblAddCantidad.TabIndex = 69;
             this.lblAddCantidad.Text = "Cantidad:";
-            // 
-            // lblAddMoneda
-            // 
-            this.lblAddMoneda.AutoSize = true;
-            this.lblAddMoneda.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddMoneda.ForeColor = System.Drawing.Color.DarkOrange;
-            this.lblAddMoneda.Location = new System.Drawing.Point(516, 184);
-            this.lblAddMoneda.Name = "lblAddMoneda";
-            this.lblAddMoneda.Size = new System.Drawing.Size(69, 18);
-            this.lblAddMoneda.TabIndex = 68;
-            this.lblAddMoneda.Text = "Moneda:";
-            this.lblAddMoneda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblAddCosto
             // 
@@ -299,13 +275,11 @@
             this.Controls.Add(this.btnAddAceptarP);
             this.Controls.Add(this.tBoxAddDescripcion);
             this.Controls.Add(this.tBoxAddCantidadP);
-            this.Controls.Add(this.tBoxAddMoneda);
             this.Controls.Add(this.tBoxAddCostoP);
             this.Controls.Add(this.tBoxAddMarca);
             this.Controls.Add(this.tBoxAddClaveF);
             this.Controls.Add(this.tBoxAddClaveP);
             this.Controls.Add(this.lblAddCantidad);
-            this.Controls.Add(this.lblAddMoneda);
             this.Controls.Add(this.lblAddCosto);
             this.Controls.Add(this.lblAddDescripcion);
             this.Controls.Add(this.lblAddCategoriaProducto);
@@ -332,13 +306,11 @@
         private System.Windows.Forms.Button btnAddAceptarP;
         private System.Windows.Forms.TextBox tBoxAddDescripcion;
         private System.Windows.Forms.TextBox tBoxAddCantidadP;
-        private System.Windows.Forms.TextBox tBoxAddMoneda;
         private System.Windows.Forms.TextBox tBoxAddCostoP;
         private System.Windows.Forms.TextBox tBoxAddMarca;
         private System.Windows.Forms.TextBox tBoxAddClaveF;
         private System.Windows.Forms.TextBox tBoxAddClaveP;
         private System.Windows.Forms.Label lblAddCantidad;
-        private System.Windows.Forms.Label lblAddMoneda;
         private System.Windows.Forms.Label lblAddCosto;
         private System.Windows.Forms.Label lblAddDescripcion;
         private System.Windows.Forms.Label lblAddCategoriaProducto;

@@ -38,8 +38,7 @@ namespace WindowsFormsApp1.Views
         {
             Connection connection = new Connection();
             if (tBoxAddClaveP.Text.Equals("") || tBoxAddClaveF.Text.Equals("") || tBoxAddCostoP.Text.Equals("") || tBoxAddMarca.Text.Equals("") 
-                || tBoxAddDescripcion.Text.Equals("") || tBoxAddCantidadP.Text.Equals("") || cBoxAddCategoriaP.Text.Equals("") 
-                || tBoxAddMoneda.Text.Equals(""))
+                || tBoxAddDescripcion.Text.Equals("") || tBoxAddCantidadP.Text.Equals("") || cBoxAddCategoriaP.Text.Equals(""))
             {
                 MessageBox.Show("No se permiten datos vacios","Aviso",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
             }
@@ -51,6 +50,7 @@ namespace WindowsFormsApp1.Views
                 }
                 else
                 {
+                    string pesos = "pesos";
                     connection.AbrirConexion();
                     int idCategoria = connection.IdCategoria("SELECT Id From Categoria WHERE Nombre = '" + cBoxAddCategoriaP.Text + "'");
                     connection.CerrarConexion();
@@ -58,7 +58,7 @@ namespace WindowsFormsApp1.Views
                     int newId = connection.idProducto("SELECT MAX(Id)+1 FROM Producto");
                     connection.CerrarConexion();
                     connection.AbrirConexion();
-                    int filas = connection.ingresarDatos("INSERT INTO Producto (Id,ClaveProducto, ClaveFabricante, Marca, IdCategoria, Descripcion, Costo, Moneda, Cantidad) VALUES ("+newId+",'" + tBoxAddClaveP.Text + "', '" + tBoxAddClaveF.Text + "', '" + tBoxAddMarca.Text + "', " + idCategoria + ", '" + tBoxAddDescripcion.Text + "', " + Convert.ToDouble(tBoxAddCostoP.Text) + ", '" + tBoxAddMoneda.Text + "', " + Convert.ToInt32(tBoxAddCantidadP.Text) + ")");
+                    int filas = connection.ingresarDatos("INSERT INTO Producto (Id,ClaveProducto, ClaveFabricante, Marca, IdCategoria, Descripcion, Costo, Moneda, Cantidad) VALUES ("+newId+",'" + tBoxAddClaveP.Text + "', '" + tBoxAddClaveF.Text + "', '" + tBoxAddMarca.Text + "', " + idCategoria + ", '" + tBoxAddDescripcion.Text + "', " + Convert.ToDouble(tBoxAddCostoP.Text) + ", '"+pesos+"', " + Convert.ToInt32(tBoxAddCantidadP.Text) + ")");
                     if (filas>0)
                     {
                         MessageBox.Show("El producto se agrego correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);

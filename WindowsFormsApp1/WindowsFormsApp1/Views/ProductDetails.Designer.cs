@@ -34,13 +34,11 @@
             this.btnAceptarProduct = new System.Windows.Forms.Button();
             this.tBoxDescripcion = new System.Windows.Forms.TextBox();
             this.tBoxCantidadProd = new System.Windows.Forms.TextBox();
-            this.tBoxMoneda = new System.Windows.Forms.TextBox();
             this.tBoxCostoProducto = new System.Windows.Forms.TextBox();
             this.tBoxMarca = new System.Windows.Forms.TextBox();
             this.tBoxClaveFabricante = new System.Windows.Forms.TextBox();
             this.tBoxClaveProducto = new System.Windows.Forms.TextBox();
             this.lblCantidad = new System.Windows.Forms.Label();
-            this.lblMoneda = new System.Windows.Forms.Label();
             this.lblCosto = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblCategoriaProducto = new System.Windows.Forms.Label();
@@ -73,7 +71,7 @@
             this.btnModificarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnModificarProducto.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificarProducto.ForeColor = System.Drawing.Color.Orange;
-            this.btnModificarProducto.Location = new System.Drawing.Point(675, 283);
+            this.btnModificarProducto.Location = new System.Drawing.Point(675, 256);
             this.btnModificarProducto.Name = "btnModificarProducto";
             this.btnModificarProducto.Size = new System.Drawing.Size(112, 34);
             this.btnModificarProducto.TabIndex = 59;
@@ -89,7 +87,7 @@
             this.btnCancelarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelarProducto.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelarProducto.ForeColor = System.Drawing.Color.Orange;
-            this.btnCancelarProducto.Location = new System.Drawing.Point(675, 363);
+            this.btnCancelarProducto.Location = new System.Drawing.Point(675, 323);
             this.btnCancelarProducto.Name = "btnCancelarProducto";
             this.btnCancelarProducto.Size = new System.Drawing.Size(112, 34);
             this.btnCancelarProducto.TabIndex = 58;
@@ -106,7 +104,7 @@
             this.btnAceptarProduct.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAceptarProduct.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptarProduct.ForeColor = System.Drawing.Color.Orange;
-            this.btnAceptarProduct.Location = new System.Drawing.Point(523, 283);
+            this.btnAceptarProduct.Location = new System.Drawing.Point(523, 256);
             this.btnAceptarProduct.Name = "btnAceptarProduct";
             this.btnAceptarProduct.Size = new System.Drawing.Size(112, 34);
             this.btnAceptarProduct.TabIndex = 57;
@@ -130,22 +128,11 @@
             this.tBoxCantidadProd.Enabled = false;
             this.tBoxCantidadProd.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tBoxCantidadProd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.tBoxCantidadProd.Location = new System.Drawing.Point(602, 226);
+            this.tBoxCantidadProd.Location = new System.Drawing.Point(602, 184);
             this.tBoxCantidadProd.Name = "tBoxCantidadProd";
             this.tBoxCantidadProd.Size = new System.Drawing.Size(206, 26);
             this.tBoxCantidadProd.TabIndex = 55;
             this.tBoxCantidadProd.Text = "0";
-            // 
-            // tBoxMoneda
-            // 
-            this.tBoxMoneda.BackColor = System.Drawing.SystemColors.Window;
-            this.tBoxMoneda.Enabled = false;
-            this.tBoxMoneda.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBoxMoneda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.tBoxMoneda.Location = new System.Drawing.Point(602, 181);
-            this.tBoxMoneda.Name = "tBoxMoneda";
-            this.tBoxMoneda.Size = new System.Drawing.Size(206, 26);
-            this.tBoxMoneda.TabIndex = 54;
             // 
             // tBoxCostoProducto
             // 
@@ -193,23 +180,11 @@
             this.lblCantidad.AutoSize = true;
             this.lblCantidad.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidad.ForeColor = System.Drawing.Color.DarkOrange;
-            this.lblCantidad.Location = new System.Drawing.Point(511, 229);
+            this.lblCantidad.Location = new System.Drawing.Point(511, 187);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(76, 18);
             this.lblCantidad.TabIndex = 49;
             this.lblCantidad.Text = "Cantidad:";
-            // 
-            // lblMoneda
-            // 
-            this.lblMoneda.AutoSize = true;
-            this.lblMoneda.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMoneda.ForeColor = System.Drawing.Color.DarkOrange;
-            this.lblMoneda.Location = new System.Drawing.Point(520, 184);
-            this.lblMoneda.Name = "lblMoneda";
-            this.lblMoneda.Size = new System.Drawing.Size(69, 18);
-            this.lblMoneda.TabIndex = 48;
-            this.lblMoneda.Text = "Moneda:";
-            this.lblMoneda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblCosto
             // 
@@ -320,7 +295,7 @@
             this.btnEliminateProduct.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminateProduct.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminateProduct.ForeColor = System.Drawing.Color.Orange;
-            this.btnEliminateProduct.Location = new System.Drawing.Point(523, 363);
+            this.btnEliminateProduct.Location = new System.Drawing.Point(523, 323);
             this.btnEliminateProduct.Name = "btnEliminateProduct";
             this.btnEliminateProduct.Size = new System.Drawing.Size(112, 34);
             this.btnEliminateProduct.TabIndex = 61;
@@ -341,13 +316,11 @@
             this.Controls.Add(this.btnAceptarProduct);
             this.Controls.Add(this.tBoxDescripcion);
             this.Controls.Add(this.tBoxCantidadProd);
-            this.Controls.Add(this.tBoxMoneda);
             this.Controls.Add(this.tBoxCostoProducto);
             this.Controls.Add(this.tBoxMarca);
             this.Controls.Add(this.tBoxClaveFabricante);
             this.Controls.Add(this.tBoxClaveProducto);
             this.Controls.Add(this.lblCantidad);
-            this.Controls.Add(this.lblMoneda);
             this.Controls.Add(this.lblCosto);
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblCategoriaProducto);
@@ -375,13 +348,11 @@
         private System.Windows.Forms.Button btnAceptarProduct;
         private System.Windows.Forms.TextBox tBoxDescripcion;
         private System.Windows.Forms.TextBox tBoxCantidadProd;
-        private System.Windows.Forms.TextBox tBoxMoneda;
         private System.Windows.Forms.TextBox tBoxCostoProducto;
         private System.Windows.Forms.TextBox tBoxMarca;
         private System.Windows.Forms.TextBox tBoxClaveFabricante;
         private System.Windows.Forms.TextBox tBoxClaveProducto;
         private System.Windows.Forms.Label lblCantidad;
-        private System.Windows.Forms.Label lblMoneda;
         private System.Windows.Forms.Label lblCosto;
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Label lblCategoriaProducto;

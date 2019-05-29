@@ -31,7 +31,7 @@ namespace WindowsFormsApp1.Views
             cBoxCategoriaProd.ValueMember = "Id";
             cBoxCategoriaProd.DataSource = dt;
             connection.AbrirConexion();
-            SqlDataReader dataReader = connection.consulta("SELECT ClaveProducto AS Clave, ClaveFabricante AS Fabricante, Marca, Categoria.Nombre AS Categoria, Descripcion, Costo, Moneda, Cantidad from Producto INNER JOIN Categoria ON Producto.IdCategoria = Categoria.Id WHERE ClaveProducto ='" + clave + "'");
+            SqlDataReader dataReader = connection.consulta("SELECT ClaveProducto AS Clave, ClaveFabricante AS Fabricante, Marca, Categoria.Nombre AS Categoria, Descripcion, Costo, Cantidad from Producto INNER JOIN Categoria ON Producto.IdCategoria = Categoria.Id WHERE ClaveProducto ='" + clave + "'");
             if (dataReader.Read())
             {
                 tBoxClaveProducto.Text = Convert.ToString(dataReader["Clave"]);
@@ -40,7 +40,6 @@ namespace WindowsFormsApp1.Views
                 cBoxCategoriaProd.Text = Convert.ToString(dataReader["Categoria"]);
                 tBoxDescripcion.Text = Convert.ToString(dataReader["Descripcion"]);
                 tBoxCostoProducto.Text = Convert.ToString(dataReader["Costo"]);
-                tBoxMoneda.Text = Convert.ToString(dataReader["Moneda"]);
                 tBoxCantidadProd.Text = Convert.ToString(dataReader["Cantidad"]);
             }
             claveProducto = clave;
@@ -66,7 +65,7 @@ namespace WindowsFormsApp1.Views
                 if (result == DialogResult.Yes)
                 {
                     if (tBoxClaveProducto.Text.Equals("") || tBoxClaveFabricante.Text.Equals("") || tBoxMarca.Text.Equals("")
-                        || cBoxCategoriaProd.Text.Equals("") || tBoxDescripcion.Text.Equals("") || tBoxMoneda.Text.Equals(""))
+                        || cBoxCategoriaProd.Text.Equals("") || tBoxDescripcion.Text.Equals(""))
                     {
                         MessageBox.Show("Favor de no dejar datos vacios", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -79,7 +78,7 @@ namespace WindowsFormsApp1.Views
                         else
                         {
                             int idCategoria = connection.IdCategoria("SELECT Id From Categoria WHERE Nombre='" + cBoxCategoriaProd.Text + "'");
-                            connection.actualizarDatos("UPDATE Producto SET ClaveProducto='" + tBoxClaveProducto.Text + "', ClaveFabricante='" + tBoxClaveFabricante.Text + "', Marca='" + tBoxMarca.Text + "', IdCategoria=" + idCategoria + ", Descripcion='" + tBoxDescripcion.Text + "', Costo=" + Convert.ToDouble(tBoxCostoProducto.Text) + ", Moneda='" + tBoxMoneda.Text + "', Cantidad=" + Convert.ToInt32(tBoxCantidadProd.Text) + " WHERE ClaveProducto = '" + claveProducto + "'");
+                            connection.actualizarDatos("UPDATE Producto SET ClaveProducto='" + tBoxClaveProducto.Text + "', ClaveFabricante='" + tBoxClaveFabricante.Text + "', Marca='" + tBoxMarca.Text + "', IdCategoria=" + idCategoria + ", Descripcion='" + tBoxDescripcion.Text + "', Costo=" + Convert.ToDouble(tBoxCostoProducto.Text) + ", Cantidad=" + Convert.ToInt32(tBoxCantidadProd.Text) + " WHERE ClaveProducto = '" + claveProducto + "'");
                             MessageBox.Show("Los datos se actualizaron correctamente");
                             btnAceptarProduct.Text = "Aceptar";
                             btnCancelarProducto.Visible = false;
@@ -89,7 +88,6 @@ namespace WindowsFormsApp1.Views
                             cBoxCategoriaProd.Enabled = false;
                             tBoxDescripcion.Enabled = false;
                             tBoxCostoProducto.Enabled = false;
-                            tBoxMoneda.Enabled = false;
                             tBoxCantidadProd.Enabled = false;
                         }
                     }
@@ -109,7 +107,6 @@ namespace WindowsFormsApp1.Views
             cBoxCategoriaProd.Enabled = true;
             tBoxDescripcion.Enabled = true;
             tBoxCostoProducto.Enabled = true;
-            tBoxMoneda.Enabled = true;
             tBoxCantidadProd.Enabled = true;
         }
 
@@ -127,11 +124,10 @@ namespace WindowsFormsApp1.Views
                 cBoxCategoriaProd.Enabled = false;
                 tBoxDescripcion.Enabled = false;
                 tBoxCostoProducto.Enabled = false;
-                tBoxMoneda.Enabled = false;
                 tBoxCantidadProd.Enabled = false;
                 btnEliminateProduct.Visible = true;
                 connection.AbrirConexion();
-                SqlDataReader dataReader = connection.consulta("SELECT ClaveProducto AS Clave, ClaveFabricante AS Fabricante, Marca, Categoria.Nombre AS Categoria, Descripcion, Costo, Moneda, Cantidad from Producto INNER JOIN Categoria ON Producto.IdCategoria = Categoria.Id WHERE ClaveProducto ='" + claveProducto + "'");
+                SqlDataReader dataReader = connection.consulta("SELECT ClaveProducto AS Clave, ClaveFabricante AS Fabricante, Marca, Categoria.Nombre AS Categoria, Descripcion, Costo, Cantidad from Producto INNER JOIN Categoria ON Producto.IdCategoria = Categoria.Id WHERE ClaveProducto ='" + claveProducto + "'");
                 if (dataReader.Read())
                 {
                     tBoxClaveProducto.Text = Convert.ToString(dataReader["Clave"]);
@@ -140,7 +136,6 @@ namespace WindowsFormsApp1.Views
                     cBoxCategoriaProd.Text = Convert.ToString(dataReader["Categoria"]);
                     tBoxDescripcion.Text = Convert.ToString(dataReader["Descripcion"]);
                     tBoxCostoProducto.Text = Convert.ToString(dataReader["Costo"]);
-                    tBoxMoneda.Text = Convert.ToString(dataReader["Moneda"]);
                     tBoxCantidadProd.Text = Convert.ToString(dataReader["Cantidad"]);
                 }
                 connection.CerrarConexion();
