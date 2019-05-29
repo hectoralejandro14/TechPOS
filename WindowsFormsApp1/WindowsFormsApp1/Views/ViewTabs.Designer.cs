@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewTabs));
             this.tabPuntoVenta = new System.Windows.Forms.TabControl();
             this.tabVenta = new System.Windows.Forms.TabPage();
-            this.HoraMinutoSegundo = new System.Windows.Forms.Label();
             this.pVenta = new System.Windows.Forms.Panel();
             this.pBoxVenta = new System.Windows.Forms.PictureBox();
+            this.HoraMinutoSegundo = new System.Windows.Forms.Label();
             this.ClblCodigoDeBarras = new System.Windows.Forms.Label();
             this.CNombreUsuarioLblVenta = new System.Windows.Forms.Label();
             this.totalTbxVenta = new System.Windows.Forms.TextBox();
@@ -172,6 +172,8 @@
             this.clienteTableAdapter = new WindowsFormsApp1.TechPOSdbDataSetTableAdapters.ClienteTableAdapter();
             this.Tiempo = new System.Windows.Forms.Timer(this.components);
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.txtCantidadVenta = new System.Windows.Forms.TextBox();
+            this.lblCantidadPVenta = new System.Windows.Forms.Label();
             this.tabPuntoVenta.SuspendLayout();
             this.tabVenta.SuspendLayout();
             this.pVenta.SuspendLayout();
@@ -243,6 +245,8 @@
             // tabVenta
             // 
             this.tabVenta.BackColor = System.Drawing.Color.LightGray;
+            this.tabVenta.Controls.Add(this.lblCantidadPVenta);
+            this.tabVenta.Controls.Add(this.txtCantidadVenta);
             this.tabVenta.Controls.Add(this.pVenta);
             this.tabVenta.Controls.Add(this.ClblCodigoDeBarras);
             this.tabVenta.Controls.Add(this.CNombreUsuarioLblVenta);
@@ -263,17 +267,6 @@
             this.tabVenta.Size = new System.Drawing.Size(1328, 669);
             this.tabVenta.TabIndex = 0;
             this.tabVenta.Text = "Venta (F1)";
-            // 
-            // HoraMinutoSegundo
-            // 
-            this.HoraMinutoSegundo.AutoSize = true;
-            this.HoraMinutoSegundo.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HoraMinutoSegundo.ForeColor = System.Drawing.Color.Orange;
-            this.HoraMinutoSegundo.Location = new System.Drawing.Point(1075, 40);
-            this.HoraMinutoSegundo.Name = "HoraMinutoSegundo";
-            this.HoraMinutoSegundo.Size = new System.Drawing.Size(154, 41);
-            this.HoraMinutoSegundo.TabIndex = 21;
-            this.HoraMinutoSegundo.Text = "00:00:00";
             // 
             // pVenta
             // 
@@ -296,14 +289,25 @@
             this.pBoxVenta.TabIndex = 1;
             this.pBoxVenta.TabStop = false;
             // 
+            // HoraMinutoSegundo
+            // 
+            this.HoraMinutoSegundo.AutoSize = true;
+            this.HoraMinutoSegundo.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HoraMinutoSegundo.ForeColor = System.Drawing.Color.Orange;
+            this.HoraMinutoSegundo.Location = new System.Drawing.Point(1075, 40);
+            this.HoraMinutoSegundo.Name = "HoraMinutoSegundo";
+            this.HoraMinutoSegundo.Size = new System.Drawing.Size(154, 41);
+            this.HoraMinutoSegundo.TabIndex = 21;
+            this.HoraMinutoSegundo.Text = "00:00:00";
+            // 
             // ClblCodigoDeBarras
             // 
             this.ClblCodigoDeBarras.AutoSize = true;
             this.ClblCodigoDeBarras.Location = new System.Drawing.Point(187, 53);
             this.ClblCodigoDeBarras.Name = "ClblCodigoDeBarras";
-            this.ClblCodigoDeBarras.Size = new System.Drawing.Size(173, 34);
+            this.ClblCodigoDeBarras.Size = new System.Drawing.Size(178, 34);
             this.ClblCodigoDeBarras.TabIndex = 19;
-            this.ClblCodigoDeBarras.Text = "Codigo de Producto";
+            this.ClblCodigoDeBarras.Text = "Codigo de Producto:";
             // 
             // CNombreUsuarioLblVenta
             // 
@@ -617,7 +621,7 @@
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.33448F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.66552F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 92F));
-            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 246F));
+            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 247F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 230F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 224F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.33448F));
@@ -660,14 +664,14 @@
             this.txtMarca.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMarca.Location = new System.Drawing.Point(210, 3);
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(373, 34);
+            this.txtMarca.Size = new System.Drawing.Size(372, 34);
             this.txtMarca.TabIndex = 23;
             // 
             // SlblModelo
             // 
             this.SlblModelo.AutoSize = true;
             this.SlblModelo.ForeColor = System.Drawing.Color.Black;
-            this.SlblModelo.Location = new System.Drawing.Point(589, 0);
+            this.SlblModelo.Location = new System.Drawing.Point(588, 0);
             this.SlblModelo.Name = "SlblModelo";
             this.SlblModelo.Size = new System.Drawing.Size(82, 34);
             this.SlblModelo.TabIndex = 19;
@@ -681,14 +685,14 @@
             this.ccbTipoServicio1.IntegralHeight = false;
             this.ccbTipoServicio1.Location = new System.Drawing.Point(210, 46);
             this.ccbTipoServicio1.Name = "ccbTipoServicio1";
-            this.ccbTipoServicio1.Size = new System.Drawing.Size(373, 42);
+            this.ccbTipoServicio1.Size = new System.Drawing.Size(372, 42);
             this.ccbTipoServicio1.TabIndex = 46;
             this.ccbTipoServicio1.SelectedIndexChanged += new System.EventHandler(this.ccbTipoServicio1_SelectedIndexChanged);
             // 
             // txtModelo
             // 
             this.txtModelo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModelo.Location = new System.Drawing.Point(681, 3);
+            this.txtModelo.Location = new System.Drawing.Point(680, 3);
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(220, 34);
             this.txtModelo.TabIndex = 24;
@@ -718,7 +722,7 @@
             this.txtDescripcionDeFalla.Location = new System.Drawing.Point(210, 100);
             this.txtDescripcionDeFalla.Multiline = true;
             this.txtDescripcionDeFalla.Name = "txtDescripcionDeFalla";
-            this.txtDescripcionDeFalla.Size = new System.Drawing.Size(373, 37);
+            this.txtDescripcionDeFalla.Size = new System.Drawing.Size(372, 37);
             this.txtDescripcionDeFalla.TabIndex = 25;
             // 
             // SbtnNuevoServicioRE
@@ -726,7 +730,7 @@
             this.SbtnNuevoServicioRE.BackColor = System.Drawing.Color.DimGray;
             this.SbtnNuevoServicioRE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SbtnNuevoServicioRE.ForeColor = System.Drawing.Color.Turquoise;
-            this.SbtnNuevoServicioRE.Location = new System.Drawing.Point(681, 46);
+            this.SbtnNuevoServicioRE.Location = new System.Drawing.Point(680, 46);
             this.SbtnNuevoServicioRE.Name = "SbtnNuevoServicioRE";
             this.SbtnNuevoServicioRE.Size = new System.Drawing.Size(220, 37);
             this.SbtnNuevoServicioRE.TabIndex = 47;
@@ -867,7 +871,7 @@
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.95349F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.04651F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
-            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 300F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 301F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 278F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.95349F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.04651F));
@@ -917,7 +921,7 @@
             this.txtNombre.ImeMode = System.Windows.Forms.ImeMode.On;
             this.txtNombre.Location = new System.Drawing.Point(99, 3);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(300, 34);
+            this.txtNombre.Size = new System.Drawing.Size(299, 34);
             this.txtNombre.TabIndex = 40;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
@@ -938,7 +942,7 @@
             this.txtApellido.ImeMode = System.Windows.Forms.ImeMode.On;
             this.txtApellido.Location = new System.Drawing.Point(99, 51);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(300, 34);
+            this.txtApellido.Size = new System.Drawing.Size(299, 34);
             this.txtApellido.TabIndex = 41;
             this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
@@ -946,7 +950,7 @@
             // 
             this.SlblTelefono.AutoSize = true;
             this.SlblTelefono.ForeColor = System.Drawing.Color.Black;
-            this.SlblTelefono.Location = new System.Drawing.Point(405, 0);
+            this.SlblTelefono.Location = new System.Drawing.Point(404, 0);
             this.SlblTelefono.Name = "SlblTelefono";
             this.SlblTelefono.Size = new System.Drawing.Size(89, 48);
             this.SlblTelefono.TabIndex = 5;
@@ -956,7 +960,7 @@
             // 
             this.SlblCorreo.AutoSize = true;
             this.SlblCorreo.ForeColor = System.Drawing.Color.Black;
-            this.SlblCorreo.Location = new System.Drawing.Point(405, 48);
+            this.SlblCorreo.Location = new System.Drawing.Point(404, 48);
             this.SlblCorreo.Name = "SlblCorreo";
             this.SlblCorreo.Size = new System.Drawing.Size(84, 34);
             this.SlblCorreo.TabIndex = 6;
@@ -966,7 +970,7 @@
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.txtTelefono.Location = new System.Drawing.Point(503, 3);
+            this.txtTelefono.Location = new System.Drawing.Point(502, 3);
             this.txtTelefono.MaxLength = 10;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(266, 34);
@@ -978,7 +982,7 @@
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.txtCorreo.Location = new System.Drawing.Point(503, 51);
+            this.txtCorreo.Location = new System.Drawing.Point(502, 51);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(266, 34);
             this.txtCorreo.TabIndex = 39;
@@ -1155,10 +1159,10 @@
             // 
             // JtxtBuscar2
             // 
-            this.JtxtBuscar2.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.JtxtBuscar2.Location = new System.Drawing.Point(610, 33);
+            this.JtxtBuscar2.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.JtxtBuscar2.Location = new System.Drawing.Point(615, 33);
             this.JtxtBuscar2.Name = "JtxtBuscar2";
-            this.JtxtBuscar2.Size = new System.Drawing.Size(289, 34);
+            this.JtxtBuscar2.Size = new System.Drawing.Size(289, 32);
             this.JtxtBuscar2.TabIndex = 10;
             this.JtxtBuscar2.TextChanged += new System.EventHandler(this.JtxtBuscar2_TextChanged);
             this.JtxtBuscar2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.JtxtBuscar2_KeyPress);
@@ -1230,9 +1234,9 @@
             this.JlblBuscar.AutoSize = true;
             this.JlblBuscar.Location = new System.Drawing.Point(533, 33);
             this.JlblBuscar.Name = "JlblBuscar";
-            this.JlblBuscar.Size = new System.Drawing.Size(71, 34);
+            this.JlblBuscar.Size = new System.Drawing.Size(76, 34);
             this.JlblBuscar.TabIndex = 1;
-            this.JlblBuscar.Text = "Buscar";
+            this.JlblBuscar.Text = "Buscar:";
             // 
             // tabConfiguracionesDeUsuario
             // 
@@ -1561,14 +1565,14 @@
             this.dgClientes.AllowUserToDeleteRows = false;
             this.dgClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgClientes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgClientes.Location = new System.Drawing.Point(189, 89);
             this.dgClientes.Name = "dgClientes";
@@ -1773,6 +1777,23 @@
             this.pictureBox3.TabIndex = 21;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // txtCantidadVenta
+            // 
+            this.txtCantidadVenta.Location = new System.Drawing.Point(895, 50);
+            this.txtCantidadVenta.Name = "txtCantidadVenta";
+            this.txtCantidadVenta.Size = new System.Drawing.Size(146, 41);
+            this.txtCantidadVenta.TabIndex = 56;
+            this.txtCantidadVenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCantidadVenta_KeyPress);
+            // 
+            // lblCantidadPVenta
+            // 
+            this.lblCantidadPVenta.AutoSize = true;
+            this.lblCantidadPVenta.Location = new System.Drawing.Point(788, 53);
+            this.lblCantidadPVenta.Name = "lblCantidadPVenta";
+            this.lblCantidadPVenta.Size = new System.Drawing.Size(91, 34);
+            this.lblCantidadPVenta.TabIndex = 57;
+            this.lblCantidadPVenta.Text = "Cantidad:";
             // 
             // ViewTabs
             // 
@@ -2024,6 +2045,8 @@
         private System.Windows.Forms.Panel pVenta;
         private System.Windows.Forms.PictureBox pBoxVenta;
         private System.Windows.Forms.DataGridView tableOrdenes;
+        private System.Windows.Forms.Label lblCantidadPVenta;
+        private System.Windows.Forms.TextBox txtCantidadVenta;
         //  private System.Windows.Forms.TextBox textBox1;
         //private System.Windows.Forms.Label UnaLabel;
         //  private System.Windows.Forms.Label label5;

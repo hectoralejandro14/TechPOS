@@ -1034,12 +1034,19 @@ namespace WindowsFormsApp1.Views
             {
                 if (!JtxtBuscar2.Text.Equals(""))
                 {
-                    connection.AbrirConexion();
-                    string nomCliente = connection.BuscarCliente("SELECT Nombre FROM Cliente WHERE Nombre = '" + JtxtBuscar2.Text + "'");
-                    connection.CerrarConexion();
-                    connection.AbrirConexion();
-                    CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id where Cliente.Nombre LIKE '%" + nomCliente + "%'");
-                    connection.CerrarConexion();
+                    try
+                    {
+                        connection.AbrirConexion();
+                        string nomCliente = connection.BuscarCliente("SELECT Nombre FROM Cliente WHERE Nombre LIKE '%" + JtxtBuscar2.Text + "%'");
+                        connection.CerrarConexion();
+                        connection.AbrirConexion();
+                        CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id where Cliente.Nombre LIKE '%" + nomCliente + "%'");
+                        connection.CerrarConexion();
+                    }
+                    catch (Exception)
+                    {
+
+                    }
                 }
             }
         }
@@ -1223,33 +1230,10 @@ namespace WindowsFormsApp1.Views
 
             if ((int)e.KeyChar == (int)Keys.Enter)
             {
-                string cadena = "Data Source=.\\SQLEXPRESS;Initial Catalog=TechPOSdb; Integrated Security=True";
-                SqlConnection conexion = new SqlConnection(cadena);
-                conexion.Open();
-                SqlCommand cmd = new SqlCommand("select * from Producto where ClaveProducto='" + buscarTbxVentas.Text + "'", conexion);
-                SqlDataReader dr = cmd.ExecuteReader();
-                DataRow row = dtVenta.NewRow();
-                tableVender.DataSource = dtVenta;
-                //---------------------------------
-                if (dr.Read())
+                if (txtCantidadVenta.Text.Equals(""))
                 {
-                    double price = Convert.ToDouble(Convert.ToString(dr["Costo"]));
-                    double subtotal = Convert.ToDouble(subTotalTbxVentas.Text) + (Convert.ToDouble(Convert.ToString("2")) * price);
-                    double iva = Convert.ToDouble(((subtotal * 16) / 100));
-                    row["cod"] = Convert.ToString(dr["ClaveProducto"]);
-                    row["des"] = Convert.ToString(dr["Descripcion"]);
-                    row["preciou"] = Convert.ToString(dr["Costo"]);
-                    row["cant"] = Convert.ToString("2");
-                    row["preciot"] = Convert.ToString(Convert.ToDouble(Convert.ToString("2")) * price);
-                    //MessageBox.Show(Convert.ToString(dr["Costo"]));
-                    dtVenta.Rows.Add(row);
-                    subTotalTbxVentas.Text = Convert.ToString(subtotal);
-                    ivaTbxVentas.Text = Convert.ToString(iva);
-                    totalTbxVenta.Text = Convert.ToString(subtotal + iva);
-
-
+                    MessageBox.Show("No se ingreso cantidad");
                 }
-                conexion.Close();
             }
         }
 
@@ -1445,6 +1429,47 @@ namespace WindowsFormsApp1.Views
             subTotalTbxVentas.Text = Convert.ToString(subtotal);
             ivaTbxVentas.Text = Convert.ToString(iva);
             totalTbxVenta.Text = Convert.ToString(subtotal + iva);
+        }
+
+        private void TxtCantidadVenta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                if (buscarTbxVentas.Text.Equals(""))
+                {
+                    MessageBox.Show("No se ingreso cantidad");
+                }
+                else
+                {
+                    string cadena = "Data Source=.\\SQLEXPRESS;Initial Catalog=TechPOSdb; Integrated Security=True";
+                    SqlConnection conexion = new SqlConnection(cadena);
+                    conexion.Open();
+                    SqlCommand cmd = new SqlCommand("select * from Producto where ClaveProducto='" + buscarTbxVentas.Text + "'", conexion);
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    DataRow row = dtVenta.NewRow();
+                    tableVender.DataSource = dtVenta;
+                    //---------------------------------
+                    if (dr.Read())
+                    {
+                        double price = Convert.ToDouble(Convert.ToString(dr["Costo"]));
+                        double subtotal = Convert.ToDouble(subTotalTbxVentas.Text) + (Convert.ToDouble(Convert.ToString("2")) * price);
+                        double iva = Convert.ToDouble(((subtotal * 16) / 100));
+                        row["cod"] = Convert.ToString(dr["ClaveProducto"]);
+                        row["des"] = Convert.ToString(dr["Descripcion"]);
+                        row["preciou"] = Convert.ToString(dr["Costo"]);
+                        row["cant"] = Convert.ToString("2");
+                        row["preciot"] = Convert.ToString(Convert.ToDouble(Convert.ToString("2")) * price);
+                        //MessageBox.Show(Convert.ToString(dr["Costo"]));
+                        dtVenta.Rows.Add(row);
+                        subTotalTbxVentas.Text = Convert.ToString(subtotal);
+                        ivaTbxVentas.Text = Convert.ToString(iva);
+                        totalTbxVenta.Text = Convert.ToString(subtotal + iva);
+
+
+                    }
+                    conexion.Close();
+                }
+            }
         }
     }
 }
