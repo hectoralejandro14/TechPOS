@@ -61,6 +61,7 @@ namespace WindowsFormsApp1.Views
                         consultaSeleccionarCliente();
                         btnAceptarCliente.Text="Aceptar";
                         inhabilitarTxtBox();
+                        this.Hide();
                     }
                     else
                     {

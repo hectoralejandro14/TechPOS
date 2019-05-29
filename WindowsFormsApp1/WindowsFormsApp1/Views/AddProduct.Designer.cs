@@ -69,7 +69,7 @@
             this.btnAddCancelarP.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnAddCancelarP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddCancelarP.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddCancelarP.ForeColor = System.Drawing.Color.Orange;
+            this.btnAddCancelarP.ForeColor = System.Drawing.Color.DarkOrange;
             this.btnAddCancelarP.Location = new System.Drawing.Point(598, 359);
             this.btnAddCancelarP.Name = "btnAddCancelarP";
             this.btnAddCancelarP.Size = new System.Drawing.Size(112, 34);
@@ -85,7 +85,7 @@
             this.btnAddAceptarP.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnAddAceptarP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddAceptarP.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddAceptarP.ForeColor = System.Drawing.Color.Orange;
+            this.btnAddAceptarP.ForeColor = System.Drawing.Color.DarkOrange;
             this.btnAddAceptarP.Location = new System.Drawing.Point(598, 289);
             this.btnAddAceptarP.Name = "btnAddAceptarP";
             this.btnAddAceptarP.Size = new System.Drawing.Size(112, 34);
@@ -113,6 +113,7 @@
             this.tBoxAddCantidadP.Size = new System.Drawing.Size(206, 26);
             this.tBoxAddCantidadP.TabIndex = 75;
             this.tBoxAddCantidadP.Text = "0";
+            this.tBoxAddCantidadP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBoxAddCantidadP_KeyPress);
             // 
             // tBoxAddMoneda
             // 
@@ -133,6 +134,7 @@
             this.tBoxAddCostoP.Size = new System.Drawing.Size(206, 26);
             this.tBoxAddCostoP.TabIndex = 73;
             this.tBoxAddCostoP.Text = "0";
+            this.tBoxAddCostoP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBoxAddCostoP_KeyPress);
             // 
             // tBoxAddMarca
             // 
@@ -279,7 +281,7 @@
             this.lblAddProduct.AutoSize = true;
             this.lblAddProduct.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddProduct.ForeColor = System.Drawing.Color.DarkOrange;
-            this.lblAddProduct.Location = new System.Drawing.Point(311, 9);
+            this.lblAddProduct.Location = new System.Drawing.Point(332, 20);
             this.lblAddProduct.Name = "lblAddProduct";
             this.lblAddProduct.Size = new System.Drawing.Size(227, 32);
             this.lblAddProduct.TabIndex = 80;
@@ -289,7 +291,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(828, 450);
             this.Controls.Add(this.lblAddProduct);
             this.Controls.Add(this.cBoxAddCategoriaP);
@@ -313,7 +315,6 @@
             this.Controls.Add(this.PAddProducts);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddProduct";
-            this.Opacity = 0.9D;
             this.Text = "AddProduct";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AddProduct_MouseDown);
             this.PAddProducts.ResumeLayout(false);

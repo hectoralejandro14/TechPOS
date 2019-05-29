@@ -49,10 +49,10 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.txtUsuario.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.ForeColor = System.Drawing.Color.DimGray;
+            this.txtUsuario.ForeColor = System.Drawing.Color.DarkOrange;
             this.txtUsuario.HideSelection = false;
             this.txtUsuario.Location = new System.Drawing.Point(296, 59);
             this.txtUsuario.Name = "txtUsuario";
@@ -107,10 +107,10 @@
             // 
             // txtContrasena
             // 
-            this.txtContrasena.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.txtContrasena.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtContrasena.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContrasena.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContrasena.ForeColor = System.Drawing.Color.DimGray;
+            this.txtContrasena.ForeColor = System.Drawing.Color.DarkOrange;
             this.txtContrasena.HideSelection = false;
             this.txtContrasena.Location = new System.Drawing.Point(296, 132);
             this.txtContrasena.Name = "txtContrasena";
@@ -125,7 +125,7 @@
             // 
             this.SlbTituloLogin.AutoSize = true;
             this.SlbTituloLogin.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SlbTituloLogin.ForeColor = System.Drawing.Color.DimGray;
+            this.SlbTituloLogin.ForeColor = System.Drawing.Color.DarkOrange;
             this.SlbTituloLogin.Location = new System.Drawing.Point(473, 9);
             this.SlbTituloLogin.Name = "SlbTituloLogin";
             this.SlbTituloLogin.Size = new System.Drawing.Size(81, 32);
@@ -134,14 +134,14 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnAceptar.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnAceptar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAceptar.FlatAppearance.BorderSize = 0;
             this.btnAceptar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.btnAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.ForeColor = System.Drawing.Color.Orange;
+            this.btnAceptar.ForeColor = System.Drawing.Color.DarkOrange;
             this.btnAceptar.Location = new System.Drawing.Point(296, 200);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(454, 40);
@@ -208,7 +208,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(780, 330);
             this.Controls.Add(this.SlLNuevoUsuarioL);
             this.Controls.Add(this.btnMinimizarAplicacion);

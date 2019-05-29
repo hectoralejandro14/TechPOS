@@ -10,7 +10,7 @@ namespace WindowsFormsApp1.DBConnectio
 
         private string cadena = "Data Source=.\\SQLEXPRESS;Initial Catalog=TechPOSdb; Integrated Security=True";
         //private string cadena = "Data Source=DESKTOP-4U4TDTF;Initial Catalog=TechPOSdb; Integrated Security=True";
-
+        
         //private string cadena = "Data Source=.\\SQLEXPRESS;Initial Catalog=TechPOSdb; Integrated Security=True";
         //private string cadena = "Data Source=DESKTOP-4U4TDTF;Initial Catalog=TechPOSdb; Integrated Security=True";
         private SqlConnection conexion = new SqlConnection();
@@ -400,7 +400,26 @@ namespace WindowsFormsApp1.DBConnectio
             table = dataSet.Tables[0];
             return table;
         }
-        public int AgregarCancelacion(string cadena, decimal Id, string datos, string fecha, string IdU, int IdV)
+
+        public string BuscarCliente(string sql)
+        {
+            string nomCliente = "";
+            SqlCommand sqlCommand = new SqlCommand(sql, conexion);
+            sqlCommand.CommandType = CommandType.Text;
+            nomCliente = sqlCommand.ExecuteScalar().ToString();
+            return nomCliente;
+        }
+
+        public int ingresarDatos(string sql)
+        {
+            SqlCommand sqlCommand;
+            int filas = 0;
+            sqlCommand = new SqlCommand(sql, conexion);
+            sqlCommand.CommandType = CommandType.Text;
+            filas = sqlCommand.ExecuteNonQuery();
+            return filas;
+        }
+        public int AgregarCancelacion(string cadena, decimal Id, string datos, string fecha,int IdU,int IdV)
         {
             int modificacion = 0;
             //try
@@ -450,6 +469,24 @@ namespace WindowsFormsApp1.DBConnectio
             return cambios;
         }
 
+
+
+            return id;
+        }
+
+        public int idProducto(string sql)
+        {
+            int id = 0;
+            SqlCommand sqlCommand = new SqlCommand(sql, conexion);
+            sqlCommand.CommandType = CommandType.Text;
+            try
+            {
+                id = Convert.ToInt32(sqlCommand.ExecuteScalar());
+            }
+            catch (InvalidCastException)
+            {
+            }
+            return id;
         public bool ExisteCorreo(string query,string correo_ingresado)
         {
             bool aux = false;

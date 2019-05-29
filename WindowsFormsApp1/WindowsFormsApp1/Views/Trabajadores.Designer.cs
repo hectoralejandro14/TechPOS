@@ -38,16 +38,18 @@
             this.comboTrabajador = new System.Windows.Forms.ComboBox();
             this.dateTiempo = new System.Windows.Forms.DateTimePicker();
             this.btncerrar = new System.Windows.Forms.Button();
+            this.TrabajadoresPnl = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTrabajadores)).BeginInit();
+            this.TrabajadoresPnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // picLogo
             // 
             this.picLogo.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
-            this.picLogo.Location = new System.Drawing.Point(-1, -1);
+            this.picLogo.Location = new System.Drawing.Point(14, 11);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(68, 106);
+            this.picLogo.Size = new System.Drawing.Size(89, 133);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLogo.TabIndex = 0;
             this.picLogo.TabStop = false;
@@ -57,6 +59,7 @@
             // 
             this.labelTrabajador.AutoSize = true;
             this.labelTrabajador.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.labelTrabajador.ForeColor = System.Drawing.Color.DarkOrange;
             this.labelTrabajador.Location = new System.Drawing.Point(204, 43);
             this.labelTrabajador.Name = "labelTrabajador";
             this.labelTrabajador.Size = new System.Drawing.Size(106, 34);
@@ -67,7 +70,8 @@
             // 
             this.labelFecha.AutoSize = true;
             this.labelFecha.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.labelFecha.Location = new System.Drawing.Point(216, 121);
+            this.labelFecha.ForeColor = System.Drawing.Color.DarkOrange;
+            this.labelFecha.Location = new System.Drawing.Point(204, 121);
             this.labelFecha.Name = "labelFecha";
             this.labelFecha.Size = new System.Drawing.Size(70, 34);
             this.labelFecha.TabIndex = 2;
@@ -77,6 +81,7 @@
             // 
             this.todo.AutoSize = true;
             this.todo.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
+            this.todo.ForeColor = System.Drawing.Color.DarkOrange;
             this.todo.Location = new System.Drawing.Point(247, 167);
             this.todo.Name = "todo";
             this.todo.Size = new System.Drawing.Size(73, 38);
@@ -91,7 +96,7 @@
             this.dataTrabajadores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-            this.dataTrabajadores.Location = new System.Drawing.Point(153, 211);
+            this.dataTrabajadores.Location = new System.Drawing.Point(210, 211);
             this.dataTrabajadores.Name = "dataTrabajadores";
             this.dataTrabajadores.Size = new System.Drawing.Size(466, 196);
             this.dataTrabajadores.TabIndex = 5;
@@ -126,10 +131,10 @@
             // 
             // btncerrar
             // 
-            this.btncerrar.BackColor = System.Drawing.Color.DimGray;
+            this.btncerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.btncerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btncerrar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.btncerrar.ForeColor = System.Drawing.Color.White;
+            this.btncerrar.ForeColor = System.Drawing.Color.DarkOrange;
             this.btncerrar.Location = new System.Drawing.Point(489, 424);
             this.btncerrar.Name = "btncerrar";
             this.btncerrar.Size = new System.Drawing.Size(90, 39);
@@ -137,12 +142,22 @@
             this.btncerrar.Text = "Cerrar";
             this.btncerrar.UseVisualStyleBackColor = false;
             // 
+            // TrabajadoresPnl
+            // 
+            this.TrabajadoresPnl.BackColor = System.Drawing.Color.DimGray;
+            this.TrabajadoresPnl.Controls.Add(this.picLogo);
+            this.TrabajadoresPnl.Location = new System.Drawing.Point(-2, 1);
+            this.TrabajadoresPnl.Name = "TrabajadoresPnl";
+            this.TrabajadoresPnl.Size = new System.Drawing.Size(142, 475);
+            this.TrabajadoresPnl.TabIndex = 9;
+            // 
             // Trabajadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(713, 475);
+            this.Controls.Add(this.TrabajadoresPnl);
             this.Controls.Add(this.btncerrar);
             this.Controls.Add(this.dateTiempo);
             this.Controls.Add(this.comboTrabajador);
@@ -150,11 +165,11 @@
             this.Controls.Add(this.todo);
             this.Controls.Add(this.labelFecha);
             this.Controls.Add(this.labelTrabajador);
-            this.Controls.Add(this.picLogo);
             this.Name = "Trabajadores";
             this.Text = "Trabajadores";
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTrabajadores)).EndInit();
+            this.TrabajadoresPnl.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,5 +187,6 @@
         private System.Windows.Forms.Button btncerrar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.Panel TrabajadoresPnl;
     }
 }

@@ -78,7 +78,7 @@
             // 
             // txtCorreoCC
             // 
-            this.txtCorreoCC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.txtCorreoCC.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtCorreoCC.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCorreoCC.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreoCC.ForeColor = System.Drawing.Color.DimGray;
@@ -128,7 +128,7 @@
             this.btnVolverCC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnVolverCC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolverCC.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolverCC.ForeColor = System.Drawing.Color.Orange;
+            this.btnVolverCC.ForeColor = System.Drawing.Color.DarkOrange;
             this.btnVolverCC.Location = new System.Drawing.Point(669, 287);
             this.btnVolverCC.Name = "btnVolverCC";
             this.btnVolverCC.Size = new System.Drawing.Size(82, 31);
@@ -136,6 +136,36 @@
             this.btnVolverCC.Text = "Volver";
             this.btnVolverCC.UseVisualStyleBackColor = false;
             this.btnVolverCC.Click += new System.EventHandler(this.btnVolverCC_Click);
+            // 
+            // CCtxtPinSeguridad
+            // 
+            this.CCtxtPinSeguridad.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.CCtxtPinSeguridad.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CCtxtPinSeguridad.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CCtxtPinSeguridad.ForeColor = System.Drawing.Color.DarkOrange;
+            this.CCtxtPinSeguridad.Location = new System.Drawing.Point(297, 67);
+            this.CCtxtPinSeguridad.Name = "CCtxtPinSeguridad";
+            this.CCtxtPinSeguridad.Size = new System.Drawing.Size(454, 19);
+            this.CCtxtPinSeguridad.TabIndex = 21;
+            this.CCtxtPinSeguridad.Text = "Ingrese PIN  de Seguridad";
+            // 
+            // CCbtnAceptarPinSeguridad
+            // 
+            this.CCbtnAceptarPinSeguridad.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.CCbtnAceptarPinSeguridad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CCbtnAceptarPinSeguridad.FlatAppearance.BorderSize = 0;
+            this.CCbtnAceptarPinSeguridad.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.CCbtnAceptarPinSeguridad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.CCbtnAceptarPinSeguridad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CCbtnAceptarPinSeguridad.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CCbtnAceptarPinSeguridad.ForeColor = System.Drawing.Color.DarkOrange;
+            this.CCbtnAceptarPinSeguridad.Location = new System.Drawing.Point(297, 117);
+            this.CCbtnAceptarPinSeguridad.Name = "CCbtnAceptarPinSeguridad";
+            this.CCbtnAceptarPinSeguridad.Size = new System.Drawing.Size(454, 40);
+            this.CCbtnAceptarPinSeguridad.TabIndex = 22;
+            this.CCbtnAceptarPinSeguridad.Text = "Verificar PIN";
+            this.CCbtnAceptarPinSeguridad.UseVisualStyleBackColor = false;
+            this.CCbtnAceptarPinSeguridad.Click += new System.EventHandler(this.CCbtnAceptarPinSeguridad_Click);
             // 
             // lblPinSeguridadCC
             // 
@@ -150,7 +180,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.textBox1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.DimGray;
@@ -196,7 +226,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(780, 330);
             this.Controls.Add(this.StxtNuevaContrasenaUsuario);
             this.Controls.Add(this.SbtnAceptarCambiarContrasena);

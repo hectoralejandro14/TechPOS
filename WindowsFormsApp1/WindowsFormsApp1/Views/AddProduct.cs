@@ -52,12 +52,18 @@ namespace WindowsFormsApp1.Views
                 else
                 {
                     connection.AbrirConexion();
-                    int idCategoria = connection.IdCategoria("SELECT Id From Categoria WHERE Nombre='" + cBoxAddCategoriaP.Text + "'");
+                    int idCategoria = connection.IdCategoria("SELECT Id From Categoria WHERE Nombre = '" + cBoxAddCategoriaP.Text + "'");
                     connection.CerrarConexion();
                     connection.AbrirConexion();
-                    connection.actualizarDatos("INSERT INTO Producto (ClaveProducto, ClaveFabricante, Marca, IdCategoria, Descripcion, Costo, Moneda, Cantidad) VALUES ( ClaveProducto='" + tBoxAddClaveP.Text + "', ClaveFabricante='" + tBoxAddClaveF.Text + "', Marca='" + tBoxAddMarca.Text + "', IdCategoria=" + idCategoria + ", Descripcion='" + tBoxAddDescripcion.Text + "', Costo=" + Convert.ToDouble(tBoxAddCostoP.Text) + ", Moneda='" + tBoxAddMoneda.Text + "', Cantidad=" + Convert.ToInt32(tBoxAddCantidadP.Text) + ")");
-                    MessageBox.Show("El producto se agrego correctamente","Informacion",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                    this.Hide();
+                    int newId = connection.idProducto("SELECT MAX(Id)+1 FROM Producto");
+                    connection.CerrarConexion();
+                    connection.AbrirConexion();
+                    int filas = connection.ingresarDatos("INSERT INTO Producto (Id,ClaveProducto, ClaveFabricante, Marca, IdCategoria, Descripcion, Costo, Moneda, Cantidad) VALUES ("+newId+",'" + tBoxAddClaveP.Text + "', '" + tBoxAddClaveF.Text + "', '" + tBoxAddMarca.Text + "', " + idCategoria + ", '" + tBoxAddDescripcion.Text + "', " + Convert.ToDouble(tBoxAddCostoP.Text) + ", '" + tBoxAddMoneda.Text + "', " + Convert.ToInt32(tBoxAddCantidadP.Text) + ")");
+                    if (filas>0)
+                    {
+                        MessageBox.Show("El producto se agrego correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Hide();
+                    }
                     connection.CerrarConexion();
                 }
             }
@@ -83,6 +89,38 @@ namespace WindowsFormsApp1.Views
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void TBoxAddCostoP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TBoxAddCantidadP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
     }
 }
