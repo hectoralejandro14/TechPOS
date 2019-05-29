@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewTabs));
             this.tabPuntoVenta = new System.Windows.Forms.TabControl();
             this.tabVenta = new System.Windows.Forms.TabPage();
+            this.pVenta = new System.Windows.Forms.Panel();
+            this.pBoxVenta = new System.Windows.Forms.PictureBox();
             this.HoraMinutoSegundo = new System.Windows.Forms.Label();
-            this.ventaLogoCh = new System.Windows.Forms.PictureBox();
             this.ClblCodigoDeBarras = new System.Windows.Forms.Label();
             this.CNombreUsuarioLblVenta = new System.Windows.Forms.Label();
             this.totalTbxVenta = new System.Windows.Forms.TextBox();
@@ -61,6 +62,8 @@
             this.txtAnticipo = new System.Windows.Forms.TextBox();
             this.SlblResponsable = new System.Windows.Forms.Label();
             this.comboResponsable = new System.Windows.Forms.ComboBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.EquipoGbx = new System.Windows.Forms.GroupBox();
             this.LayEquipo = new System.Windows.Forms.TableLayoutPanel();
             this.SlblMarca = new System.Windows.Forms.Label();
@@ -100,11 +103,11 @@
             this.btnPedirPieza = new System.Windows.Forms.Button();
             this.btnAgregrEquipos = new System.Windows.Forms.Button();
             this.btnLimpiarCampos = new System.Windows.Forms.Button();
-            this.recibirLogoCh = new System.Windows.Forms.PictureBox();
             this.tabReparacion = new System.Windows.Forms.TabPage();
+            this.pReparacion = new System.Windows.Forms.Panel();
+            this.pBoxReparacion = new System.Windows.Forms.PictureBox();
             this.refresIconCheno = new System.Windows.Forms.PictureBox();
             this.pBoxBuscarRep = new System.Windows.Forms.PictureBox();
-            this.reparacionLogoCh = new System.Windows.Forms.PictureBox();
             this.JtxtBuscar2 = new System.Windows.Forms.TextBox();
             this.CDGReparacion = new System.Windows.Forms.DataGridView();
             this.CEspera = new System.Windows.Forms.RadioButton();
@@ -113,6 +116,8 @@
             this.JradioTodos = new System.Windows.Forms.RadioButton();
             this.JlblBuscar = new System.Windows.Forms.Label();
             this.tabConfiguracionesDeUsuario = new System.Windows.Forms.TabPage();
+            this.pConfigUsuario = new System.Windows.Forms.Panel();
+            this.pBoxConfUsuario = new System.Windows.Forms.PictureBox();
             this.SgbConfiguraciones = new System.Windows.Forms.GroupBox();
             this.SbtnAgregarNuevoServicioCU = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -127,11 +132,11 @@
             this.StxtRol = new System.Windows.Forms.TextBox();
             this.SlblNombreRol = new System.Windows.Forms.Label();
             this.SbtnGuardarRol = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.ordenesTab = new System.Windows.Forms.TabPage();
-            this.SlblPiezasOrdenadas = new System.Windows.Forms.Label();
             this.tableOrdenes = new System.Windows.Forms.DataGridView();
-            this.ordenesLogoCh = new System.Windows.Forms.PictureBox();
+            this.pOrdenadas = new System.Windows.Forms.Panel();
+            this.pBoxOrdenadas = new System.Windows.Forms.PictureBox();
+            this.SlblPiezasOrdenadas = new System.Windows.Forms.Label();
             this.TabClientes = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -168,33 +173,40 @@
             this.clienteTableAdapter = new WindowsFormsApp1.TechPOSdbDataSetTableAdapters.ClienteTableAdapter();
             this.Tiempo = new System.Windows.Forms.Timer(this.components);
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.txtCantidadVenta = new System.Windows.Forms.TextBox();
+            this.lblCantidadPVenta = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.repRep = new System.Windows.Forms.Button();
             this.tabPuntoVenta.SuspendLayout();
             this.tabVenta.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ventaLogoCh)).BeginInit();
+            this.pVenta.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBoxVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableVender)).BeginInit();
             this.tabRecibirEquipo.SuspendLayout();
             this.layoutTotales.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.EquipoGbx.SuspendLayout();
             this.LayEquipo.SuspendLayout();
             this.ClienteGBx.SuspendLayout();
             this.layCliente.SuspendLayout();
             this.layoutCliente.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.recibirLogoCh)).BeginInit();
             this.tabReparacion.SuspendLayout();
+            this.pReparacion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBoxReparacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.refresIconCheno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxBuscarRep)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reparacionLogoCh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CDGReparacion)).BeginInit();
             this.tabConfiguracionesDeUsuario.SuspendLayout();
+            this.pConfigUsuario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBoxConfUsuario)).BeginInit();
             this.SgbConfiguraciones.SuspendLayout();
             this.SgbAsignarRolATrabajador.SuspendLayout();
             this.SgbRoles.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.ordenesTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableOrdenes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ordenesLogoCh)).BeginInit();
+            this.pOrdenadas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBoxOrdenadas)).BeginInit();
             this.TabClientes.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -237,8 +249,10 @@
             // tabVenta
             // 
             this.tabVenta.BackColor = System.Drawing.Color.LightGray;
-            this.tabVenta.Controls.Add(this.HoraMinutoSegundo);
-            this.tabVenta.Controls.Add(this.ventaLogoCh);
+            this.tabVenta.Controls.Add(this.lblCantidadPVenta);
+            this.tabVenta.Controls.Add(this.txtCantidadVenta);
+            this.tabVenta.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.tabVenta.Controls.Add(this.pVenta);
             this.tabVenta.Controls.Add(this.ClblCodigoDeBarras);
             this.tabVenta.Controls.Add(this.CNombreUsuarioLblVenta);
             this.tabVenta.Controls.Add(this.totalTbxVenta);
@@ -259,39 +273,53 @@
             this.tabVenta.TabIndex = 0;
             this.tabVenta.Text = "Venta (F1)";
             // 
+            // pVenta
+            // 
+            this.pVenta.BackColor = System.Drawing.Color.DimGray;
+            this.pVenta.Controls.Add(this.pBoxVenta);
+            this.pVenta.Controls.Add(this.HoraMinutoSegundo);
+            this.pVenta.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pVenta.Location = new System.Drawing.Point(3, 3);
+            this.pVenta.Name = "pVenta";
+            this.pVenta.Size = new System.Drawing.Size(170, 663);
+            this.pVenta.TabIndex = 55;
+            // 
+            // pBoxVenta
+            // 
+            this.pBoxVenta.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.pBoxVenta.Location = new System.Drawing.Point(3, 3);
+            this.pBoxVenta.Name = "pBoxVenta";
+            this.pBoxVenta.Size = new System.Drawing.Size(164, 175);
+            this.pBoxVenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBoxVenta.TabIndex = 1;
+            this.pBoxVenta.TabStop = false;
+            // 
             // HoraMinutoSegundo
             // 
             this.HoraMinutoSegundo.AutoSize = true;
+            this.HoraMinutoSegundo.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HoraMinutoSegundo.ForeColor = System.Drawing.Color.Orange;
-            this.HoraMinutoSegundo.Location = new System.Drawing.Point(20, 186);
+            this.HoraMinutoSegundo.Location = new System.Drawing.Point(1075, 40);
             this.HoraMinutoSegundo.Name = "HoraMinutoSegundo";
-            this.HoraMinutoSegundo.Size = new System.Drawing.Size(85, 34);
+            this.HoraMinutoSegundo.Size = new System.Drawing.Size(154, 41);
             this.HoraMinutoSegundo.TabIndex = 21;
             this.HoraMinutoSegundo.Text = "00:00:00";
-            // 
-            // ventaLogoCh
-            // 
-            this.ventaLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
-            this.ventaLogoCh.Location = new System.Drawing.Point(6, 6);
-            this.ventaLogoCh.Name = "ventaLogoCh";
-            this.ventaLogoCh.Size = new System.Drawing.Size(118, 177);
-            this.ventaLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ventaLogoCh.TabIndex = 20;
-            this.ventaLogoCh.TabStop = false;
             // 
             // ClblCodigoDeBarras
             // 
             this.ClblCodigoDeBarras.AutoSize = true;
-            this.ClblCodigoDeBarras.Location = new System.Drawing.Point(295, 59);
+            this.ClblCodigoDeBarras.ForeColor = System.Drawing.Color.DarkOrange;
+            this.ClblCodigoDeBarras.Location = new System.Drawing.Point(187, 53);
             this.ClblCodigoDeBarras.Name = "ClblCodigoDeBarras";
-            this.ClblCodigoDeBarras.Size = new System.Drawing.Size(173, 34);
+            this.ClblCodigoDeBarras.Size = new System.Drawing.Size(178, 34);
             this.ClblCodigoDeBarras.TabIndex = 19;
-            this.ClblCodigoDeBarras.Text = "Codigo de Producto";
+            this.ClblCodigoDeBarras.Text = "Codigo de Producto:";
             // 
             // CNombreUsuarioLblVenta
             // 
             this.CNombreUsuarioLblVenta.AutoSize = true;
-            this.CNombreUsuarioLblVenta.Location = new System.Drawing.Point(1191, 6);
+            this.CNombreUsuarioLblVenta.ForeColor = System.Drawing.Color.DarkOrange;
+            this.CNombreUsuarioLblVenta.Location = new System.Drawing.Point(1149, 6);
             this.CNombreUsuarioLblVenta.Name = "CNombreUsuarioLblVenta";
             this.CNombreUsuarioLblVenta.Size = new System.Drawing.Size(74, 34);
             this.CNombreUsuarioLblVenta.TabIndex = 18;
@@ -300,7 +328,7 @@
             // totalTbxVenta
             // 
             this.totalTbxVenta.Enabled = false;
-            this.totalTbxVenta.Location = new System.Drawing.Point(281, 616);
+            this.totalTbxVenta.Location = new System.Drawing.Point(287, 613);
             this.totalTbxVenta.Multiline = true;
             this.totalTbxVenta.Name = "totalTbxVenta";
             this.totalTbxVenta.Size = new System.Drawing.Size(210, 34);
@@ -310,7 +338,7 @@
             // ivaTbxVentas
             // 
             this.ivaTbxVentas.Enabled = false;
-            this.ivaTbxVentas.Location = new System.Drawing.Point(281, 567);
+            this.ivaTbxVentas.Location = new System.Drawing.Point(287, 564);
             this.ivaTbxVentas.Multiline = true;
             this.ivaTbxVentas.Name = "ivaTbxVentas";
             this.ivaTbxVentas.Size = new System.Drawing.Size(210, 34);
@@ -320,17 +348,19 @@
             // subTotalTbxVentas
             // 
             this.subTotalTbxVentas.Enabled = false;
-            this.subTotalTbxVentas.Location = new System.Drawing.Point(281, 514);
+            this.subTotalTbxVentas.Location = new System.Drawing.Point(287, 511);
             this.subTotalTbxVentas.Multiline = true;
             this.subTotalTbxVentas.Name = "subTotalTbxVentas";
             this.subTotalTbxVentas.Size = new System.Drawing.Size(210, 34);
             this.subTotalTbxVentas.TabIndex = 15;
             this.subTotalTbxVentas.Text = "0";
+            this.subTotalTbxVentas.TextChanged += new System.EventHandler(this.subTotalTbxVentas_TextChanged);
             // 
             // totalLblVentas
             // 
             this.totalLblVentas.AutoSize = true;
-            this.totalLblVentas.Location = new System.Drawing.Point(185, 619);
+            this.totalLblVentas.ForeColor = System.Drawing.Color.DarkOrange;
+            this.totalLblVentas.Location = new System.Drawing.Point(222, 616);
             this.totalLblVentas.Name = "totalLblVentas";
             this.totalLblVentas.Size = new System.Drawing.Size(59, 34);
             this.totalLblVentas.TabIndex = 14;
@@ -339,7 +369,8 @@
             // ivaLblVenta
             // 
             this.ivaLblVenta.AutoSize = true;
-            this.ivaLblVenta.Location = new System.Drawing.Point(185, 570);
+            this.ivaLblVenta.ForeColor = System.Drawing.Color.DarkOrange;
+            this.ivaLblVenta.Location = new System.Drawing.Point(224, 567);
             this.ivaLblVenta.Name = "ivaLblVenta";
             this.ivaLblVenta.Size = new System.Drawing.Size(57, 34);
             this.ivaLblVenta.TabIndex = 13;
@@ -348,7 +379,8 @@
             // subTotalLblVenta
             // 
             this.subTotalLblVenta.AutoSize = true;
-            this.subTotalLblVenta.Location = new System.Drawing.Point(185, 514);
+            this.subTotalLblVenta.ForeColor = System.Drawing.Color.DarkOrange;
+            this.subTotalLblVenta.Location = new System.Drawing.Point(191, 511);
             this.subTotalLblVenta.Name = "subTotalLblVenta";
             this.subTotalLblVenta.Size = new System.Drawing.Size(90, 34);
             this.subTotalLblVenta.TabIndex = 12;
@@ -356,7 +388,7 @@
             // 
             // buscarTbxVentas
             // 
-            this.buscarTbxVentas.Location = new System.Drawing.Point(474, 59);
+            this.buscarTbxVentas.Location = new System.Drawing.Point(366, 50);
             this.buscarTbxVentas.Name = "buscarTbxVentas";
             this.buscarTbxVentas.Size = new System.Drawing.Size(405, 41);
             this.buscarTbxVentas.TabIndex = 10;
@@ -367,6 +399,8 @@
             // 
             this.tableVender.AllowUserToAddRows = false;
             this.tableVender.AllowUserToDeleteRows = false;
+            this.tableVender.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tableVender.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.tableVender.BackgroundColor = System.Drawing.Color.Azure;
             this.tableVender.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableVender.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -380,7 +414,7 @@
             this.tableVender.ReadOnly = true;
             this.tableVender.RowHeadersVisible = false;
             this.tableVender.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tableVender.Size = new System.Drawing.Size(938, 382);
+            this.tableVender.Size = new System.Drawing.Size(1121, 382);
             this.tableVender.TabIndex = 8;
             this.tableVender.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableVender_CellClick);
             // 
@@ -392,7 +426,6 @@
             this.cod.ReadOnly = true;
             this.cod.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.cod.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.cod.Width = 150;
             // 
             // des
             // 
@@ -400,7 +433,6 @@
             this.des.HeaderText = "DESCRIPCIÓN";
             this.des.Name = "des";
             this.des.ReadOnly = true;
-            this.des.Width = 400;
             // 
             // preciou
             // 
@@ -408,7 +440,6 @@
             this.preciou.HeaderText = "PRECIO UNIT";
             this.preciou.Name = "preciou";
             this.preciou.ReadOnly = true;
-            this.preciou.Width = 150;
             // 
             // cant
             // 
@@ -423,14 +454,13 @@
             this.preciot.HeaderText = "PRECIOT";
             this.preciot.Name = "preciot";
             this.preciot.ReadOnly = true;
-            this.preciot.Width = 150;
             // 
             // CbtnCobrarVenta
             // 
-            this.CbtnCobrarVenta.BackColor = System.Drawing.Color.DimGray;
+            this.CbtnCobrarVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.CbtnCobrarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.CbtnCobrarVenta.ForeColor = System.Drawing.Color.White;
-            this.CbtnCobrarVenta.Location = new System.Drawing.Point(970, 570);
+            this.CbtnCobrarVenta.ForeColor = System.Drawing.Color.DarkOrange;
+            this.CbtnCobrarVenta.Location = new System.Drawing.Point(1135, 540);
             this.CbtnCobrarVenta.Name = "CbtnCobrarVenta";
             this.CbtnCobrarVenta.Size = new System.Drawing.Size(159, 37);
             this.CbtnCobrarVenta.TabIndex = 6;
@@ -440,36 +470,37 @@
             // 
             // CbtnCancelarVenta
             // 
-            this.CbtnCancelarVenta.BackColor = System.Drawing.Color.DimGray;
+            this.CbtnCancelarVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.CbtnCancelarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.CbtnCancelarVenta.ForeColor = System.Drawing.Color.White;
-            this.CbtnCancelarVenta.Location = new System.Drawing.Point(970, 613);
+            this.CbtnCancelarVenta.ForeColor = System.Drawing.Color.DarkOrange;
+            this.CbtnCancelarVenta.Location = new System.Drawing.Point(1135, 595);
             this.CbtnCancelarVenta.Name = "CbtnCancelarVenta";
             this.CbtnCancelarVenta.Size = new System.Drawing.Size(159, 37);
             this.CbtnCancelarVenta.TabIndex = 2;
-            this.CbtnCancelarVenta.Text = "Cancelar venta";
+            this.CbtnCancelarVenta.Text = "Cancelar";
             this.CbtnCancelarVenta.UseVisualStyleBackColor = false;
             this.CbtnCancelarVenta.Click += new System.EventHandler(this.CbtnCancelarVenta_Click);
             // 
             // usuarioLblVenta
             // 
             this.usuarioLblVenta.AutoSize = true;
-            this.usuarioLblVenta.Location = new System.Drawing.Point(1076, 6);
+            this.usuarioLblVenta.ForeColor = System.Drawing.Color.DarkOrange;
+            this.usuarioLblVenta.Location = new System.Drawing.Point(1014, 6);
             this.usuarioLblVenta.Name = "usuarioLblVenta";
-            this.usuarioLblVenta.Size = new System.Drawing.Size(124, 34);
+            this.usuarioLblVenta.Size = new System.Drawing.Size(129, 34);
             this.usuarioLblVenta.TabIndex = 4;
-            this.usuarioLblVenta.Text = "Bienvenido(a)";
+            this.usuarioLblVenta.Text = "Bienvenido(a):";
             // 
             // tabRecibirEquipo
             // 
             this.tabRecibirEquipo.BackColor = System.Drawing.Color.LightGray;
             this.tabRecibirEquipo.Controls.Add(this.layoutTotales);
+            this.tabRecibirEquipo.Controls.Add(this.panel2);
             this.tabRecibirEquipo.Controls.Add(this.EquipoGbx);
             this.tabRecibirEquipo.Controls.Add(this.ClienteGBx);
             this.tabRecibirEquipo.Controls.Add(this.btnPedirPieza);
             this.tabRecibirEquipo.Controls.Add(this.btnAgregrEquipos);
             this.tabRecibirEquipo.Controls.Add(this.btnLimpiarCampos);
-            this.tabRecibirEquipo.Controls.Add(this.recibirLogoCh);
             this.tabRecibirEquipo.Location = new System.Drawing.Point(4, 43);
             this.tabRecibirEquipo.Name = "tabRecibirEquipo";
             this.tabRecibirEquipo.Padding = new System.Windows.Forms.Padding(3);
@@ -488,7 +519,8 @@
             this.layoutTotales.Controls.Add(this.txtAnticipo, 1, 1);
             this.layoutTotales.Controls.Add(this.SlblResponsable, 0, 2);
             this.layoutTotales.Controls.Add(this.comboResponsable, 1, 2);
-            this.layoutTotales.Location = new System.Drawing.Point(148, 542);
+            this.layoutTotales.ForeColor = System.Drawing.Color.DarkOrange;
+            this.layoutTotales.Location = new System.Drawing.Point(215, 551);
             this.layoutTotales.Name = "layoutTotales";
             this.layoutTotales.RowCount = 3;
             this.layoutTotales.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.33333F));
@@ -511,7 +543,7 @@
             // SlblTotal
             // 
             this.SlblTotal.AutoSize = true;
-            this.SlblTotal.ForeColor = System.Drawing.Color.Black;
+            this.SlblTotal.ForeColor = System.Drawing.Color.DarkOrange;
             this.SlblTotal.Location = new System.Drawing.Point(3, 0);
             this.SlblTotal.Name = "SlblTotal";
             this.SlblTotal.Size = new System.Drawing.Size(69, 34);
@@ -521,7 +553,7 @@
             // SlblAnticipo
             // 
             this.SlblAnticipo.AutoSize = true;
-            this.SlblAnticipo.ForeColor = System.Drawing.Color.Black;
+            this.SlblAnticipo.ForeColor = System.Drawing.Color.DarkOrange;
             this.SlblAnticipo.Location = new System.Drawing.Point(3, 35);
             this.SlblAnticipo.Name = "SlblAnticipo";
             this.SlblAnticipo.Size = new System.Drawing.Size(94, 34);
@@ -541,7 +573,7 @@
             // SlblResponsable
             // 
             this.SlblResponsable.AutoSize = true;
-            this.SlblResponsable.ForeColor = System.Drawing.Color.Black;
+            this.SlblResponsable.ForeColor = System.Drawing.Color.DarkOrange;
             this.SlblResponsable.Location = new System.Drawing.Point(3, 77);
             this.SlblResponsable.Name = "SlblResponsable";
             this.SlblResponsable.Size = new System.Drawing.Size(133, 34);
@@ -559,6 +591,26 @@
             this.comboResponsable.Size = new System.Drawing.Size(170, 34);
             this.comboResponsable.TabIndex = 32;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.DimGray;
+            this.panel2.Controls.Add(this.pictureBox4);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(170, 663);
+            this.panel2.TabIndex = 54;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.pictureBox4.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(164, 175);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 1;
+            this.pictureBox4.TabStop = false;
+            // 
             // EquipoGbx
             // 
             this.EquipoGbx.Controls.Add(this.LayEquipo);
@@ -568,9 +620,10 @@
             this.EquipoGbx.Controls.Add(this.rbDiagnosticoEspecifico);
             this.EquipoGbx.Controls.Add(this.rbDiagnosticoRapido);
             this.EquipoGbx.Controls.Add(this.SlblTipoDeDiagnostico);
-            this.EquipoGbx.Location = new System.Drawing.Point(116, 198);
+            this.EquipoGbx.ForeColor = System.Drawing.Color.DarkOrange;
+            this.EquipoGbx.Location = new System.Drawing.Point(183, 203);
             this.EquipoGbx.Name = "EquipoGbx";
-            this.EquipoGbx.Size = new System.Drawing.Size(1202, 338);
+            this.EquipoGbx.Size = new System.Drawing.Size(1145, 324);
             this.EquipoGbx.TabIndex = 53;
             this.EquipoGbx.TabStop = false;
             this.EquipoGbx.Text = "Equipo";
@@ -612,7 +665,7 @@
             // SlblMarca
             // 
             this.SlblMarca.AutoSize = true;
-            this.SlblMarca.ForeColor = System.Drawing.Color.Black;
+            this.SlblMarca.ForeColor = System.Drawing.Color.DarkOrange;
             this.SlblMarca.Location = new System.Drawing.Point(3, 0);
             this.SlblMarca.Name = "SlblMarca";
             this.SlblMarca.Size = new System.Drawing.Size(74, 34);
@@ -630,7 +683,7 @@
             // SlblModelo
             // 
             this.SlblModelo.AutoSize = true;
-            this.SlblModelo.ForeColor = System.Drawing.Color.Black;
+            this.SlblModelo.ForeColor = System.Drawing.Color.DarkOrange;
             this.SlblModelo.Location = new System.Drawing.Point(588, 0);
             this.SlblModelo.Name = "SlblModelo";
             this.SlblModelo.Size = new System.Drawing.Size(82, 34);
@@ -669,7 +722,7 @@
             // SlblDescripcionFalla
             // 
             this.SlblDescripcionFalla.AutoSize = true;
-            this.SlblDescripcionFalla.ForeColor = System.Drawing.Color.Black;
+            this.SlblDescripcionFalla.ForeColor = System.Drawing.Color.DarkOrange;
             this.SlblDescripcionFalla.Location = new System.Drawing.Point(3, 97);
             this.SlblDescripcionFalla.Name = "SlblDescripcionFalla";
             this.SlblDescripcionFalla.Size = new System.Drawing.Size(188, 34);
@@ -687,9 +740,9 @@
             // 
             // SbtnNuevoServicioRE
             // 
-            this.SbtnNuevoServicioRE.BackColor = System.Drawing.Color.DimGray;
+            this.SbtnNuevoServicioRE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.SbtnNuevoServicioRE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.SbtnNuevoServicioRE.ForeColor = System.Drawing.Color.Turquoise;
+            this.SbtnNuevoServicioRE.ForeColor = System.Drawing.Color.DarkOrange;
             this.SbtnNuevoServicioRE.Location = new System.Drawing.Point(680, 46);
             this.SbtnNuevoServicioRE.Name = "SbtnNuevoServicioRE";
             this.SbtnNuevoServicioRE.Size = new System.Drawing.Size(220, 37);
@@ -703,7 +756,7 @@
             this.lblIdEquipo.AutoSize = true;
             this.lblIdEquipo.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdEquipo.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblIdEquipo.Location = new System.Drawing.Point(1107, 29);
+            this.lblIdEquipo.Location = new System.Drawing.Point(1092, 30);
             this.lblIdEquipo.Name = "lblIdEquipo";
             this.lblIdEquipo.Size = new System.Drawing.Size(55, 34);
             this.lblIdEquipo.TabIndex = 21;
@@ -714,8 +767,8 @@
             // 
             this.SlblRecibirEquipo.AutoSize = true;
             this.SlblRecibirEquipo.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SlblRecibirEquipo.ForeColor = System.Drawing.Color.Black;
-            this.SlblRecibirEquipo.Location = new System.Drawing.Point(977, 29);
+            this.SlblRecibirEquipo.ForeColor = System.Drawing.Color.DarkOrange;
+            this.SlblRecibirEquipo.Location = new System.Drawing.Point(954, 30);
             this.SlblRecibirEquipo.Name = "SlblRecibirEquipo";
             this.SlblRecibirEquipo.Size = new System.Drawing.Size(132, 34);
             this.SlblRecibirEquipo.TabIndex = 22;
@@ -737,7 +790,7 @@
             // 
             this.rbDiagnosticoEspecifico.AutoSize = true;
             this.rbDiagnosticoEspecifico.Enabled = false;
-            this.rbDiagnosticoEspecifico.ForeColor = System.Drawing.Color.Black;
+            this.rbDiagnosticoEspecifico.ForeColor = System.Drawing.Color.DarkOrange;
             this.rbDiagnosticoEspecifico.Location = new System.Drawing.Point(342, 195);
             this.rbDiagnosticoEspecifico.Name = "rbDiagnosticoEspecifico";
             this.rbDiagnosticoEspecifico.Size = new System.Drawing.Size(123, 38);
@@ -749,7 +802,7 @@
             // rbDiagnosticoRapido
             // 
             this.rbDiagnosticoRapido.AutoSize = true;
-            this.rbDiagnosticoRapido.ForeColor = System.Drawing.Color.Black;
+            this.rbDiagnosticoRapido.ForeColor = System.Drawing.Color.DarkOrange;
             this.rbDiagnosticoRapido.Location = new System.Drawing.Point(220, 193);
             this.rbDiagnosticoRapido.Name = "rbDiagnosticoRapido";
             this.rbDiagnosticoRapido.Size = new System.Drawing.Size(93, 38);
@@ -762,7 +815,7 @@
             // 
             this.SlblTipoDeDiagnostico.AutoSize = true;
             this.SlblTipoDeDiagnostico.Enabled = false;
-            this.SlblTipoDeDiagnostico.ForeColor = System.Drawing.Color.Black;
+            this.SlblTipoDeDiagnostico.ForeColor = System.Drawing.Color.DarkOrange;
             this.SlblTipoDeDiagnostico.Location = new System.Drawing.Point(26, 197);
             this.SlblTipoDeDiagnostico.Name = "SlblTipoDeDiagnostico";
             this.SlblTipoDeDiagnostico.Size = new System.Drawing.Size(188, 34);
@@ -778,9 +831,10 @@
             this.ClienteGBx.Controls.Add(this.lblTextoIdCliente);
             this.ClienteGBx.Controls.Add(this.lblIdCliente);
             this.ClienteGBx.Controls.Add(this.btnAgregarCliente);
-            this.ClienteGBx.Location = new System.Drawing.Point(116, 6);
+            this.ClienteGBx.ForeColor = System.Drawing.Color.DarkOrange;
+            this.ClienteGBx.Location = new System.Drawing.Point(183, 6);
             this.ClienteGBx.Name = "ClienteGBx";
-            this.ClienteGBx.Size = new System.Drawing.Size(1202, 193);
+            this.ClienteGBx.Size = new System.Drawing.Size(1127, 193);
             this.ClienteGBx.TabIndex = 52;
             this.ClienteGBx.TabStop = false;
             this.ClienteGBx.Text = "Cliente";
@@ -868,7 +922,7 @@
             // 
             this.SlblNombre.AutoSize = true;
             this.SlblNombre.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SlblNombre.ForeColor = System.Drawing.Color.Black;
+            this.SlblNombre.ForeColor = System.Drawing.Color.DarkOrange;
             this.SlblNombre.Location = new System.Drawing.Point(3, 0);
             this.SlblNombre.Name = "SlblNombre";
             this.SlblNombre.Size = new System.Drawing.Size(87, 34);
@@ -889,7 +943,7 @@
             // 
             this.SlblApellido.AutoSize = true;
             this.SlblApellido.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SlblApellido.ForeColor = System.Drawing.Color.Black;
+            this.SlblApellido.ForeColor = System.Drawing.Color.DarkOrange;
             this.SlblApellido.Location = new System.Drawing.Point(3, 48);
             this.SlblApellido.Name = "SlblApellido";
             this.SlblApellido.Size = new System.Drawing.Size(88, 34);
@@ -909,7 +963,7 @@
             // SlblTelefono
             // 
             this.SlblTelefono.AutoSize = true;
-            this.SlblTelefono.ForeColor = System.Drawing.Color.Black;
+            this.SlblTelefono.ForeColor = System.Drawing.Color.DarkOrange;
             this.SlblTelefono.Location = new System.Drawing.Point(404, 0);
             this.SlblTelefono.Name = "SlblTelefono";
             this.SlblTelefono.Size = new System.Drawing.Size(89, 48);
@@ -919,7 +973,7 @@
             // SlblCorreo
             // 
             this.SlblCorreo.AutoSize = true;
-            this.SlblCorreo.ForeColor = System.Drawing.Color.Black;
+            this.SlblCorreo.ForeColor = System.Drawing.Color.DarkOrange;
             this.SlblCorreo.Location = new System.Drawing.Point(404, 48);
             this.SlblCorreo.Name = "SlblCorreo";
             this.SlblCorreo.Size = new System.Drawing.Size(84, 34);
@@ -949,11 +1003,11 @@
             // 
             // SbtnCancelar
             // 
-            this.SbtnCancelar.BackColor = System.Drawing.Color.DimGray;
+            this.SbtnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.SbtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SbtnCancelar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SbtnCancelar.ForeColor = System.Drawing.Color.White;
-            this.SbtnCancelar.Location = new System.Drawing.Point(1049, 152);
+            this.SbtnCancelar.ForeColor = System.Drawing.Color.DarkOrange;
+            this.SbtnCancelar.Location = new System.Drawing.Point(986, 151);
             this.SbtnCancelar.Name = "SbtnCancelar";
             this.SbtnCancelar.Size = new System.Drawing.Size(120, 36);
             this.SbtnCancelar.TabIndex = 47;
@@ -964,11 +1018,11 @@
             // 
             // btnAddClientH
             // 
-            this.btnAddClientH.BackColor = System.Drawing.Color.DimGray;
+            this.btnAddClientH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.btnAddClientH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddClientH.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddClientH.ForeColor = System.Drawing.Color.White;
-            this.btnAddClientH.Location = new System.Drawing.Point(923, 109);
+            this.btnAddClientH.ForeColor = System.Drawing.Color.DarkOrange;
+            this.btnAddClientH.Location = new System.Drawing.Point(860, 108);
             this.btnAddClientH.Name = "btnAddClientH";
             this.btnAddClientH.Size = new System.Drawing.Size(246, 38);
             this.btnAddClientH.TabIndex = 48;
@@ -979,7 +1033,7 @@
             // lblTextoIdCliente
             // 
             this.lblTextoIdCliente.AutoSize = true;
-            this.lblTextoIdCliente.Location = new System.Drawing.Point(961, 25);
+            this.lblTextoIdCliente.Location = new System.Drawing.Point(887, 44);
             this.lblTextoIdCliente.Name = "lblTextoIdCliente";
             this.lblTextoIdCliente.Size = new System.Drawing.Size(124, 34);
             this.lblTextoIdCliente.TabIndex = 49;
@@ -990,7 +1044,7 @@
             // 
             this.lblIdCliente.AutoSize = true;
             this.lblIdCliente.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblIdCliente.Location = new System.Drawing.Point(1091, 25);
+            this.lblIdCliente.Location = new System.Drawing.Point(1017, 44);
             this.lblIdCliente.Name = "lblIdCliente";
             this.lblIdCliente.Size = new System.Drawing.Size(55, 34);
             this.lblIdCliente.TabIndex = 50;
@@ -999,11 +1053,11 @@
             // 
             // btnAgregarCliente
             // 
-            this.btnAgregarCliente.BackColor = System.Drawing.Color.DimGray;
+            this.btnAgregarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.btnAgregarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregarCliente.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarCliente.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarCliente.Location = new System.Drawing.Point(923, 152);
+            this.btnAgregarCliente.ForeColor = System.Drawing.Color.DarkOrange;
+            this.btnAgregarCliente.Location = new System.Drawing.Point(860, 151);
             this.btnAgregarCliente.Name = "btnAgregarCliente";
             this.btnAgregarCliente.Size = new System.Drawing.Size(120, 38);
             this.btnAgregarCliente.TabIndex = 10;
@@ -1014,11 +1068,11 @@
             // 
             // btnPedirPieza
             // 
-            this.btnPedirPieza.BackColor = System.Drawing.Color.DimGray;
+            this.btnPedirPieza.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.btnPedirPieza.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPedirPieza.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPedirPieza.ForeColor = System.Drawing.Color.White;
-            this.btnPedirPieza.Location = new System.Drawing.Point(877, 621);
+            this.btnPedirPieza.ForeColor = System.Drawing.Color.DarkOrange;
+            this.btnPedirPieza.Location = new System.Drawing.Point(723, 577);
             this.btnPedirPieza.Name = "btnPedirPieza";
             this.btnPedirPieza.Size = new System.Drawing.Size(132, 43);
             this.btnPedirPieza.TabIndex = 35;
@@ -1028,11 +1082,11 @@
             // 
             // btnAgregrEquipos
             // 
-            this.btnAgregrEquipos.BackColor = System.Drawing.Color.DimGray;
+            this.btnAgregrEquipos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.btnAgregrEquipos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregrEquipos.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregrEquipos.ForeColor = System.Drawing.Color.White;
-            this.btnAgregrEquipos.Location = new System.Drawing.Point(1015, 621);
+            this.btnAgregrEquipos.ForeColor = System.Drawing.Color.DarkOrange;
+            this.btnAgregrEquipos.Location = new System.Drawing.Point(861, 577);
             this.btnAgregrEquipos.Name = "btnAgregrEquipos";
             this.btnAgregrEquipos.Size = new System.Drawing.Size(132, 43);
             this.btnAgregrEquipos.TabIndex = 34;
@@ -1042,11 +1096,11 @@
             // 
             // btnLimpiarCampos
             // 
-            this.btnLimpiarCampos.BackColor = System.Drawing.Color.DimGray;
+            this.btnLimpiarCampos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.btnLimpiarCampos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLimpiarCampos.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiarCampos.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiarCampos.Location = new System.Drawing.Point(1153, 621);
+            this.btnLimpiarCampos.ForeColor = System.Drawing.Color.DarkOrange;
+            this.btnLimpiarCampos.Location = new System.Drawing.Point(999, 577);
             this.btnLimpiarCampos.Name = "btnLimpiarCampos";
             this.btnLimpiarCampos.Size = new System.Drawing.Size(132, 43);
             this.btnLimpiarCampos.TabIndex = 33;
@@ -1054,22 +1108,12 @@
             this.btnLimpiarCampos.UseVisualStyleBackColor = false;
             this.btnLimpiarCampos.Click += new System.EventHandler(this.btnLimpiarCampos_Click_1);
             // 
-            // recibirLogoCh
-            // 
-            this.recibirLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
-            this.recibirLogoCh.Location = new System.Drawing.Point(6, 6);
-            this.recibirLogoCh.Name = "recibirLogoCh";
-            this.recibirLogoCh.Size = new System.Drawing.Size(66, 104);
-            this.recibirLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.recibirLogoCh.TabIndex = 51;
-            this.recibirLogoCh.TabStop = false;
-            // 
             // tabReparacion
             // 
             this.tabReparacion.BackColor = System.Drawing.Color.LightGray;
+            this.tabReparacion.Controls.Add(this.pReparacion);
             this.tabReparacion.Controls.Add(this.refresIconCheno);
             this.tabReparacion.Controls.Add(this.pBoxBuscarRep);
-            this.tabReparacion.Controls.Add(this.reparacionLogoCh);
             this.tabReparacion.Controls.Add(this.JtxtBuscar2);
             this.tabReparacion.Controls.Add(this.CDGReparacion);
             this.tabReparacion.Controls.Add(this.CEspera);
@@ -1085,10 +1129,30 @@
             this.tabReparacion.Text = "Reparación (F3)";
             this.tabReparacion.Click += new System.EventHandler(this.tabReparacion_Click);
             // 
+            // pReparacion
+            // 
+            this.pReparacion.BackColor = System.Drawing.Color.DimGray;
+            this.pReparacion.Controls.Add(this.pBoxReparacion);
+            this.pReparacion.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pReparacion.Location = new System.Drawing.Point(3, 3);
+            this.pReparacion.Name = "pReparacion";
+            this.pReparacion.Size = new System.Drawing.Size(170, 663);
+            this.pReparacion.TabIndex = 43;
+            // 
+            // pBoxReparacion
+            // 
+            this.pBoxReparacion.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.pBoxReparacion.Location = new System.Drawing.Point(3, 3);
+            this.pBoxReparacion.Name = "pBoxReparacion";
+            this.pBoxReparacion.Size = new System.Drawing.Size(164, 175);
+            this.pBoxReparacion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBoxReparacion.TabIndex = 1;
+            this.pBoxReparacion.TabStop = false;
+            // 
             // refresIconCheno
             // 
             this.refresIconCheno.Image = global::WindowsFormsApp1.Properties.Resources.refrescar;
-            this.refresIconCheno.Location = new System.Drawing.Point(1269, 183);
+            this.refresIconCheno.Location = new System.Drawing.Point(1269, 76);
             this.refresIconCheno.Name = "refresIconCheno";
             this.refresIconCheno.Size = new System.Drawing.Size(53, 55);
             this.refresIconCheno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1099,31 +1163,22 @@
             // pBoxBuscarRep
             // 
             this.pBoxBuscarRep.Image = global::WindowsFormsApp1.Properties.Resources.Lupa_Codigo;
-            this.pBoxBuscarRep.Location = new System.Drawing.Point(754, 131);
+            this.pBoxBuscarRep.Location = new System.Drawing.Point(920, 33);
             this.pBoxBuscarRep.Name = "pBoxBuscarRep";
-            this.pBoxBuscarRep.Size = new System.Drawing.Size(44, 34);
+            this.pBoxBuscarRep.Size = new System.Drawing.Size(32, 34);
             this.pBoxBuscarRep.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pBoxBuscarRep.TabIndex = 12;
             this.pBoxBuscarRep.TabStop = false;
             this.pBoxBuscarRep.Click += new System.EventHandler(this.pBoxBuscarRep_Click);
             // 
-            // reparacionLogoCh
-            // 
-            this.reparacionLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
-            this.reparacionLogoCh.Location = new System.Drawing.Point(6, 6);
-            this.reparacionLogoCh.Name = "reparacionLogoCh";
-            this.reparacionLogoCh.Size = new System.Drawing.Size(62, 101);
-            this.reparacionLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.reparacionLogoCh.TabIndex = 11;
-            this.reparacionLogoCh.TabStop = false;
-            // 
             // JtxtBuscar2
             // 
-            this.JtxtBuscar2.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.JtxtBuscar2.Location = new System.Drawing.Point(444, 131);
+            this.JtxtBuscar2.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.JtxtBuscar2.Location = new System.Drawing.Point(615, 33);
             this.JtxtBuscar2.Name = "JtxtBuscar2";
-            this.JtxtBuscar2.Size = new System.Drawing.Size(289, 34);
+            this.JtxtBuscar2.Size = new System.Drawing.Size(289, 32);
             this.JtxtBuscar2.TabIndex = 10;
+            this.JtxtBuscar2.TextChanged += new System.EventHandler(this.JtxtBuscar2_TextChanged);
             this.JtxtBuscar2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.JtxtBuscar2_KeyPress);
             // 
             // CDGReparacion
@@ -1131,13 +1186,14 @@
             this.CDGReparacion.AllowUserToAddRows = false;
             this.CDGReparacion.AllowUserToDeleteRows = false;
             this.CDGReparacion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.CDGReparacion.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.CDGReparacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CDGReparacion.Location = new System.Drawing.Point(3, 241);
+            this.CDGReparacion.Location = new System.Drawing.Point(179, 145);
             this.CDGReparacion.Name = "CDGReparacion";
             this.CDGReparacion.ReadOnly = true;
             this.CDGReparacion.RowHeadersVisible = false;
             this.CDGReparacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.CDGReparacion.Size = new System.Drawing.Size(1319, 422);
+            this.CDGReparacion.Size = new System.Drawing.Size(1143, 518);
             this.CDGReparacion.TabIndex = 9;
             this.CDGReparacion.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CDGReparacion_CellClick);
             this.CDGReparacion.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CDGReparacion_CellContentClick);
@@ -1145,7 +1201,8 @@
             // CEspera
             // 
             this.CEspera.AutoSize = true;
-            this.CEspera.Location = new System.Drawing.Point(579, 182);
+            this.CEspera.ForeColor = System.Drawing.Color.DarkOrange;
+            this.CEspera.Location = new System.Drawing.Point(745, 84);
             this.CEspera.Name = "CEspera";
             this.CEspera.Size = new System.Drawing.Size(89, 38);
             this.CEspera.TabIndex = 8;
@@ -1156,7 +1213,8 @@
             // JTerminados
             // 
             this.JTerminados.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.JTerminados.Location = new System.Drawing.Point(674, 183);
+            this.JTerminados.ForeColor = System.Drawing.Color.DarkOrange;
+            this.JTerminados.Location = new System.Drawing.Point(840, 85);
             this.JTerminados.Name = "JTerminados";
             this.JTerminados.Size = new System.Drawing.Size(124, 37);
             this.JTerminados.TabIndex = 6;
@@ -1167,7 +1225,8 @@
             // JProceso
             // 
             this.JProceso.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.JProceso.Location = new System.Drawing.Point(464, 180);
+            this.JProceso.ForeColor = System.Drawing.Color.DarkOrange;
+            this.JProceso.Location = new System.Drawing.Point(630, 82);
             this.JProceso.Name = "JProceso";
             this.JProceso.Size = new System.Drawing.Size(127, 43);
             this.JProceso.TabIndex = 5;
@@ -1179,7 +1238,8 @@
             // 
             this.JradioTodos.Checked = true;
             this.JradioTodos.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.JradioTodos.Location = new System.Drawing.Point(374, 180);
+            this.JradioTodos.ForeColor = System.Drawing.Color.DarkOrange;
+            this.JradioTodos.Location = new System.Drawing.Point(540, 82);
             this.JradioTodos.Name = "JradioTodos";
             this.JradioTodos.Size = new System.Drawing.Size(84, 43);
             this.JradioTodos.TabIndex = 4;
@@ -1191,24 +1251,45 @@
             // JlblBuscar
             // 
             this.JlblBuscar.AutoSize = true;
-            this.JlblBuscar.Location = new System.Drawing.Point(367, 131);
+            this.JlblBuscar.ForeColor = System.Drawing.Color.DarkOrange;
+            this.JlblBuscar.Location = new System.Drawing.Point(533, 33);
             this.JlblBuscar.Name = "JlblBuscar";
-            this.JlblBuscar.Size = new System.Drawing.Size(71, 34);
+            this.JlblBuscar.Size = new System.Drawing.Size(76, 34);
             this.JlblBuscar.TabIndex = 1;
-            this.JlblBuscar.Text = "Buscar";
+            this.JlblBuscar.Text = "Buscar:";
             // 
             // tabConfiguracionesDeUsuario
             // 
             this.tabConfiguracionesDeUsuario.BackColor = System.Drawing.Color.LightGray;
+            this.tabConfiguracionesDeUsuario.Controls.Add(this.pConfigUsuario);
             this.tabConfiguracionesDeUsuario.Controls.Add(this.SgbConfiguraciones);
             this.tabConfiguracionesDeUsuario.Controls.Add(this.SgbAsignarRolATrabajador);
             this.tabConfiguracionesDeUsuario.Controls.Add(this.SgbRoles);
-            this.tabConfiguracionesDeUsuario.Controls.Add(this.pictureBox4);
             this.tabConfiguracionesDeUsuario.Location = new System.Drawing.Point(4, 43);
             this.tabConfiguracionesDeUsuario.Name = "tabConfiguracionesDeUsuario";
             this.tabConfiguracionesDeUsuario.Size = new System.Drawing.Size(1328, 669);
             this.tabConfiguracionesDeUsuario.TabIndex = 3;
             this.tabConfiguracionesDeUsuario.Text = "Configuraciones de Usuario (F7)";
+            // 
+            // pConfigUsuario
+            // 
+            this.pConfigUsuario.BackColor = System.Drawing.Color.DimGray;
+            this.pConfigUsuario.Controls.Add(this.pBoxConfUsuario);
+            this.pConfigUsuario.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pConfigUsuario.Location = new System.Drawing.Point(0, 0);
+            this.pConfigUsuario.Name = "pConfigUsuario";
+            this.pConfigUsuario.Size = new System.Drawing.Size(170, 669);
+            this.pConfigUsuario.TabIndex = 43;
+            // 
+            // pBoxConfUsuario
+            // 
+            this.pBoxConfUsuario.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.pBoxConfUsuario.Location = new System.Drawing.Point(3, 3);
+            this.pBoxConfUsuario.Name = "pBoxConfUsuario";
+            this.pBoxConfUsuario.Size = new System.Drawing.Size(164, 175);
+            this.pBoxConfUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBoxConfUsuario.TabIndex = 1;
+            this.pBoxConfUsuario.TabStop = false;
             // 
             // SgbConfiguraciones
             // 
@@ -1216,6 +1297,7 @@
             this.SgbConfiguraciones.Controls.Add(this.SbtnAgregarNuevoServicioCU);
             this.SgbConfiguraciones.Controls.Add(this.button1);
             this.SgbConfiguraciones.Controls.Add(this.SbtnAgregarUsuario);
+            this.SgbConfiguraciones.ForeColor = System.Drawing.Color.DarkOrange;
             this.SgbConfiguraciones.Location = new System.Drawing.Point(331, 432);
             this.SgbConfiguraciones.Name = "SgbConfiguraciones";
             this.SgbConfiguraciones.Size = new System.Drawing.Size(580, 210);
@@ -1225,10 +1307,10 @@
             // 
             // SbtnAgregarNuevoServicioCU
             // 
-            this.SbtnAgregarNuevoServicioCU.BackColor = System.Drawing.Color.DimGray;
+            this.SbtnAgregarNuevoServicioCU.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.SbtnAgregarNuevoServicioCU.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.SbtnAgregarNuevoServicioCU.ForeColor = System.Drawing.Color.White;
-            this.SbtnAgregarNuevoServicioCU.Location = new System.Drawing.Point(115, 167);
+            this.SbtnAgregarNuevoServicioCU.ForeColor = System.Drawing.Color.DarkOrange;
+            this.SbtnAgregarNuevoServicioCU.Location = new System.Drawing.Point(115, 126);
             this.SbtnAgregarNuevoServicioCU.Name = "SbtnAgregarNuevoServicioCU";
             this.SbtnAgregarNuevoServicioCU.Size = new System.Drawing.Size(277, 37);
             this.SbtnAgregarNuevoServicioCU.TabIndex = 5;
@@ -1238,9 +1320,9 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.DimGray;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.ForeColor = System.Drawing.Color.DarkOrange;
             this.button1.Location = new System.Drawing.Point(115, 83);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(277, 37);
@@ -1251,9 +1333,9 @@
             // 
             // SbtnAgregarUsuario
             // 
-            this.SbtnAgregarUsuario.BackColor = System.Drawing.Color.DimGray;
+            this.SbtnAgregarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.SbtnAgregarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.SbtnAgregarUsuario.ForeColor = System.Drawing.Color.White;
+            this.SbtnAgregarUsuario.ForeColor = System.Drawing.Color.DarkOrange;
             this.SbtnAgregarUsuario.Location = new System.Drawing.Point(115, 40);
             this.SbtnAgregarUsuario.Name = "SbtnAgregarUsuario";
             this.SbtnAgregarUsuario.Size = new System.Drawing.Size(277, 37);
@@ -1269,6 +1351,7 @@
             this.SgbAsignarRolATrabajador.Controls.Add(this.ScbxSeleccionarRol);
             this.SgbAsignarRolATrabajador.Controls.Add(this.ScbxUsuariosRol);
             this.SgbAsignarRolATrabajador.Controls.Add(this.SlblSeleccioneNombreDeUsuario);
+            this.SgbAsignarRolATrabajador.ForeColor = System.Drawing.Color.DarkOrange;
             this.SgbAsignarRolATrabajador.Location = new System.Drawing.Point(331, 178);
             this.SgbAsignarRolATrabajador.Name = "SgbAsignarRolATrabajador";
             this.SgbAsignarRolATrabajador.Size = new System.Drawing.Size(580, 220);
@@ -1279,9 +1362,9 @@
             // 
             // SbtnAsiganrRolAUsuario
             // 
-            this.SbtnAsiganrRolAUsuario.BackColor = System.Drawing.Color.DimGray;
+            this.SbtnAsiganrRolAUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.SbtnAsiganrRolAUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.SbtnAsiganrRolAUsuario.ForeColor = System.Drawing.Color.White;
+            this.SbtnAsiganrRolAUsuario.ForeColor = System.Drawing.Color.DarkOrange;
             this.SbtnAsiganrRolAUsuario.Location = new System.Drawing.Point(428, 173);
             this.SbtnAsiganrRolAUsuario.Name = "SbtnAsiganrRolAUsuario";
             this.SbtnAsiganrRolAUsuario.Size = new System.Drawing.Size(146, 41);
@@ -1329,6 +1412,7 @@
             this.SgbRoles.Controls.Add(this.StxtRol);
             this.SgbRoles.Controls.Add(this.SlblNombreRol);
             this.SgbRoles.Controls.Add(this.SbtnGuardarRol);
+            this.SgbRoles.ForeColor = System.Drawing.Color.DarkOrange;
             this.SgbRoles.Location = new System.Drawing.Point(331, 20);
             this.SgbRoles.Name = "SgbRoles";
             this.SgbRoles.Size = new System.Drawing.Size(580, 131);
@@ -1355,9 +1439,9 @@
             // 
             // SbtnGuardarRol
             // 
-            this.SbtnGuardarRol.BackColor = System.Drawing.Color.DimGray;
+            this.SbtnGuardarRol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.SbtnGuardarRol.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.SbtnGuardarRol.ForeColor = System.Drawing.Color.White;
+            this.SbtnGuardarRol.ForeColor = System.Drawing.Color.DarkOrange;
             this.SbtnGuardarRol.Location = new System.Drawing.Point(458, 84);
             this.SbtnGuardarRol.Name = "SbtnGuardarRol";
             this.SbtnGuardarRol.Size = new System.Drawing.Size(116, 41);
@@ -1366,22 +1450,12 @@
             this.SbtnGuardarRol.UseVisualStyleBackColor = false;
             this.SbtnGuardarRol.Click += new System.EventHandler(this.SbtnGuardarRol_Click);
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
-            this.pictureBox4.Location = new System.Drawing.Point(6, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(65, 104);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
-            // 
             // ordenesTab
             // 
             this.ordenesTab.BackColor = System.Drawing.Color.LightGray;
-            this.ordenesTab.Controls.Add(this.SlblPiezasOrdenadas);
             this.ordenesTab.Controls.Add(this.tableOrdenes);
-            this.ordenesTab.Controls.Add(this.ordenesLogoCh);
+            this.ordenesTab.Controls.Add(this.pOrdenadas);
+            this.ordenesTab.Controls.Add(this.SlblPiezasOrdenadas);
             this.ordenesTab.Location = new System.Drawing.Point(4, 43);
             this.ordenesTab.Name = "ordenesTab";
             this.ordenesTab.Padding = new System.Windows.Forms.Padding(3);
@@ -1391,44 +1465,52 @@
             this.ordenesTab.Click += new System.EventHandler(this.ordenesTab_Click);
             this.ordenesTab.Enter += new System.EventHandler(this.ordenesTab_Enter);
             // 
+            // tableOrdenes
+            // 
+            this.tableOrdenes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tableOrdenes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.tableOrdenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tableOrdenes.Location = new System.Drawing.Point(193, 141);
+            this.tableOrdenes.Name = "tableOrdenes";
+            this.tableOrdenes.RowHeadersVisible = false;
+            this.tableOrdenes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.tableOrdenes.RowTemplate.ReadOnly = true;
+            this.tableOrdenes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tableOrdenes.Size = new System.Drawing.Size(1129, 522);
+            this.tableOrdenes.TabIndex = 44;
+            this.tableOrdenes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TableOrdenes_CellClick);
+            // 
+            // pOrdenadas
+            // 
+            this.pOrdenadas.BackColor = System.Drawing.Color.DimGray;
+            this.pOrdenadas.Controls.Add(this.pBoxOrdenadas);
+            this.pOrdenadas.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pOrdenadas.Location = new System.Drawing.Point(3, 3);
+            this.pOrdenadas.Name = "pOrdenadas";
+            this.pOrdenadas.Size = new System.Drawing.Size(170, 663);
+            this.pOrdenadas.TabIndex = 43;
+            // 
+            // pBoxOrdenadas
+            // 
+            this.pBoxOrdenadas.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.pBoxOrdenadas.Location = new System.Drawing.Point(3, 3);
+            this.pBoxOrdenadas.Name = "pBoxOrdenadas";
+            this.pBoxOrdenadas.Size = new System.Drawing.Size(164, 175);
+            this.pBoxOrdenadas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBoxOrdenadas.TabIndex = 1;
+            this.pBoxOrdenadas.TabStop = false;
+            // 
             // SlblPiezasOrdenadas
             // 
             this.SlblPiezasOrdenadas.AutoSize = true;
             this.SlblPiezasOrdenadas.Font = new System.Drawing.Font("Cordia New", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SlblPiezasOrdenadas.Location = new System.Drawing.Point(574, 45);
+            this.SlblPiezasOrdenadas.ForeColor = System.Drawing.Color.DarkOrange;
+            this.SlblPiezasOrdenadas.Location = new System.Drawing.Point(642, 32);
             this.SlblPiezasOrdenadas.Name = "SlblPiezasOrdenadas";
             this.SlblPiezasOrdenadas.Size = new System.Drawing.Size(291, 66);
             this.SlblPiezasOrdenadas.TabIndex = 6;
             this.SlblPiezasOrdenadas.Text = "Piezas Ordenadas";
             this.SlblPiezasOrdenadas.MouseMove += new System.Windows.Forms.MouseEventHandler(this.SlblPiezasOrdenadas_MouseMove);
-            // 
-            // tableOrdenes
-            // 
-            this.tableOrdenes.AllowUserToAddRows = false;
-            this.tableOrdenes.AllowUserToDeleteRows = false;
-            this.tableOrdenes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.tableOrdenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tableOrdenes.Location = new System.Drawing.Point(316, 114);
-            this.tableOrdenes.MultiSelect = false;
-            this.tableOrdenes.Name = "tableOrdenes";
-            this.tableOrdenes.ReadOnly = true;
-            this.tableOrdenes.RowHeadersVisible = false;
-            this.tableOrdenes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.tableOrdenes.RowTemplate.ReadOnly = true;
-            this.tableOrdenes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tableOrdenes.Size = new System.Drawing.Size(817, 488);
-            this.tableOrdenes.TabIndex = 1;
-            this.tableOrdenes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableOrdenes_CellClick);
-            // 
-            // ordenesLogoCh
-            // 
-            this.ordenesLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
-            this.ordenesLogoCh.Location = new System.Drawing.Point(6, 6);
-            this.ordenesLogoCh.Name = "ordenesLogoCh";
-            this.ordenesLogoCh.Size = new System.Drawing.Size(64, 105);
-            this.ordenesLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ordenesLogoCh.TabIndex = 5;
-            this.ordenesLogoCh.TabStop = false;
             // 
             // TabClientes
             // 
@@ -1476,6 +1558,7 @@
             // lblClienteBuscar
             // 
             this.lblClienteBuscar.AutoSize = true;
+            this.lblClienteBuscar.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblClienteBuscar.Location = new System.Drawing.Point(3, 0);
             this.lblClienteBuscar.Name = "lblClienteBuscar";
             this.lblClienteBuscar.Size = new System.Drawing.Size(134, 34);
@@ -1496,7 +1579,7 @@
             this.pbBuscar.Image = global::WindowsFormsApp1.Properties.Resources.Lupa_Codigo;
             this.pbBuscar.Location = new System.Drawing.Point(445, 3);
             this.pbBuscar.Name = "pbBuscar";
-            this.pbBuscar.Size = new System.Drawing.Size(37, 41);
+            this.pbBuscar.Size = new System.Drawing.Size(39, 41);
             this.pbBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbBuscar.TabIndex = 8;
             this.pbBuscar.TabStop = false;
@@ -1508,14 +1591,14 @@
             this.dgClientes.AllowUserToDeleteRows = false;
             this.dgClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgClientes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgClientes.Location = new System.Drawing.Point(189, 89);
             this.dgClientes.Name = "dgClientes";
@@ -1580,9 +1663,9 @@
             // pBoxAddProduct
             // 
             this.pBoxAddProduct.Image = global::WindowsFormsApp1.Properties.Resources._64244;
-            this.pBoxAddProduct.Location = new System.Drawing.Point(1268, 45);
+            this.pBoxAddProduct.Location = new System.Drawing.Point(1284, 60);
             this.pBoxAddProduct.Name = "pBoxAddProduct";
-            this.pBoxAddProduct.Size = new System.Drawing.Size(45, 40);
+            this.pBoxAddProduct.Size = new System.Drawing.Size(38, 31);
             this.pBoxAddProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pBoxAddProduct.TabIndex = 35;
             this.pBoxAddProduct.TabStop = false;
@@ -1590,9 +1673,9 @@
             // 
             // btnSearchProduct
             // 
-            this.btnSearchProduct.BackColor = System.Drawing.Color.DimGray;
+            this.btnSearchProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.btnSearchProduct.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSearchProduct.ForeColor = System.Drawing.Color.Turquoise;
+            this.btnSearchProduct.ForeColor = System.Drawing.Color.DarkOrange;
             this.btnSearchProduct.Location = new System.Drawing.Point(749, 49);
             this.btnSearchProduct.Name = "btnSearchProduct";
             this.btnSearchProduct.Size = new System.Drawing.Size(228, 39);
@@ -1613,6 +1696,7 @@
             // lblSearchProduct
             // 
             this.lblSearchProduct.AutoSize = true;
+            this.lblSearchProduct.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblSearchProduct.Location = new System.Drawing.Point(179, 51);
             this.lblSearchProduct.Name = "lblSearchProduct";
             this.lblSearchProduct.Size = new System.Drawing.Size(153, 34);
@@ -1733,6 +1817,23 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
+            // txtCantidadVenta
+            // 
+            this.txtCantidadVenta.Location = new System.Drawing.Point(895, 50);
+            this.txtCantidadVenta.Name = "txtCantidadVenta";
+            this.txtCantidadVenta.Size = new System.Drawing.Size(146, 41);
+            this.txtCantidadVenta.TabIndex = 56;
+            this.txtCantidadVenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCantidadVenta_KeyPress);
+            // 
+            // lblCantidadPVenta
+            // 
+            this.lblCantidadPVenta.AutoSize = true;
+            this.lblCantidadPVenta.Location = new System.Drawing.Point(788, 53);
+            this.lblCantidadPVenta.Name = "lblCantidadPVenta";
+            this.lblCantidadPVenta.Size = new System.Drawing.Size(91, 34);
+            this.lblCantidadPVenta.TabIndex = 57;
+            this.lblCantidadPVenta.Text = "Cantidad:";
+            // 
             // repRep
             // 
             this.repRep.BackColor = System.Drawing.Color.DimGray;
@@ -1766,11 +1867,15 @@
             this.tabPuntoVenta.ResumeLayout(false);
             this.tabVenta.ResumeLayout(false);
             this.tabVenta.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ventaLogoCh)).EndInit();
+            this.pVenta.ResumeLayout(false);
+            this.pVenta.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBoxVenta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableVender)).EndInit();
             this.tabRecibirEquipo.ResumeLayout(false);
             this.layoutTotales.ResumeLayout(false);
             this.layoutTotales.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.EquipoGbx.ResumeLayout(false);
             this.EquipoGbx.PerformLayout();
             this.LayEquipo.ResumeLayout(false);
@@ -1781,24 +1886,26 @@
             this.layCliente.PerformLayout();
             this.layoutCliente.ResumeLayout(false);
             this.layoutCliente.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.recibirLogoCh)).EndInit();
             this.tabReparacion.ResumeLayout(false);
             this.tabReparacion.PerformLayout();
+            this.pReparacion.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pBoxReparacion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.refresIconCheno)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxBuscarRep)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reparacionLogoCh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CDGReparacion)).EndInit();
             this.tabConfiguracionesDeUsuario.ResumeLayout(false);
+            this.pConfigUsuario.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pBoxConfUsuario)).EndInit();
             this.SgbConfiguraciones.ResumeLayout(false);
             this.SgbAsignarRolATrabajador.ResumeLayout(false);
             this.SgbAsignarRolATrabajador.PerformLayout();
             this.SgbRoles.ResumeLayout(false);
             this.SgbRoles.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ordenesTab.ResumeLayout(false);
             this.ordenesTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableOrdenes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ordenesLogoCh)).EndInit();
+            this.pOrdenadas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pBoxOrdenadas)).EndInit();
             this.TabClientes.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -1911,7 +2018,6 @@
         private System.Windows.Forms.TextBox ivaTbxVentas;
         private System.Windows.Forms.TextBox subTotalTbxVentas;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.DataGridView tableOrdenes;
        // private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.GroupBox SgbRoles;
         private System.Windows.Forms.TextBox StxtRol;
@@ -1931,7 +2037,6 @@
         private System.Windows.Forms.Label CNombreUsuarioLblVenta;
         private System.Windows.Forms.Label ClblCodigoDeBarras;
         private System.Windows.Forms.TextBox JtxtBuscar2;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.GroupBox SgbConfiguraciones;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox SgbAsignarRolATrabajador;
@@ -1949,7 +2054,6 @@
         private System.Windows.Forms.Label lblClienteBuscar;
         private System.Windows.Forms.Label lblIdCliente;
         private System.Windows.Forms.Label lblTextoIdCliente;
-        private System.Windows.Forms.PictureBox ventaLogoCh;
         private System.Windows.Forms.PictureBox recibirLogoCh;
         private System.Windows.Forms.PictureBox reparacionLogoCh;
         private System.Windows.Forms.PictureBox ordenesLogoCh;
@@ -1983,6 +2087,19 @@
         private System.Windows.Forms.PictureBox LogoProducts;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Panel pReparacion;
+        private System.Windows.Forms.PictureBox pBoxReparacion;
+        private System.Windows.Forms.Panel pConfigUsuario;
+        private System.Windows.Forms.PictureBox pBoxConfUsuario;
+        private System.Windows.Forms.Panel pOrdenadas;
+        private System.Windows.Forms.PictureBox pBoxOrdenadas;
+        private System.Windows.Forms.Panel pVenta;
+        private System.Windows.Forms.PictureBox pBoxVenta;
+        private System.Windows.Forms.DataGridView tableOrdenes;
+        private System.Windows.Forms.Label lblCantidadPVenta;
+        private System.Windows.Forms.TextBox txtCantidadVenta;
         private System.Windows.Forms.PictureBox chenoReportePB;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.Button repRep;

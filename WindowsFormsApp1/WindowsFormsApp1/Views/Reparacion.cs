@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using WindowsFormsApp1.Views;
 
@@ -15,7 +16,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            //this.FormBorderStyle = FormBorderStyle.FixedDialog;
             DataTable dt = new DataTable();
             //MessageBox.Show("SELECT Reparacion.Id as ID, Reparacion.Marca as Marca, Reparacion.Modelo as Modelo, Reparacion.Falla as Falla, Reparacion.Diagnostico as Diagnostico, Servicio.Nombre as Servicio, Reparacion.Anticipo as Anticipo, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Cliente.Nombre as Cliente, Usuario.Nombre as Usuario, Reparacion.CostoTotal as Total, Pieza.Descripcion as Pieza FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio = Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente = Cliente.Id INNER JOIN Estado on Reparacion.IdEstado = Estado.Id INNER JOIN Usuario on Reparacion.IdUsuario = Usuario.Id INNER JOIN Pieza on Reparacion.IdPieza = Pieza.Id WHERE Reparacion.Id =" + id);
             conn.AbrirConexion();
@@ -48,6 +49,10 @@ namespace WindowsFormsApp1
             decimal restante = Convert.ToDecimal(TotalTxtBox.Text) - Convert.ToDecimal(AbonoTxtBox.Text);
             StxtCantidadRestanteAPagar.Text = "" + restante;
         }
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparap, int lparam);
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -105,7 +110,6 @@ namespace WindowsFormsApp1
         {
             conn.AbrirConexion();
             string estadoPieza = conn.buscarEstado("SELECT P.Estado FROM Pieza P INNER JOIN Reparacion R ON R.IdPieza=P.Id WHERE R.Id ='" + idTxtBoxRepa.Text + "'");
-            MessageBox.Show(estadoPieza);
             conn.CerrarConexion();
             if (estadoPieza.Equals("Ordenada"))
             {
@@ -128,6 +132,19 @@ namespace WindowsFormsApp1
         private void dRapidoTxtBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Reparacion_MouseDown(object sender, MouseEventArgs e)
+        {
+
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void PAddProducts_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0); 
         }
     }
 }

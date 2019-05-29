@@ -37,19 +37,22 @@
             this.marcaTbxEncargar = new System.Windows.Forms.TextBox();
             this.modeloTbxEncargar = new System.Windows.Forms.TextBox();
             this.piezasTbxEncargar = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.encargarpiezaImg = new System.Windows.Forms.PictureBox();
             this.btnCancelarPieza = new System.Windows.Forms.Button();
             this.BtnAceptarPieza = new System.Windows.Forms.Button();
             this.SdtCalendarFechaLlegada = new System.Windows.Forms.DateTimePicker();
             this.SlblFechaAproximadaLLegaPieza = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.encargarPiezaPnl = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.encargarpiezaImg)).BeginInit();
+            this.encargarPiezaPnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // equipoLblEncargar
             // 
             this.equipoLblEncargar.AutoSize = true;
             this.equipoLblEncargar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.equipoLblEncargar.Location = new System.Drawing.Point(144, 28);
+            this.equipoLblEncargar.ForeColor = System.Drawing.Color.DarkOrange;
+            this.equipoLblEncargar.Location = new System.Drawing.Point(219, 36);
             this.equipoLblEncargar.Name = "equipoLblEncargar";
             this.equipoLblEncargar.Size = new System.Drawing.Size(70, 34);
             this.equipoLblEncargar.TabIndex = 0;
@@ -59,7 +62,8 @@
             // 
             this.marcaLblEncargar.AutoSize = true;
             this.marcaLblEncargar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.marcaLblEncargar.Location = new System.Drawing.Point(150, 167);
+            this.marcaLblEncargar.ForeColor = System.Drawing.Color.DarkOrange;
+            this.marcaLblEncargar.Location = new System.Drawing.Point(219, 167);
             this.marcaLblEncargar.Name = "marcaLblEncargar";
             this.marcaLblEncargar.Size = new System.Drawing.Size(64, 34);
             this.marcaLblEncargar.TabIndex = 1;
@@ -69,7 +73,8 @@
             // 
             this.piezaLblEncargar.AutoSize = true;
             this.piezaLblEncargar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.piezaLblEncargar.Location = new System.Drawing.Point(12, 182);
+            this.piezaLblEncargar.ForeColor = System.Drawing.Color.DarkOrange;
+            this.piezaLblEncargar.Location = new System.Drawing.Point(219, 206);
             this.piezaLblEncargar.Name = "piezaLblEncargar";
             this.piezaLblEncargar.Size = new System.Drawing.Size(80, 34);
             this.piezaLblEncargar.TabIndex = 2;
@@ -79,7 +84,8 @@
             // 
             this.modeloLblEncargar.AutoSize = true;
             this.modeloLblEncargar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modeloLblEncargar.Location = new System.Drawing.Point(142, 101);
+            this.modeloLblEncargar.ForeColor = System.Drawing.Color.DarkOrange;
+            this.modeloLblEncargar.Location = new System.Drawing.Point(219, 101);
             this.modeloLblEncargar.Name = "modeloLblEncargar";
             this.modeloLblEncargar.Size = new System.Drawing.Size(72, 34);
             this.modeloLblEncargar.TabIndex = 3;
@@ -87,7 +93,7 @@
             // 
             // equipoTbxEncagar
             // 
-            this.equipoTbxEncagar.Location = new System.Drawing.Point(228, 36);
+            this.equipoTbxEncagar.Location = new System.Drawing.Point(331, 36);
             this.equipoTbxEncagar.Multiline = true;
             this.equipoTbxEncagar.Name = "equipoTbxEncagar";
             this.equipoTbxEncagar.Size = new System.Drawing.Size(328, 29);
@@ -95,7 +101,7 @@
             // 
             // marcaTbxEncargar
             // 
-            this.marcaTbxEncargar.Location = new System.Drawing.Point(228, 168);
+            this.marcaTbxEncargar.Location = new System.Drawing.Point(331, 167);
             this.marcaTbxEncargar.Multiline = true;
             this.marcaTbxEncargar.Name = "marcaTbxEncargar";
             this.marcaTbxEncargar.Size = new System.Drawing.Size(328, 33);
@@ -103,7 +109,7 @@
             // 
             // modeloTbxEncargar
             // 
-            this.modeloTbxEncargar.Location = new System.Drawing.Point(228, 101);
+            this.modeloTbxEncargar.Location = new System.Drawing.Point(331, 101);
             this.modeloTbxEncargar.Multiline = true;
             this.modeloTbxEncargar.Name = "modeloTbxEncargar";
             this.modeloTbxEncargar.Size = new System.Drawing.Size(328, 28);
@@ -111,28 +117,28 @@
             // 
             // piezasTbxEncargar
             // 
-            this.piezasTbxEncargar.Location = new System.Drawing.Point(12, 219);
+            this.piezasTbxEncargar.Location = new System.Drawing.Point(217, 243);
             this.piezasTbxEncargar.Multiline = true;
             this.piezasTbxEncargar.Name = "piezasTbxEncargar";
-            this.piezasTbxEncargar.Size = new System.Drawing.Size(545, 173);
+            this.piezasTbxEncargar.Size = new System.Drawing.Size(442, 173);
             this.piezasTbxEncargar.TabIndex = 7;
             // 
-            // pictureBox1
+            // encargarpiezaImg
             // 
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(62, 93);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
+            this.encargarpiezaImg.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.encargarpiezaImg.Location = new System.Drawing.Point(11, 9);
+            this.encargarpiezaImg.Name = "encargarpiezaImg";
+            this.encargarpiezaImg.Size = new System.Drawing.Size(93, 143);
+            this.encargarpiezaImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.encargarpiezaImg.TabIndex = 8;
+            this.encargarpiezaImg.TabStop = false;
             // 
             // btnCancelarPieza
             // 
-            this.btnCancelarPieza.BackColor = System.Drawing.Color.DimGray;
+            this.btnCancelarPieza.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.btnCancelarPieza.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelarPieza.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelarPieza.ForeColor = System.Drawing.Color.White;
+            this.btnCancelarPieza.ForeColor = System.Drawing.Color.DarkOrange;
             this.btnCancelarPieza.Location = new System.Drawing.Point(300, 470);
             this.btnCancelarPieza.Name = "btnCancelarPieza";
             this.btnCancelarPieza.Size = new System.Drawing.Size(125, 37);
@@ -143,10 +149,10 @@
             // 
             // BtnAceptarPieza
             // 
-            this.BtnAceptarPieza.BackColor = System.Drawing.Color.DimGray;
+            this.BtnAceptarPieza.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.BtnAceptarPieza.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnAceptarPieza.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAceptarPieza.ForeColor = System.Drawing.Color.White;
+            this.BtnAceptarPieza.ForeColor = System.Drawing.Color.DarkOrange;
             this.BtnAceptarPieza.Location = new System.Drawing.Point(431, 470);
             this.BtnAceptarPieza.Name = "BtnAceptarPieza";
             this.BtnAceptarPieza.Size = new System.Drawing.Size(125, 37);
@@ -157,7 +163,7 @@
             // 
             // SdtCalendarFechaLlegada
             // 
-            this.SdtCalendarFechaLlegada.Location = new System.Drawing.Point(350, 403);
+            this.SdtCalendarFechaLlegada.Location = new System.Drawing.Point(452, 429);
             this.SdtCalendarFechaLlegada.Name = "SdtCalendarFechaLlegada";
             this.SdtCalendarFechaLlegada.Size = new System.Drawing.Size(207, 20);
             this.SdtCalendarFechaLlegada.TabIndex = 11;
@@ -166,23 +172,34 @@
             // 
             this.SlblFechaAproximadaLLegaPieza.AutoSize = true;
             this.SlblFechaAproximadaLLegaPieza.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SlblFechaAproximadaLLegaPieza.Location = new System.Drawing.Point(12, 398);
+            this.SlblFechaAproximadaLLegaPieza.ForeColor = System.Drawing.Color.DarkOrange;
+            this.SlblFechaAproximadaLLegaPieza.Location = new System.Drawing.Point(188, 424);
             this.SlblFechaAproximadaLLegaPieza.Name = "SlblFechaAproximadaLLegaPieza";
-            this.SlblFechaAproximadaLLegaPieza.Size = new System.Drawing.Size(331, 34);
+            this.SlblFechaAproximadaLLegaPieza.Size = new System.Drawing.Size(258, 34);
             this.SlblFechaAproximadaLLegaPieza.TabIndex = 12;
-            this.SlblFechaAproximadaLLegaPieza.Text = "Fecha Aproximada de Llegada de pieza";
+            this.SlblFechaAproximadaLLegaPieza.Text = "Fecha Aproximada de Llegada";
+            // 
+            // encargarPiezaPnl
+            // 
+            this.encargarPiezaPnl.BackColor = System.Drawing.Color.DimGray;
+            this.encargarPiezaPnl.Controls.Add(this.encargarpiezaImg);
+            this.encargarPiezaPnl.Location = new System.Drawing.Point(1, 3);
+            this.encargarPiezaPnl.Name = "encargarPiezaPnl";
+            this.encargarPiezaPnl.Size = new System.Drawing.Size(138, 516);
+            this.encargarPiezaPnl.TabIndex = 13;
             // 
             // Ecargar_Pieza
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(572, 522);
+            this.ClientSize = new System.Drawing.Size(696, 521);
+            this.ControlBox = false;
+            this.Controls.Add(this.encargarPiezaPnl);
             this.Controls.Add(this.SlblFechaAproximadaLLegaPieza);
             this.Controls.Add(this.SdtCalendarFechaLlegada);
             this.Controls.Add(this.BtnAceptarPieza);
             this.Controls.Add(this.btnCancelarPieza);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.piezasTbxEncargar);
             this.Controls.Add(this.modeloTbxEncargar);
             this.Controls.Add(this.marcaTbxEncargar);
@@ -193,8 +210,8 @@
             this.Controls.Add(this.equipoLblEncargar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Ecargar_Pieza";
-            this.Text = "Encargar pieza";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.encargarpiezaImg)).EndInit();
+            this.encargarPiezaPnl.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,10 +227,11 @@
         private System.Windows.Forms.TextBox marcaTbxEncargar;
         private System.Windows.Forms.TextBox modeloTbxEncargar;
         private System.Windows.Forms.TextBox piezasTbxEncargar;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox encargarpiezaImg;
         private System.Windows.Forms.Button btnCancelarPieza;
         private System.Windows.Forms.Button BtnAceptarPieza;
         private System.Windows.Forms.DateTimePicker SdtCalendarFechaLlegada;
         private System.Windows.Forms.Label SlblFechaAproximadaLLegaPieza;
+        private System.Windows.Forms.Panel encargarPiezaPnl;
     }
 }

@@ -8,6 +8,7 @@ namespace WindowsFormsApp1.Views
     public partial class CancelarProductoVenta : Form
     {
         static int indice = 0;
+        static string responsable = "";
         public CancelarProductoVenta()
         {
             InitializeComponent();
@@ -34,14 +35,21 @@ namespace WindowsFormsApp1.Views
                 Connection connection = new Connection();
                 connection.AbrirConexion();
                 decimal id = UltimoIdIngresado();
+                //-------------------------------------------------------------------
+                //Buscar IdUsuario
+                int idUsuario = Convert.ToInt32(connection.getIdUsuario("SELECT Id FROM Usuario WHERE NombreUsuario = '" + responsable + "'"));
+                connection.CerrarConexion();
+                //-------------------------------------------------------------------
+                //Insertar datos en tabla cancelacion
+                connection.AbrirConexion();
                 string mifecha = DateTime.Today.ToString();//Dia/Mes/Año : Hora
-                string datos = "Código : " + txtCodigoCancelacion.Text + ". Producto cancelado :" + txtDescripcionCancelacion.Text + ". Devolución de efectivo : " + txtTotalDeCancelacion.Text;
-                string query = "INSERT INTO Cancelacion (Id, Motivo, Fecha, IdUsuario, IdVenta) VALUES (" + id + ", '" + datos + "'," + mifecha + ",1,1)";
-                if (connection.AgregarCancelacion(query, id, datos, mifecha, 1, 1) > 0)
+                string hora_de_cancelacion = DateTime.Now.ToLongTimeString();
+                string datos = "[Código : " + txtCodigoCancelacion.Text + "] [Producto cancelado : " + txtDescripcionCancelacion.Text + "] [Motivo : "+txtMotivoDeCancelacion.Text+"] [Devolución de efectivo : " + txtTotalDeCancelacion.Text+"] [Hora de cancelacion : "+ hora_de_cancelacion+"]";
+                string query = "INSERT INTO Cancelacion (Id, Motivo, Fecha, IdUsuario, IdVenta) VALUES (@Id,@Motivo,@Fecha,@IdUsuario,@IdVenta)";
+                if (connection.AgregarCancelacion(query, id, datos, mifecha,  idUsuario, 1) > 0)
                 {
                     MessageBox.Show("Cancelacion Exitosa", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Question);
                     ViewTabs v = new ViewTabs();
-                    v.RemoveElement(indice);
                 }
                 else
                 {
@@ -51,13 +59,14 @@ namespace WindowsFormsApp1.Views
                 this.Hide();
             }
         }
-        public void setDatos(string cod,string des,string cant,string tot,int i)
+        public void setDatos(string cod,string des,string cant,string tot,int i,string res)
         {
             txtCodigoCancelacion.Text = cod;
             txtDescripcionCancelacion.Text = des;
             txtCantidadCancelacion.Text = cant;
             txtTotalDeCancelacion.Text = tot;
             indice = i;
+            responsable = res;
         }
 
         private void CancelarProductoVenta_MouseDown(object sender, MouseEventArgs e)

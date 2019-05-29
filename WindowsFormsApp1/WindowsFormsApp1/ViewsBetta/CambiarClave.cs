@@ -30,7 +30,7 @@ namespace WindowsFormsApp1.ViewsBetta
                 decimal r = random.Next(1000, 9999);
                 MailMessage mensaje = new MailMessage();
                 mensaje.To.Add(txtCorreoCC.Text);
-                mensaje.Subject = "Correo de varificacion de usuario";
+                mensaje.Subject = "Correo de verificacion de usuario";
                 mensaje.SubjectEncoding = System.Text.Encoding.UTF8;
                 //upmendoza@unisierra.edu.mx
                 mensaje.Bcc.Add("carloshudm@gmail.com");
