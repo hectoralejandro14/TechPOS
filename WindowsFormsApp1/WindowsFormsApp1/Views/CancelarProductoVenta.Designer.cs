@@ -155,7 +155,7 @@
             this.SpanelLogo.Dock = System.Windows.Forms.DockStyle.Left;
             this.SpanelLogo.Location = new System.Drawing.Point(0, 0);
             this.SpanelLogo.Name = "SpanelLogo";
-            this.SpanelLogo.Size = new System.Drawing.Size(175, 466);
+            this.SpanelLogo.Size = new System.Drawing.Size(156, 466);
             this.SpanelLogo.TabIndex = 20;
             this.SpanelLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SpanelLogo_MouseDown);
             // 
@@ -164,7 +164,8 @@
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(160, 238);
+            this.pictureBox1.Size = new System.Drawing.Size(117, 165);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 

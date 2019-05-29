@@ -78,7 +78,7 @@
             // 
             // txtCorreoCC
             // 
-            this.txtCorreoCC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.txtCorreoCC.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtCorreoCC.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCorreoCC.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreoCC.ForeColor = System.Drawing.Color.DimGray;
@@ -158,7 +158,7 @@
             this.CCbtnAceptarPinSeguridad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.CCbtnAceptarPinSeguridad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CCbtnAceptarPinSeguridad.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CCbtnAceptarPinSeguridad.ForeColor = System.Drawing.Color.Orange;
+            this.CCbtnAceptarPinSeguridad.ForeColor = System.Drawing.Color.DarkOrange;
             this.CCbtnAceptarPinSeguridad.Location = new System.Drawing.Point(297, 117);
             this.CCbtnAceptarPinSeguridad.Name = "CCbtnAceptarPinSeguridad";
             this.CCbtnAceptarPinSeguridad.Size = new System.Drawing.Size(454, 40);
