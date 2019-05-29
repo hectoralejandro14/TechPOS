@@ -145,6 +145,7 @@
             this.txtReciboVenta.Size = new System.Drawing.Size(227, 20);
             this.txtReciboVenta.TabIndex = 12;
             this.txtReciboVenta.TextChanged += new System.EventHandler(this.txtReciboVenta_TextChanged);
+            this.txtReciboVenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtReciboVenta_KeyPress);
             // 
             // txtCambioVenta
             // 

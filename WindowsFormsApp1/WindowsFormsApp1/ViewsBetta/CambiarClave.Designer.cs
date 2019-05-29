@@ -139,33 +139,33 @@
             // 
             // CCtxtPinSeguridad
             // 
-            this.CCtxtPinSeguridad.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.CCtxtPinSeguridad.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.CCtxtPinSeguridad.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CCtxtPinSeguridad.ForeColor = System.Drawing.Color.DarkOrange;
-            this.CCtxtPinSeguridad.Location = new System.Drawing.Point(297, 67);
-            this.CCtxtPinSeguridad.Name = "CCtxtPinSeguridad";
-            this.CCtxtPinSeguridad.Size = new System.Drawing.Size(454, 19);
-            this.CCtxtPinSeguridad.TabIndex = 21;
-            this.CCtxtPinSeguridad.Text = "Ingrese PIN  de Seguridad";
+            //this.CCtxtPinSeguridad.BackColor = System.Drawing.SystemColors.ControlLight;
+            //this.CCtxtPinSeguridad.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            //this.CCtxtPinSeguridad.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.CCtxtPinSeguridad.ForeColor = System.Drawing.Color.DarkOrange;
+            //this.CCtxtPinSeguridad.Location = new System.Drawing.Point(297, 67);
+            //this.CCtxtPinSeguridad.Name = "CCtxtPinSeguridad";
+            //this.CCtxtPinSeguridad.Size = new System.Drawing.Size(454, 19);
+            //this.CCtxtPinSeguridad.TabIndex = 21;
+            //this.CCtxtPinSeguridad.Text = "Ingrese PIN  de Seguridad";
             // 
             // CCbtnAceptarPinSeguridad
             // 
-            this.CCbtnAceptarPinSeguridad.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.CCbtnAceptarPinSeguridad.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CCbtnAceptarPinSeguridad.FlatAppearance.BorderSize = 0;
-            this.CCbtnAceptarPinSeguridad.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.CCbtnAceptarPinSeguridad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.CCbtnAceptarPinSeguridad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CCbtnAceptarPinSeguridad.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CCbtnAceptarPinSeguridad.ForeColor = System.Drawing.Color.DarkOrange;
-            this.CCbtnAceptarPinSeguridad.Location = new System.Drawing.Point(297, 117);
-            this.CCbtnAceptarPinSeguridad.Name = "CCbtnAceptarPinSeguridad";
-            this.CCbtnAceptarPinSeguridad.Size = new System.Drawing.Size(454, 40);
-            this.CCbtnAceptarPinSeguridad.TabIndex = 22;
-            this.CCbtnAceptarPinSeguridad.Text = "Verificar PIN";
-            this.CCbtnAceptarPinSeguridad.UseVisualStyleBackColor = false;
-            this.CCbtnAceptarPinSeguridad.Click += new System.EventHandler(this.CCbtnAceptarPinSeguridad_Click);
+            //this.CCbtnAceptarPinSeguridad.BackColor = System.Drawing.SystemColors.ControlLight;
+            //this.CCbtnAceptarPinSeguridad.Cursor = System.Windows.Forms.Cursors.Hand;
+            //this.CCbtnAceptarPinSeguridad.FlatAppearance.BorderSize = 0;
+            //this.CCbtnAceptarPinSeguridad.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            //this.CCbtnAceptarPinSeguridad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            //this.CCbtnAceptarPinSeguridad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            //this.CCbtnAceptarPinSeguridad.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.CCbtnAceptarPinSeguridad.ForeColor = System.Drawing.Color.DarkOrange;
+            //this.CCbtnAceptarPinSeguridad.Location = new System.Drawing.Point(297, 117);
+            //this.CCbtnAceptarPinSeguridad.Name = "CCbtnAceptarPinSeguridad";
+            //this.CCbtnAceptarPinSeguridad.Size = new System.Drawing.Size(454, 40);
+            //this.CCbtnAceptarPinSeguridad.TabIndex = 22;
+            //this.CCbtnAceptarPinSeguridad.Text = "Verificar PIN";
+            //this.CCbtnAceptarPinSeguridad.UseVisualStyleBackColor = false;
+            //this.CCbtnAceptarPinSeguridad.Click += new System.EventHandler(this.CCbtnAceptarPinSeguridad_Click);
             // 
             // lblPinSeguridadCC
             // 

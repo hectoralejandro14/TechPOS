@@ -7,6 +7,9 @@ namespace WindowsFormsApp1.Views
 {
     public partial class Cobrar : Form
     {
+        DataGridView datos = new DataGridView();
+        int dineroRecibido = 0;
+        int totalAPagar = 0;
         public Cobrar()
         {
             InitializeComponent();
@@ -40,7 +43,27 @@ namespace WindowsFormsApp1.Views
         }
         private void btnCobrarVentaNI_Click(object sender, System.EventArgs e)
         {
-            this.Hide();
+            if (dineroRecibido<totalAPagar)
+            {
+                MessageBox.Show("No cumple con el pago total");
+            }
+            else
+            {
+                MessageBox.Show("LA VENTA SE REALIZO EXITOSAMENTE");
+                this.Hide();
+
+                //Insertar datos a la base de datos
+                //select Cantidad from Producto where ClaveProducto = 'AC-1164'
+                for (int i = 0; i <datos.RowCount;i++)
+                {
+                    if (datos.Rows[i].Cells[0].ToString() == )
+                    {
+
+                    }
+                }
+                
+            }
+            //this.Hide();
         }
         public void setTotal(decimal t)
         {
@@ -49,7 +72,32 @@ namespace WindowsFormsApp1.Views
 
         private void txtReciboVenta_TextChanged(object sender, System.EventArgs e)
         {
-           
+            if (!txtReciboVenta.Text.Equals(""))
+            {
+                dineroRecibido = Convert.ToInt32(txtReciboVenta.Text);
+                totalAPagar = Convert.ToInt32(txtTotalVenta.Text);
+                txtCambioVenta.Text = (dineroRecibido - totalAPagar).ToString();
+            }
+        }
+
+        private void TxtReciboVenta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+        public DataGridView AlimentarTabla(DataGridView d)
+        {
+            return d;
         }
     }
 }

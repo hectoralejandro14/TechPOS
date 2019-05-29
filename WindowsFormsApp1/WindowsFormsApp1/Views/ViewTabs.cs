@@ -132,6 +132,10 @@ namespace WindowsFormsApp1.Views
             }
             c.setTotal(venta_total);
             c.ShowDialog();
+            DataTable dt = (DataTable)tableVender.DataSource;
+            dt.Clear();
+            txtCantidadVenta.Text = "1";
+            buscarTbxVentas.Text = "";
         }
         private void CbtnCancelarVenta_Click(object sender, EventArgs e)
         {
@@ -1053,9 +1057,16 @@ namespace WindowsFormsApp1.Views
         private void pBoxBuscarRep_Click(object sender, EventArgs e)
         {
             Connection connection = new Connection();
-            connection.AbrirConexion();
-            CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id where Reparacion.Id = " + JtxtBuscar2.Text);
-            connection.CerrarConexion();
+            if (JtxtBuscar2.Text.Equals(""))
+            {
+                MessageBox.Show("No se permiten campos vacios","Informacion",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+            else
+            {
+                connection.AbrirConexion();
+                CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id where Reparacion.Id = " + JtxtBuscar2.Text);
+                connection.CerrarConexion();
+            }
         }
         private void txtBuscarCliente_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -1487,6 +1498,7 @@ namespace WindowsFormsApp1.Views
             login.Show();
             this.Hide();
         }
+
     }
 
 }
