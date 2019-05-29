@@ -469,11 +469,6 @@ namespace WindowsFormsApp1.DBConnectio
             return cambios;
         }
 
-
-
-            return id;
-        }
-
         public int idProducto(string sql)
         {
             int id = 0;
@@ -487,6 +482,8 @@ namespace WindowsFormsApp1.DBConnectio
             {
             }
             return id;
+        }
+
         public bool ExisteCorreo(string query,string correo_ingresado)
         {
             bool aux = false;

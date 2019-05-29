@@ -620,9 +620,9 @@ namespace WindowsFormsApp1.Views
                         //{
                         //    MessageBox.Show("Seleccione un tipo de diagnóstico", "Diagnóstico", MessageBoxButtons.OK, MessageBoxIcon.Question);
                         //}
-                        if (rbDiagnosticoEspecifico.Checked || rbDiagnosticoRapido.Checked)
-                        {
-                            string concatenarDiagTex = tipoDiag + " : " + txtDescripcionDiagnosticoEspecifico.Text;
+                        //if (rbDiagnosticoEspecifico.Checked || rbDiagnosticoRapido.Checked)
+                        //{
+                            string concatenarDiagTex = txtDescripcionDiagnosticoEspecifico.Text;
                             String sql = "";
                             if (txtAnticipo.Text == "")
                             {
@@ -674,7 +674,7 @@ namespace WindowsFormsApp1.Views
                             //------------------------------------------------------------------------------------------------
                             btnAddClientH.Visible = true;
                             GenerarIdEquipo();
-                        }
+                        //}
                     }
                 }
                 else
@@ -1230,11 +1230,48 @@ namespace WindowsFormsApp1.Views
         private void buscarTbxVentas_KeyPress(object sender, KeyPressEventArgs e)
         {
 
+            //if ((int)e.KeyChar == (int)Keys.Enter)
+            //{
+            //    if (txtCantidadVenta.Text.Equals(""))
+            //    {
+            //        MessageBox.Show("No se ingreso cantidad");
+            //    }
+            //}
             if ((int)e.KeyChar == (int)Keys.Enter)
             {
-                if (txtCantidadVenta.Text.Equals(""))
+                if (buscarTbxVentas.Text.Equals(""))
                 {
                     MessageBox.Show("No se ingreso cantidad");
+                }
+                else
+                {
+                    string cadena = "Data Source=.\\SQLEXPRESS;Initial Catalog=TechPOSdb; Integrated Security=True";
+                    SqlConnection conexion = new SqlConnection(cadena);
+                    conexion.Open();
+                    SqlCommand cmd = new SqlCommand("select * from Producto where ClaveProducto='" + buscarTbxVentas.Text + "'", conexion);
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    DataRow row = dtVenta.NewRow();
+                    tableVender.DataSource = dtVenta;
+                    //---------------------------------
+                    if (dr.Read())
+                    {
+                        double price = Convert.ToDouble(Convert.ToString(dr["Costo"]));
+                        double subtotal = Convert.ToDouble(subTotalTbxVentas.Text) + (Convert.ToDouble(Convert.ToString("2")) * price);
+                        double iva = Convert.ToDouble(((subtotal * 16) / 100));
+                        row["cod"] = Convert.ToString(dr["ClaveProducto"]);
+                        row["des"] = Convert.ToString(dr["Descripcion"]);
+                        row["preciou"] = Convert.ToString(dr["Costo"]);
+                        row["cant"] = Convert.ToString(txtCantidadVenta.Text);
+                        row["preciot"] = Convert.ToString(Convert.ToDouble(Convert.ToString(txtCantidadVenta.Text)) * price);
+                        //MessageBox.Show(Convert.ToString(dr["Costo"]));
+                        dtVenta.Rows.Add(row);
+                        subTotalTbxVentas.Text = Convert.ToString(subtotal);
+                        ivaTbxVentas.Text = Convert.ToString(iva);
+                        totalTbxVenta.Text = Convert.ToString(subtotal + iva);
+
+
+                    }
+                    conexion.Close();
                 }
             }
         }
@@ -1459,8 +1496,8 @@ namespace WindowsFormsApp1.Views
                         row["cod"] = Convert.ToString(dr["ClaveProducto"]);
                         row["des"] = Convert.ToString(dr["Descripcion"]);
                         row["preciou"] = Convert.ToString(dr["Costo"]);
-                        row["cant"] = Convert.ToString("2");
-                        row["preciot"] = Convert.ToString(Convert.ToDouble(Convert.ToString("2")) * price);
+                        row["cant"] = Convert.ToString(txtCantidadVenta.Text);
+                        row["preciot"] = Convert.ToString(Convert.ToDouble(Convert.ToString(txtCantidadVenta.Text)) * price);
                         //MessageBox.Show(Convert.ToString(dr["Costo"]));
                         dtVenta.Rows.Add(row);
                         subTotalTbxVentas.Text = Convert.ToString(subtotal);

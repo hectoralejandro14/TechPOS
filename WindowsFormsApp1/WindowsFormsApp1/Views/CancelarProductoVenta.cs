@@ -82,7 +82,6 @@ namespace WindowsFormsApp1.Views
         }
         public decimal UltimoIdIngresado()
         {
-            decimal id = 0;
             Connection connection = new Connection();
             connection.AbrirConexion();
             decimal idCancelacion = connection.generarId("SELECT MAX(Id) FROM Cancelacion");
