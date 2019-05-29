@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewTabs));
             this.tabPuntoVenta = new System.Windows.Forms.TabControl();
             this.tabVenta = new System.Windows.Forms.TabPage();
@@ -172,6 +172,8 @@
             this.clienteTableAdapter = new WindowsFormsApp1.TechPOSdbDataSetTableAdapters.ClienteTableAdapter();
             this.Tiempo = new System.Windows.Forms.Timer(this.components);
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.txtCantidadVenta = new System.Windows.Forms.TextBox();
+            this.lblCantidadPVenta = new System.Windows.Forms.Label();
             this.tabPuntoVenta.SuspendLayout();
             this.tabVenta.SuspendLayout();
             this.pVenta.SuspendLayout();
@@ -242,6 +244,9 @@
             // 
             // tabVenta
             // 
+            this.tabVenta.BackColor = System.Drawing.Color.LightGray;
+            this.tabVenta.Controls.Add(this.lblCantidadPVenta);
+            this.tabVenta.Controls.Add(this.txtCantidadVenta);
             this.tabVenta.BackColor = System.Drawing.SystemColors.ControlLight;
             this.tabVenta.Controls.Add(this.pVenta);
             this.tabVenta.Controls.Add(this.ClblCodigoDeBarras);
@@ -302,9 +307,9 @@
             this.ClblCodigoDeBarras.ForeColor = System.Drawing.Color.DarkOrange;
             this.ClblCodigoDeBarras.Location = new System.Drawing.Point(187, 53);
             this.ClblCodigoDeBarras.Name = "ClblCodigoDeBarras";
-            this.ClblCodigoDeBarras.Size = new System.Drawing.Size(173, 34);
+            this.ClblCodigoDeBarras.Size = new System.Drawing.Size(178, 34);
             this.ClblCodigoDeBarras.TabIndex = 19;
-            this.ClblCodigoDeBarras.Text = "Codigo de Producto";
+            this.ClblCodigoDeBarras.Text = "Codigo de Producto:";
             // 
             // CNombreUsuarioLblVenta
             // 
@@ -1164,10 +1169,10 @@
             // 
             // JtxtBuscar2
             // 
-            this.JtxtBuscar2.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.JtxtBuscar2.Location = new System.Drawing.Point(610, 33);
+            this.JtxtBuscar2.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.JtxtBuscar2.Location = new System.Drawing.Point(615, 33);
             this.JtxtBuscar2.Name = "JtxtBuscar2";
-            this.JtxtBuscar2.Size = new System.Drawing.Size(289, 34);
+            this.JtxtBuscar2.Size = new System.Drawing.Size(289, 32);
             this.JtxtBuscar2.TabIndex = 10;
             this.JtxtBuscar2.TextChanged += new System.EventHandler(this.JtxtBuscar2_TextChanged);
             this.JtxtBuscar2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.JtxtBuscar2_KeyPress);
@@ -1244,9 +1249,9 @@
             this.JlblBuscar.ForeColor = System.Drawing.Color.DarkOrange;
             this.JlblBuscar.Location = new System.Drawing.Point(533, 33);
             this.JlblBuscar.Name = "JlblBuscar";
-            this.JlblBuscar.Size = new System.Drawing.Size(71, 34);
+            this.JlblBuscar.Size = new System.Drawing.Size(76, 34);
             this.JlblBuscar.TabIndex = 1;
-            this.JlblBuscar.Text = "Buscar";
+            this.JlblBuscar.Text = "Buscar:";
             // 
             // tabConfiguracionesDeUsuario
             // 
@@ -1580,14 +1585,14 @@
             this.dgClientes.AllowUserToDeleteRows = false;
             this.dgClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgClientes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgClientes.Location = new System.Drawing.Point(189, 89);
             this.dgClientes.Name = "dgClientes";
@@ -1793,6 +1798,23 @@
             this.pictureBox3.TabIndex = 21;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // txtCantidadVenta
+            // 
+            this.txtCantidadVenta.Location = new System.Drawing.Point(895, 50);
+            this.txtCantidadVenta.Name = "txtCantidadVenta";
+            this.txtCantidadVenta.Size = new System.Drawing.Size(146, 41);
+            this.txtCantidadVenta.TabIndex = 56;
+            this.txtCantidadVenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCantidadVenta_KeyPress);
+            // 
+            // lblCantidadPVenta
+            // 
+            this.lblCantidadPVenta.AutoSize = true;
+            this.lblCantidadPVenta.Location = new System.Drawing.Point(788, 53);
+            this.lblCantidadPVenta.Name = "lblCantidadPVenta";
+            this.lblCantidadPVenta.Size = new System.Drawing.Size(91, 34);
+            this.lblCantidadPVenta.TabIndex = 57;
+            this.lblCantidadPVenta.Text = "Cantidad:";
             // 
             // ViewTabs
             // 
@@ -2044,6 +2066,8 @@
         private System.Windows.Forms.Panel pVenta;
         private System.Windows.Forms.PictureBox pBoxVenta;
         private System.Windows.Forms.DataGridView tableOrdenes;
+        private System.Windows.Forms.Label lblCantidadPVenta;
+        private System.Windows.Forms.TextBox txtCantidadVenta;
         //  private System.Windows.Forms.TextBox textBox1;
         //private System.Windows.Forms.Label UnaLabel;
         //  private System.Windows.Forms.Label label5;
