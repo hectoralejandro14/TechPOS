@@ -295,6 +295,7 @@
             this.txtCantidadVenta.Name = "txtCantidadVenta";
             this.txtCantidadVenta.Size = new System.Drawing.Size(146, 41);
             this.txtCantidadVenta.TabIndex = 56;
+            this.txtCantidadVenta.Text = "1";
             this.txtCantidadVenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCantidadVenta_KeyPress);
             // 
             // pVenta
@@ -822,6 +823,7 @@
             this.rbDiagnosticoEspecifico.TabStop = true;
             this.rbDiagnosticoEspecifico.Text = "Específico.";
             this.rbDiagnosticoEspecifico.UseVisualStyleBackColor = true;
+            this.rbDiagnosticoEspecifico.Visible = false;
             // 
             // rbDiagnosticoRapido
             // 
@@ -834,6 +836,7 @@
             this.rbDiagnosticoRapido.TabStop = true;
             this.rbDiagnosticoRapido.Text = "Rápido.";
             this.rbDiagnosticoRapido.UseVisualStyleBackColor = true;
+            this.rbDiagnosticoRapido.Visible = false;
             // 
             // SlblTipoDeDiagnostico
             // 
@@ -842,9 +845,9 @@
             this.SlblTipoDeDiagnostico.ForeColor = System.Drawing.Color.DarkOrange;
             this.SlblTipoDeDiagnostico.Location = new System.Drawing.Point(26, 197);
             this.SlblTipoDeDiagnostico.Name = "SlblTipoDeDiagnostico";
-            this.SlblTipoDeDiagnostico.Size = new System.Drawing.Size(188, 34);
+            this.SlblTipoDeDiagnostico.Size = new System.Drawing.Size(169, 34);
             this.SlblTipoDeDiagnostico.TabIndex = 17;
-            this.SlblTipoDeDiagnostico.Text = "Tipo de Diagnóstico : ";
+            this.SlblTipoDeDiagnostico.Text = "Diagnóstico rápido.";
             // 
             // ClienteGBx
             // 
