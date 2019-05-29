@@ -1409,5 +1409,12 @@ namespace WindowsFormsApp1.Views
             ivaTbxVentas.Text = Convert.ToString(iva);
             totalTbxVenta.Text = Convert.ToString(subtotal + iva);
         }
+
+        private void SimgCerrarNuevaImagen_Click(object sender, EventArgs e)
+        {
+            ViewLogin login = new ViewLogin();
+            login.Show();
+            this.Hide();
+        }
     }
 }

@@ -102,10 +102,6 @@ namespace WindowsFormsApp1.DBConnectio
                 MessageBox.Show("NO SE PUDO AGREGAR EL ROL AL USUARIO POR PROBLEMAS DE CONECTIVIDAD. \nSI USTED NO ES TECNICO EN INFORMATICA PORFAVOR CONTACTESE CON UNO", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public void EliminarDatos()
-        {
-
-        }
         public void modificar(string SQL)
         {
             SqlCommand = new SqlCommand(SQL, conexion);
@@ -437,10 +433,45 @@ namespace WindowsFormsApp1.DBConnectio
             reader.Read();
             id = reader.GetValue(0).ToString();
             MessageBox.Show("Id Obtenida = " + id);
-
-
-
             return id;
+        }
+        public int Updatepassword(string SQL)
+        {
+            int cambios = 0;
+            try
+            {
+                SqlCommand = new SqlCommand(SQL, conexion);
+                cambios = SqlCommand.ExecuteNonQuery();
+            }
+            catch
+            {
+                cambios = 0;
+            }
+            return cambios;
+        }
+
+        public bool ExisteCorreo(string query,string correo_ingresado)
+        {
+            bool aux = false;
+            try
+            {
+                SqlCommand cmd = new SqlCommand(query, conexion);
+                cmd.Parameters.AddWithValue("@Correo", correo_ingresado);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    if (reader["Correo"].ToString() == correo_ingresado)
+                    {
+                        aux = true;
+                    }
+                }
+            }
+            catch /*(IndexOutOfRangeException e3)*/
+            {
+                MessageBox.Show("ERROR SQL", "Error de Conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                aux = false;
+            }
+            return aux;
         }
     }
 }
