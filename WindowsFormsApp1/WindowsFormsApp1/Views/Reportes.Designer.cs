@@ -41,30 +41,35 @@
             this.precioUClmReportes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalClmReportes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
+            this.reportesPnl = new System.Windows.Forms.Panel();
+            this.logoReportesImg = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.reportesPnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoReportesImg)).BeginInit();
             this.SuspendLayout();
             // 
             // lblReportes
             // 
             this.lblReportes.AutoSize = true;
-            this.lblReportes.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReportes.Font = new System.Drawing.Font("Impact", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReportes.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblReportes.Location = new System.Drawing.Point(308, 25);
             this.lblReportes.Name = "lblReportes";
-            this.lblReportes.Size = new System.Drawing.Size(117, 34);
+            this.lblReportes.Size = new System.Drawing.Size(136, 39);
             this.lblReportes.TabIndex = 0;
             this.lblReportes.Text = "Reportes";
             // 
             // comboPor
             // 
             this.comboPor.FormattingEnabled = true;
-            this.comboPor.Location = new System.Drawing.Point(92, 95);
+            this.comboPor.Location = new System.Drawing.Point(264, 90);
             this.comboPor.Name = "comboPor";
             this.comboPor.Size = new System.Drawing.Size(121, 21);
             this.comboPor.TabIndex = 1;
             // 
             // textFecha
             // 
-            this.textFecha.Location = new System.Drawing.Point(314, 95);
+            this.textFecha.Location = new System.Drawing.Point(491, 90);
             this.textFecha.Name = "textFecha";
             this.textFecha.Size = new System.Drawing.Size(126, 20);
             this.textFecha.TabIndex = 2;
@@ -73,7 +78,8 @@
             // 
             this.lblPor.AutoSize = true;
             this.lblPor.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPor.Location = new System.Drawing.Point(39, 87);
+            this.lblPor.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lblPor.Location = new System.Drawing.Point(206, 82);
             this.lblPor.Name = "lblPor";
             this.lblPor.Size = new System.Drawing.Size(42, 34);
             this.lblPor.TabIndex = 4;
@@ -83,7 +89,8 @@
             // 
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.lblFecha.Location = new System.Drawing.Point(241, 87);
+            this.lblFecha.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lblFecha.Location = new System.Drawing.Point(409, 82);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(65, 34);
             this.lblFecha.TabIndex = 5;
@@ -91,11 +98,11 @@
             // 
             // btnImprimir
             // 
-            this.btnImprimir.BackColor = System.Drawing.Color.DimGray;
+            this.btnImprimir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnImprimir.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.btnImprimir.ForeColor = System.Drawing.Color.White;
-            this.btnImprimir.Location = new System.Drawing.Point(540, 439);
+            this.btnImprimir.ForeColor = System.Drawing.Color.DarkOrange;
+            this.btnImprimir.Location = new System.Drawing.Point(501, 439);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(87, 39);
             this.btnImprimir.TabIndex = 6;
@@ -106,7 +113,8 @@
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.lblTotal.Location = new System.Drawing.Point(60, 342);
+            this.lblTotal.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lblTotal.Location = new System.Drawing.Point(248, 370);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(59, 34);
             this.lblTotal.TabIndex = 7;
@@ -120,9 +128,9 @@
             this.descClmReportes,
             this.precioUClmReportes,
             this.totalClmReportes});
-            this.dataGridView1.Location = new System.Drawing.Point(23, 139);
+            this.dataGridView1.Location = new System.Drawing.Point(169, 133);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(604, 184);
+            this.dataGridView1.Size = new System.Drawing.Size(598, 207);
             this.dataGridView1.TabIndex = 8;
             // 
             // cantidadClmReportes
@@ -153,18 +161,39 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(125, 342);
+            this.label1.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label1.Location = new System.Drawing.Point(308, 370);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(25, 34);
             this.label1.TabIndex = 9;
             this.label1.Text = "$";
+            // 
+            // reportesPnl
+            // 
+            this.reportesPnl.BackColor = System.Drawing.Color.DimGray;
+            this.reportesPnl.Controls.Add(this.logoReportesImg);
+            this.reportesPnl.Location = new System.Drawing.Point(1, -6);
+            this.reportesPnl.Name = "reportesPnl";
+            this.reportesPnl.Size = new System.Drawing.Size(146, 484);
+            this.reportesPnl.TabIndex = 10;
+            // 
+            // logoReportesImg
+            // 
+            this.logoReportesImg.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.logoReportesImg.Location = new System.Drawing.Point(11, 18);
+            this.logoReportesImg.Name = "logoReportesImg";
+            this.logoReportesImg.Size = new System.Drawing.Size(95, 115);
+            this.logoReportesImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logoReportesImg.TabIndex = 0;
+            this.logoReportesImg.TabStop = false;
             // 
             // Reportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(658, 490);
+            this.ClientSize = new System.Drawing.Size(801, 490);
+            this.Controls.Add(this.reportesPnl);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblTotal);
@@ -175,8 +204,9 @@
             this.Controls.Add(this.comboPor);
             this.Controls.Add(this.lblReportes);
             this.Name = "Reportes";
-            this.Text = "Reportes";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.reportesPnl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.logoReportesImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,5 +227,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn descClmReportes;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioUClmReportes;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalClmReportes;
+        private System.Windows.Forms.Panel reportesPnl;
+        private System.Windows.Forms.PictureBox logoReportesImg;
     }
 }

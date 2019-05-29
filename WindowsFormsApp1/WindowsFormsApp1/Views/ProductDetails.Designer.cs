@@ -70,8 +70,8 @@
             this.btnModificarProducto.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnModificarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnModificarProducto.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarProducto.ForeColor = System.Drawing.Color.Orange;
-            this.btnModificarProducto.Location = new System.Drawing.Point(675, 256);
+            this.btnModificarProducto.ForeColor = System.Drawing.Color.DarkOrange;
+            this.btnModificarProducto.Location = new System.Drawing.Point(675, 283);
             this.btnModificarProducto.Name = "btnModificarProducto";
             this.btnModificarProducto.Size = new System.Drawing.Size(112, 34);
             this.btnModificarProducto.TabIndex = 59;
@@ -86,8 +86,8 @@
             this.btnCancelarProducto.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnCancelarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelarProducto.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelarProducto.ForeColor = System.Drawing.Color.Orange;
-            this.btnCancelarProducto.Location = new System.Drawing.Point(675, 323);
+            this.btnCancelarProducto.ForeColor = System.Drawing.Color.DarkOrange;
+            this.btnCancelarProducto.Location = new System.Drawing.Point(675, 363);
             this.btnCancelarProducto.Name = "btnCancelarProducto";
             this.btnCancelarProducto.Size = new System.Drawing.Size(112, 34);
             this.btnCancelarProducto.TabIndex = 58;
@@ -103,8 +103,8 @@
             this.btnAceptarProduct.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnAceptarProduct.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAceptarProduct.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptarProduct.ForeColor = System.Drawing.Color.Orange;
-            this.btnAceptarProduct.Location = new System.Drawing.Point(523, 256);
+            this.btnAceptarProduct.ForeColor = System.Drawing.Color.DarkOrange;
+            this.btnAceptarProduct.Location = new System.Drawing.Point(523, 283);
             this.btnAceptarProduct.Name = "btnAceptarProduct";
             this.btnAceptarProduct.Size = new System.Drawing.Size(112, 34);
             this.btnAceptarProduct.TabIndex = 57;
@@ -294,8 +294,8 @@
             this.btnEliminateProduct.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnEliminateProduct.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminateProduct.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminateProduct.ForeColor = System.Drawing.Color.Orange;
-            this.btnEliminateProduct.Location = new System.Drawing.Point(523, 323);
+            this.btnEliminateProduct.ForeColor = System.Drawing.Color.DarkOrange;
+            this.btnEliminateProduct.Location = new System.Drawing.Point(523, 363);
             this.btnEliminateProduct.Name = "btnEliminateProduct";
             this.btnEliminateProduct.Size = new System.Drawing.Size(112, 34);
             this.btnEliminateProduct.TabIndex = 61;
@@ -307,7 +307,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(14)))));
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(828, 450);
             this.Controls.Add(this.btnEliminateProduct);
             this.Controls.Add(this.cBoxCategoriaProd);
@@ -331,7 +331,6 @@
             this.Controls.Add(this.PProducts);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ProductDetails";
-            this.Opacity = 0.9D;
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ProductDetails_MouseDown);
             this.PProducts.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.LogoProducts)).EndInit();

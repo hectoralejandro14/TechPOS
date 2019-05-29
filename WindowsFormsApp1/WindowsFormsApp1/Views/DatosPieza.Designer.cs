@@ -62,7 +62,7 @@
             // 
             this.lblDescPieza.AutoSize = true;
             this.lblDescPieza.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescPieza.ForeColor = System.Drawing.Color.Orange;
+            this.lblDescPieza.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblDescPieza.Location = new System.Drawing.Point(230, 77);
             this.lblDescPieza.Name = "lblDescPieza";
             this.lblDescPieza.Size = new System.Drawing.Size(115, 34);
@@ -73,7 +73,7 @@
             // 
             this.lblEstadoPieza.AutoSize = true;
             this.lblEstadoPieza.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadoPieza.ForeColor = System.Drawing.Color.Orange;
+            this.lblEstadoPieza.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblEstadoPieza.Location = new System.Drawing.Point(478, 77);
             this.lblEstadoPieza.Name = "lblEstadoPieza";
             this.lblEstadoPieza.Size = new System.Drawing.Size(148, 34);
@@ -84,7 +84,7 @@
             // 
             this.lblFPedPieza.AutoSize = true;
             this.lblFPedPieza.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFPedPieza.ForeColor = System.Drawing.Color.Orange;
+            this.lblFPedPieza.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblFPedPieza.Location = new System.Drawing.Point(478, 261);
             this.lblFPedPieza.Name = "lblFPedPieza";
             this.lblFPedPieza.Size = new System.Drawing.Size(154, 34);
@@ -95,7 +95,7 @@
             // 
             this.lblFLlegPieza.AutoSize = true;
             this.lblFLlegPieza.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFLlegPieza.ForeColor = System.Drawing.Color.Orange;
+            this.lblFLlegPieza.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblFLlegPieza.Location = new System.Drawing.Point(478, 163);
             this.lblFLlegPieza.Name = "lblFLlegPieza";
             this.lblFLlegPieza.Size = new System.Drawing.Size(164, 34);
@@ -141,7 +141,7 @@
             this.BtnAceptarPieza.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.BtnAceptarPieza.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnAceptarPieza.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAceptarPieza.ForeColor = System.Drawing.Color.Orange;
+            this.BtnAceptarPieza.ForeColor = System.Drawing.Color.DarkOrange;
             this.BtnAceptarPieza.Location = new System.Drawing.Point(211, 384);
             this.BtnAceptarPieza.Name = "BtnAceptarPieza";
             this.BtnAceptarPieza.Size = new System.Drawing.Size(112, 34);
@@ -155,7 +155,7 @@
             this.btnCancelarPieza.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.btnCancelarPieza.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelarPieza.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelarPieza.ForeColor = System.Drawing.Color.Orange;
+            this.btnCancelarPieza.ForeColor = System.Drawing.Color.DarkOrange;
             this.btnCancelarPieza.Location = new System.Drawing.Point(557, 384);
             this.btnCancelarPieza.Name = "btnCancelarPieza";
             this.btnCancelarPieza.Size = new System.Drawing.Size(112, 34);
@@ -170,7 +170,7 @@
             this.btnModifcarPieza.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.btnModifcarPieza.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnModifcarPieza.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModifcarPieza.ForeColor = System.Drawing.Color.Orange;
+            this.btnModifcarPieza.ForeColor = System.Drawing.Color.DarkOrange;
             this.btnModifcarPieza.Location = new System.Drawing.Point(384, 384);
             this.btnModifcarPieza.Name = "btnModifcarPieza";
             this.btnModifcarPieza.Size = new System.Drawing.Size(112, 34);
@@ -203,11 +203,11 @@
             // lblDatosPieza
             // 
             this.lblDatosPieza.AutoSize = true;
-            this.lblDatosPieza.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDatosPieza.Font = new System.Drawing.Font("Cordia New", 26F, System.Drawing.FontStyle.Bold);
             this.lblDatosPieza.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblDatosPieza.Location = new System.Drawing.Point(333, 9);
             this.lblDatosPieza.Name = "lblDatosPieza";
-            this.lblDatosPieza.Size = new System.Drawing.Size(197, 32);
+            this.lblDatosPieza.Size = new System.Drawing.Size(189, 48);
             this.lblDatosPieza.TabIndex = 81;
             this.lblDatosPieza.Text = "Datos de pieza";
             // 
@@ -215,7 +215,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(758, 449);
             this.Controls.Add(this.lblDatosPieza);
             this.Controls.Add(this.PDatosPieza);
@@ -232,7 +232,6 @@
             this.Controls.Add(this.lblDescPieza);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DatosPieza";
-            this.Opacity = 0.9D;
             this.Text = "DatosPieza";
             this.PDatosPieza.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.LogoDatosPieza)).EndInit();

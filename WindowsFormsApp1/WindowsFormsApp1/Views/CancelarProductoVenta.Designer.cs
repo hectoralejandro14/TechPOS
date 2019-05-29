@@ -78,6 +78,7 @@
             // 
             this.lblCodigoS.AutoSize = true;
             this.lblCodigoS.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoS.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblCodigoS.Location = new System.Drawing.Point(271, 68);
             this.lblCodigoS.Name = "lblCodigoS";
             this.lblCodigoS.Size = new System.Drawing.Size(72, 18);
@@ -88,6 +89,7 @@
             // 
             this.lblDescripcionSC.AutoSize = true;
             this.lblDescripcionSC.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcionSC.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblDescripcionSC.Location = new System.Drawing.Point(241, 115);
             this.lblDescripcionSC.Name = "lblDescripcionSC";
             this.lblDescripcionSC.Size = new System.Drawing.Size(100, 18);
@@ -98,6 +100,7 @@
             // 
             this.lblTotalSC.AutoSize = true;
             this.lblTotalSC.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalSC.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblTotalSC.Location = new System.Drawing.Point(288, 199);
             this.lblTotalSC.Name = "lblTotalSC";
             this.lblTotalSC.Size = new System.Drawing.Size(48, 18);
@@ -108,6 +111,7 @@
             // 
             this.lblCantidadSC.AutoSize = true;
             this.lblCantidadSC.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidadSC.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblCantidadSC.Location = new System.Drawing.Point(257, 156);
             this.lblCantidadSC.Name = "lblCantidadSC";
             this.lblCantidadSC.Size = new System.Drawing.Size(84, 18);
@@ -118,6 +122,7 @@
             // 
             this.lblCancelarProductoS.AutoSize = true;
             this.lblCancelarProductoS.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCancelarProductoS.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblCancelarProductoS.Location = new System.Drawing.Point(365, 12);
             this.lblCancelarProductoS.Name = "lblCancelarProductoS";
             this.lblCancelarProductoS.Size = new System.Drawing.Size(256, 33);
@@ -128,6 +133,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkOrange;
             this.label1.Location = new System.Drawing.Point(282, 246);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 18);
@@ -149,7 +155,7 @@
             this.SpanelLogo.Dock = System.Windows.Forms.DockStyle.Left;
             this.SpanelLogo.Location = new System.Drawing.Point(0, 0);
             this.SpanelLogo.Name = "SpanelLogo";
-            this.SpanelLogo.Size = new System.Drawing.Size(175, 466);
+            this.SpanelLogo.Size = new System.Drawing.Size(156, 466);
             this.SpanelLogo.TabIndex = 20;
             this.SpanelLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SpanelLogo_MouseDown);
             // 
@@ -158,7 +164,8 @@
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(163, 231);
+            this.pictureBox1.Size = new System.Drawing.Size(117, 165);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
@@ -171,12 +178,12 @@
             this.btnAceptarCancelacionVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnAceptarCancelacionVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptarCancelacionVenta.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptarCancelacionVenta.ForeColor = System.Drawing.Color.Orange;
-            this.btnAceptarCancelacionVenta.Location = new System.Drawing.Point(358, 382);
+            this.btnAceptarCancelacionVenta.ForeColor = System.Drawing.Color.DarkOrange;
+            this.btnAceptarCancelacionVenta.Location = new System.Drawing.Point(439, 397);
             this.btnAceptarCancelacionVenta.Name = "btnAceptarCancelacionVenta";
-            this.btnAceptarCancelacionVenta.Size = new System.Drawing.Size(382, 35);
+            this.btnAceptarCancelacionVenta.Size = new System.Drawing.Size(215, 35);
             this.btnAceptarCancelacionVenta.TabIndex = 12;
-            this.btnAceptarCancelacionVenta.Text = "Acepatar";
+            this.btnAceptarCancelacionVenta.Text = "Aceptar";
             this.btnAceptarCancelacionVenta.UseVisualStyleBackColor = false;
             this.btnAceptarCancelacionVenta.Click += new System.EventHandler(this.btnAceptarCancelacionVenta_Click);
             // 

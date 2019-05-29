@@ -55,11 +55,11 @@
             // NUNuevoUsuarioNI
             // 
             this.NUNuevoUsuarioNI.AutoSize = true;
-            this.NUNuevoUsuarioNI.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NUNuevoUsuarioNI.ForeColor = System.Drawing.Color.DimGray;
+            this.NUNuevoUsuarioNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NUNuevoUsuarioNI.ForeColor = System.Drawing.Color.DarkOrange;
             this.NUNuevoUsuarioNI.Location = new System.Drawing.Point(430, 9);
             this.NUNuevoUsuarioNI.Name = "NUNuevoUsuarioNI";
-            this.NUNuevoUsuarioNI.Size = new System.Drawing.Size(193, 32);
+            this.NUNuevoUsuarioNI.Size = new System.Drawing.Size(172, 29);
             this.NUNuevoUsuarioNI.TabIndex = 18;
             this.NUNuevoUsuarioNI.Text = "Nuevo Usuario";
             // 
@@ -200,10 +200,10 @@
             // 
             // NICtxtNombreUsuario
             // 
-            this.NICtxtNombreUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.NICtxtNombreUsuario.BackColor = System.Drawing.SystemColors.ControlLight;
             this.NICtxtNombreUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.NICtxtNombreUsuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NICtxtNombreUsuario.ForeColor = System.Drawing.Color.DimGray;
+            this.NICtxtNombreUsuario.ForeColor = System.Drawing.Color.DarkOrange;
             this.NICtxtNombreUsuario.Location = new System.Drawing.Point(270, 54);
             this.NICtxtNombreUsuario.Name = "NICtxtNombreUsuario";
             this.NICtxtNombreUsuario.Size = new System.Drawing.Size(454, 19);
@@ -214,10 +214,10 @@
             // 
             // NICtxtNombreU
             // 
-            this.NICtxtNombreU.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.NICtxtNombreU.BackColor = System.Drawing.SystemColors.ControlLight;
             this.NICtxtNombreU.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.NICtxtNombreU.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NICtxtNombreU.ForeColor = System.Drawing.Color.DimGray;
+            this.NICtxtNombreU.ForeColor = System.Drawing.Color.DarkOrange;
             this.NICtxtNombreU.Location = new System.Drawing.Point(270, 105);
             this.NICtxtNombreU.Name = "NICtxtNombreU";
             this.NICtxtNombreU.Size = new System.Drawing.Size(454, 19);
@@ -228,10 +228,10 @@
             // 
             // NICtxtApellidoU
             // 
-            this.NICtxtApellidoU.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.NICtxtApellidoU.BackColor = System.Drawing.SystemColors.ControlLight;
             this.NICtxtApellidoU.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.NICtxtApellidoU.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NICtxtApellidoU.ForeColor = System.Drawing.Color.DimGray;
+            this.NICtxtApellidoU.ForeColor = System.Drawing.Color.DarkOrange;
             this.NICtxtApellidoU.Location = new System.Drawing.Point(270, 159);
             this.NICtxtApellidoU.Name = "NICtxtApellidoU";
             this.NICtxtApellidoU.Size = new System.Drawing.Size(454, 19);
@@ -242,10 +242,10 @@
             // 
             // NiCtxtTelefonoU
             // 
-            this.NiCtxtTelefonoU.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.NiCtxtTelefonoU.BackColor = System.Drawing.SystemColors.ControlLight;
             this.NiCtxtTelefonoU.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.NiCtxtTelefonoU.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NiCtxtTelefonoU.ForeColor = System.Drawing.Color.DimGray;
+            this.NiCtxtTelefonoU.ForeColor = System.Drawing.Color.DarkOrange;
             this.NiCtxtTelefonoU.Location = new System.Drawing.Point(270, 214);
             this.NiCtxtTelefonoU.Name = "NiCtxtTelefonoU";
             this.NiCtxtTelefonoU.Size = new System.Drawing.Size(454, 19);
@@ -258,10 +258,10 @@
             // 
             // NICtxtCorreoU
             // 
-            this.NICtxtCorreoU.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.NICtxtCorreoU.BackColor = System.Drawing.SystemColors.ControlLight;
             this.NICtxtCorreoU.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.NICtxtCorreoU.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NICtxtCorreoU.ForeColor = System.Drawing.Color.DimGray;
+            this.NICtxtCorreoU.ForeColor = System.Drawing.Color.DarkOrange;
             this.NICtxtCorreoU.Location = new System.Drawing.Point(270, 267);
             this.NICtxtCorreoU.Name = "NICtxtCorreoU";
             this.NICtxtCorreoU.Size = new System.Drawing.Size(454, 19);
@@ -272,10 +272,10 @@
             // 
             // NICtxtContrasenaU
             // 
-            this.NICtxtContrasenaU.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.NICtxtContrasenaU.BackColor = System.Drawing.SystemColors.ControlLight;
             this.NICtxtContrasenaU.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.NICtxtContrasenaU.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NICtxtContrasenaU.ForeColor = System.Drawing.Color.DimGray;
+            this.NICtxtContrasenaU.ForeColor = System.Drawing.Color.DarkOrange;
             this.NICtxtContrasenaU.Location = new System.Drawing.Point(270, 316);
             this.NICtxtContrasenaU.Name = "NICtxtContrasenaU";
             this.NICtxtContrasenaU.Size = new System.Drawing.Size(454, 19);
@@ -286,10 +286,10 @@
             // 
             // NICtxtConfirmarContrasenaU
             // 
-            this.NICtxtConfirmarContrasenaU.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.NICtxtConfirmarContrasenaU.BackColor = System.Drawing.SystemColors.ControlLight;
             this.NICtxtConfirmarContrasenaU.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.NICtxtConfirmarContrasenaU.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NICtxtConfirmarContrasenaU.ForeColor = System.Drawing.Color.DimGray;
+            this.NICtxtConfirmarContrasenaU.ForeColor = System.Drawing.Color.DarkOrange;
             this.NICtxtConfirmarContrasenaU.Location = new System.Drawing.Point(270, 370);
             this.NICtxtConfirmarContrasenaU.Name = "NICtxtConfirmarContrasenaU";
             this.NICtxtConfirmarContrasenaU.Size = new System.Drawing.Size(454, 19);
@@ -303,7 +303,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(780, 480);
             this.Controls.Add(this.NICtxtConfirmarContrasenaU);
             this.Controls.Add(this.NICtxtContrasenaU);
@@ -326,7 +326,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NINuevoUsuario";
-            this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NINuevoUsuario";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.NINuevoUsuario_MouseDown);
