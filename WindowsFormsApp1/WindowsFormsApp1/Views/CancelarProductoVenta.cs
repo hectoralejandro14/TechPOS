@@ -37,7 +37,7 @@ namespace WindowsFormsApp1.Views
                 decimal id = UltimoIdIngresado();
                 //-------------------------------------------------------------------
                 //Buscar IdUsuario
-                int idUsuario = Convert.ToInt32(connection.getIdUsuario("SELECT Id FROM Usuario WHERE NombreUsuario = '"+ responsable + "'"));
+                int idUsuario = Convert.ToInt32(connection.getIdUsuario("SELECT Id FROM Usuario WHERE NombreUsuario = '" + responsable + "'"));
                 connection.CerrarConexion();
                 //-------------------------------------------------------------------
                 //Insertar datos en tabla cancelacion
@@ -46,7 +46,7 @@ namespace WindowsFormsApp1.Views
                 string hora_de_cancelacion = DateTime.Now.ToLongTimeString();
                 string datos = "[Código : " + txtCodigoCancelacion.Text + "] [Producto cancelado : " + txtDescripcionCancelacion.Text + "] [Motivo : "+txtMotivoDeCancelacion.Text+"] [Devolución de efectivo : " + txtTotalDeCancelacion.Text+"] [Hora de cancelacion : "+ hora_de_cancelacion+"]";
                 string query = "INSERT INTO Cancelacion (Id, Motivo, Fecha, IdUsuario, IdVenta) VALUES (@Id,@Motivo,@Fecha,@IdUsuario,@IdVenta)";
-                if (connection.AgregarCancelacion(query, id, datos, mifecha, idUsuario, 1) > 0)
+                if (connection.AgregarCancelacion(query, id, datos, mifecha,  idUsuario, 1) > 0)
                 {
                     MessageBox.Show("Cancelacion Exitosa", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Question);
                     ViewTabs v = new ViewTabs();
