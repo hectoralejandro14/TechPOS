@@ -1480,6 +1480,13 @@ namespace WindowsFormsApp1.Views
             pruebapdf p = new pruebapdf(2);
             p.ShowDialog();
         }
+
+        private void SimgCerrarNuevaImagen_Click(object sender, EventArgs e)
+        {
+            ViewLogin login = new ViewLogin();
+            login.Show();
+            this.Hide();
+        }
     }
 
 }

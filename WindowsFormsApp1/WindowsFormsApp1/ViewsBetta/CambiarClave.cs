@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Net;
 using System.Net.Mail;
 using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
@@ -12,9 +13,8 @@ namespace WindowsFormsApp1.ViewsBetta
         public CambiarClave()
         {
             InitializeComponent();
-            CCtxtPinSeguridad.Visible = false;
-            lblPinSeguridadCC.Visible = false;
-            CCbtnAceptarPinSeguridad.Visible = false;
+            SbtnAceptarCambiarContrasena.Visible = false;
+            StxtNuevaContrasenaUsuario.Visible = false;
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -24,48 +24,57 @@ namespace WindowsFormsApp1.ViewsBetta
         {           
             if (validarEmail(txtCorreoCC.Text))
             {
-                //clavesrecuperadasup@hotmail.com
-                //upsoftware2019
-                Random random = new Random();
-                decimal r = random.Next(1000, 9999);
-                MailMessage mensaje = new MailMessage();
-                mensaje.To.Add(txtCorreoCC.Text);
-                mensaje.Subject = "Correo de verificacion de usuario";
-                mensaje.SubjectEncoding = System.Text.Encoding.UTF8;
-                //upmendoza@unisierra.edu.mx
-                mensaje.Bcc.Add("carloshudm@gmail.com");
-                mensaje.Body = "Correo enviado desde c#";
-                mensaje.BodyEncoding = System.Text.Encoding.UTF8;
-                mensaje.IsBodyHtml = true;
-                mensaje.From = new MailAddress(txtCorreoCC.Text);
-
-                SmtpClient cliente = new SmtpClient();
-                cliente.Credentials = new System.Net.NetworkCredential("clavesrecuperadasup@hotmailcom", "upsoftware2019");
-                cliente.Port = 587;
-                cliente.EnableSsl = true;
-                cliente.Host = "smpt.gmail.com";//mail.dominio.com
-
-                try
+                DBConnectio.Connection db = new DBConnectio.Connection();
+                db.AbrirConexion();
+                string query = "SELECT Correo FROM Usuario WHERE Correo = '"+txtCorreoCC.Text+"'";
+                if (db.ExisteCorreo(query,txtCorreoCC.Text))
                 {
-                    cliente.Send(mensaje);
-                    txtCorreoCC.Visible = false;
-                    lblCorreoCC.Visible = false;
+                    //Quitar campos no requeridos
                     btnAceptarCC.Visible = false;
-                    //------------------------------------------------------------------------
-                    CCtxtPinSeguridad.Visible = true;
-                    lblPinSeguridadCC.Visible = true;
-                    CCbtnAceptarPinSeguridad.Visible = true;
-                    //------------------------------------------------------------------------
+                    txtCorreoCC.Visible = false;
+                    //Mostras campos de actualizacion
+                    SbtnAceptarCambiarContrasena.Visible = true;
+                    StxtNuevaContrasenaUsuario.Visible = true;
                 }
-                catch
+                else
                 {
-                    MessageBox.Show("Error al momento de enviar correo por problemas de conectividad", "Error de conectividad", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("El correo ingreasado no fue encontrado en los registros.", "Correo no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
+                db.CerrarConexion();
 
             }
             else
             {
                 MessageBox.Show("El formato de correo ingresado no es válido.", "Correo no válido", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void SbtnAceptarCambiarContrasena_Click(object sender, EventArgs e)
+        {
+            if (StxtNuevaContrasenaUsuario.Text == "Ingrese nueva contraseña")
+            {
+                MessageBox.Show("El campo de nueva contraseña se encuentra vacio.", "Campo vacio", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                //db.modificar("Update Usuario set Contra='"+coe+"' where NombreUsuario='"+txtUserNameA.Text+"'");
+                DBConnectio.Connection db = new DBConnectio.Connection();
+                //Encriptar contraseña
+                db.AbrirConexion();
+                string contrasena_encriptada = Controllers.Encrypt.GetMD5(StxtNuevaContrasenaUsuario.Text);
+                int cambio_exitoso =  db.Updatepassword("UPDATE Usuario SET Contra = '"+contrasena_encriptada+"' WHERE Correo = '"+ txtCorreoCC .Text+ "'");
+                if (cambio_exitoso > 0)
+                {
+                    MessageBox.Show("Los datos de contraseña para el usuario " + txtCorreoCC.Text + " fueron actualizados exitosamente.", "Cambio Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ViewLogin login = new ViewLogin();
+                    login.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Falló el cambió de contraseña por problemas de conectividad", "Cambio Fallido", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                db.CerrarConexion();
             }
         }
         //--------------------------------------------------------------------------------------------
@@ -138,6 +147,26 @@ namespace WindowsFormsApp1.ViewsBetta
         private void CCbtnAceptarPinSeguridad_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void StxtNuevaContrasenaUsuario_Enter(object sender, EventArgs e)
+        {
+            if (StxtNuevaContrasenaUsuario.Text == "Ingrese nueva contraseña")
+            {
+                StxtNuevaContrasenaUsuario.Text = "";
+                StxtNuevaContrasenaUsuario.ForeColor = Color.Orange;
+                StxtNuevaContrasenaUsuario.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void StxtNuevaContrasenaUsuario_Leave(object sender, EventArgs e)
+        {
+            if (StxtNuevaContrasenaUsuario.Text == "")
+            {
+                StxtNuevaContrasenaUsuario.Text = "Ingrese nueva contraseña";
+                StxtNuevaContrasenaUsuario.ForeColor = Color.DimGray;
+                StxtNuevaContrasenaUsuario.UseSystemPasswordChar = false;
+            }
         }
     }
 }

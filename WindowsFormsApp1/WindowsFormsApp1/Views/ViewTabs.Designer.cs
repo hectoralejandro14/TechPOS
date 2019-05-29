@@ -30,9 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewTabs));
             this.tabPuntoVenta = new System.Windows.Forms.TabControl();
             this.tabVenta = new System.Windows.Forms.TabPage();
+            this.PanelLogoPuntoDeVenta = new System.Windows.Forms.Panel();
             this.lblCantidadPVenta = new System.Windows.Forms.Label();
             this.txtCantidadVenta = new System.Windows.Forms.TextBox();
             this.pVenta = new System.Windows.Forms.Panel();
@@ -142,17 +144,13 @@
             this.SlblPiezasOrdenadas = new System.Windows.Forms.Label();
             this.TabClientes = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.layBuscarCliente = new System.Windows.Forms.FlowLayoutPanel();
             this.lblClienteBuscar = new System.Windows.Forms.Label();
             this.txtCliente = new System.Windows.Forms.TextBox();
-            this.pbBuscar = new System.Windows.Forms.PictureBox();
             this.dgClientes = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.chenoReportePB = new System.Windows.Forms.PictureBox();
             this.PProducts = new System.Windows.Forms.Panel();
-            this.LogoProducts = new System.Windows.Forms.PictureBox();
-            this.pBoxAddProduct = new System.Windows.Forms.PictureBox();
             this.btnSearchProduct = new System.Windows.Forms.Button();
             this.txtBSearchProduct = new System.Windows.Forms.TextBox();
             this.lblSearchProduct = new System.Windows.Forms.Label();
@@ -175,12 +173,25 @@
             this.reparacionTableAdapter = new WindowsFormsApp1.TechPOSdbDataSetTableAdapters.ReparacionTableAdapter();
             this.clienteTableAdapter = new WindowsFormsApp1.TechPOSdbDataSetTableAdapters.ClienteTableAdapter();
             this.Tiempo = new System.Windows.Forms.Timer(this.components);
+            this.SimgCerrarNuevaImagen = new System.Windows.Forms.PictureBox();
+            this.SImgPanelPubtoDeVenta = new System.Windows.Forms.PictureBox();
+            this.recibirLogoCh = new System.Windows.Forms.PictureBox();
+            this.refresIconCheno = new System.Windows.Forms.PictureBox();
+            this.pBoxBuscarRep = new System.Windows.Forms.PictureBox();
+            this.reparacionLogoCh = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.ordenesLogoCh = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pbBuscar = new System.Windows.Forms.PictureBox();
+            this.LogoProducts = new System.Windows.Forms.PictureBox();
+            this.pBoxAddProduct = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.tabPuntoVenta.SuspendLayout();
             this.tabVenta.SuspendLayout();
             this.pVenta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxVenta)).BeginInit();
+            this.PanelLogoPuntoDeVenta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableVender)).BeginInit();
             this.tabRecibirEquipo.SuspendLayout();
             this.layoutTotales.SuspendLayout();
@@ -209,21 +220,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBoxOrdenadas)).BeginInit();
             this.TabClientes.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.layBuscarCliente.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chenoReportePB)).BeginInit();
             this.PProducts.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LogoProducts)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBoxAddProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reparacionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SimgCerrarNuevaImagen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SImgPanelPubtoDeVenta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.recibirLogoCh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.refresIconCheno)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBoxBuscarRep)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reparacionLogoCh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordenesLogoCh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBuscar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoProducts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBoxAddProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -309,6 +328,17 @@
             this.pBoxVenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pBoxVenta.TabIndex = 1;
             this.pBoxVenta.TabStop = false;
+            // 
+            // PanelLogoPuntoDeVenta
+            // 
+            this.PanelLogoPuntoDeVenta.BackColor = System.Drawing.Color.DimGray;
+            this.PanelLogoPuntoDeVenta.Controls.Add(this.SimgCerrarNuevaImagen);
+            this.PanelLogoPuntoDeVenta.Controls.Add(this.SImgPanelPubtoDeVenta);
+            this.PanelLogoPuntoDeVenta.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PanelLogoPuntoDeVenta.Location = new System.Drawing.Point(3, 3);
+            this.PanelLogoPuntoDeVenta.Name = "PanelLogoPuntoDeVenta";
+            this.PanelLogoPuntoDeVenta.Size = new System.Drawing.Size(148, 663);
+            this.PanelLogoPuntoDeVenta.TabIndex = 22;
             // 
             // HoraMinutoSegundo
             // 
@@ -1562,16 +1592,6 @@
             this.panel1.Size = new System.Drawing.Size(170, 663);
             this.panel1.TabIndex = 42;
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
-            this.pictureBox5.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(164, 175);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 1;
-            this.pictureBox5.TabStop = false;
-            // 
             // layBuscarCliente
             // 
             this.layBuscarCliente.Controls.Add(this.lblClienteBuscar);
@@ -1626,6 +1646,14 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgClientes.Location = new System.Drawing.Point(189, 89);
             this.dgClientes.Name = "dgClientes";
@@ -1644,11 +1672,11 @@
             this.tabPage1.BackColor = System.Drawing.Color.LightGray;
             this.tabPage1.Controls.Add(this.chenoReportePB);
             this.tabPage1.Controls.Add(this.PProducts);
-            this.tabPage1.Controls.Add(this.pBoxAddProduct);
             this.tabPage1.Controls.Add(this.btnSearchProduct);
             this.tabPage1.Controls.Add(this.txtBSearchProduct);
             this.tabPage1.Controls.Add(this.lblSearchProduct);
             this.tabPage1.Controls.Add(this.dGVProducts);
+            this.tabPage1.Controls.Add(this.pBoxAddProduct);
             this.tabPage1.Location = new System.Drawing.Point(4, 43);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -1832,6 +1860,131 @@
             this.Tiempo.Enabled = true;
             this.Tiempo.Tick += new System.EventHandler(this.Tiempo_Tick);
             // 
+            // SimgCerrarNuevaImagen
+            // 
+            this.SimgCerrarNuevaImagen.Image = global::WindowsFormsApp1.Properties.Resources.logout;
+            this.SimgCerrarNuevaImagen.Location = new System.Drawing.Point(38, 607);
+            this.SimgCerrarNuevaImagen.Name = "SimgCerrarNuevaImagen";
+            this.SimgCerrarNuevaImagen.Size = new System.Drawing.Size(54, 40);
+            this.SimgCerrarNuevaImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.SimgCerrarNuevaImagen.TabIndex = 23;
+            this.SimgCerrarNuevaImagen.TabStop = false;
+            this.SimgCerrarNuevaImagen.Click += new System.EventHandler(this.SimgCerrarNuevaImagen_Click);
+            // 
+            // SImgPanelPubtoDeVenta
+            // 
+            this.SImgPanelPubtoDeVenta.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.SImgPanelPubtoDeVenta.Location = new System.Drawing.Point(3, 3);
+            this.SImgPanelPubtoDeVenta.Name = "SImgPanelPubtoDeVenta";
+            this.SImgPanelPubtoDeVenta.Size = new System.Drawing.Size(136, 219);
+            this.SImgPanelPubtoDeVenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.SImgPanelPubtoDeVenta.TabIndex = 0;
+            this.SImgPanelPubtoDeVenta.TabStop = false;
+            // 
+            // recibirLogoCh
+            // 
+            this.recibirLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.recibirLogoCh.Location = new System.Drawing.Point(6, 6);
+            this.recibirLogoCh.Name = "recibirLogoCh";
+            this.recibirLogoCh.Size = new System.Drawing.Size(66, 104);
+            this.recibirLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.recibirLogoCh.TabIndex = 51;
+            this.recibirLogoCh.TabStop = false;
+            // 
+            // refresIconCheno
+            // 
+            this.refresIconCheno.Image = global::WindowsFormsApp1.Properties.Resources.refrescar;
+            this.refresIconCheno.Location = new System.Drawing.Point(1269, 183);
+            this.refresIconCheno.Name = "refresIconCheno";
+            this.refresIconCheno.Size = new System.Drawing.Size(53, 55);
+            this.refresIconCheno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.refresIconCheno.TabIndex = 13;
+            this.refresIconCheno.TabStop = false;
+            this.refresIconCheno.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
+            // pBoxBuscarRep
+            // 
+            this.pBoxBuscarRep.Image = global::WindowsFormsApp1.Properties.Resources.Lupa_Codigo;
+            this.pBoxBuscarRep.Location = new System.Drawing.Point(754, 131);
+            this.pBoxBuscarRep.Name = "pBoxBuscarRep";
+            this.pBoxBuscarRep.Size = new System.Drawing.Size(44, 34);
+            this.pBoxBuscarRep.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBoxBuscarRep.TabIndex = 12;
+            this.pBoxBuscarRep.TabStop = false;
+            this.pBoxBuscarRep.Click += new System.EventHandler(this.pBoxBuscarRep_Click);
+            // 
+            // reparacionLogoCh
+            // 
+            this.reparacionLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.reparacionLogoCh.Location = new System.Drawing.Point(6, 6);
+            this.reparacionLogoCh.Name = "reparacionLogoCh";
+            this.reparacionLogoCh.Size = new System.Drawing.Size(62, 101);
+            this.reparacionLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.reparacionLogoCh.TabIndex = 11;
+            this.reparacionLogoCh.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.pictureBox4.Location = new System.Drawing.Point(6, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(65, 104);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 3;
+            this.pictureBox4.TabStop = false;
+            // 
+            // ordenesLogoCh
+            // 
+            this.ordenesLogoCh.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.ordenesLogoCh.Location = new System.Drawing.Point(6, 6);
+            this.ordenesLogoCh.Name = "ordenesLogoCh";
+            this.ordenesLogoCh.Size = new System.Drawing.Size(64, 105);
+            this.ordenesLogoCh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ordenesLogoCh.TabIndex = 5;
+            this.ordenesLogoCh.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.pictureBox5.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(164, 175);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 1;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pbBuscar
+            // 
+            this.pbBuscar.Image = global::WindowsFormsApp1.Properties.Resources.Lupa_Codigo;
+            this.pbBuscar.Location = new System.Drawing.Point(445, 3);
+            this.pbBuscar.Name = "pbBuscar";
+            this.pbBuscar.Size = new System.Drawing.Size(37, 41);
+            this.pbBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbBuscar.TabIndex = 8;
+            this.pbBuscar.TabStop = false;
+            this.pbBuscar.Click += new System.EventHandler(this.pbBuscar_Click);
+            // 
+            // LogoProducts
+            // 
+            this.LogoProducts.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
+            this.LogoProducts.Location = new System.Drawing.Point(3, 3);
+            this.LogoProducts.Name = "LogoProducts";
+            this.LogoProducts.Size = new System.Drawing.Size(164, 175);
+            this.LogoProducts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.LogoProducts.TabIndex = 1;
+            this.LogoProducts.TabStop = false;
+            // 
+            // pBoxAddProduct
+            // 
+            this.pBoxAddProduct.Image = global::WindowsFormsApp1.Properties.Resources._64244;
+            this.pBoxAddProduct.Location = new System.Drawing.Point(1277, 51);
+            this.pBoxAddProduct.Name = "pBoxAddProduct";
+            this.pBoxAddProduct.Size = new System.Drawing.Size(45, 40);
+            this.pBoxAddProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBoxAddProduct.TabIndex = 35;
+            this.pBoxAddProduct.TabStop = false;
+            this.pBoxAddProduct.Click += new System.EventHandler(this.PBoxAddProduct_Click);
+            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
@@ -1849,7 +2002,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(1350, 749);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.tabPuntoVenta);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1866,6 +2018,7 @@
             this.pVenta.ResumeLayout(false);
             this.pVenta.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxVenta)).EndInit();
+            this.PanelLogoPuntoDeVenta.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tableVender)).EndInit();
             this.tabRecibirEquipo.ResumeLayout(false);
             this.layoutTotales.ResumeLayout(false);
@@ -1904,23 +2057,31 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBoxOrdenadas)).EndInit();
             this.TabClientes.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.layBuscarCliente.ResumeLayout(false);
             this.layBuscarCliente.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbBuscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chenoReportePB)).EndInit();
             this.PProducts.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.LogoProducts)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBoxAddProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVProducts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.techPOSdbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reparacionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SimgCerrarNuevaImagen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SImgPanelPubtoDeVenta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.recibirLogoCh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.refresIconCheno)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBoxBuscarRep)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reparacionLogoCh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordenesLogoCh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBuscar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoProducts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBoxAddProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
@@ -2062,7 +2223,6 @@
         private System.Windows.Forms.FlowLayoutPanel layBuscarCliente;
         private System.Windows.Forms.Label SlblPiezasOrdenadas;
         private System.Windows.Forms.Button SbtnAgregarNuevoServicioCU;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pBoxBuscarRep;
         private System.Windows.Forms.PictureBox refresIconCheno;
         private System.Windows.Forms.Button SbtnNuevoServicioRE;
@@ -2099,6 +2259,9 @@
         private System.Windows.Forms.PictureBox chenoReportePB;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.Button repRep;
+        private System.Windows.Forms.Panel PanelLogoPuntoDeVenta;
+        private System.Windows.Forms.PictureBox SImgPanelPubtoDeVenta;
+        private System.Windows.Forms.PictureBox SimgCerrarNuevaImagen;
         //  private System.Windows.Forms.TextBox textBox1;
         //private System.Windows.Forms.Label UnaLabel;
         //  private System.Windows.Forms.Label label5;

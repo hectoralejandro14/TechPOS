@@ -36,10 +36,10 @@
             this.SlbTituloLoginCC = new System.Windows.Forms.Label();
             this.btnAceptarCC = new System.Windows.Forms.Button();
             this.btnVolverCC = new System.Windows.Forms.Button();
-            this.CCtxtPinSeguridad = new System.Windows.Forms.TextBox();
-            this.CCbtnAceptarPinSeguridad = new System.Windows.Forms.Button();
             this.lblPinSeguridadCC = new System.Windows.Forms.LinkLabel();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.SbtnAceptarCambiarContrasena = new System.Windows.Forms.Button();
+            this.StxtNuevaContrasenaUsuario = new System.Windows.Forms.TextBox();
             this.PanelRecuperarClave.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImgCC)).BeginInit();
             this.SuspendLayout();
@@ -115,7 +115,7 @@
             this.btnAceptarCC.Name = "btnAceptarCC";
             this.btnAceptarCC.Size = new System.Drawing.Size(454, 40);
             this.btnAceptarCC.TabIndex = 18;
-            this.btnAceptarCC.Text = "Buscar Correo";
+            this.btnAceptarCC.Text = "Aceptar";
             this.btnAceptarCC.UseVisualStyleBackColor = false;
             this.btnAceptarCC.Click += new System.EventHandler(this.btnAceptarCC_Click);
             // 
@@ -184,11 +184,43 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox1.Location = new System.Drawing.Point(297, 305);
+            this.textBox1.Location = new System.Drawing.Point(297, 317);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(210, 13);
+            this.textBox1.Size = new System.Drawing.Size(332, 13);
             this.textBox1.TabIndex = 24;
-            this.textBox1.Text = "Solo funcional en @gmail.com";
+            this.textBox1.Text = "Importante leer : Debes ingreasar el coreo con el cual te registraste";
+            // 
+            // SbtnAceptarCambiarContrasena
+            // 
+            this.SbtnAceptarCambiarContrasena.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.SbtnAceptarCambiarContrasena.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SbtnAceptarCambiarContrasena.FlatAppearance.BorderSize = 0;
+            this.SbtnAceptarCambiarContrasena.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.SbtnAceptarCambiarContrasena.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.SbtnAceptarCambiarContrasena.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SbtnAceptarCambiarContrasena.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SbtnAceptarCambiarContrasena.ForeColor = System.Drawing.Color.Orange;
+            this.SbtnAceptarCambiarContrasena.Location = new System.Drawing.Point(297, 117);
+            this.SbtnAceptarCambiarContrasena.Name = "SbtnAceptarCambiarContrasena";
+            this.SbtnAceptarCambiarContrasena.Size = new System.Drawing.Size(454, 40);
+            this.SbtnAceptarCambiarContrasena.TabIndex = 2;
+            this.SbtnAceptarCambiarContrasena.Text = "Cambiar Contraseña";
+            this.SbtnAceptarCambiarContrasena.UseVisualStyleBackColor = false;
+            this.SbtnAceptarCambiarContrasena.Click += new System.EventHandler(this.SbtnAceptarCambiarContrasena_Click);
+            // 
+            // StxtNuevaContrasenaUsuario
+            // 
+            this.StxtNuevaContrasenaUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.StxtNuevaContrasenaUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.StxtNuevaContrasenaUsuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StxtNuevaContrasenaUsuario.ForeColor = System.Drawing.Color.DimGray;
+            this.StxtNuevaContrasenaUsuario.Location = new System.Drawing.Point(297, 67);
+            this.StxtNuevaContrasenaUsuario.Name = "StxtNuevaContrasenaUsuario";
+            this.StxtNuevaContrasenaUsuario.Size = new System.Drawing.Size(454, 19);
+            this.StxtNuevaContrasenaUsuario.TabIndex = 1;
+            this.StxtNuevaContrasenaUsuario.Text = "Ingrese nueva contraseña";
+            this.StxtNuevaContrasenaUsuario.Enter += new System.EventHandler(this.StxtNuevaContrasenaUsuario_Enter);
+            this.StxtNuevaContrasenaUsuario.Leave += new System.EventHandler(this.StxtNuevaContrasenaUsuario_Leave);
             // 
             // CambiarClave
             // 
@@ -196,10 +228,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(780, 330);
+            this.Controls.Add(this.StxtNuevaContrasenaUsuario);
+            this.Controls.Add(this.SbtnAceptarCambiarContrasena);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblPinSeguridadCC);
-            this.Controls.Add(this.CCbtnAceptarPinSeguridad);
-            this.Controls.Add(this.CCtxtPinSeguridad);
             this.Controls.Add(this.btnVolverCC);
             this.Controls.Add(this.btnAceptarCC);
             this.Controls.Add(this.SlbTituloLoginCC);
@@ -229,9 +261,9 @@
         private System.Windows.Forms.PictureBox ImgCC;
         private System.Windows.Forms.Button btnAceptarCC;
         private System.Windows.Forms.Button btnVolverCC;
-        private System.Windows.Forms.TextBox CCtxtPinSeguridad;
-        private System.Windows.Forms.Button CCbtnAceptarPinSeguridad;
         private System.Windows.Forms.LinkLabel lblPinSeguridadCC;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button SbtnAceptarCambiarContrasena;
+        private System.Windows.Forms.TextBox StxtNuevaContrasenaUsuario;
     }
 }

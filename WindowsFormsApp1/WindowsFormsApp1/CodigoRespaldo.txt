@@ -1,0 +1,45 @@
+﻿if (validarEmail(txtCorreoCC.Text))
+            {
+                //clavesrecuperadasup@hotmail.com
+                //upsoftware2019
+                Random random = new Random();
+                decimal r = random.Next(1000, 9999);
+                MailMessage mensaje = new MailMessage();
+                mensaje.To.Add(txtCorreoCC.Text);
+                mensaje.Subject = "Correo de varificacion de usuario";
+                mensaje.SubjectEncoding = System.Text.Encoding.UTF8;
+                //upmendoza@unisierra.edu.mx
+                mensaje.Bcc.Add("carloshudm@gmail.com");
+                mensaje.Body = "Correo enviado desde c#";
+                mensaje.BodyEncoding = System.Text.Encoding.UTF8;
+                mensaje.IsBodyHtml = true;
+                mensaje.From = new MailAddress(txtCorreoCC.Text);
+
+                SmtpClient cliente = new SmtpClient();
+                cliente.Credentials = new System.Net.NetworkCredential("clavesrecuperadasup@hotmailcom", "upsoftware2019");
+                cliente.Port = 587;
+                cliente.EnableSsl = true;
+                cliente.Host = "smpt.gmail.com";//mail.dominio.com
+
+                try
+                {
+                    cliente.Send(mensaje);
+                    txtCorreoCC.Visible = false;
+                    lblCorreoCC.Visible = false;
+                    btnAceptarCC.Visible = false;
+                    //------------------------------------------------------------------------
+                    CCtxtPinSeguridad.Visible = true;
+                    lblPinSeguridadCC.Visible = true;
+                    CCbtnAceptarPinSeguridad.Visible = true;
+                    //------------------------------------------------------------------------
+                }
+                catch
+                {
+                    MessageBox.Show("Error al momento de enviar correo por problemas de conectividad", "Error de conectividad", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("El formato de correo ingresado no es válido.", "Correo no válido", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
