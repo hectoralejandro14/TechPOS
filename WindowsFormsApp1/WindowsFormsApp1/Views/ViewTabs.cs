@@ -434,7 +434,7 @@ namespace WindowsFormsApp1.Views
             }
             else
             {
-                MessageBox.Show("Favor de llenar los datos para poder realizar el pedido","Informacion",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Favor de llenar los datos para poder realizar el pedido", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         private void pictureBuscar_Click(object sender, System.EventArgs e)
@@ -1123,7 +1123,7 @@ namespace WindowsFormsApp1.Views
                         }
                     }
                 }
-                catch(Exception){}
+                catch (Exception) { }
             }
         }
         private void ordenesTab_Enter(object sender, EventArgs e)
@@ -1473,7 +1473,7 @@ namespace WindowsFormsApp1.Views
                 }
             }
         }
-        }
+
 
         private void repRep_Click(object sender, EventArgs e)
         {
@@ -1481,4 +1481,5 @@ namespace WindowsFormsApp1.Views
             p.ShowDialog();
         }
     }
+
 }

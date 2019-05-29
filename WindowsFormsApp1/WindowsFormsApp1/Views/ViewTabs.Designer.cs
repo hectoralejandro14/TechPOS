@@ -33,6 +33,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewTabs));
             this.tabPuntoVenta = new System.Windows.Forms.TabControl();
             this.tabVenta = new System.Windows.Forms.TabPage();
+            this.lblCantidadPVenta = new System.Windows.Forms.Label();
+            this.txtCantidadVenta = new System.Windows.Forms.TextBox();
             this.pVenta = new System.Windows.Forms.Panel();
             this.pBoxVenta = new System.Windows.Forms.PictureBox();
             this.HoraMinutoSegundo = new System.Windows.Forms.Label();
@@ -119,6 +121,7 @@
             this.pConfigUsuario = new System.Windows.Forms.Panel();
             this.pBoxConfUsuario = new System.Windows.Forms.PictureBox();
             this.SgbConfiguraciones = new System.Windows.Forms.GroupBox();
+            this.repRep = new System.Windows.Forms.Button();
             this.SbtnAgregarNuevoServicioCU = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.SbtnAgregarUsuario = new System.Windows.Forms.Button();
@@ -173,10 +176,7 @@
             this.clienteTableAdapter = new WindowsFormsApp1.TechPOSdbDataSetTableAdapters.ClienteTableAdapter();
             this.Tiempo = new System.Windows.Forms.Timer(this.components);
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.txtCantidadVenta = new System.Windows.Forms.TextBox();
-            this.lblCantidadPVenta = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.repRep = new System.Windows.Forms.Button();
             this.tabPuntoVenta.SuspendLayout();
             this.tabVenta.SuspendLayout();
             this.pVenta.SuspendLayout();
@@ -248,10 +248,9 @@
             // 
             // tabVenta
             // 
-            this.tabVenta.BackColor = System.Drawing.Color.LightGray;
+            this.tabVenta.BackColor = System.Drawing.SystemColors.ControlLight;
             this.tabVenta.Controls.Add(this.lblCantidadPVenta);
             this.tabVenta.Controls.Add(this.txtCantidadVenta);
-            this.tabVenta.BackColor = System.Drawing.SystemColors.ControlLight;
             this.tabVenta.Controls.Add(this.pVenta);
             this.tabVenta.Controls.Add(this.ClblCodigoDeBarras);
             this.tabVenta.Controls.Add(this.CNombreUsuarioLblVenta);
@@ -272,6 +271,23 @@
             this.tabVenta.Size = new System.Drawing.Size(1328, 669);
             this.tabVenta.TabIndex = 0;
             this.tabVenta.Text = "Venta (F1)";
+            // 
+            // lblCantidadPVenta
+            // 
+            this.lblCantidadPVenta.AutoSize = true;
+            this.lblCantidadPVenta.Location = new System.Drawing.Point(788, 53);
+            this.lblCantidadPVenta.Name = "lblCantidadPVenta";
+            this.lblCantidadPVenta.Size = new System.Drawing.Size(91, 34);
+            this.lblCantidadPVenta.TabIndex = 57;
+            this.lblCantidadPVenta.Text = "Cantidad:";
+            // 
+            // txtCantidadVenta
+            // 
+            this.txtCantidadVenta.Location = new System.Drawing.Point(895, 50);
+            this.txtCantidadVenta.Name = "txtCantidadVenta";
+            this.txtCantidadVenta.Size = new System.Drawing.Size(146, 41);
+            this.txtCantidadVenta.TabIndex = 56;
+            this.txtCantidadVenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCantidadVenta_KeyPress);
             // 
             // pVenta
             // 
@@ -634,7 +650,7 @@
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.33448F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.66552F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 92F));
-            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 247F));
+            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 248F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 230F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 224F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.33448F));
@@ -675,7 +691,7 @@
             // txtMarca
             // 
             this.txtMarca.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMarca.Location = new System.Drawing.Point(210, 3);
+            this.txtMarca.Location = new System.Drawing.Point(209, 3);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(372, 34);
             this.txtMarca.TabIndex = 23;
@@ -684,7 +700,7 @@
             // 
             this.SlblModelo.AutoSize = true;
             this.SlblModelo.ForeColor = System.Drawing.Color.DarkOrange;
-            this.SlblModelo.Location = new System.Drawing.Point(588, 0);
+            this.SlblModelo.Location = new System.Drawing.Point(587, 0);
             this.SlblModelo.Name = "SlblModelo";
             this.SlblModelo.Size = new System.Drawing.Size(82, 34);
             this.SlblModelo.TabIndex = 19;
@@ -696,7 +712,7 @@
             this.ccbTipoServicio1.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ccbTipoServicio1.FormattingEnabled = true;
             this.ccbTipoServicio1.IntegralHeight = false;
-            this.ccbTipoServicio1.Location = new System.Drawing.Point(210, 46);
+            this.ccbTipoServicio1.Location = new System.Drawing.Point(209, 46);
             this.ccbTipoServicio1.Name = "ccbTipoServicio1";
             this.ccbTipoServicio1.Size = new System.Drawing.Size(372, 42);
             this.ccbTipoServicio1.TabIndex = 46;
@@ -705,7 +721,7 @@
             // txtModelo
             // 
             this.txtModelo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModelo.Location = new System.Drawing.Point(680, 3);
+            this.txtModelo.Location = new System.Drawing.Point(679, 3);
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(220, 34);
             this.txtModelo.TabIndex = 24;
@@ -732,7 +748,7 @@
             // txtDescripcionDeFalla
             // 
             this.txtDescripcionDeFalla.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcionDeFalla.Location = new System.Drawing.Point(210, 100);
+            this.txtDescripcionDeFalla.Location = new System.Drawing.Point(209, 100);
             this.txtDescripcionDeFalla.Multiline = true;
             this.txtDescripcionDeFalla.Name = "txtDescripcionDeFalla";
             this.txtDescripcionDeFalla.Size = new System.Drawing.Size(372, 37);
@@ -743,7 +759,7 @@
             this.SbtnNuevoServicioRE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.SbtnNuevoServicioRE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SbtnNuevoServicioRE.ForeColor = System.Drawing.Color.DarkOrange;
-            this.SbtnNuevoServicioRE.Location = new System.Drawing.Point(680, 46);
+            this.SbtnNuevoServicioRE.Location = new System.Drawing.Point(679, 46);
             this.SbtnNuevoServicioRE.Name = "SbtnNuevoServicioRE";
             this.SbtnNuevoServicioRE.Size = new System.Drawing.Size(220, 37);
             this.SbtnNuevoServicioRE.TabIndex = 47;
@@ -885,7 +901,7 @@
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.95349F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.04651F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
-            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 301F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 302F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 278F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.95349F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.04651F));
@@ -935,7 +951,7 @@
             this.txtNombre.ImeMode = System.Windows.Forms.ImeMode.On;
             this.txtNombre.Location = new System.Drawing.Point(99, 3);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(299, 34);
+            this.txtNombre.Size = new System.Drawing.Size(298, 34);
             this.txtNombre.TabIndex = 40;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
@@ -956,7 +972,7 @@
             this.txtApellido.ImeMode = System.Windows.Forms.ImeMode.On;
             this.txtApellido.Location = new System.Drawing.Point(99, 51);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(299, 34);
+            this.txtApellido.Size = new System.Drawing.Size(298, 34);
             this.txtApellido.TabIndex = 41;
             this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
@@ -964,7 +980,7 @@
             // 
             this.SlblTelefono.AutoSize = true;
             this.SlblTelefono.ForeColor = System.Drawing.Color.DarkOrange;
-            this.SlblTelefono.Location = new System.Drawing.Point(404, 0);
+            this.SlblTelefono.Location = new System.Drawing.Point(403, 0);
             this.SlblTelefono.Name = "SlblTelefono";
             this.SlblTelefono.Size = new System.Drawing.Size(89, 48);
             this.SlblTelefono.TabIndex = 5;
@@ -974,7 +990,7 @@
             // 
             this.SlblCorreo.AutoSize = true;
             this.SlblCorreo.ForeColor = System.Drawing.Color.DarkOrange;
-            this.SlblCorreo.Location = new System.Drawing.Point(404, 48);
+            this.SlblCorreo.Location = new System.Drawing.Point(403, 48);
             this.SlblCorreo.Name = "SlblCorreo";
             this.SlblCorreo.Size = new System.Drawing.Size(84, 34);
             this.SlblCorreo.TabIndex = 6;
@@ -984,7 +1000,7 @@
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.txtTelefono.Location = new System.Drawing.Point(502, 3);
+            this.txtTelefono.Location = new System.Drawing.Point(501, 3);
             this.txtTelefono.MaxLength = 10;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(266, 34);
@@ -996,7 +1012,7 @@
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.txtCorreo.Location = new System.Drawing.Point(502, 51);
+            this.txtCorreo.Location = new System.Drawing.Point(501, 51);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(266, 34);
             this.txtCorreo.TabIndex = 39;
@@ -1196,7 +1212,6 @@
             this.CDGReparacion.Size = new System.Drawing.Size(1143, 518);
             this.CDGReparacion.TabIndex = 9;
             this.CDGReparacion.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CDGReparacion_CellClick);
-            this.CDGReparacion.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CDGReparacion_CellContentClick);
             // 
             // CEspera
             // 
@@ -1300,17 +1315,29 @@
             this.SgbConfiguraciones.ForeColor = System.Drawing.Color.DarkOrange;
             this.SgbConfiguraciones.Location = new System.Drawing.Point(331, 432);
             this.SgbConfiguraciones.Name = "SgbConfiguraciones";
-            this.SgbConfiguraciones.Size = new System.Drawing.Size(580, 210);
+            this.SgbConfiguraciones.Size = new System.Drawing.Size(580, 219);
             this.SgbConfiguraciones.TabIndex = 6;
             this.SgbConfiguraciones.TabStop = false;
             this.SgbConfiguraciones.Text = "Configuraciones";
+            // 
+            // repRep
+            // 
+            this.repRep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.repRep.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.repRep.Location = new System.Drawing.Point(115, 126);
+            this.repRep.Name = "repRep";
+            this.repRep.Size = new System.Drawing.Size(277, 37);
+            this.repRep.TabIndex = 6;
+            this.repRep.Text = "Reporte de Reparaciones";
+            this.repRep.UseVisualStyleBackColor = false;
+            this.repRep.Click += new System.EventHandler(this.repRep_Click);
             // 
             // SbtnAgregarNuevoServicioCU
             // 
             this.SbtnAgregarNuevoServicioCU.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.SbtnAgregarNuevoServicioCU.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SbtnAgregarNuevoServicioCU.ForeColor = System.Drawing.Color.DarkOrange;
-            this.SbtnAgregarNuevoServicioCU.Location = new System.Drawing.Point(115, 126);
+            this.SbtnAgregarNuevoServicioCU.Location = new System.Drawing.Point(115, 167);
             this.SbtnAgregarNuevoServicioCU.Name = "SbtnAgregarNuevoServicioCU";
             this.SbtnAgregarNuevoServicioCU.Size = new System.Drawing.Size(277, 37);
             this.SbtnAgregarNuevoServicioCU.TabIndex = 5;
@@ -1638,7 +1665,6 @@
             this.chenoReportePB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.chenoReportePB.TabIndex = 42;
             this.chenoReportePB.TabStop = false;
-            this.chenoReportePB.Click += new System.EventHandler(this.chenoReportePB_Click);
             // 
             // PProducts
             // 
@@ -1816,36 +1842,6 @@
             this.pictureBox3.TabIndex = 21;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // txtCantidadVenta
-            // 
-            this.txtCantidadVenta.Location = new System.Drawing.Point(895, 50);
-            this.txtCantidadVenta.Name = "txtCantidadVenta";
-            this.txtCantidadVenta.Size = new System.Drawing.Size(146, 41);
-            this.txtCantidadVenta.TabIndex = 56;
-            this.txtCantidadVenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCantidadVenta_KeyPress);
-            // 
-            // lblCantidadPVenta
-            // 
-            this.lblCantidadPVenta.AutoSize = true;
-            this.lblCantidadPVenta.Location = new System.Drawing.Point(788, 53);
-            this.lblCantidadPVenta.Name = "lblCantidadPVenta";
-            this.lblCantidadPVenta.Size = new System.Drawing.Size(91, 34);
-            this.lblCantidadPVenta.TabIndex = 57;
-            this.lblCantidadPVenta.Text = "Cantidad:";
-            // 
-            // repRep
-            // 
-            this.repRep.BackColor = System.Drawing.Color.DimGray;
-            this.repRep.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.repRep.ForeColor = System.Drawing.Color.White;
-            this.repRep.Location = new System.Drawing.Point(115, 124);
-            this.repRep.Name = "repRep";
-            this.repRep.Size = new System.Drawing.Size(277, 37);
-            this.repRep.TabIndex = 6;
-            this.repRep.Text = "Reporte de Reparaciones";
-            this.repRep.UseVisualStyleBackColor = false;
-            this.repRep.Click += new System.EventHandler(this.repRep_Click);
             // 
             // ViewTabs
             // 
