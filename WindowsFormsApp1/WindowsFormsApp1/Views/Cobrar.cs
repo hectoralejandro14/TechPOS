@@ -2,15 +2,18 @@
 using System.Collections;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using WindowsFormsApp1.DBConnectio;
 
 namespace WindowsFormsApp1.Views
 {
     public partial class Cobrar : Form
     {
         DataGridView datos = new DataGridView();
-        int dineroRecibido = 0;
-        int totalAPagar = 0;
-        public Cobrar()
+        decimal dineroRecibido = 0;
+        decimal totalAPagar = 0;
+        Connection connection = new Connection();
+        int idUsuario = 0;
+        public Cobrar(decimal totalPagar,int idUsuarioVenta)
         {
             InitializeComponent();
             ArrayList tipoPago = new ArrayList();
@@ -25,9 +28,14 @@ namespace WindowsFormsApp1.Views
             //------------------------------
             txtTotalVenta.Enabled = false;
             txtCambioVenta.Enabled = false;
+            txtTotalVenta.Text = totalPagar.ToString();
+            totalAPagar = totalPagar;
             //------------------------------;
+            idUsuario = idUsuarioVenta;
         }
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparap, int lparam);
@@ -41,8 +49,11 @@ namespace WindowsFormsApp1.Views
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
         private void btnCobrarVentaNI_Click(object sender, System.EventArgs e)
         {
+            int idVenta = 0;
+            DateTime date = DateTime.Now;
             if (dineroRecibido<totalAPagar)
             {
                 MessageBox.Show("No cumple con el pago total");
@@ -50,32 +61,25 @@ namespace WindowsFormsApp1.Views
             else
             {
                 MessageBox.Show("LA VENTA SE REALIZO EXITOSAMENTE");
+                connection.AbrirConexion();
+                idVenta = connection.generarId("Select MAX(Id) from Venta");
+                connection.CerrarConexion();
+                connection.AbrirConexion();
+                connection.guardarVenta("INSERT INTO Venta Values ("+ idVenta +","+ idUsuario +",'"+ date +"',"+ totalAPagar +")");
+                connection.CerrarConexion();
                 this.Hide();
 
-                //Insertar datos a la base de datos
-                //select Cantidad from Producto where ClaveProducto = 'AC-1164'
-                for (int i = 0; i <datos.RowCount;i++)
-                {
-                    if (datos.Rows[i].Cells[0].ToString() == )
-                    {
-
-                    }
-                }
                 
             }
             //this.Hide();
-        }
-        public void setTotal(decimal t)
-        {
-            txtTotalVenta.Text = "" + t;
         }
 
         private void txtReciboVenta_TextChanged(object sender, System.EventArgs e)
         {
             if (!txtReciboVenta.Text.Equals(""))
             {
-                dineroRecibido = Convert.ToInt32(txtReciboVenta.Text);
-                totalAPagar = Convert.ToInt32(txtTotalVenta.Text);
+                dineroRecibido = Convert.ToDecimal(txtReciboVenta.Text);
+                totalAPagar = Convert.ToDecimal(txtTotalVenta.Text);
                 txtCambioVenta.Text = (dineroRecibido - totalAPagar).ToString();
             }
         }

@@ -191,6 +191,7 @@
             this.PDatosCliente.Name = "PDatosCliente";
             this.PDatosCliente.Size = new System.Drawing.Size(93, 393);
             this.PDatosCliente.TabIndex = 82;
+            this.PDatosCliente.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PDatosCliente_MouseDown);
             // 
             // logoDatosCliente
             // 
@@ -223,7 +224,9 @@
             this.Controls.Add(this.btnModificarCliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DatosCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DatosCliente";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DatosCliente_MouseDown);
             this.PDatosCliente.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logoDatosCliente)).EndInit();
             this.ResumeLayout(false);

@@ -203,6 +203,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Cobrar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cobrar";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Cobrar_MouseDown);
             this.SpanelLogo.ResumeLayout(false);

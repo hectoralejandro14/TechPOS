@@ -129,10 +129,12 @@
             this.tBoxCantidadProd.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tBoxCantidadProd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.tBoxCantidadProd.Location = new System.Drawing.Point(602, 184);
+            this.tBoxCantidadProd.MaxLength = 12;
             this.tBoxCantidadProd.Name = "tBoxCantidadProd";
             this.tBoxCantidadProd.Size = new System.Drawing.Size(206, 26);
             this.tBoxCantidadProd.TabIndex = 55;
             this.tBoxCantidadProd.Text = "0";
+            this.tBoxCantidadProd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBoxCantidadProd_KeyPress);
             // 
             // tBoxCostoProducto
             // 
@@ -140,10 +142,12 @@
             this.tBoxCostoProducto.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tBoxCostoProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.tBoxCostoProducto.Location = new System.Drawing.Point(267, 181);
+            this.tBoxCostoProducto.MaxLength = 12;
             this.tBoxCostoProducto.Name = "tBoxCostoProducto";
             this.tBoxCostoProducto.Size = new System.Drawing.Size(206, 26);
             this.tBoxCostoProducto.TabIndex = 53;
             this.tBoxCostoProducto.Text = "0";
+            this.tBoxCostoProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBoxCostoProducto_KeyPress);
             // 
             // tBoxMarca
             // 
@@ -331,6 +335,7 @@
             this.Controls.Add(this.PProducts);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ProductDetails";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ProductDetails_MouseDown);
             this.PProducts.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.LogoProducts)).EndInit();

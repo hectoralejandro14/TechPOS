@@ -207,6 +207,7 @@
             this.Controls.Add(this.txtCodigoCancelacion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CancelarProductoVenta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CancelarProductoVenta";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CancelarProductoVenta_MouseDown);
             this.SpanelLogo.ResumeLayout(false);

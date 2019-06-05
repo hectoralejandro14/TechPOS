@@ -129,12 +129,6 @@
     <Compile Include="Views\AddProduct.Designer.cs">
       <DependentUpon>AddProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Buscar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Buscar.Designer.cs">
-      <DependentUpon>Buscar.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\cambiarContraseña.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +213,12 @@
     <Compile Include="Views\Reportes.Designer.cs">
       <DependentUpon>Reportes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\ReportesEspecificos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ReportesEspecificos.Designer.cs">
+      <DependentUpon>ReportesEspecificos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -287,9 +287,6 @@
     <EmbeddedResource Include="Views\AddProduct.resx">
       <DependentUpon>AddProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Buscar.resx">
-      <DependentUpon>Buscar.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\cambiarContraseña.resx">
       <DependentUpon>cambiarContraseña.cs</DependentUpon>
     </EmbeddedResource>
@@ -334,6 +331,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Reportes.resx">
       <DependentUpon>Reportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReportesEspecificos.resx">
+      <DependentUpon>ReportesEspecificos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>

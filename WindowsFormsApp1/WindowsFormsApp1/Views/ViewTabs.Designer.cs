@@ -36,6 +36,7 @@
             this.lblCantidadPVenta = new System.Windows.Forms.Label();
             this.txtCantidadVenta = new System.Windows.Forms.TextBox();
             this.pVenta = new System.Windows.Forms.Panel();
+            this.TimeForSale = new System.Windows.Forms.Label();
             this.pBoxVenta = new System.Windows.Forms.PictureBox();
             this.HoraMinutoSegundo = new System.Windows.Forms.Label();
             this.ClblCodigoDeBarras = new System.Windows.Forms.Label();
@@ -65,6 +66,7 @@
             this.SlblResponsable = new System.Windows.Forms.Label();
             this.comboResponsable = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.TimeForCrew = new System.Windows.Forms.Label();
             this.pBoxRecibirEquipo = new System.Windows.Forms.PictureBox();
             this.EquipoGbx = new System.Windows.Forms.GroupBox();
             this.LayEquipo = new System.Windows.Forms.TableLayoutPanel();
@@ -107,6 +109,7 @@
             this.btnLimpiarCampos = new System.Windows.Forms.Button();
             this.tabReparacion = new System.Windows.Forms.TabPage();
             this.pReparacion = new System.Windows.Forms.Panel();
+            this.TimeForFix = new System.Windows.Forms.Label();
             this.pBoxReparacion = new System.Windows.Forms.PictureBox();
             this.refreshIcon = new System.Windows.Forms.PictureBox();
             this.pBoxSearchReparacion = new System.Windows.Forms.PictureBox();
@@ -119,6 +122,7 @@
             this.JlblBuscar = new System.Windows.Forms.Label();
             this.tabConfiguracionesDeUsuario = new System.Windows.Forms.TabPage();
             this.pConfigUsuario = new System.Windows.Forms.Panel();
+            this.TimeForUsers = new System.Windows.Forms.Label();
             this.pBoxConfUsuario = new System.Windows.Forms.PictureBox();
             this.SgbConfiguraciones = new System.Windows.Forms.GroupBox();
             this.repRep = new System.Windows.Forms.Button();
@@ -138,10 +142,12 @@
             this.ordenesTab = new System.Windows.Forms.TabPage();
             this.tableOrdenes = new System.Windows.Forms.DataGridView();
             this.pOrdenadas = new System.Windows.Forms.Panel();
+            this.TimeForPieces = new System.Windows.Forms.Label();
             this.pBoxOrdenadas = new System.Windows.Forms.PictureBox();
             this.SlblPiezasOrdenadas = new System.Windows.Forms.Label();
             this.TabClientes = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.TimeForClients = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.layBuscarCliente = new System.Windows.Forms.FlowLayoutPanel();
             this.lblClienteBuscar = new System.Windows.Forms.Label();
@@ -150,6 +156,7 @@
             this.dgClientes = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.PProducts = new System.Windows.Forms.Panel();
+            this.TimeForProducts = new System.Windows.Forms.Label();
             this.LogoProducts = new System.Windows.Forms.PictureBox();
             this.btnSearchProduct = new System.Windows.Forms.Button();
             this.txtBSearchProduct = new System.Windows.Forms.TextBox();
@@ -181,6 +188,8 @@
             this.reparacionLogoCh = new System.Windows.Forms.PictureBox();
             this.ordenesLogoCh = new System.Windows.Forms.PictureBox();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.Sbtn = new System.Windows.Forms.PictureBox();
+            this.btnReportesEspecificos = new System.Windows.Forms.Button();
             this.tabPuntoVenta.SuspendLayout();
             this.tabVenta.SuspendLayout();
             this.pVenta.SuspendLayout();
@@ -233,6 +242,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.recibirLogoCh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reparacionLogoCh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordenesLogoCh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Sbtn)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPuntoVenta
@@ -283,6 +293,8 @@
             // lblCantidadPVenta
             // 
             this.lblCantidadPVenta.AutoSize = true;
+            this.lblCantidadPVenta.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblCantidadPVenta.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblCantidadPVenta.Location = new System.Drawing.Point(788, 53);
             this.lblCantidadPVenta.Name = "lblCantidadPVenta";
             this.lblCantidadPVenta.Size = new System.Drawing.Size(91, 34);
@@ -292,6 +304,7 @@
             // txtCantidadVenta
             // 
             this.txtCantidadVenta.Location = new System.Drawing.Point(895, 50);
+            this.txtCantidadVenta.MaxLength = 4;
             this.txtCantidadVenta.Name = "txtCantidadVenta";
             this.txtCantidadVenta.Size = new System.Drawing.Size(146, 41);
             this.txtCantidadVenta.TabIndex = 56;
@@ -301,6 +314,7 @@
             // pVenta
             // 
             this.pVenta.BackColor = System.Drawing.Color.DimGray;
+            this.pVenta.Controls.Add(this.TimeForSale);
             this.pVenta.Controls.Add(this.pBoxVenta);
             this.pVenta.Controls.Add(this.HoraMinutoSegundo);
             this.pVenta.Dock = System.Windows.Forms.DockStyle.Left;
@@ -308,6 +322,16 @@
             this.pVenta.Name = "pVenta";
             this.pVenta.Size = new System.Drawing.Size(170, 663);
             this.pVenta.TabIndex = 55;
+            // 
+            // TimeForSale
+            // 
+            this.TimeForSale.AutoSize = true;
+            this.TimeForSale.ForeColor = System.Drawing.Color.Orange;
+            this.TimeForSale.Location = new System.Drawing.Point(23, 181);
+            this.TimeForSale.Name = "TimeForSale";
+            this.TimeForSale.Size = new System.Drawing.Size(63, 34);
+            this.TimeForSale.TabIndex = 45;
+            this.TimeForSale.Text = "label1";
             // 
             // pBoxVenta
             // 
@@ -619,12 +643,23 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DimGray;
+            this.panel2.Controls.Add(this.TimeForCrew);
             this.panel2.Controls.Add(this.pBoxRecibirEquipo);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(170, 663);
             this.panel2.TabIndex = 54;
+            // 
+            // TimeForCrew
+            // 
+            this.TimeForCrew.AutoSize = true;
+            this.TimeForCrew.ForeColor = System.Drawing.Color.Orange;
+            this.TimeForCrew.Location = new System.Drawing.Point(23, 181);
+            this.TimeForCrew.Name = "TimeForCrew";
+            this.TimeForCrew.Size = new System.Drawing.Size(63, 34);
+            this.TimeForCrew.TabIndex = 2;
+            this.TimeForCrew.Text = "label1";
             // 
             // pBoxRecibirEquipo
             // 
@@ -659,7 +694,7 @@
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.33448F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.66552F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 92F));
-            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 249F));
+            this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 256F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 230F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 224F));
             this.LayEquipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.33448F));
@@ -700,16 +735,16 @@
             // txtMarca
             // 
             this.txtMarca.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMarca.Location = new System.Drawing.Point(209, 3);
+            this.txtMarca.Location = new System.Drawing.Point(206, 3);
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(371, 34);
+            this.txtMarca.Size = new System.Drawing.Size(367, 34);
             this.txtMarca.TabIndex = 23;
             // 
             // SlblModelo
             // 
             this.SlblModelo.AutoSize = true;
             this.SlblModelo.ForeColor = System.Drawing.Color.DarkOrange;
-            this.SlblModelo.Location = new System.Drawing.Point(586, 0);
+            this.SlblModelo.Location = new System.Drawing.Point(579, 0);
             this.SlblModelo.Name = "SlblModelo";
             this.SlblModelo.Size = new System.Drawing.Size(82, 34);
             this.SlblModelo.TabIndex = 19;
@@ -721,16 +756,16 @@
             this.ccbTipoServicio1.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ccbTipoServicio1.FormattingEnabled = true;
             this.ccbTipoServicio1.IntegralHeight = false;
-            this.ccbTipoServicio1.Location = new System.Drawing.Point(209, 46);
+            this.ccbTipoServicio1.Location = new System.Drawing.Point(206, 46);
             this.ccbTipoServicio1.Name = "ccbTipoServicio1";
-            this.ccbTipoServicio1.Size = new System.Drawing.Size(371, 42);
+            this.ccbTipoServicio1.Size = new System.Drawing.Size(367, 42);
             this.ccbTipoServicio1.TabIndex = 46;
             this.ccbTipoServicio1.SelectedIndexChanged += new System.EventHandler(this.ccbTipoServicio1_SelectedIndexChanged);
             // 
             // txtModelo
             // 
             this.txtModelo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModelo.Location = new System.Drawing.Point(678, 3);
+            this.txtModelo.Location = new System.Drawing.Point(671, 3);
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(220, 34);
             this.txtModelo.TabIndex = 24;
@@ -757,10 +792,10 @@
             // txtDescripcionDeFalla
             // 
             this.txtDescripcionDeFalla.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcionDeFalla.Location = new System.Drawing.Point(209, 100);
+            this.txtDescripcionDeFalla.Location = new System.Drawing.Point(206, 100);
             this.txtDescripcionDeFalla.Multiline = true;
             this.txtDescripcionDeFalla.Name = "txtDescripcionDeFalla";
-            this.txtDescripcionDeFalla.Size = new System.Drawing.Size(371, 37);
+            this.txtDescripcionDeFalla.Size = new System.Drawing.Size(367, 37);
             this.txtDescripcionDeFalla.TabIndex = 25;
             // 
             // SbtnNuevoServicioRE
@@ -768,7 +803,7 @@
             this.SbtnNuevoServicioRE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.SbtnNuevoServicioRE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SbtnNuevoServicioRE.ForeColor = System.Drawing.Color.DarkOrange;
-            this.SbtnNuevoServicioRE.Location = new System.Drawing.Point(678, 46);
+            this.SbtnNuevoServicioRE.Location = new System.Drawing.Point(671, 46);
             this.SbtnNuevoServicioRE.Name = "SbtnNuevoServicioRE";
             this.SbtnNuevoServicioRE.Size = new System.Drawing.Size(220, 37);
             this.SbtnNuevoServicioRE.TabIndex = 47;
@@ -802,7 +837,6 @@
             // 
             // txtDescripcionDiagnosticoEspecifico
             // 
-            this.txtDescripcionDiagnosticoEspecifico.Enabled = false;
             this.txtDescripcionDiagnosticoEspecifico.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcionDiagnosticoEspecifico.Location = new System.Drawing.Point(32, 224);
             this.txtDescripcionDiagnosticoEspecifico.Multiline = true;
@@ -912,7 +946,7 @@
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.95349F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.04651F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
-            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 303F));
+            this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 310F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 278F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.95349F));
             this.layoutCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.04651F));
@@ -960,9 +994,9 @@
             // 
             this.txtNombre.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.txtNombre.Location = new System.Drawing.Point(98, 3);
+            this.txtNombre.Location = new System.Drawing.Point(97, 3);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(298, 34);
+            this.txtNombre.Size = new System.Drawing.Size(292, 34);
             this.txtNombre.TabIndex = 40;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
@@ -981,9 +1015,9 @@
             // 
             this.txtApellido.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellido.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.txtApellido.Location = new System.Drawing.Point(98, 51);
+            this.txtApellido.Location = new System.Drawing.Point(97, 51);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(298, 34);
+            this.txtApellido.Size = new System.Drawing.Size(292, 34);
             this.txtApellido.TabIndex = 41;
             this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
@@ -991,7 +1025,7 @@
             // 
             this.SlblTelefono.AutoSize = true;
             this.SlblTelefono.ForeColor = System.Drawing.Color.DarkOrange;
-            this.SlblTelefono.Location = new System.Drawing.Point(402, 0);
+            this.SlblTelefono.Location = new System.Drawing.Point(395, 0);
             this.SlblTelefono.Name = "SlblTelefono";
             this.SlblTelefono.Size = new System.Drawing.Size(89, 48);
             this.SlblTelefono.TabIndex = 5;
@@ -1001,7 +1035,7 @@
             // 
             this.SlblCorreo.AutoSize = true;
             this.SlblCorreo.ForeColor = System.Drawing.Color.DarkOrange;
-            this.SlblCorreo.Location = new System.Drawing.Point(402, 48);
+            this.SlblCorreo.Location = new System.Drawing.Point(395, 48);
             this.SlblCorreo.Name = "SlblCorreo";
             this.SlblCorreo.Size = new System.Drawing.Size(84, 34);
             this.SlblCorreo.TabIndex = 6;
@@ -1011,7 +1045,7 @@
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.txtTelefono.Location = new System.Drawing.Point(500, 3);
+            this.txtTelefono.Location = new System.Drawing.Point(493, 3);
             this.txtTelefono.MaxLength = 10;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(266, 34);
@@ -1023,7 +1057,7 @@
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.txtCorreo.Location = new System.Drawing.Point(500, 51);
+            this.txtCorreo.Location = new System.Drawing.Point(493, 51);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(266, 34);
             this.txtCorreo.TabIndex = 39;
@@ -1159,12 +1193,23 @@
             // pReparacion
             // 
             this.pReparacion.BackColor = System.Drawing.Color.DimGray;
+            this.pReparacion.Controls.Add(this.TimeForFix);
             this.pReparacion.Controls.Add(this.pBoxReparacion);
             this.pReparacion.Dock = System.Windows.Forms.DockStyle.Left;
             this.pReparacion.Location = new System.Drawing.Point(3, 3);
             this.pReparacion.Name = "pReparacion";
             this.pReparacion.Size = new System.Drawing.Size(170, 663);
             this.pReparacion.TabIndex = 43;
+            // 
+            // TimeForFix
+            // 
+            this.TimeForFix.AutoSize = true;
+            this.TimeForFix.ForeColor = System.Drawing.Color.Orange;
+            this.TimeForFix.Location = new System.Drawing.Point(23, 181);
+            this.TimeForFix.Name = "TimeForFix";
+            this.TimeForFix.Size = new System.Drawing.Size(63, 34);
+            this.TimeForFix.TabIndex = 2;
+            this.TimeForFix.Text = "label1";
             // 
             // pBoxReparacion
             // 
@@ -1223,6 +1268,7 @@
             this.CDGReparacion.Size = new System.Drawing.Size(1143, 518);
             this.CDGReparacion.TabIndex = 9;
             this.CDGReparacion.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CDGReparacion_CellClick);
+            this.CDGReparacion.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.CDGReparacion_ColumnHeaderMouseClick);
             // 
             // CEspera
             // 
@@ -1287,6 +1333,7 @@
             // tabConfiguracionesDeUsuario
             // 
             this.tabConfiguracionesDeUsuario.BackColor = System.Drawing.Color.LightGray;
+            this.tabConfiguracionesDeUsuario.Controls.Add(this.btnReportesEspecificos);
             this.tabConfiguracionesDeUsuario.Controls.Add(this.pConfigUsuario);
             this.tabConfiguracionesDeUsuario.Controls.Add(this.SgbConfiguraciones);
             this.tabConfiguracionesDeUsuario.Controls.Add(this.SgbAsignarRolATrabajador);
@@ -1300,12 +1347,23 @@
             // pConfigUsuario
             // 
             this.pConfigUsuario.BackColor = System.Drawing.Color.DimGray;
+            this.pConfigUsuario.Controls.Add(this.TimeForUsers);
             this.pConfigUsuario.Controls.Add(this.pBoxConfUsuario);
             this.pConfigUsuario.Dock = System.Windows.Forms.DockStyle.Left;
             this.pConfigUsuario.Location = new System.Drawing.Point(0, 0);
             this.pConfigUsuario.Name = "pConfigUsuario";
             this.pConfigUsuario.Size = new System.Drawing.Size(170, 669);
             this.pConfigUsuario.TabIndex = 43;
+            // 
+            // TimeForUsers
+            // 
+            this.TimeForUsers.AutoSize = true;
+            this.TimeForUsers.ForeColor = System.Drawing.Color.Orange;
+            this.TimeForUsers.Location = new System.Drawing.Point(26, 178);
+            this.TimeForUsers.Name = "TimeForUsers";
+            this.TimeForUsers.Size = new System.Drawing.Size(63, 34);
+            this.TimeForUsers.TabIndex = 2;
+            this.TimeForUsers.Text = "label1";
             // 
             // pBoxConfUsuario
             // 
@@ -1521,12 +1579,23 @@
             // pOrdenadas
             // 
             this.pOrdenadas.BackColor = System.Drawing.Color.DimGray;
+            this.pOrdenadas.Controls.Add(this.TimeForPieces);
             this.pOrdenadas.Controls.Add(this.pBoxOrdenadas);
             this.pOrdenadas.Dock = System.Windows.Forms.DockStyle.Left;
             this.pOrdenadas.Location = new System.Drawing.Point(3, 3);
             this.pOrdenadas.Name = "pOrdenadas";
             this.pOrdenadas.Size = new System.Drawing.Size(170, 663);
             this.pOrdenadas.TabIndex = 43;
+            // 
+            // TimeForPieces
+            // 
+            this.TimeForPieces.AutoSize = true;
+            this.TimeForPieces.ForeColor = System.Drawing.Color.Orange;
+            this.TimeForPieces.Location = new System.Drawing.Point(23, 181);
+            this.TimeForPieces.Name = "TimeForPieces";
+            this.TimeForPieces.Size = new System.Drawing.Size(63, 34);
+            this.TimeForPieces.TabIndex = 2;
+            this.TimeForPieces.Text = "label1";
             // 
             // pBoxOrdenadas
             // 
@@ -1566,12 +1635,23 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DimGray;
+            this.panel1.Controls.Add(this.TimeForClients);
             this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(170, 663);
             this.panel1.TabIndex = 42;
+            // 
+            // TimeForClients
+            // 
+            this.TimeForClients.AutoSize = true;
+            this.TimeForClients.ForeColor = System.Drawing.Color.Orange;
+            this.TimeForClients.Location = new System.Drawing.Point(23, 181);
+            this.TimeForClients.Name = "TimeForClients";
+            this.TimeForClients.Size = new System.Drawing.Size(63, 34);
+            this.TimeForClients.TabIndex = 2;
+            this.TimeForClients.Text = "label1";
             // 
             // pictureBox5
             // 
@@ -1669,12 +1749,23 @@
             // PProducts
             // 
             this.PProducts.BackColor = System.Drawing.Color.DimGray;
+            this.PProducts.Controls.Add(this.TimeForProducts);
             this.PProducts.Controls.Add(this.LogoProducts);
             this.PProducts.Dock = System.Windows.Forms.DockStyle.Left;
             this.PProducts.Location = new System.Drawing.Point(3, 3);
             this.PProducts.Name = "PProducts";
             this.PProducts.Size = new System.Drawing.Size(170, 663);
             this.PProducts.TabIndex = 41;
+            // 
+            // TimeForProducts
+            // 
+            this.TimeForProducts.AutoSize = true;
+            this.TimeForProducts.ForeColor = System.Drawing.Color.Orange;
+            this.TimeForProducts.Location = new System.Drawing.Point(23, 181);
+            this.TimeForProducts.Name = "TimeForProducts";
+            this.TimeForProducts.Size = new System.Drawing.Size(63, 34);
+            this.TimeForProducts.TabIndex = 2;
+            this.TimeForProducts.Text = "label1";
             // 
             // LogoProducts
             // 
@@ -1894,12 +1985,37 @@
             this.ordenesLogoCh.TabIndex = 5;
             this.ordenesLogoCh.TabStop = false;
             // 
+            // Sbtn
+            // 
+            this.Sbtn.Image = global::WindowsFormsApp1.Properties.Resources.logout;
+            this.Sbtn.Location = new System.Drawing.Point(1312, 722);
+            this.Sbtn.Name = "Sbtn";
+            this.Sbtn.Size = new System.Drawing.Size(22, 24);
+            this.Sbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Sbtn.TabIndex = 1;
+            this.Sbtn.TabStop = false;
+            this.Sbtn.Click += new System.EventHandler(this.Sbtn_Click);
+            // 
+            // btnReportesEspecificos
+            // 
+            this.btnReportesEspecificos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnReportesEspecificos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnReportesEspecificos.ForeColor = System.Drawing.Color.DarkOrange;
+            this.btnReportesEspecificos.Location = new System.Drawing.Point(1048, 3);
+            this.btnReportesEspecificos.Name = "btnReportesEspecificos";
+            this.btnReportesEspecificos.Size = new System.Drawing.Size(277, 37);
+            this.btnReportesEspecificos.TabIndex = 7;
+            this.btnReportesEspecificos.Text = "Reportes Especificos";
+            this.btnReportesEspecificos.UseVisualStyleBackColor = false;
+            this.btnReportesEspecificos.Click += new System.EventHandler(this.BtnReportesEspecificos_Click);
+            // 
             // ViewTabs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(1350, 749);
+            this.Controls.Add(this.Sbtn);
             this.Controls.Add(this.tabPuntoVenta);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1921,6 +2037,7 @@
             this.layoutTotales.ResumeLayout(false);
             this.layoutTotales.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxRecibirEquipo)).EndInit();
             this.EquipoGbx.ResumeLayout(false);
             this.EquipoGbx.PerformLayout();
@@ -1935,12 +2052,14 @@
             this.tabReparacion.ResumeLayout(false);
             this.tabReparacion.PerformLayout();
             this.pReparacion.ResumeLayout(false);
+            this.pReparacion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxReparacion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.refreshIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxSearchReparacion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CDGReparacion)).EndInit();
             this.tabConfiguracionesDeUsuario.ResumeLayout(false);
             this.pConfigUsuario.ResumeLayout(false);
+            this.pConfigUsuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxConfUsuario)).EndInit();
             this.SgbConfiguraciones.ResumeLayout(false);
             this.SgbAsignarRolATrabajador.ResumeLayout(false);
@@ -1951,9 +2070,11 @@
             this.ordenesTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableOrdenes)).EndInit();
             this.pOrdenadas.ResumeLayout(false);
+            this.pOrdenadas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxOrdenadas)).EndInit();
             this.TabClientes.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.layBuscarCliente.ResumeLayout(false);
             this.layBuscarCliente.PerformLayout();
@@ -1962,6 +2083,7 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.PProducts.ResumeLayout(false);
+            this.PProducts.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoProducts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVProducts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxAddProduct)).EndInit();
@@ -1976,6 +2098,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.recibirLogoCh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reparacionLogoCh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordenesLogoCh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Sbtn)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2154,6 +2277,15 @@
         private System.Windows.Forms.Panel PanelLogoPuntoDeVenta;
         private System.Windows.Forms.PictureBox SImgPanelPubtoDeVenta;
         private System.Windows.Forms.PictureBox SimgCerrarNuevaImagen;
+        private System.Windows.Forms.PictureBox Sbtn;
+        private System.Windows.Forms.Label TimeForSale;
+        private System.Windows.Forms.Label TimeForCrew;
+        private System.Windows.Forms.Label TimeForFix;
+        private System.Windows.Forms.Label TimeForUsers;
+        private System.Windows.Forms.Label TimeForPieces;
+        private System.Windows.Forms.Label TimeForClients;
+        private System.Windows.Forms.Label TimeForProducts;
+        private System.Windows.Forms.Button btnReportesEspecificos;
         //  private System.Windows.Forms.TextBox textBox1;
         //private System.Windows.Forms.Label UnaLabel;
         //  private System.Windows.Forms.Label label5;

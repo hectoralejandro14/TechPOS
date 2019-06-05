@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net.Mail;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using WindowsFormsApp1.DBConnectio;
 
@@ -21,6 +22,11 @@ namespace WindowsFormsApp1.Views
 
             
         }
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparap, int lparam);
+
         private void btnAceptarr_Click(object sender, EventArgs e)
         {
             if (CtxtNombreUsuario.Text.Equals("") || CtxtNombreU.Text.Equals("") || CtxtApellidoU.Text.Equals("") || CtxtCorreoU.Text.Equals("")
@@ -286,6 +292,18 @@ namespace WindowsFormsApp1.Views
                 CtxtTelefonoU.Text = "";
             }
             
+        }
+
+        private void NuevoUsuario_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void PNewUser_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
         //public void PeticionDe()
         //{

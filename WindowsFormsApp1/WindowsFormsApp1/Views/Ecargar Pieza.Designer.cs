@@ -52,72 +52,73 @@
             this.equipoLblEncargar.AutoSize = true;
             this.equipoLblEncargar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.equipoLblEncargar.ForeColor = System.Drawing.Color.DarkOrange;
-            this.equipoLblEncargar.Location = new System.Drawing.Point(219, 36);
+            this.equipoLblEncargar.Location = new System.Drawing.Point(196, 70);
             this.equipoLblEncargar.Name = "equipoLblEncargar";
-            this.equipoLblEncargar.Size = new System.Drawing.Size(70, 34);
+            this.equipoLblEncargar.Size = new System.Drawing.Size(75, 34);
             this.equipoLblEncargar.TabIndex = 0;
-            this.equipoLblEncargar.Text = "Equipo";
+            this.equipoLblEncargar.Text = "Equipo:";
             // 
             // marcaLblEncargar
             // 
             this.marcaLblEncargar.AutoSize = true;
             this.marcaLblEncargar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.marcaLblEncargar.ForeColor = System.Drawing.Color.DarkOrange;
-            this.marcaLblEncargar.Location = new System.Drawing.Point(219, 167);
+            this.marcaLblEncargar.Location = new System.Drawing.Point(204, 163);
             this.marcaLblEncargar.Name = "marcaLblEncargar";
-            this.marcaLblEncargar.Size = new System.Drawing.Size(64, 34);
+            this.marcaLblEncargar.Size = new System.Drawing.Size(69, 34);
             this.marcaLblEncargar.TabIndex = 1;
-            this.marcaLblEncargar.Text = "Marca";
+            this.marcaLblEncargar.Text = "Marca:";
             // 
             // piezaLblEncargar
             // 
             this.piezaLblEncargar.AutoSize = true;
             this.piezaLblEncargar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.piezaLblEncargar.ForeColor = System.Drawing.Color.DarkOrange;
-            this.piezaLblEncargar.Location = new System.Drawing.Point(219, 206);
+            this.piezaLblEncargar.Location = new System.Drawing.Point(188, 216);
             this.piezaLblEncargar.Name = "piezaLblEncargar";
-            this.piezaLblEncargar.Size = new System.Drawing.Size(80, 34);
+            this.piezaLblEncargar.Size = new System.Drawing.Size(85, 34);
             this.piezaLblEncargar.TabIndex = 2;
-            this.piezaLblEncargar.Text = "Pieza(s)";
+            this.piezaLblEncargar.Text = "Pieza(s):";
             // 
             // modeloLblEncargar
             // 
             this.modeloLblEncargar.AutoSize = true;
             this.modeloLblEncargar.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modeloLblEncargar.ForeColor = System.Drawing.Color.DarkOrange;
-            this.modeloLblEncargar.Location = new System.Drawing.Point(219, 101);
+            this.modeloLblEncargar.Location = new System.Drawing.Point(196, 118);
             this.modeloLblEncargar.Name = "modeloLblEncargar";
-            this.modeloLblEncargar.Size = new System.Drawing.Size(72, 34);
+            this.modeloLblEncargar.Size = new System.Drawing.Size(77, 34);
             this.modeloLblEncargar.TabIndex = 3;
-            this.modeloLblEncargar.Text = "Modelo";
+            this.modeloLblEncargar.Text = "Modelo:";
             // 
             // equipoTbxEncagar
             // 
-            this.equipoTbxEncagar.Location = new System.Drawing.Point(331, 36);
-            this.equipoTbxEncagar.Multiline = true;
+            this.equipoTbxEncagar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.equipoTbxEncagar.Location = new System.Drawing.Point(279, 74);
             this.equipoTbxEncagar.Name = "equipoTbxEncagar";
-            this.equipoTbxEncagar.Size = new System.Drawing.Size(328, 29);
+            this.equipoTbxEncagar.Size = new System.Drawing.Size(328, 26);
             this.equipoTbxEncagar.TabIndex = 4;
             // 
             // marcaTbxEncargar
             // 
-            this.marcaTbxEncargar.Location = new System.Drawing.Point(331, 167);
-            this.marcaTbxEncargar.Multiline = true;
+            this.marcaTbxEncargar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.marcaTbxEncargar.Location = new System.Drawing.Point(279, 167);
             this.marcaTbxEncargar.Name = "marcaTbxEncargar";
-            this.marcaTbxEncargar.Size = new System.Drawing.Size(328, 33);
+            this.marcaTbxEncargar.Size = new System.Drawing.Size(328, 26);
             this.marcaTbxEncargar.TabIndex = 5;
             // 
             // modeloTbxEncargar
             // 
-            this.modeloTbxEncargar.Location = new System.Drawing.Point(331, 101);
-            this.modeloTbxEncargar.Multiline = true;
+            this.modeloTbxEncargar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modeloTbxEncargar.Location = new System.Drawing.Point(279, 122);
             this.modeloTbxEncargar.Name = "modeloTbxEncargar";
-            this.modeloTbxEncargar.Size = new System.Drawing.Size(328, 28);
+            this.modeloTbxEncargar.Size = new System.Drawing.Size(328, 26);
             this.modeloTbxEncargar.TabIndex = 6;
             // 
             // piezasTbxEncargar
             // 
-            this.piezasTbxEncargar.Location = new System.Drawing.Point(217, 243);
+            this.piezasTbxEncargar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.piezasTbxEncargar.Location = new System.Drawing.Point(194, 253);
             this.piezasTbxEncargar.Multiline = true;
             this.piezasTbxEncargar.Name = "piezasTbxEncargar";
             this.piezasTbxEncargar.Size = new System.Drawing.Size(442, 173);
@@ -126,7 +127,7 @@
             // encargarpiezaImg
             // 
             this.encargarpiezaImg.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
-            this.encargarpiezaImg.Location = new System.Drawing.Point(11, 9);
+            this.encargarpiezaImg.Location = new System.Drawing.Point(21, 9);
             this.encargarpiezaImg.Name = "encargarpiezaImg";
             this.encargarpiezaImg.Size = new System.Drawing.Size(93, 143);
             this.encargarpiezaImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -163,7 +164,7 @@
             // 
             // SdtCalendarFechaLlegada
             // 
-            this.SdtCalendarFechaLlegada.Location = new System.Drawing.Point(452, 429);
+            this.SdtCalendarFechaLlegada.Location = new System.Drawing.Point(452, 434);
             this.SdtCalendarFechaLlegada.Name = "SdtCalendarFechaLlegada";
             this.SdtCalendarFechaLlegada.Size = new System.Drawing.Size(207, 20);
             this.SdtCalendarFechaLlegada.TabIndex = 11;
@@ -173,20 +174,21 @@
             this.SlblFechaAproximadaLLegaPieza.AutoSize = true;
             this.SlblFechaAproximadaLLegaPieza.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SlblFechaAproximadaLLegaPieza.ForeColor = System.Drawing.Color.DarkOrange;
-            this.SlblFechaAproximadaLLegaPieza.Location = new System.Drawing.Point(188, 424);
+            this.SlblFechaAproximadaLLegaPieza.Location = new System.Drawing.Point(188, 429);
             this.SlblFechaAproximadaLLegaPieza.Name = "SlblFechaAproximadaLLegaPieza";
-            this.SlblFechaAproximadaLLegaPieza.Size = new System.Drawing.Size(258, 34);
+            this.SlblFechaAproximadaLLegaPieza.Size = new System.Drawing.Size(263, 34);
             this.SlblFechaAproximadaLLegaPieza.TabIndex = 12;
-            this.SlblFechaAproximadaLLegaPieza.Text = "Fecha Aproximada de Llegada";
+            this.SlblFechaAproximadaLLegaPieza.Text = "Fecha Aproximada de Llegada:";
             // 
             // encargarPiezaPnl
             // 
             this.encargarPiezaPnl.BackColor = System.Drawing.Color.DimGray;
             this.encargarPiezaPnl.Controls.Add(this.encargarpiezaImg);
-            this.encargarPiezaPnl.Location = new System.Drawing.Point(1, 3);
+            this.encargarPiezaPnl.Location = new System.Drawing.Point(-1, 0);
             this.encargarPiezaPnl.Name = "encargarPiezaPnl";
-            this.encargarPiezaPnl.Size = new System.Drawing.Size(138, 516);
+            this.encargarPiezaPnl.Size = new System.Drawing.Size(140, 522);
             this.encargarPiezaPnl.TabIndex = 13;
+            this.encargarPiezaPnl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.EncargarPiezaPnl_MouseDown);
             // 
             // Ecargar_Pieza
             // 
@@ -208,8 +210,11 @@
             this.Controls.Add(this.piezaLblEncargar);
             this.Controls.Add(this.marcaLblEncargar);
             this.Controls.Add(this.equipoLblEncargar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Ecargar_Pieza";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Ecargar_Pieza_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.encargarpiezaImg)).EndInit();
             this.encargarPiezaPnl.ResumeLayout(false);
             this.ResumeLayout(false);

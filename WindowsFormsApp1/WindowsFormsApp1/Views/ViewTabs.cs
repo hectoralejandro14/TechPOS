@@ -13,7 +13,7 @@ namespace WindowsFormsApp1.Views
     public partial class ViewTabs : Form
     {
         private DataTable dtVenta;
-
+        int idUsuarioVenta = 0;
         private DBConnectio.Connection conexion = new DBConnectio.Connection();
         decimal subTotal = 0;
         int posicion_cobrar = 0;
@@ -123,28 +123,85 @@ namespace WindowsFormsApp1.Views
         //TAB "VENTA"
         private void CbtnCobrarVenta_Click(object sender, EventArgs e)
         {
-            Cobrar c = new Cobrar();
-            decimal venta_total = 0;
-            for (int i = 0; i < tableVender.Rows.Count; i++)
+            conexion.AbrirConexion();
+            idUsuarioVenta = Convert.ToInt32(conexion.getIdUsuario("Select Id From Usuario Where NombreUsuario='" + CNombreUsuarioLblVenta.Text + "'"));
+            conexion.CerrarConexion();
+            if (Convert.ToDecimal(totalTbxVenta.Text)==0)
             {
-                string valor = tableVender.Rows[i].Cells[3].Value.ToString();
-                venta_total = venta_total + Convert.ToDecimal(valor);
+                MessageBox.Show("No existe venta que realizar","Informacion",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
-            c.setTotal(venta_total);
-            c.ShowDialog();
+            else
+            {
+                decimal venta_total = 0;
+                for (int i = 0; i < tableVender.Rows.Count; i++)
+                {
+                    string valor = tableVender.Rows[i].Cells[3].Value.ToString();
+                    venta_total += Convert.ToDecimal(valor);
+                }
+                decimal totalAPagar = Convert.ToDecimal(totalTbxVenta.Text);
+                Cobrar c = new Cobrar(totalAPagar,idUsuarioVenta);
+                c.ShowDialog();
+                DataTable dt = (DataTable)tableVender.DataSource;
+                dt.Clear();
+                txtCantidadVenta.Text = "1";
+                buscarTbxVentas.Text = "";
+                subTotalTbxVentas.Text = "0";
+                ivaTbxVentas.Text = "0";
+                totalTbxVenta.Text = "0";
+            }
+        }
+
+        private void CbtnCancelarVenta_Click(object sender, EventArgs e)
+        {
+            Connection connection = new Connection();
+            connection.AbrirConexion();
+            //Buscar IdUsuario
+            int idUsuario = Convert.ToInt32(connection.getIdUsuario("SELECT Id FROM Usuario WHERE NombreUsuario = '" + CNombreUsuarioLblVenta.Text + "'"));
+            connection.CerrarConexion();
+            connection.AbrirConexion();
+            string mifecha = DateTime.Today.ToString();//Dia/Mes/Año : Hora
+            string hora_de_cancelacion = DateTime.Now.ToLongTimeString();
+            for (int i = 0; i < tabPuntoVenta.RowCount; i++)
+            {
+                decimal id = UltimoIdIngresado();
+                //string valor = tableVender.Rows[i].Cells[3].Value.ToString();
+                string informacion = "CANCELACION DIRECTA : " +
+                    " [Codigo : " + tableVender.Rows[i].Cells[0].Value.ToString() + "]" +
+                    " [Efectivo Perdido : " + tableVender.Rows[i].Cells[4].Value.ToString() + "]";
+                string consulta = "INSERT INTO Cancelacion (Id, Motivo, Fecha, IdUsuario, IdVenta) VALUES (@Id,@Motivo,@Fecha,@IdUsuario,@IdVenta)";
+                if (connection.AgregarCancelacion(consulta, id, informacion, mifecha, idUsuario, 1) > 0)
+                {
+                    MessageBox.Show("Cancelacion de toda la venta fue registrada exitosamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                    ViewTabs v = new ViewTabs();
+                }
+                else
+                {
+                    MessageBox.Show("Cancelacion Fallida", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+          
+            connection.CerrarConexion();
             DataTable dt = (DataTable)tableVender.DataSource;
             dt.Clear();
             txtCantidadVenta.Text = "1";
             buscarTbxVentas.Text = "";
+            subTotalTbxVentas.Text = "0";
+            ivaTbxVentas.Text = "0";
+            totalTbxVenta.Text = "0";
         }
-        private void CbtnCancelarVenta_Click(object sender, EventArgs e)
-        {
-            if (tableVender.Rows.Count > 0)
-            {
-                tableVender.Rows.Clear();
-            }
 
+        public decimal UltimoIdIngresado()
+        {
+            Connection connection = new Connection();
+            connection.AbrirConexion();
+            decimal idCancelacion = connection.generarId("SELECT MAX(Id) FROM Cancelacion");
+            if (idCancelacion == 0)
+            {
+                idCancelacion = 1;
+            }
+            return idCancelacion + 1;
         }
+
         private void buscarTbxVentas_TextChanged(object sender, EventArgs e)
         {
 
@@ -267,16 +324,24 @@ namespace WindowsFormsApp1.Views
         }
         private void CDGReparacion_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Connection connection = new Connection();
-            DataGridViewRow fila = CDGReparacion.Rows[e.RowIndex];
-            String id = Convert.ToString(fila.Cells["ID"].Value);
-            Reparacion r = new Reparacion(id);
-            r.ShowDialog();
-            connection.AbrirConexion();
-            CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id  order by Reparacion.Fecha asc");
-            colores();
-            connection.CerrarConexion();
+            try
+            {
+                Connection connection = new Connection();
+                DataGridViewRow fila = CDGReparacion.Rows[e.RowIndex];
+                String id = Convert.ToString(fila.Cells["ID"].Value);
+                Reparacion r = new Reparacion(id);
+                r.ShowDialog();
+                connection.AbrirConexion();
+                CDGReparacion.DataSource = connection.buscarReparacion("SELECT Reparacion.Id as ID,Cliente.Nombre as Cliente, Reparacion.Marca as Marca,Reparacion.Modelo as Modelo, Servicio.Nombre as Servicio, Pieza.Descripcion as Pieza, Estado.Nombre as Estado, Reparacion.Fecha as Fecha, Reparacion.Anticipo as Anticipo, Reparacion.CostoTotal as Total FROM Reparacion INNER JOIN Servicio on Reparacion.IdServicio=Servicio.Id INNER JOIN Cliente on Reparacion.IdCliente=Cliente.Id INNER JOIN Estado on Reparacion.IdEstado=Estado.Id INNER JOIN Pieza on Reparacion.IdPieza=Pieza.Id  order by Reparacion.Fecha asc");
+                colores();
+                connection.CerrarConexion();
+            }
+            catch (Exception)
+            {
+
+            }
         }
+
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Char.IsLetter(e.KeyChar))
@@ -896,12 +961,12 @@ namespace WindowsFormsApp1.Views
                 txtApellido.Text = "";
                 txtTelefono.Text = "";
                 txtCorreo.Text = "";
-                lblTextoIdCliente.Visible = false;
+                /*lblTextoIdCliente.Visible = false;
                 lblIdCliente.Visible = false;
                 txtNombre.Enabled = false;
                 txtApellido.Enabled = false;
                 txtTelefono.Enabled = false;
-                txtCorreo.Enabled = false;
+                txtCorreo.Enabled = false;*/
             }
         }
 
@@ -909,6 +974,11 @@ namespace WindowsFormsApp1.Views
         {
             if (txtNombre.Text != "" || txtApellido.Text != "" || txtTelefono.Text != "" || txtCorreo.Text != "")
             {
+                txtBuscarCliente.Enabled = false;
+                txtNombre.Enabled = true;
+                txtApellido.Enabled = true;
+                txtTelefono.Enabled = true;
+                txtCorreo.Enabled = true;
                 txtNombre.Text = "";
                 txtApellido.Text = "";
                 txtTelefono.Text = "";
@@ -951,6 +1021,7 @@ namespace WindowsFormsApp1.Views
             }
             connection.CerrarConexion();
         }
+
         private void txtCliente_TextChanged(object sender, EventArgs e)
         {
             Connection connection = new Connection();
@@ -961,28 +1032,34 @@ namespace WindowsFormsApp1.Views
             }
             connection.CerrarConexion();
         }
+
         private void dgClientes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Connection connection = new Connection();
-            DataGridViewRow fila = dgClientes.Rows[e.RowIndex];
-            if (Convert.ToString(fila.Cells["Id"].Value).Equals("") || Convert.ToString(fila.Cells["Nombre"].Value).Equals("")
-                || Convert.ToString(fila.Cells["Apellido"].Value).Equals("") || Convert.ToString(fila.Cells["Telefono"].Value).Equals("")
-                || Convert.ToString(fila.Cells["Contacto"].Value).Equals(""))
+            try
             {
-                Console.WriteLine("Datos vacios");
+                Connection connection = new Connection();
+                DataGridViewRow fila = dgClientes.Rows[e.RowIndex];
+                if (Convert.ToString(fila.Cells["Id"].Value).Equals("") || Convert.ToString(fila.Cells["Nombre"].Value).Equals("")
+                    || Convert.ToString(fila.Cells["Apellido"].Value).Equals("") || Convert.ToString(fila.Cells["Telefono"].Value).Equals("")
+                    || Convert.ToString(fila.Cells["Contacto"].Value).Equals(""))
+                {
+                    Console.WriteLine("Datos vacios");
+                }
+                else
+                {
+                    int id = Convert.ToInt32(fila.Cells["Id"].Value);
+                    DatosCliente datosCliente = new DatosCliente(id);
+                    datosCliente.ShowDialog();
+                    connection.AbrirConexion();
+                    dgClientes.DataSource = connection.buscar("SELECT * FROM Cliente");
+                    connection.CerrarConexion();
+                }
             }
-            else
+            catch (Exception)
             {
-                int id = Convert.ToInt32(fila.Cells["Id"].Value);
-                DatosCliente datosCliente = new DatosCliente(id);
-                datosCliente.ShowDialog();
-                connection.AbrirConexion();
-                dgClientes.DataSource = connection.buscar("SELECT * FROM Cliente");
-                connection.CerrarConexion();
-
-
             }
         }
+
         private void allValues()
         {
             GenerarId();
@@ -1250,39 +1327,47 @@ namespace WindowsFormsApp1.Views
             //}
             if ((int)e.KeyChar == (int)Keys.Enter)
             {
-                if (buscarTbxVentas.Text.Equals(""))
+                if (buscarTbxVentas.Text.Equals("") || txtCantidadVenta.Text.Equals(""))
                 {
-                    MessageBox.Show("No se ingreso cantidad");
+                    MessageBox.Show("No se permiten campos vacios");
                 }
                 else
                 {
-                    string cadena = "Data Source=.\\SQLEXPRESS;Initial Catalog=TechPOSdb; Integrated Security=True";
-                    SqlConnection conexion = new SqlConnection(cadena);
-                    conexion.Open();
-                    SqlCommand cmd = new SqlCommand("select * from Producto where ClaveProducto='" + buscarTbxVentas.Text + "'", conexion);
-                    SqlDataReader dr = cmd.ExecuteReader();
-                    DataRow row = dtVenta.NewRow();
-                    tableVender.DataSource = dtVenta;
-                    //---------------------------------
-                    if (dr.Read())
+                    if (Convert.ToInt32(txtCantidadVenta.Text) < 1)
                     {
-                        double price = Convert.ToDouble(Convert.ToString(dr["Costo"]));
-                        double subtotal = Convert.ToDouble(subTotalTbxVentas.Text) + (Convert.ToDouble(Convert.ToString("2")) * price);
-                        double iva = Convert.ToDouble(((subtotal * 16) / 100));
-                        row["cod"] = Convert.ToString(dr["ClaveProducto"]);
-                        row["des"] = Convert.ToString(dr["Descripcion"]);
-                        row["preciou"] = Convert.ToString(dr["Costo"]);
-                        row["cant"] = Convert.ToString(txtCantidadVenta.Text);
-                        row["preciot"] = Convert.ToString(Convert.ToDouble(Convert.ToString(txtCantidadVenta.Text)) * price);
-                        //MessageBox.Show(Convert.ToString(dr["Costo"]));
-                        dtVenta.Rows.Add(row);
-                        subTotalTbxVentas.Text = Convert.ToString(subtotal);
-                        ivaTbxVentas.Text = Convert.ToString(iva);
-                        totalTbxVenta.Text = Convert.ToString(subtotal + iva);
-
-
+                        MessageBox.Show("La cantidad no puede ser menor o igual a 0");
                     }
-                    conexion.Close();
+                    else
+                    {
+                        string cadena = "Data Source=.\\SQLEXPRESS;Initial Catalog=TechPOSdb; Integrated Security=True";
+                        SqlConnection conexion = new SqlConnection(cadena);
+                        conexion.Open();
+                        SqlCommand cmd = new SqlCommand("select * from Producto where ClaveProducto='" + buscarTbxVentas.Text + "'", conexion);
+                        SqlDataReader dr = cmd.ExecuteReader();
+                        DataRow row = dtVenta.NewRow();
+                        tableVender.DataSource = dtVenta;
+                        //---------------------------------
+                        if (dr.Read())
+                        {
+                            double price = Convert.ToDouble(Convert.ToString(dr["Costo"]));
+                            double subtotal = Convert.ToDouble(subTotalTbxVentas.Text) + (price);
+                            double iva = Convert.ToDouble(((subtotal * 16) / 100));
+                            row["cod"] = Convert.ToString(dr["ClaveProducto"]);
+                            row["des"] = Convert.ToString(dr["Descripcion"]);
+                            row["preciou"] = Convert.ToString(dr["Costo"]);
+                            row["cant"] = Convert.ToString(txtCantidadVenta.Text);
+                            row["preciot"] = Convert.ToString(Convert.ToDouble(Convert.ToString(txtCantidadVenta.Text)) * price);
+                            //MessageBox.Show(Convert.ToString(dr["Costo"]));
+                            dtVenta.Rows.Add(row);
+                            subTotalTbxVentas.Text = Convert.ToString(subtotal);
+                            ivaTbxVentas.Text = Convert.ToString(iva);
+                            totalTbxVenta.Text = Convert.ToString(subtotal + iva);
+
+
+                        }
+                        conexion.Close();
+                    }
+                   
                 }
             }
         }
@@ -1321,7 +1406,13 @@ namespace WindowsFormsApp1.Views
         }
         private void Tiempo_Tick(object sender, EventArgs e)
         {
-            HoraMinutoSegundo.Text = DateTime.Now.ToLongTimeString();
+            TimeForSale.Text = DateTime.Now.ToLongTimeString();
+            TimeForCrew.Text = DateTime.Now.ToLongTimeString();
+            TimeForFix.Text = DateTime.Now.ToLongTimeString();
+            TimeForUsers.Text = DateTime.Now.ToLongTimeString();
+            TimeForClients.Text = DateTime.Now.ToLongTimeString();
+            TimeForProducts.Text = DateTime.Now.ToLongTimeString();
+            TimeForPieces.Text = DateTime.Now.ToLongTimeString();
         }
 
         private void FillingProducts()
@@ -1424,26 +1515,33 @@ namespace WindowsFormsApp1.Views
         }
         private void tableVender_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //CNombreUsuarioLblVenta
-            if (e.RowIndex > 0)
+            try
             {
-                //Obtener datos de renglon
-                DataGridViewRow renglon = this.tableVender.Rows[e.RowIndex];
-                string responsbla_de_cancelacion = CNombreUsuarioLblVenta.Text;
-                string codigo = renglon.Cells["cod"].Value.ToString();
-                string descripcion = renglon.Cells["des"].Value.ToString();
-                string cantidad = renglon.Cells["cant"].Value.ToString();
-                string total = renglon.Cells["preciot"].Value.ToString();
-                //Inicar variables de insancia
-                CancelarProductoVenta cancelar = new CancelarProductoVenta();
-                cancelar.setDatos(codigo, descripcion, cantidad, total, e.RowIndex, responsbla_de_cancelacion);
-                cancelar.ShowDialog();
-                tableVender.Rows.RemoveAt(e.RowIndex);
-                //Quitar el valor al SUB_TOTAL
-                decimal valor = Convert.ToDecimal(tableVender.Rows[e.RowIndex].Cells[4].Value.ToString());
-                decimal aux_subTotal = (Convert.ToDecimal(subTotalTbxVentas.Text)) - valor;
-                subTotalTbxVentas.Text = "" + aux_subTotal;
-                tableVender.Refresh();
+                //CNombreUsuarioLblVenta
+                if (e.RowIndex > 0)
+                {
+                    //Obtener datos de renglon
+                    DataGridViewRow renglon = this.tableVender.Rows[e.RowIndex];
+                    string responsbla_de_cancelacion = CNombreUsuarioLblVenta.Text;
+                    string codigo = renglon.Cells["cod"].Value.ToString();
+                    string descripcion = renglon.Cells["des"].Value.ToString();
+                    string cantidad = renglon.Cells["cant"].Value.ToString();
+                    string total = renglon.Cells["preciot"].Value.ToString();
+                    //Inicar variables de insancia
+                    CancelarProductoVenta cancelar = new CancelarProductoVenta();
+                    cancelar.setDatos(codigo, descripcion, cantidad, total, e.RowIndex, responsbla_de_cancelacion);
+                    cancelar.ShowDialog();
+                    tableVender.Rows.RemoveAt(e.RowIndex);
+                    //Quitar el valor al SUB_TOTAL
+                    decimal valor = Convert.ToDecimal(tableVender.Rows[e.RowIndex].Cells[4].Value.ToString());
+                    decimal aux_subTotal = (Convert.ToDecimal(subTotalTbxVentas.Text)) - valor;
+                    subTotalTbxVentas.Text = "" + aux_subTotal;
+                    tableVender.Refresh();
+                }
+            }
+            catch (Exception)
+            {
+
             }
         }
 
@@ -1455,69 +1553,93 @@ namespace WindowsFormsApp1.Views
 
         private void TableOrdenes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Connection connection = new Connection();
-            //try
-            //{
-            DataGridViewRow fila = tableOrdenes.Rows[e.RowIndex];
-            if (Convert.ToString(fila.Cells["Id"].Value).Equals("") || Convert.ToString(fila.Cells["Descripcion"].Value).Equals("")
-                || Convert.ToString(fila.Cells["Estado"].Value).Equals("") || Convert.ToString(fila.Cells["FechaEncargada"].Value).Equals("")
-                || Convert.ToString(fila.Cells["FechaLlegaAprox"].Value).Equals(""))
+            try
             {
-                Console.WriteLine("Datos vacios");
+                Connection connection = new Connection();
+                DataGridViewRow fila = tableOrdenes.Rows[e.RowIndex];
+                if (Convert.ToString(fila.Cells["Id"].Value).Equals("") || Convert.ToString(fila.Cells["Descripcion"].Value).Equals("")
+                    || Convert.ToString(fila.Cells["Estado"].Value).Equals("") || Convert.ToString(fila.Cells["FechaEncargada"].Value).Equals("")
+                    || Convert.ToString(fila.Cells["FechaLlegaAprox"].Value).Equals(""))
+                {
+                    Console.WriteLine("Datos vacios");
+                }
+                else
+                {
+                    int id = Convert.ToInt32(fila.Cells["Id"].Value);
+                    DatosPieza datosPieza = new DatosPieza(id);
+                    datosPieza.ShowDialog();
+                    connection.AbrirConexion();
+                    tableOrdenes.DataSource = conexion.buscarReparacion("SELECT * FROM Pieza order by FechaEncargada asc");
+                    connection.CerrarConexion();
+                }
+                double subtotal = Convert.ToDouble(subTotalTbxVentas.Text);
+                double iva = Convert.ToDouble(((subtotal * 16) / 100));
+                subTotalTbxVentas.Text = Convert.ToString(subtotal);
+                ivaTbxVentas.Text = Convert.ToString(iva);
+                totalTbxVenta.Text = Convert.ToString(subtotal + iva);
             }
-            else
+            catch (Exception)
             {
-                int id = Convert.ToInt32(fila.Cells["Id"].Value);
-                DatosPieza datosPieza = new DatosPieza(id);
-                datosPieza.ShowDialog();
-                connection.AbrirConexion();
-                tableOrdenes.DataSource = conexion.buscarReparacion("SELECT * FROM Pieza order by FechaEncargada asc");
-                connection.CerrarConexion();
+
             }
-            double subtotal = Convert.ToDouble(subTotalTbxVentas.Text);
-            double iva = Convert.ToDouble(((subtotal * 16) / 100));
-            subTotalTbxVentas.Text = Convert.ToString(subtotal);
-            ivaTbxVentas.Text = Convert.ToString(iva);
-            totalTbxVenta.Text = Convert.ToString(subtotal + iva);
         }
 
         private void TxtCantidadVenta_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
             if ((int)e.KeyChar == (int)Keys.Enter)
             {
-                if (buscarTbxVentas.Text.Equals(""))
+                if (buscarTbxVentas.Text.Equals("") || txtCantidadVenta.Text.Equals(""))
                 {
-                    MessageBox.Show("No se ingreso cantidad");
+                    MessageBox.Show("No se permiten campos vacios");
                 }
                 else
                 {
-                    string cadena = "Data Source=.\\SQLEXPRESS;Initial Catalog=TechPOSdb; Integrated Security=True";
-                    SqlConnection conexion = new SqlConnection(cadena);
-                    conexion.Open();
-                    SqlCommand cmd = new SqlCommand("select * from Producto where ClaveProducto='" + buscarTbxVentas.Text + "'", conexion);
-                    SqlDataReader dr = cmd.ExecuteReader();
-                    DataRow row = dtVenta.NewRow();
-                    tableVender.DataSource = dtVenta;
-                    //---------------------------------
-                    if (dr.Read())
+                    if (Convert.ToInt32(txtCantidadVenta.Text) < 1)
                     {
-                        double price = Convert.ToDouble(Convert.ToString(dr["Costo"]));
-                        double subtotal = Convert.ToDouble(subTotalTbxVentas.Text) + (Convert.ToDouble(Convert.ToString("2")) * price);
-                        double iva = Convert.ToDouble(((subtotal * 16) / 100));
-                        row["cod"] = Convert.ToString(dr["ClaveProducto"]);
-                        row["des"] = Convert.ToString(dr["Descripcion"]);
-                        row["preciou"] = Convert.ToString(dr["Costo"]);
-                        row["cant"] = Convert.ToString(txtCantidadVenta.Text);
-                        row["preciot"] = Convert.ToString(Convert.ToDouble(Convert.ToString(txtCantidadVenta.Text)) * price);
-                        //MessageBox.Show(Convert.ToString(dr["Costo"]));
-                        dtVenta.Rows.Add(row);
-                        subTotalTbxVentas.Text = Convert.ToString(subtotal);
-                        ivaTbxVentas.Text = Convert.ToString(iva);
-                        totalTbxVenta.Text = Convert.ToString(subtotal + iva);
-
-
+                        MessageBox.Show("No se permiten valores iguales o menores a 0");
                     }
-                    conexion.Close();
+                    else
+                    {
+                        string cadena = "Data Source=.\\SQLEXPRESS;Initial Catalog=TechPOSdb; Integrated Security=True";
+                        SqlConnection conexion = new SqlConnection(cadena);
+                        conexion.Open();
+                        SqlCommand cmd = new SqlCommand("select * from Producto where ClaveProducto='" + buscarTbxVentas.Text + "'", conexion);
+                        SqlDataReader dr = cmd.ExecuteReader();
+                        DataRow row = dtVenta.NewRow();
+                        tableVender.DataSource = dtVenta;
+                        //---------------------------------
+                        if (dr.Read())
+                        {
+                            double price = Convert.ToDouble(Convert.ToString(dr["Costo"]));
+                            double subtotal = Convert.ToDouble(subTotalTbxVentas.Text) + (price);
+                            double iva = Convert.ToDouble(((subtotal * 16) / 100));
+                            row["cod"] = Convert.ToString(dr["ClaveProducto"]);
+                            row["des"] = Convert.ToString(dr["Descripcion"]);
+                            row["preciou"] = Convert.ToString(dr["Costo"]);
+                            row["cant"] = Convert.ToString(txtCantidadVenta.Text);
+                            row["preciot"] = Convert.ToString(Convert.ToDouble(Convert.ToString(txtCantidadVenta.Text)) * price);
+                            //MessageBox.Show(Convert.ToString(dr["Costo"]));
+                            dtVenta.Rows.Add(row);
+                            subTotalTbxVentas.Text = Convert.ToString(subtotal);
+                            ivaTbxVentas.Text = Convert.ToString(iva);
+                            totalTbxVenta.Text = Convert.ToString(subtotal + iva);
+
+
+                        }
+                        conexion.Close();
+                    }
                 }
             }
         }
@@ -1536,6 +1658,23 @@ namespace WindowsFormsApp1.Views
             this.Hide();
         }
 
+        private void Sbtn_Click(object sender, EventArgs e)
+        {
+            ViewLogin login = new ViewLogin();
+            login.Show();
+            this.Hide();
+        }
+
+        private void CDGReparacion_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            colores();
+        }
+
+        private void BtnReportesEspecificos_Click(object sender, EventArgs e)
+        {
+            ReportesEspecificos r = new ReportesEspecificos();
+            r.ShowDialog();
+        }
     }
 
 }

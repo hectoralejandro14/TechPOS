@@ -86,7 +86,7 @@
             this.estadoLblRepa.AutoSize = true;
             this.estadoLblRepa.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
             this.estadoLblRepa.ForeColor = System.Drawing.Color.DarkOrange;
-            this.estadoLblRepa.Location = new System.Drawing.Point(380, 0);
+            this.estadoLblRepa.Location = new System.Drawing.Point(379, 0);
             this.estadoLblRepa.Name = "estadoLblRepa";
             this.estadoLblRepa.Size = new System.Drawing.Size(70, 34);
             this.estadoLblRepa.TabIndex = 1;
@@ -108,7 +108,7 @@
             this.modeloLblRepa.AutoSize = true;
             this.modeloLblRepa.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Bold);
             this.modeloLblRepa.ForeColor = System.Drawing.Color.DarkOrange;
-            this.modeloLblRepa.Location = new System.Drawing.Point(380, 37);
+            this.modeloLblRepa.Location = new System.Drawing.Point(379, 37);
             this.modeloLblRepa.Name = "modeloLblRepa";
             this.modeloLblRepa.Size = new System.Drawing.Size(72, 34);
             this.modeloLblRepa.TabIndex = 3;
@@ -171,7 +171,7 @@
             // idTxtBoxRepa
             // 
             this.idTxtBoxRepa.Enabled = false;
-            this.idTxtBoxRepa.Location = new System.Drawing.Point(149, 3);
+            this.idTxtBoxRepa.Location = new System.Drawing.Point(148, 3);
             this.idTxtBoxRepa.Name = "idTxtBoxRepa";
             this.idTxtBoxRepa.Size = new System.Drawing.Size(225, 20);
             this.idTxtBoxRepa.TabIndex = 12;
@@ -179,7 +179,7 @@
             // MarcaTxtBox
             // 
             this.MarcaTxtBox.Enabled = false;
-            this.MarcaTxtBox.Location = new System.Drawing.Point(149, 40);
+            this.MarcaTxtBox.Location = new System.Drawing.Point(148, 40);
             this.MarcaTxtBox.Name = "MarcaTxtBox";
             this.MarcaTxtBox.Size = new System.Drawing.Size(225, 20);
             this.MarcaTxtBox.TabIndex = 13;
@@ -196,7 +196,7 @@
             // ModeloTxtBoxRepa
             // 
             this.ModeloTxtBoxRepa.Enabled = false;
-            this.ModeloTxtBoxRepa.Location = new System.Drawing.Point(471, 40);
+            this.ModeloTxtBoxRepa.Location = new System.Drawing.Point(470, 40);
             this.ModeloTxtBoxRepa.Name = "ModeloTxtBoxRepa";
             this.ModeloTxtBoxRepa.Size = new System.Drawing.Size(135, 20);
             this.ModeloTxtBoxRepa.TabIndex = 16;
@@ -284,7 +284,7 @@
             // estadoCBoxC
             // 
             this.estadoCBoxC.FormattingEnabled = true;
-            this.estadoCBoxC.Location = new System.Drawing.Point(471, 3);
+            this.estadoCBoxC.Location = new System.Drawing.Point(470, 3);
             this.estadoCBoxC.Name = "estadoCBoxC";
             this.estadoCBoxC.Size = new System.Drawing.Size(135, 21);
             this.estadoCBoxC.TabIndex = 24;
@@ -295,7 +295,7 @@
             this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.69347F));
             this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.30653F));
             this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 91F));
-            this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 144F));
+            this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 145F));
             this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.2561F));
             this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.7439F));
             this.layDatosReparacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 79F));
@@ -453,6 +453,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Reparacion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Equipo en reparación";
             this.Load += new System.EventHandler(this.Reparacion_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Reparacion_MouseDown);

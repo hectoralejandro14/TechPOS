@@ -24,6 +24,7 @@ namespace WindowsFormsApp1.DBConnectio
         {
             conexion.ConnectionString = cadena;
         }
+
         public void AbrirConexion()
         {
             try
@@ -359,6 +360,7 @@ namespace WindowsFormsApp1.DBConnectio
             }
             return "";
         }
+
         public DataRow BProducto(DataTable dtVenta, string text)
         {
             SqlCommand cmd = new SqlCommand("select * from Producto where ClaveProducto='" + text + "'", conexion);
@@ -419,6 +421,15 @@ namespace WindowsFormsApp1.DBConnectio
             filas = sqlCommand.ExecuteNonQuery();
             return filas;
         }
+
+        public int guardarVenta(string query)
+        {
+            int fila = 0;
+            SqlCommand sql = new SqlCommand(query,conexion);
+            sql.CommandType = CommandType.Text;
+            fila = sql.ExecuteNonQuery();
+            return fila;
+        }
         public int AgregarCancelacion(string cadena, decimal Id, string datos, string fecha,int IdU,int IdV)
         {
             int modificacion = 0;
@@ -443,17 +454,17 @@ namespace WindowsFormsApp1.DBConnectio
             //}
             return modificacion;
         }
+
         public string getIdUsuario(string query)
         {
             string id = "";
-
             SqlCommand sqc = new SqlCommand(query, conexion);
             SqlDataReader reader = sqc.ExecuteReader();
             reader.Read();
             id = reader.GetValue(0).ToString();
-            MessageBox.Show("Id Obtenida = " + id);
             return id;
         }
+
         public int Updatepassword(string SQL)
         {
             int cambios = 0;
@@ -505,6 +516,12 @@ namespace WindowsFormsApp1.DBConnectio
                 aux = false;
             }
             return aux;
+        }
+        //--------------------------------------------------------------------------------------------------------------
+        //OPERACIONES DE REPORTE
+        public void getCancelaciones(DataTable dtVenta, string query)
+        {
+            
         }
     }
 }

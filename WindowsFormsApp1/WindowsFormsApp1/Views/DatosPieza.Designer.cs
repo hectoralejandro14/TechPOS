@@ -189,6 +189,7 @@
             this.PDatosPieza.Name = "PDatosPieza";
             this.PDatosPieza.Size = new System.Drawing.Size(97, 449);
             this.PDatosPieza.TabIndex = 62;
+            this.PDatosPieza.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PDatosPieza_MouseDown);
             // 
             // LogoDatosPieza
             // 
@@ -232,7 +233,9 @@
             this.Controls.Add(this.lblDescPieza);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DatosPieza";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DatosPieza";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DatosPieza_MouseDown);
             this.PDatosPieza.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.LogoDatosPieza)).EndInit();
             this.ResumeLayout(false);

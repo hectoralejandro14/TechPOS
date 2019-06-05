@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -35,6 +36,10 @@ namespace WindowsFormsApp1.Views
             connection.CerrarConexion();
         }
 
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparap, int lparam);
         private void BtnAceptarPieza_Click(object sender, EventArgs e)
         {
             Connection connection = new Connection();
@@ -87,6 +92,18 @@ namespace WindowsFormsApp1.Views
             cBoxEstadosPieza.Enabled = true;
             BtnAceptarPieza.Text = "Guardar";
             btnCancelarPieza.Visible = true;
+        }
+
+        private void DatosPieza_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void PDatosPieza_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

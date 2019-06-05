@@ -111,10 +111,9 @@ namespace WindowsFormsApp1
             conn.AbrirConexion();
             string estadoPieza = conn.buscarEstado("SELECT P.Estado FROM Pieza P INNER JOIN Reparacion R ON R.IdPieza=P.Id WHERE R.Id ='" + idTxtBoxRepa.Text + "'");
             conn.CerrarConexion();
-            if (estadoPieza.Equals("Ordenada"))
+            if (fallaTxtBoxRepa.Text.Equals("") || dRapidoTxtBox.Text.Equals(""))
             {
-                MessageBox.Show("Lo sentimos, el equipo al que desea cambiar el estado necesita una o varias piezas, por lo tanto, no se permite cambiar el estado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                estadoCBoxC.SelectedIndex = 5;
+                MessageBox.Show("No se permiten campos vacios ni en falla ni en diagnostico","Información",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
             else
             {

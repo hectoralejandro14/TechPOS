@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -93,7 +94,8 @@ namespace WindowsFormsApp1.Views
 
         private void TBoxAddCostoP_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsNumber(e.KeyChar))
+            CultureInfo cc = System.Threading.Thread.CurrentThread.CurrentCulture;
+            if (Char.IsNumber(e.KeyChar) || e.KeyChar.ToString() == cc.NumberFormat.NumberDecimalSeparator)
             {
                 e.Handled = false;
             }
@@ -109,6 +111,7 @@ namespace WindowsFormsApp1.Views
 
         private void TBoxAddCantidadP_KeyPress(object sender, KeyPressEventArgs e)
         {
+            CultureInfo cc = System.Threading.Thread.CurrentThread.CurrentCulture;
             if (Char.IsNumber(e.KeyChar))
             {
                 e.Handled = false;

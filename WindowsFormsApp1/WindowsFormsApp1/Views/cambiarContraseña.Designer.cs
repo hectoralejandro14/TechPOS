@@ -137,7 +137,9 @@
             this.Controls.Add(this.lblUserNameA);
             this.Controls.Add(this.btnSalirA);
             this.Controls.Add(this.btnAceptarA);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "cambiarContraseña";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.changecontraPnl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logoChangeContra)).EndInit();
             this.ResumeLayout(false);

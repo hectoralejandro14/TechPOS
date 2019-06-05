@@ -49,7 +49,7 @@
             this.SpbNuevoServicioIMG.Image = global::WindowsFormsApp1.Properties.Resources.logoUp;
             this.SpbNuevoServicioIMG.Location = new System.Drawing.Point(10, 20);
             this.SpbNuevoServicioIMG.Name = "SpbNuevoServicioIMG";
-            this.SpbNuevoServicioIMG.Size = new System.Drawing.Size(72, 108);
+            this.SpbNuevoServicioIMG.Size = new System.Drawing.Size(84, 108);
             this.SpbNuevoServicioIMG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.SpbNuevoServicioIMG.TabIndex = 0;
             this.SpbNuevoServicioIMG.TabStop = false;
@@ -171,8 +171,10 @@
             this.Controls.Add(this.StxtNombreNuevoServicio);
             this.Controls.Add(this.SlblNombreDelServicio);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NuevoServicio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.SpbNuevoServicioIMG)).EndInit();
             this.nuevoUsuarioPnl.ResumeLayout(false);
             this.ResumeLayout(false);

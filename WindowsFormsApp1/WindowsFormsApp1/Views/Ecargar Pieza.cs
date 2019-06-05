@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1.Views
@@ -22,6 +23,12 @@ namespace WindowsFormsApp1.Views
 
 
         }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparap, int lparam);
+
         private void BtnAceptarPieza_Click(object sender, EventArgs e)
         {
             if (piezasTbxEncargar.Text == "")
@@ -53,5 +60,16 @@ namespace WindowsFormsApp1.Views
             this.Hide();
         }
 
+        private void Ecargar_Pieza_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void EncargarPiezaPnl_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
     }
 }
