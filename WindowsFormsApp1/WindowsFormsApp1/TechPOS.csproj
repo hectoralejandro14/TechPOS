@@ -64,11 +64,29 @@
     <Compile Include="Controllers\Encriptacion.cs" />
     <Compile Include="Controllers\Encrypt.cs" />
     <Compile Include="Controllers\ValidacionCampos.cs" />
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DBConnection\Connection.cs" />
+    <Compile Include="jfdjoklvf.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>jfdjoklvf.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PruebaDosSQL.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PruebaDosSQL.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="pruebapdf.cs">
       <SubType>Form</SubType>
@@ -251,10 +269,22 @@
     <Compile Include="Views\ViewTabs.Designer.cs">
       <DependentUpon>ViewTabs.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jfdjoklvf.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>jfdjoklvf.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PruebaDosSQL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PruebaDosSQL.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="pruebapdf.resx">
       <DependentUpon>pruebapdf.cs</DependentUpon>

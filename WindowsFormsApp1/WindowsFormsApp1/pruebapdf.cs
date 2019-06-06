@@ -17,7 +17,8 @@ namespace WindowsFormsApp1
             InitializeComponent();
             if (index == 1)
             {
-                ReporteTres rpt = new ReporteTres();
+                //ReporteTres rpt = new ReporteTres();
+                jfdjoklvf rpt = new jfdjoklvf();
                 crystalReportViewer1.ReportSource = rpt;
             }
             else if (index == 2)
